@@ -1,0 +1,12 @@
+.reveal h1{font-family: Cambria; font-size: 54px;}
+.reveal h2{font-family: Cambria; font-size: 42px;}
+.reveal h3{font-family: Cambria; font-size: 36px;}
+.reveal h4{font-family: Cambria; font-size: 24px;}
+.reveal h5{font-family: Cambria; font-size: 22px; font-style: normal}
+.reveal li{font-family: Calibri; font-size: 20px;}
+.reveal li{font-size: 20px;}
+.reveal p{font-size: 20px;}
+.reveal code, div{font-size: 20px}
+div.abc{text-align: center}
+.highlight .err{border: none}
+.fa-4x {font-size: 1em}
