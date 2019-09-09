@@ -1,0 +1,1784 @@
+www.DataSheet4U.com
+
+INSTRUCTION MANUAL
+
+VHF AIR BAND TRANSCEIVER
+
+iA110
+
+This device complies with Part 15 of the FCC Rules. Operation is subject to the
+
+condition that this device does not cause harmful interference.
+
+
+
+www.DataSheet4U.com
+
+FOREWORD
+
+CAUTIONS
+
+READ ALL INSTRUCTIONS carefully and completely R WARNING! NEVER operate the transceiver with a before using the transceiver.
+
+headset or other audio accessories at high volume levels.
+
+Hearing experts advise against continuous high volume op-SAVE THIS INSTRUCTION MANUAL — This in-eration. If you experience a ringing in your ears, reduce the struction manual contains important operating instructions for volume level or discontinue use.
+
+the IC-A110.
+
+NEVER connect the transceiver to an AC outlet or to a power source of more than 27 V DC. Such a connection will EXPLICIT DEFINITIONS
+
+damage the transceiver.
+
+NEVER connect the transceiver to a power source that is The explicit definitions below apply to this instruction manual.
+
+DC fused at more than 5 A. Accidental reverse connection will WORD
+
+DEFINITION
+
+be protected by this fuse, higher fuse values will not give any Personal injury, re hazard or electric shock protection against such accidents and the transceiver will be RWARNING may occur.
+
+ruined.
+
+CAUTION
+
+Equipment damage may occur.
+
+If disregarded, inconvenience only. No risk DO NOT operate the transceiver near unshielded electrical NOTE
+
+of personal injury, re or electric shock.
+
+blasting caps or in an explosive atmosphere.
+
+DO NOT connect the transceiver to a power source using reverse polarity. This connection will not only blow fuses but
+
+FCC caution: Changes or modifications to this transceiver, not also may damage the transceiver.
+
+expressly approved by Icom Inc., could void your authority to operate this transceiver under FCC regulations.
+
+i
+
+
+
+www.DataSheet4U.com
+
+TABLE OF CONTENTS
+
+DO NOT place unit in a non-secure place to avoid inad-FOREWORD ........................................................................................... i EXPLICIT DEFINITIONS ......................................................................... i vertent use by children.
+
+CAUTIONS .............................................................................................. i TABLE OF CONTENTS .......................................................................... ii DO NOT
+
+1
+
+PANEL DESCRIPTION ............................................................... 1 – 3
+
+push the PTT when not actually desiring to trans-
+
+■Panel description ............................................................................. 1–2
+
+mit..
+
+■Function display .................................................................................... 3
+
+2
+
+BASIC OPERATION ................................................................... 4 – 5
+
+■Power ON ............................................................................................. 4
+
+AVOID using or placing the transceiver in direct sunlight or
+
+■Channel selection .................................................................................. 4
+
+■Squelch function .................................................................................... 5
+
+in areas with temperatures below –30°C (–22°F) or above
+
+■Side tone function.................................................................................. 5
+
++60°C (+140°F).
+
+■LCD backlight control ............................................................................ 5
+
+■Dial select function ................................................................................ 5
+
+3
+
+SCAN OPERATION ................................................................... 6 – 7
+
+AVOID placing the transceiver in excessively dusty envi-
+
+■Scan operation ..................................................................................... 6
+
+■
+
+ronments.
+
+On-hook scan ....................................................................................... 7
+
+■Dualwatch ............................................................................................. 7
+
+4
+
+MEMORY PROGRAMMING ...................................................... 8 – 9
+
+AVOID
+
+■
+
+placing the transceiver against walls. This will ob-Programming a memory channel .......................................................... 8
+
+■Memory names...................................................................................... 9
+
+struct heat dissipation.
+
+5
+
+OTHER FUNCTIONS ............................................................... 10-11
+
+■Initial set mode ............................................................................... 10-11
+
+6
+
+CONNECTION AND INSTALLATION .................................... 12 – 13
+
+AVOID the use of chemical agents such as benzine or al-
+
+■Rear panel and connections ............................................................... 12
+
+■
+
+cohol when cleaning, as they damage the transceiver sur-Mounting ............................................................................................. 13
+
+■Supplied accessories........................................................................... 13
+
+faces.
+
+7
+
+CLONING ...................................................................................... 14
+
+8
+
+SPECIFICATIONS ............................................................. 15-16
+
+9
+
+OPC-871 HEADSET ADAPTER......................................... 17-18
+
+BE CAREFUL! The transceiver will become hot when
+
+■OPC-871 Headset adapter .................................................................. 17
+
+operating continuously for long periods.
+
+10 OPTIONS ................................................................................ 19
+
+ii
+
+
+
+1
+
+PANEL
+
+www.DataSheet4U.com
+
+DESCRIPTION
+
+■ Panel description
+
+q
+
+w
+
+e
+
+r
+
+V/M
+
+SCAN
+
+PRI
+
+SQL
+
+!0
+
+o
+
+i
+
+u
+
+y
+
+t
+
+qTUNING [DIAL(TS)]
+
+eVOLUME UP [Y] DOWN [Z] KEY
+
+➥Changes the operating frequency; memory channel in Adjusts the audio output level.
+
+memory mode; set mode contents in set mode, etc.
+
+➥Push to toggle the dimmer control OFF, Low and High.
+
+rLOUD SPEAKER
+
+➥Push and hold for 1 sec. to select the Tuning Step [TS]; Front mounted loud speaker.
+
+1 MHz or 10 kHz are available. (p. 5)
+
+tPOWER SWITCH [POWER]
+
+wFUNCTION DISPLAY (p. 3)
+
+Push and hold 500 m sec. to turn the power ON and OFF.
+
+Displays the operating frequency, memory channel name, etc.
+
+➥The following functions are available at power ON as options:
+
+• Initial set mode (p. 10)
+
+• Cloning mode (p. 14)
+
+1
+
+
+
+www.DataSheet4U.com
+
+PANEL DESCRIPTION 1
+
+ySQL SWITCH [SQL]
+
+!0MICROPHONE CONNECTOR
+
+➥Push to turn on the squelch adjust mode. (p. 6) Connects the supplied microphone or optional.
+
+➥Push and hold this switch for 1 sec. to turn ON/OFF the ex-NEVER connect other microphones. The pin assignments ternal speaker output. (p. 4)
+
+may be different and the transceiver may be damaged.
+
+uPRIORITY SWITCH [PRI]
+
+MICROPHONE
+
+Push to select priority channel. (p. 11) The supplied microphone has a PTT switch and a cradle. The
+
+• “Pr” appears on the display.
+
+following functions are available when the microphone is taken off from the hook or put back on hook: iSCAN SWITCH [SCAN]
+
+➥Automatic scan starts when putting on hook. (p. 7)
+
+➥Starts and stops the scan function:
+
+➥Automatic scan stops when taken off hook. (p. 7)
+
+• VFO mode: VFO scan function.
+
+• Memory mode: Memory channel scan function. (p. 6)
+
+➥ Push and hold this switch for 5 sec. to set the displayed channel as a memory lock-out channel. (p. 8)
+
+• “LOCK OUT” appears on the display.
+
+oVFO/MEMORY SWITCH [V/M]/[MW]
+
+➥Push to toggle the VFO mode or the Memory mode. (p. 4)
+
+• “X” and memory channel number appear when memory mode is selected.
+
+• The transceiver has 20 memory channels.
+
+➥When VFO mode is selected;
+
+NOTE: Optional functions vary with transceiver version.
+
+•Push and hold this switch for 5 sec. to program the VFO frequency to memory channel. (p. 8)
+
+In this manual, optional functions are indicated by
+
+➥When Memory mode is selected;
+
+“
+
+” Icon.
+
+• Push and hold this switch for 5 sec. to turn the “Memory name Please contact your dealer for details.
+
+write mode” ON.
+
+2
+
+
+
+1 PANEL DESCRIPTION
+
+www.DataSheet4U.com
+
+■ Function display
+
+t TX INDICATOR (p. 5)
+
+Appears while transmitting.
+
+q
+
+w
+
+e
+
+r
+
+t
+
+y FREQUENCY DISPLAY (p. 11)
+
+➥Shows the operating frequency.
+
+➥Shows the channel name when the memory name function is selected. (p. 10)
+
+!1
+
+y
+
+u VOLUME LEVEL INDICATORS
+
+➥Shows the AF volume level(while receiving).
+
+i SET MODE INDICATOR
+
+o
+
+i
+
+u
+
+➥Appears when the Initial set mode is selected. (p. 12) qMEMORY MODE INDICATOR (p. 5)
+
+o LOCK OUT INDICATOR
+
+Appears when memory mode is selected.
+
+➥Appears when the channel is set as a ‘LOCK OUT’ channel. (p. 8)
+
+wDUALWATCH INDICATOR (p. 7)
+
+Indicates when the dualwatch function is activated.
+
+!0 MEMORY CHANNEL INDICATOR
+
+➥Indicates the selected memory channel number eSCAN INDICATOR (p. 8)
+
+➥‘Pr’ appears when the priority channel is selected.
+
+Indicates when the scan function is selected.
+
+rBUSY INDICATOR (p. 6)
+
+“BUSY” appears when receiving a signal or when the
+
+*NOTE: The VFO/memory switch [V/M] and the memory squelch is open. (p. 6)
+
+write switch [M/W] functions may not be available depending on version.
+
+3
+
+
+
+www.DataSheet4U.com
+
+BASIC OPERATION
+
+2
+
+■ Power ON
+
+■ Channel selection
+
+q Push [POWER] to turn power ON.
+
+ï VFO/Memory selection
+
+q Push [V/M] to select memory
+
+mode or VFO mode.
+
+➥Rotate the dial to select a de-
+
+sired frequency/channel.
+
+w During memory mode opera-
+
+w Operate the transceiver as indicated in the following sec-tion, push [V/M] key to trans-
+
+tions.
+
+fer the memory contents to
+
+e Select the desired memory channel (or VFO frequency) VFO.
+
+with the [V/M] keys.
+
+•
+
+Push [V/M] to select VFO
+
+• When receiving a signal,
+
+appears and audio is emit-
+
+mode.
+
+ted from the speaker.
+
+• Further adjustment of audio level may be necessary at this point.
+
+NOTE: Only frequency data is transferred even if the
+
+• Push [SQL] to adjust the squelch level. (p. 6) memory channel has a memory name.
+
+• Push and hold the tuning dial for 1 sec. to select the [TS], each push increments/decrements to the frequency are either 10 kHz ï External speaker output control
+
+or 1 MHz. (p. 7)
+
+External speaker output can be turned OFF, if desired.
+
+r Push and hold [PTT] to transmit, then speak into the mi-q Push and hold [SQL] for 1 sec.
+
+crophone.
+
+w Rotate the dial to select “SP OFF”.
+
+• Transmit indicator
+
+lights.
+
+e Push [SQL] to turn to the previous mode.
+
+t Release [PTT] to receive.
+
+NOTE: This function avail-
+
+able external speaker only.
+
+4
+
+
+
+2 BASIC OPERA
+
+www.DataSheet4U.com
+
+TION
+
+■ Squelch function
+
+■ Dial select function
+
+The transceiver has a noise squelch circuit to mute undesired Use the dial select function to adjust the tuning behavior of noise while receiving no signal.
+
+the [DIAL] keys—use 1 MHz tuning when you want to change D Setting the squelch level
+
+the frequency in large increments; use regular tuning (25 kHz q Push [SQL] to turn the level adjusting mode ON.
+
+or 8.33* kHz) when you want to change the frequency in w Turn the tuning [DIAL] to select the squelch level.
+
+smaller increments.
+
+*Except USA version
+
+• ‘SQ 01’ is loose squelch and ‘SQ 25’ is tight squelch. (Initial level is ‘SQ 01’)
+
+q Push [V/M] to select VFO
+
+• ‘SQ 01’ indicates that the squelch circuit is turned off.
+
+mode.
+
+• “
+
+” appears on the display.
+
+w Push and hold [DIAL(TS)] for
+
+e Push [SQL] to return to regular operation.
+
+1 sec. to select the desired
+
+1 MHz tuning selected
+
+tuning increment.
+
+■ Side tone function
+
+• 1 MHz tuning or regular
+
+tuning steps can be se-
+
+When using an optional headset, such as those from the lected. (see diagrams at
+
+David Clark Co. via the OPC-871 HEAD SET ADAPTOR
+
+right)
+
+, the
+
+transceiver outputs your transmitted voice to the headset for e Push and hold [DIAL(TS)] for
+
+Regular tuning selected
+
+monitoring. (p. 17)
+
+1 sec. to return to normal op-
+
+eration.
+
+■ LCD backlight control
+
+NOTE: Large tuning steps should be used only when you The backlight of the can be set OFF, Low or High.
+
+want to change the frequency in large increments. Please select regular tuning steps for normal operation.
+
+➥Push [DIAL] to toggle the backlight control; OFF, Low or High are available.
+
+5
+
+
+
+www.DataSheet4U.com
+
+SCAN OPERATION
+
+3
+
+■ Scan operation
+
+• VFO scan
+
+Repeatedly scans all
+
+q Push [V/M] to select memory mode or VFO mode, if nec-frequencies over the entire
+
+lowest
+
+Start
+
+highest
+
+frequency
+
+frequency
+
+essary.
+
+band.
+
+• “ MR ” appears on the memory mode.
+
+Scan step is minimum channel
+
+Scan
+
+w Make sure the squelch level is set to the threshold point.
+
+Jump
+
+spacing. (eg 25 kHz or 8.33*
+
+• Set a squelch level (01 to 25) where the noise is muted.
+
+kHz)
+
+*Except USA version
+
+e Push [SCAN] to start scan.
+
+• To change the scan direction, turn [DIAL].
+
+ï PRIORITY SCAN
+
+• “SCAN (or P SCAN)“ flashes while scaning.
+
+r Push [SCAN] again to stop the scan.
+
+•Priority memory scan
+
+250 msec.
+
+While scaning on a memory
+
+250 msec.
+
+Mch 1
+
+NOTE: Normal scan or Priority scan is pre-programmed mode, priority watch checks
+
+Priority
+
+SKIP
+
+Mch 2*
+
+by cloning. Please ask your dealer or system operator for for a signal on the selected
+
+ch
+
+Mch 3
+
+details.
+
+priority channel every 250 m
+
+sec except lockout channel.
+
+Mch 20
+
+*: Lockout ch
+
+ï NORMAL SCAN
+
+Mch 1
+
+•Memory lock scan
+
+Mch 2*
+
+SKIP
+
+Repeatedly scans memory
+
+Mch 3
+
+channels except skip (lockout)
+
+channels.
+
+Mch 20
+
+250 msec.
+
+*: Lockout ch
+
+6
+
+
+
+3 SCAN OPERA
+
+www.DataSheet4U.com
+
+TION
+
+■ On–hook scan
+
+■ Dualwatch
+
+On–hook scan (Hanger scan) is available when taking the mi-Dualwatch monitors priority channel while you are receiving crophone from its hanger (off–hook) and /or returning it into an other channel (VFO or memory channel).
+
+the hanger (on–hook).
+
+q Push [SCAN] to start scanning.
+
+• If a signal is received on pri-
+
+w When receiving a signal, scan pauses until the signal dis-ority channel, dualwatch
+
+250 msec.
+
+5 sec.
+
+appears.
+
+pauses on priority channel
+
+VFO
+
+➥
+
+frequency
+
+• You can converse by taking the microphone from the until the signal disappears.
+
+Priority
+
+or
+
+channel
+
+hook.
+
+• To transmit on the selected
+
+memory
+
+channel
+
+e Place the microphone on the hook to restart scanning.
+
+channel during dualwatch,
+
+r Scan restarts 2 sec. after the signal disappears even if you push and hold PTT.
+
+did not converse the station.
+
+When you take the microphone during the scan operation.
+
+ï Operation
+
+➥•In VFO scan; scan resumes promptly to frequency.
+
+q
+
+➥
+
+Select the desired operating channel (VFO or Memory
+
+• In memory scan; scan resumes promptly to memory channel).
+
+channel.
+
+w
+
+➥
+
+Push and hold [PRI] for 1 sec. to start dualwatch.
+
+• In priority memory scan; scan resumes to priority channel,
+
+‘P’ blinks during dualwatch.
+
+e To cancel dualwatch, push [PRI] again.
+
+NOTE: Be sure to connect the supplied microphone hanger to the vehicle’s ground for on/off hook microphone functions. (p. 12)
+
+7
+
+
+
+www.DataSheet4U.com
+
+MEMORY PROGRAMMING
+
+4
+
+D Setting lock out channels
+
+■ Programming a memory
+
+In order to speed up the scan interval, you can set memory channel
+
+channels you don’t wish to be scanned as lock out channels.
+
+The transceiver has 20 memory channels for storage of often q Push [V/M] to select memory mode, if necessary.
+
+-used frequencies.
+
+• “ MR ” appears.
+
+q Push [V/M] to select VFO
+
+w Turn the [DIAL] to select a memory channel to set as a lock mode, if necessary.
+
+out channel.
+
+w Turns the [DIAL] to select the
+
+e Push [SCAN] for 5 sec. to toggle the lock out setting desired frequency.
+
+ON/OFF.
+
+• Push [DIAL/TS] one or more
+
+• “LOCK OUT” appears when the
+
+times to use the dial select
+
+channel is set as a lock out
+
+function, if desired.
+
+channel.
+
+e Push [V/M] for 5 sec. to enter
+
+memory programming mode.
+
+Memory channel 8 is set
+
+• “ MR ” and memory channel
+
+as lock out channel.
+
+number appear.
+
+r Turn the [DIAL] to select the
+
+desired memory channel
+
+number.
+
+t Push [V/M] for 1 sec. to pro-
+
+gram the information into the
+
+channel and return to VFO
+
+mode.
+
+• Push [SQL] for 1 sec. to clear
+
+*NOTE: The VFO/memory switch [V/M] and the memory the memory information.
+
+write switch [M/W] functions may not be available depending on version.
+
+8
+
+
+
+4 MEMORY PROGRAMMING
+
+www.DataSheet4U.com
+
+■ Memory names
+
+ï Programming memory names
+
+NOTE: •Push PTT switch to abort the programming memory q Select the memory channel to be programmed: name.
+
+➥Push [V/M] to select memory mode.
+
+➥Turns [DIAL] to select the memory channel.
+
+• The following characters can be used in names: w Push [V/M] for 5 sec. to enter memory name writing mode.
+
+➥0 to 9, A to Z (capitals), (space), $, %, ’, (, ), ✽, +, “ ,
+
+” , –, /, < , =, > , ? , @, [, \, ], ^, _ and `.
+
+• The first character of the name flashes.
+
+e Turns the [DIAL] as many times as necessary to enter the desired name.
+
+• To erase a character, overwrite with a space (displayed as _).
+
+• To move the cursor forwards or backwards, use [Y] or [Z].
+
+• Push [SQL] for 2 sec. to erase all characters.
+
+r Push [SCAN/MW] for 2 sec. to input the set name.
+
+• Flashing stops.
+
+• Memory channels can be programmed with names of up to 7
+
+characters in length.
+
+• When no name is programmed, the display shows the operating frequency.
+
+[EXAMPLE]: Setting the name to “ TOWER 2”
+
+V/M
+
+for 5 sec.
+
++
+
+or
+
+V/M
+
+for 1 sec.
+
+9
+
+
+
+www.DataSheet4U.com
+
+OTHER FUNCTIONS
+
+5
+
+■ Initial set mode
+
+D Beep tones ON/OFF
+
+Confirmation beep tones nor-
+
+Initial set mode is accessed at power ON and allows you to mally sound when you push a
+
+set seldom-changed settings. In this way you can “customize”
+
+key. These can be turned ON or
+
+transceiver operations to suit your preferences and operating OFF as you prefer.
+
+style.
+
+D Entering initial set mode
+
+q While pushing and holding [V/M] + [TS(DIAL)], push
+
+[POWER] sw to turn power ON.
+
+D Side tones ON/OFF
+
+• The transceiver enters initial set mode and “MN”, “BP”, “ST” or When using an optional headset
+
+“PR” (p. 11) appears on the display.
+
+such as those from the David
+
+w Push [TS(DIAL)] to select the
+
+Clark Co. via the adapter, the
+
+desired item as described
+
+transceiver outputs your trans-
+
+below and at right.
+
+mitted voice to the headset for
+
+e Turn [DIAL(TS)] to select the
+
+monitoring.
+
+desired condition.
+
+• Optional OPC-871 HEADSET
+
+r Push [SCAN] to exit initial set
+
+ADAPTER is required.
+
+mode and select the previous
+
+operating mode.
+
+D Memory names
+
+This item allows you to display a memory name instead of frequency.
+
+• When a memory channel has not been programmed with a name, frequency indication appears instead.
+
+10
+
+
+
+5 OTHER FUNCTION
+
+www.DataSheet4U.com
+
+D Priority channel
+
+• Setting the priority channel
+
+q
+
+The priority channel is used to store your most often-used While pushing and holding [V/M] and [DIAL(TS)], push channel for quick recall. In addition the priority channel is
+
+[POWER] to turn the power ON.
+
+• The transceiver enters initial set mode.
+
+monitored during priority scan modes. The default setting for w Push [TS(DIAL)] to select
+
+the priority channel will differ depending on pre-programming.
+
+the priority channel set
+
+➥
+
+mode.
+
+Push [PRI] to toggle the prior-
+
+e Select the desired channel
+
+ity channel mode or previous
+
+number as a priority chan-
+
+mode.
+
+nel or OFF with [DIAL].
+
+r Push [POWER] to turn
+
+power OFF.
+
+NEVER select the blank memory channel as the priority channel. In such case priority automatically sets to OFF posi-tion.
+
+11
+
+
+
+www.DataSheet4U.com
+
+CONNECTION AND INSTALLATION
+
+6
+
+■ Rear panel and connections
+
+Antenna
+
+› External speaker jack
+
+⁄
+
+¤
+
+fi
+
+OPC-871 HEADSET
+
+ADAPTER (Option)
+
+‹
+
+red: ,
+
+Supplied DC
+
+power cable
+
+black: .
+
+12 V or 24 V
+
+Battery
+
+q Connects to an antenna
+
+larities. NEVER connect to a over 27 V battery. This could Ask your dealer about antenna selection and best installa-damage the transceiver.
+
+tion location. (Standard 50 Ω antenna with a SWR <3.0) r EXTERNAL SPEAKER JACK
+
+w MICROPHONE HANGER
+
+Connect an 8 Ω,10 W (Max.) external speaker, if desired.
+
+Connect the supplied microphone hanger to the vehicle’s CAUTION : Be sure to use the external speaker’s power ground for hanger scan function when hanging or releas-input rating more than 10 W, other wise the speaker dam-ing the microphone.
+
+age may occur.
+
+e DC POWER RECEPTACLE
+
+t OPC-871 OPTIONAL HEADSET ADAPTER
+
+Connects to a 12 or 24 V DC battery. Pay attention to po-Connect an optional headset. (See p. 17) 12
+
+
+
+6 CONNECTION AND
+
+www.DataSheet4U.com
+
+INSTALLATION
+
+■ Mounting
+
+■ Supplied accessories
+
+Flat washer
+
+1
+
+2
+
+4
+
+3
+
+Spring washer
+
+5
+
+6
+
+7
+
+8
+
+When using
+
+9
+
+0
+
+A
+
+B
+
+self-tapping screws
+
+The universal mounting bracket supplied with your transceiver q Microphone . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1.
+
+allows overhead or dashboard mounting. Please read the fol-w Microphone hanger and screw set . . . . . . . . . . . . . . . . . . . .1 set lowing instructions carefully.
+
+e Microphone cable . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1
+
+r DC power cable (OPC-344) . . . . . . . . . . . . . . . . . . . . . . . . . . . .1
+
+• Mount the transceiver securely with the 4 supplied screws t Mounting bracket . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1
+
+(M5 × 20) to a surface which is more than 10 mm thick and y Bracket bolts . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .4
+
+u
+
+can support more than 5 kg.
+
+Mounting screws (M5 × 12) . . . . . . . . . . . . . . . . . . . . . . . . . . . .4
+
+i Self-tapping screws (M5 × 20) . . . . . . . . . . . . . . . . . . . . . . . . . .4
+
+• Mount the transceiver so that the face of the transceiver is o Flat washers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .4
+
+at 90 ˚ to your line of sight when operating.
+
+!0 Spring washers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .4
+
+!1 Nuts
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .4
+
+!2 Fuses (10 A) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .2
+
+13
+
+
+
+www.DataSheet4U.com
+
+CLONING
+
+7
+
+D Data cloning
+
+D
+
+]
+
+Cloning using PC
+
+Cloning allows you to quickly and easily Data can be cloned to and from a PC (IBM compatible) using transfer the programmed contents from one transceiver to the optional CS-A110 CLONING SOFTWARE and the optional OPC-another transceiver, or, data from PC to a transceiver using 478 CLONING CABLE+ OPC-592 CLONING CABLE ADAPTER. Consult the the optional CS-A110 cloning software.
+
+CS-A110 CLONING SOFTWARE HELP message for details.
+
+D Transceiver to transceiver cloning D Cloning error
+
+q Connect the OPC-591 CLONING CABLE with adapter plugs to When the display at right ap-the [MIC] jack of the master and slave transceivers.
+
+pears, a cloning error has oc-
+
+• The master transceiver is used to send data to the slave trans-curred.
+
+ceiver.
+
+w While pushing and holding [Y] + [Z] + [V/M], push In this case, both transceivers automatically return to the
+
+[POWER] ON to enter cloning mode (master transceiver clone standby condition and cloning must be repeated.
+
+only—power ON only for slave transceiver).
+
+• “CLONE” appears and the
+
+transceivers enter the clone
+
+standby condition.
+
+e Push [POWER] on the mas-
+
+ter transceiver.
+
+• “CL-OUT” appears in the
+
+master transceiver’s display.
+
+• “CL-IN” appears automati-
+
+cally in the slave trans-
+
+ceiver’s display.
+
+e When cloning is finished, turn
+
+power OFF, then ON again to
+
+exit cloning mode.
+
+14
+
+
+
+8
+
+SPECIFICA
+
+www.DataSheet4U.com
+
+TIONS
+
+D General
+
+D Receiver
+
+• Frequency coverage
+
+: 118 to 136.975 MHz
+
+• Receive system
+
+: Double conversion
+
+• Channel spacing
+
+: 25 kHz or 25/8.33* kHz
+
+superheterodyne
+
+• Mode :
+
+AM
+
+(6K00A3E)
+
+• Intermediate frequencies
+
+: 1st
+
+38.85 MHz
+
+• Number of memory channels : 20
+
+2nd
+
+450 kHz
+
+• Acceptable power supply
+
+: 13.75* V or 27.5* V DC
+
+•Sensitivity (at 6dB S/N)
+
+: Less than 1 µV (pd)
+
+(negative ground)
+
+*Automatic selection
+
+• Squelch sensitivity
+
+: Less than 0.35 µV (pd)
+
+• Usable temp. range
+
+: –30˚C to +60˚C
+
+(at threshold)
+
+• Frequency stability
+
+: ±5 ppm
+
+• Selectivity
+
+• Current drain (at 13.75 V DC):
+
+25 kHz ch. spacing
+
+: More than ±8 kHz (at –6 dB)
+
+Tx
+
+5 A (max.)
+
+Less than ±17 kHz (at –40 dB)
+
+Rx
+
+4 A ( at AF max.)
+
+Less than ±25 kHz (at –60 dB)
+
+0.5 A (at STAND BY)
+
+8.33* kHz ch. spacing
+
+More than ±2.778 kHz (at –6 dB)
+
+• Dimensions :
+
+150 (W)✕50 (H)✕180 (D) mm
+
+Less than ±7.37 kHz (at –60 dB)
+
+(projections not incl.)
+
+529/32(W)✕131/32(H)✕73/32(D) in
+
+• Spurious response rejc,
+
+: More than 74 dBµ
+
+• Weight
+
+: 1.5 Kg; 3 lb 5 oz
+
+• Audio output power
+
+: More than 10 W (at 13.75 V DC
+
+with 8 Ω load 60 % MOD. 10%
+
+D Transmitter
+
+distortion)
+
+• Output power
+
+: 36 W (pep)
+
+typical
+
+Side tone
+
+More than 100 mW (with 500 Ω
+
+9 W (carrier)
+
+typical
+
+load 60% MOD. 10 % distortion)
+
+• Modulation
+
+: Last Stage modulation
+
+• Hum and noise
+
+: More than 25 dB
+
+• Modulation limiting
+
+: 70 to 100 %
+
+• Audio output impedance
+
+: Ext. SP 8 Ω
+
+• Audio harmonic distortion : Less than 10 %
+
+Side tone 500 Ω
+
+(at 85 % modulation)
+
+• Hum and noise ratio
+
+: More than 40 dB
+
+*Except USA version
+
+• Spurious emissions
+
+: –16dBm or less
+
+All stated specifications are subject to change without
+
+• Antenna impedance
+
+: Standard 50 Ω with SWR <3
+
+notice or obligation.
+
+15
+
+
+
+www.DataSheet4U.com
+
+SPECIFICATIONS (VFO CHANNEL ID LIST) 8
+
+• Channel spacing: 25 kHz (Actual frequency is displayed.)
+
+• Channel spacing: 25/8.33* kHz auto selection mode Operating Freq.
+
+Channel spacing
+
+Channel ID
+
+(MHz)
+
+(kHz)
+
+(Displayed Freq.)
+
+Operating Freq.
+
+Channel spacing
+
+Channel ID
+
+118.0000
+
+25
+
+118.000
+
+(MHz)
+
+(kHz)
+
+(Displayed Freq.)
+
+118.0250
+
+25
+
+118.025
+
+118.0000
+
+25
+
+118.000
+
+118.0500
+
+25
+
+118.050
+
+118.0000
+
+8.33
+
+118.005
+
+118.0750
+
+25
+
+118.075
+
+118.0083
+
+8.33
+
+118.010
+
+118.1000
+
+25
+
+118.100
+
+118.0167
+
+8.33
+
+118.015
+
+etc
+
+118.0250
+
+25
+
+118.020
+
+118.0250
+
+8.33
+
+118.030
+
+• Channel spacing: 8.33* kHz 118.0333
+
+8.33
+
+118.035
+
+118.0417
+
+8.33
+
+118.040
+
+Operating Freq.
+
+Channel spacing
+
+Channel ID
+
+118.0500
+
+25
+
+118.050
+
+(MHz)
+
+(kHz)
+
+(Displayed Freq.)
+
+118.0500
+
+8.33
+
+118.055
+
+118.0000
+
+8.33
+
+118.005
+
+118.0583
+
+8.33
+
+118.060
+
+118.0083
+
+8.33
+
+118.010
+
+118.0667
+
+8.33
+
+118.065
+
+118.0167
+
+8.33
+
+118.015
+
+118.0750
+
+25
+
+118.070
+
+118.0250
+
+8.33
+
+118.030
+
+118.0750
+
+8.33
+
+118.080
+
+118.0333
+
+8.33
+
+118.035
+
+118.0833
+
+8.33
+
+118.085
+
+118.0417
+
+8.33
+
+118.040
+
+118.0917
+
+8.33
+
+118.090
+
+118.0500
+
+8.33
+
+118.055
+
+118.1000
+
+25
+
+118.100
+
+118.0583
+
+8.33
+
+118.060
+
+118.1000
+
+8.33
+
+118.105
+
+118.0667
+
+8.33
+
+118.065
+
+etc
+
+118.0750
+
+8.33
+
+118.080
+
+118.0833
+
+8.33
+
+118.085
+
+118.0917
+
+8.33
+
+118.090
+
+118.1000
+
+8.33
+
+118.105
+
+etc
+
+*Except USA version.
+
+16
+
+
+
+9
+
+OPC-871
+
+www.DataSheet4U.com
+
+HEADSET ADAPTER (OPTION)
+
+■ OPC-871 Headset adapter
+
+D Installation
+
+The optional OPC-871 HEADSET ADAPTER install as When using an optional headset, such as those from the follows.
+
+David Clark Co. via the adapter, the transceiver outputs your q Turns the power OFF, then disconnect the DC power transmitted voice to the headset for monitoring. (pgs. 5, 10) cable.
+
+wUnscrew the 4 screws, then remove the bottom cover. (Fig. 1) e Insert the connector as shown below. (Fig. 2) D
+
+PTT switch
+
+Connection
+
+r Mount the phone plug attachment together with the mo-Use a PTT switch with a 3.5
+
+bile mounting bracket with 2 supplied screws. (Fig. 3) mm diameter plug, if required.
+
+Fig. 1
+
+HEADSET
+
+(Must be purchased
+
+separately.)
+
+17
+
+
+
+www.DataSheet4U.com
+
+OPC-871
+
+9
+
+• Use the upper side mounting hole.
+
+• You can mount the attachment on either side of the transceiver.
+
+• Bent the plastic dust cover before install the strain relief into the notch.
+
+Fig. 2
+
+Fig. 3
+
+18
+
+
+
+10 OPTIONS
+
+www.DataSheet4U.com
+
+D Other options
+
+OPC-871 HEADSET ADAPTER (See pgs. 17-18) CS-A110 CLONING SOFTWARE
+
+Provides quick and easy programming of items, including pri-vate channels, scan settings, etc., via an IBM® compatible PC
+
+(Microsoft® Windows® 95/98) to transceiver.
+
+OPC-478 CLONING CABLE
+
+OPC-592 CLONING CABLE ADAPTOR
+
+These three components work as one set and provide a quick and easy programming of items, including memory channels, memory names and set mode contents, etc. via a PC.
+
+OPC-591 CLONING CABLE
+
+Cloning cable for transceiver to transceiver. Very convenient when programming cloning process. Allows transfer of programmed contents from one transceiver to another.
+
+IBM® is a registered trademark of International Business Machines.
+
+Microsoft and Windows are registered trademarks of Microsoft Cor-poration in the U.S.A. and other countries.
+
+19
+
+
+
+www.DataSheet4U.com
+
+
+
+www.DataSheet4U.com
+
+A-5616H-1EX-q
+
+Printed in Japan
+
+© 1999 Icom Inc.
+
+1-1-32 Kamiminami, Hirano-ku, Osaka 547-0003 Japan
+
+
+
+
+

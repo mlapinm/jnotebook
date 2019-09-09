@@ -1,0 +1,8581 @@
+ReadyNAS OS 6 Desktop Storage
+
+Systems
+
+H a r d w a r e M a n u a l
+
+October 2015
+
+202-11206-06
+
+350 East Plumeria Drive
+
+San Jose, CA 95134
+
+USA
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Support
+
+Thank you for selecting NETGEAR products.
+
+After installing your device, locate the serial number on the label of your product and use it to register your product at
+
+http s://my.netgear.com. You must register your product before you can use NETGEAR telephone support. NETGEAR
+
+recommends registering your product through the NETGEAR website.
+
+For product updates and web support, visit http://support.netgear.com.
+
+Phone (US & Canada only): 1-888-NETGEAR.
+
+Phone (Other Countries): Check the list of phone numbers at ht tp://support.netgear.com/general/contact/default.aspx.
+
+Trademarks
+
+© NETGEAR, Inc., NETGEAR and the NETGEAR Logo are trademarks of NETGEAR, Inc. Any non-NETGEAR
+
+trademarks are used for reference purposes only.
+
+Compliance
+
+For regulatory compliance information, visit http://www.netgear.com/about/regulatory/.
+
+
+
+2
+
+
+
+
+
+Contents
+
+Chapter 1 Getting Started
+
+Additional Documentation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .8
+
+Setup Location. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .8
+
+Supported Operating Systems . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .8
+
+Supported Browsers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .9
+
+Diskless Storage Systems . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .9
+
+Chapter 2 NETGEAR ReadyNAS 102
+
+Front and Side Panels . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11
+
+Drive Bays . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12
+
+Rear Panel. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 13
+
+Status Information . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14
+
+Power On and Shut Down . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 15
+
+Power On . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 15
+
+Preferred Shutdown. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 15
+
+Forced Shutdown . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 15
+
+Power State . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 15
+
+Boot Menu . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 16
+
+Chapter 3 NETGEAR ReadyNAS 104
+
+Front and Side Panels . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 19
+
+Drive Bays . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 20
+
+Rear Panel. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 21
+
+Status Information . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 22
+
+Power On and Shut Down . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 23
+
+Power On . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 23
+
+Preferred Shutdown. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 23
+
+Forced Shutdown . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 24
+
+Power State . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 24
+
+Boot Menu . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 24
+
+Chapter 4 NETGEAR ReadyNAS 202
+
+Front and Side Panels . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 28
+
+Drive Bays . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 29
+
+Rear Panel. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 30
+
+Status Information . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 31
+
+Power On and Shut Down . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 32
+
+Power On . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 32
+
+3
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Preferred Shutdown. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 32
+
+Forced Shutdown . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 32
+
+Power State . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 33
+
+Boot Menu . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 33
+
+Chapter 5 NETGEAR ReadyNAS 204
+
+Front and Side Panels . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 38
+
+Drive Bays . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 39
+
+Rear Panel. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 40
+
+Status Information . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 41
+
+Power On and Shut Down . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 42
+
+Power On . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 42
+
+Preferred Shutdown. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 42
+
+Forced Shutdown . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 43
+
+Power State . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 43
+
+Boot Menu . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 43
+
+Chapter 6 NETGEAR ReadyNAS 212
+
+Front and Side Panels . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 46
+
+Drive Bays . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 47
+
+Rear Panel. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 48
+
+Status Information . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 49
+
+Power On and Shut Down . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 50
+
+Power On . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 50
+
+Preferred Shutdown. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 50
+
+Forced Shutdown . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 50
+
+Power State . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 51
+
+Boot Menu . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 51
+
+Chapter 7 NETGEAR ReadyNAS 214
+
+Front and Side Panels . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 56
+
+Drive Bays . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 57
+
+Rear Panel. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 58
+
+Status Information . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 59
+
+Power On and Shut Down . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 60
+
+Power On . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 60
+
+Preferred Shutdown. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 60
+
+Forced Shutdown . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 61
+
+Power State . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 61
+
+Boot Menu . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 61
+
+Chapter 8 NETGEAR ReadyNAS 312
+
+Front and Side Panels . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 64
+
+Drive Bays . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 65
+
+Rear Panel. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 66
+
+
+
+4
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Status Information . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 67
+
+Power On and Shut Down . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 68
+
+Power On . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 68
+
+Preferred Shutdown. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 68
+
+Forced Shutdown . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 68
+
+Boot Menu . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 69
+
+Chapter 9 NETGEAR ReadyNAS 314
+
+Front and Side Panels . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 72
+
+Drive Bays. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 73
+
+Rear Panel. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 74
+
+Status Information . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 75
+
+Power On and Shut Down . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 76
+
+Power On . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 76
+
+Preferred Shutdown. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 76
+
+Forced Shutdown . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 76
+
+Boot Menu . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 77
+
+Chapter 10 NETGEAR ReadyNAS 316
+
+Front and Side Panels . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 80
+
+Drive Bays. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 81
+
+Rear Panel. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 82
+
+Status Information . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 83
+
+Power On and Shut Down . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 83
+
+Power On . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 83
+
+Preferred Shutdown. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 83
+
+Forced Shutdown . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 84
+
+Boot Menu . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 85
+
+Chapter 11 NETGEAR ReadyNAS 516
+
+Front and Side Panels . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 88
+
+Drive Bays. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 89
+
+Rear Panel. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 90
+
+Status Information . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 91
+
+Power On and Shut Down . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 91
+
+Power On . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 91
+
+Preferred Shutdown. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 92
+
+Forced Shutdown . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 92
+
+Boot Menu . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 93
+
+Chapter 12 NETGEAR ReadyNAS 716X
+
+Front and Side Panels . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 96
+
+Drive Bays. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 97
+
+Rear Panel. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 98
+
+Status Information . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 99
+
+
+
+5
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Power On and Shut Down . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 99
+
+Power On . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 100
+
+Preferred Shutdown. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 100
+
+Forced Shutdown . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 100
+
+Boot Menu . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 101
+
+Chapter 13 NETGEAR EDA 500
+
+Front and Side Panels . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 104
+
+Drive Bays . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 105
+
+Rear Panel. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 106
+
+Status Information . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 107
+
+Power On and Shut Down . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 108
+
+Power On . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 108
+
+Preferred Shutdown. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 108
+
+Forced Shutdown . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 108
+
+Chapter 14 Disks
+
+Disk Trays . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 110
+
+Standard Disk Tray . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 110
+
+EDA 500 Disk Tray . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 111
+
+Supported Disks . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 112
+
+Previously Formatted Disks . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 112
+
+Reformat Previously Formatted Disks. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 112
+
+Migrate a Volume . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 113
+
+Add a Disk. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 114
+
+Replace a Disk . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 121
+
+Appendix A Defaults and Technical Specifications
+
+Factory Default Settings . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 129
+
+ReadyNAS 102 Technical Specifications . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 130
+
+ReadyNAS 104 Technical Specifications . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 131
+
+ReadyNAS 202 Technical Specifications . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 132
+
+ReadyNAS 212 Technical Specifications . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 133
+
+ReadyNAS 204 Technical Specifications . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 134
+
+ReadyNAS 214 Technical Specifications . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 135
+
+ReadyNAS 312 Technical Specifications . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 136
+
+ReadyNAS 314 Technical Specifications . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 137
+
+ReadyNAS 316 Technical Specifications . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 138
+
+ReadyNAS 516 Technical Specifications . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 139
+
+ReadyNAS 716X Technical Specifications. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 141
+
+EDA 500 Technical Specifications . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 143
+
+Safety Warnings . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 144
+
+Electrical Safety Precautions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 144
+
+General Safety Precautions. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 145
+
+Electrostatic Discharge Precautions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 145
+
+
+
+6
+
+
+
+
+
+1. Getting Started
+
+1
+
+Congratulations on your purchase of a NETGEAR ReadyNAS® storage system. This manual describes the physical features of the ReadyNAS OS 6 desktop storage systems.
+
+This chapter contains the following sections:
+
+•
+
+Additional Documentation
+
+•
+
+Setup Location
+
+•
+
+Supported Operating Systems
+
+•
+
+Supported Browsers
+
+•
+
+Diskless Storage Systems
+
+7
+
+
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Additional Documentation
+
+For detailed information about configuring, managing, and using your ReadyNAS storage system, see the ReadyNAS OS 6 Software Manual, which is available at
+
+support.netgear.com/product/ReadyNAS-OS6.
+
+NETGEAR maintains a community website that supports ReadyNAS products. Visit
+
+www.netgear.com/readynas for reviews, tutorials, a comparison chart, software updates, documentation, an active user forum, and much more.
+
+Setup Location
+
+Your ReadyNAS storage system is suitable for use in a home or small office environment where it can be freestanding. The small, compact size makes it suitable for sitting on a desk or on a closet shelf.
+
+Choose a location for your storage system that meets these criteria:
+
+•
+
+Cables can be connected easily.
+
+•
+
+Water or moisture cannot enter the case.
+
+•
+
+Airflow around the storage system and through the vents in the side of the case is not restricted.
+
+•
+
+The air is as free of dust as possible.
+
+•
+
+Temperature operating limits are not likely to be exceeded.
+
+•
+
+If you are using an uninterruptable power supply (UPS) for protection, the power cable can be securely and safely connected to the UPS.
+
+Supported Operating Systems
+
+The ReadyNAS storage system is supported on the following systems:
+
+•
+
+Microsoft Windows 8
+
+•
+
+Microsoft Windows 7
+
+•
+
+Microsoft Windows Vista
+
+•
+
+Apple Mac OS X 10.5 Leopard or later
+
+•
+
+Linux, UNIX, Solaris
+
+•
+
+Apple iOS
+
+•
+
+Google Android
+
+Getting Started
+
+8
+
+
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Supported Browsers
+
+The ReadyNAS local admin page supports the following browsers:
+
+•
+
+Microsoft Internet Explorer 9.0+
+
+•
+
+Apple Safari, 5.0+
+
+•
+
+Google Chrome 20+
+
+•
+
+Mozilla Firefox 14+
+
+If you experience difficulty accessing the local admin page or if you notice unexpected behavior, try using another browser. For more information about the ReadyNAS local admin page, see the ReadyNAS OS 6 Software Manual.
+
+Diskless Storage Systems
+
+If you purchased a ReadyNAS storage system without a preinstalled disk drive or drives, you must add at least one disk your system before you use the system. You can add a 3.5-inch hard disk drive, a 2.5-inch hard disk drive, or a 2.5-inch solid state drive to an empty drive bay. For information about how to install a disk, see Add a Disk on page 114.
+
+Use only supported SATA hard disk drives (HDD) or solid state drives (SSD) in your ReadyNAS storage system. If you use disks that are not supported, NETGEAR technical support will not provide assistance. For a list of supported disks, see the NETGEAR
+
+Hardware Compatibility List at netgear.com/readynas-hcl.
+
+If you are adding a previously formatted disk to your storage system, see the instructions in
+
+Previously Formatted Disks on page 112.
+
+Getting Started
+
+9
+
+
+
+
+
+2. NETGEAR ReadyNAS 102
+
+2
+
+This chapter provides an overview of the physical features of the ReadyNAS 102 and includes the following sections:
+
+•
+
+Front and Side Panels
+
+•
+
+Drive Bays
+
+•
+
+Rear Panel
+
+•
+
+Status Information
+
+•
+
+Power On and Shut Down
+
+•
+
+Boot Menu
+
+10
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Front and Side Panels
+
+The following figure shows the front and side panels of the ReadyNAS 102.
+
+1
+
+2
+
+3
+
+8
+
+4
+
+5
+
+6
+
+7
+
+Figure 1. ReadyNAS 102 front and side panels
+
+1. Power button and LED
+
+2. Disk activity LED
+
+3. Exhaust vent
+
+4. USB 2.0 port
+
+5. Backup button
+
+6. USB and Backup status LED
+
+7. Disk 1 and Disk 2 LEDs
+
+8. Drive bay door
+
+NETGEAR ReadyNAS 102
+
+11
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Drive Bays
+
+The following figure shows the drive bays of the ReadyNAS 102.
+
+1
+
+2
+
+3
+
+4
+
+5
+
+Figure 2. ReadyNAS 102 drive bays
+
+1. Drive bay door
+
+2. Disk tray handle
+
+3. Recessed disk tray handle lock
+
+4. Disk tray release latch
+
+5. Drive bays
+
+NETGEAR ReadyNAS 102
+
+12
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Rear Panel
+
+The following figure shows the rear panel of the ReadyNAS 102.
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+Figure 3. ReadyNAS 102 rear panel
+
+1. Exhaust fan
+
+2. Kensington lock
+
+3. GbE ports with LED status indicators
+
+4. USB 3.0 ports
+
+5. eSATA port
+
+6. Reset button
+
+7. Power adapter socket
+
+NETGEAR ReadyNAS 102
+
+13
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Status Information
+
+You can obtain information about the status of your storage system by reviewing the indicators listed in the following table.
+
+Table 1. ReadyNAS 102 indicator descriptions
+
+Indicator
+
+Description
+
+Power button and LED
+
+Press this button to turn on the ReadyNAS. The LED indicates these states:
+
+•
+
+On. Powered on.
+
+•
+
+Blinking. Booting or shutting down.
+
+•
+
+Off. Powered off.
+
+Disk LEDs (1, 2)
+
+An LED on the front panel of the storage system is associated with each drive bay.
+
+The disk LEDs have these states:
+
+•
+
+On. Power is on and the disk is operating normally.
+
+•
+
+Blinking. The disk was removed, failed, or is resynchronizing.
+
+•
+
+Off. The drive bay is empty.
+
+Disk activity LED
+
+The disk activity LED has these states:
+
+•
+
+On. At least one disk is present.
+
+•
+
+Blinking. A disk is active.
+
+•
+
+Off. No disks are present.
+
+Rear panel Ethernet port
+
+Two LED status indicators are built into this port, one green and one amber. They LEDs
+
+indicate port speed and activity as follows:
+
+•
+
+Green on, amber off. 1000 Mbps connection speed, no activity.
+
+•
+
+Green blinking, amber off. 1000 Mbps connection speed, activity.
+
+•
+
+Green off, amber on. 10 Mbps or 100 Mbps connection speed, no activity.
+
+•
+
+Green off, amber blinking. 10 Mbps or 100 Mbps connection speed, activity.
+
+•
+
+Green off, amber off. No connection.
+
+NETGEAR ReadyNAS 102
+
+14
+
+
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Power On and Shut Down
+
+This section describes how to power on and shut down your system. If you must shut down the system, use one of the preferred shutdown methods whenever possible.
+
+Power On
+
+ To power on the system:
+
+1. Connect the system to a power supply.
+
+Note: Depending on the system’s last power state, the system might power on automatically. For more information, see Power State on page 15.
+
+2. If necessary, press the Power button.
+
+The system powers on.
+
+Preferred Shutdown
+
+You can gracefully shut down your system by using the Power button or the ReadyNAS local admin page.
+
+For information about how to gracefully shut down your system using the ReadyNAS local admin page, see the ReadyNAS OS 6 Software Manual, which is available at
+
+support.netgear.com/product/ReadyNAS-OS6.
+
+ To gracefully shut down your system using the Power button: 1. Press the Power button.
+
+The Power LED blinks, prompting you to confirm the shutdown.
+
+2. Press the Power button again.
+
+The system shuts down gracefully.
+
+Forced Shutdown
+
+Perform a forced shutdown only if the storage system is not responding.
+
+ To perform a forced shutdown:
+
+Unplug the system from the power supply.
+
+Power State
+
+If the power supply is interrupted due to a power failure, the system returns to its last state when the power supply is restored:
+
+NETGEAR ReadyNAS 102
+
+15
+
+
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+•
+
+If the system was powered on at the time of the power failure, the system powers on when the power supply is restored.
+
+•
+
+If the system was powered off at the time of the power failure, the system remains off when the power supply is restored.
+
+Boot Menu
+
+Use the boot menu to restart or troubleshoot your ReadyNAS storage system. Your storage system has the following boot modes:
+
+•
+
+Normal. Initiates a normal boot process, just like booting using the Power button.
+
+•
+
+Factory default. Initiates a short disk test that takes approximately 5 minutes. After the disk test, a 10-minute time-out period begins.
+
+WARNING:
+
+The factory default reboot process resets the storage system to factory settings, erases all data, resets all defaults, and reformats the disk to X-RAID.
+
+-
+
+If you want to cancel the factory default process, power off the storage system before the 10-minute time-out ends. The system powers down safely without causing any data loss.
+
+-
+
+If you want to reset the system to factory default settings, do not power off your system. After the 10-minute time-out period, the factory default process begins.
+
+Tip: To start the factory default process immediately, press the Backup button during the 10-minute time-out period.
+
+•
+
+OS reinstall. Reinstalls the firmware from the internal flash to the disks. Use the OS
+
+reinstall boot mode when the system crashes and corrupts some configuration files. OS
+
+reinstall boot mode also resets some settings on your storage system, such as Internet protocol settings and the administrator password, to defaults.
+
+•
+
+Tech support. Boots into a low-level diagnostic mode. Use the tech support boot mode only when a NETGEAR technical support representative instructs you to do so.
+
+•
+
+Volume read only. Mounts a volume as read-only. Use this option when you are attempting to rescue data off a disk during a disaster recovery.
+
+•
+
+Memory test. Performs a memory test. The pass or fail result is reported using the storage system’s LEDs. Contact a NETGEAR technical support representative to interpret memory test results.
+
+•
+
+Test disk. Performs an offline full disk test. This process can take four hours or more, depending on the size of your disks. Any problems are reported in the system logs. For more information about viewing the system logs, see the ReadyNAS OS 6 Software Manual, which is available at support.netgear.com/product/ReadyNAS-OS6.
+
+NETGEAR ReadyNAS 102
+
+16
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+ To access the boot menu:
+
+1. Power off your storage system.
+
+2. Using a straightened paper clip, press and hold the Reset button.
+
+3. Press the Power button.
+
+The system powers on.
+
+4. Continue to press the Reset button until the Power button LED, USB and backup status LED, disk 1 LED, and disk 2 LED light.
+
+5. Press the Backup button to scroll through boot mode options.
+
+The storage system shows the boot mode options using the LEDs, as described in the following table:
+
+Boot Mode
+
+Status Indicator
+
+Description
+
+Power
+
+Disk 1
+
+Disk 2
+
+USB
+
+LED
+
+LED
+
+LED
+
+and
+
+Backup
+
+LED
+
+Boot menu
+
+All four LEDs light.
+
+
+
+
+
+
+
+
+
+Normal
+
+Power LED lights.
+
+
+
+
+
+
+
+
+
+Factory default
+
+Disk 1 LED lights.
+
+
+
+
+
+
+
+
+
+OS reinstall
+
+Disk 2 LED lights.
+
+
+
+
+
+
+
+
+
+Tech support
+
+USB and backup status LED lights.
+
+
+
+
+
+
+
+
+
+Volume read only
+
+Power LED and disk 1 LED light.
+
+
+
+
+
+
+
+
+
+Memory test
+
+Power LED and disk 2 LED light.
+
+
+
+
+
+
+
+
+
+Test disk
+
+Power LED and USB and backup status
+
+
+
+
+
+
+
+
+
+LED light.
+
+Legend:
+
+•
+
+On: 
+
+•
+
+Off: 
+
+6. Press and release the Reset button to confirm your boot menu selection.
+
+The system boots in the selected boot mode.
+
+NETGEAR ReadyNAS 102
+
+17
+
+
+
+
+
+3. NETGEAR ReadyNAS 104
+
+3
+
+This chapter provides an overview of the physical features of the ReadyNAS 104 and includes the following sections:
+
+•
+
+Front and Side Panels
+
+•
+
+Drive Bays
+
+•
+
+Rear Panel
+
+•
+
+Status Information
+
+•
+
+Power On and Shut Down
+
+•
+
+Boot Menu
+
+18
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Front and Side Panels
+
+The following figure shows the front and side panels of the ReadyNAS 104.
+
+2
+
+3
+
+4
+
+5
+
+6
+
+1
+
+7
+
+8
+
+Figure 4. ReadyNAS 104 front and side panels
+
+1. Exhaust vents
+
+2. USB 2.0 port
+
+3. Backup button and LED
+
+4. Disk LEDs
+
+5. Disk activity LED
+
+6. Power button and LED
+
+7. Drive bay door
+
+8. Status display screen
+
+NETGEAR ReadyNAS 104
+
+19
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Drive Bays
+
+The following figure shows the drive bays of the ReadyNAS 104.
+
+2
+
+3
+
+4
+
+1
+
+5
+
+Figure 5. ReadyNAS 104 drive bays
+
+1. Drive bay door
+
+2. Disk tray handle
+
+3. Recessed disk tray handle lock
+
+4. Disk tray release latch
+
+5. Drive bays
+
+NETGEAR ReadyNAS 104
+
+20
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Rear Panel
+
+The following figure shows the rear panel of the ReadyNAS 104.
+
+2
+
+3
+
+4
+
+5
+
+1
+
+6
+
+7
+
+Figure 6. ReadyNAS 104 rear panel
+
+1. eSATA port
+
+2. Reset button
+
+3. USB 3.0 ports
+
+4. GbE ports with LED status indicators
+
+Note: The two GbE ports are equivalent. They can be used as two separate Ethernet connections, or can be configured as a single, bonded port with a 2 Gbps potential speed. For information about how to configure a bonded port, and the network configuration requirements needed to support 2 Gbps, see the ReadyNAS OS 6 Software Manual, which is available at support.netgear.com/product/ReadyNAS-OS6.
+
+5. Power cable socket
+
+6. Exhaust fan
+
+7. Kensington lock
+
+NETGEAR ReadyNAS 104
+
+21
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Status Information
+
+You can obtain information about the status of your storage system by reviewing the indicators listed in the following table.
+
+Table 2. ReadyNAS 104 indicator descriptions
+
+Indicator
+
+Description
+
+Power button and LED
+
+Press this button to turn on the ReadyNAS. The LED indicates these states:
+
+•
+
+On. Powered on.
+
+•
+
+Blinking. Booting or shutting down.
+
+•
+
+Off. Powered off.
+
+Disk LEDs (1, 2, 3, 4)
+
+An LED on the top of the front panel is associated with each drive bay. LEDs are in numerical order from left to right. The disk LEDs indicate these states:
+
+•
+
+On. Power is on and the disk is operating normally.
+
+•
+
+Blinking. The disk was removed, failed, or is resynchronizing. See the display screen for details.
+
+•
+
+Off. The drive bay is empty.
+
+Disk activity LED
+
+The disk activity LED indicates these states:
+
+•
+
+On. At least one disk is present.
+
+•
+
+Blinking. A disk is active.
+
+•
+
+Off. No disks are present.
+
+Rear panel Ethernet port
+
+Two LED status indicators are built into this port, one green and one amber. They LEDs
+
+indicate port speed and activity as follows:
+
+•
+
+Green on, amber off. 1000 Mbps connection speed, no activity.
+
+•
+
+Green blinking, amber off. 1000 Mbps connection speed, activity.
+
+•
+
+Green off, amber on. 10 Mbps or 100 Mbps connection speed, no activity.
+
+•
+
+Green off, amber blinking. 10 Mbps or 100 Mbps connection speed, activity.
+
+•
+
+Green off, amber off. No connection.
+
+Status display screen
+
+Displays messages about the status of your storage system. Note that the status display screen goes to sleep to prevent burn-in. To wake it, press the Power button once. If the storage system reports an abnormal operation or error, the status display screen stays on.
+
+NETGEAR ReadyNAS 104
+
+22
+
+
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Power On and Shut Down
+
+This section describes how to power on and shut down your system. If you need to shut down the system, use one of the preferred shutdown methods whenever possible.
+
+Power On
+
+ To power on the system:
+
+1. Connect the system to a power supply.
+
+Note: Depending on the system’s last power state, the system might power on automatically. For more information, see Power State on page 24.
+
+2. If necessary, press the Power button.
+
+The system powers on.
+
+Preferred Shutdown
+
+You can gracefully shut down your system by using the Power button or the ReadyNAS local admin page.
+
+For information about how to gracefully shut down your system using the ReadyNAS local admin page, see the ReadyNAS OS 6 Software Manual, which is available at
+
+support.netgear.com/product/ReadyNAS-OS6.
+
+ To gracefully shut down your system using the Power button:
+
+•
+
+If the status display screen is not lit, do the following: 1. Press the Power button.
+
+The status display screen wakes.
+
+2. Press the Power button a second time.
+
+Instructions for graceful shutdown display on the status display screen.
+
+3. Press the Power button a third time.
+
+The system shuts down gracefully.
+
+•
+
+If the status display screen is lit, do the following:
+
+1. Press the Power button.
+
+Instructions for graceful shutdown display on the status display screen.
+
+2. Press the Power button again.
+
+The system shuts down gracefully.
+
+NETGEAR ReadyNAS 104
+
+23
+
+
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Forced Shutdown
+
+Perform a forced shutdown only if the storage system is not responding.
+
+ To perform a forced shutdown:
+
+Unplug the system from the power supply.
+
+Power State
+
+If the power supply is interrupted due to a power failure, the system returns to its last state when the power supply is restored:
+
+•
+
+If the system was powered on at the time of the power failure, the system powers on when the power supply is restored.
+
+•
+
+If the system was powered off at the time of the power failure, the system remains off when the power supply is restored.
+
+Boot Menu
+
+Use the boot menu to restart or troubleshoot your ReadyNAS storage system. Your storage system has the following boot modes:
+
+•
+
+Normal. Initiates a normal boot process, just like booting using the Power button.
+
+•
+
+Factory default. Initiates a short disk test that takes approximately 5 minutes. After the disk test, a 10-minute time-out period begins.
+
+WARNING:
+
+The factory default reboot process resets the storage system to factory settings, erases all data, resets all defaults, and reformats the disk to X-RAID.
+
+-
+
+If you want to cancel the factory default process, power off the storage system before the 10-minute time-out ends. The system powers down safely without causing any data loss.
+
+-
+
+If you want to reset the system to factory default settings, do not power off your system. After the 10-minute time-out period, the factory default process begins.
+
+Tip: To start the factory default process immediately, press the Backup button during the 10-minute time-out period.
+
+•
+
+OS reinstall. Reinstalls the firmware from the internal flash to the disks. Use the OS
+
+reinstall boot mode when the system crashes and corrupts some configuration files. OS
+
+reinstall boot mode also resets some settings on your storage system, such as Internet protocol settings and the administrator password, to defaults.
+
+NETGEAR ReadyNAS 104
+
+24
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+•
+
+Tech support. Boots into a low-level diagnostic mode. Use the tech support boot mode only when a NETGEAR technical support representative instructs you to do so.
+
+•
+
+Volume read only. Mounts a volume as read-only. Use this option when you are attempting to rescue data off a disk during a disaster recovery.
+
+•
+
+Memory test. Performs a memory test. The pass or fail result is reported on the status display screen.
+
+•
+
+Test disk. Performs an offline full disk test. This process can take four hours or more, depending on the size of your disks. Any problems are reported in the system logs. For more information about viewing the system logs, see the ReadyNAS OS 6 Software Manual, which is available at support.netgear.com/product/ReadyNAS-OS6.
+
+ To access the boot menu:
+
+1. Power off your storage system.
+
+2. Using a straightened paper clip, press and hold the Reset button.
+
+3. Press the Power button.
+
+The system powers on.
+
+4. Continue to press the Reset button until the status display screen shows a boot menu message.
+
+5. Press the Backup button to scroll through boot mode options.
+
+The status display screen shows the current boot mode option.
+
+6. When the status display screen shows the boot mode that you need, press and release the Reset button to confirm your boot menu selection.
+
+The system boots in the selected boot mode.
+
+NETGEAR ReadyNAS 104
+
+25
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+NETGEAR ReadyNAS 104
+
+26
+
+
+
+
+
+4. NETGEAR ReadyNAS 202
+
+4
+
+This chapter provides an overview of the physical features of the ReadyNAS 202 and includes the following sections:
+
+•
+
+Front and Side Panels
+
+•
+
+Drive Bays
+
+•
+
+Rear Panel
+
+•
+
+Status Information
+
+•
+
+Power On and Shut Down
+
+•
+
+Boot Menu
+
+27
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Front and Side Panels
+
+The following figure shows the front and side panels of the ReadyNAS 202.
+
+1
+
+2
+
+3
+
+8
+
+4
+
+5
+
+6
+
+7
+
+Figure 7. ReadyNAS 202 front and side panels
+
+1. Power button and LED
+
+2. Disk activity LED
+
+3. Exhaust vent
+
+4. USB 3.0 port
+
+5. Backup button
+
+6. USB and backup status LED
+
+7. Disk 1 and Disk 2 LEDs
+
+8. Drive bay door
+
+NETGEAR ReadyNAS 202
+
+28
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Drive Bays
+
+The following figure shows the drive bays of the ReadyNAS 202.
+
+1
+
+2
+
+3
+
+4
+
+5
+
+Figure 8. ReadyNAS 202 drive bays
+
+1. Drive bay door
+
+2. Disk tray handle
+
+3. Recessed disk tray handle lock
+
+4. Disk tray release latch
+
+5. Drive bays
+
+NETGEAR ReadyNAS 202
+
+29
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Rear Panel
+
+The following figure shows the rear panel of the ReadyNAS 202.
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+Figure 9. ReadyNAS 202 rear panel
+
+1. Exhaust fan
+
+2. Kensington lock
+
+3. USB 3.0 ports
+
+4. eSATA port
+
+5. GbE ports with LED status indicators
+
+Note: The two GbE ports are equivalent. They can be used as two separate Ethernet connections, or can be configured as a single, bonded port with a 2 Gbps potential speed. For information on how to configure a bonded port, and the network configuration requirements needed to support 2 Gbps, see the ReadyNAS OS 6 Software Manual, which is available at
+
+support.netgear.com/product/ReadyNAS-OS6.
+
+6. Reset button
+
+7. Power adapter socket
+
+NETGEAR ReadyNAS 202
+
+30
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Status Information
+
+You can obtain information about the status of your storage system by reviewing the indicators listed in the following table.
+
+Table 3. ReadyNAS 202 indicator descriptions
+
+Indicator
+
+Description
+
+Power button and LED
+
+Press this button to turn on the ReadyNAS. The LED has these states:
+
+•
+
+On. Powered on.
+
+•
+
+Blinking. Booting or shutting down.
+
+•
+
+Off. Powered off.
+
+Disk LEDs (1, 2)
+
+Each drive bay has an LED associated with it on the front panel of the storage system. The disk LEDs have these states:
+
+•
+
+On. Power is on and the disk is operating normally.
+
+•
+
+Blinking. The disk was removed, failed, or is resynchronizing. See the display screen for details.
+
+•
+
+Off. The drive bay is empty.
+
+Disk activity LED
+
+The disk activity LED has these states:
+
+•
+
+Blinking. A disk is active.
+
+•
+
+Off. Disk is idling.
+
+Rear panel Ethernet port
+
+Two LED status indicators are built into each port, one off or green and one LEDs
+
+showing three states: off, amber, or green. They indicate port speed and activity as follows:
+
+•
+
+Green, green. 1000 Mbps connection speed, no activity.
+
+•
+
+Green blinking, green. 1000 Mbps connection speed, activity.
+
+•
+
+Green, amber. 100 Mbps connection speed, no activity.
+
+•
+
+Green blinking, amber. 100 Mbps connection speed, activity.
+
+•
+
+Green on, off. 10 Mbps connection speed, no activity.
+
+•
+
+Green blinking, off. 10 Mbps connection speed, activity.
+
+•
+
+Off, off. No connection.
+
+NETGEAR ReadyNAS 202
+
+31
+
+
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Power On and Shut Down
+
+This section describes how to power on and shut down your system. If you must shut down the system, use one of the preferred shutdown methods whenever possible.
+
+Power On
+
+ To power on the system:
+
+1. Connect the system to a power supply.
+
+Note: Depending on the system’s last power state, the system might power on automatically. For more information, see Power State on page 33.
+
+2. If necessary, press the Power button.
+
+The system powers on.
+
+Preferred Shutdown
+
+You can gracefully shut down your system by using the Power button or the ReadyNAS local admin page.
+
+For information about how to gracefully shut down your system using the ReadyNAS local admin page, see the ReadyNAS OS 6 Software Manual, which is available at
+
+support.netgear.com/product/ReadyNAS-OS6.
+
+ To gracefully shut down your system using the Power button: 1. Press the Power button.
+
+The Power LED blinks, prompting you to confirm the shutdown.
+
+2. Press the Power button again.
+
+The system shuts down gracefully.
+
+Forced Shutdown
+
+Perform a forced shutdown only if the storage system is not responding.
+
+ To perform a forced shutdown:
+
+Unplug the system from the power supply.
+
+NETGEAR ReadyNAS 202
+
+32
+
+
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Power State
+
+If the power supply is interrupted due to a power failure, the system returns to its last state when the power supply is restored:
+
+•
+
+If the system was powered on at the time of the power failure, the system powers on when the power supply is restored.
+
+•
+
+If the system was powered off at the time of the power failure, the system remains off when the power supply is restored.
+
+Boot Menu
+
+Use the boot menu to restart or troubleshoot your ReadyNAS storage system. Your storage system has the following boot modes:
+
+•
+
+Normal. Initiates a normal boot process, just like booting using the Power button.
+
+•
+
+Factory default. Initiates a short disk test that takes approximately 5 minutes. After the disk test, a 10-minute time-out period begins.
+
+WARNING:
+
+The factory default reboot process resets the storage system to factory settings, erases all data, resets all defaults, and reformats the disk to X-RAID.
+
+-
+
+If you want to cancel the factory default process, power off the storage system before the 10-minute time-out ends. The system powers down safely without causing any data loss.
+
+-
+
+If you want to reset the system to factory default settings, do not power off your system. After the 10-minute time-out period, the factory default process begins.
+
+Tip: To start the factory default process immediately, press the Backup button during the 10-minute time-out period.
+
+•
+
+OS reinstall. Reinstalls the firmware from the internal flash to the disks. Use the OS
+
+reinstall boot mode when the system crashes and corrupts some configuration files. OS
+
+reinstall boot mode also resets some settings on your storage system, such as Internet protocol settings and the administrator password, to defaults.
+
+•
+
+Tech support. Boots into a low-level diagnostic mode. Use the tech support boot mode only when a NETGEAR technical support representative instructs you to do so.
+
+•
+
+Volume read only. Mounts a volume as read-only. Use this option when you are attempting to rescue data off a disk during a disaster recovery.
+
+NETGEAR ReadyNAS 202
+
+33
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+•
+
+Memory test. Performs a memory test. The memory test runs for eight hours. The current status and the pass or fail result is reported using the storage system LEDs, as described in the following table:
+
+Figure 10. Memory Test Status
+
+Memory Test State Power LED Disk 1 LED Disk 2 LED Backup LED
+
+1st hour
+
+Off
+
+Off
+
+Off
+
+Blinking
+
+2nd hour
+
+Off
+
+Off
+
+Blinking
+
+Off
+
+3rd hour
+
+Off
+
+Blinking
+
+Off
+
+Off
+
+4th hour
+
+Off
+
+Blinking
+
+Blinking
+
+Blinking
+
+5th hour
+
+On
+
+Off
+
+Off
+
+Blinking
+
+6th hour
+
+On
+
+Off
+
+Blinking
+
+Off
+
+7th hour
+
+On
+
+Blinking
+
+Off
+
+Off
+
+8th hour
+
+On
+
+Blinking
+
+Blinking
+
+Blinking
+
+Result: fail
+
+Blinking
+
+Blinking
+
+Blinking
+
+Blinking
+
+Result: pass
+
+On
+
+On
+
+On
+
+On
+
+•
+
+Test disk. Performs an offline full disk test. This process can take four hours or more, depending on the size of your disks. Any problems are reported in the system logs. For more information about viewing the system logs, see the ReadyNAS OS 6 Software Manual, which is available at support.netgear.com/product/ReadyNAS-OS6.
+
+ To access the boot menu:
+
+1. Power off your storage system.
+
+2. Using a straightened paper clip, press and hold the Reset button.
+
+3. Press the Power button.
+
+The system powers on.
+
+4. Continue to press the Reset button until the Power LED, USB and backup status LED, disk 1 LED, and disk 2 LED light.
+
+5. Press the Backup button to scroll through boot mode options.
+
+NETGEAR ReadyNAS 202
+
+34
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+The storage system shows the boot mode options using the LEDs, as described in the following table:
+
+Boot Mode
+
+Status Indicator
+
+Description
+
+Power
+
+Disk 1
+
+Disk 2
+
+USB
+
+LED
+
+LED
+
+LED
+
+and
+
+Backup
+
+LED
+
+Boot menu
+
+All four LEDs light.
+
+
+
+
+
+
+
+
+
+Normal
+
+Power LED lights.
+
+
+
+
+
+
+
+
+
+Factory default
+
+Disk 1 LED lights.
+
+
+
+
+
+
+
+
+
+OS reinstall
+
+Disk 2 LED lights.
+
+
+
+
+
+
+
+
+
+Tech support
+
+USB and backup status LED lights.
+
+
+
+
+
+
+
+
+
+Volume read only
+
+Power LED and disk 1 LED light.
+
+
+
+
+
+
+
+
+
+Memory test
+
+Power LED and disk 2 LED light.
+
+
+
+
+
+
+
+
+
+Test disk
+
+Power LED and USB and backup status
+
+
+
+
+
+
+
+
+
+LED light.
+
+Legend:
+
+•
+
+On: 
+
+•
+
+Off: 
+
+6. Press and release the Reset button to confirm your boot menu selection.
+
+The system boots in the selected boot mode.
+
+NETGEAR ReadyNAS 202
+
+35
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+NETGEAR ReadyNAS 202
+
+36
+
+
+
+
+
+5. NETGEAR ReadyNAS 204
+
+5
+
+This chapter provides an overview of the physical features of the ReadyNAS 204 and includes the following sections:
+
+•
+
+Front and Side Panels
+
+•
+
+Drive Bays
+
+•
+
+Rear Panel
+
+•
+
+Status Information
+
+•
+
+Power On and Shut Down
+
+•
+
+Boot Menu
+
+37
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Front and Side Panels
+
+The following figure shows the front and side panels of the ReadyNAS 204.
+
+2
+
+3
+
+4
+
+5
+
+6
+
+1
+
+7
+
+8
+
+Figure 11. ReadyNAS 204 front and side panels
+
+1. Exhaust vents
+
+2. USB 2.0 port
+
+3. Backup button and LED
+
+4. Disk LEDs
+
+5. Disk activity LED
+
+6. Power button and LED
+
+7. Drive bay door
+
+8. Status display screen
+
+NETGEAR ReadyNAS 204
+
+38
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Drive Bays
+
+The following figure shows the drive bays of the ReadyNAS 204.
+
+2
+
+3
+
+4
+
+1
+
+5
+
+Figure 12. ReadyNAS 204 drive bays
+
+1. Drive bay door
+
+2. Disk tray handle
+
+3. Recessed disk tray handle lock
+
+4. Disk tray release latch
+
+5. Drive bays
+
+NETGEAR ReadyNAS 204
+
+39
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Rear Panel
+
+The following figure shows the rear panel of the ReadyNAS 204.
+
+2
+
+3
+
+4
+
+5
+
+1
+
+6
+
+7
+
+Figure 13. ReadyNAS 204 rear panel
+
+1. eSATA port
+
+2. Reset button
+
+3. USB 3.0 ports
+
+4. LAN ports with LED status indicators
+
+Note: The two LAN ports are equivalent. They can be used as two separate Ethernet connections, or can be configured as a single, bonded port with a 2 Gbps potential speed. For information about how to configure a bonded port, and the network configuration requirements needed to support 2 Gbps, see the ReadyNAS OS 6 Software Manual, which is available at support.netgear.com/product/ReadyNAS-OS6.
+
+5. Power cable socket
+
+6. Exhaust fan
+
+7. Kensington lock
+
+NETGEAR ReadyNAS 204
+
+40
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Status Information
+
+You can obtain information about the status of your storage system by reviewing the indicators listed in the following table.
+
+Table 4. ReadyNAS 204 indicator descriptions
+
+Indicator
+
+Description
+
+Power button and LED
+
+Press this button to turn on the ReadyNAS. The LED indicates these states:
+
+•
+
+On. Powered on.
+
+•
+
+Blinking. Booting or shutting down.
+
+•
+
+Off. Powered off.
+
+Disk LEDs (1, 2, 3, 4)
+
+An LED on the top of the front panel is associated with each drive bay. LEDs are in numerical order from left to right. The disk LEDs indicate these states:
+
+•
+
+On. Power is on and the disk is operating normally.
+
+•
+
+Blinking. The disk was removed, failed, or is resynchronizing. See the display screen for details.
+
+•
+
+Off. The drive bay is empty.
+
+Disk activity LED
+
+The disk activity LED indicates these states:
+
+•
+
+Blinking. A disk is being accessed.
+
+•
+
+Off. All disks are idle.
+
+Rear panel Ethernet port
+
+Two LED status indicators are built into each port, one off or green and one LEDs
+
+showing three states: off, amber, or green. They indicate port speed and activity as follows:
+
+•
+
+Green, green. 1000 Mbps connection speed, no activity.
+
+•
+
+Green blinking, green. 1000 Mbps connection speed, activity.
+
+•
+
+Green, amber. 100 Mbps connection speed, no activity.
+
+•
+
+Green blinking, amber. 100 Mbps connection speed, activity.
+
+•
+
+Green on, off. 10 Mbps connection speed, no activity.
+
+•
+
+Green blinking, off. 10 Mbps connection speed, activity.
+
+•
+
+Off, off. No connection.
+
+Status display screen
+
+Displays messages about the status of your storage system. Note that the status display screen goes to sleep to prevent burn-in. To wake it, press the Power button once. If the storage system reports an abnormal operation or error, the status display screen stays on.
+
+NETGEAR ReadyNAS 204
+
+41
+
+
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Power On and Shut Down
+
+This section describes how to power on and shut down your system. If you must shut down the system, use one of the preferred shutdown methods whenever possible.
+
+Power On
+
+ To power on the system:
+
+1. Connect the system to a power supply.
+
+Note: Depending on the system’s last power state, the system might power on automatically. For more information, see Power State on page 43.
+
+2. If necessary, press the Power button.
+
+The system powers on.
+
+Preferred Shutdown
+
+You can gracefully shut down your system by using the Power button or the ReadyNAS local admin page.
+
+For information about how to gracefully shut down your system using the ReadyNAS local admin page, see the ReadyNAS OS 6 Software Manual, which is available at
+
+support.netgear.com/product/ReadyNAS-OS6.
+
+ To gracefully shut down your system using the Power button:
+
+•
+
+If the status display screen is not lit, do the following: 1. Press the Power button.
+
+The status display screen wakes.
+
+2. Press the Power button a second time.
+
+Instructions for graceful shutdown display on the status display screen.
+
+3. Press the Power button a third time.
+
+The system shuts down gracefully.
+
+•
+
+If the status display screen is lit, do the following:
+
+1. Press the Power button.
+
+Instructions for graceful shutdown display on the status display screen.
+
+2. Press the Power button again.
+
+The system shuts down gracefully.
+
+NETGEAR ReadyNAS 204
+
+42
+
+
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Forced Shutdown
+
+Perform a forced shutdown only if the storage system is not responding.
+
+ To perform a forced shutdown:
+
+Unplug the system from the power supply.
+
+Power State
+
+If the power supply is interrupted due to a power failure, the system returns to its last state when the power supply is restored:
+
+•
+
+If the system was powered on at the time of the power failure, the system powers on when the power supply is restored.
+
+•
+
+If the system was powered off at the time of the power failure, the system remains off when the power supply is restored.
+
+Boot Menu
+
+Use the boot menu to restart or troubleshoot your ReadyNAS storage system. Your storage system has the following boot modes:
+
+•
+
+Normal. Initiates a normal boot process, just like booting using the Power button.
+
+•
+
+Factory default. Initiates a short disk test that takes approximately 5 minutes. After the disk test, a 10-minute time-out period begins.
+
+WARNING:
+
+The factory default reboot process resets the storage system to factory settings, erases all data, resets all defaults, and reformats the disk to X-RAID.
+
+-
+
+If you want to cancel the factory default process, power off the storage system before the 10-minute time-out ends. The system powers down safely without causing any data loss.
+
+-
+
+If you want to reset the system to factory default settings, do not power off your system. After the 10-minute time-out period, the factory default process begins.
+
+Tip: To start the factory default process immediately, press the Backup button during the 10-minute time-out period.
+
+•
+
+OS reinstall. Reinstalls the firmware from the internal flash to the disks. Use the OS
+
+reinstall boot mode when the system crashes and corrupts some configuration files. OS
+
+reinstall boot mode also resets some settings on your storage system, such as Internet protocol settings and the administrator password, to defaults.
+
+NETGEAR ReadyNAS 204
+
+43
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+•
+
+Tech support. Boots into a low-level diagnostic mode. Use the tech support boot mode only when a NETGEAR technical support representative instructs you to do so.
+
+•
+
+Volume read only. Mounts a volume as read-only. Use this option when you are attempting to rescue data off a disk during a disaster recovery.
+
+•
+
+Memory test. Performs a memory test. The pass or fail result is reported on the status display screen.
+
+•
+
+Test disk. Performs an offline full disk test. This process can take four hours or more, depending on the size of your disks. Any problems are reported in the system logs. For more information about viewing the system logs, see the ReadyNAS OS 6 Software Manual, which is available at support.netgear.com/product/ReadyNAS-OS6.
+
+ To access the boot menu:
+
+1. Power off your storage system.
+
+2. Using a straightened paper clip, press and hold the Reset button.
+
+3. Press the Power button.
+
+The system powers on.
+
+4. Continue to press the Reset button until the status display screen shows a boot menu message.
+
+5. Press the Backup button to scroll through boot mode options.
+
+The status display screen shows the current boot mode option.
+
+6. When the status display screen shows the boot mode that you need, press and release the Reset button to confirm your boot menu selection.
+
+The system boots in the selected boot mode.
+
+NETGEAR ReadyNAS 204
+
+44
+
+
+
+
+
+6. NETGEAR ReadyNAS 212
+
+6
+
+This chapter provides an overview of the physical features of the ReadyNAS 212 and includes the following sections:
+
+•
+
+Front and Side Panels
+
+•
+
+Drive Bays
+
+•
+
+Rear Panel
+
+•
+
+Status Information
+
+•
+
+Power On and Shut Down
+
+•
+
+Boot Menu
+
+45
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Front and Side Panels
+
+The following figure shows the front and side panels of the ReadyNAS 212.
+
+1
+
+2
+
+3
+
+8
+
+4
+
+5
+
+6
+
+7
+
+Figure 14. ReadyNAS 212 front and side panels
+
+1. Power button and LED
+
+2. Disk activity LED
+
+3. Exhaust vent
+
+4. USB 3.0 port
+
+5. Backup button
+
+6. USB and backup status LED
+
+7. Disk 1 and Disk 2 LEDs
+
+8. Drive bay door
+
+NETGEAR ReadyNAS 212
+
+46
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Drive Bays
+
+The following figure shows the drive bays of the ReadyNAS 212.
+
+1
+
+2
+
+3
+
+4
+
+5
+
+Figure 15. ReadyNAS 212 drive bays
+
+1. Drive bay door
+
+2. Disk tray handle
+
+3. Recessed disk tray handle lock
+
+4. Disk tray release latch
+
+5. Drive bays
+
+NETGEAR ReadyNAS 212
+
+47
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Rear Panel
+
+The following figure shows the rear panel of the ReadyNAS 212.
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+Figure 16. ReadyNAS 212 rear panel
+
+1. Exhaust fan
+
+2. Kensington lock
+
+3. USB 3.0 ports
+
+4. eSATA port
+
+5. GbE ports with LED status indicators
+
+Note: The two GbE ports are equivalent. They can be used as two separate Ethernet connections, or can be configured as a single, bonded port with a 2 Gbps potential speed. For information about how to configure a bonded port, and the network configuration requirements needed to support 2 Gbps, see the ReadyNAS OS 6 Software Manual, which is available at support.netgear.com/product/ReadyNAS-OS6.
+
+6. Reset button
+
+7. Power adapter socket
+
+NETGEAR ReadyNAS 212
+
+48
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Status Information
+
+You can obtain information about the status of your storage system by reviewing the indicators listed in the following table.
+
+Table 5. ReadyNAS 212 indicator descriptions
+
+Indicator
+
+Description
+
+Power button and LED
+
+Press this button to turn on the ReadyNAS. The LED indicates these states:
+
+•
+
+On. Powered on.
+
+•
+
+Blinking. Booting or shutting down.
+
+•
+
+Off. Powered off.
+
+Disk LEDs (1, 2)
+
+An LED on the front panel of the storage system is associated with each drive bay The disk LEDs indicate these states:
+
+•
+
+On. Power is on and the disk is operating normally.
+
+•
+
+Blinking. The disk was removed, failed, or is resynchronizing. See the display screen for details.
+
+•
+
+Off. The drive bay is empty.
+
+Disk activity LED
+
+The disk activity LED indicates these states:
+
+•
+
+Blinking. A disk is active.
+
+•
+
+Off. disk is idling.
+
+Rear panel Ethernet port
+
+Two LED status indicators are built into each port, one off or green and one LEDs
+
+showing three states: off, amber, or green. They indicate port speed and activity as follows:
+
+•
+
+Green, green. 1000 Mbps connection speed, no activity.
+
+•
+
+Green blinking, green. 1000 Mbps connection speed, activity.
+
+•
+
+Green, amber. 100 Mbps connection speed, no activity.
+
+•
+
+Green blinking, amber. 100 Mbps connection speed, activity.
+
+•
+
+Green on, off. 10 Mbps connection speed, no activity.
+
+•
+
+Green blinking, off. 10 Mbps connection speed, activity.
+
+•
+
+Off, off. No connection.
+
+NETGEAR ReadyNAS 212
+
+49
+
+
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Power On and Shut Down
+
+This section describes how to power on and shut down your system. If you must shut down the system, use one of the preferred shutdown methods whenever possible.
+
+Power On
+
+ To power on the system:
+
+1. Connect the system to a power supply.
+
+Note: Depending on the system’s last power state, the system might power on automatically. For more information, see Power State on page 51.
+
+2. If necessary, press the Power button.
+
+The system powers on.
+
+Preferred Shutdown
+
+You can gracefully shut down your system by using the Power button or the ReadyNAS local admin page.
+
+For information about how to gracefully shut down your system using the ReadyNAS local admin page, see the ReadyNAS OS 6 Software Manual, which is available at
+
+support.netgear.com/product/ReadyNAS-OS6.
+
+ To gracefully shut down your system using the Power button: 1. Press the Power button.
+
+The Power LED blinks, prompting you to confirm the shutdown.
+
+2. Press the Power button again.
+
+The system shuts down gracefully.
+
+Forced Shutdown
+
+Perform a forced shutdown only if the storage system is not responding.
+
+ To perform a forced shutdown:
+
+Unplug the system from the power supply.
+
+NETGEAR ReadyNAS 212
+
+50
+
+
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Power State
+
+If the power supply is interrupted due to a power failure, the system returns to its last state when the power supply is restored:
+
+•
+
+If the system was powered on at the time of the power failure, the system powers on when the power supply is restored.
+
+•
+
+If the system was powered off at the time of the power failure, the system remains off when the power supply is restored.
+
+Boot Menu
+
+Use the boot menu to restart or troubleshoot your ReadyNAS storage system. Your storage system has the following boot modes:
+
+•
+
+Normal. Initiates a normal boot process, just like booting using the Power button.
+
+•
+
+Factory default. Initiates a short disk test that takes approximately 5 minutes. After the disk test, a 10-minute time-out period begins.
+
+WARNING:
+
+The factory default reboot process resets the storage system to factory settings, erases all data, resets all defaults, and reformats the disk to X-RAID.
+
+-
+
+If you want to cancel the factory default process, power off the storage system before the 10-minute time-out ends. The system powers down safely without causing any data loss.
+
+-
+
+If you want to reset the system to factory default settings, do not power off your system. After the 10-minute time-out period, the factory default process begins.
+
+Tip: To start the factory default process immediately, press the Backup button during the 10-minute time-out period.
+
+•
+
+OS reinstall. Reinstalls the firmware from the internal flash to the disks. Use the OS
+
+reinstall boot mode when the system crashes and corrupts some configuration files. OS
+
+reinstall boot mode also resets some settings on your storage system, such as Internet protocol settings and the administrator password, to defaults.
+
+•
+
+Tech support. Boots into a low-level diagnostic mode. Use the tech support boot mode only when a NETGEAR technical support representative instructs you to do so.
+
+•
+
+Volume read only. Mounts a volume as read-only. Use this option when you are attempting to rescue data off a disk during a disaster recovery.
+
+NETGEAR ReadyNAS 212
+
+51
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+•
+
+Memory test. Performs a memory test. The memory test runs for eight hours. The current status and the pass or fail result is reported using the storage system LEDs, as described in the following table:
+
+Figure 17. Memory Test Status
+
+Memory Test State Power LED Disk 1 LED Disk 2 LED Backup LED
+
+First hour
+
+Off
+
+Off
+
+Off
+
+Blinking
+
+Second hour
+
+Off
+
+Off
+
+Blinking
+
+Off
+
+Third hour
+
+Off
+
+Blinking
+
+Off
+
+Off
+
+Forth hour
+
+Off
+
+Blinking
+
+Blinking
+
+Blinking
+
+Fifth hour
+
+On
+
+Off
+
+Off
+
+Blinking
+
+Sixth hour
+
+On
+
+Off
+
+Blinking
+
+Off
+
+Seventh hour
+
+On
+
+Blinking
+
+Off
+
+Off
+
+Eigth hour
+
+On
+
+Blinking
+
+Blinking
+
+Blinking
+
+Result: fail
+
+Blinking
+
+Blinking
+
+Blinking
+
+Blinking
+
+Result: pass
+
+On
+
+On
+
+On
+
+On
+
+•
+
+Test disk. Performs an offline full disk test. This process can take four hours or more, depending on the size of your disks. Any problems are reported in the system logs. For more information about viewing the system logs, see the ReadyNAS OS 6 Software Manual, which is available at support.netgear.com/product/ReadyNAS-OS6.
+
+ To access the boot menu:
+
+1. Power off your storage system.
+
+2. Using a straightened paper clip, press and hold the Reset button.
+
+3. Press the Power button.
+
+The system powers on.
+
+4. Continue to press the Reset button until the Power button LED, USB and backup status LED, disk 1 LED, and disk 2 LED light.
+
+5. Press the Backup button to scroll through boot mode options.
+
+NETGEAR ReadyNAS 212
+
+52
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+The storage system shows the boot mode options using the LEDs, as described in the following table:
+
+Boot Mode
+
+Status Indicator
+
+Description
+
+Power
+
+Disk 1
+
+Disk 2
+
+USB
+
+LED
+
+LED
+
+LED
+
+and
+
+Backup
+
+LED
+
+Boot menu
+
+All four LEDs light.
+
+
+
+
+
+
+
+
+
+Normal
+
+Power LED lights.
+
+
+
+
+
+
+
+
+
+Factory default
+
+Disk 1 LED lights.
+
+
+
+
+
+
+
+
+
+OS reinstall
+
+Disk 2 LED lights.
+
+
+
+
+
+
+
+
+
+Tech support
+
+USB and backup status LED lights.
+
+
+
+
+
+
+
+
+
+Volume read only
+
+Power LED and disk 1 LED light.
+
+
+
+
+
+
+
+
+
+Memory test
+
+Power LED and disk 2 LED light.
+
+
+
+
+
+
+
+
+
+Test disk
+
+Power LED and USB and backup status
+
+
+
+
+
+
+
+
+
+LED light.
+
+Legend:
+
+•
+
+On: 
+
+•
+
+Off: 
+
+6. Press and release the Reset button to confirm your boot menu selection.
+
+The system boots in the selected boot mode.
+
+NETGEAR ReadyNAS 212
+
+53
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+NETGEAR ReadyNAS 212
+
+54
+
+
+
+
+
+7. NETGEAR ReadyNAS 214
+
+7
+
+This chapter provides an overview of the physical features of the ReadyNAS 214 and includes the following sections:
+
+•
+
+Front and Side Panels
+
+•
+
+Drive Bays
+
+•
+
+Rear Panel
+
+•
+
+Status Information
+
+•
+
+Power On and Shut Down
+
+•
+
+Boot Menu
+
+55
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Front and Side Panels
+
+The following figure shows the front and side panels of the ReadyNAS 214.
+
+2
+
+3
+
+4
+
+5
+
+6
+
+1
+
+7
+
+8
+
+Figure 18. ReadyNAS 214 front and side panels
+
+1. Exhaust vents
+
+2. USB 2.0 port
+
+3. Backup button and LED
+
+4. Disk LEDs
+
+5. Disk activity LED
+
+6. Power button and LED
+
+7. Drive bay door
+
+8. Status display screen
+
+NETGEAR ReadyNAS 214
+
+56
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Drive Bays
+
+The following figure shows the drive bays of the ReadyNAS 214.
+
+2
+
+3
+
+4
+
+1
+
+5
+
+Figure 19. ReadyNAS 214 drive bays
+
+1. Drive bay door
+
+2. Disk tray handle
+
+3. Recessed disk tray handle lock
+
+4. Disk tray release latch
+
+5. Drive bays
+
+NETGEAR ReadyNAS 214
+
+57
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Rear Panel
+
+The following figure shows the rear panel of the ReadyNAS 214.
+
+2
+
+3
+
+4
+
+5
+
+1
+
+6
+
+7
+
+Figure 20. ReadyNAS 214 rear panel
+
+1. eSATA port
+
+2. Reset button
+
+3. USB 3.0 ports
+
+4. LAN ports with LED status indicators
+
+Note: The two LAN ports are equivalent. They can be used as two separate Ethernet connections, or can be configured as a single, bonded port with a 2 Gbps potential speed. For information about how to configure a bonded port, and the network configuration requirements needed to support 2 Gbps, see the ReadyNAS OS 6 Software Manual, which is available at support.netgear.com/product/ReadyNAS-OS6.
+
+5. Power cable socket
+
+6. Exhaust fan
+
+7. Kensington lock
+
+NETGEAR ReadyNAS 214
+
+58
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Status Information
+
+You can obtain information about the status of your storage system by reviewing the indicators listed in the following table.
+
+Table 6. ReadyNAS 214 indicator descriptions
+
+Indicator
+
+Description
+
+Power button and LED
+
+Press this button to turn on the ReadyNAS. The LED indicates these states:
+
+•
+
+On. Powered on.
+
+•
+
+Blinking. Booting or shutting down.
+
+•
+
+Off. Powered off.
+
+Disk LEDs (1, 2, 3, 4)
+
+An LED on the top of the front panel is associated with each drive bay. LEDs are in numerical order from left to right. The disk LEDs indicate these states:
+
+•
+
+On. Power is on and the disk is operating normally.
+
+•
+
+Blinking. The disk was removed, failed, or is resynchronizing. See the display screen for details.
+
+•
+
+Off. The drive bay is empty.
+
+Disk activity LED
+
+The disk activity LED indicate these states:
+
+•
+
+Blinking. A disk is being accessed.
+
+•
+
+Off. All disks are idle.
+
+Rear panel Ethernet port
+
+Two LED status indicators are built into each port, one off or green and one LEDs
+
+showing three states: off, amber, or green. They indicate port speed and activity as follows:
+
+•
+
+Green, green. 1000 Mbps connection speed, no activity.
+
+•
+
+Green blinking, green. 1000 Mbps connection speed, activity.
+
+•
+
+Green, amber. 100 Mbps connection speed, no activity.
+
+•
+
+Green blinking, amber. 100 Mbps connection speed, activity.
+
+•
+
+Green on, off. 10 Mbps connection speed, no activity.
+
+•
+
+Green blinking, off. 10 Mbps connection speed, activity.
+
+•
+
+Off, off. No connection.
+
+Status display screen
+
+Displays messages about the status of your storage system. Note that the status display screen goes to sleep to prevent burn-in. To wake it, press the Power button once. If the storage system reports an abnormal operation or error, the status display screen stays on.
+
+NETGEAR ReadyNAS 214
+
+59
+
+
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Power On and Shut Down
+
+This section describes how to power on and shut down your system. If you must shut down the system, use one of the preferred shutdown methods whenever possible.
+
+Power On
+
+ To power on the system:
+
+1. Connect the system to a power supply.
+
+Note: Depending on the system’s last power state, the system might power on automatically. For more information, see Power State on page 61.
+
+2. If necessary, press the Power button.
+
+The system powers on.
+
+Preferred Shutdown
+
+You can gracefully shut down your system by using the Power button or the ReadyNAS local admin page.
+
+For information about how to gracefully shut down your system using the ReadyNAS local admin page, see the ReadyNAS OS 6 Software Manual, which is available at
+
+support.netgear.com/product/ReadyNAS-OS6.
+
+ To gracefully shut down your system using the Power button:
+
+•
+
+If the status display screen is not lit, do the following: 1. Press the Power button.
+
+The status display screen wakes.
+
+2. Press the Power button a second time.
+
+Instructions for graceful shutdown display on the status display screen.
+
+3. Press the Power button a third time.
+
+The system shuts down gracefully.
+
+•
+
+If the status display screen is lit, do the following:
+
+1. Press the Power button.
+
+Instructions for graceful shutdown display on the status display screen.
+
+2. Press the Power button again.
+
+The system shuts down gracefully.
+
+NETGEAR ReadyNAS 214
+
+60
+
+
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Forced Shutdown
+
+Perform a forced shutdown only if the storage system is not responding.
+
+ To perform a forced shutdown:
+
+Unplug the system from the power supply.
+
+Power State
+
+If the power supply is interrupted due to a power failure, the system returns to its last state when the power supply is restored:
+
+•
+
+If the system was powered on at the time of the power failure, the system powers on when the power supply is restored.
+
+•
+
+If the system was powered off at the time of the power failure, the system remains off when the power supply is restored.
+
+Boot Menu
+
+Use the boot menu to restart or troubleshoot your ReadyNAS storage system. Your storage system has the following boot modes:
+
+•
+
+Normal. Initiates a normal boot process, just like booting using the Power button.
+
+•
+
+Factory default. Initiates a short disk test that takes approximately 5 minutes. After the disk test, a 10-minute time-out period begins.
+
+WARNING:
+
+The factory default reboot process resets the storage system to factory settings, erases all data, resets all defaults, and reformats the disk to X-RAID.
+
+-
+
+If you want to cancel the factory default process, power off the storage system before the 10-minute time-out ends. The system powers down safely without causing any data loss.
+
+-
+
+If you want to reset the system to factory default settings, do not power off your system. After the 10-minute time-out period, the factory default process begins.
+
+Tip: To start the factory default process immediately, press the Backup button during the 10-minute time-out period.
+
+•
+
+OS reinstall. Reinstalls the firmware from the internal flash to the disks. Use the OS
+
+reinstall boot mode when the system crashes and corrupts some configuration files. OS
+
+reinstall boot mode also resets some settings on your storage system, such as Internet protocol settings and the administrator password, to defaults.
+
+NETGEAR ReadyNAS 214
+
+61
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+•
+
+Tech support. Boots into a low-level diagnostic mode. Use the tech support boot mode only when a NETGEAR technical support representative instructs you to do so.
+
+•
+
+Volume read only. Mounts a volume as read-only. Use this option when you are attempting to rescue data off a disk during a disaster recovery.
+
+•
+
+Memory test. Performs a memory test. The pass or fail result is reported on the status display screen.
+
+•
+
+Test disk. Performs an offline full disk test. This process can take four hours or more, depending on the size of your disks. Any problems are reported in the system logs. For more information about viewing the system logs, see the ReadyNAS OS 6 Software Manual, which is available at support.netgear.com/product/ReadyNAS-OS6.
+
+ To access the boot menu:
+
+1. Power off your storage system.
+
+2. Using a straightened paper clip, press and hold the Reset button.
+
+3. Press the Power button.
+
+The system powers on.
+
+4. Continue to press the Reset button until the status display screen shows a boot menu message.
+
+5. Press the Backup button to scroll through boot mode options.
+
+The status display screen shows the current boot mode option.
+
+6. When the status display screen shows the boot mode that you need, press and release the Reset button to confirm your boot menu selection.
+
+The system boots in the selected boot mode.
+
+NETGEAR ReadyNAS 214
+
+62
+
+
+
+
+
+8. NETGEAR ReadyNAS 312
+
+8
+
+This chapter provides an overview of the physical features of the ReadyNAS 312 and includes the following sections:
+
+•
+
+Front and Side Panels
+
+•
+
+Drive Bays
+
+•
+
+Rear Panel
+
+•
+
+Status Information
+
+•
+
+Power On and Shut Down
+
+•
+
+Boot Menu
+
+63
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Front and Side Panels
+
+The following figure shows the front and side panels of the ReadyNAS 312.
+
+1
+
+2
+
+3
+
+9
+
+4
+
+5
+
+6
+
+7
+
+8
+
+Figure 21. ReadyNAS 312 front and side panels
+
+1. Power button and LED
+
+2. Disk activity LED
+
+3. Exhaust vent
+
+4. USB 2.0 port
+
+5. Infrared remote receiver
+
+6. Backup button
+
+7. USB and Backup status LED
+
+8. Disk 1 and Disk 2 LEDs
+
+9. Drive bay door
+
+NETGEAR ReadyNAS 312
+
+64
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Drive Bays
+
+The following figure shows the drive bays of the ReadyNAS 312.
+
+1
+
+2
+
+3
+
+4
+
+5
+
+Figure 22. ReadyNAS 312 drive bays
+
+1. Drive bay door
+
+2. Disk tray handle
+
+3. Recessed disk tray handle lock
+
+4. Disk tray release latch
+
+5. Drive bays
+
+NETGEAR ReadyNAS 312
+
+65
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Rear Panel
+
+The following figure shows the rear panel of the ReadyNAS 312.
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7 8
+
+Figure 23. ReadyNAS 312 rear panel
+
+1. Exhaust fan
+
+2. Kensington lock
+
+3. USB 3.0 ports
+
+4. eSATA port
+
+5. LAN ports with LED status indicators
+
+6. Reset button
+
+7. HDMI port (not currently supported)
+
+8. Power adapter socket
+
+NETGEAR ReadyNAS 312
+
+66
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Status Information
+
+You can obtain information about the status of your storage system by reviewing the indicators listed in the following table.
+
+Table 7. ReadyNAS 312 indicator descriptions
+
+Indicator
+
+Description
+
+Power button and LED
+
+Press this button to turn on the ReadyNAS. The LED has these states:
+
+•
+
+On. Powered on.
+
+•
+
+Blinking. Booting or shutting down.
+
+•
+
+Off. Powered off.
+
+Disk LEDs (1, 2)
+
+An LED on the front panel of the storage system is associated with each drive bay The disk LEDs have these states:
+
+•
+
+On. Power is on and the disk is operating normally.
+
+•
+
+Blinking. The disk was removed, failed, or is resynchronizing.
+
+•
+
+Off. The drive bay is empty.
+
+Disk activity LED
+
+The disk activity LED has these states:
+
+•
+
+On. At least one disk is present.
+
+•
+
+Blinking. A disk is active.
+
+•
+
+Off. No disks are present.
+
+Rear panel Ethernet port
+
+Two LED status indicators are built into this port, one green and one amber. They LEDs
+
+indicate port speed and activity as follows:
+
+•
+
+Green on, amber off. 1000 Mbps connection speed, no activity.
+
+•
+
+Green blinking, amber off. 1000 Mbps connection speed, activity.
+
+•
+
+Green off, amber on. 10 Mbps or 100 Mbps connection speed, no activity.
+
+•
+
+Green off, amber blinking. 10 Mbps or 100 Mbps connection speed, activity.
+
+•
+
+Green off, amber off. No connection.
+
+NETGEAR ReadyNAS 312
+
+67
+
+
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Power On and Shut Down
+
+This section describes how to power on and shut down your system. If you need to shut down the system, use one of the preferred shutdown methods whenever possible.
+
+Power On
+
+When the system is connected to a power supply, the system automatically powers on.
+
+You can also power on the system by pressing the Power button.
+
+Preferred Shutdown
+
+You can gracefully shut down your system by using the Power button or the ReadyNAS local admin page.
+
+For information about how to gracefully shut down your system using the ReadyNAS local admin page, see the ReadyNAS OS 6 Software Manual, which is available at
+
+support.netgear.com/product/ReadyNAS-OS6.
+
+ To gracefully shut down your system using the Power button: 1. Press the Power button.
+
+The Power LED blinks, prompting you to confirm the shutdown.
+
+2. Press the Power button again.
+
+The system shuts down gracefully.
+
+Forced Shutdown
+
+Perform a forced shutdown only if the storage system is not responding.
+
+ To perform a forced shutdown:
+
+Press and hold the Power button for five seconds.
+
+The LEDs blink quickly and simultaneously to warn that power will be cut off forcibly.
+
+The system shuts down.
+
+NETGEAR ReadyNAS 312
+
+68
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Boot Menu
+
+Use the boot menu to restart or troubleshoot your ReadyNAS storage system. Your storage system has the following boot modes:
+
+•
+
+Normal. Initiates a normal boot process, just like booting using the Power button.
+
+•
+
+Factory default. Initiates a short disk test that takes approximately 5 minutes. After the disk test, a 10-minute time-out period begins.
+
+WARNING:
+
+The factory default reboot process resets the storage system to factory settings, erases all data, resets all defaults, and reformats the disk to X-RAID.
+
+-
+
+If you want to cancel the factory default process, power off the storage system before the 10-minute time-out ends. The system powers down safely without causing any data loss.
+
+-
+
+If you want to reset the system to factory default settings, do not power off your system. After the 10-minute time-out period, the factory default process begins.
+
+Tip: To start the factory default process immediately, press the Backup button during the 10-minute time-out period.
+
+•
+
+OS reinstall. Reinstalls the firmware from the internal flash to the disks. Use the OS
+
+reinstall boot mode when the system crashes and corrupts some configuration files. OS
+
+reinstall boot mode also resets some settings on your storage system, such as Internet protocol settings and the administrator password, to defaults.
+
+•
+
+Tech support. Boots into a low-level diagnostic mode. Use the tech support boot mode only when a NETGEAR technical support representative instructs you to do so.
+
+•
+
+Volume read only. Mounts a volume as read-only. Use this option when you are attempting to rescue data off a disk during a disaster recovery.
+
+•
+
+Memory test. Performs a memory test. The pass or fail result is reported using the storage system’s LEDs. Contact a NETGEAR technical support representative to interpret memory test results.
+
+•
+
+Test disk. Performs an offline full disk test. This process can take four hours or more, depending on the size of your disks. Any problems are reported in the system logs. For more information about viewing the system logs, see the ReadyNAS OS 6 Software Manual, which is available at support.netgear.com/product/ReadyNAS-OS6.
+
+NETGEAR ReadyNAS 312
+
+69
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+ To access the boot menu:
+
+1. Power off your storage system.
+
+2. Using a straightened paper clip, press and hold the Reset button.
+
+3. Press the Power button.
+
+The system powers on.
+
+4. Continue to press the Reset button until the Power button LED, USB and backup status LED, disk 1 LED, and disk 2 LED light.
+
+5. Press the Backup button to scroll through boot mode options.
+
+The storage system shows the boot mode options using the LEDs, as described in the following table:
+
+Boot Mode
+
+Status Indicator
+
+Description
+
+Power
+
+Disk 1
+
+Disk 2
+
+USB
+
+LED
+
+LED
+
+LED
+
+and
+
+Backup
+
+LED
+
+Boot menu
+
+All four LEDs light.
+
+
+
+
+
+
+
+
+
+Normal
+
+Power LED lights.
+
+
+
+
+
+
+
+
+
+Factory default
+
+Disk 1 LED lights.
+
+
+
+
+
+
+
+
+
+OS reinstall
+
+Disk 2 LED lights.
+
+
+
+
+
+
+
+
+
+Tech support
+
+USB and backup status LED lights.
+
+
+
+
+
+
+
+
+
+Volume read only
+
+Power LED and disk 1 LED light.
+
+
+
+
+
+
+
+
+
+Memory test
+
+Power LED and disk 2 LED light.
+
+
+
+
+
+
+
+
+
+Test disk
+
+Power LED and USB and backup status
+
+
+
+
+
+
+
+
+
+LED light.
+
+Legend:
+
+•
+
+On: 
+
+•
+
+Off: 
+
+6. Press and release the Reset button to confirm your boot menu selection.
+
+The system boots in the selected boot mode.
+
+NETGEAR ReadyNAS 312
+
+70
+
+
+
+
+
+9. NETGEAR ReadyNAS 314
+
+9
+
+This chapter provides an overview of the physical features of the ReadyNAS 314 and includes the following sections:
+
+•
+
+Front and Side Panels
+
+•
+
+Drive Bays
+
+•
+
+Rear Panel
+
+•
+
+Status Information
+
+•
+
+Power On and Shut Down
+
+•
+
+Boot Menu
+
+71
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Front and Side Panels
+
+The following figure shows the front and side panels of the ReadyNAS 314.
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+1
+
+8
+
+9
+
+Figure 24. ReadyNAS 314 front and side panels
+
+1. Exhaust vents
+
+2. Shared USB 2.0 and eSATA port
+
+3. Backup button and LED
+
+4. Disk LEDs
+
+5. Infrared remote receiver
+
+6. Disk activity LED
+
+7. Power button and LED
+
+8. Drive bay door
+
+9. Status display screen
+
+NETGEAR ReadyNAS 314
+
+72
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Drive Bays
+
+The following figure shows the drive bays of the ReadyNAS 314.
+
+2
+
+3
+
+4
+
+1
+
+5
+
+Figure 25. ReadyNAS 314 drive bays
+
+1. Drive bay door
+
+2. Disk tray handle
+
+3. Recessed disk tray handle lock
+
+4. Disk tray release latch
+
+5. Drive bays
+
+NETGEAR ReadyNAS 314
+
+73
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Rear Panel
+
+The following figure shows the rear panel of the ReadyNAS 314.
+
+1 2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+8
+
+Figure 26. ReadyNAS 314 rear panel
+
+1. Reset button
+
+2. LAN ports with LED status indicators
+
+3. eSATA port
+
+4. USB 3.0 ports
+
+5. HDMI port (not currently supported)
+
+6. Power cable socket
+
+7. Exhaust fan
+
+8. Kensington lock
+
+NETGEAR ReadyNAS 314
+
+74
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Status Information
+
+You can obtain information about the status of your storage system by reviewing the indicators listed in the following table.
+
+Table 8. ReadyNAS 314 indicator descriptions
+
+Indicator
+
+Description
+
+Power button and LED
+
+Press this button to turn on the ReadyNAS. The LED indicates these states:
+
+•
+
+On. Powered on.
+
+•
+
+Blinking. Booting or shutting down.
+
+•
+
+Off. Powered off.
+
+Disk LEDs (1, 2, 3, 4)
+
+An LED on the top of the front panel is associated with each drive bay. LEDs are in numerical order from left to right. The disk LEDs indicate these states:
+
+•
+
+On. Power is on and the disk is operating normally.
+
+•
+
+Blinking. The disk was removed, failed, or is resynchronizing. See the display screen for details.
+
+•
+
+Off. The drive bay is empty.
+
+Disk activity LED
+
+The disk activity LED has these states:
+
+•
+
+On. At least one disk is present.
+
+•
+
+Blinking. A disk is active.
+
+•
+
+Off. No disks are present.
+
+Rear panel Ethernet port
+
+Two LED status indicators are built into this port, one green and one amber. They LEDs
+
+indicate port speed and activity as follows:
+
+•
+
+Green on, amber off. 1000 Mbps connection speed, no activity.
+
+•
+
+Green blinking, amber off. 1000 Mbps connection speed, activity.
+
+•
+
+Green off, amber on. 10 Mbps or 100 Mbps connection speed, no activity.
+
+•
+
+Green off, amber blinking. 10 Mbps or 100 Mbps connection speed, activity.
+
+•
+
+Green off, amber off. No connection.
+
+Status display screen
+
+Displays messages about the status of your storage system. Note that the status display screen goes to sleep to prevent burn-in. To wake it, press the Power button once. If the storage system reports an abnormal operation or error, the status display screen stays on.
+
+NETGEAR ReadyNAS 314
+
+75
+
+
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Power On and Shut Down
+
+This section describes how to power on and shut down your system. If you must shut down the system, use one of the preferred shutdown methods whenever possible.
+
+Power On
+
+When the system is connected to a power supply, the system automatically powers on.
+
+You can also power on the system by pressing the Power button.
+
+Preferred Shutdown
+
+You can gracefully shut down your system by using the Power button or the ReadyNAS local admin page.
+
+For information about how to gracefully shut down your system using the ReadyNAS local admin page, see the ReadyNAS OS 6 Software Manual, which is available at
+
+support.netgear.com/product/ReadyNAS-OS6.
+
+ To gracefully shut down your system using the Power button:
+
+•
+
+If the status display screen is not lit, do the following: 1. Press the Power button.
+
+The status display screen wakes.
+
+2. Press the Power button a second time.
+
+Instructions for graceful shutdown display on the status display screen.
+
+3. Press the Power button a third time.
+
+The system shuts down gracefully.
+
+•
+
+If the status display screen is lit, do the following:
+
+1. Press the Power button.
+
+Instructions for graceful shutdown display on the status display screen.
+
+2. Press the Power button again.
+
+The system shuts down gracefully.
+
+Forced Shutdown
+
+Perform a forced shutdown only if the storage system is not responding.
+
+ To perform a forced shutdown:
+
+Press and hold the Power button for five seconds.
+
+NETGEAR ReadyNAS 314
+
+76
+
+
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+The LEDs blink quickly and simultaneously to warn that power will be cut off forcibly.
+
+The system shuts down.
+
+Boot Menu
+
+Use the boot menu to restart or troubleshoot your ReadyNAS storage system. Your storage system has the following boot modes:
+
+•
+
+Normal. Initiates a normal boot process, just like booting using the Power button.
+
+•
+
+Factory default. Initiates a short disk test that takes approximately 5 minutes. After the disk test, a 10-minute time-out period begins.
+
+WARNING:
+
+The factory default reboot process resets the storage system to factory settings, erases all data, resets all defaults, and reformats the disk to X-RAID.
+
+-
+
+If you want to cancel the factory default process, power off the storage system before the 10-minute time-out ends. The system powers down safely without causing any data loss.
+
+-
+
+If you want to reset the system to factory default settings, do not power off your system. After the 10-minute time-out period, the factory default process begins.
+
+Tip: To start the factory default process immediately, press the Backup button during the 10-minute time-out period.
+
+•
+
+OS reinstall. Reinstalls the firmware from the internal flash to the disks. Use the OS
+
+reinstall boot mode when the system crashes and corrupts some configuration files. OS
+
+reinstall boot mode also resets some settings on your storage system, such as Internet protocol settings and the administrator password, to defaults.
+
+•
+
+Tech support. Boots into a low-level diagnostic mode. Use the tech support boot mode only when a NETGEAR technical support representative instructs you to do so.
+
+•
+
+Volume read only. Mounts a volume as read-only. Use this option when you are attempting to rescue data off a disk during a disaster recovery.
+
+•
+
+Memory test. Performs a memory test. The pass or fail result is reported on the status display screen.
+
+•
+
+Test disk. Performs an offline full disk test. This process can take four hours or more, depending on the size of your disks. Any problems are reported in the system logs. For more information about viewing the system logs, see the ReadyNAS OS 6 Software Manual, which is available at support.netgear.com/product/ReadyNAS-OS6.
+
+NETGEAR ReadyNAS 314
+
+77
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+ To access the boot menu:
+
+1. Power off your storage system.
+
+2. Using a straightened paper clip, press and hold the Reset button.
+
+3. Press the Power button.
+
+The systems powers on.
+
+4. Continue to press the Reset button until the status display screen shows a boot menu message.
+
+5. Press the Backup button to scroll through boot mode options.
+
+The status display screen shows the current boot mode option.
+
+6. When the status display screen shows the boot mode that you need, press and release the Reset button to confirm your boot menu selection.
+
+The system boots in the selected boot mode.
+
+NETGEAR ReadyNAS 314
+
+78
+
+
+
+
+
+10. NETGEAR ReadyNAS 316
+
+10
+
+This chapter provides an overview of the physical features of the ReadyNAS 316 and includes the following sections:
+
+•
+
+Front and Side Panels
+
+•
+
+Drive Bays
+
+•
+
+Rear Panel
+
+•
+
+Status Information
+
+•
+
+Power On and Shut Down
+
+•
+
+Boot Menu
+
+79
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Front and Side Panels
+
+The following figure shows the front and side panels of the ReadyNAS 316.
+
+1
+
+2
+
+3
+
+5
+
+4
+
+Figure 27. ReadyNAS 316 front and side panels
+
+1. Status and menu display screen
+
+2. Infrared remote receiver
+
+3. Drive bay door
+
+4. Touch pad and backlight
+
+5. OK button
+
+NETGEAR ReadyNAS 316
+
+80
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Drive Bays
+
+The following figure shows the drive bays of the ReadyNAS 316.
+
+8
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+Figure 28. ReadyNAS 316 drive bays
+
+1. Drive bay door
+
+2. Disk tray release latch
+
+3. Recessed disk tray handle lock
+
+4. USB 2.0 port
+
+5. Disk tray handle
+
+6. Power button
+
+7. Disk LED
+
+8. Drive bays
+
+NETGEAR ReadyNAS 316
+
+81
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Rear Panel
+
+The following figure shows the rear panel of the ReadyNAS 316.
+
+5
+
+6
+
+1
+
+7
+
+8
+
+2
+
+9
+
+3
+
+4
+
+Figure 29. ReadyNAS 316 rear panel
+
+1. Exhaust fan
+
+2. Power cable socket
+
+3. Power switch
+
+4. Kensington lock
+
+5. eSATA ports
+
+6. LAN ports with LED status indicators
+
+7. HDMI port (not currently supported)
+
+8. USB 3.0 ports
+
+9. Reset button
+
+NETGEAR ReadyNAS 316
+
+82
+
+
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Status Information
+
+You can obtain information about the status of your storage system by reviewing the indicators listed in the following table.
+
+Table 9. ReadyNAS 316 indicator descriptions
+
+Indicator
+
+Description
+
+Disk LEDs
+
+A disk LED next to each drive bay indicates the status of the disk inside. The disk LEDs indicate these states:
+
+•
+
+Solid blue. Power is on and the disk is operating normally.
+
+•
+
+Blinking blue. The disk is active.
+
+•
+
+Solid red. The disk was removed, failed, or is resynchronizing. See the display screen for details.
+
+•
+
+Off. No disk is present.
+
+Rear panel Ethernet port
+
+Two LED status indicators are built into this port, one green and one amber. They LEDs
+
+indicate port speed and activity as follows:
+
+•
+
+Green on, amber off. 1000 Mbps connection speed, no activity.
+
+•
+
+Green blinking, amber off. 1000 Mbps connection speed, activity.
+
+•
+
+Green off, amber on. 10 Mbps or 100 Mbps connection speed, no activity.
+
+•
+
+Green off, amber blinking. 10 Mbps or 100 Mbps connection speed, activity.
+
+•
+
+Green off, amber off. No connection.
+
+Status display screen
+
+Displays messages about the status of your storage system. Note that the status display screen goes to sleep to prevent burn-in. To wake the status display screen, activate the proximity sensor, press the touch pad, press the OK button, or press the Power button once. If the storage system reports an abnormal operation or error, the status display screen stays on.
+
+Power On and Shut Down
+
+This section describes how to power on and shut down your system. If you must shut down the system, use one of the preferred shutdown methods whenever possible.
+
+Power On
+
+When the system is connected to a power supply and the Power switch is in the On position, the system automatically powers on.
+
+You can also power on the system by pressing the Power button on the front panel of the system.
+
+Preferred Shutdown
+
+You can gracefully shut down your system by using the Power button or the ReadyNAS local admin page.
+
+NETGEAR ReadyNAS 316
+
+83
+
+
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+For information about how to gracefully shut down your system using the ReadyNAS local admin page, see the ReadyNAS OS 6 Software Manual, which is available at
+
+support.netgear.com/product/ReadyNAS-OS6.
+
+ To gracefully shut down your system using the Power button:
+
+•
+
+If the status display screen is not lit, do the following: 1. Press the Power button on the front panel of the system.
+
+The status display screen wakes.
+
+2. Press the Power button a second time.
+
+Instructions for graceful shutdown display on the status display screen.
+
+3. Press the Power button a third time.
+
+The system shuts down gracefully.
+
+•
+
+If the status display screen is lit, do the following:
+
+1. Press the Power button on the front panel of the system.
+
+Instructions for graceful shutdown display on the status display screen.
+
+2. Press the Power button again.
+
+The system shuts down gracefully.
+
+Forced Shutdown
+
+Perform a forced shutdown only if the storage system is not responding.
+
+ To perform a forced shutdown:
+
+Press and hold the Power button on the front panel of the system for five seconds.
+
+The LEDs blink quickly and simultaneously to warn that power will be cut off forcibly.
+
+The system shuts down.
+
+NETGEAR ReadyNAS 316
+
+84
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Boot Menu
+
+Use the boot menu to restart or troubleshoot your ReadyNAS storage system. Your storage system has the following boot modes:
+
+•
+
+Normal. Initiates a normal boot process, just like booting using the Power button.
+
+•
+
+Factory default. Initiates a short disk test that takes approximately 2 minutes. After the disk test, a 10-minute time-out period begins.
+
+WARNING:
+
+The factory default reboot process resets the storage system to factory settings, erases all data, resets all defaults, and reformats the disk to X-RAID.
+
+-
+
+If you want to cancel the factory default process, power off the storage system before the 10-minute time-out ends. The system powers down safely without causing any data loss.
+
+-
+
+If you want to reset the system to factory default settings, do not power off your system. After the 10-minute time-out period, the factory default process begins.
+
+Tip: To start the factory default process immediately, press the OK button during the 10-minute time-out period.
+
+•
+
+OS reinstall. Reinstalls the firmware from the internal flash to the disks. Use the OS
+
+reinstall boot mode when the system crashes and corrupts some configuration files. OS
+
+reinstall boot mode also resets some settings on your storage system, such as Internet protocol settings and the administrator password, to defaults.
+
+•
+
+Tech support. Boots into a low-level diagnostic mode. Use the tech support boot mode only when a NETGEAR technical support representative instructs you to do so.
+
+•
+
+Volume read only. Mounts a volume as read-only. Use this option when you are attempting to rescue data off a disk during a disaster recovery.
+
+•
+
+Memory test. Performs a memory test. The pass or fail result is reported on the status display screen.
+
+•
+
+Test disk. Performs an offline full disk test. This process can take four hours or more, depending on the size of your disks. Any problems are reported in the system logs. For more information about viewing the system logs, see the ReadyNAS OS 6 Software Manual, which is available at support.netgear.com/product/ReadyNAS-OS6.
+
+NETGEAR ReadyNAS 316
+
+85
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+ To access the boot menu:
+
+1. Power off your storage system.
+
+2. Using a straightened paper clip, press and hold the Reset button.
+
+3. Press the Power button on the front panel of the system.
+
+The system powers on.
+
+4. Continue to press the Reset button until the status display screen shows a boot menu message.
+
+5. Use the arrows on the touch pad to scroll through boot mode options.
+
+The status display screen shows the current boot mode option.
+
+6. When the status display screen shows the boot mode that you need, press the OK button to confirm your boot menu selection.
+
+The system boots in the selected boot mode.
+
+NETGEAR ReadyNAS 316
+
+86
+
+
+
+
+
+11. NETGEAR ReadyNAS 516
+
+11
+
+This chapter provides an overview of the physical features of the ReadyNAS 516 and includes the following sections:
+
+•
+
+Front and Side Panels
+
+•
+
+Drive Bays
+
+•
+
+Rear Panel
+
+•
+
+Status Information
+
+•
+
+Power On and Shut Down
+
+•
+
+Boot Menu
+
+87
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Front and Side Panels
+
+The following figure shows the front and side panels of the ReadyNAS 516.
+
+1
+
+2
+
+3
+
+5
+
+4
+
+Figure 30. ReadyNAS 516 front and side panels
+
+1. Status and menu display screen
+
+2. Infrared remote receiver
+
+3. Drive bay door
+
+4. Touch pad and backlight
+
+5. OK button
+
+NETGEAR ReadyNAS 516
+
+88
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Drive Bays
+
+The following figure shows the drive bays of the ReadyNAS 516.
+
+8
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+Figure 31. ReadyNAS 516 drive bays
+
+1. Drive bay door
+
+2. Disk tray release latch
+
+3. Recessed disk tray handle lock
+
+4. USB 2.0 port
+
+5. Disk tray handle
+
+6. Power button
+
+7. Disk LED
+
+8. Drive bays
+
+NETGEAR ReadyNAS 516
+
+89
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Rear Panel
+
+The following figure shows the rear panel of the ReadyNAS 516.
+
+5
+
+6
+
+1
+
+7
+
+8
+
+9
+
+2
+
+10
+
+3
+
+4
+
+Figure 32. ReadyNAS 516 rear panel
+
+1. Exhaust fan
+
+2. Power cable socket
+
+3. Power switch
+
+4. Kensington lock
+
+5. eSATA ports
+
+6. LAN ports with LED status indicators
+
+7. HDMI port
+
+8. eSATA port
+
+9. USB 3.0 ports
+
+10. Reset button
+
+NETGEAR ReadyNAS 516
+
+90
+
+
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Status Information
+
+You can obtain information about the status of your storage system by reviewing the indicators listed in the following table.
+
+Table 10. ReadyNAS 516 indicator descriptions
+
+Indicator
+
+Description
+
+Disk LEDs
+
+A disk LED next to each drive bay indicates the status of the disk inside. The disk LEDs indicate these states:
+
+•
+
+Solid blue. Power is on and the disk is operating normally.
+
+•
+
+Blinking blue. The disk is active.
+
+•
+
+Solid red. The disk was removed, failed, or is resynchronizing. See the display screen for details.
+
+•
+
+Off. No disk is present.
+
+Rear panel Ethernet port
+
+Two LED status indicators are built into this port, one green and one amber. They LEDs
+
+indicate port speed and activity as follows:
+
+•
+
+Green on, amber off. 1000 Mbps connection speed, no activity.
+
+•
+
+Green blinking, amber off. 1000 Mbps connection speed, activity.
+
+•
+
+Green off, amber on. 10 Mbps or 100 Mbps connection speed, no activity.
+
+•
+
+Green off, amber blinking. 10 Mbps or 100 Mbps connection speed, activity.
+
+•
+
+Green off, amber off. No connection.
+
+Status display screen
+
+Displays messages about the status of your storage system. Note that the status display screen goes to sleep to prevent burn-in. To wake the status display screen, activate the proximity sensor, press the touch pad, press the OK button, or press the Power button once. If the storage system reports an abnormal operation or error, the status display screen stays on.
+
+Power On and Shut Down
+
+This section describes how to power on and shut down your system. If you must shut down the system, use one of the preferred shutdown methods whenever possible.
+
+Power On
+
+When the system is connected to a power supply and the Power switch is in the On position, the system automatically powers on.
+
+You can also power on the system by pressing the Power button on the front panel of the system.
+
+NETGEAR ReadyNAS 516
+
+91
+
+
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Preferred Shutdown
+
+You can gracefully shut down your system by using the Power button or the ReadyNAS local admin page.
+
+For information about how to gracefully shut down your system using the ReadyNAS local admin page, see the ReadyNAS OS 6 Software Manual, which is available at
+
+support.netgear.com/product/ReadyNAS-OS6.
+
+ To gracefully shut down your system using the Power button:
+
+•
+
+If the status display screen is not lit, do the following: 1. Press the Power button on the front panel of the system.
+
+The status display screen wakes.
+
+2. Press the Power button a second time.
+
+Instructions for graceful shutdown display on the status display screen.
+
+3. Press the Power button a third time.
+
+The system shuts down gracefully.
+
+•
+
+If the status display screen is lit, do the following:
+
+1. Press the Power button on the front panel of the system.
+
+Instructions for graceful shutdown display on the status display screen.
+
+2. Press the Power button again.
+
+The system shuts down gracefully.
+
+Forced Shutdown
+
+Perform a forced shutdown only if the storage system is not responding.
+
+ To perform a forced shutdown:
+
+Press and hold the Power button on the front panel of the system for five seconds.
+
+The LEDs blink quickly and simultaneously to warn that power will be cut off forcibly.
+
+The system shuts down.
+
+NETGEAR ReadyNAS 516
+
+92
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Boot Menu
+
+Use the boot menu to restart or troubleshoot your ReadyNAS storage system. Your storage system has the following boot modes:
+
+•
+
+Normal. Initiates a normal boot process, just like booting using the Power button.
+
+•
+
+Factory default. Initiates a short disk test that takes approximately 2 minutes. After the disk test, a 10-minute time-out period begins.
+
+WARNING:
+
+The factory default reboot process resets the storage system to factory settings, erases all data, resets all defaults, and reformats the disk to X-RAID.
+
+-
+
+If you want to cancel the factory default process, power off the storage system before the 10-minute time-out ends. The system powers down safely without causing any data loss.
+
+-
+
+If you want to reset the system to factory default settings, do not power off your system. After the 10-minute time-out period, the factory default process begins.
+
+Tip: To start the factory default process immediately, press the OK button during the 10-minute time-out period.
+
+•
+
+OS reinstall. Reinstalls the firmware from the internal flash to the disks. Use the OS
+
+reinstall boot mode when the system crashes and corrupts some configuration files. OS
+
+reinstall boot mode also resets some settings on your storage system, such as Internet protocol settings and the administrator password, to defaults.
+
+•
+
+Tech support. Boots into a low-level diagnostic mode. Use the tech support boot mode only when a NETGEAR technical support representative instructs you to do so.
+
+•
+
+Volume read only. Mounts a volume as read-only. Use this option when you are attempting to rescue data off a disk during a disaster recovery.
+
+•
+
+Memory test. Performs a memory test. The pass or fail result is reported on the status display screen.
+
+•
+
+Test disk. Performs an offline full disk test. This process can take four hours or more, depending on the size of your disks. Any problems are reported in the system logs. For more information about viewing the system logs, see the ReadyNAS OS 6 Software Manual, which is available at support.netgear.com/product/ReadyNAS-OS6.
+
+NETGEAR ReadyNAS 516
+
+93
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+ To access the boot menu:
+
+1. Power off your storage system.
+
+2. Using a straightened paper clip, press and hold the Reset button.
+
+3. Press the Power button on the front panel of the system.
+
+The system powers on.
+
+4. Continue to press the Reset button until the status display screen shows a boot menu message.
+
+5. Use the arrows on the touch pad to scroll through boot mode options.
+
+The status display screen shows the current boot mode option.
+
+6. When the status display screen shows the boot mode that you need, press the OK button to confirm your boot menu selection.
+
+The system boots in the selected boot mode.
+
+NETGEAR ReadyNAS 516
+
+94
+
+
+
+
+
+12. NETGEAR ReadyNAS 716X
+
+12
+
+This chapter provides an overview of the physical features of the ReadyNAS 716X and includes the following sections:
+
+•
+
+Front and Side Panels
+
+•
+
+Drive Bays
+
+•
+
+Rear Panel
+
+•
+
+Status Information
+
+•
+
+Power On and Shut Down
+
+•
+
+Boot Menu
+
+95
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Front and Side Panels
+
+The following figure shows the front and side panels of the ReadyNAS 716X.
+
+1
+
+2
+
+3
+
+5
+
+4
+
+Figure 33. ReadyNAS 716X front and side panels
+
+1. Status and menu display screen
+
+2. Infrared remote receiver
+
+3. Drive bay door
+
+4. Touch pad and backlight
+
+5. OK button
+
+NETGEAR ReadyNAS 716X
+
+96
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Drive Bays
+
+The following figure shows the drive bays of ReadyNAS 716X.
+
+8
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+Figure 34. ReadyNAS 716X drive bays
+
+1. Drive bay door
+
+2. Disk tray release latch
+
+3. Recessed disk tray handle lock
+
+4. USB 2.0 port
+
+5. Disk tray handle
+
+6. Power button
+
+7. Disk LED
+
+8. Drive bays
+
+NETGEAR ReadyNAS 716X
+
+97
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Rear Panel
+
+The following figure shows the rear panel of ReadyNAS 716X.
+
+5
+
+6
+
+1
+
+7
+
+8
+
+9
+
+2
+
+10
+
+3
+
+11
+
+4
+
+Figure 35. ReadyNAS 716X rear panel
+
+1. Exhaust fan
+
+2. Power cable socket
+
+3. Power switch
+
+4. Kensington lock
+
+5. eSATA ports
+
+6. 1 Gb LAN ports with LED status indicators
+
+7. HDMI port
+
+8. eSATA port
+
+9. USB 3.0 ports
+
+10. Reset button
+
+11. 10 Gb LAN ports with LED status indicators
+
+NETGEAR ReadyNAS 716X
+
+98
+
+
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Status Information
+
+You can obtain information about the status of your storage system by reviewing the indicators listed in the following table.
+
+Table 11. ReadyNAS 716X indicator descriptions
+
+Indicator
+
+Description
+
+Disk LEDs
+
+A disk LED next to each drive bay indicates the status of the disk inside. The disk LEDs indicate these states:
+
+•
+
+Solid blue. Power is on and the disk is operating normally.
+
+•
+
+Blinking blue. The disk is active.
+
+•
+
+Solid red. The disk was removed, failed, or is resynchronizing. See the display screen for details.
+
+•
+
+Off. No disk is present.
+
+Rear panel Ethernet port
+
+Two LED status indicators are built into this port, one green and one amber. They LEDs (1 Gb)
+
+indicate port speed and activity as follows:
+
+•
+
+Green on, amber off. 1000 Mbps connection speed, no activity.
+
+•
+
+Green blinking, amber off. 1000 Mbps connection speed, activity.
+
+•
+
+Green off, amber on. 10 Mbps or 100 Mbps connection speed, no activity.
+
+•
+
+Green off, amber blinking. 10 Mbps or 100 Mbps connection speed, activity.
+
+•
+
+Green off, amber off. No connection.
+
+Rear panel Ethernet port
+
+Two LED status indicators are built into this port. They indicate port speed and LEDs (10 Gb)
+
+activity as follows:
+
+•
+
+LED 1
+
+- Off. No link.
+
+- Solid green. Linked.
+
+- Blinking green. Activity.
+
+•
+
+LED 2
+
+- Solid green. 10 GbE.
+
+- Solid yellow. 1 GbE.
+
+- Off. 100 Mbps.
+
+Status display screen
+
+Displays messages about the status of your storage system. Note that the status display screen goes to sleep to prevent burn-in. To wake the status display screen, activate the proximity sensor, press the touch pad, press the OK button, or press the Power button once. If the storage system reports an abnormal operation or error, the status display screen stays on.
+
+Power On and Shut Down
+
+This section describes how to power on and shut down your system. If you must shut down the system, use one of the preferred shutdown methods whenever possible.
+
+NETGEAR ReadyNAS 716X
+
+99
+
+
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Power On
+
+When the system is connected to a power supply and the Power switch is in the On position, the system automatically powers on.
+
+You can also power on the system by pressing the Power button on the front panel of the system.
+
+Preferred Shutdown
+
+You can gracefully shut down your system by using the Power button or the ReadyNAS local admin page.
+
+For information about how to gracefully shut down your system using the ReadyNAS local admin page, see the ReadyNAS OS 6 Software Manual, which is available at
+
+support.netgear.com/product/ReadyNAS-OS6.
+
+ To gracefully shut down your system using the Power button:
+
+•
+
+If the status display screen is not lit, do the following: 1. Press the Power button on the front panel of the system.
+
+The status display screen wakes.
+
+2. Press the Power button a second time.
+
+Instructions for graceful shutdown display on the status display screen.
+
+3. Press the Power button a third time.
+
+The system shuts down gracefully.
+
+•
+
+If the status display screen is lit, do the following:
+
+1. Press the Power button on the front panel of the system.
+
+Instructions for graceful shutdown display on the status display screen.
+
+2. Press the Power button again.
+
+The system shuts down gracefully.
+
+Forced Shutdown
+
+Perform a forced shutdown only if the storage system is not responding.
+
+ To perform a forced shutdown:
+
+Press and hold the Power button on the front panel of the system for five seconds.
+
+The LEDs blink quickly and simultaneously to warn that power will be cut off forcibly.
+
+The system shuts down.
+
+NETGEAR ReadyNAS 716X
+
+100
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Boot Menu
+
+Use the boot menu to restart or troubleshoot your ReadyNAS storage system. Your storage system has the following boot modes:
+
+•
+
+Normal. Initiates a normal boot process, just like booting using the Power button.
+
+•
+
+Factory default. Initiates a short disk test that takes approximately 2 minutes. After the disk test, a 10-minute time-out period begins.
+
+WARNING:
+
+The factory default reboot process resets the storage system to factory settings, erases all data, resets all defaults, and reformats the disk to X-RAID.
+
+-
+
+If you want to cancel the factory default process, power off the storage system before the 10-minute time-out ends. The system powers down safely without causing any data loss.
+
+-
+
+If you want to reset the system to factory default settings, do not power off your system. After the 10-minute time-out period, the factory default process begins.
+
+Tip: To start the factory default process immediately, press the OK button during the 10-minute time-out period.
+
+•
+
+OS reinstall. Reinstalls the firmware from the internal flash to the disks. Use the OS
+
+reinstall boot mode when the system crashes and corrupts some configuration files. OS
+
+reinstall boot mode also resets some settings on your storage system, such as Internet protocol settings and the administrator password, to defaults.
+
+•
+
+Tech support. Boots into a low-level diagnostic mode. Use the tech support boot mode only when instructed to do so by a NETGEAR technical support representative.
+
+•
+
+Volume read only. Mounts a volume as read-only. Use this option when you are attempting to rescue data off a disk during a disaster recovery.
+
+•
+
+Memory test. Performs a memory test. The pass or fail result is reported on the status display screen.
+
+•
+
+Test disk. Performs an offline full disk test. This process can take four hours or more, depending on the size of your disks. Any problems are reported in the system logs. For more information about viewing the system logs, see the ReadyNAS OS 6 Software Manual, which is available at support.netgear.com/product/ReadyNAS-OS6.
+
+NETGEAR ReadyNAS 716X
+
+101
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+ To access the boot menu:
+
+1. Power off your storage system.
+
+2. Using a straightened paper clip, press and hold the Reset button.
+
+3. Press the Power button on the front panel of the system.
+
+The system powers on.
+
+4. Continue to press the Reset button until the status display screen shows a boot menu message.
+
+5. Use the arrows on the touch pad to scroll through boot mode options.
+
+The status display screen shows the current boot mode option.
+
+6. When the status display screen shows the boot mode that you need, press the OK button to confirm your boot menu selection.
+
+The system boots in the selected boot mode.
+
+NETGEAR ReadyNAS 716X
+
+102
+
+
+
+
+
+13. NETGEAR EDA 500
+
+13
+
+This chapter provides an overview of the physical features of the EDA 500 and includes the following sections:
+
+•
+
+Front and Side Panels
+
+•
+
+Drive Bays
+
+•
+
+Rear Panel
+
+•
+
+Status Information
+
+•
+
+Power On and Shut Down
+
+Note: The EDA 500 disk trays are slightly different from the standard trays.
+
+Use only EDA 500 disk trays with the EDA 500. For more information about the EDA 500 disk trays, see EDA 500 Disk Tray on page 111.
+
+A ReadyNAS cannot boot using the disks in an EDA 500. All disks in a RAID volume must be either in a ReadyNAS or in an EDA 500. A RAID volume cannot combine disks in a ReadyNAS with disks in an EDA 500.
+
+You can add an EDA 500 to a ReadyNAS while the ReadyNAS is running, but you cannot remove the EDA while the ReadyNAS is running.
+
+You can add and remove disks while an EDA 500 is in operation (hot swap). If an added disk has data on it, the data shows as an inactive volume. You need to destroy inactive volumes, which destroys all data in the volume, and create new volumes, before the space is available for use by the ReadyNAS.
+
+103
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Front and Side Panels
+
+The following figure shows the front and side panels of EDA 500.
+
+5
+
+1
+
+2
+
+3
+
+4
+
+Figure 36. EDA 500 front and side panels
+
+1. Power LED
+
+2. eSATA LED
+
+3. Volume LED
+
+4. Alert LED
+
+5. Drive bay door
+
+NETGEAR EDA 500
+
+104
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Drive Bays
+
+The following figure shows the drive bays of EDA 500.
+
+7
+
+8
+
+6
+
+9
+
+1
+
+2
+
+3
+
+4
+
+5
+
+Figure 37. EDA 500 drive bays
+
+1. Drive bay door
+
+2. Disk tray release latch
+
+3. Recessed disk tray handle lock
+
+4. Disk tray handle
+
+5. Power button
+
+6. Disk LED
+
+7. Disk label
+
+8. Active drive bays
+
+9. Cold spare drive bay
+
+NETGEAR EDA 500
+
+105
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Rear Panel
+
+The following figure shows the rear panel of EDA 500.
+
+5
+
+1
+
+2
+
+3
+
+4
+
+Figure 38. EDA 500 rear panel
+
+1. Exhaust fan
+
+2. Kensington lock
+
+3. Power switch
+
+4. Power cable socket
+
+5. eSATA port
+
+NETGEAR EDA 500
+
+106
+
+ReadyNAS OS 6 Desktop Storage Systems Status Information
+
+You can obtain information about the status of your storage system by reviewing the indicators listed in the following table.
+
+Table 12. EDA 500 indicator descriptions
+
+Indicator
+
+Description
+
+Power LED
+
+The Power LED indicates these states:
+
+•
+
+On. Powered on.
+
+•
+
+Off. Powered off.
+
+eSATA LED
+
+The eSATA LED indicates these states:
+
+•
+
+On. The SATA link is established between the EDA 500 and a host.
+
+•
+
+Off. The SATA link is not established.
+
+Volume LED
+
+The Volume LED indicates these states:
+
+•
+
+On. The data volume or volumes are mounted by a host.
+
+•
+
+Off. The data volume or volumes are not mounted. You can safely disconnect the eSATA cable.
+
+Alert LED
+
+The Alert LED indicates these states:
+
+•
+
+On. The system needs attention. Use the local admin page to determine the problem. For more information, see the ReadyNAS OS 6 Software Manual, which is available at support.netgear.com/product/ReadyNAS-OS6.
+
+•
+
+Off. The system is healthy.
+
+Disk LEDs
+
+A disk LED next to each active drive bay indicates the status of the disk inside.
+
+(The cold spare drive bay has no LED.) The disk LEDs indicate these states:
+
+•
+
+Solid blue. Power is on and the disk is operating normally.
+
+•
+
+Blinking blue. The disk is active.
+
+•
+
+Solid red. The disk was removed, failed, or is resynchronizing. See the display screen for details.
+
+•
+
+Off. No disk is present.
+
+NETGEAR EDA 500
+
+107
+
+
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Power On and Shut Down
+
+This section describes how to power on and shut down your system. If you must shut down the system, use the preferred shutdown method whenever possible.
+
+Power On
+
+When the system is connected to a power supply and the Power switch is in the On position, the system automatically powers on.
+
+When connected to a host that is powered on, the EDA 500 automatically powers on. The EDA 500 detects a powered-on host through the eSATA link.
+
+You can also power on the system by pressing the Power button on the front panel of the system.
+
+Preferred Shutdown
+
+If possible, always unmount the EDA 500 volumes from the host before shutting down the EDA 500.
+
+Use the ReadyNAS local admin page to gracefully shut down the EDA 500. For information about how to gracefully shut down the EDA 500 using the ReadyNAS local admin page, see the ReadyNAS OS 6 Software Manual, which is available at
+
+support.netgear.com/product/ReadyNAS-OS6.
+
+Forced Shutdown
+
+Perform a forced shutdown only if the storage system is not responding.
+
+ To perform a forced shutdown:
+
+Flip the Power switch on the back panel of the system to the Off position.
+
+NETGEAR EDA 500
+
+108
+
+
+
+
+
+14. Disks
+
+14
+
+This chapter describes how to reformat, add, and replace disks in your ReadyNAS OS 6 storage system.
+
+For information about configuring disks on your storage system, see the ReadyNAS OS 6
+
+Software Manual, which is available at support.netgear.com/product/ReadyNAS-OS6.
+
+This chapter includes the following topics:
+
+•
+
+Disk Trays
+
+•
+
+Supported Disks
+
+•
+
+Previously Formatted Disks
+
+•
+
+Add a Disk
+
+•
+
+Replace a Disk
+
+109
+
+
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Disk Trays
+
+All systems except the EDA 500 use standard disk trays. The EDA 500 comes with its own special disk trays. This section describes both the standard and EDA 500 disk trays.
+
+Standard Disk Tray
+
+The following figure shows the features of the standard disk tray. This disk tray is used in all systems except the EDA 500. For information about the EDA 500 disk tray, see EDA 500
+
+Disk Tray on page 111.
+
+1
+
+5
+
+2
+
+6
+
+3
+
+4
+
+7
+
+Figure 39. Standard disk tray
+
+1. Disk tray
+
+2. Disk tray release latch
+
+3. Recessed disk tray handle lock
+
+4. Disk tray handle
+
+5. Disk screw holes
+
+6. Mounting bracket
+
+7. Bracket lock
+
+IMPORTANT:
+
+To maintain adequate airflow, make sure that all disk trays remain in the drive bays, even if no disk is installed in the tray. 
+
+
+
+Do not use standard disk trays with the EDA 500. Use only EDA 500
+
+disk trays with the EDA 500.
+
+Disks
+
+110
+
+
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+EDA 500 Disk Tray
+
+The following figure shows the features of the EDA 500 disk tray. The EDA 500 disk tray and the standard disk tray are the same, except for the EMI shielding on the EDA 500 disk tray.
+
+For this reason, use only EDA 500 disk trays with the EDA 500.
+
+1
+
+5
+
+2
+
+6
+
+3
+
+4
+
+7
+
+8
+
+Figure 40. EDA 500 disk tray
+
+1. Disk tray
+
+2. Disk tray release latch
+
+3. Recessed disk tray handle lock
+
+4. Disk tray handle
+
+5. Disk screw holes
+
+6. Mounting bracket
+
+7. Bracket lock
+
+8. EMI shielding
+
+IMPORTANT:
+
+Use only EDA 500 disk trays with the EDA 500. Do not use standard disk trays with the EDA 500. 
+
+
+
+To maintain adequate airflow, make sure that all disk trays remain in the drive bays, even if no disk is installed in the tray.
+
+Disks
+
+111
+
+
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Supported Disks
+
+Use only supported SATA hard disk drives (HDD) or solid state drives (SSD) in your ReadyNAS storage system. If you use disks that are not supported, NETGEAR technical support will not provide assistance. For a list of supported disks, see the NETGEAR
+
+Hardware Compatibility List at netgear.com/readynas-hcl.
+
+Previously Formatted Disks
+
+This section describes how to use previously formatted disks with your ReadyNAS OS 6
+
+storage system.
+
+Previously formatted disks must appear on the NETGEAR Hardware Compatibility List, which is available at netgear.com/readynas-hcl.
+
+Reformat Previously Formatted Disks
+
+If you want to use disks that were previously formatted for an operating system other than ReadyNAS OS 6 (for example, Windows or RAIDiator), you must reformat the disks.
+
+If you want to use disks from another ReadyNAS OS 6 storage system, see Migrate a
+
+Volume on page 113.
+
+Note: If you try to use previously formatted disks in a system that does not contain any other disks, the system does not boot and ReadyCLOUD
+
+does not discover your device. If you use RAIDar to discover your device, RAIDar displays a “Corrupt Root” error message. 
+
+
+
+If you try to use previously formatted disks in a system that already contains usable disks, the system does not reformat or use the previously formatted disks. Any data on the previously formatted disk remains intact.
+
+The following instructions describe how to reformat previously formatted disks in a ReadyNAS OS 6 system. This procedure assumes that the system does not contain any other disks.
+
+ To reformat previously formatted disks with a diskless ReadyNAS OS 6 system: 1. Gracefully shut down the storage system.
+
+For information about how to gracefully shut down your system, see the Preferred Shutdown section of the chapter that describes your system.
+
+2. Install the disks.
+
+Disks
+
+112
+
+
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems For more information, see Add a Disk on page 114.
+
+3. Reset the system to its factory default settings.
+
+WARNING:
+
+This process erases all data and reformats all disks into a single X-RAID volume. If you want to preserve the data on the disks, you must back up the data to an external drive before using the disks in your ReadyNAS storage system.
+
+For information about how to reset the system to its factory default settings, see the Boot Menu section of the chapter that describes your system.
+
+The disk is reformatted and becomes available for use with your ReadyNAS OS 6
+
+storage system.
+
+Migrate a Volume
+
+You can migrate a volume from one ReadyNAS OS 6 storage system to another, as long as you migrate every disk in the volume. For example, if you want to migrate a volume that contains two disks, you must add both disks to the new system. If you add only part of a volume to the new system, the system recognizes the disk as a degraded volume.
+
+If your ReadyNAS storage system is operating with one or more disks, you can add disks while the system is running. The new system recognizes the migrated volume and its data.
+
+For more information about adding a disk while the system is running, see Add a Disk on
+
+page 114.
+
+If your ReadyNAS storage system does not have any disks installed, perform the following procedure.
+
+ To migrate a volume to a diskless ReadyNAS OS 6 system: 1. Gracefully shut down the new (diskless) storage system.
+
+For information about how to gracefully shut down your system, see the Preferred Shutdown section of the chapter that describes your system.
+
+2. Remove each disk in the volume from the old system.
+
+3. Install each disk in the volume into the new storage system.
+
+For more information, see Add a Disk on page 114.
+
+4. Turn on the new system by pressing the Power button.
+
+The new system recognizes the migrated volume and its data.
+
+Disks
+
+113
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Add a Disk
+
+You can add a 3.5-inch hard disk drive, a 2.5-inch hard disk drive, or a 2.5-inch solid state drive to an empty drive bay.
+
+If you want to add a previously formatted disk to your storage system, see the instructions in
+
+Previously Formatted Disks on page 112.
+
+ To add a 3.5-inch hard disk drive (HDD):
+
+1. Determine whether you must shut down your system:
+
+•
+
+If you are adding disks to a diskless system, gracefully shut down the system.
+
+For information about how to gracefully shut down your system, see the Preferred Shutdown section of the chapter that describes your system.
+
+•
+
+If your system is operating with one or more disks, you can add disks while the system is running. You do not need to shut down the system.
+
+2. If necessary, slide the recessed handle lock to the unlocked position.
+
+3. Press the disk tray release latch.
+
+The disk tray handle pops out.
+
+4. Pull out the disk tray.
+
+5. Separate the mounting bracket from the disk tray: a. Press and hold the disk tray release latch.
+
+Disks
+
+114
+
+
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+b. While holding the release latch, use your other hand to pull out one end of the mounting bracket and then the other until the ends extend slightly past the disk tray.
+
+Make sure that the ends of the mounting bracket are even with each other.
+
+c. Slide the bracket down the disk tray, keeping both sides of the bracket even with each other.
+
+Bracket lock
+
+The mounting bracket stops when it hits the bracket lock.
+
+The bracket lock prevents the mounting bracket from sliding all the way off the disk tray.
+
+6. Attach the new HDD to the mounting bracket.
+
+Disks
+
+115
+
+
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Make sure that the HDD mounting holes are aligned with the bracket’s mounting posts and that the HDD connectors face the interior of the disk tray.
+
+7. Push the mounting bracket and HDD back into the disk tray.
+
+Disks
+
+116
+
+ReadyNAS OS 6 Desktop Storage Systems WARNING:
+
+To prevent damage to your system, make sure that the disk tray is correctly oriented before inserting it into the drive bay.
+
+8. Insert the disk tray back into the drive bay of the storage system.
+
+•
+
+For 2-bay and 4-bay systems, insert the disk tray so that the disk tray release latch is near the bottom of the system.
+
+•
+
+For 6-bay systems, insert the disk tray so that the disk tray release latch is on the left side of the system.
+
+9. Press down on the disk tray handle until it latches closed.
+
+The disk tray is secured in the drive bay.
+
+10. If necessary, turn on your system by pressing the Power button.
+
+If the disk that you added was not previously formatted, the system uses the disk in one of the following ways:
+
+•
+
+If you are adding the disk to a system that uses X-RAID, the system automatically determines whether the disk is used for protection or storage. The new disk is incorporated in the background while you continue to use your system.
+
+•
+
+If you are adding the disk to a system that uses Flex-RAID, the disk becomes available for use. You use the local admin page to manually configure the new disk.
+
+For more information about X-RAID, Flex-RAID, and using the local admin page, see the ReadyNAS OS 6 Software Manual, which is available at
+
+support.netgear.com/product/ReadyNAS-OS6.
+
+ To add a 2.5-inch hard disk drive (HDD) or 2.5-inch solid state drive (SSD): 1. Determine whether you must shut down your system:
+
+•
+
+If you are adding disks to a diskless system, gracefully shut down the system.
+
+For information about how to gracefully shut down your system, see the Preferred Shutdown section of the chapter that describes your system.
+
+•
+
+If your system is operating with one or more disks, you can add disks while the system is running. You do not need to shut down the system.
+
+2. If necessary, slide the recessed handle lock to the unlocked position.
+
+Disks
+
+117
+
+
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+3. Press the disk tray release latch.
+
+The disk tray handle pops out.
+
+4. Pull out the disk tray.
+
+5. Remove the mounting bracket from the disk tray:
+
+a. Press and hold the disk tray release latch.
+
+b. While holding the release latch, use your other hand to pull out one end of the mounting bracket and then the other until the ends extend slightly past the disk tray.
+
+Make sure that the ends of the mounting bracket are even with each other.
+
+Disks
+
+118
+
+
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+c. Slide the bracket down the disk tray, keeping both sides of the bracket even with each other.
+
+Bracket lock
+
+The mounting bracket stops when it hits the bracket lock.
+
+The bracket lock prevents the mounting bracket from sliding all the way off the disk tray.
+
+d. Push the mounting bracket out of each bracket lock using a pointed object, such as a pen.
+
+The mounting bracket is released from the bracket locks.
+
+e. Slide the mounting bracket out of the disk tray.
+
+The mounting bracket is not used to secure 2.5-inch HDDs or SSDs.
+
+Disks
+
+119
+
+
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+6. Place the new 2.5-inch HDD or SSD in the disk tray.
+
+7. Secure the HDD or SSD to the disk tray using the screws that came with your storage system.
+
+Make sure that the HDD or SSD connectors face the interior of the disk tray.
+
+Make sure that the HDD or SSD is installed on the correct side of the disk tray.
+
+WARNING:
+
+To prevent damage to your system, make sure that the disk tray is correctly oriented before inserting it into the drive bay.
+
+8. Insert the disk tray back into the drive bay of the storage system.
+
+•
+
+For 2-bay and 4-bay systems, insert the disk tray so that the disk tray release latch is near the bottom of the system.
+
+Disks
+
+120
+
+
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+•
+
+For 6-bay systems, insert the disk tray so that the disk tray release latch is on the left side of the system.
+
+9. Press down on the disk tray handle until it latches closed.
+
+The disk tray is secured in the drive bay.
+
+10. If necessary, turn on your system by pressing the Power button.
+
+If the disk that you added was not previously formatted, the system uses the disk in one of the following ways:
+
+•
+
+If you are adding the disk to a system that uses X-RAID, the system automatically determines whether the disk is used for protection or storage. The new disk is incorporated in the background while you continue to use your system.
+
+•
+
+If you are adding the disk to a system that uses Flex-RAID, the disk becomes available for use. You use the local admin page to manually configure the new disk.
+
+For more information about X-RAID, Flex-RAID, and using the local admin page, see the ReadyNAS OS 6 Software Manual, which is available at
+
+support.netgear.com/product/ReadyNAS-OS6.
+
+Replace a Disk
+
+If your volumes use a protected RAID configuration, your system can recover from the failure of a disk. When you replace the failed disk, the system rebuilds the volume using the new disk and no data from the volume is lost.
+
+The Disk LEDs can help you identify a failed disk. For more information, see the Status Information section of the chapter that describes your system. You can also use the local admin page to set up email alerts that notify you when a disk fails. In addition, the local admin page provides information about the failed disk.
+
+For information about RAID configurations, setting up email alerts, and using the local admin page, see the ReadyNAS OS 6 Software Manual, which is available at
+
+support.netgear.com/product/ReadyNAS-OS6.
+
+ReadyNAS supports hot-swap drive bays, so you do not need to power down your storage system when replacing a disk.
+
+If you are replacing a disk with a previously formatted disk, see the instructions in Previously
+
+Formatted Disks on page 112.
+
+WARNING:
+
+Replace one disk at a time. Wait for the volume to resynchronize your data before replacing another disk. If you attempt to replace more than one disk at a time, the system will crash.
+
+Disks
+
+121
+
+
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+ To replace a 3.5-inch hard disk drive (HDD):
+
+1. If necessary, slide the recessed handle lock to the unlocked position.
+
+2. Press the disk tray release latch.
+
+The disk tray handle pops out.
+
+3. Pull out the disk tray.
+
+4. Press and hold the disk tray release latch.
+
+Disks
+
+122
+
+
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+5. While holding the disk tray release latch, pull out the mounting bracket and slide the bracket down the tray.
+
+Mounting
+
+bracket
+
+The mounting bracket stops when it hits the bracket lock.
+
+The bracket lock prevents the mounting bracket from sliding all the way off the disk tray.
+
+6. Remove the old HDD from the mounting bracket.
+
+7. Attach the new HDD to the mounting bracket.
+
+Disks
+
+123
+
+
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Make sure that the HDD mounting holes are aligned with the bracket’s mounting posts and that the HDD connectors face the interior of the disk tray.
+
+8. Push the mounting bracket and HDD back into the disk tray.
+
+Disks
+
+124
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+WARNING:
+
+To prevent damage to your system, make sure that the disk tray is correctly oriented before inserting it into the drive bay.
+
+9. Insert the disk tray back into the drive bay of the storage system.
+
+•
+
+For 2-bay and 4-bay systems, insert the disk tray so that the disk tray release latch is near the bottom of the system.
+
+•
+
+For 6-bay systems, insert the disk tray so that the disk tray release latch is on the left side of the system.
+
+10. Press down on the disk tray handle until it latches closed.
+
+The disk tray is secured in the drive bay.
+
+If the volume that contained the failed disk uses a protected RAID configuration, the system automatically resynchronizes the volume using the new disk. Resynchronization might take several hours, depending on the disk size. You can continue to use your storage system, although access is slower until the volume resynchronization finishes.
+
+For more information about RAID configurations, see the ReadyNAS OS 6 Software Manual, which is available at support.netgear.com/product/ReadyNAS-OS6.
+
+ To replace a 2.5-inch hard disk drive (HDD) or 2.5-inch solid state drive (SSD): 1. If necessary, slide the recessed handle lock to the unlocked position.
+
+2. Press the disk tray release latch.
+
+The tray handle pops out.
+
+3. Pull out the disk tray.
+
+Disks
+
+125
+
+
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+4. Replace the 2.5-inch HDD or SSD:
+
+a. Remove the screws and the old 2.5-inch HDD or SSD.
+
+b. Place the new 2.5-inch HDD or SSD in the disk tray.
+
+c. Secure the HDD or SSD to the disk tray using the screws.
+
+Make sure that the disk connectors face the interior of the disk tray.
+
+Disks
+
+126
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Make sure that the HDD or SSD is installed on the correct side of the disk tray.
+
+WARNING:
+
+To prevent damage to your system, make sure that the disk tray is correctly oriented before inserting it into the drive bay.
+
+5. Insert the disk tray back into the drive bay of the storage system.
+
+•
+
+For 2-bay and 4-bay systems, insert the disk tray so that the disk tray release latch is near the bottom of the system.
+
+•
+
+For 6-bay systems, insert the disk tray so that the disk tray release latch is on the left side of the system.
+
+6. Press down on the disk tray handle until it latches closed.
+
+The disk tray is secured in the drive bay.
+
+If the volume that contained the failed disk uses a protected RAID configuration, the system automatically resynchronizes the volume using the new disk. Resynchronization might take several hours, depending on the disk size. You can continue to use your storage system, although access is slower until the volume resynchronization finishes.
+
+For more information about RAID configurations, see the ReadyNAS OS 6 Software Manual, which is available at support.netgear.com/product/ReadyNAS-OS6.
+
+Disks
+
+127
+
+
+
+
+
+A. Defaults and Technical
+
+Specifications
+
+A
+
+This appendix includes the following sections:
+
+•
+
+Factory Default Settings
+
+•
+
+ReadyNAS 102 Technical Specifications
+
+•
+
+ReadyNAS 104 Technical Specifications
+
+•
+
+ReadyNAS 202 Technical Specifications
+
+•
+
+ReadyNAS 212 Technical Specifications
+
+•
+
+ReadyNAS 204 Technical Specifications
+
+•
+
+ReadyNAS 214 Technical Specifications
+
+•
+
+ReadyNAS 312 Technical Specifications
+
+•
+
+ReadyNAS 314 Technical Specifications
+
+•
+
+ReadyNAS 316 Technical Specifications
+
+•
+
+ReadyNAS 516 Technical Specifications
+
+•
+
+ReadyNAS 716X Technical Specifications
+
+•
+
+EDA 500 Technical Specifications
+
+•
+
+Safety Warnings
+
+128
+
+ReadyNAS OS 6 Desktop Storage Systems Factory Default Settings
+
+The following table lists factory default settings for ReadyNAS OS 6 desktop storage systems.
+
+Table 13. ReadyNAS OS 6 factory default settings
+
+Feature
+
+Default
+
+Login
+
+Default IP address
+
+The default IP address for the ReadyNAS is assigned by
+
+the local router (DHCP server).
+
+If a router does not assign an IP address, the ReadyNAS
+
+defaults to the IP address https://169.254.x.x, where the
+
+last two octets are randomly generated based on the
+
+system’s MAC address.
+
+Admin user name (case-sensitive)
+
+admin
+
+Admin login password (case-sensitive)
+
+password
+
+Management
+
+System configuration
+
+ReadyNAS local admin page web-based configuration
+
+and status monitoring
+
+Discovery, setup, and multi-storage
+
+ReadyCloud for Windows, Mac, and Linux
+
+system status monitoring web
+
+LAN Connections
+
+MAC address
+
+See product label
+
+MTU size
+
+1500
+
+Ethernet port
+
+Auto Sense 10/100/1000BASE-T, RJ-45
+
+LAN IP address
+
+DHCP acquired
+
+Defaults and Technical Specifications
+
+129
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+ReadyNAS 102 Technical Specifications
+
+The ReadyNAS 102 storage system meets the following technical specifications: General:
+
+•
+
+Marvell Armada 370 1.2 GHz CPU
+
+•
+
+512 MB memory
+
+•
+
+Two-bay storage
+
+•
+
+One eSATA port
+
+•
+
+One USB 2.0 port (front)
+
+•
+
+Two USB 3.0 ports (back)
+
+•
+
+One GbE port
+
+Physical dimensions (h x w x d):
+
+•
+
+142 x 101 x 220 mm (5.60 x 3.98 x 8.70 in.)
+
+Physical weight:
+
+•
+
+2.12 kg (4.67 lb) without disks
+
+Power consumption:
+
+•
+
+BTU at full power supply utilization: 31.7W
+
+•
+
+In operation: 31W
+
+•
+
+Power off (Wake On LAN): 1.0W
+
+•
+
+Power off: 210 mW
+
+Electrical:
+
+•
+
+External 60 W (12V, 5A) AC power supply
+
+•
+
+Input: 100–240V AC, 50/60 Hz
+
+Environmental requirements:
+
+•
+
+Operating temperature: 0 to 40°C (32° to 104°F)
+
+•
+
+Operating humidity: 20 to 80% relative humidity (noncondensing)
+
+•
+
+Storage temperature: –20 to 70°C (–4 to 158°F)
+
+•
+
+Storage humidity: 5 to 95% relative humidity (noncondensing)
+
+•
+
+Software-controlled 92 mm chassis cooling fan
+
+Defaults and Technical Specifications
+
+130
+
+
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems Certifications:
+
+FCC Class B, CE Class B, RoHS, VCCI Class B
+
+ReadyNAS 104 Technical Specifications
+
+The ReadyNAS 104 storage system meets the following technical specifications: General:
+
+•
+
+Marvell Armada 370 1.2 GHz CPU
+
+•
+
+512 MB memory
+
+•
+
+Four-bay storage
+
+•
+
+One eSATA port
+
+•
+
+One USB 2.0 port (front)
+
+•
+
+Two USB 3.0 ports (back)
+
+•
+
+Two GbE ports
+
+•
+
+LCD display
+
+Physical dimensions (h x w x d):
+
+•
+
+205 x 134 x 223 mm (8.97 x 5.28 x 8.78 in.)
+
+Physical weight:
+
+•
+
+4.70 kg (10.36 lb) without disks
+
+Power consumption:
+
+•
+
+BTU at full power supply utilization: 47W
+
+•
+
+In operation: 45.6W
+
+•
+
+Power off (Wake On LAN): 1.4W
+
+•
+
+Power off: 0.44 W
+
+Electrical:
+
+•
+
+External 90 W (12V, 7A) AC power supply
+
+•
+
+Input: 100–240VAC, 50/60 Hz
+
+Environmental requirements:
+
+•
+
+Operating temperature: 0 to 40°C (32° to 104°F)
+
+•
+
+Operating humidity: 20 to 80% relative humidity (noncondensing)
+
+•
+
+Storage temperature: –20 to 70°C (–4 to 158°F)
+
+Defaults and Technical Specifications
+
+131
+
+
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+•
+
+Storage humidity: 5 to 95% relative humidity (noncondensing)
+
+•
+
+Software-controlled 92 mm chassis cooling fan
+
+Certifications:
+
+•
+
+FCC Class B, CE Class B, RoHS, VCCI Class B
+
+ReadyNAS 202 Technical Specifications
+
+The ReadyNAS 202 storage system meets the following technical specifications: General:
+
+•
+
+Annapurna Labs AL212 1.4 GHz processor
+
+•
+
+2 GB memory
+
+•
+
+Two-bay storage
+
+•
+
+One eSATA port
+
+•
+
+One USB 3.0 port (front)
+
+•
+
+Two USB 3.0 ports (back)
+
+•
+
+Two GbE ports
+
+Physical dimensions (h x w x d):
+
+•
+
+142 x 101 x 220 mm (5.60 x 3.98 x 8.70 in.)
+
+Physical weight:
+
+•
+
+2.12 kg (4.67 lb) without disks
+
+Power consumption:
+
+•
+
+BTU at full power supply utilization: 39.5W
+
+•
+
+In operation: 38W
+
+•
+
+Power off (Wake On LAN): 1.31W
+
+Electrical:
+
+•
+
+External 60 W (12V, 5A) AC power supply
+
+•
+
+Input: 100–240 VAC, 50/60 Hz
+
+Environmental requirements:
+
+•
+
+Operating temperature: 0 to 40°C (32° to 104°F)
+
+•
+
+Operating humidity: 20 to 80% relative humidity (noncondensing)
+
+•
+
+Storage temperature: –20 to 70°C (–4 to 158°F)
+
+Defaults and Technical Specifications
+
+132
+
+
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+•
+
+Storage humidity: 5 to 95% relative humidity (noncondensing)
+
+•
+
+Software-controlled 92 mm chassis cooling fan
+
+Certifications:
+
+FCC Class B, CE Class B, RoHS, VCCI Class B, CCC
+
+ReadyNAS 212 Technical Specifications
+
+The ReadyNAS 212 storage system meets the following technical specifications: General:
+
+•
+
+Annapurna Labs AL214 1.4 GHz processor
+
+•
+
+2 GB memory
+
+•
+
+Two-bay storage
+
+•
+
+One eSATA port
+
+•
+
+One USB 3.0 port (front)
+
+•
+
+Two USB 3.0 ports (back)
+
+•
+
+Two GbE ports
+
+Physical dimensions (h x w x d):
+
+•
+
+142 x 101 x 220 mm (5.60 x 3.98 x 8.70 in.)
+
+Physical weight:
+
+•
+
+2.12 kg (4.67 lb) without disks
+
+Power consumption:
+
+•
+
+BTU at full power supply utilization: 39.5W
+
+•
+
+In operation: 38W
+
+•
+
+Power off (Wake On LAN): 1.31W
+
+Electrical:
+
+•
+
+External 60W (12V, 5A) AC power supply
+
+•
+
+Input: 100–240 VAC, 50/60 Hz
+
+Environmental requirements:
+
+•
+
+Operating temperature: 0 to 40°C (32° to 104°F)
+
+•
+
+Operating humidity: 20 to 80% relative humidity (noncondensing)
+
+•
+
+Storage temperature: –20 to 70°C (–4 to 158°F)
+
+Defaults and Technical Specifications
+
+133
+
+
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+•
+
+Storage humidity: 5 to 95% relative humidity (noncondensing)
+
+•
+
+Software-controlled 92 mm chassis cooling fan
+
+Certifications:
+
+FCC Class B, CE Class B, RoHS, VCCI Class B, CCC
+
+ReadyNAS 204 Technical Specifications
+
+The ReadyNAS 204 storage system meets the following technical specifications: General:
+
+•
+
+Annapurna Labs AL212 1.4 GHz processor
+
+•
+
+2 GB memory
+
+•
+
+Four-bay storage
+
+•
+
+One eSATA port
+
+•
+
+One USB 2.0 port (front)
+
+•
+
+Two USB 3.0 ports (back)
+
+•
+
+Two GbE ports
+
+•
+
+LCD display
+
+Physical dimensions (h x w x d):
+
+•
+
+205 x 134 x 223 mm (8.97 x 5.28 x 8.78 in.)
+
+Physical weight:
+
+•
+
+4.70 kg (10.36 lb) without disks
+
+Power consumption:
+
+•
+
+BTU at full power supply utilization: 48.7W
+
+•
+
+In operation: 46.8W
+
+•
+
+Power off (Wake On LAN): 1.31W
+
+Electrical:
+
+•
+
+External 90W (12V, 7A) AC power supply
+
+•
+
+Input: 100–240 VAC, 50/60 Hz
+
+Environmental requirements:
+
+•
+
+Operating temperature: 0 to 40°C (32° to 104°F)
+
+•
+
+Operating humidity: 20 to 80% relative humidity (noncondensing) Defaults and Technical Specifications
+
+134
+
+
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+•
+
+Storage temperature: –20 to 70°C (–4 to 158°F)
+
+•
+
+Storage humidity: 5 to 95% relative humidity (noncondensing)
+
+•
+
+Software-controlled 92 mm chassis cooling fan
+
+Certifications:
+
+•
+
+FCC Class B, CE Class B, RoHS, VCCI Class B, CCC
+
+ReadyNAS 214 Technical Specifications
+
+The ReadyNAS 214 storage system meets the following technical specifications: General:
+
+•
+
+Annapurna Labs AL214 1.4 GHz processor
+
+•
+
+2 GB memory
+
+•
+
+Four-bay storage
+
+•
+
+One eSATA port
+
+•
+
+One USB 2.0 port (front)
+
+•
+
+Two USB 3.0 ports (back)
+
+•
+
+Two GbE ports
+
+•
+
+LCD display
+
+Physical dimensions (h x w x d):
+
+•
+
+205 x 134 x 223 mm (8.97 x 5.28 x 8.78 in.)
+
+Physical weight:
+
+•
+
+4.70 kg (10.36 lb) without disks
+
+Power consumption:
+
+•
+
+BTU at full power supply utilization: 48.7W
+
+•
+
+In operation: 46.8W
+
+•
+
+Power off (Wake On LAN): 1.31W
+
+Electrical:
+
+•
+
+External 90W (12V, 7A) AC power supply
+
+•
+
+Input: 100–240 VAC, 50/60 Hz
+
+Defaults and Technical Specifications
+
+135
+
+
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Environmental requirements:
+
+•
+
+Operating temperature: 0 to 40°C (32° to 104°F)
+
+•
+
+Operating humidity: 20 to 80% relative humidity (noncondensing)
+
+•
+
+Storage temperature: –20 to 70°C (–4 to 158°F)
+
+•
+
+Storage humidity: 5 to 95% relative humidity (noncondensing)
+
+•
+
+Software-controlled 92 mm chassis cooling fan
+
+Certifications:
+
+•
+
+FCC Class B, CE Class B, RoHS, VCCI Class B, CCC
+
+ReadyNAS 312 Technical Specifications
+
+The ReadyNAS 312 storage system meets the following technical specifications: General:
+
+•
+
+Intel Atom 2.1 GHz Dual Core CPU
+
+•
+
+2 GB memory
+
+•
+
+Two-bay storage
+
+•
+
+One eSATA port
+
+•
+
+One HDMI port (not currently supported)
+
+•
+
+One USB 2.0 port (front)
+
+•
+
+Two USB 3.0 ports (back)
+
+•
+
+Two LAN ports
+
+•
+
+Infrared remote receiver
+
+Physical dimensions (h x w x d):
+
+•
+
+142 x 101 x 220 mm (5.60 x 3.98 x 8.70 in.)
+
+Physical weight:
+
+•
+
+2.22 kg (4.89 lb) without disks
+
+Power consumption:
+
+•
+
+BTU at full power supply utilization: 50.58W
+
+•
+
+In operation: 34.92W
+
+•
+
+Power off (Wake On LAN): 627.07 mW
+
+•
+
+Power off: 266.61 mW
+
+Defaults and Technical Specifications
+
+136
+
+
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems Electrical:
+
+•
+
+External 60 W (12V, 5A) AC power supply
+
+•
+
+Input: 100–240 VAC, 50/60 Hz
+
+Environmental requirements:
+
+•
+
+Operating temperature: 0 to 40°C (32° to 104°F)
+
+•
+
+Operating humidity: 20 to 80% relative humidity (noncondensing)
+
+•
+
+Storage temperature: –20 to 70°C (–4 to 158°F)
+
+•
+
+Storage humidity: 5 to 95% relative humidity (noncondensing)
+
+•
+
+Software-controlled 92 mm chassis cooling fan
+
+Certifications:
+
+•
+
+FCC Class B, CE Class B, RoHS, VCCI Class B
+
+ReadyNAS 314 Technical Specifications
+
+The ReadyNAS 314 storage system meets the following technical specifications: General:
+
+•
+
+Intel Atom 2.1 GHz Dual Core CPU
+
+•
+
+2 GB memory
+
+•
+
+Four-bay storage
+
+•
+
+Two eSATA ports (one shared USB 2.0 and eSATA port)
+
+•
+
+One HDMI port (not currently supported)
+
+•
+
+One USB 2.0 port (front)
+
+•
+
+Two USB 3.0 ports (back)
+
+•
+
+Two LAN ports
+
+•
+
+LCD display
+
+•
+
+Infrared remote receiver
+
+Physical dimensions (h x w x d):
+
+•
+
+205 x 134 x 223 mm (8.97 x 5.28 x 8.78 in.)
+
+Physical weight:
+
+•
+
+3.97 kg (8.75 lb) without disks
+
+Defaults and Technical Specifications
+
+137
+
+
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Power consumption:
+
+•
+
+BTU at full power supply utilization: 69.45W
+
+•
+
+In operation: 48.71 W
+
+•
+
+Power off (Wake On LAN): 843.36 mW
+
+•
+
+Power off: 472.77 mW
+
+Electrical:
+
+•
+
+External 90W (12V, 7A) AC power supply
+
+•
+
+Input: 100–240 VAC, 50/60 Hz
+
+Environmental requirements:
+
+•
+
+Operating temperature: 0 to 40°C (32° to 104°F)
+
+•
+
+Operating humidity: 20 to 80% relative humidity (noncondensing)
+
+•
+
+Storage temperature: –20 to 70°C (–4 to 158°F)
+
+•
+
+Storage humidity: 5 to 95% relative humidity (noncondensing)
+
+•
+
+Software-controlled 92 mm chassis cooling fan
+
+Certifications:
+
+•
+
+FCC Class B, CE Class B, RoHS, VCCI Class B
+
+ReadyNAS 316 Technical Specifications
+
+The ReadyNAS 316 storage system meets the following technical specifications: General:
+
+•
+
+Intel Atom 2.1 GHz Dual Core CPU
+
+•
+
+2 GB memory
+
+•
+
+Six-bay storage
+
+•
+
+Two eSATA ports
+
+•
+
+One HDMI port (not currently supported)
+
+•
+
+One USB 2.0 port (front)
+
+•
+
+Two USB 3.0 ports (back)
+
+•
+
+Two LAN ports
+
+•
+
+LCD display
+
+•
+
+Infrared remote receiver
+
+•
+
+Proximity sensor
+
+Defaults and Technical Specifications
+
+138
+
+
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems Physical dimensions (h x w x d):
+
+•
+
+259 x 192 x 287.5 mm (10.20 x 7.56 x 11.32 in.)
+
+Physical weight:
+
+•
+
+7.49 kg (16.50 lb) without disks
+
+Power consumption:
+
+•
+
+BTU at full power supply utilization: 110.66W
+
+•
+
+In operation: 54.94W
+
+•
+
+Power off (Wake On LAN): 804.64 mW
+
+•
+
+Power off: 338.42 mW
+
+Electrical:
+
+•
+
+Internal 200W server-rated AC power supply
+
+•
+
+Input: 100–240 VAC, 50/60 Hz
+
+Environmental requirements:
+
+•
+
+Operating temperature: 0 to 40°C (32° to 104°F)
+
+•
+
+Operating humidity: 20 to 80% relative humidity (noncondensing)
+
+•
+
+Storage temperature: –20 to 70°C (–4 to 158°F)
+
+•
+
+Storage humidity: 5 to 95% relative humidity (noncondensing)
+
+•
+
+Software-controlled 120 mm chassis cooling fan
+
+Certifications:
+
+•
+
+FCC Class B, CE Class B, RoHS, VCCI Class B
+
+ReadyNAS 516 Technical Specifications
+
+The ReadyNAS 516 storage system meets the following technical specifications: General:
+
+•
+
+Intel Core i3 3.3 GHz Dual Core CPU
+
+•
+
+4 GB ECC memory
+
+•
+
+Six-bay storage
+
+•
+
+Three eSATA ports
+
+•
+
+One HDMI port
+
+•
+
+One USB 2.0 port (front)
+
+Defaults and Technical Specifications
+
+139
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+•
+
+Two USB 3.0 ports (back)
+
+•
+
+Two LAN ports
+
+•
+
+LCD display
+
+•
+
+Infrared remote receiver
+
+•
+
+Proximity sensor
+
+Physical dimensions (h x w x d):
+
+•
+
+259 x 192 x 287.5 mm (10.20 x 7.56 x 11.32 in.)
+
+Physical weight:
+
+•
+
+8.00 kg (17.60 lb) without disks
+
+Power consumption:
+
+•
+
+BTU at full power supply utilization: 153.54W
+
+•
+
+In operation: 87.69W
+
+•
+
+Power off (Wake On LAN): 798.08 mW
+
+•
+
+Power off: 416.77 mW
+
+Electrical:
+
+•
+
+Internal 200W server-rated AC power supply
+
+•
+
+Input: 100–240 VAC, 50/60 Hz
+
+Environmental requirements:
+
+•
+
+Operating temperature: 0 to 40°C (32° to 104°F)
+
+•
+
+Operating humidity: 20 to 80% relative humidity (noncondensing)
+
+•
+
+Storage temperature: –20 to 70°C (–4 to 158°F)
+
+•
+
+Storage humidity: 5 to 95% relative humidity (noncondensing)
+
+•
+
+Software-controlled 120 mm chassis cooling fan
+
+Certifications:
+
+•
+
+FCC Class B, CE Class B, RoHS, VCCI Class B
+
+Defaults and Technical Specifications
+
+140
+
+ReadyNAS OS 6 Desktop Storage Systems ReadyNAS 716X Technical Specifications
+
+The ReadyNAS 716X storage system meets the following technical specifications: General:
+
+•
+
+Intel Xeon processor E3-1265L v2 CPU
+
+•
+
+16 GB ECC memory
+
+•
+
+Six-bay storage
+
+•
+
+Three eSATA ports
+
+•
+
+One HDMI port
+
+•
+
+One USB 2.0 port (front)
+
+•
+
+Two USB 3.0 ports (back)
+
+•
+
+Two 1 GbE LAN ports
+
+•
+
+Two 10 GbE LAN ports
+
+•
+
+LCD display
+
+•
+
+Infrared remote receiver
+
+•
+
+Proximity sensor
+
+Physical dimensions (h x w x d):
+
+•
+
+259 x 192 x 287.5 mm (10.20 x 7.56 x 11.32 in.)
+
+Physical weight:
+
+•
+
+8.20 kg (18.04 lb) without disks
+
+Power consumption:
+
+•
+
+BTU at full power supply utilization: 172.79W
+
+•
+
+In operation: 96.15W
+
+•
+
+Power off (Wake On LAN): 799.89 mW
+
+•
+
+Power off: 419.62 mW
+
+Electrical:
+
+•
+
+Internal 200W server-rated AC power supply
+
+•
+
+Input: 100–240 VAC, 50/60 Hz
+
+Defaults and Technical Specifications
+
+141
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Environmental requirements:
+
+•
+
+Operating temperature: 0 to 40°C (32° to 104°F)
+
+•
+
+Operating humidity: 20 to 80% relative humidity (noncondensing)
+
+•
+
+Storage temperature: –20 to 70°C (–4 to 158°F)
+
+•
+
+Storage humidity: 5 to 95% relative humidity (noncondensing)
+
+•
+
+Software-controlled 120 mm chassis cooling fan
+
+Certifications:
+
+•
+
+FCC Class B, CE Class B, RoHS, VCCI Class B
+
+Defaults and Technical Specifications
+
+142
+
+ReadyNAS OS 6 Desktop Storage Systems EDA 500 Technical Specifications
+
+The EDA 500 storage system meets the following technical specifications: General:
+
+•
+
+Five-bay storage
+
+•
+
+One eSATA port
+
+•
+
+Proximity sensor
+
+Physical dimensions (h x w x d):
+
+•
+
+259 x 192 x 287.5 mm (10.20 x 7.56 x 11.32 in.)
+
+Physical weight:
+
+•
+
+7.3 kg (16.1 lb) without disks
+
+Power consumption:
+
+•
+
+BTU at full power supply utilization: 88.17W
+
+•
+
+In operation: 37.3W
+
+•
+
+Power off: 453.8 mW
+
+Electrical:
+
+•
+
+Internal 200W server-rated AC power supply
+
+•
+
+Input: 100–240 VAC, 50/60 Hz
+
+Environmental requirements:
+
+•
+
+Operating temperature: 0 to 40°C (32° to 104°F)
+
+•
+
+Operating humidity: 20 to 80% relative humidity (noncondensing)
+
+•
+
+Storage temperature: –20 to 70°C (–4 to 158°F)
+
+•
+
+Storage humidity: 5 to 95% relative humidity (noncondensing)
+
+•
+
+Software controlled 120 mm chassis cooling fan
+
+Certifications:
+
+•
+
+FCC Class B, CE Class B, RoHS, VCCI Class B
+
+Defaults and Technical Specifications
+
+143
+
+
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Safety Warnings
+
+•
+
+The equipment contains no operator access areas and is certified for installation only by trained personnel, according to the installation instructions provided with each storage system.
+
+•
+
+Install the socket-outlet near the equipment in an easily accessible location.
+
+•
+
+Observe the on-board battery precautions.
+
+DANGER:
+
+Risk of explosion if battery is replaced by an incorrect type. Dispose of used batteries according to their instructions.
+
+•
+
+Connect the storage systems and their associated LAN connections only to equipment within the same building.
+
+Electrical Safety Precautions
+
+Follow basic electrical safety precautions to protect yourself from harm and the ReadyNAS
+
+from damage:
+
+•
+
+Be aware of the locations of the power on/off switch on the chassis as well as the room’s emergency power-off switch, disconnection switch, or electrical outlet. If an electrical accident occurs, you can then quickly remove power from the system.
+
+•
+
+Do not work alone when working with high-voltage components.
+
+•
+
+Always disconnect power from the system when removing or installing main system components, such as the main board or memory modules. When disconnecting power, first power down the system with the operating system and then unplug the power cords of all the power supply storage systems in the system.
+
+•
+
+When working around exposed electrical circuits, ensure that another person who is familiar with the power-off controls is nearby to switch off the power if necessary.
+
+•
+
+Use only one hand when working with powered-on electrical equipment. This is to avoid making a complete circuit, which will cause electrical shock. Use extreme caution when using metal tools, which can easily damage any electrical components or circuit boards they come into contact with.
+
+•
+
+Do not use mats designed to decrease static electrical discharge as protection from electrical shock. Instead, use rubber mats that have been specifically designed as electrical insulators.
+
+•
+
+Use only power supply cords that include a grounding plug and plug them into grounded electrical outlets.
+
+Defaults and Technical Specifications
+
+144
+
+
+
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+General Safety Precautions
+
+Follow these rules to ensure general safety:
+
+•
+
+Keep the area around the ReadyNAS clean and free of clutter.
+
+•
+
+See the technical specifications in this manual for details about your specific ReadyNAS
+
+storage systems.
+
+•
+
+Replace the on-board battery only with the same battery or an equivalent type of battery recommended by the manufacturer. Dispose of used batteries according to the manufacturer’s instructions.
+
+DANGER:
+
+Installing the battery upside down reverses its polarities and creates a danger of explosion.
+
+•
+
+Only trained service technicians can replace the soldered-in self-resetting PTC (positive temperature coefficient) fuses on the main board, using only new fuses that are the same as or equivalent to the ones being replaced. Contact technical support for details and support.
+
+Electrostatic Discharge Precautions
+
+Electrostatic discharge (ESD) is generated by two objects with different electrical charges coming into contact with each other. An electrical discharge is created to neutralize this difference, which can damage electronic components and printed circuit boards. The following measures are generally sufficient to neutralize this difference before contact is made to protect your equipment from ESD:
+
+•
+
+Use a grounded wrist strap designed to prevent static discharge.
+
+•
+
+Keep all components and printed circuit boards (PCBs) in their antistatic bags until ready for use.
+
+•
+
+Touch a grounded metal object before removing the board from the antistatic bag.
+
+•
+
+Do not let components or PCBs come into contact with your clothing, which might retain a charge even if you are wearing a wrist strap.
+
+•
+
+Handle a board by its edges only; do not touch its components, peripheral chips, memory modules, or contacts.
+
+•
+
+When handling chips or modules, avoid touching their pins.
+
+•
+
+Put the main board and peripherals back into their antistatic bags when not in use.
+
+•
+
+For grounding purposes, make sure your computer chassis provides excellent conductivity between the power supply, the case, the mounting fasteners, and the main board.
+
+Defaults and Technical Specifications
+
+145
+
+
+
+
+
+Document Outline
+
+
+ReadyNAS OS 6 Desktop Storage Systems
+
+Contents
+
+1. Getting Started Setup Location
+
+Supported Operating Systems
+
+Diskless Storage Systems
+
+
+
+
+
+2. NETGEAR ReadyNAS 102 Power On
+
+Preferred Shutdown
+
+Forced Shutdown
+
+Power State
+
+Boot Menu
+
+
+
+
+
+3. NETGEAR ReadyNAS 104 Power On
+
+Preferred Shutdown
+
+Forced Shutdown
+
+Power State
+
+Boot Menu
+
+
+
+
+
+4. NETGEAR ReadyNAS 202 Power On
+
+Preferred Shutdown
+
+Forced Shutdown
+
+Power State
+
+Boot Menu
+
+
+
+
+
+5. NETGEAR ReadyNAS 204 Power On
+
+Preferred Shutdown
+
+Forced Shutdown
+
+Power State
+
+Boot Menu
+
+
+
+
+
+6. NETGEAR ReadyNAS 212 Power On
+
+Preferred Shutdown
+
+Forced Shutdown
+
+Power State
+
+Boot Menu
+
+
+
+
+
+7. NETGEAR ReadyNAS 214 Power On
+
+Preferred Shutdown
+
+Forced Shutdown
+
+Power State
+
+Boot Menu
+
+
+
+
+
+8. NETGEAR ReadyNAS 312 Power On
+
+Preferred Shutdown
+
+Forced Shutdown
+
+
+
+
+
+9. NETGEAR ReadyNAS 314 Power On
+
+Preferred Shutdown
+
+Forced Shutdown
+
+Boot Menu
+
+
+
+
+
+10. NETGEAR ReadyNAS 316 Power On and Shut Down Power On
+
+Preferred Shutdown
+
+Forced Shutdown
+
+
+
+
+
+11. NETGEAR ReadyNAS 516 Power On and Shut Down Power On
+
+Preferred Shutdown
+
+Forced Shutdown
+
+
+
+
+
+12. NETGEAR ReadyNAS 716X Power On and Shut Down Power On
+
+Preferred Shutdown
+
+Forced Shutdown
+
+
+
+
+
+13. NETGEAR EDA 500 Power On
+
+Preferred Shutdown
+
+Forced Shutdown
+
+
+
+
+
+14. Disks Standard Disk Tray
+
+EDA 500 Disk Tray
+
+Supported Disks
+
+Previously Formatted Disks Reformat Previously Formatted Disks
+
+Migrate a Volume
+
+
+
+
+
+Replace a Disk
+
+
+
+
+
+A. Defaults and Technical Specifications ReadyNAS 104 Technical Specifications
+
+ReadyNAS 202 Technical Specifications
+
+ReadyNAS 212 Technical Specifications
+
+ReadyNAS 204 Technical Specifications
+
+ReadyNAS 214 Technical Specifications
+
+ReadyNAS 312 Technical Specifications
+
+ReadyNAS 314 Technical Specifications
+
+ReadyNAS 316 Technical Specifications
+
+ReadyNAS 516 Technical Specifications Electrical Safety Precautions
+
+Electrostatic Discharge Precautions
+
+
+
+
+

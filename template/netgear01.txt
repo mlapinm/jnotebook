@@ -1,0 +1,9 @@
+Compression
+
+Select the Compression check box to enable data compression.
+
+Compression saves storage space and increases the speed of data transfers, but the compression and decompression processes require additional resources. By default, the Compression check box is cleared.
+
+Snapshot Schedule
+
+Select from the Snapshot Schedule menu to enable data protection through snapshots and configure how often snapshots are taken.
