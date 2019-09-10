@@ -1,10 +1,204 @@
-is
-and
-but
-by
-how
-of
-the
-to
-from
-often
+additional дополнительные
+and и
+are являются
+box коробка
+but но
+by по
+check проверить
+cleared растаможен
+compression сжатие
+configure настроить
+data данные
+decompression декомпрессия
+default по умолчанию
+enable включить
+from от
+how как
+increases увеличивается
+is это
+menu меню
+of из
+often часто
+processes процессы
+protection защита
+resources ресурсы
+saves спасает
+select выберите
+space пространство
+speed скорость
+the в
+through через
+to для
+able 
+about 
+absolute 
+accept 
+acceptable 
+access 
+accessible 
+accessing 
+accommodates 
+according 
+account 
+account's 
+accounting 
+accounts 
+across 
+act 
+action 
+actions 
+activate 
+active 
+actively 
+activity 
+actual 
+adapter 
+adapters 
+adaptive 
+add 
+added 
+adding 
+addition 
+additional 
+additionally 
+address 
+adds 
+adjusts 
+admin 
+administer 
+administration 
+administrative 
+administrator 
+advanced 
+after 
+again 
+against 
+age 
+ahead 
+alerts 
+algorithm 
+algorithms 
+all 
+alliance 
+alliance) 
+allowed 
+allowing 
+allows 
+alphabetic 
+alphabetical 
+alphanumeric 
+already 
+also 
+always 
+amazon 
+american 
+an 
+and 
+android 
+anonymous 
+anonymously 
+another 
+answer 
+anti-virus 
+antivirus 
+any 
+anyhost 
+anyone 
+anything 
+anywhere 
+app 
+appear 
+appears 
+append 
+apple 
+application 
+applications 
+apply 
+apps 
+architecture 
+archive 
+are 
+area 
+around 
+arp 
+array 
+arrays 
+arrow 
+arrows 
+as 
+asian 
+ask 
+asking 
+asks 
+assign 
+assigned 
+assigning 
+assignment 
+assigns 
+assisted 
+associated 
+assumes 
+at 
+attach 
+attached 
+attempts 
+audio 
+authenticate 
+authenticated 
+authentication 
+author 
+authorize 
+auto 
+auto-configuration 
+autoconfiguration 
+automatic 
+automatically 
+automatically/dhcp 
+available 
+avi 
+away 
+a–z 
+b 
+back 
+backed 
+background 
+backing 
+backs 
+backslash 
+backup 
+backups 
+bad 
+balance 
+balanced 
+balances 
+balancing 
+banks 
+bar 
+base 
+based 
+basic 
+basics 
+batch 
+battery 
+be 
+because 
+becomes 
+before 
+begin 
+beginning 
+begins 
+belonged 
+belonging 
+belongs 
+best 
+better 
+between 
+bidirectional 
+bit 
+bit) 
+
+
+
+
+
+
