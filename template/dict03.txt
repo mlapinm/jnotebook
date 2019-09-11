@@ -1,0 +1,8 @@
+default по умолчанию
+require требуется
+schedule расписание
+snapshot снимок
+snapshots снимки
+storage хранение
+taken принято
+transfers переводы

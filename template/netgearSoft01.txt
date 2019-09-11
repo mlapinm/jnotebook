@@ -1,0 +1,1693 @@
+ReadyNAS OS 6.5
+
+Software Manual
+
+May 2016
+
+202-11207-12
+
+350 E. Plumeria Drive
+
+San Jose, CA 95134
+
+USA
+
+ReadyNAS OS 6.5
+
+Support
+
+Thank you for purchasing this NETGEAR product. You can visit www.netgear.com/support to register your product, get help, access the latest downloads and user manuals, and join our community. We recommend that you use only official NETGEAR support resources.
+
+Trademarks
+
+©NETGEAR, Inc., NETGEAR and the NETGEAR Logo are trademarks of NETGEAR, Inc. Any non-NETGEAR
+
+trademarks are used for reference purposes only.
+
+Compliance
+
+For regulatory compliance information, visit http://www.netgear.com/about/regulatory.
+
+See the regulatory compliance document before connecting the power supply.
+
+2
+
+
+
+
+
+Contents
+
+Chapter 1 Getting Started
+
+Quick-Start Guide..................................................................................................9
+
+Additional Documentation......................................................................................9
+
+Supported ReadyNAS Systems.............................................................................9
+
+Supported Operating Systems.............................................................................10
+
+Supported Browsers............................................................................................10
+
+Diskless Systems.................................................................................................11
+
+Basic Installation..................................................................................................11
+
+Upgrade Older ReadyNAS Firmware for Use With ReadyCLOUD......................12
+
+Discover and Set Up Your ReadyNAS Using ReadyCLOUD...............................13
+
+Local Setup Wizard..............................................................................................15
+
+Local Admin Page................................................................................................16
+
+Access the Local Admin Page.............................................................................17
+
+Register Your System...........................................................................................18
+
+Five Levels of Protection......................................................................................20
+
+Chapter 2 Volume Configuration
+
+Basic Volume and RAID Concepts.......................................................................22
+
+Volumes...........................................................................................................22
+
+RAID................................................................................................................22
+
+Manage Volumes.................................................................................................25
+
+Change RAID Mode........................................................................................25
+
+View the Status of a Volume............................................................................28
+
+Configure the Checksum Function..................................................................30
+
+Create and Encrypt a Volume.........................................................................31
+
+Delete a Volume..............................................................................................33
+
+Expand Storage Capacity................................................................................34
+
+Add Protection to a Volume.............................................................................37
+
+Maintain Volumes............................................................................................38
+
+Balance a Volume.......................................................................................39
+
+Export a Volume.........................................................................................40
+
+Schedule Volume Maintenance..................................................................41
+
+Chapter 3 Shared Folders
+
+Basic Shared Folder Concepts............................................................................44
+
+Data Organization...........................................................................................44
+
+Shared Folder Defaults....................................................................................44
+
+File and Folder Names....................................................................................45
+
+File-Sharing Protocols.....................................................................................45
+
+Quotas on Shared Folders..............................................................................46
+
+Bit Rot Protection............................................................................................47
+
+Managing Bit Rot Protection............................................................................47
+
+3
+
+ReadyNAS OS 6.5
+
+Home Folders..................................................................................................48
+
+Manage Shared Folders.......................................................................................48
+
+Create a Shared Folder...................................................................................49
+
+View and Change the Properties of a Shared Folder......................................50
+
+Delete a Shared Folder...................................................................................52
+
+Browse a Shared Folder..................................................................................52
+
+Shared Folder Access Rights...............................................................................53
+
+User and Group Authentication.......................................................................54
+
+Set Network Access Rights to Shared Folders for Common Protocols...........54
+
+Set Network Access Rights to Shared Folders...............................................55
+
+Set Up Access Rights to Files and Folders.....................................................67
+
+Access Shared Folders From a Network-Attached Device..................................70
+
+Use a Web Browser.........................................................................................70
+
+Use a Windows Device....................................................................................71
+
+Use a Mac OS X Device..................................................................................72
+
+Use a Linux or Unix Device.............................................................................72
+
+Use FTP and FTPS.........................................................................................73
+
+Use Rsync.......................................................................................................74
+
+Chapter 4 LUNs
+
+Basic LUN Concepts............................................................................................76
+
+Thin and Thick Provisioning............................................................................76
+
+Default LUN Settings.......................................................................................77
+
+Manage LUNs......................................................................................................77
+
+Create a LUN..................................................................................................77
+
+View and Change the Properties of a LUN.....................................................79
+
+Expand the Size of a LUN...............................................................................82
+
+Delete a LUN...................................................................................................84
+
+LUN Groups and Access Rights..........................................................................85
+
+Create a LUN Group.......................................................................................85
+
+Assign a LUN to a LUN Group........................................................................86
+
+Remove a LUN From a LUN Group................................................................86
+
+Delete a LUN Group........................................................................................87
+
+Manage Access Rights for LUN Groups.........................................................87
+
+Access LUN Groups From an iSCSI-Attached Device.........................................94
+
+Set Up Initiator Access....................................................................................94
+
+Initialize and Format LUNs..............................................................................99
+
+Chapter 5 Snapshots
+
+Basic Snapshot Concepts..................................................................................103
+
+Smart Snapshot Management......................................................................103
+
+Rolling Back..................................................................................................104
+
+Clones...........................................................................................................104
+
+View and Change Share Snapshot Properties..................................................104
+
+Manually Take a Snapshot.................................................................................105
+
+Browse Snapshots Using Recovery Mode.........................................................106
+
+Roll Back to a Snapshot Using Recovery Mode................................................107
+
+Clone Snapshots................................................................................................109
+
+4
+
+ReadyNAS OS 6.5
+
+Delete Snapshots...............................................................................................111
+
+Delete Snapshots Using Recovery Mode..........................................................111
+
+Recover Data From a Snapshot.........................................................................112
+
+Recover Data From a Snapshot to a Network-Attached Device....................112
+
+Recover Data From a Snapshot to an iSCSI-Attached Device......................113
+
+Chapter 6 Users and Groups
+
+User and Group Accounts..................................................................................115
+
+Home Folders.....................................................................................................115
+
+User and Group Account Limitations.................................................................115
+
+User and Group Management Modes................................................................115
+
+User Accounts....................................................................................................118
+
+Configure Default User Settings....................................................................119
+
+Create User Accounts...................................................................................119
+
+Edit User Accounts........................................................................................120
+
+Delete User Accounts....................................................................................121
+
+Change User Passwords...............................................................................122
+
+Group Accounts.................................................................................................123
+
+Create Groups...............................................................................................123
+
+Edit Groups...................................................................................................124
+
+Delete Groups...............................................................................................126
+
+Cloud Users.......................................................................................................126
+
+Grant Access to Cloud Users........................................................................127
+
+Cloud User Access Rights.............................................................................127
+
+Chapter 7 Use Cloud Services
+
+Use ReadyCLOUD.............................................................................................129
+
+Join ReadyCLOUD........................................................................................129
+
+Use ReadyCLOUD to Share Folders Through Email....................................130
+
+Use ReadyCLOUD to Share Folders With ReadyCLOUD Users..................133
+
+Delete ReadyCLOUD Users..........................................................................135
+
+Manage Permissions for ReadyCLOUD Users.............................................135
+
+Access Your System Using ReadyCLOUD....................................................136
+
+Sync With Dropbox............................................................................................137
+
+Sync With Amazon Cloud Drive.........................................................................138
+
+Sync With Egnyte...............................................................................................139
+
+ReadyNAS Vault................................................................................................141
+
+ReadyNAS Replicate.........................................................................................143
+
+Enable ReadyNAS Replicate........................................................................143
+
+Chapter 8 System Settings
+
+Customize the Basic System Settings...............................................................146
+
+Set the Clock.................................................................................................146
+
+Select the Language.....................................................................................147
+
+Set the Administrator Password....................................................................148
+
+Configure System Alerts...............................................................................150
+
+Configure the Host Name..............................................................................150
+
+Enable Antivirus............................................................................................151
+
+5
+
+ReadyNAS OS 6.5
+
+Configure the Network Settings.........................................................................152
+
+Basic Network Concepts...............................................................................152
+
+Configure the Ethernet Interfaces.................................................................154
+
+Configure Bonded Adapters..........................................................................156
+
+Configure Static Routes................................................................................162
+
+Configure Global Settings for System Services.................................................163
+
+Basic File-Sharing Concepts.........................................................................163
+
+Supported System Services..........................................................................163
+
+Configure System Services...........................................................................165
+
+Download an SSH Public Key File.....................................................................171
+
+Configure a User Account to Use SSH..............................................................171
+
+Configure Media Services..................................................................................173
+
+ReadyDLNA..................................................................................................173
+
+iTunes Streaming Server...............................................................................175
+
+Configure Discovery Services............................................................................177
+
+Back Up or Restore System Configuration........................................................177
+
+Chapter 9 Install and Manage Apps
+
+Install Apps........................................................................................................181
+
+Manage Installed Apps......................................................................................181
+
+Chapter 10 System Maintenance
+
+System Monitoring.............................................................................................184
+
+System and Disk Health Information.............................................................184
+
+System Real-Time and Historical Monitoring................................................184
+
+System Logs.................................................................................................187
+
+Downloading Logs.........................................................................................189
+
+SNMP Monitoring..........................................................................................189
+
+System Maintenance.........................................................................................191
+
+Update Firmware...........................................................................................191
+
+Reset the Firmware to Factory Defaults........................................................194
+
+Recover the Administrator Password............................................................194
+
+Shut Down or Restart the System.................................................................196
+
+Manage Power Usage...................................................................................197
+
+What Is Disk Spin-Down...........................................................................199
+
+Set or Change Disk Spin-Down................................................................199
+
+Optional Uninterruptible Power Supplies............................................................200
+
+Uninterruptible Power Supplies.....................................................................201
+
+UPS Configurations.......................................................................................201
+
+Manage UPS Devices...................................................................................201
+
+Chapter 11 Backup and Recovery
+
+Backup Concepts...............................................................................................207
+
+Recovery Concepts............................................................................................208
+
+Secure Cloud Backups......................................................................................209
+
+Backup Protocols...............................................................................................209
+
+Backup Job Recommendations.........................................................................210
+
+Manage Backup and Recovery Jobs.................................................................210
+
+6
+
+ReadyNAS OS 6.5
+
+Create a Backup Job.....................................................................................211
+
+Create a Recovery Job..................................................................................214
+
+Modify a Backup or Recovery Job.................................................................218
+
+Manually Start a Backup or Recovery Job....................................................228
+
+Delete a Backup or Recovery Job.................................................................229
+
+View or Clear a Job Log................................................................................229
+
+Configure the Backup Button.............................................................................230
+
+Back Up A Camera or Other Media Device.......................................................232
+
+Time Machine....................................................................................................233
+
+Back Up Your Mac Using a Shared Time Machine........................................234
+
+Back Up Your Mac Using a Private Time Machine........................................235
+
+Increase Your Shared Time Machine Backup Capacity.................................237
+
+7
+
+
+
+
+
+Getting Started
+
+1
+
+This manual describes how to configure and manage your ReadyNAS® storage system.
+
+Your ReadyNAS storage system relies on the following applications:
+
+•
+
+ReadyCLOUD. Use this online service to discover your ReadyNAS system on your local area network and access the local admin page.
+
+•
+
+Local admin page. Use this browser-based interface to configure and manage your ReadyNAS system.
+
+This chapter includes the following sections:
+
+•
+
+Quick-Start Guide
+
+•
+
+Additional Documentation
+
+•
+
+Supported ReadyNAS Systems
+
+•
+
+Supported Operating Systems
+
+•
+
+Supported Browsers
+
+•
+
+Diskless Systems
+
+•
+
+Basic Installation
+
+•
+
+Upgrade Older ReadyNAS Firmware for Use With ReadyCLOUD
+
+•
+
+Discover and Set Up Your ReadyNAS Using ReadyCLOUD
+
+•
+
+Local Setup Wizard
+
+•
+
+Local Admin Page
+
+•
+
+Access the Local Admin Page
+
+•
+
+Register Your System
+
+•
+
+Five Levels of Protection
+
+Note For more information about the topics covered in this manual, visit the support website at
+
+www.netgear.com/support.
+
+8
+
+
+
+
+
+ReadyNAS OS 6.5
+
+Quick-Start Guide
+
+This manual provides conceptual information about storage systems, detailed instructions about using your system, and NETGEAR’s recommendations about configuring, managing, and backing up your system. We recommend that you read this manual to make the best use of your storage system.
+
+To quickly start using your system, review the following sections in this order: 1.
+
+Basic Installation on page 11. You use ReadyCLOUD to discover your storage system on your network.
+
+2.
+
+Create a Shared Folder on page 49. Shared folders are the way you organize the data you store on your ReadyNAS system.
+
+3.
+
+Create a LUN on page 77. LUNs are SAN data sets that allow data transfer and storage over iSCSI.
+
+4.
+
+Basic Snapshot Concepts on page 103. Protect the data that is stored in folders and LUNs by creating snapshots.
+
+5.
+
+Create User Accounts on page 119. You create a user account for each person that you want to allow to access your ReadyNAS system.
+
+6.
+
+Configure Global Settings for File-Sharing Protocols on page 163. File-sharing protocols enable you to transfer files across a network.
+
+7.
+
+Backup and Recovery on page 206.You can back up the data that you store on your ReadyNAS system and you can use your ReadyNAS system to back up data that you store on other devices.
+
+Additional Documentation
+
+NETGEAR maintains a community website that supports ReadyNAS products. Click the ReadyNAS
+
+Coummunity button on the upper right side of the local admin page, or visit
+
+https://community.netgear.com/t5/ReadyNAS-Network-Storage/ct-p/readynas for reviews, tutorials, comparison charts, software updates, documentation, an active user forum, and much more.
+
+For information about your system’s hardware, see the hardware manual for your system, which is available at http://www.netgear.com/support/product/ReadyNAS_OS_6.
+
+Supported ReadyNAS Systems
+
+This release of ReadyNAS OS supports the following ReadyNAS systems:
+
+•
+
+ReadyNAS 102
+
+•
+
+ReadyNAS 104
+
+•
+
+ReadyNAS 202
+
+•
+
+ReadyNAS 204
+
+•
+
+ReadyNAS 212
+
+•
+
+ReadyNAS 214
+
+•
+
+ReadyNAS 312
+
+•
+
+ReadyNAS 314
+
+Getting Started
+
+9
+
+
+
+
+
+ReadyNAS OS 6.5
+
+•
+
+ReadyNAS 316
+
+•
+
+ReadyNAS 516
+
+•
+
+ReadyNAS 716X
+
+•
+
+ReadyNAS 2120
+
+•
+
+ReadyNAS 2120 v2
+
+•
+
+ReadyNAS 3130
+
+•
+
+ReadyNAS 3138
+
+•
+
+ReadyNAS 3220
+
+•
+
+ReadyNAS 4220
+
+•
+
+EDA 500
+
+Supported Operating Systems
+
+The ReadyNAS supports the following operating systems:
+
+•
+
+Microsoft Windows 10 (32 and 64 bit)
+
+•
+
+Microsoft Windows 8.1 (32 and 64 bit)
+
+•
+
+Microsoft Windows 8 (32 and 64 bit)
+
+•
+
+Microsoft Windows 7 (32 and 64 bit)
+
+•
+
+Microsoft Windows Server 2012 (64 bit)
+
+•
+
+Microsoft Windows Server 2008 R2 (64 bit)
+
+•
+
+Apple Mac OS X 10.7 or later
+
+•
+
+Linux, Unix, Solaris
+
+•
+
+Apple iOS
+
+•
+
+Google Android
+
+Supported Browsers
+
+The ReadyNAS local admin page supports the following browsers:
+
+•
+
+Microsoft Edge
+
+•
+
+Microsoft Internet Explorer 9.0 and later
+
+•
+
+Apple Safari 5.0 and later
+
+•
+
+Google Chrome 20 and later
+
+•
+
+Mozilla Firefox 14 and later
+
+If you experience difficulty accessing the local admin page or if you notice unexpected behavior, try using another browser.
+
+Getting Started
+
+10
+
+
+
+
+
+ReadyNAS OS 6.5
+
+Diskless Systems
+
+If you own a diskless ReadyNAS, you must first install and format at least one disk before you can discover your system with ReadyCLOUD or visit the local admin page. You must use supported disks. For a list of supported disks, visit http://www.netgear.com/readynas-hcl. Make sure that the ReadyNAS is powered off before inserting any disks.
+
+If you want to use disks that were previously formatted for an operating system other than ReadyNAS OS
+
+6 (for example, Windows, Linux, or previous-generation ReadyNAS), you must reformat the disks. You can reformat the disks by installing them, powering on the system, and performing a factory reset before continuing the configuration.
+
+The details of installation for both new and previously formatted disks depend on the model. For detailed instructions, see the hardware manual for your system, which is available at
+
+http://support.netgear.com/product/ReadyNAS-OS6.
+
+For basic configuration information, see Basic Installation on page 11.
+
+For information about disk formats, see RAID on page 22.
+
+Basic Installation
+
+After you follow these instructions, your ReadyNAS system is ready to use in a production environment.
+
+Setup takes approximately 15 minutes.
+
+To install your storage system:
+
+1.
+
+Install all available disks that you want to use in your storage system.
+
+Note If you are using previously formatted disks that contain data, you must reformat these disks before continuing. For information about formatting disks, see the hardware manual for your system.
+
+For a list of supported disks, see the Hardware Compatibility List at http://www.netgear.com/readynas-hcl.
+
+For information about installing disks, see the hardware manual for your system.
+
+2.
+
+Place your system in a location that provides adequate ventilation.
+
+High-capacity disks can produce considerable heat. It is important to ensure that the fan exhausts are unobstructed.
+
+For a complete list of placement considerations, see the hardware manual for your system.
+
+3.
+
+Connect the power adapter to the power cord.
+
+4.
+
+Connect the power adapter to the back of the system and plug the power cord into a wall outlet or power strip.
+
+5.
+
+Use an Ethernet cable to connect an Ethernet port on the storage system to your network.
+
+6.
+
+If necessary, press the Power button to turn on the system.
+
+7.
+
+Wait for the Power LED to turn solid blue or for the status display screen to display the system’s IP
+
+address.
+
+8.
+
+Use ReadyCLOUD to discover and set up your system on the network.
+
+See Discover and Set Up Your ReadyNAS on page 13.
+
+Getting Started
+
+11
+
+
+
+
+
+ReadyNAS OS 6.5
+
+Upgrade Older ReadyNAS Firmware for Use With
+
+ReadyCLOUD
+
+On some models of ReadyNAS running releases prior to ReadyNAS OS 6.2, you need to upgrade to RN
+
+OS 6.2 before upgrading to later releases. If you log in to ReadyCLOUD, you see a message about needing to upgrade the ReadyNAS system firmware.
+
+The models are:
+
+•
+
+ReadyNAS 102
+
+•
+
+ReadyNAS 104
+
+•
+
+ReadyNAS 202
+
+•
+
+ReadyNAS 204
+
+•
+
+ReadyNAS 212
+
+•
+
+ReadyNAS 214
+
+•
+
+ReadyNAS 2120
+
+•
+
+ReadyNAS 2120 v2
+
+If your ReadyNAS is one of these models, and is connected to ReadyCLOUD, when you log in to ReadyCLOUD, you see the following page:
+
+ReadyCLOUD now includes major new features, but these features require new firmware on the ReadyNAS
+
+system. When you log in to ReadyCLOUD from a ReadyNAS system, ReadyCLOUD checks to see if the ReadyNAS system firmware is recent enough to work with the new ReadyCLOUD. If it is not, you see the message and the Upgrade Now button. Click the button to start the download and automatic restart.
+
+During the download you see the following page:
+
+Getting Started
+
+12
+
+
+
+
+
+ReadyNAS OS 6.5
+
+When the download and restart complete, you see the following page: Click the OK button to dismiss the message and continue to ReadyCLOUD.
+
+Your system is now upgraded to ReadyNAS OS 6.2, and you can use the normal procedure to upgrade to more recent releases.
+
+Discover and Set Up Your ReadyNAS Using ReadyCLOUD
+
+ReadyCLOUD is the online service that you use to discover and set up desktop ReadyNAS storage systems on your network. (Use the local admin page to set up rackmount ReadyNAS storage systems.) You can also use ReadyCLOUD to access and manage data on your ReadyNAS systems. For you to use ReadyCLOUD, your computer and storage system must be able to access the Internet.
+
+Getting Started
+
+13
+
+
+
+
+
+ReadyNAS OS 6.5
+
+Note If your computer and storage system cannot access the Internet, install and run the RAIDar utility instead. It includes versions for Windows, Mac, and Linux operating systems. It is available at http://www.netgear.com/raidar.
+
+When you discover your device using ReadyCLOUD, you can choose whether to use ReadyCLOUD to set up and manage your device or use advanced offline installation.
+
+To use ReadyCLOUD to discover and set up your storage system: 1.
+
+Visit http://readycloud.netgear.com on a computer that uses the same local area network (LAN) and Internet connection as your storage system.
+
+2.
+
+Click the Set up a new ReadyNAS Start button.
+
+3.
+
+Click the Discover button.
+
+ReadyCLOUD automatically detects your ReadyNAS system on the network.
+
+Your new ReadyNAS system is marked with a NEW label.
+
+4.
+
+Click the Setup button.
+
+5.
+
+To use ReadyCLOUD to set up your system, leave the Setup with ReadyCLOUD (Default) radio button selected and click the Next button.
+
+6.
+
+Follow the onscreen instructions to set up your system.
+
+For more information about ReadyCLOUD, see Use ReadyCLOUD on page 128.
+
+For information about advanced offline installation, see Local Setup Wizard on page 15.
+
+Getting Started
+
+14
+
+
+
+
+
+ReadyNAS OS 6.5
+
+Local Setup Wizard
+
+The first time you access the local admin page, a setup wizard prompts you to configure the basic settings of your ReadyNAS storage system.
+
+Note The local setup wizard is for users who choose to set up their ReadyNAS system using Offline mode. If you set up your system using ReadyCLOUD mode and the ReadyCLOUD setup wizard, the local setup wizard does not display.
+
+Figure 1. Setup wizard (Welcome page)
+
+You can change the language setting for the setup wizard by selecting a language from the Language menu at the top right corner of the page.
+
+The setup wizard guides you through the initial configuration process to help you quickly integrate your ReadyNAS storage system into your network. Follow the setup wizard’s prompts to configure the following settings:
+
+•
+
+Time and date. For more information, see Set the Clock on page 146.
+
+•
+
+Alert contact. For more information, see Configure System Alerts on page 150.
+
+•
+
+Host name. For more information, see Configure the Host Name on page 150.
+
+•
+
+Administrator password and password recovery. For more information, see Set the Administrator
+
+Password on page 148.
+
+Getting Started
+
+15
+
+
+
+
+
+ReadyNAS OS 6.5
+
+Local Admin Page
+
+The local admin page is a browser-based interface that you use to configure and manage your ReadyNAS
+
+system. When you visit the local admin page, the Overview page displays, as shown in the following figure.
+
+Figure 2. Local admin page (Overview page)
+
+The following list describes the features of the local admin page:
+
+•
+
+To navigate through the local admin page, use the navigation bar across the top of the page and the navigation icons below it.
+
+•
+
+Some pages are divided into multiple sections. You can collapse or expand sections of the page by clicking the triangle icon ( ) next to each section heading.
+
+•
+
+To refresh the page, click the Refresh icon ( ) in the top right corner of the page.
+
+•
+
+For help, click the Help icon (
+
+) in the top right corner of the page. A window opens on the admin page. You can move the help window around within the admin page. The content changes depending Getting Started
+
+16
+
+
+
+
+
+ReadyNAS OS 6.5
+
+on the navigation bar icon and the navigation icon you select. Close the help window by clicking the X
+
+icon in the upper left of the help window.
+
+Figure 3. Example help page
+
+Other features of the local admin page are described in other chapters.
+
+In this manual, instructions for navigating through the local admin page begin by specifying the selection from the navigation bar and then, if necessary, specifying the selections from the row of navigation icons and section headings. For example, to configure the global file-sharing protocols, select System > Settings
+
+> Services. System is the selection from the navigation bar. Settings is the selection from the row of navigation icons. Services is the selection from the section headings on the Settings page.
+
+Access the Local Admin Page
+
+If your computer is connected to the same LAN as your storage system, follow these instructions to access the local admin page.
+
+Getting Started
+
+17
+
+
+
+
+
+ReadyNAS OS 6.5
+
+To access the local admin page:
+
+1.
+
+Open a web browser and visit https://< hostname> .
+
+<hostname> is the name that you assigned to your ReadyNAS system or the default host name if you did not change it.
+
+Note You can also enter https:// <ReadyNAS IP address> , where <ReadyNAS IP address> is the IP address of the ReadyNAS.
+
+An SSL certificate security warning displays.
+
+Note The warning is because the certificate is a self-signed certificate, which browsers typically warn you about.
+
+2.
+
+Accept the certificate.
+
+A login prompt displays.
+
+3.
+
+Enter the login credentials for your system and click the OK button.
+
+If you did not change the credentials, the default credentials are as follows:
+
+•
+
+user name. admin
+
+•
+
+password. password
+
+Both user name and password are case-sensitive.
+
+The local admin page displays.
+
+You can also access the local admin page from ReadyCLOUD (see Use ReadyCLOUD on page 128).
+
+Register Your System
+
+You must register your product before you can use NETGEAR support. When you first setup your ReadyNAS, the ReadyNAS creates a link unique to your ReadyNAS, that you can use to register your system. The link displays in a notification bar at the top of the local admin page.
+
+If the link is not available register your ReadyNAS system at the NETGEAR Product Registration web page.
+
+Getting Started
+
+18
+
+
+
+
+
+ReadyNAS OS 6.5
+
+To register your ReadyNAS system:
+
+1.
+
+Locate the serial number of the system.
+
+You can find the serial number on the Overview page of the local admin page or on the chassis label of your product.
+
+2.
+
+Open a web browser and visit http://www.NETGEAR.com/register.
+
+3.
+
+Take one of the following actions:
+
+•
+
+If you never registered a NETGEAR product, click the REGISTER NOW button.
+
+•
+
+If you registered a NETGEAR product in the past, enter your email address and password and click the LOG IN button.
+
+4.
+
+Follow the prompts.
+
+The ReadyNAS is registered.
+
+Getting Started
+
+19
+
+
+
+
+
+ReadyNAS OS 6.5
+
+Five Levels of Protection
+
+File and data protection strategies such as various RAID levels or snapshots can go only so far in protecting data from loss, but ReadyNAS OS provides five separate strategies that work together to provide substantially better protection than any one strategy.
+
+The different levels of disk redundancy provided by RAID types provide degrees of file protection from the loss of one or more disks, but cannot do anything about accidental deletion or corruption; can mask, but not prevent, gradual corruption caused by the slow degradation of the disks; and cannot provide protection from a site disaster. Snapshot technologies provide protection against accidental deletion or corruption but by themselves cannot protect against disk loss or site loss.
+
+ReadyNAS OS allows you to use five different types of protection simultaneously:
+
+•
+
+RAID. Protects against disk failure.
+
+•
+
+Snapshot technology. Protects against accidental data deletion or corruption by providing point-in-time recovery.
+
+•
+
+Real-time antivirus. Protects against loss or corruption from viruses.
+
+•
+
+Bit rot protection. Protects against the degradation of data from disk aging.
+
+•
+
+Offsite backup. Protects against site loss.
+
+Getting Started
+
+20
+
+
+
+
+
+Volume Configuration
+
+2
+
+This chapter describes how to configure and manage the volumes in your ReadyNAS storage system. It includes the following sections:
+
+•
+
+Basic Volume and RAID Concepts
+
+•
+
+Manage Volumes
+
+21
+
+
+
+
+
+ReadyNAS OS 6.5
+
+Basic Volume and RAID Concepts
+
+To get the most out of your ReadyNAS storage system, it is helpful to understand the basics of volumes and RAID. Understanding these concepts is the first step to making good decisions about how to configure, manage, and use your ReadyNAS storage system.
+
+Volumes
+
+In the most general sense, volumes are data storage devices. Your computer treats an internal hard drive as a volume. It also treats a portable USB thumb drive as a volume.
+
+Volumes can be either physical or logical. Usually, the term physical volume refers to a hard disk drive.
+
+When this term is used in this way, a two-bay storage system can be made up of up to two physical volumes (hard disk drives). A four-bay storage system can be made up of up to four physical volumes. A six-bay storage system can be made up of up to six physical volumes.
+
+The term logical volume refers to the way that you divide, or partition, your storage space. For example:
+
+•
+
+Each logical volume can correspond to a hard disk drive.
+
+•
+
+A logical volume can be made up of more than one hard disk drive.
+
+In this manual, the term volume refers to a logical volume. The terms hard disk drive and disk refer to a physical volume.
+
+RAID
+
+Your ReadyNAS storage system allows you to configure your hard disks using one of the many RAID
+
+technologies.
+
+RAID is short for redundant array of independent disks. RAID is a storage technology that balances data protection, system performance, and storage space by determining how the storage system distributes data.
+
+Many different ways of distributing data are standardized into various RAID levels. Each RAID level offers a tradeoff of data protection, system performance, and storage space. For example, one RAID level might improve data protection but reduce storage space. Another RAID level might increase storage space but also reduce system performance.
+
+Your ReadyNAS storage system supports X-RAID™ mode, a proprietary single-volume RAID architecture that is easy to administer, and Flex-RAID mode, which allows you to format your disks in a variety of industry-standard RAID levels.
+
+When you power on your system for the first time or if you reset your system to its factory default settings, the optimal RAID mode and level are automatically selected for you based on the number of disks that are installed. You can also configure the RAID settings manually (see Change RAID Mode on page 25).
+
+X-RAID
+
+X-RAID is an autoexpandable RAID technology that is available only on ReadyNAS systems. With X-RAID, you do not need to know intricate details about RAID to administer your system. X-RAID allows you to add storage space without reformatting your drives or moving your data to another location. Because the expansion happens online, you can continue to use your ReadyNAS system while the volume capacity increases.
+
+Volume Configuration
+
+22
+
+
+
+ReadyNAS OS 6.5
+
+Because X-RAID is a single-volume architecture, if you configure your hard disk drives to use X-RAID, your storage system includes only one volume that is made up of all installed hard disk drives. X-RAID’s single-volume architecture provides two major advantages:
+
+•
+
+Easy system management
+
+•
+
+Auto expansion
+
+Adding disks to a Flex-RAID formatted system is more complex. Disks must be added in ways compatible with the RAID level, or you must back up the data to another system, add a disk, reformat the RAID volume, and restore the data to the new RAID volume. With X-RAID, none of those administrative tasks are required.
+
+Instead, with X-RAID, your volume automatically expands to accommodate additional disks or larger-capacity disks.
+
+With X-RAID, you can start out with one hard disk, add a second disk for data protection, and add more disks for additional storage capacity. X-RAID accommodates the new disks automatically. You can replace existing disks with larger-capacity disks and X-RAID automatically accommodates the new disks.
+
+X-RAID requires a minimum of two hard disks to provide protection against disk failure. If you use a one-disk ReadyNAS storage system and want protection from disk failure, you must add a second disk that is at least as large as the first. It can be added while the system is running.
+
+X-RAID uses the capacity of one disk for data storage and reserves the capacity of a second disk for data protection, which allows the volume to recreate data if a disk fails. In a two-disk system, the usable storage space is one disk. In a three-disk system, the usable storage space is two disks. In general, the total capacity of your storage system equals the capacity of all your disks minus the capacity of one disk.
+
+The following figure illustrates how X-RAID uses new disks.
+
+Figure 4. X-RAID disk usage
+
+Volume Configuration
+
+23
+
+ReadyNAS OS 6.5
+
+1.
+
+The first disk that you install is used for initial (unprotected) storage space.
+
+2.
+
+The second disk that you install is reserved for data protection (parity information).
+
+3.
+
+Installing additional disks increases your storage space.
+
+Note X-RAID reserves the capacity of one disk for data protection. The actual space reserved for data protection is distributed across all disks.
+
+Flex-RAID
+
+NETGEAR’s Flex-RAID technology allows you to choose from among several industry-standard RAID levels:
+
+•
+
+JBOD. This most basic RAID level does not protect your data from loss if one of your drives fails. JBOD
+
+is available only on volumes consisting of a single hard disk.
+
+•
+
+RAID 0. RAID 0 distributes data across multiple disks, resulting in improved disk performance compared to systems that do not use RAID formatting. The total capacity of your storage system equals the capacity of the smallest of your disk drives times the number of disks. RAID 0 is available on volumes consisting of two or more hard disks.
+
+•
+
+RAID 1. This RAID level provides full redundancy of your data, because it duplicates data across multiple disks. Exactly the same data is stored on two or more disks at all times. RAID 1 protects your data from loss if one disk fails. The total capacity of your storage system equals the capacity of your smallest disk.
+
+•
+
+RAID 5. This RAID level also provides data redundancy, but it requires at least three disks. RAID 5 uses the capacity of one disk to protect you from data loss if one disk fails. Your data is distributed across multiple disks to improve disk performance. The total capacity of your storage system equals the capacity of all your disks minus the capacity of one disk. It is supported on systems with at least four drive bays.
+
+•
+
+RAID 6. This RAID level provides recovery from the loss of two disks. Your data is distributed across multiple disks to improve disk performance. The total capacity of your storage system equals the capacity of all your disks minus the capacity of two disks. It is supported on systems with at least four drive bays.
+
+•
+
+RAID 10 (or 1+0). This RAID level uses both RAID 1 and RAID 0 technology. First, your data is duplicated so that exactly the same data is stored on two or more disks. Then the data is distributed across additional disks to improve disk performance. It is supported on systems with at least four drive bays.
+
+•
+
+RAID 50 (or 5+0). This RAID level uses both RAID 5 and RAID 0 technology. First, a disk is used to provide redundancy. Then your data is distributed across multiple disks to improve disk performance.
+
+A minimum of six disks are required. The total capacity of your storage system equals the capacity of all your disks minus the capacity of two disks.
+
+•
+
+RAID 60 (or 6+0). This RAID level uses both RAID 6 and RAID 0 technology. First, two disks are used to provide redundancy. Then your data is distributed across multiple disks to improve disk performance.
+
+A minimum of eight disks are required. The total capacity of your storage system equals the capacity of all of your disks minus the capacity of four disks.
+
+The Flex-RAID levels that you can select depend on the number of disks included in the volume. The following table describes the Flex-RAID levels that are available for a given number of disks. It also indicates whether adding a disk for data protection is possible for each configuration.
+
+Volume Configuration
+
+24
+
+
+
+
+
+ReadyNAS OS 6.5
+
+Table 1. Flex-RAID levels and data protection
+
+Number of Disks per Volume RAID Level Can I add a disk for data protection?
+
+1
+
+JBOD
+
+No. (JBOD is available only for volumes consisting of one disk)
+
+2
+
+RAID 1
+
+No. (Volume protection is already redundant.)
+
+2 or more
+
+RAID 0
+
+Yes. (Additional disk provides single redundancy and converts the volume to RAID 5.)
+
+3 or more
+
+RAID 5
+
+Yes. (Additional disk provides dual redundancy and converts the volume to RAID 6.)
+
+4 or more(even number)
+
+RAID 10
+
+No. (Volume protection is already redundant.)
+
+4 or more
+
+RAID 6
+
+No. (Volume is already protected with dual redundancy.)
+
+6 or more
+
+RAID 50
+
+No, but you can add two disks. (The additional disks provide dual redundancy and converts the volume to RAID 60.)
+
+8 or more
+
+RAID 60
+
+No. (Volume is already protected with dual redundancy.)
+
+Manage Volumes
+
+You can manage volumes on your ReadyNAS system. You can add or delete volumes from the system.
+
+Additionally, you can change the volume’s RAID mode and level, check volume status, perform volume maintenance, and configure volume protection.You can also extend the storage capacity on you ReadyNAS
+
+system.
+
+Change RAID Mode
+
+You can change the RAID mode that your ReadyNAS storage system uses. By default, your system’s hard disks are configured into a single X-RAID volume.
+
+Change From X-RAID to Flex-RAID
+
+Your ReadyNAS system can easily change a volume from X-RAID to Flex-RAID mode. Data on the X-RAID
+
+volume is preserved when you switch to Flex-RAID. The RAID level of the resulting Flex-RAID volume is automatically assigned based on the number of disks that are installed.
+
+Volume Configuration
+
+25
+
+
+
+
+
+ReadyNAS OS 6.5
+
+To change from X-RAID to Flex-RAID:
+
+1.
+
+Log in to the ReadyNAS.
+
+2.
+
+Select System > Volumes.
+
+3.
+
+Click the X-RAID button at the right side of the page.
+
+4.
+
+Confirm that you want to switch from X-RAID to Flex-RAID.
+
+The volume switches from X-RAID mode to Flex-RAID mode and the indicator on the X-RAID button turns gray.
+
+The RAID level is automatically assigned based on the number of disks that are installed.
+
+Change From Flex-RAID to X-RAID
+
+If your system contains only one volume, you can easily switch from Flex-RAID to X-RAID. Data on the Flex-RAID volume is preserved when you switch to X-RAID.
+
+If your system contains multiple volumes, you must first reconfigure your disks into a single volume.
+
+Note When you switch to X-RAID mode, any extra disks installed in your system are automatically reformatted and used for storage expansion.You cannot change the RAID mode of a RAID 0 or RAID 10 volume.
+
+Volume Configuration
+
+26
+
+
+
+
+
+ReadyNAS OS 6.5
+
+To change from Flex-RAID to X-RAID on a single-volume system: 1.
+
+Log in to your ReadyNAS.
+
+2.
+
+Select System > Volumes.
+
+3.
+
+Click the X-RAID button at the right side of the page.
+
+4.
+
+Confirm that you want to switch from Flex-RAID to X-RAID.
+
+The volume switches from Flex-RAID mode to X-RAID mode and the indicator on the X-RAID button turns green.
+
+Any available drives are automatically used for storage expansion.
+
+Change to a Different Flex-RAID Level
+
+In Flex-RAID mode, you assign one of several RAID levels to your volume. Available RAID levels depend on the number of disks that you want the volume to include. For more information, see Flex-RAID on page 24. You can reconfigure your volumes to use a different RAID level.
+
+Note Changing the RAID level of a volume erases all data. If data is stored on your system, you must back up the data to another storage device before changing the RAID level.
+
+To change to RAID levels:
+
+1.
+
+Log in to your ReadyNAS.
+
+2.
+
+If any data is stored on the volumes that you want to reconfigure, back up your data.
+
+3.
+
+Delete the volumes that you want to reconfigure (see Delete a Volume on page 33).
+
+The disks that were part of the volumes become available again for other purposes (the color of the disks turns black).
+
+4.
+
+Create a new volume from the available disks and select the RAID level (see Create and Encrypt a
+
+Volume on page 31).
+
+The volume is formatted according to your specifications. Formatting can take quite a while, depending on the size of your hard disk drives.
+
+Volume Configuration
+
+27
+
+
+
+
+
+ReadyNAS OS 6.5
+
+View the Status of a Volume
+
+To view a summary of the volume status:
+
+1.
+
+Log in to your ReadyNAS.
+
+2.
+
+Select System > Volumes.
+
+The volumes are listed at the left side of the page.
+
+The following summary information is displayed next to each volume.
+
+Item
+
+Description
+
+Data
+
+The storage space that is consumed by data in MB, GB, or TB.
+
+Snapshots
+
+The storage space that is consumed by snapshots in MB, GB, or TB.
+
+Free
+
+The storage space that is available in MB, GB, or TB.
+
+Type
+
+The configured RAID level.
+
+Health indicator The color of the indicator to the right of the volume icon indicates the health of the volume:
+
+•
+
+Green. The volume is healthy.
+
+•
+
+Yellow. The volume is degraded.
+
+•
+
+Red. The volume is bad or faulty.
+
+To view the I/O stats and disk status:
+
+1.
+
+Log in to your ReadyNAS.
+
+2.
+
+Select System > Volumes.
+
+3.
+
+Select the volume from the list on the left.
+
+Volume Configuration
+
+28
+
+
+
+
+
+ReadyNAS OS 6.5
+
+4.
+
+Click the gear icon.
+
+5.
+
+Click the Settings button in the pop-up menu.
+
+Volume Configuration
+
+29
+
+
+
+
+
+ReadyNAS OS 6.5
+
+6.
+
+Click the Disks tab.
+
+7.
+
+From the Disk menu, select a disk in the volume to view its status.
+
+Note The disks are listed by their position in the enclosure: < column>x< row>. For example, Disk 3X1 is the third disk from the left in the top row of the enclosure.
+
+Configure the Checksum Function
+
+Checksum functions help detect data transmission errors. The ReadyNAS uses a checksum function to improve accuracy and consistency when writing data to a volume. You can enable or disable the checksum function on each volume. Enabling the checksum function improves the integrity of your data but reduces performance speeds.
+
+Bit rot protection uses the checksum functions to detect a read error. For information and bit rot protection,
+
+see Bit Rot Protection on page 47.
+
+Enable or disable the checksum function:
+
+1.
+
+Log in to your ReadyNAS.
+
+2.
+
+Select System > Volumes.
+
+3.
+
+Select one of the volumes listed on the left side of the page.
+
+Volume Configuration
+
+30
+
+
+
+
+
+ReadyNAS OS 6.5
+
+4.
+
+Click the gear icon.
+
+5.
+
+Click the Settings button on the pop-up menu.
+
+6.
+
+Select or clear the Checksum check box.
+
+7.
+
+Click the Apply button.
+
+8.
+
+Click the OK button.
+
+Your settings are saved.
+
+Create and Encrypt a Volume
+
+During volume creation you can also enable volume encryption. Encryption is optional. When encryption is enabled, data is encrypted in real time as it is written to the volume. You cannot encrypt existing volumes.
+
+Encryption is possible only when you are creating new volumes. When created, the volume will be a Flex-RAID
+
+volume, but after you create it, you can change it to an X-RAID volume.
+
+Volume Configuration
+
+31
+
+
+
+
+
+ReadyNAS OS 6.5

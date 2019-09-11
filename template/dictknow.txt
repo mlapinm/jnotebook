@@ -1,6 +1,159 @@
+able возможность
+about о
+absolute абсолютная
+accept принять
+acceptable приемлемо
+accessible можно
+accessing доступ
+accommodates вмещает
+according по
+account счета
+account's счета
+accounts счетов
+across по
+act акт
+action действие
+actions действия
+activate активировать
+active активный
+actively активно
+activity деятельность
+actual фактическое
+adapter адаптер
+adapters адаптеры
+adaptive адаптивная
+add добавить
+added добавлено
+adding добавление
+addition дополнение
 additional дополнительные
+additionally дополнительно
+address адрес
+adds добавляет
+adjusts регулировка
+admin админ
+administer администрирование
+administration администрация
+administrative административные
+administrator администратор
+advanced дополнительно
+after после
+again снова
+against против
+age возраст
+ahead впереди
+alerts предупреждения
+algorithm алгоритм
+algorithms алгоритмы
+all все
+alliance альянс
+alliance) альянс)
+allowed допускается
+allowing позволяя
+allows позволяет
+alphabetic алфавитный
+alphabetical алфавитный
+alphanumeric алфавитно-цифровой
+already уже
+also также
+always всегда
+amazon Амазонки
+american американский
+an в
 and и
+android андроид
+anonymous анонимный
+anonymously анонимно
+another другой
+answer ответ
+anti-virus анти-вирус
+antivirus антивирус
+any любой
+anyhost anyhost
+anyone кто-нибудь
+anything ничего
+app приложение
+appear появляются
+appears появляется
+append добавить
+apple яблоко
+application приложение
+applications приложения
+apply применить
+apps приложения
+architecture архитектура
+archive архив
 are являются
+area площадь
+around вокруг
+arp Арп
+array массив
+arrays массивы
+arrow стрелка
+arrows стрелки
+as как
+asian Азии
+ask задать
+asking спрашиваю
+asks просит
+assign назначить
+assigned назначены
+assigning назначение
+assignment назначение
+assigns назначает
+assisted помощь
+associated связанные
+assumes предполагается
+at в
+attach прикрепить
+attached прилагается
+attempts попытки
+audio аудио
+author автор
+authorize разрешаю
+auto авто
+autoconfiguration автонастройка
+automatic автоматическая
+automatically автоматически
+automatically/dhcp автоматически/DHCP-сервер
+available доступен
+avi Ави
+away отсюда
+a–z а–Z
+b б
+back назад
+backed опираясь
+background фон
+backing поддержка
+backs спиной
+backslash слеш
+bad плохо
+balance баланс
+balanced сбалансированный
+balances остатки
+balancing балансировка
+banks банки
+bar бар
+base база
+basic основные
+basics основы
+batch партия
+battery аккумулятор
+be быть
+becomes становится
+before перед
+begin начать
+beginning начало
+begins начинается
+belonged принадлежал
+belonging принадлежность
+belongs принадлежит
+best лучшие
+better лучше
+between между
+bidirectional двунаправленный
+bit немного
+bit) бит)
 box коробка
 but но
 by по
@@ -10,7 +163,6 @@ compression сжатие
 configure настроить
 data данные
 decompression декомпрессия
-default по умолчанию
 enable включить
 from от
 how как
@@ -29,176 +181,3 @@ speed скорость
 the в
 through через
 to для
-able 
-about 
-absolute 
-accept 
-acceptable 
-access 
-accessible 
-accessing 
-accommodates 
-according 
-account 
-account's 
-accounting 
-accounts 
-across 
-act 
-action 
-actions 
-activate 
-active 
-actively 
-activity 
-actual 
-adapter 
-adapters 
-adaptive 
-add 
-added 
-adding 
-addition 
-additional 
-additionally 
-address 
-adds 
-adjusts 
-admin 
-administer 
-administration 
-administrative 
-administrator 
-advanced 
-after 
-again 
-against 
-age 
-ahead 
-alerts 
-algorithm 
-algorithms 
-all 
-alliance 
-alliance) 
-allowed 
-allowing 
-allows 
-alphabetic 
-alphabetical 
-alphanumeric 
-already 
-also 
-always 
-amazon 
-american 
-an 
-and 
-android 
-anonymous 
-anonymously 
-another 
-answer 
-anti-virus 
-antivirus 
-any 
-anyhost 
-anyone 
-anything 
-anywhere 
-app 
-appear 
-appears 
-append 
-apple 
-application 
-applications 
-apply 
-apps 
-architecture 
-archive 
-are 
-area 
-around 
-arp 
-array 
-arrays 
-arrow 
-arrows 
-as 
-asian 
-ask 
-asking 
-asks 
-assign 
-assigned 
-assigning 
-assignment 
-assigns 
-assisted 
-associated 
-assumes 
-at 
-attach 
-attached 
-attempts 
-audio 
-authenticate 
-authenticated 
-authentication 
-author 
-authorize 
-auto 
-auto-configuration 
-autoconfiguration 
-automatic 
-automatically 
-automatically/dhcp 
-available 
-avi 
-away 
-a–z 
-b 
-back 
-backed 
-background 
-backing 
-backs 
-backslash 
-backup 
-backups 
-bad 
-balance 
-balanced 
-balances 
-balancing 
-banks 
-bar 
-base 
-based 
-basic 
-basics 
-batch 
-battery 
-be 
-because 
-becomes 
-before 
-begin 
-beginning 
-begins 
-belonged 
-belonging 
-belongs 
-best 
-better 
-between 
-bidirectional 
-bit 
-bit) 
-
-
-
-
-
-
