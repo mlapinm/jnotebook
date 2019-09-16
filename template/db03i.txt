@@ -1,0 +1,216 @@
+i  я 
+i/o  ввода/вывода 
+ia  ИА 
+icon  значок 
+icons  значки 
+id  идентификатор 
+identical  идентичные 
+identify  определить 
+idle  ожидания 
+ids  идентификаторы 
+ieee  стандарт IEEE 
+if  если 
+illustrates  показано 
+illustration  иллюстрация 
+immediately  сразу 
+impact  влияние 
+import  импорт 
+important  важно 
+imported  импортные 
+imports  импорт 
+improper  неправильное 
+improve  улучшить 
+improved  улучшение 
+improves  улучшает 
+in  в 
+inaccessible  недоступные 
+inactive  не активен 
+inactivity  неактивность 
+inc  Инк 
+include  включают 
+included  в комплекте 
+includes  включает в себя 
+including  в том числе 
+incoming  входящие 
+incorporated  включены 
+increase  увеличение 
+increased  увеличился 
+increases  увеличивается 
+increasing  повышение 
+incremental  добавочная 
+increments  шагом 
+independent  независимые 
+independently  самостоятельно 
+index  индекс 
+indicate  указать 
+indicates  указывает 
+indicator  индикатор 
+individual  индивидуальный 
+industry-standard  отраслевой стандарт 
+indvidual  индивидуальные 
+inefficient  неэффективно 
+info  информация 
+information  информация 
+information)  информация) 
+informational  информационный 
+informs  информирует 
+initial  начальная 
+initialize  инициализировать 
+initialized  инициализируется 
+initializing  инициализация 
+initiate  инициировать 
+initiator  инициатор 
+initiator)  инициатора) 
+initiators  инициаторы 
+insert  вставить 
+inserting  вставка 
+inside  внутри 
+install  установите 
+installation  установка 
+installed  установлен 
+installing  установка 
+installs  устанавливает 
+instance  экземпляр 
+instant  мгновенный 
+instantaneous)  мгновенно) 
+instead  вместо 
+institutions  институты 
+instructions  инструкции 
+intact  нетронутыми 
+integral  Интеграл 
+integrate  интеграция 
+integrated  интегрированный 
+integration  интеграция 
+integrity  целостность 
+intend  собираюсь 
+interface  интерфейс 
+interfaces  интерфейсы 
+internal  внутренние 
+internet  интернет 
+internet-standard  интернет-стандарт 
+interrupted  прерывается 
+interrupted)  прерывается) 
+interval  интервал 
+into  в 
+intricate  замысловатые 
+introduced  представил 
+invisible  невидимый 
+invite  приглашаем 
+inviting  приглашение 
+involves  включает в себя 
+ios  прошивкой 
+ip  ИС 
+ipads  айпады 
+iphones  айфоны 
+ipv4  протокол IPv4 
+ipv6  протокол IPv6 
+iqn  имя 
+irrecoverable  безвозвратные 
+irregularities  нарушений 
+is  это 
+iscsi  протокол iSCSI 
+iscsi-attached  с iSCSI-прилагается 
+isp  интернет-провайдер 
+issues  вопросы 
+it  это 
+item  пункт 
+its  его 
+itself  сама 
+itunes  в iTunes 
+japanese  японский 
+jbod  массив JBOD 
+job  работа 
+job_  job_ 
+jobs  вакансии 
+join  присоединяйтесь 
+jose  Хосе 
+jpeg  в формате JPEG 
+jpg  формат JPG 
+just  просто 
+kanji  кандзи 
+kb  КБ 
+kb/s  кб/с 
+keep  держать 
+keeping  учета 
+kept  держали 
+key  ключ 
+keys  ключи 
+kindergarten  детский сад 
+kinds  виды 
+know  знаю 
+known  известно 
+label  метки 
+lacp  протокол LACP 
+lan  локальной сети 
+language  язык 
+languages  языки 
+laptop  ноутбук 
+large  большие 
+large)  большие) 
+larger  больше 
+larger-capacity  большей емкости 
+last  последние 
+later  позже 
+latest  последний 
+launch  запуск 
+launched  запущен 
+launches  запускает 
+layer  слой 
+least  крайней мере 
+leave  оставить 
+led  Сид 
+left  слева 
+length  длина 
+less  меньше 
+lets  позволяет 
+letters)  письма) 
+level  уровень 
+level)  уровне) 
+levels  уровни 
+life  жизнь 
+light  свет 
+like  как 
+limit  предел 
+limitations  ограничения 
+limited  общества 
+line  линия 
+lines  линии 
+link  ссылка 
+link-local  локальные 
+linked  связано 
+links  ссылки 
+linux  Линукс 
+list  список 
+listed  перечисленные 
+listing  листинг 
+listings  объявления 
+lists  списки 
+living  жизни 
+load  нагрузки 
+local  местные 
+locally  локально 
+locate  найти 
+located  расположенном 
+location  расположение 
+log  журнал 
+logged  вход 
+logging  лесозаготовки 
+logical  логично 
+login  логин 
+logo  логотип 
+logs  журналы 
+long  долго 
+longer  больше 
+lose  потерять 
+loses  теряет 
+loss  потери 
+lost  потеряли 
+louder  громче 
+low  низкая 
+lower  ниже 
+lower-end  нижний конец 
+lowest-level  низкий уровень 
+lun  лун 
+lun)  лун) 
+luns  лунс 
+luns) лунс)

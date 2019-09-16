@@ -1,0 +1,186 @@
+f  Ф 
+f2f2fdd4)  f2f2fdd4) 
+facilitates  облегчает 
+factory  фабрика 
+failed  не удалось 
+fails  не 
+failure  провал 
+failures  неудачи 
+family  семья 
+fan  вентилятор 
+fans  фанаты 
+far  далеко 
+fast  быстро 
+fat32  фат32 
+fault  вина 
+faulty  неисправен 
+feature  характеристика 
+features  особенности 
+few  несколько 
+fewer  меньше 
+fibre  волокна 
+field  поле 
+fields  поля 
+figure  рис. 
+file  файл 
+file-sharing  файл-обмен 
+files  файлы 
+fill  заполнить 
+filled  заполненный 
+fills  заполняет 
+filter  фильтр 
+financial  финансовые 
+find  найти 
+finder  искатель 
+finish  отделка 
+finishes  отделки 
+fire  огонь 
+firefox  в Firefox 
+firmware  прошивки 
+first  первый 
+five  пять 
+fixed  исправлена 
+fla  ФЛА 
+flac  Флак 
+flash  вспышки 
+flc  ФОК 
+flex-raid  флекс-рейд 
+flexible  гибкий 
+flood)  флуд) 
+flv  вашы 
+folder  папка 
+folder>  папка> 
+folders  папки 
+folders)  папки) 
+follow  следуйте 
+followed  затем 
+following  следующим 
+follows  следует 
+for  для 
+force  силу 
+forces  сил 
+forgotten  забыли 
+format  формат 
+formats  форматы 
+formatted  отформатирован 
+formatting  форматирование 
+forth)  д.) 
+forum  форум 
+forward  вперед 
+forwarding  пересылка 
+four  четыре 
+four-bay  четыре-Бэй 
+fourth  четвертый 
+fragment  фрагмент 
+fragmentation  фрагментация 
+frames  кадры 
+free  бесплатно 
+freely  свободно 
+frequently  часто 
+friday  в пятницу 
+friend  друг 
+from  от 
+front  стойка 
+ftp  фтп 
+ftp)  на FTP) 
+ftp-file  на FTP-файл 
+ftpes  ftpes 
+ftps  ФСНП 
+full  полный 
+fully  полностью 
+function  функция 
+functions  функции 
+future  будущее 
+g  г 
+gain  получить 
+gains  успехов 
+gateway  шлюз 
+gave  дал 
+gb  ГБ 
+gear  шестерни 
+general  общие 
+generate  создать 
+generated  автоматически 
+generates  создает 
+get  вам 
+getting  получать 
+gid  гид 
+gigabytes  гигабайт 
+given  учитывая 
+global  глобальные 
+globally  во всем мире 
+go  перейти 
+good  хорошо 
+google  Гугл 
+gracefully  изящно 
+gradual  постепенное 
+grant  грант 
+granted  предоставлено 
+granting  предоставление 
+graph  график 
+graphic  график 
+graphics  графика 
+graphs  графики 
+gray  серый 
+greater  больше 
+greatly  сильно 
+green  зеленый 
+grid  сетки 
+group  группа 
+groups  группы 
+groupx  groupx 
+guest  гость 
+guide  руководство 
+guided  руководствуясь 
+guidelines  руководящие принципы 
+guides  гиды 
+h  ч 
+handle  ручка 
+hanzi  Ханзи 
+happen  бывает 
+happens  бывает 
+hard  жесткий 
+hardware  оборудование 
+hash  хэш 
+have  есть 
+heading  заголовок 
+headings  заголовки 
+health  здоровья 
+healthy  здоровый 
+heat  тепло 
+help  помогите 
+helpful  полезная 
+helps  помогает 
+her  ее 
+here  здесь 
+heuristic  эвристика 
+hide  скрыть 
+hiding  прячется 
+high-capacity  высокая емкость 
+high-level  высокого уровня 
+higher  высшее 
+higher-end  высокого класса 
+highlight  выделить 
+his  его 
+historical  исторические 
+home  дома 
+horizontal  горизонтальная 
+horizontally  по горизонтали 
+host  хозяин 
+hostname>  имя_узла> 
+hosts  хозяева 
+hot-swappable  горяч-swappable 
+hour  час 
+hourly  почасовая 
+hours  часов 
+hover  Ховер 
+how  как 
+however  однако 
+hp  л. с. 
+hp/compac  л. с./лаборатории 
+htm  НТМ 
+html  HTML-код 
+html)  формате HTML) 
+http  протокол HTTP 
+http)  протокол HTTP) 
+https протоколу HTTPS
