@@ -1,24 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-	<base target="_blank">
-</head>
-<body>
 <?
-foo(1, 2, 3);
-function foo() {
-    $numargs = func_num_args();
-    echo "Всего аргументов: $numargs<br>";
-    echo "Второй
-        аргумент: " . func_get_arg(1) . "<br>";
-
-    $args = func_get_args();
-    foreach ($args as $key => $value) {
-        echo "Аргумент$key : $value<br>";
-    }
+header("Content-Type: text/html;charset=utf-8");
+echo "&lt;b&gt;пример: &lt;/b&gt;&lt;div align=left&gt;это тест&lt;/div&gt;";
+$re = "|<[^>]+>(.*)</[^>]+>|U";
+//$re ="|(\w+)|";
+preg_match_all($re, 
+    "<b>пример: </b><div align=left>это тест</div>",
+    $out, PREG_PATTERN_ORDER);
+echo $out[0][0] . ", " . $out[0][1] . "<br>";
+echo $out[1][0] . ", " . $out[1][1] . "<br>";
+var_dump($out);echo '<br>';
+print_r($out);echo '<br>';
+foreach($out[1] as $v){
+    echo $v,', ';
 }
 ?>
-</body>
-</html>
