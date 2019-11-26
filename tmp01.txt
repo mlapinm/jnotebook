@@ -1,0 +1,19 @@
+class pkFrarme(Frame):
+'''
+pkFrame is a Frame with packing 
+syntax:
+	pn_my = pkFrame(panel, width, height, bg, side, fill, expand )
+where
+panel - Frame for packing, (zb = root)
+width, height - Frame size
+bg - background color
+side - side of panel for packing
+fill - fill for packing( can skip )
+expand - expand for packing( can skip )
+'''
+def __init__( self, panel, width, height, bg, side, fill ='',	expand = 0):
+Frame __init__( self, panel, height = height, width = width , bg = bg)
+if fill:
+self.pack( side = side, expand = expand, fill = fill )
+else:
+self.pack( side = side, expand = expand) self.pack_propagate(0)
