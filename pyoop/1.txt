@@ -1,1 +1,2 @@
-¿¡√
+conda create -n py36 python=3.6 ipykernel
+C:\ProgramData\Anaconda3
