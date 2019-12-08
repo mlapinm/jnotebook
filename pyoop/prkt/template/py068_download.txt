@@ -1,0 +1,201 @@
+#скачать все документы из сайта "http://ef-pmr.org/law/"
+#предварительно слздать каталог 'efpmr'
+#и скопировать в него unrar.exe из "program files\winrar"
+
+#перейти в подкаталог для скачивания файлов
+import os
+os.chdir('efpmr')
+print os.getcwd()
+
+#сформировать список всех ссылок
+from urllib import urlopen, urlretrieve, unquote
+from BeautifulSoup import BeautifulSoup
+
+url = "http://ef-pmr.org/law/"
+content = urlopen( url )
+page = content.read()
+soup = BeautifulSoup(page)
+body = soup.find('body')
+ref_list = body.findAll('a')
+
+#выбрать все ссылки на документы
+filref_list = []
+for num in range(len(ref_list)):
+	ref = ref_list[num]
+	href = ref['href']
+	if href[-4:] in ['docx','.pdf','.rar','.zip','.doc']:
+		filref_list.append(href)
+
+#убрать возможное дублирование
+print len(filref_list)
+setref_list = set(filref_list)
+filref_list = list(setref_list)
+print len(filref_list)
+
+#функция формирования имени файла из ссылки 
+def form_filename(href):
+	href1 = href.encode('utf-8')
+	href2 = unquote(href1)
+	href3 = href2.decode('utf-8').encode('cp1251')
+	file_name = href3.split('/')[-1]
+	return href1, file_name
+
+#Простое скачивание:
+docref_list = [href for href in filref_list \
+ 	if href[-4:] in ['docx','.doc','.pdf']]
+print len(docref_list)
+	
+for href in docref_list:
+	href1, file_name = form_filename(href)
+	print file_name
+	res = urlretrieve(href1, file_name)
+
+#Работа с RAR архивами			
+rarref_list = [href for href in filref_list if href[-4:] in ['.rar']]
+print len(rarref_list)
+
+for href in rarref_list:
+	href1, file_name = form_filename(href)
+	print file_name
+	res = urlretrieve(href1, file_name)
+	res = os.system('unrar.exe e '+ file_name)
+	os.remove( file_name )
+
+#Работа с ZIP архивами	
+import zipfile
+	
+zipref_list = [href for href in filref_list if href[-4:] in ['.zip']]
+print len(zipref_list)
+	
+for href in zipref_list:
+	href1, file_name = form_filename(href)
+	print file_name
+	res = urlretrieve(href1, file_name)
+	zip_ref = zipfile.ZipFile(file_name, 'r')
+	for dos_name in zip_ref.namelist():
+		full_dosname = zip_ref.extract(dos_name)
+		win_name = dos_name.decode('cp866').encode('cp1251')
+		os.rename(dos_name, win_name)
+	zip_ref.close()
+	os.remove( file_name )
+	
+ 		
+=========================================	
+=========================================	
+заготовки;
+	
+
+for num in range(len(ref_list)):
+	ref = ref_list[num]
+	href = ref['href']
+	if href[-4:] in ['docx','.pdf']:
+		docref_list.append(href)
+
+#Работа с ZIP архивами		
+zipref_list = []
+for num in range(len(ref_list)):
+	ref = ref_list[num]
+	href = ref['href']
+	if href[-4:] in ['.zip']:
+		zipref_list.append(href)
+
+#Работа с RAR архивами			
+rarref_list = []
+for num in range(len(ref_list)):
+	ref = ref_list[num]
+	href = ref['href']
+	if href[-4:] in ['.rar']:
+		rarref_list.append(href)
+
+#Общий случай:		
+for num in range(len(ref_list)):
+	ref = ref_list[num]
+	href = ref['href']
+	if href[-4:] in ['docx','.pdf','.rar','.zip','.doc']:
+		docref_list.append(href)
+
+		
+>>> print len(docref_list)
+210
+>>> docref = docref_list[0]
+>>> print docref
+http://ef-pmr.org/uploads/law/121_zakon_n121-З-III_29-04-2002.rar
+>>> type(docref)
+<type 'unicode'>
+>>> docref1 = docref.encode('utf-8')
+>>> docref2 = unquote(docref1)
+>>> print docref2
+http://ef-pmr.org/uploads/law/121_zakon_n121-Р—-III_29-04-2002.rar
+>>> docref3 = docref2.decode('utf-8')
+>>> file_name = docref3.split('/')[-1]
+>>> print file_name
+121_zakon_n121-З-III_29-04-2002.rar
+
+
+>>> import os
+>>> os.chdir('efpmr')
+>>> print os.getcwd()
+C:\Python27\efpmr
+
+>>> import zipfile
+>>> zip_ref = zipfile.ZipFile('021_zakon_ob_immunoprofilaktike.zip', 'r')
+>>> zip_ref.extractall()
+>>> zip_ref.close()
+
+при распаковке дает безобразное имя файла
+при распаковке winrar дает запрос на повторную распаковку
+сначала все получить убрав дубликаты 
+
+>>> docref_set = set(docref_list)
+>>> docref_list1 = list(docref_set)
+>>> len(dorref_list1)
+105 	 уменьшилось в 2 раза
+
+/**************
+>>> for docref in docref_list:
+	docref1 = docref.encode('utf-8')
+	docref2 = unquote(docref1)
+	docref3 = docref2.decode('utf-8').encode('cp1251')
+	file_name = docref3.split('/')[-1]
+	print file_name
+	res = urlretrieve(docref1, file_name)
+	if file_name[-4:] ==".rar":
+		res = os.system('unrar.exe e '+ file_name)
+		os.remove( file_name )
+*************/
+>>> for docref in docref_list1:
+	docref1 = docref.encode('utf-8')
+	docref2 = unquote(docref1)
+	docref3 = docref2.decode('utf-8').encode('cp1251')
+	file_name = docref3.split('/')[-1]
+	print file_name
+	res = urlretrieve(docref1, file_name)
+
+	
+110_prikaz_ob_utverzhdenii_edinoi_formy_blankov_dokumentov.docx
+...
+значительное количество документов получено в формате ZIP
+по старым записям читаю
+	"https://docs.python.org/2/library/zipfile.html"
+
+
+>>> zip_ref = zipfile.ZipFile('021_zakon_ob_immunoprofilaktike.zip', 'r')
+>>> for dos_name in zip_ref.namelist():
+	full_dosname = zip_ref.extract(dos_name)
+	win_name = dos_name.decode('cp866').encode('cp1251')
+	os.rename(dos_name, win_name)
+
+решает проблему, 
+	если в архиве один или несколько файлов без подкаталогов
+
+для прохода по всем архивным файлам 
+>>> files = os.listdir('.')
+>>> len(files)
+109
+>>> zip_files = [file_name for file_name in files if file_name[-4:] == '.zip']
+>>> len(zip_files)
+54
+>>> rar_files = [file_name for file_name in files if file_name[-4:] == '.rar']
+>>> len(rar_files)
+12
+>>> 
