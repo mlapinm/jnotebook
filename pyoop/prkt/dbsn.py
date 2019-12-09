@@ -36,11 +36,7 @@ dbsn_error =0
 import os
 import struct 
 import sys
-<<<<<<< HEAD
-
-=======
 import shutil
->>>>>>> 3480ccd49997dfef099966167c0bb66c8a5b2bf7
 # ============================================
 def getDBSNerror():
     # == получить код последней ошибки
@@ -191,11 +187,7 @@ def absNum (num,count):
     # == получить положительный номер в пределахх 1 - count ==
     # -- номер или 0
     # -- пример: subs_num=absNum(subs_num, sunst_count)
-<<<<<<< HEAD
-    if nm< 0: num += count +1;
-=======
     if num < 0: num += count +1;
->>>>>>> 3480ccd49997dfef099966167c0bb66c8a5b2bf7
     if num <1 or num > count: return 0
     return num
 
@@ -208,8 +200,6 @@ def getPos(st,lst):
         return 0;
     
     # ===========================================
-<<<<<<< HEAD
-=======
     # ---------------^----------------
 def countFragm(dbh):
     # == получить число записей ==
@@ -288,7 +278,6 @@ def findFirstNum( dbh, fn_cmp, beg_date):
     # ---------------v----------------
     
     
->>>>>>> 3480ccd49997dfef099966167c0bb66c8a5b2bf7
 #203    
 def createDBSN(table_name):
     # == создать таблицу по ее имени ==
@@ -345,9 +334,6 @@ def openDBSN(table_name):
 # ----------------------------
 
 def closeDBSN(dbh):
-<<<<<<< HEAD
-    pass
-=======
     if dbh[0]!=0:
         dbh[0].close()
         dbh[0]=0
@@ -356,7 +342,6 @@ def closeDBSN(dbh):
         dbh[1]=0
     dbh[2]=0
     dbh[3]=0
->>>>>>> 3480ccd49997dfef099966167c0bb66c8a5b2bf7
     
     
 def formDBSN(file_name):
@@ -368,20 +353,12 @@ def formDBSN(file_name):
 
 # -- сформировать файлы таблицы
     table_name = file_name.split('.')[0]
-<<<<<<< HEAD
-    os.rename(file_name, table_name + '.dbs')
-=======
     shutil.copy(file_name, table_name + '.dbs')
->>>>>>> 3480ccd49997dfef099966167c0bb66c8a5b2bf7
     fil_dbs = table_name + '.dbs'
     fhs = open(fil_dbs, "rb")
     fil_dbn = table_name + ".dbn"
     fhn = open(fil_dbn, "wb")
-<<<<<<< HEAD
-
-=======
     fht = open('1test.txt',"w")
->>>>>>> 3480ccd49997dfef099966167c0bb66c8a5b2bf7
     #== сформировать файл dbn
     rec_num = 0
     fragm_offset = 0
@@ -394,19 +371,6 @@ def formDBSN(file_name):
         fragm_len = offset - fragm_offset
         fwriteInt( fhn, fragm_offset)
         fwriteInt( fhn, fragm_len)
-<<<<<<< HEAD
-        fragm_offset = offset
-    fhs.close()
-    fhn.close()
-    return rec_num
-        
-    
-# formDBSN('habr.dbs')  #4042
-# dbh = openDBSN('habr')
-# countFragm(dbh) #no working
-# getFragm(dbh,1)
-# print(dbh)
-=======
         s = f'{fragm_offset} {fragm_len}\n'
         fht.write(s)
         fragm_offset = offset
@@ -424,4 +388,3 @@ st = getFragm(dbh,1)
 print(k, st)
 closeDBSN(dbh)
 print(dbh)
->>>>>>> 3480ccd49997dfef099966167c0bb66c8a5b2bf7
