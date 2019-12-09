@@ -36,7 +36,11 @@ dbsn_error =0
 import os
 import struct 
 import sys
+<<<<<<< HEAD
 
+=======
+import shutil
+>>>>>>> 3480ccd49997dfef099966167c0bb66c8a5b2bf7
 # ============================================
 def getDBSNerror():
     # == получить код последней ошибки
@@ -187,7 +191,11 @@ def absNum (num,count):
     # == получить положительный номер в пределахх 1 - count ==
     # -- номер или 0
     # -- пример: subs_num=absNum(subs_num, sunst_count)
+<<<<<<< HEAD
     if nm< 0: num += count +1;
+=======
+    if num < 0: num += count +1;
+>>>>>>> 3480ccd49997dfef099966167c0bb66c8a5b2bf7
     if num <1 or num > count: return 0
     return num
 
@@ -200,6 +208,87 @@ def getPos(st,lst):
         return 0;
     
     # ===========================================
+<<<<<<< HEAD
+=======
+    # ---------------^----------------
+def countFragm(dbh):
+    # == получить число записей ==
+    # -- в противном случае 0
+    fh=dbh[1]
+    fh.seek(0,0)
+    k=0
+    while True:
+        st = fh.readline()
+        if not st:
+            break
+        k+=1
+    return k
+
+def getFragm(dbh, num):
+    # == получить фрагмент по номеру
+    # -- в противном случае 0
+    num = absNum(num,countFragm(dbh))
+    if num == 0:
+        return 0
+    fh=dbh[1]
+    fh.seek(0,0)
+    st=''
+    k=1
+    while True:
+        st2 = fh.readline()
+        if num == k:
+            st=st2
+            break
+        if not st2:
+            break
+        k+=1
+    return st.decode('utf8')
+
+def formFrels(fragm):
+    # ==  формирует список из строки ==
+    # -- разделитель   -   |
+    l = [i.strip() for i in fragm.split('|')]
+    return l
+
+def getFrel(frels,num):
+    # == возвращает элемент списка
+    # -- если не в диапазоне, вернет последний
+    num = absNum(num,len(frels))
+    return frels[num-1]
+
+
+def setFrel(frels, frel_num, frel):
+    # == задать новое значение элемента в массиве --
+    # -- изменяет массив, возвращает номер элемента или код ошибки
+    # -- пример: res = setFrel(frels, frel_num, frel)
+    if type(frels) != list: return -NOT_ARRAY
+    frel_count = len(frels)
+    if frel_count <=0: return frel_count
+    frel_num = absNum(frel_num, frel_count)
+    if frel_num == 0: return -OUT_OF_RANGE
+    frels[frel_num-1] = frel
+    return frel_num
+# ---------------------------------------------
+def findFirstNum( dbh, fn_cmp, beg_date):
+    # == ищет номер фрагмента одинакового фрагмента
+    # -- параметр функция сравенения fn_cmp и искомое значение
+    count = countFragm(dbh)
+    fragm_num = 0
+    k=1
+    while True:
+        if k>count:
+            return 0
+        fragm = getFragm(dbh,k)
+        rzn = fn_cmp(fragm, beg_date)
+        if rzn == 0:
+            break
+        k+=1
+    return k
+
+    # ---------------v----------------
+    
+    
+>>>>>>> 3480ccd49997dfef099966167c0bb66c8a5b2bf7
 #203    
 def createDBSN(table_name):
     # == создать таблицу по ее имени ==
@@ -256,7 +345,18 @@ def openDBSN(table_name):
 # ----------------------------
 
 def closeDBSN(dbh):
+<<<<<<< HEAD
     pass
+=======
+    if dbh[0]!=0:
+        dbh[0].close()
+        dbh[0]=0
+    if dbh[1]!=0:
+        dbh[1].close()
+        dbh[1]=0
+    dbh[2]=0
+    dbh[3]=0
+>>>>>>> 3480ccd49997dfef099966167c0bb66c8a5b2bf7
     
     
 def formDBSN(file_name):
@@ -268,12 +368,20 @@ def formDBSN(file_name):
 
 # -- сформировать файлы таблицы
     table_name = file_name.split('.')[0]
+<<<<<<< HEAD
     os.rename(file_name, table_name + '.dbs')
+=======
+    shutil.copy(file_name, table_name + '.dbs')
+>>>>>>> 3480ccd49997dfef099966167c0bb66c8a5b2bf7
     fil_dbs = table_name + '.dbs'
     fhs = open(fil_dbs, "rb")
     fil_dbn = table_name + ".dbn"
     fhn = open(fil_dbn, "wb")
+<<<<<<< HEAD
 
+=======
+    fht = open('1test.txt',"w")
+>>>>>>> 3480ccd49997dfef099966167c0bb66c8a5b2bf7
     #== сформировать файл dbn
     rec_num = 0
     fragm_offset = 0
@@ -286,6 +394,7 @@ def formDBSN(file_name):
         fragm_len = offset - fragm_offset
         fwriteInt( fhn, fragm_offset)
         fwriteInt( fhn, fragm_len)
+<<<<<<< HEAD
         fragm_offset = offset
     fhs.close()
     fhn.close()
@@ -297,3 +406,22 @@ def formDBSN(file_name):
 # countFragm(dbh) #no working
 # getFragm(dbh,1)
 # print(dbh)
+=======
+        s = f'{fragm_offset} {fragm_len}\n'
+        fht.write(s)
+        fragm_offset = offset
+    fhs.close()
+    fhn.close()
+    fht.close()
+    return rec_num
+        
+    
+formDBSN('1meteo.txt')  #4042
+dbh = openDBSN('1meteo')
+
+k = countFragm(dbh) 
+st = getFragm(dbh,1)
+print(k, st)
+closeDBSN(dbh)
+print(dbh)
+>>>>>>> 3480ccd49997dfef099966167c0bb66c8a5b2bf7
