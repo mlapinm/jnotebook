@@ -5,22 +5,7 @@
 	<title>Document</title>
 </head>
 <body>
-	<table>
-		<tr>
-			<td>d21pyprk.html</td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>e01empty.html</td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-		</tr>
-			</table></body>
+<?php
+echo "Welcome!123";
+</body>
 </html>

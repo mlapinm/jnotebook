@@ -1,0 +1,5 @@
+#== in01.txt  -  test for 01.py
+05
+26
+medved
+x
