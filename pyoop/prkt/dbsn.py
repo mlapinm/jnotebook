@@ -214,9 +214,17 @@ def countFragm(dbh):
         k+=1
     return k
 
-def getFragm(dbh, num):
+def countChunk(dbh, chunk_size=10):
+    if chunk_size < 1:  return 1
+    count = countFragm(dbh)
+    return (count + chunk_size -1)//chunk_size
+
+
+def getFragm(dbh, num=0):
     # == получить фрагмент по номеру
     # -- в противном случае 0
+    if num == 0:
+        num = dbh[2]
     num = absNum(num,countFragm(dbh))
     if num == 0:
         return 0
@@ -233,6 +241,38 @@ def getFragm(dbh, num):
             break
         k+=1
     return st.decode('utf8')
+
+def getChunk(dbh, block_num=0, block_size=10, reverse=0):
+    count = countFragm(dbh)
+    count_chunk = countChunk(dbh,block_size)
+    block_num = absNum(block_num,count_chunk)
+    el_num=(block_num-1)*block_size+1
+    lst=[]
+    for i in range(block_size):
+        st = getFragm(dbh,el_num+i)
+        if st:
+            lst.append(st)
+    if reverse == -1:
+        lst.reverse()
+    return lst
+
+def addFragm(dbh, fragm):
+    count = countFragm(dbh)
+    fhn = dbh[0]
+    fhs = dbh[1]
+    len_fragm = len(fragm)
+    offset = fhs.seek(0,2)
+    if offset != 0:
+        fhs.write('\r\n'.encode())
+        len_fragm += 2
+    fhs.write(fragm.encode())
+    
+    offset_fhn = fhn.seek(0,2)
+    fwriteInt(fhn, offset)
+    fwriteInt(fhn, len_fragm)
+    dbh[2]=count+1
+    return count+1
+
 
 def formFrels(fragm):
     # ==  формирует список из строки ==
@@ -283,15 +323,15 @@ def createDBSN(table_name):
     # == создать таблицу по ее имени ==
     # -- возвращает 0 = число записей или код ошибки
     # -- пример: res = createDBSN('test')
-    fil_name = table_name.strip()
-    if len(fil_name)<1: return -DBS_NOT_EXIST
-    fhs = open(fil_name+'.dbs', 'wb')
+    file_name = table_name.strip()
+    if len(file_name)<1: return -DBS_NOT_EXIST
+    fhs = open(file_name+'.dbs', 'wb')
     if not fhs: return  -DBS_NOT_EXIST
-    fhs.write("")
+    fhs.write("".encode())
     fhs.close()
     fhn=open(file_name+'.dbn', 'wb')
     if not fhn: return -DBN_NOT_EXIST
-    fhn.write("")
+    fhn.write("".encode())
     fhn.close()
     return 0
     # -------------------------------------------
@@ -380,11 +420,11 @@ def formDBSN(file_name):
     return rec_num
         
     
-formDBSN('1meteo.txt')  #4042
-dbh = openDBSN('1meteo')
+# formDBSN('1meteo.txt')  #4042
+# dbh = openDBSN('1meteo')
 
-k = countFragm(dbh) 
-st = getFragm(dbh,1)
-print(k, st)
-closeDBSN(dbh)
-print(dbh)
+# k = countFragm(dbh) 
+# st = getFragm(dbh,1)
+# print(k, st)
+# closeDBSN(dbh)
+# print(dbh)

@@ -1,0 +1,17 @@
+<details><pre>
+#include &quot;mainwindow.h&quot;
+#include &quot;ui_mainwindow.h&quot;
+MainWindow::MainWindow(QWidget *parent) :
+    QMainWindow(parent),
+    ui(new Ui::MainWindow)
+{
+    ui-&gt;setupUi(this);
+    QString s=tr(&quot;123&quot;);
+    QLocale::system().name();
+    ui-&gt;label-&gt;setText(QLocale::system().name());
+}
+MainWindow::~MainWindow()
+{
+    delete ui;
+}
+</pre></details>

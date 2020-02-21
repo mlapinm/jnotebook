@@ -1,0 +1,140 @@
+#### b276 Урок 266: RegExp 21: Примеры  
+#### b277 Урок 267: RegExp 22: Домашнее задание и ответы на Д/З  
+#### b278 Урок Java 268: Patterns 1: Что такое паттерны  
+#### b279 Урок Java 269: Patterns 2: Factory  
+#### b280 Урок Java 270: Patterns 3: Abstract Factory  
+#### b281 Урок Java 271: Patterns 4: Factory Method  
+#### b282 Урок Java 272: Patterns 5: Singelton  
+#### b283 Урок Java 273: Patterns 6: Builder  
+#### b284 Урок Java 274: Patterns 7: Prototype  
+#### b285 Урок Java 275: Patterns 8: Object Pool  
+#### b286 Урок Java 276: Patterns 9: Adapter  
+#### b287 Урок Java 277: Patterns 10: Bridge  
+#### b288 Урок Java 278: Patterns 11: Filter  
+#### b289 Урок Java 279: Patterns 12: Composite  
+#### b290 Урок Java 280: Pattern 13: Decorator  
+#### b291 Урок Java 281: Patterns 14: Facade  
+#### b292 Урок Java 282: Pat 15: FlyWeight  
+#### b293 Урок Java 283: Patterns 16: Proxy  
+#### b294 Урок Java 284: Patterns 17: Chain Of Responsibility  
+#### b295 Урок Java 285: Patterns 18: Command  
+#### b296 Урок Java 286: Patterns 19: Interpreter  
+#### b297 Урок Java 287: Patterns 20: Iterator  
+#### b298 Урок Java 288: Patterns 21: Mediator  
+#### b299 Урок Java 289: Patterns 22: Momento  
+#### b300 Урок Java 290: Patterns 23: Observable  
+#### b301 Урок Java 291: Patterns 24: State  
+#### b302 Урок Java 292: Patterns 25: Null Object  
+#### b303 Урок Java 293: Patterns 26: Strategy  
+#### b304 Урок Java 294: Patterns 27: Template  
+#### b305 Урок Java 295: Patterns 28: Visitor  
+#### b306 Урок Java 296: Patterns 29: MVC  
+#### b307 Урок Java 297: Patterns 30: Business Delegate  
+#### b308 Урок Java 298: Patterns 31: Composite Entity  
+#### b309 Урок Java 299: Patterns 32: DAO  
+#### b310 Урок Java 300: Patterns 33: Front Controller  
+#### b311 Урок Java 301: Patterns 34: Intercepting Filter  
+#### b312 Урок Java 302: Patternts 35: Service Locator  
+#### b313 Урок Java 303: Patterns 36: Transfer Object  
+#### b314 Урок Java 304: Solid 1: Что такое SOLID  
+#### b315 Урок Java 305: SOLID 2: Single Responsibility  
+#### b316 Урок Java 306: SOLID 3: Open Close principle  
+#### b317 Урок Java 307: SOLID 4: Liskov principle  
+#### b318 Урок Java 308: SOLID 5: Interface Sugregation  
+#### b319 Урок Java 309: SOLID 6: Dependency Inversion  
+#### b320 Урок Java 310: Generics 1: Что такое дженерики  
+#### b321 Урок Java 311: Generic 2: Наследование Generics  
+#### b322 Урок Java 312: Generic 3: Generic методы  
+#### b323 Урок Java 313: Generic 4: Bounds  
+#### b324 Урок Java 314: Generic 5: Whild Card  
+#### b325 Урок Java 315: Generic 6: Обобщеный и не обобщенный код  
+#### b326 Урок Java 316: ArrayList и LinkedList  
+#### b327 Урок Java 317: Stack Queue Dequeue  
+#### b328 Урок Java 318: Binary Search  
+#### b329 Урок Java 319: выбрасывание ошибок методами  
+#### b330 Урок Java 320: Эксепшены и Pipeline оператор  
+#### b331 Урок Java 321: Как AutoClosable работает  
+#### b332 Урок Java 322: Assertions  
+#### b333 Урок Java 323: Immutable классы  
+#### b334 Урок Java 324: ReadWrite Lock  
+#### b335 Урок Java 325: Java 8 p1: Что такое функциональное программирование  
+#### b336 Урок 326: Java 8 p2: Лямбда  
+#### b337 Урок 327: Java 8 p3: функциональные интерфейсы  
+#### b338 Урок 328: Java 8 p4: Streams  
+#### b339 Урок 329: Java 8 p5: default и static методы  
+#### b340 Урок 330: Java 8 p6: Optional  
+#### b341 Урок Java 331: Java 8 p7: Method References  
+#### b342 Урок Java 332: Java 8 p8: Collector  
+#### b343 Урок 333: Java 8 p9: Parallel  
+#### b344 Урок 334: Java 8 p10: LocalDate  
+#### b345 Урок 335: Java 8 p11: Как работают лямбда выражения  
+#### b346 Урок 336: Переопределение Equals и HashCode  
+#### b347 Урок Java 337: Clonnable подробнее  
+#### b348 Урок Java 338: Пул оберток над примитивами.  
+#### b349 Урок Java 339: Коллекции  
+#### b350 Урок Java 340: List  
+#### b351 Урок Java 341: Set  
+#### b352 Урок Java 342: Queue  
+#### b353 Урок Java 343: Maps  
+#### b354 Урок Java 344: Сложность алгоритмов поиска по коллекции  
+#### b355 Урок Java 345: Concurrency package  
+#### b356 Урок Java 346: Volatile и happens before  
+#### b357 Урок Java 347: проблема double check  
+#### b358 Урок Java 348: Типы reference  
+#### b359 Урок Java 349: Модель памяти Java и алогоритмы работы сборщиков муссора  
+#### b360 Урок Java 350: Как обычную строку поместить в пул  
+#### b361 Урок Java 351: Размещение обектов вне хипа  
+#### b362 Урок Java 352: Расспределение нагрузки  
+#### b363 Урок Java 353: Immutable коллекции  
+#### b364 Урок Java 354: Высоконагруженная архитектура  
+#### b365 Урок Java 355: Шардинг и репликация  
+#### b366 Урок Java 356: Создание индексов в базе данных  
+#### b367 Урок Java 357: Почему синхронизация это плохо  
+#### b368 Урок Java 358: GRASP паттерны  
+#### b369 Урок Java 359: Cap теорема  
+#### b370 Урок Java 360: Externalizer  
+#### b371 Урок Java 361: Imutable классы  
+#### b372 Урок Java 362: Как обнаружить DeadLock  
+#### b373 Урок Java 363: ThreadLocal  
+#### b374 Урок Java 364: Как изучить Indellij idea  
+#### b375 Урок Java 365: Best practice  
+#### b376 Урок Java 366: Best practice 2: Static factory  
+#### b377 Урок Java 367: Best practice 3: Singleton  
+#### b378 Урок Java 368: Best practice 4:  Unnecesary objects  
+#### b379 Урок Java 369: Best practice 5: Почему нельзя использовать finalize?  
+#### b380 Урок Java 370: Best practice 6: Переопределение equals  
+#### b381 Урок Java 371: Best practice 7: Переопределение HashCode  
+#### b382 Урок Java 372: Best practice 8: Переопределение clone  
+#### b383 Урок Java 373: Best practice 9: ToString  
+#### b384 Урок Java 374: Best practice 10: Минимизируйте accessability  
+#### b385 Урок Java 375: Best practice 11: Как создавать immutable классы  
+#### b386 Урок Java 376: Best practice 12: Чем композиция лучше наследования?  
+#### b387 Урок Java 377: Best practice 13: Дизайн класса для наследования  
+#### b388 Урок Java 378: Best practice 14: Чем интерфейсы лучше абстрактных классов?  
+#### b389 Урок Java 379: Best practice 15: Не используйте row типы  
+#### b390 Урок Java 380: Best practice 16: SuppressWarnings  
+#### b391 Урок Java 381: Best practice 17: Чем List лучше массивов?  
+#### b392 Урок Java 382: Best practice 18: Wild cards  
+#### b393 Урок Java 383: Best practice 19: Чем Enum лучше констант  
+#### b394 Урок Java 384: Best practice 20: Почему нужно использовать @Override  
+#### b395 Урок Java 385: Best practice 21: Immutable objects  
+#### b396 Урок Java 386: Best practice 22: Валидация параметров  
+#### b397 Урок Java 387: Best practice 23: Создание сигнатуры метод  
+#### b398 Урок Java 388: Best practice 24: Overloading  
+#### b399 Урок Java 389: Best practice 25: Возвращение коллекций методам  
+#### b400 Урок Java 390: Best practice 26: Минимизация скоупа и циклы  
+#### b401 Урок Java 391: Best practice 27: Почему нельзя использовать float и double для точных вычислений?  
+#### b402 Урок Java 392: Best practice 28: Почему нужно использовать примитивы вместо оберток?  
+#### b403 Урок Java 393: Best practice 29: Почему нужно обращаться к объектам через интерфейс?  
+#### b404 Урок Java 394: Best practice 30: Не оптимизируйте  
+#### b405 Урок Java 395: Best practice 31: Какой вид исключений использовать?  
+#### b406 Урок Java 396: Best practice 32: Используйте стандартные исключения  
+#### b407 Урок Java 397: Best practice 33: Атомарность исключений  
+#### b408 Урок Java 398: Best practice 34: Работа с исключениями  
+#### b409 Урок Java 399: Best practice 35: Синхронизируйте доступ к мутабельной информации  
+#### b410 Урок Java 400: Best practice 36: Вызов "Alien" методов из синхронизированного контекста  
+#### b411 Урок Java 401: Best practice 37: Использование wait и notify  
+#### b412 Урок Java 402: Best practice 38: Документируйте потокобезопасность Ваших методов  
+#### b413 Урок Java 403: Best practice 39: Работа с многопоточностью  
+#### b414 Урок Java 404: Best practice 40: Сериализация  
+#### b415 Урок Java 405: Конец!!!  

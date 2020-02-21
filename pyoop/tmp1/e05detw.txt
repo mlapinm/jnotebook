@@ -1,0 +1,33 @@
+<details><pre>
+package java8;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+public class LambdasLesson {
+    public static void main(String[] args) {
+        Runnable runnable = new Runnable() {
+            @Override
+            public void run() {
+                System.out.println(&quot;hello&quot;);
+            }
+        };
+        Runnable runnable2 = () -&gt; System.out.println(&quot;hello&quot;);
+        ActionListener actionListener = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.println(&quot;hello&quot;);
+            }
+        };
+        ActionListener actionListener2 = (x) -&gt; System.out.println(&quot;dd&quot;);
+        String s = &quot;hello&quot;;
+        ActionListener actionListener1 = (ActionEvent event) -&gt; {
+            System.out.println(s);
+        };
+        A a = () -&gt; System.out.println(&quot;a two hello&quot;);
+        a.two();
+    }
+}
+interface A {
+//    void one(int i);
+    void two();
+}
+</pre></details>

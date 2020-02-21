@@ -1,0 +1,21 @@
+#include <QtCore/QCoreApplication>
+#include <QDebug>
+#include <QRegExp>
+#include <QStringList>
+
+int main(int argc, char *argv[])
+{
+	QCoreApplication a(argc, argv);
+
+	QString str0,str1,str2;
+	str0 = "20 км";
+
+	QRegExp rx("([0-9]+)");
+	int pos = rx.indexIn(str0);
+	qDebug()<<str0;
+	str1 = rx.cap(1);
+
+	qDebug()<<str1 << str1.toInt();
+
+	return a.exec();
+}

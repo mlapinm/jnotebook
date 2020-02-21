@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		td{border: 1px dotted #F50;
+		vertical-align: top; }
+	</style>
+</head>
+<body>
+<table id="context">
+<tr>
+	<td>Действия с таблицей</td>
+	<td>Ввод-Вывод</td>
+	<td>Элементы  фрагмента</td>
+	<td>Ссылочные  файлы</td>
+	<td>Разные функции</td>
+</tr>
+	<tr>
+		<td>
+		<p><a href="#createDBSN">=createDBSN</a></p>
+		<p><a href="#">formDBSN</a></p>
+		<p><a href="#">existDBSN</a></p>
+		<p><a href="#openDBSN">=openDBSN</a></p>
+		<p><a href="#closeDBSN">=closeDBSN</a></p>
+		<p><a href="#countFragm">=countFragm</a></p>
+		<p><a href="#countChunk">=countChunk</a></p>
+		<p><a href="#">clearDBSN</a></p>
+		<p><a href="#">eraseDBSN</a></p>
+		<p><a href="#">renameDBSN</a></p>
+		<p><a href="#">copyDBSN</a></p>
+		<p><a href="#">packDBSN</a></p>
+		</td>
+		<td>
+		<p><a href="#addFragm">=addFragm</a></p>
+		<p><a href="#getFragm">=getFragm</a></p>
+		<p><a href="#">setFragm</a></p>
+		<p><a href="#">delFragm</a></p>
+		<p><a href="#">undelFragm</a></p>
+		<p><a href="#">cutFragm</a></p>
+		<p><a href="#">getNumBlock</a></p>
+		<p><a href="#getChunk">=getChunk</a></p>
+		</td>
+		<td>
+		<p><a href="#">formFrels</a></p>
+		<p><a href="#">getFrel</a></p>
+		<p><a href="#">setFrel</a></p>
+		<p><a href="#">clearFrel</a></p>
+		<p><a href="#">cutFrel</a></p>
+		<p><a href="#">addFrel</a></p>
+		<p><a href="#">insFrel</a></p>
+		<p><a href="#">setFrelContent</a></p>
+		<p><a href="#">setFrelType</a></p>
+		<p><a href="#">sumFrels</a></p>
+		<p><a href=""></a></p>
+		<p><a href=""></a></p>
+		<p><a href=""></a></p>
+		<p><a href=""></a></p>
+		<p><a href=""></a></p>
+		</td>
+		<td>
+		<p><a href="#">createDBR</a></p>
+		<p><a href="#">existDBR</a></p>
+		<p><a href="#">openDBR</a></p>
+		<p><a href="#">closeDBR</a></p>
+		<p><a href="#">clearDBR</a></p>
+		<p><a href="#">sortDBR</a></p>
+		<p><a href="#">countRef</a></p>
+		<p><a href="#">getRef</a></p>
+		<p><a href="#">addRef</a></p>
+		<p><a href="#">setRef</a></p>
+		<p><a href="#">insRef</a></p>
+		<p><a href="#">cutRef</a></p>
+		<p><a href="#">findRef</a></p>
+		<p><a href="#">swapRef</a></p>
+		</td>
+		<td>
+		<p><a href="">cod</a></p>
+		<p><a href="">getFileCod</a></p>
+		<p><a href="">getInputCod</a></p>
+		<p><a href="">absNum</a></p>
+		<p><a href="">getDBSNerror</a></p>
+		<p><a href="">getDBSNmess</a></p>
+		<p><a href=""></a></p>
+		<p><a href=""></a></p>
+		</td>
+	</tr>
+</table>
+<table id="createDBSN">
+	<tr>
+		<td colspan="2">createDBSN( file name)</td>
+	</tr>
+	<tr>
+		<td>действие:</td>
+		<td>создать пустую таблицу</td>
+	</tr>
+	<tr>
+		<td>параметры:</td>
+		<td>file_name - имя файла без расширения</td>
+	</tr>
+	<tr>
+		<td>пример:</td>
+		<td>res = createDBSN( "test")</td>
+	</tr>
+	<tr>
+		<td>возвращает:</td>
+		<td>число записей или код ошибки</td>
+	</tr>
+	<tr>
+		<td>описание:</td>
+		<td>создает 2 пустых файла бинарный и текстовый: test.dbn. test.dbs</td>
+	</tr>
+</table>
+<p><a href="#context">context</a></p>	
+<table id="openDBSN">
+	<tr>
+		<td colspan="2">openDBSN( file name)</td>
+	</tr>
+	<tr>
+		<td>действие:</td>
+		<td>открыть таблицу</td>
+	</tr>
+	<tr>
+		<td>параметры:</td>
+		<td>file_name - имя таблицы без расширения</td>
+	</tr>
+	<tr>
+		<td>пример:</td>
+		<td>dbh = openDBSN('test')</td>
+	</tr>
+	<tr>
+		<td>возвращает:</td>
+		<td>возвращает обработчик таблицы  или 0 при ошибке. В этом случае устанавливается отриц dbsn_error = -DBS_NOT_EXIST. который можно получить</td>
+	</tr>
+</table>	
+<p><a href="#context">context</a></p>	
+<table id="closeDBSN">
+	<tr>
+		<td colspan="2">closeDBSN(dbh</td>
+	</tr>
+	<tr>
+		<td>действие:</td>
+		<td>
+		    <p>Закрывает открытые *.dbs и *.dbh</p>
+		    <p>Поля обработчика dbh выставляет в 0(4 шт.)</p>
+		</td>
+	</tr>
+	<tr>
+		<td>параметры:</td>
+		<td>dbh - обработчик таблицы</td>
+	</tr>
+	<tr>
+		<td>пример:</td>
+		<td>closeDBSN(dbh)</td>
+	</tr>
+	<tr>
+		<td>возвращает:</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>описание:</td>
+		<td></td>
+	</tr>
+</table>	
+<p><a href="#context">context</a></p>	
+<table id="countFragm">
+	<tr>
+		<td colspan="2">countFragm(dbh)</td>
+	</tr>
+	<tr>
+		<td>действие:</td>
+		<td>получить число записей в таблице</td>
+	</tr>
+	<tr>
+		<td>параметры:</td>
+		<td>	
+dbh - обработчик таблицы</td>
+	</tr>
+	<tr>
+		<td>пример:</td>
+		<td>
+        <p>i=countFragm(dbh)</p>
+		<p>print(i) #4043</p>		
+		</td>
+	</tr>
+	<tr>
+		<td>возвращает:</td>
+		<td>число фрагментов(строк)</td>
+	</tr>
+	<tr>
+		<td>описание:</td>
+		<td></td>
+	</tr>
+</table>	
+<p><a href="#context">context</a></p>	
+<table id="countChunk">
+	<tr>
+		<td colspan="2">countChunk(dbh,6)</td>
+	</tr>
+	<tr>
+		<td>действие:</td>
+		<td>получить число страниц в таблице</td>
+	</tr>
+	<tr>
+		<td>параметры:</td>
+		<td>	
+        <p>dbh - обработчик таблицы,</p>
+        <p>size_chunk - размер страницы, по умолчанию 10</p>        
+        </td>
+	</tr>
+	<tr>
+		<td>пример:</td>
+		<td>
+        <p>i=countChunk(dbh,6)</p>
+		<p>print(i) #4</p>		
+		</td>
+	</tr>
+	<tr>
+		<td>возвращает:</td>
+		<td>число страниц</td>
+	</tr>
+	<tr>
+		<td>описание:</td>
+		<td></td>
+	</tr>
+</table>	
+<p><a href="#context">context</a></p>	
+<table id="addFragm">
+	<tr>
+		<td colspan="2">addFragm( dbh, fragm)</td>
+	</tr>
+	<tr>
+		<td>действие:</td>
+		<td>добавить фоагмент в таблицу</td>
+	</tr>
+	<tr>
+		<td>параметры:</td>
+		<td>
+		<p>dbh - обработчик таблицы</p>  
+		<p>fragm - добавляемый фрагмент(строка)</p>
+		</td>
+	</tr>
+	<tr>
+		<td>пример:</td>
+		<td>res = addFragm( dbh, fragm)</td>
+	</tr>
+	<tr>
+		<td>возвращает:</td>
+		<td>положительный номер фрагмента  или отрицательный код ошибки -BAD_TABLE_HANDLE</td>
+	</tr>
+	<tr>
+		<td>описание:</td>
+		<td></td>
+	</tr>
+</table>
+<p><a href="#context">context</a></p>	
+<table id="getFragm">
+	<tr>
+		<td colspan="2">getFragm( dbh, fragm num = 0, mode = 1)</td>
+	</tr>
+	<tr>
+		<td>действие:</td>
+		<td>получить фрагмент с заданным номером</td>
+	</tr>
+	<tr>
+		<td>параметры:</td>
+		<td>
+			<p>dbh - обработчик таблицы fragmnum - номер фрагмента.</p>
+			<p>mode - режим отбора( по умочанию - активный фрагмент)</p>
+		</td>
+	</tr>
+	<tr>
+		<td>пример:</td>
+		<td>fragm = getFragm( dbh, fragm_num)</td>
+	</tr>
+	<tr>
+		<td>возвращает</td>
+		<td><p>фрагмент</p>  
+		<p>или "" в зависимости от режима и состояния фрагмента:</p>  
+		<p>если фрагмент пуст, устанавливает код ошибки: -REC_EMPTY.</p>
+		<p>при mode = 1 возвращает текст фрагмента, если он активен или если он удален.  при mode = -1 возвращает текст фрагмента, если он удален или если он активен.</p>  <p>при mode = 0 возвращает текст фрагмента в любом случае.</p>  
+		<p>при ошибке возвращает "", 
+		</p>в этом случае устанавливается код ошибки(-BAD_TABLE_HANDLE), который можно проверить функцией getDBSNerror()
+		</td>
+	</tr>
+	<tr>
+		<td>описание:</td>
+		<td></td>
+	</tr>
+</table>	
+<p><a href="#context">context</a></p>	
+<table id="getChunk">
+	<tr>
+		<td colspan="2">
+		    getChunk(dbh, block_num, block_size=10, reverse=0, fhr=0)
+		</td>
+	</tr>
+	<tr>
+		<td>действие:</td>
+		<td>получить блок фрагментов</td>
+	</tr>
+	<tr>
+		<td>параметры:</td>
+		<td>
+		    <p>dbh - обработчик таблицы</p>
+		    <p>block_num - номер блока</p>
+		    <p>block_size(10) - размер блока</p>
+		    <p>reverse(0) -1 обратный порядок вывода строк в блоке</p>
+		</td>
+	</tr>
+	<tr>
+		<td>пример:</td>
+		<td>
+            <p>chunk = getChunk(dbh,-1,6)</p>
+		    <p>print(chunk)</p>		
+        </td>
+	</tr>
+	<tr>
+		<td>возвращает:</td>
+		<td>список строк</td>
+	</tr>
+	<tr>
+		<td>описание:</td>
+		<td></td>
+	</tr>
+</table>	
+<p><a href="#context">context</a></p>	
+<table>
+	<tr>
+		<td colspan="2"></td>
+	</tr>
+	<tr>
+		<td>действие:</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>параметры:</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>пример:</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>возвращает:</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>описание:</td>
+		<td></td>
+	</tr>
+</table>	
+<p><a href="#context">context</a></p>	
+<table>
+	<tr>
+		<td colspan="2"></td>
+	</tr>
+	<tr>
+		<td>действие:</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>параметры:</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>пример:</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>возвращает:</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>описание:</td>
+		<td></td>
+	</tr>
+</table>	
+<p><a href="#context">context</a></p>	
+<table>
+	<tr>
+		<td colspan="2"></td>
+	</tr>
+	<tr>
+		<td>действие:</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>параметры:</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>пример:</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>возвращает:</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>описание:</td>
+		<td></td>
+	</tr>
+</table>	
+<p><a href="#context">context</a></p>	
+<table>
+	<tr>
+		<td colspan="2"></td>
+	</tr>
+	<tr>
+		<td>действие:</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>параметры:</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>пример:</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>возвращает:</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>описание:</td>
+		<td></td>
+	</tr>
+</table>	
+<p><a href="#context">context</a></p>	
+<table>
+	<tr>
+		<td colspan="2"></td>
+	</tr>
+	<tr>
+		<td>действие:</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>параметры:</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>пример:</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>возвращает:</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>описание:</td>
+		<td></td>
+	</tr>
+</table>	
+<p><a href="#context">context</a></p>	
+<table>
+	<tr>
+		<td colspan="2"></td>
+	</tr>
+	<tr>
+		<td>действие:</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>параметры:</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>пример:</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>возвращает:</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>описание:</td>
+		<td></td>
+	</tr>
+</table>	
+<p><a href="#context">context</a></p>	
+<table>
+	<tr>
+		<td colspan="2"></td>
+	</tr>
+	<tr>
+		<td>действие:</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>параметры:</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>пример:</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>возвращает:</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>описание:</td>
+		<td></td>
+	</tr>
+</table>	
+<p><a href="#context">context</a></p>	
+</body>
+</html>
