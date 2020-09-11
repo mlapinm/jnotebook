@@ -1,0 +1,607 @@
+1
+00:00:00,000 --> 00:00:07,420
+[BLANK_AUDIO]
+
+2
+00:00:07,420 --> 00:00:09,795
+Welcome back, everyone.
+
+3
+00:00:09,795 --> 00:00:14,148
+Up to this point, we've been dealing
+pretty much with just internal addresses,
+
+4
+00:00:14,148 --> 00:00:15,295
+private addresses.
+
+5
+00:00:15,295 --> 00:00:19,961
+Now, it comes time for us to travel onto
+the world of the internet.
+
+6
+00:00:19,961 --> 00:00:20,711
+All right?
+
+7
+00:00:20,711 --> 00:00:23,045
+Or if you're gonna pretend to.
+
+8
+00:00:23,045 --> 00:00:28,085
+And the way we do that, because as we know
+already that
+
+9
+00:00:28,085 --> 00:00:33,921
+private IP addresses are not routable on a
+public interface.
+
+10
+00:00:33,921 --> 00:00:36,253
+Sounds like a test question to me.
+
+11
+00:00:36,253 --> 00:00:41,795
+Private IP addresses are not routable on
+public interface.
+
+12
+00:00:41,795 --> 00:00:47,128
+So we must something called Network
+Address Translation or NAT.
+
+13
+00:00:47,128 --> 00:00:55,170
+Really NAT just like VSLM is a mechanism
+to slow down the death of IPv4.
+
+14
+00:00:55,170 --> 00:00:57,753
+But of course, IPv4 already died.
+
+15
+00:00:57,753 --> 00:01:00,754
+That's why IPv6 is already taking over.
+
+16
+00:01:00,754 --> 00:01:04,211
+It's just been a very slow transition.
+
+17
+00:01:04,211 --> 00:01:07,055
+And when IPv6 does come around, NAT is
+going to,
+
+18
+00:01:07,055 --> 00:01:11,003
+when it's fully implemented in your
+network, NAT will disappear.
+
+19
+00:01:11,003 --> 00:01:12,504
+There will be no need for NAT.
+
+20
+00:01:12,504 --> 00:01:15,128
+Is your transition mechanism called NAT
+PT?
+
+21
+00:01:15,128 --> 00:01:15,836
+Yes.
+
+22
+00:01:15,836 --> 00:01:17,129
+Is it recommended to be used?
+
+23
+00:01:17,129 --> 00:01:17,837
+No.
+
+24
+00:01:17,837 --> 00:01:19,462
+Are you gonna be asked questions about it?
+
+25
+00:01:19,462 --> 00:01:20,337
+Not at all.
+
+26
+00:01:20,337 --> 00:01:23,296
+They may ask you what are the three
+transition mechanisms.
+
+27
+00:01:23,296 --> 00:01:25,129
+That's one of them, NAT PT.
+
+28
+00:01:25,129 --> 00:01:28,253
+All right.
+But other than that, that's about it.
+
+29
+00:01:28,253 --> 00:01:33,961
+But you will get print screens on NAT
+itself.
+
+30
+00:01:33,961 --> 00:01:36,253
+So there's three different types of NAT.
+
+31
+00:01:36,253 --> 00:01:40,628
+The first one, as you can see up here is
+static nat.
+
+32
+00:01:40,628 --> 00:01:45,711
+And static nat means a one to one mapping.
+
+33
+00:01:45,711 --> 00:01:52,934
+That means if you have 1000 nodes that
+have to go out onto the public internet,
+
+34
+00:01:52,934 --> 00:01:56,920
+you need to purchase 1000 IP addresses.
+
+35
+00:01:56,920 --> 00:02:02,243
+And then statically, send somebody down,
+pay them,
+
+36
+00:02:02,243 --> 00:02:06,986
+you know, 52 bucks an hour to go ahead and
+say,
+
+37
+00:02:06,986 --> 00:02:11,628
+IP nat inside source static private,
+public.
+
+38
+00:02:11,628 --> 00:02:16,711
+IP nat inside source static private,
+public.
+
+39
+00:02:16,711 --> 00:02:18,394
+Okay?
+That is completely,
+
+40
+00:02:18,394 --> 00:02:24,128
+[SOUND] I will go insane doing something
+like that, even for 52, 52 bucks an hour.
+
+41
+00:02:24,128 --> 00:02:26,045
+I wouldn't I wouldn't want to do that.
+
+42
+00:02:26,045 --> 00:02:29,336
+That is not feasable for a company to do
+that.
+
+43
+00:02:29,336 --> 00:02:33,336
+You're, it's a 1000 IPs at five bucks
+that's $5,000.
+
+44
+00:02:33,336 --> 00:02:36,045
+Now, I can tell you this much.
+
+45
+00:02:36,045 --> 00:02:40,253
+One of my students, many years ago, he
+actually told, hey, Laz.
+
+46
+00:02:40,253 --> 00:02:45,665
+Where we work, which was a hospital, we
+use static nat for our printers,
+
+47
+00:02:45,665 --> 00:02:49,961
+because we use a third party to print our
+medical records.
+
+48
+00:02:49,961 --> 00:02:54,336
+So they have to be statically assigned.
+
+49
+00:02:54,336 --> 00:02:56,295
+They have a lot of printers.
+
+50
+00:02:56,295 --> 00:02:59,545
+I'm gonna say, thousands, but a couple
+hundred.
+
+51
+00:02:59,545 --> 00:03:01,211
+All right.
+So, it's like okay.
+
+52
+00:03:01,211 --> 00:03:03,421
+I guess, maybe because of the HIPAA.
+
+53
+00:03:03,421 --> 00:03:05,046
+They have to do it that way.
+
+54
+00:03:05,046 --> 00:03:10,119
+But wow, that's the, that's the only
+person in the,
+
+55
+00:03:10,119 --> 00:03:15,211
+now, more than 14 years [LAUGH] that I've
+been doing this.
+
+56
+00:03:15,211 --> 00:03:18,505
+You know, that they've told me just that.
+
+57
+00:03:18,505 --> 00:03:21,349
+That they use static nat, because of that.
+
+58
+00:03:21,349 --> 00:03:22,045
+So, I guess it's a HIPAA thing.
+
+59
+00:03:22,045 --> 00:03:23,086
+But again, it's not feasable.
+
+60
+00:03:23,086 --> 00:03:26,977
+It's not feasable for the company to
+purchase all those IP addresses and
+
+61
+00:03:26,977 --> 00:03:31,211
+it's not feasable to have somebody sitting
+there, typing all those things.
+
+62
+00:03:31,211 --> 00:03:32,961
+You know, one by one by one by one.
+
+63
+00:03:32,961 --> 00:03:37,628
+Obviously, you can create a script for
+this, but still not feasable.
+
+64
+00:03:37,628 --> 00:03:38,753
+Not feasible.
+
+65
+00:03:38,753 --> 00:03:41,711
+The next one is dynamic nat.
+
+66
+00:03:41,711 --> 00:03:45,280
+Now dynamic nat, at least it eases the
+burden,
+
+67
+00:03:45,280 --> 00:03:49,129
+because you create a pool of a thousand
+addresses.
+
+68
+00:03:49,129 --> 00:03:52,962
+No longer are you doing one by one by one
+manually.
+
+69
+00:03:52,962 --> 00:03:55,733
+It's still a one to one mapping, because
+you still, if you have thousand people
+
+70
+00:03:55,733 --> 00:03:57,754
+need to get out, you still need to
+purchase thousand IPs.
+
+71
+00:03:57,754 --> 00:04:01,502
+So you're still wasting 5 Gs, that's a lot
+of money.
+
+72
+00:04:01,502 --> 00:04:02,586
+All right.
+
+73
+00:04:02,586 --> 00:04:04,935
+Just all so people can go out to the
+internet.
+
+74
+00:04:04,935 --> 00:04:06,713
+If you have a thousand people in your
+company.
+
+75
+00:04:06,713 --> 00:04:09,237
+Obviously, there must be an important
+reason why they are going
+
+76
+00:04:09,237 --> 00:04:10,087
+out to the internet.
+
+77
+00:04:10,087 --> 00:04:12,420
+But still, that's $5,000.
+
+78
+00:04:12,420 --> 00:04:17,086
+Now still not feasable, but at least you
+create a pool.
+
+79
+00:04:17,086 --> 00:04:18,711
+Cut your workload in half, right?
+
+80
+00:04:18,711 --> 00:04:20,336
+A lot easier to do.
+
+81
+00:04:20,336 --> 00:04:23,461
+The last one is nat overload.
+
+82
+00:04:23,461 --> 00:04:25,628
+That's the most popular one.
+
+83
+00:04:25,628 --> 00:04:26,795
+Nat overload.
+
+84
+00:04:26,795 --> 00:04:30,742
+That's the one that everybody uses when
+you purchase your Linksys routers or
+
+85
+00:04:30,742 --> 00:04:33,420
+D-link routers or whatever manufacturer
+you use.
+
+86
+00:04:33,420 --> 00:04:34,336
+Okay?
+
+87
+00:04:34,336 --> 00:04:37,656
+Everybody uses nat overload or as, or
+
+88
+00:04:37,656 --> 00:04:42,336
+as it is also called port address
+translation, PAT.
+
+89
+00:04:42,336 --> 00:04:47,555
+Because what it does, you have one public
+IP address
+
+90
+00:04:47,555 --> 00:04:53,378
+that can hold up to 65,000 plus private
+addresses.
+
+91
+00:04:53,378 --> 00:04:55,336
+So just with one public address.
+
+92
+00:04:55,336 --> 00:04:58,045
+That's pretty feasible to me, right?
+
+93
+00:04:58,045 --> 00:05:02,336
+If I have 65,000 people in my company, I
+would be doing very well.
+
+94
+00:05:02,336 --> 00:05:03,337
+Okay?
+
+95
+00:05:03,337 --> 00:05:08,086
+And so this is the most feasable one.
+
+96
+00:05:08,086 --> 00:05:14,211
+What you are gonna get tested on, they may
+ask, may, rare.
+
+97
+00:05:14,211 --> 00:05:17,883
+They'll ask you the three different types
+of NAT, just know that it's static,
+
+98
+00:05:17,883 --> 00:05:19,503
+dynamic and and nat overload.
+
+99
+00:05:19,503 --> 00:05:23,337
+But again, all these three things, all
+that they do is just that.
+
+100
+00:05:23,337 --> 00:05:26,295
+Is just translate from private to public.
+
+101
+00:05:26,295 --> 00:05:30,753
+And again, doing it statically, not very
+feasable.
+
+102
+00:05:30,753 --> 00:05:34,107
+Doing it dynamically, okay.
+
+103
+00:05:34,107 --> 00:05:36,955
+But again, you're creating a pool,
+
+104
+00:05:36,955 --> 00:05:40,878
+you're creating a pool of a thousand IP
+addresses.
+
+105
+00:05:40,878 --> 00:05:46,041
+It's matching up with that particular, as
+a computer goes through there,
+
+106
+00:05:46,041 --> 00:05:50,086
+it will take out the private, put in the
+public, so forth.
+
+107
+00:05:50,086 --> 00:05:52,586
+And then you have nat overload, a ll
+right?
+
+108
+00:05:52,586 --> 00:05:55,170
+Which it changes the port.
+
+109
+00:05:55,170 --> 00:05:59,336
+It changes the source port number for it
+to go across.
+
+110
+00:05:59,336 --> 00:06:02,878
+So definitely, still today, we still need
+NAT.
+
+111
+00:06:02,878 --> 00:06:06,654
+We, we kinda hide behind NAT like a
+firewall, actually.
+
+112
+00:06:06,654 --> 00:06:11,087
+But we still need NAT, because we do have
+private IP addresses internally.
+
+113
+00:06:11,087 --> 00:06:15,632
+And for us to get outside, we need some
+method to get
+
+114
+00:06:15,632 --> 00:06:19,879
+a public IP address and this where NAT
+comes in.
+
+115
+00:06:19,879 --> 00:06:24,879
+All your devices, all your devices that
+you purchase any, you know,
+
+116
+00:06:24,879 --> 00:06:29,965
+any your provider Comca, you know,
+whatever provider you use, where
+
+117
+00:06:29,965 --> 00:06:35,503
+in your location, your gonna go ahead on
+their devices and do the same thing.
+
+118
+00:06:35,503 --> 00:06:40,512
+You don't need anymore really to purchase
+these wireless routers,
+
+119
+00:06:40,512 --> 00:06:45,360
+because your providers have wireless
+routers that do give you a private
+
+120
+00:06:45,360 --> 00:06:47,879
+IP address with public access.
+
+121
+00:06:47,879 --> 00:06:50,461
+They do their internal NAT themselves.
+
+122
+00:06:50,461 --> 00:06:53,598
+So still today is very prevalent.
+
+123
+00:06:53,598 --> 00:06:56,086
+But again, the most prevalent of all, the
+most popular of all.
+
+124
+00:06:56,086 --> 00:06:59,003
+It is nat overload, nat overload.
+
+125
+00:06:59,003 --> 00:07:02,552
+And we will be discussing exactly how NAT
+works and
+
+126
+00:07:02,552 --> 00:07:07,211
+the configurations for dynamic and nat
+over, and nat overload.
+
+127
+00:07:07,211 --> 00:07:08,626
+And then we'll get into the pitfalls and
+
+128
+00:07:08,626 --> 00:07:10,337
+things like that when you get to
+certification.
+
+129
+00:07:10,337 --> 00:07:13,587
+What to look for, just to make sure you
+know, you know,
+
+130
+00:07:13,587 --> 00:07:17,128
+what to point out to make sure you don't
+get caught in a trap.
+
+131
+00:07:17,128 --> 00:07:17,878
+All right?
+
+132
+00:07:17,878 --> 00:07:22,628
+So, I will see you in the next lesson and
+we'll explain exactly how NAT works.
+
+133
+00:07:22,628 --> 00:07:23,128
+[BLANK_AUDIO]
+

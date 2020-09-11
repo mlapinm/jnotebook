@@ -1,0 +1,24 @@
+sda
+adaad
+
+dada
+26
+00:01:42,670 --> 00:01:46
+So definitely Cisco certifications are the
+way to go.
+27
+00:01:46,590 --> 00:01:52
+So I welcome you into this complex world
+which I'm gonna turn easy for you.
+3
+00:00:07,490 --> 00:00:12
+There's your first lecture, your first
+step into the Cisco world,
+4
+00:00:12,960 --> 00:00:17
+taking the CCNA 200-120 certification
+exam.
+5
+00:00:17,620 --> 00:00:22
+Which is your CCNA routing and switching
+exam definitely,

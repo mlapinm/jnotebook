@@ -1,200 +1,260 @@
 
+f0200man.md
+f0202man.md  
 
- 0 0 0 0 0 0 0 0 0 0
- 1 1 1 1 1 1 1 1 1 1
- 1 0 1 0 1 0 1 0 1 0
- 1 0 0 0 1 1 1 0 0 0
- 1 0 0 1 1 1 1 1 0 0
- 1 0 0 1 0 1 1 1 0 1
- 1 0 0 1 0 1 1 1 0 0
+f0422friend.md  
+
+f0420friend.md  
+f0418friend.md  
+f0416friend.md  
+f0414friend.md  
+
+f0400friend.md  
+
+
+f0412friend.md  
+f0410friend.md  
+f0408friend.md  
+f0406friend.md  
+
+
+
+m0507dad.md  
+
+m0506dad.md  
+m0505dad.md  
+m0504dad.md  
+
+
+f0604seinfeld.md 
  
-макрофлекс
-6м удлинитель
+f0602seinfeld.md  
 
+m0500family.md  
 
+m0555family.md  
 
-У берега речушки ква ква ква
-Был маленький домишка ква ква ква ква ква
-А в нем живет лягушка ква ква ква
-Зелененькое пальтишко ква ква ква ква ква
-Песенку поет поет не устает
-А в песенке слова ква ква ква ква ква
+m0554family.md
+m0503dad.md
 
+m0502dad.md
 
-Лягушка попрыгушка прыг прыг прыг
-Прыгать не боится прыг прыг прыг прыг прыг
-Лгушка попрыгушка прыг прыг прыг прыг
-Водицы не боится прыг прыг прыг прыг прыг
-Песенку поет поет не устает
-А в песенке слова ква ква ква ква ква
 
-А с ней дружил комарик пиг пиг пиг
-Он ей включал фонарик пиг пиг пиг пиг пиг 
-Он охранял избушку  пиг пиг пиг
-И обожал лягушку  пиг пиг пиг пиг пиг
-Песенку поет поет не устает
-А в песенке слова ква ква ква ква ква
 
 
+a024b37class.md  
 
- 
+a024b36class.md  
 
-Примавера
-Albinoni's Adagio
+a024b35class.md  
 
+a024b34class.md  
 
+a024b33class.md  
 
-Максим
-        10
-    9        11
-8                  12 
-arrPush(0)=4
-  arrPush(1)=11
-    arrPush(2)=30
-res.push(2)=30
-res.push(1)=11
-res.push(0)=4
+a024b32class.md  
 
+a024b31class.md  
 
-11, 4  
+a024b30class.md  
 
+a024b29class.md  
 
+a024b28class.md  
 
-12345123451234512345
-34512345123451234512
-12345123451234512345
-12345123451234512345
-12345123451234512345
+a024b27class.md  
 
+a024b26class.md  
 
+a024b25class.md  
 
+a024b24class.md  
 
-1212
+a024b23class.md  
 
-2121
+a024b21class.md  
 
 
-1234123412341234
+a024b20class.md  
 
+a024b19class.md  
 
-4123412341234123
+a024b18class.md  
 
+a024b17class.md  
 
+a024b16class.md  
 
+a024b15class.md  
 
+a024b14class.md  
 
-2341234123412341
+a024b13class.md  
+a024b12class.md  
+a024b11class.md  
+a024b22class.md
+a024b10class.md
 
+lev01am21eng
+lev01am02eng
 
+htmla2present
 
-3412341234123412
+Shaw English Online
 
+UPL universal pictire language
 
+A02Nh/htmla2present/readme.md
+Vocabulary
 
 
-1234123412341234
-1234123412341234
+html6ccna
+[Cisco CCNA (200-120)_ The Complete Course Subs](#Cisco-CCNA-(200-120)_-The-Complete-Course-Subs)   
 
 
+html2fcc/readme.md
+Cisco CCNA (200-120)_ The Complete Course Subs
 
+diag
+content x08
+quizet+
+glue break
 
-index[ { a: 'bb' }, { a: 'bbb' } ]
-index{a: ['bb', 'bbb']}
-index{a:b}
+ MarkPad
+https://quizlet.com/_8mgesm?x=1qqt&i=2yvh9t
+mention
 
-kgcg2195
+227, 228, 243, 244
 
-Телевизор Samsung UE24H4070AU
 
-Со следующего сезона одиночники и пары могут использовать музыку со словами
-2014
+I want to mention for today
+pretty good hint
+embarrassing mistake
+That must be exciting
+Remember to sound sincere
 
+mSubtToLl(ll, sen)
+mInsTranslateLl(ll)
 
-Штраус Вальс
-Жорш Бизе Кармен
-Creep Radiohead - Любочка.
 
+dream
+funeral
 
-1, 4, 8
 
 
-1,4 
-1,8
-4,8
 
 
-1234
-12
-13
-14
-23
-24
-34
 
 
-ищу 2 на одной линии pc
 
 
-на одной линии pc фишки и линия свободна
+os.path.dirname(path) 
+os.listdir(path='.')
 
-на одной линии user фишки и линия свободна
 
 
 
-надо исключить ход на линии, где х и 0
+1
+00:00:00,010 --> 00:00:00,020
+ HP and the Sorcerer's Stone 2001 20:26:45 12.05.2013
 
+2
+00:00:09,500 --> 00:00:14,500
+����� ������ � ����������� ������ (����.) 
+����� ������ � ��������� ������ (����.) 
+ 2001
 
-функция возвращает массив линий с заданной клеткой
-function mLines(cell){
-  resArr = []
-  
-  return resArr;
-}
 
-функцию, которая принимает массив выигрышных линий и массив предпочтительных ходов
-возвращает массив ходов из числа предпочтительных ходов
-mMovesFrom(winArr, searchArr, excludeArr){
- var resArr;
- resArr.push(0);
- 
- return resArr;
-}
 
 
-Крестики нолики.
-Кнопки 2 кто чем ходит
-кнопка 0 кто первый pc, user
-gameOn - false - ходит компьютер
-при загрузке если gameOn===false - compurersTurn
-turn вызывается по клику с номером клетки
-winTest - проверка на победу запускается после хода
-если победа gameOn=true , чтобы не ходил компьютер
-в ней же вызывается compurersTurn
-winTest - проверка на победу запускается после хода
 
 
 
-.  x - user
-.  0 - pc
-   0 - user
-   x - pc
-  
-из мультсериала "Черный плащ" / "
-Darkwing Duck
-"
 
 
-5 1 3 2
 
-1 5 3 2
 
-1 5 3 2
 
-1 3 5 2
 
-http://f0437348.xsph.ru/
-https://www.youtube.com/channel/UCxqme2Kg6j40T6gpxelc1YA
+mSubtToLl(ll, sen)
 
-программа функция
-allure
-laravel
+m0512story.md  
+f0402friend.md
+findtext
+translate subtitles
+
+
+f0604seinfeld.md
+
+
+Family Guy: Joe's Son Returns from Iraq (Clip) | TBS
+
+
+
+seinfeld
+
+
+f0602seinfeld.md
+f0504dark.md
+m0502dad.md
+m0502family.md
+
+
+ll = mPackLl(l)
+l2 = mUnpackLl(l)
+            
+
+
+
+
+https://www.youtube.com/watch?v=KXkz1gu6dxQ
+https://www.youtube.com/watch?v=2q_LoVmev7g
+https://www.youtube.com/watch?v=_mOz0GOG3uk
+https://www.youtube.com/watch?v=bRC0Yud2D38
+https://www.youtube.com/watch?v=dY2LQcE-Qvc
+https://www.youtube.com/watch?v=snIUtdg0K30
+https://www.youtube.com/watch?v=AK_aFPSnU7Y
+https://www.youtube.com/watch?v=Ruy-yzj-JG8
+https://www.youtube.com/watch?v=eIrMbAQSU3
+https://www.youtube.com/watch?v=7GwptabrYy
+https://www.youtube.com/watch?v=lJ_q6-eeC_
+
+
+
+proud 
+
+http://localhost:8888/notebooks/pyoop/prkt/d50pyprk.ipynb#py053-%D0%9F%D0%B8%D1%82%D0%BE%D0%BD-%D0%BF%D0%B0%D1%80%D1%81%D0%B8%D0%BC-%D0%BF%D0%BB%D0%B5%D0%B9%D0%BB%D0%B8%D1%81%D1%82-Youtube-%D0%BA%D0%B0%D0%BD%D0%B0%D0%BB%D0%B0
+
+http://localhost:8888/notebooks/pyoop/prkt/d50pyprk.ipynb#py053
+https://quizlet.com/_8lhmcd?x=1qqt&i=2yvh9t
+f0402friend.md
+f0404friend.md  
+
+
+a0404lesson.md
+[All Artists on Genius](https://genius.com/artists)
+s0502others.md
+m0440mult.md
+m0442mult.md
+
+[]()  
+[]()  
+[]()  
+[]()  
+[]()  
+
+
+
+
+
+
+
+
+
+
+
+
+html4vocabulary/a020ovoc.md
+160 English Words for Everyday Life - Basic Vocabulary #8
+
+

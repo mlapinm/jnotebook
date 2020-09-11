@@ -1,0 +1,682 @@
+1
+00:00:00,000 --> 00:00:07
+[BLANK_AUDIO]
+[BLANK_AUDIO]
+2
+00:00:07,420 --> 00:00:09
+Welcome back, everyone.
+С возвращением, все.
+3
+00:00:09,795 --> 00:00:14
+Up to this point, we've been dealing
+pretty much with just internal addresses,
+До этого момента мы имели дело
+в основном с внутренними адресами,
+4
+00:00:14,148 --> 00:00:15
+private addresses.
+частные адреса.
+5
+00:00:15,295 --> 00:00:19
+Now, it comes time for us to travel onto
+the world of the internet.
+Теперь пришло время отправиться в путешествие
+мир интернета.
+6
+00:00:19,961 --> 00:00:20
+All right?
+Отлично?
+7
+00:00:20,711 --> 00:00:23
+Or if you're gonna pretend to.
+Или если ты собираешься притвориться.
+8
+00:00:23,045 --> 00:00:28
+And the way we do that, because as we know
+already that
+И как мы это делаем, потому что, как мы знаем
+уже это
+9
+00:00:28,085 --> 00:00:33
+private IP addresses are not routable on a
+public interface.
+частные IP-адреса не маршрутизируются на
+публичный интерфейс.
+10
+00:00:33,921 --> 00:00:36
+Sounds like a test question to me.
+Для меня это похоже на тестовый вопрос.
+11
+00:00:36,253 --> 00:00:41
+Private IP addresses are not routable on
+public interface.
+Частные IP-адреса не маршрутизируются на
+публичный интерфейс.
+12
+00:00:41,795 --> 00:00:47
+So we must something called Network
+Address Translation or NAT.
+Итак, мы должны что-то под названием Сеть
+Преобразование адресов или NAT.
+13
+00:00:47,128 --> 00:00:55
+Really NAT just like VSLM is a mechanism
+to slow down the death of IPv4.
+На самом деле NAT, как и VSLM, - это механизм
+чтобы замедлить смерть IPv4.
+14
+00:00:55,170 --> 00:00:57
+But of course, IPv4 already died.
+Но, конечно, IPv4 уже умер.
+15
+00:00:57,753 --> 00:01:00
+That's why IPv6 is already taking over.
+Вот почему IPv6 уже берет верх.
+16
+00:01:00,754 --> 00:01:04
+It's just been a very slow transition.
+Просто это был очень медленный переход.
+17
+00:01:04,211 --> 00:01:07
+And when IPv6 does come around, NAT is
+going to,
+И когда IPv6 действительно появляется, NAT
+собираюсь,
+18
+00:01:07,055 --> 00:01:11
+when it's fully implemented in your
+network, NAT will disappear.
+когда он будет полностью реализован в вашем
+сети NAT исчезнет.
+19
+00:01:11,003 --> 00:01:12
+There will be no need for NAT.
+NAT не понадобится.
+20
+00:01:12,504 --> 00:01:15
+Is your transition mechanism called NAT
+PT?
+Ваш механизм перехода называется NAT?
+PT?
+21
+00:01:15,128 --> 00:01:15
+Yes.
+Да.
+22
+00:01:15,836 --> 00:01:17
+Is it recommended to be used?
+Рекомендуется ли использовать?
+23
+00:01:17,129 --> 00:01:17
+No.
+Нет.
+24
+00:01:17,837 --> 00:01:19
+Are you gonna be asked questions about it?
+Вам будут задавать вопросы об этом?
+25
+00:01:19,462 --> 00:01:20
+Not at all.
+Не за что.
+26
+00:01:20,337 --> 00:01:23
+They may ask you what are the three
+transition mechanisms.
+Они могут спросить вас, что это за три
+переходные механизмы.
+27
+00:01:23,296 --> 00:01:25
+That's one of them, NAT PT.
+Это один из них, NAT PT.
+28
+00:01:25,129 --> 00:01:28
+All right.
+But other than that, that's about it.
+Отлично.
+Но в остальном это все.
+29
+00:01:28,253 --> 00:01:33
+But you will get print screens on NAT
+itself.
+Но вы получите экраны печати на NAT
+сам.
+30
+00:01:33,961 --> 00:01:36
+So there's three different types of NAT.
+Итак, существует три разных типа NAT.
+31
+00:01:36,253 --> 00:01:40
+The first one, as you can see up here is
+static nat.
+Первый, как вы можете видеть здесь, это
+статический физ.
+32
+00:01:40,628 --> 00:01:45
+And static nat means a one to one mapping.
+А статический нат означает отображение один к одному.
+33
+00:01:45,711 --> 00:01:52
+That means if you have 1000 nodes that
+have to go out onto the public internet,
+Это означает, что если у вас есть 1000 узлов,
+должны выйти в публичный Интернет,
+34
+00:01:52,934 --> 00:01:56
+you need to purchase 1000 IP addresses.
+вам необходимо приобрести 1000 IP-адресов.
+35
+00:01:56,920 --> 00:02:02
+And then statically, send somebody down,
+pay them,
+А затем статически отправить кого-нибудь вниз,
+плати им,
+36
+00:02:02,243 --> 00:02:06
+you know, 52 bucks an hour to go ahead and
+say,
+вы знаете, 52 доллара в час вперед и
+сказать,
+37
+00:02:06,986 --> 00:02:11
+IP nat inside source static private,
+public.
+IP nat внутри источника статический частный,
+общественность.
+38
+00:02:11,628 --> 00:02:16
+IP nat inside source static private,
+public.
+IP nat внутри источника статический частный,
+общественность.
+39
+00:02:16,711 --> 00:02:18
+Okay?
+That is completely,
+Ладно?
+Это полностью,
+40
+00:02:18,394 --> 00:02:24
+[SOUND] I will go insane doing something
+like that, even for 52, 52 bucks an hour.
+[ЗВУК] Я сойду с ума, делая что-нибудь
+вот так даже за 52, 52 бакса в час.
+41
+00:02:24,128 --> 00:02:26
+I wouldn't I wouldn't want to do that.
+Я бы не стал этого делать.
+42
+00:02:26,045 --> 00:02:29
+That is not feasable for a company to do
+that.
+Это нереально для компании.
+который.
+43
+00:02:29,336 --> 00:02:33
+You're, it's a 1000 IPs at five bucks
+that's $5,000.
+Ты, это 1000 IP за пять баксов
+это 5000 долларов.
+44
+00:02:33,336 --> 00:02:36
+Now, I can tell you this much.
+Теперь я могу вам многое сказать.
+45
+00:02:36,045 --> 00:02:40
+One of my students, many years ago, he
+actually told, hey, Laz.
+Один из моих учеников много лет назад, он
+на самом деле сказал, эй, Лаз.
+46
+00:02:40,253 --> 00:02:45
+Where we work, which was a hospital, we
+use static nat for our printers,
+Где мы работаем, это была больница, мы
+использовать статический нат для наших принтеров,
+47
+00:02:45,665 --> 00:02:49
+because we use a third party to print our
+medical records.
+потому что мы пользуемся услугами третьих лиц для печати наших
+медицинские записи.
+48
+00:02:49,961 --> 00:02:54
+So they have to be statically assigned.
+Поэтому они должны быть статически назначены.
+49
+00:02:54,336 --> 00:02:56
+They have a lot of printers.
+У них много принтеров.
+50
+00:02:56,295 --> 00:02:59
+I'm gonna say, thousands, but a couple
+hundred.
+Я скажу, тысячи, но пара
+сотня.
+51
+00:02:59,545 --> 00:03:01
+All right.
+So, it's like okay.
+Отлично.
+Так что все в порядке.
+52
+00:03:01,211 --> 00:03:03
+I guess, maybe because of the HIPAA.
+Думаю, может быть, из-за HIPAA.
+53
+00:03:03,421 --> 00:03:05
+They have to do it that way.
+Они должны так делать.
+54
+00:03:05,046 --> 00:03:10
+But wow, that's the, that's the only
+person in the,
+Но ничего себе, это единственное
+человек в
+55
+00:03:10,119 --> 00:03:15
+now, more than 14 years [LAUGH] that I've
+been doing this.
+теперь, более 14 лет [СМЕЕТ] я
+делал это.
+56
+00:03:15,211 --> 00:03:18
+You know, that they've told me just that.
+Вы знаете, что они мне сказали именно это.
+57
+00:03:18,505 --> 00:03:21
+That they use static nat, because of that.
+Из-за этого они используют статический нат.
+58
+00:03:21,349 --> 00:03:22
+So, I guess it's a HIPAA thing.
+Так что, думаю, это HIPAA.
+59
+00:03:22,045 --> 00:03:23
+But again, it's not feasable.
+Но опять же, это невозможно.
+60
+00:03:23,086 --> 00:03:26
+It's not feasable for the company to
+purchase all those IP addresses and
+Компания не может
+купить все эти IP-адреса и
+61
+00:03:26,977 --> 00:03:31
+it's not feasable to have somebody sitting
+there, typing all those things.
+невозможно, чтобы кто-то сидел
+там, печатая все эти вещи.
+62
+00:03:31,211 --> 00:03:32
+You know, one by one by one by one.
+Вы знаете, один за другим.
+63
+00:03:32,961 --> 00:03:37
+Obviously, you can create a script for
+this, but still not feasable.
+Очевидно, вы можете создать сценарий для
+это, но все же неосуществимо.
+64
+00:03:37,628 --> 00:03:38
+Not feasible.
+Неосуществимо.
+65
+00:03:38,753 --> 00:03:41
+The next one is dynamic nat.
+Следующий - динамический нац.
+66
+00:03:41,711 --> 00:03:45
+Now dynamic nat, at least it eases the
+burden,
+Теперь динамический нат, по крайней мере, облегчает
+бремя
+67
+00:03:45,280 --> 00:03:49
+because you create a pool of a thousand
+addresses.
+потому что вы создаете пул из тысячи
+адреса.
+68
+00:03:49,129 --> 00:03:52
+No longer are you doing one by one by one
+manually.
+Вы больше не делаете один за другим
+вручную.
+69
+00:03:52,962 --> 00:03:55
+It's still a one to one mapping, because
+you still, if you have thousand people
+Это по-прежнему сопоставление один к одному, потому что
+ты еще, если у тебя есть тысяча человек
+70
+00:03:55,733 --> 00:03:57
+need to get out, you still need to
+purchase thousand IPs.
+нужно выйти, тебе все равно нужно
+купить тысячу IP.
+71
+00:03:57,754 --> 00:04:01
+So you're still wasting 5 Gs, that's a lot
+of money.
+Итак, вы все еще тратите 5 G, это много
+денег.
+72
+00:04:01,502 --> 00:04:02
+All right.
+Отлично.
+73
+00:04:02,586 --> 00:04:04
+Just all so people can go out to the
+internet.
+Просто все, чтобы люди могли выйти на
+Интернет.
+74
+00:04:04,935 --> 00:04:06
+If you have a thousand people in your
+company.
+Если у вас в вашем
+Компания.
+75
+00:04:06,713 --> 00:04:09
+Obviously, there must be an important
+reason why they are going
+Очевидно, должен быть важный
+причина, почему они идут
+76
+00:04:09,237 --> 00:04:10
+out to the internet.
+в Интернет.
+77
+00:04:10,087 --> 00:04:12
+But still, that's $5,000.
+Но все же это 5000 долларов.
+78
+00:04:12,420 --> 00:04:17
+Now still not feasable, but at least you
+create a pool.
+Теперь все еще неосуществимо, но по крайней мере вы
+создать пул.
+79
+00:04:17,086 --> 00:04:18
+Cut your workload in half, right?
+Сократите рабочую нагрузку вдвое, верно?
+80
+00:04:18,711 --> 00:04:20
+A lot easier to do.
+Намного проще сделать.
+81
+00:04:20,336 --> 00:04:23
+The last one is nat overload.
+Последний - нац перегрузка.
+82
+00:04:23,461 --> 00:04:25
+That's the most popular one.
+Это самый популярный.
+83
+00:04:25,628 --> 00:04:26
+Nat overload.
+Нат перегрузка.
+84
+00:04:26,795 --> 00:04:30
+That's the one that everybody uses when
+you purchase your Linksys routers or
+Это тот, который все используют, когда
+вы покупаете маршрутизаторы Linksys или
+85
+00:04:30,742 --> 00:04:33
+D-link routers or whatever manufacturer
+you use.
+Маршрутизаторы D-link или любого другого производителя
+ты используешь.
+86
+00:04:33,420 --> 00:04:34
+Okay?
+Ладно?
+87
+00:04:34,336 --> 00:04:37
+Everybody uses nat overload or as, or
+Все используют nat overload или as, или
+88
+00:04:37,656 --> 00:04:42
+as it is also called port address
+translation, PAT.
+так как его еще называют адресом порта
+перевод, PAT.
+89
+00:04:42,336 --> 00:04:47
+Because what it does, you have one public
+IP address
+Потому что у вас есть один публичный
+айпи адрес
+90
+00:04:47,555 --> 00:04:53
+that can hold up to 65,000 plus private
+addresses.
+который может вместить до 65 000+ частных
+адреса.
+91
+00:04:53,378 --> 00:04:55
+So just with one public address.
+Так что только с одним публичным адресом.
+92
+00:04:55,336 --> 00:04:58
+That's pretty feasible to me, right?
+Для меня это вполне возможно, правда?
+93
+00:04:58,045 --> 00:05:02
+If I have 65,000 people in my company, I
+would be doing very well.
+Если в моей компании 65 000 человек, я
+будет очень хорошо.
+94
+00:05:02,336 --> 00:05:03
+Okay?
+Ладно?
+95
+00:05:03,337 --> 00:05:08
+And so this is the most feasable one.
+Так что это наиболее реальный вариант.
+96
+00:05:08,086 --> 00:05:14
+What you are gonna get tested on, they may
+ask, may, rare.
+На чем вы собираетесь пройти тестирование, они могут
+спросите, может, редко.
+97
+00:05:14,211 --> 00:05:17
+They'll ask you the three different types
+of NAT, just know that it's static,
+Они спросят вас о трех разных типах
+NAT, просто знайте, что он статический,
+98
+00:05:17,883 --> 00:05:19
+dynamic and and nat overload.
+динамическая и перегрузка нац.
+99
+00:05:19,503 --> 00:05:23
+But again, all these three things, all
+that they do is just that.
+Но опять же, все эти три вещи, все
+они это делают.
+100
+00:05:23,337 --> 00:05:26
+Is just translate from private to public.
+Это просто перевод с частного на публичный.
+101
+00:05:26,295 --> 00:05:30
+And again, doing it statically, not very
+feasable.
+И опять же статично, не очень
+выполнимо.
+102
+00:05:30,753 --> 00:05:34
+Doing it dynamically, okay.
+Делаем это динамически, хорошо.
+103
+00:05:34,107 --> 00:05:36
+But again, you're creating a pool,
+Но опять же, вы создаете пул,
+104
+00:05:36,955 --> 00:05:40
+you're creating a pool of a thousand IP
+addresses.
+вы создаете пул из тысячи IP
+адреса.
+105
+00:05:40,878 --> 00:05:46
+It's matching up with that particular, as
+a computer goes through there,
+Это совпадает с этим, поскольку
+компьютер проходит туда,
+106
+00:05:46,041 --> 00:05:50
+it will take out the private, put in the
+public, so forth.
+он достанет частное, вставит
+общественность и т. д.
+107
+00:05:50,086 --> 00:05:52
+And then you have nat overload, a ll
+right?
+А то у вас нац перегрузка, все
+право?
+108
+00:05:52,586 --> 00:05:55
+Which it changes the port.
+Который меняет порт.
+109
+00:05:55,170 --> 00:05:59
+It changes the source port number for it
+to go across.
+Он меняет для него номер порта источника
+перейти.
+110
+00:05:59,336 --> 00:06:02
+So definitely, still today, we still need
+NAT.
+Так что определенно, и сегодня нам все еще нужно
+NAT.
+111
+00:06:02,878 --> 00:06:06
+We, we kinda hide behind NAT like a
+firewall, actually.
+Мы как бы прячемся за NAT, как
+брандмауэр, собственно говоря.
+112
+00:06:06,654 --> 00:06:11
+But we still need NAT, because we do have
+private IP addresses internally.
+Но нам все еще нужен NAT, потому что у нас есть
+частные IP-адреса внутри компании.
+113
+00:06:11,087 --> 00:06:15
+And for us to get outside, we need some
+method to get
+И чтобы выйти наружу, нам нужны
+способ получить
+114
+00:06:15,632 --> 00:06:19
+a public IP address and this where NAT
+comes in.
+публичный IP-адрес и это где NAT
+приходит в.
+115
+00:06:19,879 --> 00:06:24
+All your devices, all your devices that
+you purchase any, you know,
+Все ваши устройства, все ваши устройства, которые
+вы покупаете любой, знаете,
+116
+00:06:24,879 --> 00:06:29
+any your provider Comca, you know,
+whatever provider you use, where
+любой ваш провайдер Comca, вы знаете,
+какой бы провайдер вы ни использовали, где
+117
+00:06:29,965 --> 00:06:35
+in your location, your gonna go ahead on
+their devices and do the same thing.
+в вашем месте, вы собираетесь идти вперед
+свои устройства и делают то же самое.
+118
+00:06:35,503 --> 00:06:40
+You don't need anymore really to purchase
+these wireless routers,
+Вам больше не нужно покупать
+эти беспроводные маршрутизаторы,
+119
+00:06:40,512 --> 00:06:45
+because your providers have wireless
+routers that do give you a private
+потому что у ваших провайдеров есть беспроводная
+маршрутизаторы, которые предоставляют вам частную
+120
+00:06:45,360 --> 00:06:47
+IP address with public access.
+IP-адрес с публичным доступом.
+121
+00:06:47,879 --> 00:06:50
+They do their internal NAT themselves.
+Они сами делают свой внутренний NAT.
+122
+00:06:50,461 --> 00:06:53
+So still today is very prevalent.
+Так что все еще очень распространено сегодня.
+123
+00:06:53,598 --> 00:06:56
+But again, the most prevalent of all, the
+most popular of all.
+Но опять же, самая распространенная из всех
+самый популярный из всех.
+124
+00:06:56,086 --> 00:06:59
+It is nat overload, nat overload.
+Это нац перегрузка, нац перегрузка.
+125
+00:06:59,003 --> 00:07:02
+And we will be discussing exactly how NAT
+works and
+И мы будем обсуждать, как именно NAT
+работает и
+126
+00:07:02,552 --> 00:07:07
+the configurations for dynamic and nat
+over, and nat overload.
+конфигурации для динамических и натурных
+закончился, а нац перегруз.
+127
+00:07:07,211 --> 00:07:08
+And then we'll get into the pitfalls and
+И тогда мы попадем в ловушки и
+128
+00:07:08,626 --> 00:07:10
+things like that when you get to
+certification.
+такие вещи, когда вы добираетесь до
+сертификация.
+129
+00:07:10,337 --> 00:07:13
+What to look for, just to make sure you
+know, you know,
+Что искать, просто чтобы убедиться, что вы
+знаете, вы знаете,
+130
+00:07:13,587 --> 00:07:17
+what to point out to make sure you don't
+get caught in a trap.
+на что указать, чтобы убедиться, что вы не
+попасть в ловушку.
+131
+00:07:17,128 --> 00:07:17
+All right?
+Отлично?
+132
+00:07:17,878 --> 00:07:22
+So, I will see you in the next lesson and
+we'll explain exactly how NAT works.
+Итак, увидимся на следующем уроке и
+мы объясним, как именно работает NAT.
+133
+00:07:22,628 --> 00:07:23
+[BLANK_AUDIO]
+[BLANK_AUDIO]

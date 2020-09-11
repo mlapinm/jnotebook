@@ -1,0 +1,160 @@
+
+Course Curriculum
+
+Welcome to the most COMPLETE CCNA (200-120) Course...get ready to be amazed!
+ PreviewYour First Journey into the Cisco World (2:02)
+ PreviewWhy acquire a CCNA certification? (2:58)
+ StartHow would you get CCNA Certified? (4:13)
+ StartWhich CCNA test should I take? (6:33)
+ StartWhat does the course consist of? (6:23)
+The Packet tracer Simulator
+ PreviewNavigating the Packet tracer tool (29:59)
+ PreviewHow to create a simple topology (6:46)
+ StartConfiguring a router (3:21)
+ StartConfiguring a switch (6:13)
+ StartConfiguring a PC (6:24)
+ Startconfiguring a server (5:35)
+The Basics of Networking
+ PreviewUnderstanding the Need for Networking (4:42)
+ StartCommunication at its lowest layer (10:13)
+ StartInternetworking Devices used on a network (20:35)
+ StartThe importance of segmentation (10:35)
+The OSI Model
+ StartA brief history of the OSI model (2:53)
+ StartThe layers of the OSI model (6:46)
+ StartThe 3 Upper Layers of the OSI (8:06)
+ StartThe 4 Lower Layers of the OSI (6:59)
+ StartThe process of Encapsulation (2:43)
+Binary to Hex and Decimal conversion
+ StartThe tables we use when converting (4:19)
+ StartConverting a Hex number to binary/decimal (10:25)
+ StartConverting a Decimal to binary/hex (6:26)
+ StartWhy do we need to know Hexadecimal numbers? (2:41)
+Cisco three Layer Model
+ StartCore Layer (4:32)
+ StartDistribution Layer (4:11)
+ StartAccess Layer (5:57)
+TCP/IP model
+ StartA brief history of the model (4:12)
+ StartThe layers of the model & how they map over to the OSI (4:45)
+Ethernet Networks
+ StartDefinition of Ethernet Networks (7:10)
+ StartThe access method of ethernet (CSMA/CD) (10:27)
+ StartWhat cabling standards to we use? (12:05)
+IPV4 addresses
+ StartWhat is an IPv4 address & Its format
+ StartClasses of Addresses and their ranges (16:03)
+Private IP address range
+ StartDefinition of Private addressing
+ StartPrivate Class A,B, C address range (14:47)
+IPv6 Addressing
+ StartWhy do we need IPv6
+ StartIPv6 addressing and Expressions
+ StartIPv6 address types (10:05)
+ StartThe Auto-configuration feature
+ StartICMPv6 (5:26)
+Transition Mechanisms
+ StartDual Stack, 6to4 tunneling and NATPT (13:30)
+How to subnet in IPv4
+ StartThe subnet Mask
+ StartDiagram used to subnet & Using the diagram...PLEASE NOTE: 2046 should be 2048
+ StartClass-full subnetting (9:36)
+ StartClass-less subnetting
+ StartRoute summarization
+ StartWildcard masking
+How to subnet in IPv6
+ StartDo we need to subnet In IPv6? (3:36)
+ StartHow to setup the diagram for subnetting. (4:58)
+ StartCounting for subnets and finding increment value (4:50)
+ StartLaying out the subnets with the new network prefix (4:42)
+Inside a Cisco router
+ StartHow to connect to a router
+ StartComponents we need to know about
+ StartBoot Sequence of a Cisco router
+ StartNavigation of the IOS
+Administrative configurations
+ StartHouse Keeping configurations (30:28)
+ Startinterface configurations (16:57)
+ StartTelnet and SSH into routers
+ Startshow commands (8:07)
+DHCP and Name resolution on Cisco routers
+ Startconfiguring DHCP
+ StartConfiguring DHCP Relay Agent (19:52)
+ StartConfiguring static host tables (9:32)
+Using the Cisco Discovery Protocol
+ Startusing the CDP command
+The Cisco register
+ StartManipulating the register within the router
+ StartAccessing & manipulating the register within ROMMON
+Routing Process
+ StartHow does IP routing occur
+ Startwhat type of routing should I use?
+ Startwhat are default routes & where do you configure them?
+ Startconfiguring static routes (10:59)
+Dynamic Routing
+ StartAn overview of the three Dynamic routing protocols (19:47)
+ StartRIPv2 & RIPng configurations
+ StartEIGRP & EIGRPv6 configurations
+ StartEIGRP Bandwidth Lab (17:49)
+OSPF Details
+ StartOSPF Terminology (21:18)
+ StartPoint-to-Point ospf
+ StartMulti-access ospf
+ StartOSPF multiple area details
+Switching at Layer 2
+ StartPurpose of Using Switches & Specific functions at Layer2 (17:37)
+ StartNavigation on a switch and show commands (13:59)
+ StartAdministration configurations (8:35)
+The basics of VLANs
+ StartWhat are vlans and the importance of using vlans in our network?
+ StartHow to create and assign a vlan /Trunking appropriate ports
+The Spanning-tree Protocol
+ Startwhat is STP used for (6:15)
+ StartHow does the STP election process work
+ StartHow to manipulate the election process
+ StartTurning STP off and Guarding against BPDUs on ports not using STP
+The Virtual Trunking Protocol
+ StartWhat is the purpose of this protocol (12:36)
+ StartCommands and Configurations of the VTP protocol (14:23)
+ StartTurning on and adjusting port-security on your switch (7:08)
+Inter-vlan routing
+ StartWhat is the purpose of intervlan routing (11:55)
+ StartHow to configure intervlan routing Part1 (34:07)
+ StartHow to configure intervlan routing Part2 (22:35)
+Secure your Enterprise using ACL's
+ Startwhat is an ACL's and its rules (12:56)
+ StartStandard ACL's (20:23)
+ StartExtended ACL's (25:49)
+Network Address Translations
+ Start3 Types of NAT (7:30)
+ StartHow does NAT work (6:20)
+ StartConfigure NAT Overload and Dynamic (7:52)
+ StartActual Configuration of NAT Overload (7:28)
+ StartPitfalls to look for on your test (5:43)
+Wide Area Networks
+ StartWhat exactly is a WAN (7:13)
+ StartWhat are the connection types (11:21)
+Frame-Relay Packet switched techonology
+ StartUnderstanding the CIR and Burst Rate (12:39)
+ StartWhat is a DLCI and who assigns it (9:26)
+ Startconfiguring Frame-relay (24:54)
+ Startshow commands for frame-relay (9:18)
+PPP Dedicated leased connection type
+ StartOpen Standard WAN protocol (7:38)
+ StartConfiguring PPP and Verifying PPP (15:57)
+IP services
+ StartRedundancy protocols overview (12:36)
+ StartHSRP Details and configuration (43:45)
+ StartVRRP and GLBP (9:38)
+Managing Devices
+ StartSNMP and its Configuration (21:53)
+ StartSYSLOG and its Configuration (11:43)
+ StartNETFLOW and its Configuration (8:34)
+Summary of the Course
+ StartCourse Summary (6:25)
+ StartCCNA 200-120 Final Exam
+New Section Explaining EtherChannel
+ StartIntroduction to EtherChannel (0:44)
+ StartWhat is EtherChannel (3:49)
+ StartEtherChannel Lab (12:45)
+ StartSummary of Section (2:29)
