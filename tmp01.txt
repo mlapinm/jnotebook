@@ -1,3 +1,7 @@
+
+b0106ru.md
+
+
     if len(lres)<3:
         lres=[0, 0, 0]
     else:
