@@ -1,3 +1,12 @@
+    if len(lres)<3:
+        lres=[0, 0, 0]
+    else:
+        lres = lres[:6]
+
+
+
+
+123123123456456
 
 f0200man.md
 f0202man.md  
