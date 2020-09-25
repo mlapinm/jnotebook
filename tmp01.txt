@@ -1,4 +1,43 @@
 
+
+
+
+
+
+
+mTest должен возвращать True, False,
+a третий параметр - выходной массив
+
+m3index должен возвращать True, False,
+a третий параметр - выходной массив
+
+mRight
+mLeft
+следующее, предыдущее слово
+
+x25
+рефакторинг x24(x09)
+
+
+
+https://www.youtube.com/watch?v=y6RQgtZ2QDk&list=PL41R2vH_CL42mcmegHYYDPYjc-UvsMwuV&index=5
+
+Real English Phrases for Speaking - For ESL Students
+
+
+
+
+328
+370
+mOneAsThree
+                while text[i] != ' ' and k1 < 3:
+                    print(k1, i)
+                    k1 += 1
+                    i -= 1
+
+
+c02.txt
+
 [500 Slightly Long English conversation phrases - Intermediate Level](https://www.youtube.com/watch?v=GAF3BDZZJQw)
 https://www.youtube.com/watch?v=GAF3BDZZJQw
 
