@@ -1,6 +1,9 @@
 
+python 3.7.9
 
 
+b0422vip.md
+b0424vip.md
 
 
 
@@ -17,8 +20,12 @@ mLeft
 
 x25
 рефакторинг x24(x09)
+https://www.youtube.com/watch?v=ILNuN6cJaqM&list=PLch-HQm0QWxjNiplKQ1m9R8Jd0ji01S2I
 
 
+
+
+https://www.youtube.com/watch?v=ILNuN6cJaqM&list=PLch-HQm0QWxjNiplKQ1m9R8Jd0ji01S2I#muxer
 
 https://www.youtube.com/watch?v=y6RQgtZ2QDk&list=PL41R2vH_CL42mcmegHYYDPYjc-UvsMwuV&index=5
 
@@ -169,7 +176,7 @@ html6ccna
 
 html2fcc/readme.md
 Cisco CCNA (200-120)_ The Complete Course Subs
-
+\\DS216\avi\installed2
 diag
 content x08
 quizet+
