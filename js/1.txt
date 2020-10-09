@@ -1,8 +1,0 @@
-Microsoft Windows [Version 6.1.7601]
-(c) Корпорация Майкрософт, 2009. Все права защищены.
-
-D:\mailCloud\prjother\089hosts\jnotebook\js>Microsoft Windows [Version 6.1.7601]
-(c) Корпорация Майкрософт, 2009. Все права защищены.
-
-D:\mailCloud\prjother\089hosts\jnotebook\js>
-
