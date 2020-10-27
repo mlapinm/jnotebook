@@ -1,640 +1,552 @@
-[English Conversation 35](https://www.youtube.com/watch?v=_irVQ9xyOSQ)   
+
+packet tracer 7.3
+options-preferences
+Customize User Experence
+Interface
+always Show Port Labels in Logical Waarkspace
+Logging
+Enable Logging
+Font
+Dialogs
+CLI command line interface
+18 
+
+PART 8
+Would you like to enter the initial configuration dialog? [yes/no]: n
 
 
-Marie can I have that information for mr. Rasheed's group 
-he'll be here in a few minutes 
-I'm working as fast as I can
-mr. Evans will be with you very soon
-that's fine 
-I'm a little early aren't 
-I just a few minutes 
-is your last name pronounced LePaige 
-it's Lapahge, actually
-oh. that's beautiful
-thank you 
-now, is it ms. Lapage or mrs. Lapage 
-it's ms. but you can call me by my first name
-do you mind if I call you ms. Lapage 
-I love the way it sounds 
-it's fine 
-I'm keeping you from your work, aren't I  
-I'm sorry 
-I'd love to talk, but I really have to get this done right away 
-I understand
-you're not from here, are you
-excuse me 
-your accent. you come from France, don't you 
-yes. the Paris, actually
-that's nice. it sure is a beautiful day, isn't it 
-can I have that information 
-I'm not quite done 
-what's taking so long
-[Music]
-mrs. Beatty I can take you to mr. Evans office 
-he'll be here shortly 
-why, thank you
-beautiful day, isn't it 
-yes, it is
-Paul, we have our first group from India coming next week 
-since mr. Rashid has travelled to India many times, I've asked him to talk to you about etiquette in India 
-mr. Rashid 
-Paul, why don't you greet me as if I were an Indian tourists
-asked me to come with you and show me to the tour bus 
-okay, hi, there. I'm Paul 
-if I were an Indian woman, you would have just insulted me
-women and men generally do not touch
-okay. hi, there. 
-you just told me to go away 
-oh, I'm sorry
-oh, too close
-you should stand this far away from someone 
-instead of shaking hands, do this and say namaste 
-namaste
-excellent 
-now tell me to come with you to the tour bus 
-okay. come with me
-this is a good gesture in India 
-do it like this 
-come with me 
-good to the bus over there 
-I know I've just insulted you
-pointing with your fingers is considered impolite 
-use your chin instead 
-to the bus over there 
-I'm never gonna get this 
-you're doing wonderfully
-oh, thank you, mr. Rashid 
-oh, to close
-let's get miss Novak's tickets ready 
-she may be stopping by this afternoon 
-Paul, are you okay 
-no. I feel awful
-what's wrong 
-I've got this horrible cold
-I'm sneezing, my back is killing me
-I've got this pain at my hip 
-my neck's been bothering me all day 
-and I have a stomachache 
-you may have to go see a doctor 
-no. I hate doctors 
-I wonder what could be wrong 
-maybe he's allergic to work 
-I'm not kidding here 
-I'm in pain 
-I used to want to be a doctor, you know 
-say ah
-now I remember why I didn't become a doctor
-Paul, you really must get some medical help
-a little acupuncture might help you feel better 
-stay away from me
-dr. Anderson is meeting mr. Evans downstairs in the cafe 
-should we ask her to come up 
-she may be able to help 
-great idea 
-I'll go get her
-you might prefer an herbal remedy 
-stop it
-how long have you been feeling this way
-I got the cold last night, and the pain in my back started this morning 
-want to try a little spiritual healing 
-you're making me laugh
-laughter is the best medicine, you know 
-but it hurts
-say ah 
-cover your face, doc 
-well, you have a cold, that's for sure 
-what about the other stuff 
-the pain in the back and the side 
-have you taken any medications lately 
-just some over-the-counter stuff painkiller, cold tablets, nasal spray 
-that sounds okay 
-and some cough medicine, vitamins, antacid 
-that's a lot of medicine 
-and some decongestant 
-that's too much medicine in one day 
-that must be why you're feeling so bad 
-have you been around anyone else who's sick 
-my friend Don had a cold all week 
-we lifted weights last night for about an hour ran five miles 
-he had to walk the last mile 
-it's that your usual exercise routine 
-yep
-I started it yesterday
-well, that explains it 
-you exercise too much 
-that's all 
-that's all 
-a little chiropractic treatment might help you
-stay away from me 
-now about the travel documents for the Australian group 
-we've had everything mailed to them, right
-mr. Evans, we gave you the package of travel documents 
-to give to mr. Wells the other night at dinner, before we flew home to Sydney 
-a white envelope about this big 
-yes 
-I gave it to mr. Rashid before he left for Lebanon 
-Oh, mr. Wells needs those documents the day after tomorrow 
-the group is flying in on Thursday 
-I'll call the courier 
-if they can pick up a package by 5:00 p.m. we should be okay 
-that gives us an hour
-I'll reprint the tour information, but what about the travel guides 
-I can't print 25 copies that fast
-I'll call copies to go and have them reprint the travel guides 
-they can't do a rush job 
-call Harper's instead 
-they're faster and much more reliable 
-hello, National Express 
-I need to get a package to Australia ASAP 
-if Harper's can't make the colour copies that fast, we'll take black and white 
-Bob, are you reprinting the tickets 
-yep 
-hello 
-I need to get twenty-five color documents printed right away 
-yes, it's very much a hurry 
-who are you calling, mr. Evans
-what's that
-Oh my tailor 
-your tailor
-these sleeves are too long, they're driving crazy 
-thank you, everyone, for fixing my mistake with mr. Wells 
-now I've asked Cheryl to plan a party for his group next Friday 
-and I'd like for everyone to help 
-Cheryl do you have a plan 
-yes, I do
-Marie, I'd like to have you choose the restaurant for the party
-I'd love to 
-Bob, I'll let you choose the menu 
-you will 
-Paul, could you plan the music 
-yes. good 
-now, Marie, I called 10 restaurants and have them give us a price for a party room 
-these two had the best prices 
-the green room is a nice restaurant 
-great 
-that's my favorite, too
-now, Bob, about the food 
-I was thinking steak and potatoes 
-well, the client asked for fish or chicken 
-so I have the restaurant put together a menu with each 
-which do you like better
-I like chicken more than fish, I guess
-great. chicken it is 
-now, Paul 
-let me guess
-you have a list of music choices 
-these look fine 
-great. I think we're all done
-you see how easy it is to plan something when we do it all together
-so glad we could help
-[Music]
-another wonderful dinner, Cheryl 
-thank you 
-you're welcome
-I really enjoy... cooking, actually 
-when I was young I thought, I was going to be a chef 
-you could be a chef 
-these cookies are fantastic 
-why didn't you become a chef 
-my mother talked to me out of it
-she thought I would always have to work at night 
-she was afraid I would never meet a man and get married 
-she was probably right 
-if you were a chef, you wouldn't have met Bob 
-how do you know
-before he met you, Bob only ate fast food
-it's true 
-your mother must have been very happy when you and Bob got engaged
-she was 
-hey, you'll never guess what bob was going to be 
-Cheryl 
-a rock musician
-basketball player
-no, bob was going to be a dancer 
-he was actually in the state ballet when he was young 
-no kidding
-you never told me this 
-I could have been a great dancer 
-what made you change your mind
-the diet was too hard 
-I had to stop eating everything chocolate cake,  fried chicken, potato chips 
-I tried 
-I might have been able to do it 
-but then they said no more bread and butter 
-bread and butter 
-can you believe it
-and that was the end 
-Wow. Bob. I never knew 
-do you enjoy watching ballet at all
-I can't 
-I'd like to, but as soon as the music starts, I get very, very... hungry 
-what about you, mr. Evans 
-what did you think you're going to be when you were younger
-if I tell you, will you try not to laugh
-of course 
-I always thought I would have my own television program to talk about etiquette 
-I didn't know you are so interested in etiquette 
-I have always loved etiquette 
-I think I would have made a great television etiquette teacher 
-well, I think you could still do it 
-it's perfect for you
-really. why 
-well, you're very polite, for one thing 
-you always know which fork to use at a restaurant 
-that's a real talent you taught me a lot about the customs of other cultures 
-maybe I could still give it a try 
-today's topic dinner conversation 
-if your international guests look offended and are leaving the table early, you've probably chosen a topic that's taboo in their home country
-find out what's acceptable and what's not...
-I'm not much acceptable
-coming up on international etiquette with Evans 
-what do you think
-amazing 
-unforgettable
-you have a real... talent, all right 
-thank you
-I don't know 
-I didn't know the planning a wedding would be so hard
-Marie, could you give us your opinion on a few things
-I'd love to 
-first how many people should we invite 
-Bob wants a small wedding 
-20 guests would be nice 
-I want a large wedding about 300 people 
-300
-yesterday you said 200 
-I have a lot of relatives who want to come 
-then there's the location 
-I always thought I'd get married in a park or at the beach 
-that's so romantic 
-I would like to get married indoors, where I won't get wet if it's raining
-that makes sense
-I prefer traditional music in the ceremony 
-contemporary music 
-I'd like a long ceremony and a short reception
-I want a short ceremony in a huge celebration afterwards 
-and I want ...a chocolate cake, I know
-how are we ever going to agree on this 
-don't hurt yourself
-here's an idea that might work 
-plan a wedding that's big enough to include all of Cheryl's family sorry Bob in the Park
-on Oak Street that has that building where you can go if it rains 
-you can have traditional music in the ceremony and contemporary music at the party and contemporary music at the party, and you could have two cakes at the reception one white and one chocolate
-sounds okay to me 
-me too 
-hey 
-we did it
-yeah
-I'm so happy 
-excuse me 
-thank you
-oh, marie, thank you so much
-you're amazing 
-we couldn't have done it without you 
-hi. lunchtime is over 
-are you coming up to the office 
-I'm too tired to go back to the office 
-planning a wedding is hard work
-I need a holiday 
-let's make today a holiday 
-well tell mr. Evans we can't come back to work 
-that's a great idea
-what are we celebrating 
-you're getting married
-how about national wedding day 
-what happens on national wedding day 
-I don't know 
-why am I the one who has to think of everything
-why don't we make it national singles day instead 
-all the married people give gifts to their single friends 
-No. buying gifts is hard work I want to
-enjoy myself on our new holiday what
-about a red day everybody wears red
-clothes and there's dancing in the
-street that goes on all night how about
-national find a friend another cup of
-coffee
-nice try how about national on time damn
-what happens on national on-time day
-remind one another to come back to work
-on time waitress so mrs. Beatty you're
-looking for an exciting place for your
-next vacation I usually travel to major
-cities in Europe but this time I want to
-go someplace different someplace away
-from the city as long as it's safe how
-about California the Big Sur area is
-spectacular California has lots of
-earthquakes doesn't it well they have
-earthquakes occasionally but not very
-often
-but it does have earthquakes yes I'm not
-going okay
-how about some place in Asia a beach in
-Thailand
-coach Aang has beautiful beaches and
-it's very quiet there a quiet beach
-sounds nice but they said on the news
-there's a monsoon in Thailand
-and what the monsoon will be over by the
-time you go what else can you recommend
-Australia the Australian outback is
-amazing I've heard they have tornadoes
-in Australia some parts where else
-Jamaica Hurricanes
-South Africa floods Hawaii about natural
-disasters don't you miss his baby
-what about Finland Finland it's wild
-beautiful and very different from other
-parts of Europe and nothing bad ever
-happens in Finland it sounds good I'll
-go to Finland great booked your tickets
-ok I just booked your tickets to
-Helsinki Finland
-you'll be staying at the Palace Hotel
-that's great excuse me mr. Evans yes
-Murray mr. Woods is on the phone he told
-me to tell you it's urgent urgent he's
-travelling you know yes he said there's
-some kind of epidemic what kind of
-epidemic it sounds like it's that new
-influenza but he was vaccinated for that
-before he left I know but he told me to
-tell you that he wants to fly home today
-on the Internet it says only three
-people are sick
-that is not an epidemic and it's not
-like anybody's dying from this flu he
-said he didn't want to be the first
-where is he traveling may I ask he's in
-Finland Finland just booked tickets to
-Finland mrs. baby
-everything will be fine you'll get
-vaccinated and you'll have nothing to
-worry about
-I'm not going to Finland you told me
-nothing bad ever happens in Finland mrs.
-Beatty I can't think of anywhere in the
-world you can go and be completely safe
-right here in this city you could go
-outside and get hit by a bus but you
-can't let that stop you from doing the
-things you want to do look why don't we
-go to lunch and we'll talk it over
-I don't think she's going anywhere
-[Laughter]
-hello Bob
-dining alone Paul Murray went to get
-newspapers do you mind if I join you oh
-please sit down
-may I ask what you're reading a history
-of the world the bestseller I'm very
-impressed
-reading nonfiction over lunch I hear
-that it's a very difficult book no it's
-it's a pretty easy reading I can't put
-it down actually a real page-turner huh
-do you think that I could borrow it when
-you're done
-sure I usually prefer fiction myself you
-know thrillers mysteries there's nothing
-like curling up with a good science
-fiction novel is there you read science
-fiction too don't tell anyone are you
-learning a lot from your book yeah I
-think so so tell me what you're reading
-about right now um this part is about
-Great Britain really do you mind if I
-take a look Cheryl hates when I read
-comics that I can understand why you
-can't put the book down
-i thinkin I could borrow it then I'm
-still reading this one but I have
-another one I can loan I meant this look
-at this the paper says in a tornado
-carried a woman for 300 miles and she
-lived to tell about I'm not sure if you
-know this but that story isn't true it's
-in the paper it must be true that paper
-is trash I can't believe you're reading
-it
-what do you mean it's fiction it's not
-news nothing in there is true if you
-want real news you have to read this
-paper that paper is boring this one's
-much more interesting woman gives birth
-to cow man builds house from bread baby
-with two heads
-come on this is offensive storm kills
-100 in Texas train accident kills five
-injures more man kills wife and son I'm
-sorry but all that death and destruction
-is pretty offensive to me I know that
-these things happened and I know that
-those didn't you don't know that you
-just assume that it's true
-let's ask Bob and mr. Evans what paper
-they read never mind let's just read
-that sounds good to me
-look at this a man with four legs
-what are those wacky glasses you're
-wearing these are ultra high-tech
-top-of-the-line state-of-the-art
-cutting-edge TV glasses and you're
-actually watching TV right now yeah
-right here in the corner
-what are you watching the basketball
-game unbelievable and Cheryl doesn't
-mind this yes sorry my team's winning
-this new invention doesn't bother you
-are you kidding
-if I'd known how happy they would make
-him I would have bought those glasses
-for Bob long ago technology today is
-amazing you know I wish they'd invent
-something that would make people who
-talk on cell phones quieter this guy in
-the cafe today was so loud I couldn't
-hear myself talking
-what oh sorry I was laughing at this guy
-on TV if I could invent something it
-would be a thing for Bob's car that
-would automatically charge him when he
-goes over the speed limit
-he drives so fast sometimes but he'd
-slow down if he had to pay no is your
-team losing no I heard what you said you
-just leave my car alone hi Paul
-wait till you see what I've got what is
-it well I have this problem with my cell
-phone whenever I'm traveling with a
-group I can never hear it ring or feel
-it vibrate so I got this thing that lets
-me know whenever my phone is ringing how
-does it do that it buzzes me buzzes you
-know so I could feel it does it work I
-don't know
-then once told me in oh oh what so
-what's going oh oh hello
-no one's there wow that was a big buzz
-it almost hurt
-maybe it isn't working right it's
-working fine who Oh another photo whoa
-strange man if ever get used to that
-I'll always know whenever my phone is
-ringing if I were you I would take that
-thing back to the store before you hurt
-yourself
-I'm going I'll see you later hopes to
-drive okay he'll be fine
-how do you know I'll stop calling him
-did you see the politicians expect to
-raise taxes again really what does the
-government decide to spend our money on
-now they're planning to build a stronger
-military it's wrong to spend so much on
-the military they should spend it on
-education instead
-can we please avoid discussing politics
-why every time we begin talking about
-politics people get mad at each other
-they should spend more money on fighting
-corruption if they were able to stop
-corrupt officials maybe they wouldn't
-need to raise our taxes that's true but
-I think we need to spend more money on
-the military without a strong military
-the world won't be very safe that's one
-way to look at it but maybe the world
-would be safer and better if we try to
-eliminate poverty what do you think
-Cheryl I think that if I say what I
-really think you'll get all mad and call
-me crazy or ridiculous Cheryl don't be
-so afraid we're only talking
-I think that the government should spend
-more money on cooking schools what most
-people don't know how to cook well I
-think the government should help teach
-them that's ridiculous
-are you crazy use our taxes to pay for
-cookies of course not but look at you
-you're all mad at me this is why I never
-discuss politics with friends but don't
-let me stop you from getting mad at each
-other
-Paul I never knew you are so
-conservative
-I'm not conservative sure you are you
-always seem to want things to be just
-like they used to be
-that's not conservative that's just
-smart
-Thanks that's the definition of
-conservative really well I didn't know
-you were so radical what makes you think
-I'm radical you always want to change
-everything
-no I don't I just want our government to
-realize that it's the 21st century and
-they need new ways of doing things
-thank you that sounds radical to me Bob
-tell him I'm not a radical she's not a
-radical
-she's a liberal like me I wouldn't call
-you a liberal oh really
-I'd say you're more of a moderate you're
-always in the middle if I want to be a
-liberal I'll be a liberal thank you
-honey you can be whatever you want you
-just can't be one thing and call it
-something else listen to you you're like
-a little dictator
-I studied politics in school I know
-something about the definition of
-political beliefs is that so so what is
-Cheryl a radical moderate conservative
-who knows she's not saying Cheryl what
-are you would you mind telling us that
-much okay you want to know what I
-believe I believe I believe I believe
-these are the best chips I have ever
-tasted
-everyone we'd like to ask your opinion
-about something
-what is that we're trying to decide
-where to go on vacation after the
-wedding for our honeymoon we thought you
-might be able to help us decide on a
-location an excellent idea where are you
-thinking of going well Bob doesn't
-really like to travel so he's agreed to
-go wherever I want to go as long as the
-hotel has nice bathrooms and a TV that
-sounds fair
-what's your first choice I've always
-wanted to go to Cozumel off the Yucatan
-Peninsula
-Koza Mel is spectacular the island
-itself is pretty flat but the beaches
-are beautiful and the ocean is so blue
-aren't there so many sharks to go
-swimming there no it's very safe what oh
-but it's somewhat overrated
-you just said what else are you thinking
-of what about Tierra del Fuego in the
-south of Argentina and Chile the scenery
-is extraordinary the mountain ranges and
-national parks are breathtaking
-but in June won't it be too dark to do
-very much no plenty of people go there
-in June to the skiing or but of course
-it's probably not romantic enough
-terrible I've heard the jungles and
-rainforests in Malaysia are must-see
-there's so much of course some people
-feel that the scorpions make it too
-dangerous we could go to that Hotel on
-Grant Street along the river stay in
-town for our honeymoon
-big television Cheryl you once told me
-that you wanted to go to Tahiti that's
-right I forgot about that you would love
-to et one of the most beautiful places
-on earth and very very romantic
-really you all think Tahiti is a good
-idea I think you'd love it
-it's too expensive how expensive well do
-you remember how much mr. Rasheed's
-vacation to Tahiti cost yes I do he
-traveled cheaply
-oh well that's it I'm out of ideas I
-guess we'll go someplace boring
-we weren't going to tell you until a
-couple months from now but Paul Murray
-and I were talking and we thought a
-vacation in the South Pacific would be
-perfect I just wish we could afford it
-so we decided that as our wedding gift
-to you we'd like to send you to Tahiti
-all expenses paid we book your flights
-and a hotel on the southern coast for
-two weeks but the and the hotel room has
-a spectacular bathroom EB this big
-[Applause]
-and this one voice output vibration here
-dip dip okay let's talk about how to
-make the t-cell first basically remember
-they are the same like the way to make
-these are the same choose difference
-here is voice or unvoiced vibration or
-no vibration right to make this cell you
-have to put your the tip of your tongue
-right behind your upper teeth like this
-right behind here okay and then press
-your two teeth together and then make a
-blows itself like a drumbeat between the
-two teeth here you would feel that this
-airflow is strong and dry and quick okay
+Press RETURN to get started!
+
+Router>
+Router>ena
+Router#
+Router#config t
+Enter configuration commands, one per line.  End with CNTL/Z.
+r1(config)#hostname R1
+R1(config-if)#IP ADDRESS 192.168.1.254 255.255.255.0
+R1(config-if)#NO SHUT
+
+R1(config-if)#
+%LINK-5-CHANGED: Interface FastEthernet0/0, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/0, changed state to up
+
+R1(config-if)#^Z
+R1#
+%SYS-5-CONFIG_I: Configured from console by console
+
+R1#
+R1#
+
+R1#shOW IP INT BRIEF
+Interface              IP-Address      OK? Method Status                Protocol 
+FastEthernet0/0        192.168.1.254   YES manual up                    up 
+FastEthernet0/1        unassigned      YES unset  administratively down down 
+Vlan1                  unassigned      YES unset  administratively down down
+R1#
+ctrl z
+
+ 
+PART9 Configuring a switch
+
+Switch>EN
+Switch#CONFIG T
+Enter configuration commands, one per line.  End with CNTL/Z.
+Switch(config)#HOSTname SW1
+SW1(config)#
+
+SW1(config)#int vlan 1
+SW1(config-if)#ip address 192.168.1.253 255.255.255.0
+SW1(config-if)#
+
+SW1(config)#ip default-gateway 192.168.1.254
+SW1#?
+SW1#show 
+SW1#
+SW1#show running-config 
+
+interface GigabitEthernet0/1
+!
+interface GigabitEthernet0/2
+!
+interface Vlan1
+ ip address 192.168.1.253 255.255.255.0
+ shutdown
+!
+ip default-gateway 192.168.1.254
+
+SW1#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+SW1(config)#interface vlan 1
+SW1(config-if)#no shutdown 
+
+SW1(config-if)#
+%LINK-5-CHANGED: Interface Vlan1, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan1, changed state to up
+
+SW1(config-if)#
+
+part 10 Configuring a PC
+
+part 17 The layers of the OSI model
+
+all people seem to need Domino's pizza
+application
+presentation
+session
+transport
+network
+data link
+physical
+all people seem to need data processing
+
+part 18 The 3 Upper Layers of the OSI
+PDU, a Protocol Data Unit
 
 
+part 19 The process of Encapsulation
+Don't don't don't stop pouring free beer
+data
+data
+data
+segments
+packets
+frames
+bits
+
+part 20 The tables we use when converting
+
+10000000	128
+11000000	192
+11100000	224
+11110000	240
+11111000	248
+11111100	252
+11111110	254
+11111111	255
+
+
+part 29 
+
+osi model	tcp/ip
+Application		Application
+Presentation	
+Session			
+Transport		Transport
+Network			Internet
+Data-Link		Network
+Physical		
+
+
+
+part 31
+802.3   CSMA/CD
+
+ 
+part 32 What cabling standards to we use
+EIA, TIA 568A and 568B.
+568B
+
+part 34 Classes of Addresses and their ranges
+CLASSES	RANGE		MASK			CIDR	DEFAULT HOSTS
+A		1-126		255.0.0.0		/8		16777214
+B		128-191		255.255.0.0		/16		65536
+C		192-223		255.255.255.0	/24 	254
+D		224-239		N/A				
+E		240-255		N/A				
+
+RIP		224.0.0.9
+EIGRP	224.0.0.10
+OSPF 	224.0.0.5 	224.0.0.6
+
+CIDR Classless Inter-Domain Routing
+169.254.X.X APIPA
+automatic private IP address
+
+
+part 36 Private Class A,B, C address range
+	CIDR CISCO
+A	/8		
+B	/16		/12
+C	/24		/16
+part 38 IPv6 addressing and Expressions
+2001:3200:cadd:1200::/64
+2001 USA
+3200 ISP provider
+cadd facebook
+1200 subnet
+ 
+part 39 IPv6 address types
+FF00::/8	multicast addresses
+FC00::/7	unicast addresses
+2000::/3	global unicast
+FC00::		anycast address
+FE80::/10	link local
+::			default address
+::1			loopback
+FF02::9		RIPNG
+FF02::A		EIGRP
+FF02::5 FF02::6	OSPFV3
+
+part 40 The Auto-configuration feature 
+PC2
+2001:4800:face:1000::1/56
+FE80::209:7CFF:FE05:2980
+2001:4800:face:1000::F
+....
+AUTOCONFIG
+
+router0
+en
+conf t
+hostname R1
+ex
+
+R1#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+R1(config)#do sh ip int brief
+Interface              IP-Address      OK? Method Status                Protocol 
+FastEthernet0/0        unassigned      YES unset  administratively down down 
+FastEthernet0/1        unassigned      YES unset  administratively down down 
+Serial0/0/0            unassigned      YES unset  administratively down down 
+Vlan1                  unassigned      YES unset  administratively down down
+R1(config)#
+R1#
+R1#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+R1(config)#int f0/1
+R1(config-if)#ipv6 address 2001:4800:face:1000::f/56 eui-64
+R1(config-if)#do wr
+Building configuration...
+[OK]
+R1(config-if)#ex
+R1#sh ipv6 int brief
+FastEthernet0/0            [administratively down/down]
+    unassigned
+FastEthernet0/1            [up/down]
+    FE80::204:9AFF:FECC:5102
+    2001:4800:FACE:1000::F
+    2001:4800:FACE:1000:204:9AFF:FECC:5102R1#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+R1(config)#int f0/1
+R1(config-if)#no sh
+
+R1(config-if)#
+%LINK-5-CHANGED: Interface FastEthernet0/1, changed state to up
+
+pc2
+C:\>ipv6config /all
+
+FastEthernet0 Connection:(default port)
+
+   Physical Address................: 00D0.5870.42DC
+   Link-local IPv6 Address.........: FE80::2D0:58FF:FE70:42DC
+   IPv6 Address....................: ::/0
+   Default Gateway.................: ::
+   DNS Servers.....................: ::
+   DHCPv6 Client DUID..............: 00-01-00-01-35-41-D7-2C-
+
+ipv6 unicast-routing
+
+part 41 
+DAD Duplicate address detection
+NS Neighbor solicitation
+NA, Neighbor advertisements
+
+
+
+part 42 
+Dual stack, 64 tunneling and NAT-PT
+
+C:\Users\User>ping loopback -6
+
+Обмен пакетами с LAPTOP-GRIR1G62 [::1] с 32 байтами данных:
+Ответ от ::1: время<1мс
+C:\Users\User>ping loopback -4
+
+Обмен пакетами с LAPTOP-GRIR1G62 [127.0.0.1] с 32 байтами данных:
+Ответ от 127.0.0.1: число байт=32 время<1мс TTL=128
+
+
+
+part 43
+10000000	128
+11000000	192
+11100000	224
+11110000	240
+11111000	248
+11111100	252
+11111110	254
+11111111	255
+
+255.255.240.0
+x.x.1111|0000
+subnet - 16
+hosts  - 4094
+172.16.10.33/16
+255.255.224.0
+x.x.111|00000
+x.x.32.0
+32.1 - 63.254
+x.x.63.255
+x.x.32 - нулевая подсеть
+ 
+part 44
+http://subnettingquestions.com/
+172.23.0.0/27
+
+172.23.11111111.11100000
+255.255.255.24.0
+2,046 subnets
+answer: 2046 subnets and 30 host
+ 
+part 45
+1 what valid host range is the ip address 172.16.10.22 255.255.255.240 a part of?
+a 172.16.10.20 -  172.16.10.22 
+b 172.16.10.1 -  172.16.10.255
+c 172.16.10.16 -  172.16.10.23
+d 172.16.10.17 -  172.16.10.31
+e 172.16.10.17 -  172.16.10.30
+172.16.10.0001|0110
+a 0001|0100 0001|0110 
+b 0000|0001 1111|1111 -
+c 0001|0000 0001|0111 - 
+d 0001|0001 0001|1111 -
+e 0001|0001 0001|1110 +
+2 what is the broadcast address of the subnet address 172.16.8.159/26? 
+a  172.16.255.255
+b 172.16.8.127
+c 172.16.8.191
+d 172.16.8.255
+
+192 - subnet
+11000000 
+159 = 128 + 31 
+10011111
+10111111 - broadcast
+128+64-1 = 191
+c 172.16.8.191 +
+
+3 what is the broadcast address of the subnet address 192.168.10.33 255.255.255.248
+a 192.168.10.40
+b 192.168.10.255 
+c 192.168.255.255
+d 192.168.10.39 +
+
+192.168.10.33
+248 = 256 - 8
+11111000
+33
+00100001
+00100111
+39
+d 192.168.10.39 +
+
+4. If you wanted to have 12 subnet with a class C network ID, which subnet
+a 255.255.255.252
+b 255.255.255.248 
+c 255.255.255.240 
+d 255.255.255.255 
+
+
+ 
+part 46
+VLSM 
+using th following assign the appropriate subnetmask for each broadcast
+nodes	net id	range	broadcast	cidr
+3500	172.20.0.0	172.20.0.1-172.20.15.254	172.20.15.255	/20
+725	172.20.16.0	172.20.16.1-172.20.19.254	172.20.19.255	/22
+100	172.20.20.0	172.20.20.1-172.20.20.126	172.20.20.127	/25
+2	172.20.20.128	172.20.20.129-172.20.20.130	172.20.20.131	/30
+2	172.20.20.132	172.20.20.133-172.20.20.134	172.20.20.135	/30
+2	172.20.20.136	172.20.20.137-172.20.20.138	172.20.20.139	/30
+
+3500	172.20.0.0	172.20.0.1-172.20.15.254	172.20.15.255	/20
+3500	172.20.0.0	172.20.0.1-172.20.15.254	172.20.15.255	/20
+CIDR, C-I-D-R stands for, it's classless interdomain routing
+725	172.20.16.0	172.20.16.1-172.20.19.254	172.20.19.255	/22
+000100|00.x 
+100	172.20.20.0	172.20.20.1-172.20.20.126	172.20.20.127	/25
+00010100.0|0000000 
+2	172.20.20.128	172.20.20.129-172.20.20.130	172.20.20.131	/30
+00010100.10000000 00010100.10000001-00010100.10000010 00010100.10000011 
+2	172.20.20.132	172.20.20.133-172.20.20.134	172.20.20.135	/30
+00010100.10000100 00010100.10000101-00010100.10000110 00010100.10000111 
+2	172.20.20.136	172.20.20.137-172.20.20.138	172.20.20.139	/30
+00010100.10001000 00010100.10001001-00010100.10001010 00010100.10001011 
+
+
+
+part 47
+192.168.1.0 
+192.168.2.0 
+192.168.3.0 
+192.168.0.0 /22
+ip summarry-address eigrp 
+100 192.168.0.0 255.255.252.0 5 
+
+192.168.101.0 
+192.168.102.0 
+192.168.103.0 
+192.168.100.0 /22
+192.168.103.255 broadcast address 
+
+
+ 
+part 48
+255.255.255.252 - 0.0.0.3
+255.255.255.240 - 0.0.0.15
+255.255.255.224 - 0.0.0.31
+255.255.192.0 - 0.0.63.255
+255.255.255.0 - 0.0.0.255
+255.255.111|00000.0 - 0.0.31.255
+
+ACCESS-LIST 10 DENY 192.168.1.0 - 0.0.0.255
+ACCESS-LIST 10 DENY 10.1.1.1 - 0.0.0.0
+ACCESS-LIST 10 DENY HOST 10.1.1.1
+
+ROUTER OSPF 1
+NETWORK 192.168.1.0 0.0.0.255 AREA 0
+NETWORK 10.1.1.4 0.0.0.3 AREA 0
+NETWORK 10.1.1.8 0.0.0.3 AREA 0
+NETWORK 1.1.1.1 0.0.0.0 AREA 0
+
+
+ 
+part 50
+			Network Prefix					interface ID
+Address		2001	4800	face	1000	1234	5678	9abc 	dead	/64
+Binary bits	16		16		16		16		16		16		16		16	
+Sections	First	Second	Third	Fourth
+				64 bits								64 bits
+				
+				Address Given
+		2001	4800	face	1000	::/52		
+		1		0		0		0		
+		1st Pos	2st Pos	3st Pos	4st Pos
+
+
+
+		
+part 52 
+
+		2001	4800	face	1000	::/56		
+		2001	4800	face	1100	::/56		
+		2001	4800	face	1200	::/56		
+		2001	4800	face	1300	::/56		
+		2001	4800	face	1400	::/56		
+		2001	4800	face	1500	::/56		
+		2001	4800	face	1600	::/56		
+		2001	4800	face	1700	::/56		
+		2001	4800	face	1800	::/56		
+
+
+
+part 53
+connect to router
+
+console line
+auxilary line
+vty lines: telnet or ssh
+
+ 
+part 54 
+ROM, POST, BOOTSTRAP, NINI-IOS, ROMMEN
+RAM, run arp cache,routing table, packet buffers
+NVRAM, start hdd
+Flash   ios
+
+part 55
+flash,tftp,rom
+ 
+part 56
+enter, ?
+conf t
+cdp run
+sh ip int brief
+Ctrl+Shift+6 is a break
+
+ 
+part 57
+
+Router(config)#hostname R1
+R1(config)#en
+R1(config)#enable password cisco
+R1(config)#enable secret student
+R1(config)#service password-encryption 
+
+username ldiaze privilege 15 password 0 cisco1
+R1(config)#banner motd # welcome to R1 #
+===
+Router#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#hostname R1
+R1(config)#enable password cisco
+R1(config)#enable secret student
+R1(config)#service password-encryption 
+R1(config)#username ldiaz privilege 15 password 0 cisco
+R1(config)#banner motd # welcome to R1 #
+R1(config)#ip domain-lookup 
+R1(config)#ip domain-name cisco.com
+R1(config)#ip name-server 192.168.1.2
+R1(config)#crypto key generate  rsa
+512
+R1(config)#line con 0
+R1(config-line)#password cisco
+R1(config-line)#login local 
+R1(config-line)#exec-timeout 0 0
+R1(config-line)#logging synchronous 
+R1(config-line)#line vty 0 15
+R1(config-line)#password cisco
+R1(config-line)#login local 
+R1(config-line)#exec-timeout 0 0
+R1(config-line)#loggin synchronous 
+R1(config-line)#exi
+R1(config)#ex
+R1#copy run start
+enter(start-config)
+
+
+====
+hostname R1
+enable password cisco
+enable secret student
+service password-encryption 
+username ldiaz privilege 15 password 0 cisco
+banner motd # welcome to R1 #
+ip domain-lookup 
+ip domain-name cisco.com
+ip name-server 192.168.1.2
+crypto key generate  rsa
+512
+line con 0
+password cisco
+login local 
+exec-timeout 0 0
+logging synchronous 
+line vty 0 15
+password cisco
+login local 
+exec-timeout 0 0
+loggin synchronous 
+exi
+
+R1(config)#ex
+R1#copy run start
+enter(start-config)
+
+
+
+part 58
+
+R1(config-if)#line vty 0 15
+R1(config-line)#transport input all
+R1#sh ip int brief 
+R1(config)#int f0/0
+R1(config-if)#ip address 192.168.1.254 255.255.255.0
+R1(config-if)#description connection to lan
+
+ 
+part 5 
+part 5 

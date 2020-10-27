@@ -1,0 +1,7 @@
+ERROR: Could not install packages due to an EnvironmentError: [WinError 145] Пап
+ка не пуста: 'c:\\python36\\lib\\site-packages\\~ensorflow\\contrib\\gan\\python
+\\eval'
+
+
+<module 'tensorflow._api.v1.version' from 'c:\\python36\\lib\\site-packages\\tensorflow\\_api\\v1\\version\\__init__.py'>
+<module 'tensorflow._api.v2.version' from 'c:\\python36\\lib\\site-packages\\tensorflow\\_api\\v2\\version\\__init__.py'>
