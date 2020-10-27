@@ -1,3 +1,36 @@
+
+## 
+   
+   
+   
+   
+   
+## x04html
+замена sign great to &gt  
+text to p   
+   
+   
+   
+   
+## x06bookmarks
+empty   
+   
+   
+   
+   
+## x07dict
+test  
+sentence  
+Translate Word List  
+dict  
+mMakeListSentence  
+don't reapet  
+make links  
+nbconvert   
+  
+  
+  
+
 ## x08dict
 [x08dict](http://localhost:8888/notebooks/js/x08dict.ipynb)  
 [x08dict.ipynb](x08dict.ipynb)  
