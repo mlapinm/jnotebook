@@ -42,7 +42,7 @@
 [Quality Assurance and Testing with Chai]()  
 [Advanced Node and Express]()  
 [Information Security and Quality Assurance Projects]() 
-[****]()   
+[**Machine Learning with Python Certification (300 hours)**](#Machine-Learning-with-Python-Certification-300-hours)   
 []()   
 []()   
 
@@ -154,6 +154,59 @@
 - Loading Data and Advanced Indexing
 ## Data Analysis with Python Projects
 
-   
-   
+## Machine Learning with Python Certification (300 hours) 
+[Machine Learning with Python Certification (300 hours)](d15tensorflow.ipynb)  
+
+## TensorFlow
+- IntroInformation
+- Introduction to the TensorFlow Lectures
+- Introduction: Machine Learning Fundamentals
+- Introduction to TensorFlow
+- Core Learning Algorithms
+- Core Learning Algorithms: Working with Data
+- Core Learning Algorithms: Training and Testing Data
+- Core Learning Algorithms: The Training Process
+- Core Learning Algorithms: Classification
+- Core Learning Algorithms: Building the Model
+- Core Learning Algorithms: Clustering
+- Core Learning Algorithms: Hidden Markov Models
+- Core Learning Algorithms: Using Probabilities to make Predictions
+- Neural Networks with TensorFlow
+- Neural Networks: Activation Functions
+- Neural Networks: Optimizers
+- Neural Networks: Creating a Model
+- Convolutional Neural Networks
+- Convolutional Neural Networks: The Convolutional Layer
+- Creating a Convolutional Neural Network
+- Convolutional Neural Networks: Evaluating the Model
+- Convolutional Neural Networks: Picking a Pretrained Model
+- Natural Language Processing With RNNs
+- Natural Language Processing With RNNs: Part 2
+- Natural Language Processing With RNNs: Recurring Neural Networks
+- Natural Language Processing With RNNs: Sentiment Analysis
+- Natural Language Processing With RNNs: Making Predictions
+- Natural Language Processing With RNNs: Create a Play Generator
+- Natural Language Processing With RNNs: Building the Model
+- Natural Language Processing With RNNs: Training the Model
+- Reinforcement Learning With Q-Learning
+- Reinforcement Learning With Q-Learning: Part 2
+- Reinforcement Learning With Q-Learning: Example
+- Conclusion
+## How Neural Networks Work
+- IntroInformation
+- Introduction to the How Neural Networks Work Lectures
+- How Deep Neural Networks Work
+- Recurrent Neural Networks RNN and Long Short Term Memory LSTM
+- Deep Learning Demystified
+- How Convolutional Neural Networks work
+## Machine Learning with Python Projects
+- IntroInformation
+- Introduction to the Machine Learning Projects
+- Rock Paper Scissors
+- Cat and Dog Image Classifier
+- Book Recommendation Engine using KNN
+- Linear Regression Health Costs Calculator
+- Neural Network SMS Text Classifier
+
+
   
