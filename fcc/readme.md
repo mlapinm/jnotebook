@@ -35,8 +35,8 @@
 [Basic Node and Express]()  
 [MongoDB and Mongoose]()  
 [APIs and Microservices Projects]()  
-[Scientific Computing with Python Certification (300 hours)](#Scientific-Computing-with-Python-Certification-300-hours)   
-[Data Analysis with Python Certification (300 hours)](#Data-Analysis-with-Python-Certification-300-hours)    
+[**Scientific Computing with Python Certification (300 hours)**](#Scientific-Computing-with-Python-Certification-300-hours)   
+[**Data Analysis with Python Certification (300 hours)**](#Data-Analysis-with-Python-Certification-300-hours)    
 [**Information Security and Quality Assurance Certification (300 hours)**]()  
 [*Information Security with HelmetJS*](d12secur.ipynb)  
 [Quality Assurance and Testing with Chai]()  
@@ -107,9 +107,53 @@
 - Data Visualization: Mailing Lists   
    
 ## Data Analysis with Python Certification (300 hours)
-[]()   
+[Data Analysis with Python Certification](d14python.ipynb)   
    
-   
+## Data Analysis with Python Course
+- IntroInformation
+- Introduction to the Data Analysis with Python Course Lectures
+- Introduction to Data Analysis
+- Data Analysis Example A
+- Data Analysis Example B
+- How to use Jupyter Notebooks Intro
+- Jupyter Notebooks Cells
+- Jupyter Notebooks Importing and Exporting Data
+- Numpy Introduction A
+- Numpy Introduction B
+- Numpy Arrays
+- Numpy Operations
+- Numpy Boolean Arrays
+- Numpy Algebra and Size
+- Pandas Introduction
+- Pandas Indexing and Conditional Selection
+- Pandas DataFrames
+- Pandas Conditional Selection and Modifying DataFrames
+- Pandas Creating Columns
+- Data Cleaning Introduction
+- Data Cleaning with DataFrames
+- Data Cleaning Duplicates
+- Data Cleaning and Visualizations
+- Reading Data Introduction
+- Reading Data CSV and TXT
+- Reading Data from Databases
+- Parsing HTML and Saving Data
+- Python Introduction
+- Python Functions and Collections
+- Python Iteration and Modules
+## Numpy
+- IntroInformation
+- Introduction to the Numpy Lectures
+- What is NumPy
+- Basics of Numpy
+- Accessing and Changing Elements, Rows, Columns
+- Initializing Different Arrays
+- Initialize Array Problem
+- Copying Arrays Warning
+- Mathematics
+- Reorganizing Arrays
+- Loading Data and Advanced Indexing
+## Data Analysis with Python Projects
+
    
    
   
