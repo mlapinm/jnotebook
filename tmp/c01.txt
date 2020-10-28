@@ -1,18 +1,10 @@
-Installing jupyter_contrib_nbextensions
-https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/install.html
-pip install jupyter_contrib_nbextensions
+Как подключить телефон к Android Studio через USB
+Для подключения смартфона к приложению Android Studio необходимо:
 
-
-Render .md files in Jupyter #2485
-https://github.com/jupyter/notebook/issues/2485
-
-
-pip install jupyter_nbextensions_configurator
-
-
-jupyter nbextensions_configurator enable --user
-
-Notebooks written entirely in Markdown
-https://jupyterbook.org/file-types/myst-notebooks.html
-
+зайти в «Настройки телефона» – «Сведения ПО» – «Для разработчиков»;
+в параметрах выбирать «Установка драйвера»;
+перейти на предложенную страницу;
+найти нужную модель устройства, по ссылке произвести установку;
+подключить телефон к компьютеру через USB. В диспетчере устройств появится наименование телефона, через который производится запуск Android Studio. 
+После установки по необходимости проводится отладка приложения.
 
