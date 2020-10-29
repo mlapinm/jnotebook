@@ -131,7 +131,7 @@ The onFulfilled and onRejected Functions
 footer   
 
 ## codecademy Introduction to JavaScript 2
-[codecademy Introduction to JavaScript 2](b03js.ipynb)
+[codecademy Introduction to JavaScript 2](b03js.ipynb)   
 codecademy Introduction to JavaScript 2   
 The onFulfilled and onRejected Functions   
 Using catch with Promises   
