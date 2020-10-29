@@ -1,6 +1,7 @@
 [codecademy Introduction to JavaScript](#codecademy-Introduction-to-JavaScript)  
 [codecademy Introduction to JavaScript 2](#codecademy-Introduction-to-JavaScript-2)   
 [codecademy Introduction to JavaScript 3](#codecademy-Introduction-to-JavaScript-3)   
+[codecademy Learn HTML](#codecademy-Learn-HTML)   
 [](#)   
 [](#)   
 [](#)   
@@ -176,6 +177,39 @@ async GET Requests III
 async POST Requests I   
 async POST Requests II   
 async POST Requests III   
+
+## codecademy Learn HTML
+[codecademy Learn HTML](c02http.ipynb)   
+codecademy Learn HTML   
+Displaying Text   
+Styling Text   
+Line Breaks   
+Unordered Lists   
+Ordered Lists   
+Images   
+Image Alts   
+Videos   
+Preparing for HTML   
+The <html> tag   
+The Head   
+Page Titles   
+Linking to Other Web Pages   
+Opening Links in a New Window   
+Linking to Relative Page   
+Linking At Will   
+Linking to Same Page   
+Whitespace   
+comment   
+Why Tables?   
+Create a Table   
+Styling with CSS   
+Introduction to HTML Forms   
+How a Form Works   
+Range Input   
+Submit Form   
+Introduction to HTML Form Validation   
+Introduction to Semantic HTML   
+
 
 ## xdict
 [x02dict](#x02dict)
