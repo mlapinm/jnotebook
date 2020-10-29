@@ -3,6 +3,7 @@
 [codecademy Introduction to JavaScript 3](#codecademy-Introduction-to-JavaScript-3)   
 [codecademy Learn HTML](#codecademy-Learn-HTML)   
 [Welcome to Codecademy](#Welcome-to-Codecademy)   
+[codecademy-css](#codecademy-css)   
 [](#)   
 [](#)   
 [](#)   
@@ -231,6 +232,109 @@ Welcome to Codecademy
 3 CodeSchool com   
 4 codeavengers com   
 5 codecombat   
+
+## codecademy-css
+[codecademy-css](c03css.ipynb)   
+codecademy-css   
+Inline Styles   
+The style Tag   
+The css file   
+Linking the CSS File   
+Class Name   
+Multiple Classes   
+ID Name   
+Classes and IDs   
+Specificity   
+Chaining Selectors   
+Nested Elements   
+Chaining and Specificity   
+Important   
+Multiple Selectors   
+Introduction To Visual Rules   
+Font Family   
+Font Size   
+Font Weight   
+Text Align   
+Color   
+Opacity   
+Background Image   
+Introduction to the Box Model   
+The Box Model   
+Borders   
+Border Radius   
+Padding I   
+Padding II   
+Margins I   
+Margins II   
+Auto   
+Margin Collapse   
+Minimum and Maximum Height and Width   
+Overflow   
+Resetting Defaults   
+Visibility   
+Box Model Content-Box   
+Box Model Border-Box   
+The New Box Model   
+Flow of HTML   
+Position   
+Position Relative   
+Position Absolute   
+Position Fixed   
+Z-Index   
+Inline Display   
+Block Display   
+Inline-Block Display   
+Float   
+Clear   
+Introduction to Color   
+Foreground vs Background   
+Hexadecimal   
+RGB Colors   
+Hex and RGB   
+Hue Saturation and Lightness   
+Opacity and Alpha   
+Typography   
+Font Family   
+Font Weight   
+Font Weight II   
+Font Style   
+Word Spacing   
+letter spacing   
+Text Transformation   
+Text Alignment   
+Line Height Anatomy   
+Line Height   
+Serif and Sans Serif   
+Fallback Fonts   
+Linking Fonts I   
+Font-Face II   
+Font-Face III   
+Introduction to Grids   
+Creating Columns   
+Creating Rows   
+Grid Template   
+Fraction   
+Repeat   
+minmax   
+Grid Gap   
+Grid Items   
+Multiple Row Items   
+Grid Row   
+Grid Column   
+Grid Area   
+Introduction   
+Grid Template Areas   
+Overlapping Elements   
+Justify Items   
+Justify Content   
+Align Items   
+Align Content   
+Justify Self and Align Self   
+Implicit vs. Explicit Grid   
+Grid Auto Rows and Grid Auto Columns   
+Grid Auto Flow   
+
+
 
 ## xdict
 [x02dict](#x02dict)
