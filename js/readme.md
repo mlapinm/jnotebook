@@ -4,6 +4,7 @@
 [codecademy Learn HTML](#codecademy-Learn-HTML)   
 [Welcome to Codecademy](#Welcome-to-Codecademy)   
 [codecademy-css](#codecademy-css)   
+[Introduction to PHP codecademy](#Introduction-to-PHP-codecademy)  
 [](#)   
 [](#)   
 [](#)   
@@ -334,7 +335,24 @@ Implicit vs. Explicit Grid
 Grid Auto Rows and Grid Auto Columns   
 Grid Auto Flow   
 
-
+## Introduction to PHP codecademy
+[Introduction to PHP codecademy](c06php.ipynb)   
+Introduction to PHP codecademy   
+PHP Numbers   
+Introduction to PHP Functions   
+Ordered Arrays   
+Associative Arrays   
+PHP and HTML   
+PHP and HTML   
+HTML Form Handling in PHP   
+Booleans and Comparison Operators   
+Logical Operators and Compound Conditions   
+Loops   
+Loops in HTML   
+Introduction to Form Validation   
+Introduction to Regular Expressions   
+Introduction to PHP Form Validation   
+Classes and Objects   
 
 ## xdict
 [x02dict](#x02dict)
