@@ -1,4 +1,5 @@
 [codecademy Introduction to JavaScript](#codecademy-Introduction-to-JavaScript)  
+[codecademy Introduction to JavaScript 2](#codecademy-Introduction-to-JavaScript-2)   
 [](#)   
 [](#)   
 [](#)   
@@ -129,7 +130,33 @@ Consuming Promises
 The onFulfilled and onRejected Functions   
 footer   
 
-
+## codecademy Introduction to JavaScript 2
+[codecademy Introduction to JavaScript 2](b03js.ipynb)
+codecademy Introduction to JavaScript 2   
+The onFulfilled and onRejected Functions   
+Using catch with Promises   
+Chaining Multiple Promises   
+Avoiding Common Mistakes   
+Using Promise all   
+The async Keyword   
+The await Operator   
+Writing async Functions   
+Handling Dependent Promises   
+Handling Errors   
+Handling Independent Promises   
+Await Promise all   
+Await Promise all   
+Introduction to Requests   
+HTTP Requests   
+XHR GET Requests I   
+XHR GET Requests II   
+XHR GET Requests III   
+XHR GET Requests IV   
+XHR POST Requests I   
+XHR Post Requests III   
+Introduction to Requests with ES6   
+fetch GET Requests I   
+fetch GET Requests II   
 
 ## xdict
 [x02dict](#x02dict)
