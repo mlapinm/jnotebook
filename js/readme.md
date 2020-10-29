@@ -2,7 +2,7 @@
 [codecademy Introduction to JavaScript 2](#codecademy-Introduction-to-JavaScript-2)   
 [codecademy Introduction to JavaScript 3](#codecademy-Introduction-to-JavaScript-3)   
 [codecademy Learn HTML](#codecademy-Learn-HTML)   
-[Welcome to Codecademy!](#Welcome-to-Codecademy!)   
+[Welcome to Codecademy](#Welcome-to-Codecademy)   
 [](#)   
 [](#)   
 [](#)   
@@ -211,17 +211,19 @@ Submit Form
 Introduction to HTML Form Validation   
 Introduction to Semantic HTML   
 
-## Welcome to Codecademy!
-[Welcome to Codecademy!](c02welcome.ipynb)   
-Welcome to Codecademy!   
+[Welcome to Codecademy](#Welcome-to-Codecademy)   
+
+## Welcome to Codecademy
+[Welcome to Codecademy](c02welcome.ipynb)   
+Welcome to Codecademy   
 Learn R   
-Welcome to Codecademy!   
-1 Welcome to Codecademy!   
-2 Write some code!   
+Welcome to Codecademy   
+1 Welcome to Codecademy   
+2 Write some code   
 3 Changing Variables   
 4 Changing colors   
 5 Multiple Colors   
-6 Change Physics!   
+6 Change Physics   
 7 Onward   
 Топ 5 сайтов для изучения JavaScript   
 1 freecodecamp   
