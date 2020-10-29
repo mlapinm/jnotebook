@@ -542,11 +542,131 @@ part 58
 
 R1(config-if)#line vty 0 15
 R1(config-line)#transport input all
+R1#copy run start
 R1#sh ip int brief 
 R1(config)#int f0/0
 R1(config-if)#ip address 192.168.1.254 255.255.255.0
 R1(config-if)#description connection to lan
+R1(config-if)#no sh
+
+R1#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+R1(config)#int s0/0/0
+R1(config-if)#ip address 10.1.1.5 255.255.255.252
+R1(config-if)#description connectio to R2
+R1(config-if)#clock rate 4000000
+R1(config-if)#no sh
+R1#copy run start
+R1#sh ip int brief
+
+
+enable
+config t
+hostname R2
+enable password cisco
+enable secret student
+service password-encryption
+username ldiaz privilege 15 password 0 cisco
+banner motd $ welcome to R2 $
+ip domain-lookup
+ip domain-name cisco.com
+ip name-server 192.168.1.2
+crypto key generate rsa
+512
+line con 0
+password cisco
+login local
+exec-timeout 0 0
+logging synchronous
+line vty 0 15
+password cisco
+login local
+exec-timeout 0 0
+logging synchronous
+transport input all
+exit
+int f0/0
+ip address 192.168.2.254 255.255.255.0
+description connection to lan
+no shut
+int s0/0/1
+ip address 10.1.1.6 255.255.255.252
+description connection to R1
+no shut
+exit
+exit
+copy run start
+
+R2#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+R2(config)#line vty 0 15
+R2(config-line)#transport input all
+
+
+
+
+
 
  
-part 5 
-part 5 
+part 59 
+C:\>ipconfig /all
+C:\>ping 192.168.1.254
+C:\>telnet 192.168.1.254
+Trying 192.168.1.254 ...Open welcome to R1 
+
+
+User Access Verification
+
+Username: ldiaz
+Password: 
+R1#
+
+C:\>ssh -l ldiaz 192.168.1.254
+
+Password: 
+
+ welcome to R1 
+
+R1#
+
+
+part 60 
+R1#sh run 
+R1#sh start 
+R1#sh ip int brief
+R1#sh protocols 
+R1#sh flash: 
+R1#show version 
+R1#sh int f0/0
+R1#sh ip int f0/0
+
+
+part 61 
+R1(config)#ip dhcp excluded-address 192.168.1.1 192.168.1.20
+R1(config)#ip dhcp pool laz
+R1(dhcp-config)#default-router 192.168.1.254
+R1(dhcp-config)#dns-server 192.168.1.2
+R1(dhcp-config)#network 192.168.1.0 255.255.255.0
+do wr
+R1#copy run start
+
+ 
+part 6 
+ 
+part 6 
+ 
+part 6 
+ 
+part 6 
+ 
+part 6 
+ 
+part 6 
+ 
+part 6 
+ 
+part 6 
+ 
+part 6 
+ 
+ 
