@@ -1,5 +1,6 @@
 [codecademy Introduction to JavaScript](#codecademy-Introduction-to-JavaScript)  
 [codecademy Introduction to JavaScript 2](#codecademy-Introduction-to-JavaScript-2)   
+[codecademy Introduction to JavaScript 3](#codecademy-Introduction-to-JavaScript-3)   
 [](#)   
 [](#)   
 [](#)   
@@ -157,6 +158,24 @@ XHR Post Requests III
 Introduction to Requests with ES6   
 fetch GET Requests I   
 fetch GET Requests II   
+
+## codecademy Introduction to JavaScript 3
+[codecademy Introduction to JavaScript 3](b04js.ipynb)   
+codecademy Introduction to JavaScript 3   
+fetch GET Requests II   
+fetch GET Requests III   
+fetch GET Requests IV   
+fetch POST Requests I   
+fetch POST Requests II   
+fetch Post Requests III   
+fetch POST Requests IV   
+fetch POST Requests V   
+async GET Requests I   
+async GET Requests II   
+async GET Requests III   
+async POST Requests I   
+async POST Requests II   
+async POST Requests III   
 
 ## xdict
 [x02dict](#x02dict)
