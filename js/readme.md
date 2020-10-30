@@ -6,6 +6,7 @@
 [codecademy-css](#codecademy-css)   
 [Introduction to PHP codecademy](#Introduction-to-PHP-codecademy)  
 [Make a Website codecademy](#Make-a-Website-codecademy)   
+[Learn SQL codecademy](#Learn-SQL-codecademy)   
 [](#)   
 [](#)   
 [](#)   
@@ -362,7 +363,13 @@ A Closer Look at CSS
 Boundaries and Space   
 Setting Up Your Domain   
 
-
+## Learn SQL codecademy
+[Learn SQL codecademy](c07sql.ipynb)   
+Learn SQL codecademy   
+Manipulation   
+Queries   
+Aggregate Functions   
+Multiple Tables   
 
 ## xdict
 [x02dict](#x02dict)
