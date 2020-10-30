@@ -8,6 +8,8 @@
 [Make a Website codecademy](#Make-a-Website-codecademy)   
 [Learn SQL codecademy](#Learn-SQL-codecademy)   
 [Learn Ruby codecademy](#Learn-Ruby-codecademy)   
+[Intro to JSX Learn ReactJS codecademy](#Intro-to-JSX-Learn-ReactJS-codecademy)   
+[First React Component Learn ReactJS codecademy](#First-React-Component-Learn-ReactJS-codecademy)   
 [](#)   
 [](#)   
 [](#)   
@@ -423,6 +425,16 @@ Control Flow in Ruby
 16 Dare to Compare   
 17 Billions of Booleans   
 
+## Learn ReactJS: Part II codecademy
+[Learn ReactJS: Part II codecademy](c12react.ipynb)   
+Learn ReactJS: Part II codecademy   
+Stateless Components From Stateful Components   
+Stateless Components From Stateful Components   
+1 Stateless Components Inherit From Stateful Components   
+2 Build a Stateful Component Class   
+3 Build a Stateless Component Class   
+4 Pass a Component's State   
+
 
 ## xdict
 [x02dict](#x02dict)
@@ -499,7 +511,15 @@ don't reapet
 make links  
 nbconvert   
   
-  
+## Intro to JSX Learn ReactJS codecademy
+[Intro to JSX Learn ReactJS codecademy](c11react.ipynb)   
+Intro to JSX Learn ReactJS codecademy   
+Intro to JSX   
+Advanced JSX   
+Your First React Component   
+
+## First React Component Learn ReactJS codecademy
+[First React Component Learn ReactJS codecademy](c112react.ipynb)   
   
 
 ## x08dict
