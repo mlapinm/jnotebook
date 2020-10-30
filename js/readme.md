@@ -7,6 +7,7 @@
 [Introduction to PHP codecademy](#Introduction-to-PHP-codecademy)  
 [Make a Website codecademy](#Make-a-Website-codecademy)   
 [Learn SQL codecademy](#Learn-SQL-codecademy)   
+[Learn Ruby codecademy](#Learn-Ruby-codecademy)   
 [](#)   
 [](#)   
 [](#)   
@@ -370,6 +371,58 @@ Manipulation
 Queries   
 Aggregate Functions   
 Multiple Tables   
+
+
+## Learn Ruby codecademy
+[Learn Ruby codecademy](c10ruby.ipynb)   
+Learn Ruby codecademy   
+Introduction to Ruby   
+Introduction to Ruby   
+1 Overview  Sneak Peek   
+2 Data Types: Numbers Strings Booleans   
+3 Variables   
+4 Math   
+5 puts and print   
+6 Everything in Ruby is an Object   
+7 The length  Method   
+8 The reverse Method   
+9 upcase downcase   
+10 Single Line Comments   
+11 MultiLine Comments   
+12 Naming Conventions   
+13 Variables & Data Types   
+14 Math   
+15 Strings and String Methods   
+16 Comments   
+Putting the Form in Formatter   
+Putting the Form in Formatter   
+1 What You ll Be Building   
+2 Prompting the User   
+3 Getting Input   
+4 Repeat for More Input   
+5 Printing the Output   
+6 Formatting with String Methods   
+7 Great Work!   
+Control Flow in Ruby   
+Control Flow in Ruby   
+1 How It Works   
+2 If   
+3 Else   
+4 Elsif   
+5 Unless   
+6 Equal or Not?   
+7 Less Than or Greater Than   
+8 Practice Makes Perfect   
+9 And   
+10 Or   
+11 Not   
+12 Combining Boolean Operators   
+13 Nice Work   
+14 If  Else and Elsif   
+15 Unless   
+16 Dare to Compare   
+17 Billions of Booleans   
+
 
 ## xdict
 [x02dict](#x02dict)
