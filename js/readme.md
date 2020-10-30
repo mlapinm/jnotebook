@@ -10,8 +10,7 @@
 [Learn Ruby codecademy](#Learn-Ruby-codecademy)   
 [Intro to JSX Learn ReactJS codecademy](#Intro-to-JSX-Learn-ReactJS-codecademy)   
 [First React Component Learn ReactJS codecademy](#First-React-Component-Learn-ReactJS-codecademy)   
-[Learn ReactJS: Part II codecademy](#Learn-ReactJS:-Part-II-codecademy)   
-[](#)   
+[Learn ReactJS Part II codecademy](#Learn-ReactJS-Part-II-codecademy)[](#)   
 [](#)   
 [](#)   
 [](#)   
@@ -426,8 +425,8 @@ Control Flow in Ruby
 16 Dare to Compare   
 17 Billions of Booleans   
 
-## Learn ReactJS: Part II codecademy
-[Learn ReactJS: Part II codecademy](c12react.ipynb)   
+## Learn ReactJS Part II codecademy
+[Learn ReactJS Part II codecademy](c12react.ipynb)   
 Learn ReactJS: Part II codecademy   
 Stateless Components From Stateful Components   
 Stateless Components From Stateful Components   
