@@ -11,7 +11,7 @@
 [Intro to JSX Learn ReactJS codecademy](#Intro-to-JSX-Learn-ReactJS-codecademy)   
 [First React Component Learn ReactJS codecademy](#First-React-Component-Learn-ReactJS-codecademy)   
 [Learn ReactJS Part II codecademy](#Learn-ReactJS-Part-II-codecademy)[](#)   
-[Learn how to easily build single-page web applications using this popular JavaScript framework.](#Learn-how-to-easily-build-single-page-web-applications-using-this-popular-JavaScript-framework.)   
+[Learn how to easily build single-page web applications using this popular JavaScript framework](#Learn-how-to-easily-build-single-page-web-applications-using-this-popular-JavaScript-framework)   
 [](#)   
 [](#)   
 [](#)   
@@ -437,8 +437,8 @@ Stateless Components From Stateful Components
 4 Pass a Component's State   
 
 
-## Learn how to easily build single-page web applications using this popular JavaScript framework.
-[Learn how to easily build single-page web applications using this popular JavaScript framework.](c14angular.ipynb)   
+## Learn how to easily build single-page web applications using this popular JavaScript framework
+[Learn how to easily build single-page web applications using this popular JavaScript framework](c14angular.ipynb)   
 Learn how to easily build single-page web applications using this popular JavaScript framework.   
 Your First App   
 6. ng-repeat I   
