@@ -651,7 +651,82 @@ do wr
 R1#copy run start
 
  
-part 6 
+part 62 
+10.100.0.32/27
+11100000 224  
+00011111 31
+32 00100000 
+64 01000000
+96 01100000
+
+Switch(config)#hostname Classroom10
+Classroom10#sh vlan
+10 cls10 fa0/1, fa0/2
+sh ip trunc
+fa0/24 trunking
+
+Core#sh vlan
+fa0/19 - fa0/23 trunking
+
+
+
+Router(config)#int f0/0
+Router(config-if)#no sh
+
+Router(config-if)#
+%LINK-5-CHANGED: Interface FastEthernet0/0, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/0, changed state to up
+
+Router(config-if)#int f0/0.2
+Router(config-subif)#
+%LINK-5-CHANGED: Interface FastEthernet0/0.2, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/0.2, changed state to up
+
+Router(config-subif)#encap dot1q 2
+Router(config-subif)#ip address 10.100.0.254 255.255.255.224
+Router(config-subif)#
+
+Router(config-subif)#int f0/0.2
+Router(config-subif)#ip address 10.100.0.30 255.255.255.224
+Router(config-subif)#int f0/0.10
+Router(config-subif)#encap dot1q 10
+Router(config-subif)#ip address 10.100.0.62 255.255.255.224
+
+Router(config-subif)#int f0/0.20
+Router(config-subif)#
+%LINK-5-CHANGED: Interface FastEthernet0/0.20, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/0.20, changed state to up
+
+Router(config-subif)#encap dot1q 20
+Router(config-subif)#ip address 10.100.0.94 255.255.255.224
+
+
+Router(config-subif)#int f0/0.30
+Router(config-subif)#
+%LINK-5-CHANGED: Interface FastEthernet0/0.30, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/0.30, changed state to up
+
+Router(config-subif)#encap dot1q 30
+Router(config-subif)#ip address 10.100.0.126 255.255.255.224
+
+
+serv
+10.100.0.1
+10.100.0.30
+71.255.83.65
+
+Router#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#int f0/0.10
+Router(config-subif)#ip help
+Router(config-subif)#ip helper-address 10.100.0.1
+
+
+
  
 part 6 
  
