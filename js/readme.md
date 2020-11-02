@@ -15,6 +15,7 @@
 [AngularJS уроки](#AngularJS-уроки)   
 [Learn Phaser](#Learn-Phaser)   
 [Learn Csharp](#Learn-Csharp)   
+[Livestreams](#Livestreams)   
 [](#)   
 [](#)   
 [](#)   
@@ -486,6 +487,14 @@ Method Output
 Alternate Expressions   
 Arrays   
 Loops   
+
+## Livestreams
+[Livestreams](c24live.ipynb)   
+Livestreams   
+Architect Arithmetic   
+Hardware with Adafruit (Python)   
+Console Creatures Livestream (Csharp)   
+ACLU Child Separation Livestream (R)   
 
 
 ## xdict
