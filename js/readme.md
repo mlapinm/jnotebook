@@ -12,6 +12,7 @@
 [First React Component Learn ReactJS codecademy](#First-React-Component-Learn-ReactJS-codecademy)   
 [Learn ReactJS Part II codecademy](#Learn-ReactJS-Part-II-codecademy)[](#)   
 [Learn how to easily build single-page web applications using this popular JavaScript framework](#Learn-how-to-easily-build-single-page-web-applications-using-this-popular-JavaScript-framework)   
+[Learn Phaser](#Learn-Phaser)   
 [](#)   
 [](#)   
 [](#)   
@@ -448,6 +449,15 @@ Your First App
 10. ng-click II   
 Directives   
 Directives   
+
+## Learn Phaser
+[Learn Phaser](c16phaser.ipynb)   
+Learn Phaser: Basics   
+Learn Phaser Basics: Color a Pegasus   
+Learn Phaser: Physics   
+Learn Phaser: Multi-Scened Games   
+Learn Phaser: Cameras and Effects   
+
 
 ## xdict
 [x02dict](#x02dict)
