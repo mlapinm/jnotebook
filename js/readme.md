@@ -16,6 +16,7 @@
 [Learn Phaser](#Learn-Phaser)   
 [Learn Csharp](#Learn-Csharp)   
 [Livestreams](#Livestreams)   
+[jQuery для начинающих habr](#jQuery-для-начинающих-habr)   
 [](#)   
 [](#)   
 [](#)   
@@ -496,6 +497,20 @@ Hardware with Adafruit (Python)
 Console Creatures Livestream (Csharp)   
 ACLU Child Separation Livestream (R)   
 
+## jQuery для начинающих habr
+[jQuery для начинающих habr](d01jq.ipynb)   
+jQuery для начинающих habr   
+Выдвижная панель   
+Магические исчезновения   
+Связанная анимация   
+Гармошка 1   
+Гармошка 2   
+Анимация для события hover 1   
+Анимация для события hover 2   
+Кликабельные блоки   
+Складывающиеся панельки   
+Имитация Backend'a Wordpress'a   
+Галерея изображений   
 
 ## xdict
 [x02dict](#x02dict)
