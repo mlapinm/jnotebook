@@ -13,6 +13,7 @@
 [Learn ReactJS Part II codecademy](#Learn-ReactJS-Part-II-codecademy)[](#)   
 [Learn how to easily build single-page web applications using this popular JavaScript framework](#Learn-how-to-easily-build-single-page-web-applications-using-this-popular-JavaScript-framework)   
 [Learn Phaser](#Learn-Phaser)   
+[AngularJS уроки](#AngularJS-уроки)   
 [](#)   
 [](#)   
 [](#)   
@@ -450,6 +451,19 @@ Your First App
 Directives   
 Directives   
 
+## AngularJS уроки
+[AngularJS уроки](c18angular.ipynb)   
+AngularJS уроки   
+Directives   
+Directives   
+1. Directives I   
+2. Directives II   
+3. Directives III   
+4. Built-in and Custom Directives   
+5. installApp I   
+
+
+
 ## Learn Phaser
 [Learn Phaser](c16phaser.ipynb)   
 Learn Phaser: Basics   
@@ -457,6 +471,8 @@ Learn Phaser Basics: Color a Pegasus
 Learn Phaser: Physics   
 Learn Phaser: Multi-Scened Games   
 Learn Phaser: Cameras and Effects   
+
+
 
 
 ## xdict
