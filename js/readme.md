@@ -14,6 +14,7 @@
 [Learn how to easily build single-page web applications using this popular JavaScript framework](#Learn-how-to-easily-build-single-page-web-applications-using-this-popular-JavaScript-framework)   
 [AngularJS уроки](#AngularJS-уроки)   
 [Learn Phaser](#Learn-Phaser)   
+[Learn Csharp](#Learn-Csharp)   
 [](#)   
 [](#)   
 [](#)   
@@ -472,7 +473,19 @@ Learn Phaser: Physics
 Learn Phaser: Multi-Scened Games   
 Learn Phaser: Cameras and Effects   
 
-
+## Learn Csharp
+[Learn Csharp](c22sharp.ipynb)   
+Learn Csharp   
+Data Types and Variables   
+Working with Numbers   
+Working with Text   
+Understanding Logic in Csharp   
+Conditional Statements   
+Method Calls and Input   
+Method Output   
+Alternate Expressions   
+Arrays   
+Loops   
 
 
 ## xdict
