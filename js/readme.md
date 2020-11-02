@@ -17,6 +17,7 @@
 [Learn Csharp](#Learn-Csharp)   
 [Livestreams](#Livestreams)   
 [jQuery для начинающих habr](#jQuery-для-начинающих-habr)   
+[jQuery projects -----](#jQuery-projects------)   
 [](#)   
 [](#)   
 [](#)   
@@ -511,6 +512,11 @@ jQuery для начинающих habr
 Складывающиеся панельки   
 Имитация Backend'a Wordpress'a   
 Галерея изображений   
+
+## jQuery projects -----
+[jQuery projects -----](d02jq.ipynb)   
+jQuery projects -----   
+
 
 ## xdict
 [x02dict](#x02dict)
