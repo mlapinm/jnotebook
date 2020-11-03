@@ -19,6 +19,7 @@
 [jQuery для начинающих habr](#jQuery-для-начинающих-habr)   
 [jQuery projects -----](#jQuery-projects------)   
 [JavaScript Уровень 1 Основы веб-программирования](#JavaScript-Уровень-1-Основы-веб-программирования)   
+[Основы jQuery](#Основы-jQuery)   
 [](#)   
 [](#)   
 [](#)   
@@ -539,6 +540,23 @@ object
 Удаление элементов массива   
 Получение строки из массива   
 Сложение массивов   
+
+## Основы jQuery
+[Основы jQuery](f06js3a.ipynb)   
+Основы jQuery   
+Темы курса   
+Введение в jQuery   
+Темы модуля   
+Текстовые редакторы   
+Javascript-консоли   
+Javascript-консоль Google Chrome   
+Где живет jQuery   
+Google CDN   
+API jQuery   
+Основа jQuery   
+Выборка   
+Работа с выборкой   
+Фильтрация   
 
 
 ## xdict
