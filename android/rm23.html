@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+	<base target="_blank">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+	<style>
+		p {
+			margin: 0px;
+		}
+
+		.b1 {
+			border: dotted 1px;
+		}
+
+		td {
+			border: dotted 1px;
+		}
+
+		.margin1 {
+			margin-left: 20px;
+		}
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+
+	</style>
+</head>
+<body>
+   <ol>
+       <li>
+          <p>Просто фрагмент</p>
+           <p>B31Fragm</p>
+           <p></p>
+           <details>
+           <summary><u>B31Fragm</u></summary>
+           <listing style="background-color: #DEF;">
+================================
+D:\programs\android\B31Fragm\app\src\main\res\layout\activity_main.xml
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"&gt;
+
+    &lt;TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#DED"
+        android:text="B31Fragm"
+        android:textSize="22sp" /&gt;
+
+    &lt;fragment
+        android:id="@+id/fragment1"
+        android:name="MyFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/&gt;
+
+&lt;/LinearLayout&gt;
+================================
+D:\programs\android\B31Fragm\app\src\main\java\study\com\b31fragm\MainActivity.java
+package study.com.b31fragm;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    }
+}
+================================
+D:\programs\android\B31Fragm\app\src\main\res\layout\fragment_my.xml
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DFD"
+    android:orientation="vertical"&gt;
+
+    &lt;TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#DEF"
+        android:text="I'm fragment"
+        android:textSize="25sp" /&gt;
+
+&lt;/LinearLayout&gt;
+================================
+D:\programs\android\B31Fragm\app\src\main\java\MyFragment.java
+import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
+import study.com.b31fragm.R;
+
+public class MyFragment extends Fragment {
+
+    @Nullable
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_my, container, false);
+
+        return view;
+    }
+}
+================================
+           </listing>
+       </details>
+           <p></p>
+           <p></p>
+       </li>
+       <li>
+           <p><a href="https://developer.android.com/guide/components/fragments?hl=RU">fragments</a></p>
+           <p></p>
+           <p><a href="https://developer.android.com/guide/components/fragments?hl=RU#EventCallbacks"> Создание обратного вызова</a></p>
+           <p><a href="https://www.edx.org/course/introduction-to-functional-programming-2">Курс функциональное программирование</a></p>
+
+
+
+
+
+          <p><span class="glyphicon glyphicon-align-left" aria-hidden="true"></span> Знакомство с потоком</p>
+
+           <details>
+               <summary style="color: blueviolet">_B31Fragm_</summary>
+               <listing style="background-color: #DEF;">
+================================
+D:\programs\android\B31Fragm\javalib\src\main\java\study\com\javalib\MyClass.java
+package study.com.javalib;
+
+public class MyClass {
+    public static void main(String[] args) {
+        System.out.println("hello1");
+        MyThread myThread = new MyThread();
+        myThread.start();
+        System.out.println("wow1;");
+    }
+
+
+    public static class MyThread extends Thread{
+        @Override
+        public void run() {
+            super.run();
+            try {
+                sleep(2000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            System.out.println("MyThread run;");
+        }
+    }
+}
+================================
+"C:\Program Files\Android\Android Studio\jre\bin\java.exe" "-javaagent:C:\Program Files\Android\Android Studio\lib\idea_rt.jar=22433:C:\Program Files\Android\Android Studio\bin" -Dfile.encoding=UTF-8 -classpath "C:\Program Files\Android\Android Studio\jre\jre\lib\charsets.jar;C:\Program Files\Android\Android Studio\jre\jre\lib\ext\access-bridge-64.jar;C:\Program Files\Android\Android Studio\jre\jre\lib\ext\cldrdata.jar;C:\Program Files\Android\Android Studio\jre\jre\lib\ext\dnsns.jar;C:\Program Files\Android\Android Studio\jre\jre\lib\ext\jaccess.jar;C:\Program Files\Android\Android Studio\jre\jre\lib\ext\localedata.jar;C:\Program Files\Android\Android Studio\jre\jre\lib\ext\nashorn.jar;C:\Program Files\Android\Android Studio\jre\jre\lib\ext\sunec.jar;C:\Program Files\Android\Android Studio\jre\jre\lib\ext\sunjce_provider.jar;C:\Program Files\Android\Android Studio\jre\jre\lib\ext\sunmscapi.jar;C:\Program Files\Android\Android Studio\jre\jre\lib\ext\sunpkcs11.jar;C:\Program Files\Android\Android Studio\jre\jre\lib\ext\zipfs.jar;C:\Program Files\Android\Android Studio\jre\jre\lib\jce.jar;C:\Program Files\Android\Android Studio\jre\jre\lib\jsse.jar;C:\Program Files\Android\Android Studio\jre\jre\lib\management-agent.jar;C:\Program Files\Android\Android Studio\jre\jre\lib\resources.jar;C:\Program Files\Android\Android Studio\jre\jre\lib\rt.jar;D:\programs\android\B31Fragm\javalib\build\classes\java\main" study.com.javalib.MyClass
+hello1
+wow1;
+MyThread run;
+
+Process finished with exit code 0
+============================
+myThread.interrupt();
+
+hello1
+wow1;
+java.lang.InterruptedException: sleep interrupted
+	at java.lang.Thread.sleep(Native Method)
+	at study.com.javalib.MyClass$MyThread.run(MyClass.java:18)
+MyThread run;
+               </listing>
+           </details>
+           <p></p>
+           <p></p>
+           <p></p>
+       </li>
+       <li>
+           <p><span class="glyphicon glyphicon-star" aria-hidden="true"></span>Передача данных из потока</p>
+           <p></p>
+
+
+
+           <details>
+               <summary>_MainActivity_</summary>
+               <listing style="background-color: #DEF;">
+================================
+package study.com.b31fragm;
+
+import android.os.Handler;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+
+public class MainActivity extends AppCompatActivity {
+
+    private Button button2;
+    private Handler handler;
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        button2 = findViewById(R.id.button2);
+
+        handler = new Handler();
+    }
+
+    public void doSomthingLong(){
+        try {
+            System.out.println("Thread start");
+            Thread.sleep(10000);
+            handler.post(new Runnable() {
+                @Override
+                public void run() {
+                    <span style="background-color: #FFF">button2.setText("done");</span>
+                }
+            });
+            System.out.println("Thread stop");
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    public void onClickOk(View view) {
+        ThreadWorker threadWorker = new ThreadWorker();
+        threadWorker.start();
+    }
+
+    public class ThreadWorker extends Thread{
+        @Override
+        public void run() {
+            super.run();
+            doSomthingLong();
+        }
+    }
+}
+================================
+               </listing>
+           </details>
+           <p><a href="https://blog.nikitaog.me/2014/10/11/android-looper-handler-handlerthread-i/">Android: Looper, Handler, HandlerThread. Part I.</a></p>
+           <p>Handler</p>
+           <p>Описание:</p>
+           <p>Есть переопределенный от Tread класс TreadWorker. Переопределение заключается в изменении метода run, где вызываеся doSomthing. ThreadWorker запускается start. </p>
+           <p>Передача данных из ThreadWorker.</p>
+           <p>Создаем экземпляр от Handler.</p>
+           <p>DoSomthing вызывает метод Handler.post кому передает объект Rannable с переопределенным run. В run содержится команда изменения MainActivity. </p>
+           <p>Смысл: Handler c помощью post вставляет  в очередь MessageQueue команду для изменения MainActtivity - button2.setText("done");</p>
+           <p>Thread Handler post Runable</p>
+       </li>
+       <li>
+           <p>AsincTask</p>
+            <p>D/happy: onPreExecute main 1</p>
+            <p>D/happy: doInBackground AsyncTask #1 2801</p>
+            <p>D/happy: onPostExecute main 1</p>           <p></p>
+           <details>
+               <summary style="color: blueviolet">_MainActivity_</summary>
+               <listing style="background-color: #DEF;">
+================================
+D:\programs\android\B31Fragm\app\src\main\java\study\com\b31fragm\MainActivity.java
+package study.com.b31fragm;
+
+import android.os.AsyncTask;
+import android.os.Handler;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+
+public class MainActivity extends AppCompatActivity {
+
+    private Button button2;
+    private Handler handler;
+    private MyTask myTask;
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        button2 = findViewById(R.id.button2);
+
+        handler = new Handler();
+    }
+
+    public void doSomthingLong(){
+        try {
+            System.out.println("Thread start");
+            Thread.sleep(10000);
+            handler.post(new Runnable() {
+                @Override
+                public void run() {
+                    button2.setText("done");
+                }
+            });
+            System.out.println("Thread stop");
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    public void onClickOk(View view) {
+        myTask = new MyTask();
+        myTask.execute(3, 4);
+    }
+
+    public class MyTask extends AsyncTask<Integer, Void, String> {
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            Log.d("happy", "onPreExecute" + " "
+                + Thread.currentThread().getName() + " "
+                    + Thread.currentThread().getId());
+        }
+
+        @Override
+        protected String doInBackground(Integer... params) {
+            Log.d("happy", "doInBackground" + " "
+                    + Thread.currentThread().getName() + " "
+                    + Thread.currentThread().getId());
+            Integer a = params[0];
+            Integer b = params[1];
+
+            try {
+                Thread.sleep(5000);
+                Log.d("happy", "onPostExecute" + " "
+                        + Thread.currentThread().getName() + " "
+                        + Thread.currentThread().getId());
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            Integer c = a + b;
+            return "sum = " + c;
+        }
+
+        @Override
+        protected void onPostExecute(String sum) {
+            super.onPostExecute(sum);
+            Log.d("happy", "onPostExecute" + " "
+                    + Thread.currentThread().getName() + " "
+                    + Thread.currentThread().getId());
+            button2.setText(sum);
+        }
+    }
+}
+================================
+               </listing>
+           </details>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+       </li>
+       <li>
+           <p>Fragment/setRetainInstance(true);</p>
+           <p>При повороте экрана после этой команды содержимое фрагмента сохраняется. У mainActivity такой команды нет</p>
+           <p></p>
+           <details>
+               <summary style="color: blueviolet">_MyFragment_</summary>
+               <listing style="background-color: #DEF;">
+================================
+D:\programs\android\B31Fragm\app\src\main\java\MyFragment.java
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
+
+import study.com.b31fragm.MainActivity;
+import study.com.b31fragm.R;
+
+public class MyFragment extends Fragment {
+
+    private Button button3;
+    private TextView textViewFragment;
+    private MyTask task;
+
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        setRetainInstance(true);
+    }
+
+    @Nullable
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_my, container, false);
+
+        button3 = view.findViewById(R.id.button3);
+        textViewFragment = view.findViewById(R.id.textViewFragment);
+
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                task = new MyTask();
+                task.execute(3, 5);
+            }
+        });
+        return view;
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        button3 = null;
+        textViewFragment = null;
+    }
+
+    public class MyTask extends AsyncTask<Integer, Void, String> {
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            Log.d("happy", "onPreExecute" + " "
+                    + Thread.currentThread().getName() + " "
+                    + Thread.currentThread().getId());
+        }
+
+        @Override
+        protected String doInBackground(Integer... params) {
+            Log.d("happy", "doInBackground" + " "
+                    + Thread.currentThread().getName() + " "
+                    + Thread.currentThread().getId());
+            Integer a = params[0];
+            Integer b = params[1];
+
+            try {
+                Thread.sleep(15000);
+                Log.d("happy", "onPostExecute" + " "
+                        + Thread.currentThread().getName() + " "
+                        + Thread.currentThread().getId());
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            Integer c = a + b;
+            return "sum = " + c;
+        }
+
+        @Override
+        protected void onPostExecute(String sum) {
+            super.onPostExecute(sum);
+            Log.d("happy", "onPostExecute" + " "
+                    + Thread.currentThread().getName() + " "
+                    + Thread.currentThread().getId());
+            if(textViewFragment != null) {
+                textViewFragment.setText(sum);
+            }
+        }
+    }
+}
+================================
+               </listing>
+           </details>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+       </li>
+       <li>
+           <p>B32Service</p>
+           <p>MainActivity: textEdit, button. Число в textEdit. По кнопке число передается в service. В service запускается AsyncTask, где считается квадрат числа и выводится в Log.t. Весь проект.</p>
+           <p></p>
+           <details>
+               <summary style="color: blueviolet">_B32Service_</summary>
+               <listing style="background-color: #DEF;">
+================================
+D:\programs\android\B32Service\app\src\main\res\layout\activity_main.xml
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"&gt;
+
+    &lt;EditText
+        android:id="@+id/input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:text=""
+        android:textSize="22sp" /&gt;
+
+    &lt;Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calculate"
+        android:textSize="22sp" /&gt;
+
+&lt;/LinearLayout&gt;
+================================
+D:\programs\android\B32Service\app\src\main\java\study\com\b32service\MainActivity.java
+package study.com.b32service;
+
+import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+
+public class MainActivity extends AppCompatActivity {
+
+    private TextView input;
+    private Button button;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        input = findViewById(R.id.input);
+        button = findViewById(R.id.button);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sendCommand();
+            }
+        });
+    }
+
+    private void sendCommand() {
+        try {
+            int n = Integer.valueOf(input.getText().toString());
+            Intent intent = CalculatorService.getIntent(this, n);
+            startService(intent);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+    }
+}
+================================
+D:\programs\android\B32Service\app\src\main\java\study\com\b32service\CalculatorService.java
+package study.com.b32service;
+
+import android.app.Service;
+import android.content.Context;
+import android.content.Intent;
+import android.os.IBinder;
+
+import org.jetbrains.annotations.Nullable;
+
+public class CalculatorService extends Service {
+    public static final String NUM_EXTRA = "num";
+    private CalculateTask task;
+
+    public static Intent getIntent(Context context, int num){
+        Intent intent = new Intent(context, CalculatorService.class);
+        intent.putExtra(NUM_EXTRA, num);
+        return intent;
+    }
+
+    @Nullable
+    @Override
+    public IBinder onBind(Intent intent) {
+
+        return null;
+    }
+
+    @Override
+    public int onStartCommand(Intent intent, int flags, int startId) {
+        //50:28
+        if(intent != null && intent.hasExtra(NUM_EXTRA)){
+            int num = intent.getIntExtra(NUM_EXTRA, 0);
+            task = new CalculateTask(num);
+            task.execute();
+        }
+        return START_NOT_STICKY;
+    }
+}
+================================
+D:\programs\android\B32Service\app\src\main\java\study\com\b32service\CalculatorService.java
+================================
+D:\programs\android\B32Service\app\src\main\AndroidManifest.xml
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="study.com.b32service"&gt;
+
+    &lt;application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"&gt;
+        &lt;activity android:name=".MainActivity"&gt;
+            &lt;intent-filter&gt;
+                &lt;action android:name="android.intent.action.MAIN" /&gt;
+
+                &lt;category android:name="android.intent.category.LAUNCHER" /&gt;
+            &lt;/intent-filter&gt;
+        &lt;/activity&gt;
+        &lt;service android:name=".CalculatorService" /&gt;
+    &lt;/application&gt;
+
+&lt;/manifest&gt;
+================================
+D:\programs\android\B32Service\app\src\main\java\study\com\b32service\CalculateTask.java
+package study.com.b32service;
+
+import android.os.AsyncTask;
+import android.util.Log;
+
+public class CalculateTask extends AsyncTask&lt;Void, Void, Integer&gt; {
+    int n;
+
+    public CalculateTask(int n){
+        this.n = n;
+    }
+
+    @Override
+    protected Integer doInBackground(Void... voids) {
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return n*n;
+    }
+
+    @Override
+    protected void onPostExecute(Integer square) {
+        Log.d("happy", "calculated: " + square);
+    }
+}
+================================
+               </listing>
+           </details>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+       </li>
+       <li>
+           <p></p>
+           <details>
+               <summary style="color: blueviolet">_CalculatorService2_</summary>
+               <listing style="background-color: #DEF;">
+================================
+D:\programs\android\B32Service\app\src\main\java\study\com\b32service\CalculatorService2.java
+package study.com.b32service;
+
+import android.app.IntentService;
+import android.content.Context;
+import android.content.Intent;
+import android.util.Log;
+
+public class CalculatorService2 extends IntentService {
+    public static final String NUM_EXTRA = "num";
+
+    public static Intent getIntent(Context context, int num){
+        Intent intent = new Intent(context, CalculatorService2.class);
+        intent.putExtra(NUM_EXTRA, num);
+        return intent;
+    }
+
+     public CalculatorService2() {
+        super("CalculatorService2");
+    }
+
+    @Override
+    protected void onHandleIntent(Intent intent) {
+        Log.d("happy", "CalculatorService2.onHandleIntent "
+                    + Thread.currentThread().getName() + " " +
+                    + Thread.currentThread().getId() );
+        try{
+            Thread.sleep(10000);
+            if(intent!=null&& intent.hasExtra(NUM_EXTRA)){
+                int num = intent.getIntExtra(NUM_EXTRA, 0);
+                Log.d("happy", "Square = " + (num*num));
+            }
+        }catch (InterruptedException e){
+            e.printStackTrace();
+        }
+    }
+}
+================================
+               </listing>
+           </details>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+       </li>
+       <li>
+           <p>B32Service</p>
+           <p>Выводит в поле ввода подсчитанное значение. Поворот экрана работает. BroadcastSticky - клейкий интент позволяет на некоторое время сохранить данные пока они не потрубуются. Здесь не рассматривается. Мне кажется надо запретить разворот.</p>
+           <details>
+               <summary style="color: blueviolet">_B32Service  _</summary>
+               <listing style="background-color: #DEF;">
+================================
+D:\programs\android\B32Service\app\src\main\res\layout\activity_main.xml
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"&gt;
+
+    &lt;EditText
+        android:id="@+id/input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:text=""
+        android:textSize="22sp" /&gt;
+
+    &lt;Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calculate"
+        android:textSize="22sp" /&gt;
+
+&lt;/LinearLayout&gt;
+================================
+D:\programs\android\B32Service\app\src\main\java\study\com\b32service\MainActivity.java
+package study.com.b32service;
+
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+
+public class MainActivity extends AppCompatActivity {
+
+    private TextView input;
+    private Button button;
+    private IntentFilter filter;
+    private MyReceiver receiver;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        input = findViewById(R.id.input);
+        button = findViewById(R.id.button);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sendCommand();
+            }
+        });
+
+        filter = new IntentFilter();
+        filter.addAction(CalculatorService2.ACTION_SQUARE);
+        receiver = new MyReceiver();
+        registerReceiver(receiver, filter);
+
+
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        unregisterReceiver(receiver);
+    }
+
+    private void sendCommand() {
+        try {
+            int n = Integer.valueOf(input.getText().toString());
+            Intent intent = CalculatorService2.getIntent(this, n);
+            startService(intent);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+    }
+
+    public class MyReceiver extends BroadcastReceiver{
+
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            Log.d("happy", "onReceive");
+            int square = intent.getIntExtra(CalculatorService2.NUM_EXTRA, 0);
+            input.setText(String.valueOf(square));
+        }
+    }
+}
+
+================================
+D:\programs\android\B32Service\app\src\main\AndroidManifest.xml
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="study.com.b32service"&gt;
+
+    &lt;application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"&gt;
+        &lt;activity android:name=".MainActivity"&gt;
+            &lt;intent-filter&gt;
+                &lt;action android:name="android.intent.action.MAIN" /&gt;
+
+                &lt;category android:name="android.intent.category.LAUNCHER" /&gt;
+            &lt;/intent-filter&gt;
+        &lt;/activity&gt;
+        &lt;service android:name=".CalculatorService" /&gt;
+        &lt;service android:name=".CalculatorService2" /&gt;
+    &lt;/application&gt;
+
+&lt;/manifest&gt;
+================================
+D:\programs\android\B32Service\app\src\main\java\study\com\b32service\CalculateTask.java
+package study.com.b32service;
+
+import android.os.AsyncTask;
+import android.util.Log;
+
+public class CalculateTask extends AsyncTask&lt;Void, Void, Integer&gt; {
+    int n;
+
+    public CalculateTask(int n){
+        this.n = n;
+    }
+
+    @Override
+    protected Integer doInBackground(Void... voids) {
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return n*n;
+    }
+
+    @Override
+    protected void onPostExecute(Integer square) {
+        Log.d("happy", "calculated: " + square);
+    }
+}
+
+================================
+D:\programs\android\B32Service\app\src\main\java\study\com\b32service\CalculatorService2.java
+package study.com.b32service;
+
+import android.app.IntentService;
+import android.content.Context;
+import android.content.Intent;
+import android.util.Log;
+
+public class CalculatorService2 extends IntentService {
+    public static final String NUM_EXTRA = "num";
+    public static final String ACTION_SQUARE = "my.cool.square.action";
+
+    public static Intent getIntent(Context context, int num){
+        Intent intent = new Intent(context, CalculatorService2.class);
+        intent.putExtra(NUM_EXTRA, num);
+        return intent;
+    }
+
+     public CalculatorService2() {
+        super("CalculatorService2");
+    }
+
+    @Override
+    protected void onHandleIntent(Intent intent) {
+        Log.d("happy", "CalculatorService2.onHandleIntent "
+                    + Thread.currentThread().getName() + " " +
+                    + Thread.currentThread().getId() );
+        try{
+            Thread.sleep(10000);
+            if(intent!=null&& intent.hasExtra(NUM_EXTRA)){
+                int num = intent.getIntExtra(NUM_EXTRA, 0);
+                int square = num*num;
+                Log.d("happy", "Square = " + (num*num));
+
+                Intent intent2 = new Intent();
+                intent2.setAction(ACTION_SQUARE);
+                intent2.putExtra(NUM_EXTRA, square);
+                sendBroadcast(intent2);
+            }
+        }catch (InterruptedException e){
+            e.printStackTrace();
+        }
+    }
+}
+================================
+               </listing>
+           </details>
+           <p></p>
+           <p><a href="https://www.tvr.by/events/proekty-atn/kraina/">Краіна</a></p>
+           <p>Краіна</p>
+           <p>30:23</p>
+           <p>Батон.Картошка.Масло.Яица.Кефир.</p>
+           <p>41  39</p>
+       </li>
+       <li>
+           <p>B33Alarm</p>
+           <p>Планируется действие, которое выполнится в заданное время. Надеемся, что телефон не перезагрузится. А если перезагрузится, то надо предусмотреть механизм, который запустит интенты после перезагрузки.</p>
+           <p>Создавая и передавая другому приложению PendingIntent (с Intent внутри), мы предоставляем ему возможность и полномочия отправлять Intent от нашего имени. В этом уроке мы будем работать с PendingIntent. Увидим, что при создании есть свои нюансы, и разберемся, как можно использовать флаги и requestCode.</p>
+           <p><snap>pending</snap>
+           <snap>ожидаемый</snap></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+       </li>
+       <li>
+           <p></p>
+           <table>
+               <tr>
+                   <td>1</td>
+                   <td>A</td>
+                   <td>MainActivity</td>
+                   <td></td>
+               </tr>
+               <tr>
+                   <td>2</td>
+                   <td>PendingIntent</td>
+                   <td>PI</td>
+                   <td></td>
+               </tr>
+               <tr>
+                   <td>3</td>
+                   <td>AM</td>
+                   <td>AlarmManager</td>
+                   <td></td>
+               </tr>
+               <tr>
+                   <td>4</td>
+                   <td>Intent</td>
+                   <td>I</td>
+                   <td></td>
+               </tr>
+               <tr>
+                   <td>5</td>
+                   <td>S</td>
+                   <td>Service</td>
+                   <td></td>
+               </tr>
+               <tr>
+                   <td>6</td>
+                   <td>PendingIntent</td>
+                   <td>PI</td>
+                   <td></td>
+               </tr>
+               <tr>
+                   <td>7</td>
+                   <td>NM</td>
+                   <td>NotificationManager</td>
+                   <td></td>
+               </tr>
+               <tr>
+                   <td>8</td>
+                   <td>Intent</td>
+                   <td>I</td>
+                   <td></td>
+               </tr>
+               <tr>
+                   <td>9</td>
+                   <td>A</td>
+                   <td>MainActivity</td>
+                   <td></td>
+               </tr>
+           </table>
+           <p></p>
+           <details>
+               <summary style="color: blueviolet">_B33Alarm_</summary>
+               <listing style="background-color: #DEF;">
+================================
+D:\programs\android\B33Alarm\app\src\main\res\layout\activity_main.xml
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"&gt;
+
+    &lt;Button
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello!"
+        android:onClick="buttonClick"
+         /&gt;
+
+&lt;/RelativeLayout&gt;
+================================
+D:\programs\android\B33Alarm\app\src\main\java\study\com\b33alarm\MainActivity.java
+package study.com.b33alarm;
+//AlarmDemo
+import android.app.AlarmManager;
+import android.app.PendingIntent;
+import android.content.Intent;
+import android.support.v4.app.NotificationCompat;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+
+import java.util.concurrent.TimeUnit;
+
+public class MainActivity extends AppCompatActivity {
+
+    private AlarmManager am;
+    private long targetTime;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    }
+
+    public void buttonClick(View view) {
+        am = (AlarmManager)getSystemService(ALARM_SERVICE);
+
+        Intent intent = EventService.getStartIntent(this,123);
+        PendingIntent pending =
+        PendingIntent.getService(this, 1, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+
+//        startService(intent);
+
+        targetTime = System.currentTimeMillis() + TimeUnit.SECONDS.toMillis(15);
+
+        am.set(AlarmManager.RTC, targetTime, pending);
+
+    }
+}
+
+================================
+D:\programs\android\B33Alarm\app\src\main\java\study\com\b33alarm\EventService.java
+package study.com.b33alarm;
+
+import android.app.IntentService;
+import android.app.PendingIntent;
+import android.content.Context;
+import android.content.Intent;
+import android.support.v4.app.NotificationCompat;
+import android.support.v4.app.NotificationManagerCompat;
+import android.util.Log;
+
+public class EventService extends IntentService {
+
+    public static final String NUM_E = "num";
+
+    public static Intent getStartIntent(Context context, int n) {
+        Intent intent = new Intent(context, EventService.class);
+        intent.putExtra(NUM_E, n);
+        return intent;
+    }
+
+    public EventService() {
+        super("EventService");
+    }
+
+    @Override
+    protected void onHandleIntent(Intent intent) {
+        int num = intent.getIntExtra(NUM_E, -1);
+        Log.d("happy", "onHandleIntent "
+                + intent.getIntExtra(NUM_E, num));
+
+
+        Intent ua = new Intent(this, MainActivity.class);
+        PendingIntent pending = PendingIntent.getActivity(this,
+                2, ua, PendingIntent.FLAG_UPDATE_CURRENT);
+
+        NotificationCompat.Builder builder =
+                new NotificationCompat.Builder(this)
+                        .setSmallIcon(android.R.drawable.ic_dialog_alert)
+                        .setContentTitle("Hello!")
+                        .setContentText("got " + num)
+                                    .setContentIntent(pending)
+                        .setAutoCancel(true);
+
+        NotificationManagerCompat.from(this).notify(1, builder.build());
+
+
+    }
+}
+
+================================
+D:\programs\android\B33Alarm\app\src\main\AndroidManifest.xml
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="study.com.b33alarm"&gt;
+
+    &lt;application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"&gt;
+        &lt;activity android:name=".MainActivity"&gt;
+            &lt;intent-filter&gt;
+                &lt;action android:name="android.intent.action.MAIN" /&gt;
+
+                &lt;category android:name="android.intent.category.LAUNCHER" /&gt;
+            &lt;/intent-filter&gt;
+        &lt;/activity&gt;
+        &lt;service android:name=".EventService" /&gt;
+    &lt;/application&gt;
+
+&lt;/manifest&gt;
+================================
+               </listing>
+           </details>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+       </li>
+       <li>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+       </li>
+       <li>
+           <p></p>
+           <details>
+               <summary style="color: blueviolet">__</summary>
+               <listing style="background-color: #DEF;">
+================================
+
+
+================================
+
+
+               </listing>
+           </details>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+       </li>
+       <li>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p>androiddevicemonitor</p>
+           <p><a href="https://github.com/piotrpolak/android-http-server#running-standalone-server-cli">server</a></p>
+           <p><a href="https://github.com/VoiSmart/pjsip-android">pjsip</a></p>
+           <p><a href="https://github.com/BelledonneCommunications/linphone-android">linphone</a></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+       </li>
+   </ol>
+
+</body>
+</html>

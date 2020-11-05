@@ -1,0 +1,1709 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <base target="_blank">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+    <style>
+        p {
+            margin: 0px;
+        }
+
+        .b1 {
+            border: dotted 1px;
+        }
+
+        td {
+            border: dotted 1px;
+        }
+
+        span {
+            background-color: #FFF;
+        }
+
+        .margin1 {
+            margin-left: 20px;
+        }
+
+        details summary::-webkit-details-marker {
+            display: none;
+        }
+
+    </style>
+</head>
+
+<body>
+    <ol>
+        <li>
+            <p></p>
+            <p>D:\programs\android\C01Kotlin\build.gradle</p>
+            <p>buildscript {</p>
+            <p>ext.kotlin_version = '1.3.31'</p>
+            <p>ext.butterknife_version = '8.5.1'</p>
+            <hr>
+            <p>D:\programs\android\C01Kotlin\app\build.gradle</p>
+            <p><a href="https://square.github.io/retrofit/">Retrofit</a></p>
+            <p><a href="https://github.com/square/retrofit/tree/master/retrofit-adapters">retrofit/retrofit-adapters/</a></p>
+            <p><a href="https://github.com/ReactiveX/RxAndroid">rxandroid</a></p>
+            <p><a href="https://github.com/JakeWharton/butterknife">butterknife</a></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p>apply plugin: 'kotlin-kapt'
+            </p>
+            <p>//retrofit</p>
+            <p>implementation 'com.squareup.retrofit2:retrofit:2.6.0'</p>
+            <p>implementation 'com.squareup.retrofit2:converter-gson:2.6.0'</p>
+            <p>implementation 'com.squareup.retrofit2:adapter-rxjava2:2.6.0'</p>
+            <p>//rxandroid</p>
+            <p>implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'</p>
+            <p>//butterknife</p>
+            <p>implementation "com.jakewharton:butterknife:$butterknife_version"</p>
+            <p>kapt "com.jakewharton:butterknife-compiler:$butterknife_version"</p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p></p>
+            <p><a href="http://umorili.herokuapp.com/api">umorili</a></p>
+            <p>Ctrl-Space подсказки</p>
+            <p>Quote - дата класс с 5-ю полями. Он имеет кучу методов: toString, copy и т.д.</p>
+            <p>Эти дата классы надо откуда-то заполнить. Мы их будем получать с </p>
+            <p>http://www.umori.li/api/sources</p>
+            <p>http://www.umori.li/api/get?site=bash.im&name=bash&num=100</p>
+            <p>По этим сайтам будем ходить и получать данные Gson. Gson надо распарсить.</p>
+            <p>Сначала запрос надо отправить, для этого мы используем библиотеку Retrofit. Перед использованием Retrofit нам надо ее преднастроить.Преднастройка заключается. Создали интерфейс BashimpApiService. В интерфейсе мы создали методы, которые будут исользоватьс для хождения по Url. На методы нацеплены аннотации. Каждая анотация соответствует своей Url. Первый метод ищет цитаты Quote. Первая ссылка выглядит так http://umorili.herokuapp.com/api/sources .Вторая ссылка -
+            http://www.umori.li/api/get?site=bash.im&name=bash&num=100. searchSources будет возвращать ссылку api/resources он отправляет GET запрос на адрес.</p>
+            <p></p>
+            <details>
+                <summary style="color: blueviolet">_http://umorili.herokuapp.com/_</summary>
+                <listing style="background-color: #DEF;">
+================================
+http://umorili.herokuapp.com/api/get?site=bash.im&name=bash&num=100
+
+[
+  {
+"site": "bash.im",
+"name": "bash",
+"desc": "Цитатник Рунета",
+"link": null,
+"elementPureHtml": "Утверждено &lt;b&gt;74782&lt;/b&gt; цитаты, сегодня ни одной. Ждут&nbsp;очереди в&nbsp;Бездне &lt;b&gt;166&lt;/b&gt; цитат."
+},
+  {
+"site": "bash.im",
+"name": "bash",
+"desc": "Цитатник Рунета",
+"link": null,
+"elementPureHtml": "Местная кузня в черте города. Такой кружок рукоделия для дядей 40 или около того. Мастер - угрюмый дядька, общаться по не-проф темам не любит, поэтому вся кузня увешана табличками с красивым готическим шрифтом. Шедевры в переводе: &lt;br /&gt; &lt;br /&gt;(на улице у входа) &lt;br /&gt;Ты пожарник? Тебя вызвали? Много дыма? Пожалуйста проверь что (1) огонь видно снаружи, (2) поблизости стоят люди в кожаных фартуках и чешут в затылке. Если ответ &quot;нет&quot; - все нормально, мы просто разжигаем горн. П.С. заливание кузни водой с кузнецами внутри опасно для вашего здоровья. &lt;br /&gt; &lt;br /&gt;(на парковке) &lt;br /&gt;Ты сделал топор или нож и тебе не терпится попробовать его в деле? Этот телеграфный столб выглядит враждебно? Пожалуйста убедись, что за ним нет моей машины. Кстати, кусты сзади считают что ты лох. &lt;br /&gt; &lt;br /&gt;(регулятор подачи воздуха у горна) &lt;br /&gt;Проблема не здесь. Запишись на класс &quot;как использовать коксовую печь&quot;. &lt;br /&gt; &lt;br /&gt;(бочка у стенки) &lt;br /&gt;Взял инструмент и забыл его место? Суй сюда. Не лезет? Ни хрена себе ты боров! &lt;br /&gt; &lt;br /&gt;(полка с наушниками) &lt;br /&gt;Попроси кого-то поорать тебе в ухо. Не слышно? Молодец, эти штуки тебе больше не нужны."
+},
+  {
+"site": "bash.im",
+"name": "bash",
+"desc": "Цитатник Рунета",
+"link": null,
+"elementPureHtml": "я и моя умная клавиатура отлично дополняем друг друга - она учит меня орфографии, а я ее материться"
+},
+  {
+"site": "bash.im",
+"name": "bash",
+"desc": "Цитатник Рунета",
+"link": null,
+"elementPureHtml": "ххх: да у нее на все болезни одно лечение - горячий куриный бульончик &lt;br /&gt;ууу: куринотерапия?"
+},
+  {
+"site": "bash.im",
+"name": "bash",
+"desc": "Цитатник Рунета",
+"link": null,
+"elementPureHtml": "&quot;Делу время, а потехе час, - подумал я в 2 часа ночи, отложил перфоратор и взял в руки аккордеон&quot;."
+},
+  {
+"site": "bash.im",
+"name": "bash",
+"desc": "Цитатник Рунета",
+"link": null,
+"elementPureHtml": "В связи с падением уровня грамотности хочу открыть корректорское агентство. &lt;br /&gt;А за услуги брать - как коллекторское."
+},
+  {
+"site": "bash.im",
+"name": "bash",
+"desc": "Цитатник Рунета",
+"link": null,
+"elementPureHtml": "xxx: Вот странная штука с этим законом о защите чувств верующих. &lt;br /&gt;xxx: Вроде бы благое начинание - защитить эмоционально восприимчивых людей от лишнего стресса. &lt;br /&gt;xxx: Только реализовано как-то криво: страдать от ограничений почему-то должны вообще все. &lt;br /&gt;xxx: А надо так: разработать специальную пиктограмму, &lt;br /&gt;xxx: например, перечеркнутый человечек на коленях в кружочке, &lt;br /&gt;xxx: которая, по аналогии с 18+, значила бы: &quot;Милые верующие, тут сейчас будет что-то, что может ранить ваши чувства, &lt;br /&gt;xxx: не ходите сюда, пожалуйста, мы за вас очень волнуемся! Вход только для атеистов и скептиков&quot;. &lt;br /&gt;xxx: А дальше обклеивать лентами с такими значками гей-парады и помечать любой Шарли Эбдо-подобный контент."
+},
+  {
+"site": "bash.im",
+"name": "bash",
+"desc": "Цитатник Рунета",
+"link": null,
+"elementPureHtml": "На Алиэкспрессе уже вовсю продаётся такой набор. &lt;br /&gt; &lt;br /&gt;После китайского перевода на русский он описывается так: &quot;Бровки ноготочки набор супер уход станете депутатом&quot;."
+},
+  {
+"site": "bash.im",
+"name": "bash",
+"desc": "Цитатник Рунета",
+"link": null,
+"elementPureHtml": "vc.ru, &quot;&laquo;Ситимобил&raquo; запустил тестирование сервиса по продаже напитков и снеков в такси&quot; &lt;br /&gt; &lt;br /&gt;Дмитрий Айстражник: &lt;br /&gt;А сотрудник Сбербанка на заднем сиденье поможет оформить кредит. &lt;br /&gt; &lt;br /&gt;Вася Пражкин: &lt;br /&gt;А коллектор на переднем - поможет его вернуть в конце поездки."
+},
+  {
+"site": "bash.im",
+"name": "bash",
+"desc": "Цитатник Рунета",
+"link": null,
+"elementPureHtml": "Тема по поиску специфического телефона в подарок супруге: &lt;br /&gt; &lt;br /&gt;Телефона такого у меня нет, но есть шуруповерт без аккумулятора. &lt;br /&gt;Подари ей шуруповерт без аккумулятора? &lt;br /&gt;- Дорогая это тебе! &lt;br /&gt;- Нахуй мне шуруповёрт!? Что я им закручивать буду!? &lt;br /&gt;- Ничего, ведь он же без аккумулятора О_0"
+},
+  {
+"site": "bash.im",
+"name": "bash",
+"desc": "Цитатник Рунета",
+"link": null,
+"elementPureHtml": "opennet &lt;br /&gt; &lt;br /&gt;Аноним (10): &lt;br /&gt;ГИП (графический интрефейс пользователя) Блендера при одном только взгляде на него отбивает любое желание изучать его. &lt;br /&gt;Если разработчикам хватило ума повторить ГИП проприетарных продуктов, это может обеспечить приток пользователей. &lt;br /&gt; &lt;br /&gt;Аноним (26): &lt;br /&gt;ИГИПБ (изучение графического интерфейса пользователя блендера) у меня заняло примерно 1 ЕВРЧ (единицу времени, равную часу). Конкретно в блендере ИСИ (использование своеобразного интерфейса) оправдано в связи с НСРТ (наличием самых различных требований) у ЛОКППБ (людей, относящихся к постоянным пользователям блендера). Ну а ГЛОКРППБ (группа лиц, относящихся к разработчикам программного продукта &quot;Блендер&quot;) просто учла этот НФ (неоспоримый факт) и дала пользователям ВОВНИГИПБ (возможность окупить время на изучение графического интерфейса Блендера) постоянной ЭВПДИГИПППБ (экономией времени при дальнейшем использовании графического интерфейса пользователя программного продукта &quot;Блендер&quot;)."
+},
+  {
+"site": "bash.im",
+"name": "bash",
+"desc": "Цитатник Рунета",
+"link": null,
+"elementPureHtml": "vc.ru, &quot;Основатели Prisma запустили групповой мессенджер Capture с чатами на основе изображения с камеры или местоположения&quot; &lt;br /&gt; &lt;br /&gt;Александр: &lt;br /&gt;Чет даже ничего в голову не приходит, как это возможно использовать. &lt;br /&gt;Если только собутыльников искать одинокими и холодными пятничными вечерами &lt;br /&gt; &lt;br /&gt;Serge Bugorkov: &lt;br /&gt;например можно поехать на море, купить себе оборудование для дайвинга, доплыть до дна, навести на него камеру и попасть в чатик для обсуждения логотипов студии Лебедева"
+},
+  {
+"site": "bash.im",
+"name": "bash",
+"desc": "Цитатник Рунета",
+"link": null,
+"elementPureHtml": "ххх: В России раз в год в течение двух недель можно сказать девушке &quot;приезжай ко мне помыться&quot; и не получить пощёчину (возможно). &lt;br /&gt;ууу: В Питере половина семей образовалась, потому что мосты развели и ехать домой уже не вариант :)"
+},
+  {
+"site": "bash.im",
+"name": "bash",
+"desc": "Цитатник Рунета",
+"link": null,
+"elementPureHtml": "dtf, &quot;Первый взгляд на Плотву в сериале &laquo;Ведьмак&raquo; от Netflix&quot; &lt;br /&gt; &lt;br /&gt;Юрий Максютенко: &lt;br /&gt;Кастинг Плотвы идеален. Вот могут, могут, когда захотят! &lt;br /&gt; &lt;br /&gt;darxtorn: &lt;br /&gt;Netflix, вы серьезно? Откуда в скопированном со средневековой Европы мире темнокожие лошади? Бойкотирую сериал."
+},
+  {
+"site": "bash.im",
+"name": "bash",
+"desc": "Цитатник Рунета",
+"link": null,
+"elementPureHtml": "xxx: Сижу на кладбище. &lt;br /&gt;Уже третий раз спрашивают. &lt;br /&gt;— извините , вы тут работаете? &lt;br /&gt;yyy: -Нет, я тут питаюсь &lt;br /&gt;xxx: Лол. На самом деле я уже тут поел даже)))) &lt;br /&gt;zzz: Есть ещё вариант &laquo;я тут похоронен&raquo;, но это больше для вечернего времени подойдёт и не для суеверных."
+},
+  {
+"site": "bash.im",
+"name": "bash",
+"desc": "Цитатник Рунета",
+"link": null,
+"elementPureHtml": "XENOS WIGHT: Самое хреновое в IT - это когда можешь сделать красиво, а от тебя хотят, чтоб сделал вчера."
+},
+  {
+"site": "bash.im",
+"name": "bash",
+"desc": "Цитатник Рунета",
+"link": null,
+"elementPureHtml": "в 16 лет: спрашиваю будут ли на вечеринке тёлки &lt;br /&gt;в 18 лет: спрашиваю будет ли на вечеринке бухло &lt;br /&gt;в 20 лет: спрашиваю будет ли на вечеринке кальян &lt;br /&gt;в 25 лет: спрашиваю будут ли на вечеринке кормить &lt;br /&gt;в 27 лет: спрашиваю можно ли мне на вечеринку не идти"
+},
+  {
+"site": "bash.im",
+"name": "bash",
+"desc": "Цитатник Рунета",
+"link": null,
+"elementPureHtml": "Сегодня в столовой, почти по Булгакову: &lt;br /&gt; &lt;br /&gt;- У вас тут написано &quot;котлета особая&quot;. И что же в ней такого особенного? &lt;br /&gt;- Она из мяса."
+},
+  {
+"site": "bash.im",
+"name": "bash",
+"desc": "Цитатник Рунета",
+"link": null,
+"elementPureHtml": "Если сравнивать с уровнем сервиса в Москве или Питере сейчас (даже при всех известных недостатках последнего) – сравнение будет явно не в пользу Эстонии. &lt;br /&gt; &lt;br /&gt;Ну вот пример: мне надо было починить фары в машине. &lt;br /&gt; &lt;br /&gt;Я обратился к местным официалам Opel, объяснил, что хочу записаться на диагностику и ремонт фар, а заодно сделать плановое ТО. &lt;br /&gt; &lt;br /&gt;Сдал машину. Не дождавшись звонка к концу рабочего дня, перезваниваю им почти перед самым закрытием — говорят: “запирррайте, готтоффо”. &lt;br /&gt; &lt;br /&gt;Приезжаю. Просматриваю счет — там только сумма за замену масла в двигателе. Спрашиваю: “а фары?” В ответ: “фаррры? ааа… а, да! фаррры …. не рапоттаютттт!”"
+},
+  {
+"site": "bash.im",
+"name": "bash",
+"desc": "Цитатник Рунета",
+"link": null,
+"elementPureHtml": "96–97 годы учился я в девятом классе. Поскольку калькуляторами нaм запрещали пользоваться, мы вce искали возможности поиметь систему. И я нашел дома логарифмическую линейку. Спросил у отца, чтo этo зa xepня. Oн сказал калькулятор и научил мeня пользоваться этoй штукой. Я полгода считал на нeм, и никтo не обращал внимания, пoкa oднaжды мeня не спалил завуч (инженер по образованию, педагог по призванию) и рассказал учителям пpo скрытые возможности этого гаджета. Ну и, естественно, у меня линейку cтaли забирать на уроках. У мeня жена – преподаватель математики. Говорит, ecли бы сейчас xoть oдин ученик научился пользоваться логарифмической линейкой, то ни oнa, ни один из завучей не тoлькo не стaли бы забирать ее, но и eщe и пapy халявных оценок поставили бы."
+},
+  {
+"site": "bash.im",
+"name": "bash",
+"desc": "Цитатник Рунета",
+"link": null,
+"elementPureHtml": "xxx только закончила школу и сейчас проходит через процесс поступления. &lt;br /&gt; &lt;br /&gt;xxx: Один мой одноклассник в бауманку идёт. &lt;br /&gt;xxx: Ещё одна одноклассница в мгу. &lt;br /&gt;xxx: А я пойду с собакой погуляю."
+},
+  {
+"site": "bash.im",
+"name": "bash",
+"desc": "Цитатник Рунета",
+"link": null,
+"elementPureHtml": "Поза Ромберга. Пятна Роршаха. Палочка Коха. Кружка Эсмарха. А чего в жизни добился ты? &lt;br /&gt; &lt;br /&gt;xxx: Проба Манту и реакция Вассермана отрицательные, похоже большего я не достигну."
+},
+  {
+"site": "bash.im",
+"name": "bash",
+"desc": "Цитатник Рунета",
+"link": null,
+"elementPureHtml": "Муж с моим сыном провели мини-отпуск на байдарках, неделю без продыху. &lt;br /&gt;И вот вернулись и у обоих какие-то странные уклончивые повадки. &lt;br /&gt;Прижала их по очереди к стенке, одного лично, другого посредством сотовой связи. &lt;br /&gt;- Да Андрей меня заебал, ему что ни скажешь - он типа &quot;И так нормально!&quot; &lt;br /&gt;- Да Женя меня заебал, что ни сделаем, он типа &quot;А давайте переделаем!&quot; &lt;br /&gt;Перфекционист и похуист в автономке, угар."
+},
+  {
+"site": "bash.im",
+"name": "bash",
+"desc": "Цитатник Рунета",
+"link": null,
+"elementPureHtml": "Была такая передача &quot;Топ 10 животных&quot; на national geographic wild и вот в одной из серии был рассказ о 10 самых опасных животных которые убивают больше людей. В этом списке были парнокопытные, коровы, быки, буйволы. &lt;br /&gt;Поэтому я ем мясо, курицу тоже ем, вдруг они восстание замышляют."
+},
+  {
+"site": "bash.im",
+"name": "bash",
+"desc": "Цитатник Рунета",
+"link": null,
+"elementPureHtml": "Нам сегодня с утра свет отключили, и мы устроили праздник дикарей - у меня на улице есть место для костра, кирпичами обложенное, зажгли костёр, поставили вариться картоху, дети на шампурах пекли колбасу и обжаривали хлеб, и свои, и соседские, потом пошёл дождик, они носились по дождю раздетые, а я зонтиком костёр закрывала. &lt;br /&gt;а когда дождь закончился, всех по домам разогнала, а то бабушки потом счёта за лекарства как бы не прислали! &lt;br /&gt;А я про себя назвала это праздником отключения от цивилизации. &lt;br /&gt;Ураааа!!! Мне нравится"
+},
+  {
+"site": "bash.im",
+"name": "bash",
+"desc": "Цитатник Рунета",
+"link": null,
+"elementPureHtml": "&quot;сбрасывание бомбы, вертикальный взлет и посадка&quot; &lt;br /&gt; &lt;br /&gt;Именно в таком порядке. =) &lt;br /&gt; &lt;br /&gt;Ну дык: самолёту &quot;полегчало&quot; и он скакнул вверх. А потом - херак о землю. &lt;br /&gt;Всё правильно написал."
+}
+],
+
+================================
+http://umorili.herokuapp.com/api/sources
+
+[
+  [
+  {
+"site": "bash.im",
+"name": "bash",
+"url": "http://bash.im",
+"parsel": ".quote__body",
+"encoding": "windows-1251",
+"linkpar": "/quote/",
+"desc": "Цитатник Рунета"
+},
+  {
+"site": "bash.im",
+"name": "abyss",
+"url": "http://bash.im/abyss",
+"parsel": ".quote__body",
+"encoding": "windows-1251",
+"linkpar": "none",
+"desc": "Цитатник Рунета - Бездна"
+}
+],,
+  [
+  {
+"site": "zadolba.li",
+"name": "zadolbali",
+"url": "http://zadolba.li",
+"parsel": ".text",
+"encoding": "UTF-8",
+"linkpar": "/story/",
+"desc": "Задолба!ли"
+}
+],,
+  [
+  {
+"site": "anekdot.ru",
+"name": "new anekdot",
+"url": "http://www.anekdot.ru/last/j.html",
+"parsel": ".text",
+"encoding": "windows-1251",
+"linkpar": "/id/",
+"desc": "Свежие анекдоты"
+},
+  {
+"site": "anekdot.ru",
+"name": "new story",
+"url": "http://www.anekdot.ru/last/o.html",
+"parsel": ".text",
+"encoding": "windows-1251",
+"linkpar": "/id/",
+"desc": "Новые истории"
+},
+  {
+"site": "anekdot.ru",
+"name": "new aforizm",
+"url": "http://www.anekdot.ru/last/a.html",
+"parsel": ".text",
+"encoding": "windows-1251",
+"linkpar": "/id/",
+"desc": "Новые афоризмы и фразы"
+},
+  {
+"site": "anekdot.ru",
+"name": "new stihi",
+"url": "http://www.anekdot.ru/last/c.html",
+"parsel": ".text",
+"encoding": "windows-1251",
+"linkpar": "/id/",
+"desc": "Стишки"
+}
+],,
+  [
+  {
+"site": "det.org.ru",
+"name": "Deti",
+"url": "http://det.org.ru",
+"parsel": ".history",
+"encoding": "windows-1251",
+"linkpar": "/?quote=",
+"desc": "Говорят дети"
+}
+],,
+  [
+  {
+"site": "xkcdb.com",
+"name": "XKCDB",
+"url": "http://www.xkcdb.com",
+"parsel": "span.quote",
+"encoding": "UTF-8",
+"linkpar": "/",
+"desc": "XKCDB"
+}
+],
+],
+
+================================
+                </listing>
+            </details>
+            <p>http://umorili.herokuapp.com/api/sources - приходит их Url, кодировка, содержание. Мы их разбираем в List Quote - лист источников цитат io.reactivex.Observable<List<Quote>>. Забирать будем в другом классе. </p>
+            <p>2- лист источников цитат.</p>
+            <p>Query - ?...&...&... нужен, когда имена переменных не совпадают с запросами.</p>
+            <p>SearchRepositoryProvider - сконструируй мне объект. Он говорит у меня есть функция providerSearchRepository, я тебе верну как только он будет готов. И получаем объект SearchRepository. </p>
+            <p>val searchRepository = SearchRepositoryProvider.providerSearchRepository()</p>
+           <p>searchRepository.searchSourcesOfQuotes()</p>
+            <p>Получаем сразу настроенный объект с правильными адресами, с правильными Url и можем его сразу использовать. Из любой активити он будет возвращать один и тот же объект.</p>
+            <p>BashimApiService - интерфейс, который дает набор методов, которые должны принимать на вход такие-то параметры и возвращать, но на рассказывают, как они это делают. Надо создать какой-то класс, который будет имплементировавть эти методы. Мы создали класс SearchRepository, который хранит два метода для доступа к апи сервису и доступу к объекту ретрофита.</p>
+            <p>Тестить все по ходу.</p>
+            <p>CompositeDisposable - доступ ко всем объектам за время.</p>
+            <p>result передается в любду, а то что идет осле стрелочки является внутренней частью функции.</p>
+            <p></p>
+            <p>07-25 12:13:30.266 3325-3325/com.study.c01kotlin D/MainActivity: [SourceOfQuotes(site=bash.im, name=bash, url=http://bash.im, parsel=.quote__body, encoding=windows-1251, linkpar=/quote/, desc=Цитатник Рунета), SourceOfQuotes(site=bash.im, name=abyss, url=http://bash.im/abyss, parsel=.quote__body, encoding=windows-1251, linkpar=none, desc=Цитатник Рунета - Бездна), SourceOfQuotes(site=zadolba.li, name=zadolbali, url=http://zadolba.li, parsel=.text, encoding=UTF-8, linkpar=/story/, desc=Задолба!ли), SourceOfQuotes(site=anekdot.ru, name=new anekdot, url=http://www.anekdot.ru/last/j.html, parsel=.text, encoding=windows-1251, linkpar=/id/, desc=Свежие анекдоты), SourceOfQuotes(site=anekdot.ru, name=new story, url=http://www.anekdot.ru/last/o.html, parsel=.text, encoding=windows-1251, linkpar=/id/, desc=Новые истории), SourceOfQuotes(site=anekdot.ru, name=new aforizm, url=http://www.anekdot.ru/last/a.html, parsel=.text, encoding=windows-1251, linkpar=/id/, desc=Новые афоризмы и фразы), SourceOfQuotes(site=anekdot.ru, name=new stihi, url=http://www.anekdot.ru/last/c.html, parsel=.text, encoding=windows-1251, linkpar=/id/, desc=Стишки), SourceOfQuotes(site=det.org.ru, name=Deti, url=http://det.org.ru, parsel=.history, encoding=windows-1251, linkpar=/?quote=, desc=Говорят дети), SourceOfQuotes(site=xkcdb.com, name=XKCDB, url=http://www.xkcdb.com, parsel=span.quote, encoding=UTF-8, linkpar=/, desc=XKCDB)]</p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p>Только Log.d с текстом ^^</p>
+            <details>
+                <summary style="color: blueviolet">_C01Kotlin_</summary>
+                <listing style="background-color: #DEF;">
+================================
+D:\programs\android\C01Kotlin\app\src\main\AndroidManifest.xml
+    &lt;uses-permission android:name="android.permission.INTERNET"/&gt;
+================================
+D:\programs\android\C01Kotlin\app\src\main\java\com\study\c01kotlin\MainActivity.kt
+package com.study.c01kotlin
+
+import android.support.v7.app.AppCompatActivity
+import android.os.Bundle
+import android.util.Log
+import com.study.c01kotlin.data.Quote
+import com.study.c01kotlin.data.SearchRepository
+import com.study.c01kotlin.data.SearchRepositoryProvider
+import com.study.c01kotlin.data.SourceOfQuotes
+import io.reactivex.android.schedulers.AndroidSchedulers
+import io.reactivex.disposables.CompositeDisposable
+import io.reactivex.schedulers.Schedulers
+
+const val tag: String = "MainActivity"
+
+class MainActivity : AppCompatActivity() {
+
+    val comositeDisposable: CompositeDisposable = CompositeDisposable()
+    val searchRepository: SearchRepository = SearchRepositoryProvider.providerSearchRepository()
+
+    private val list: MutableList&lt;SourceOfQuotes&gt; = mutableListOf()
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        comositeDisposable.add(
+            searchRepository.searchSourcesOfQuotes()
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeOn(Schedulers.io())
+                .subscribe({result1 -&gt;
+                    result1.forEach{
+                        list.addAll(it)
+                    }
+                    Log.d(tag,list.toString());
+                })
+        )
+
+//        val quote:Quote = Quote("site","name","desk","htmlText","link")
+//        val searchRepository = SearchRepositoryProvider.providerSearchRepository()
+//        searchRepository.searchSourcesOfQuotes()
+    }
+}
+
+================================
+D:\programs\android\C01Kotlin\app\src\main\java\com\study\c01kotlin\data\Quote.kt
+package com.study.c01kotlin.data
+
+import com.google.gson.annotations.SerializedName
+
+data class Quote (
+   @SerializedName("site") val site: String,
+   @SerializedName("name")  val name: String,
+   @SerializedName("desk")  val desk: String,
+   @SerializedName("htmlText")   val htmlText: String,
+   @SerializedName("link")  val link: String
+)
+
+data class SourceOfQuotes (
+    @SerializedName("site") val site: String,
+    @SerializedName("name")  val name: String,
+    @SerializedName("url")  val url : String,
+    @SerializedName("parsel")  val parsel : String,
+    @SerializedName("encoding")  val encoding: String,
+    @SerializedName("linkpar")  val linkpar: String,
+    @SerializedName("desc")  val desc: String
+)
+================================
+D:\programs\android\C01Kotlin\app\src\main\java\com\study\c01kotlin\data\BashimApiService.kt
+package com.study.c01kotlin.data
+
+import com.google.gson.Gson
+import com.google.gson.GsonBuilder
+import retrofit2.Retrofit
+import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
+import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.http.GET
+import retrofit2.http.Query
+
+interface BashimApiService{
+
+    @GET("api/get")
+    fun searchQuotes(
+        @Query("site") site: String,
+        @Query("name") name: String,
+        @Query("num") num: Int
+    ):io.reactivex.Observable&lt;List&lt;Quote&gt;&gt;
+
+    @GET("api/sources")
+    fun searchSources():io.reactivex.Observable&lt;List&lt;List&lt;SourceOfQuotes&gt;&gt;&gt;
+
+    companion object Factory{
+        fun create():BashimApiService{
+            val gson:Gson =  GsonBuilder().setLenient().create()
+            val retrofit = Retrofit.Builder()
+                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+                .addConverterFactory(GsonConverterFactory.create(gson))
+                .baseUrl("http://umorili.herokuapp.com/")
+                .build();
+            return  retrofit.create(BashimApiService::class.java)
+        }
+    }
+}
+================================
+D:\programs\android\C01Kotlin\app\src\main\java\com\study\c01kotlin\data\SearchRepository.kt
+package com.study.c01kotlin.data
+
+import java.lang.invoke.CallSite
+
+class SearchRepository (val apiService: BashimApiService){
+
+    fun searchQuotes(site: String, name: String): io.reactivex.Observable&lt;List&lt;Quote&gt;&gt; {
+        return apiService.searchQuotes(site, name, 50)
+    }
+
+    fun searchSourcesOfQuotes(): io.reactivex.Observable&lt;List&lt;List&lt;SourceOfQuotes&gt;&gt;&gt;{
+        return apiService.searchSources()
+    }
+
+}
+================================
+D:\programs\android\C01Kotlin\app\src\main\java\com\study\c01kotlin\data\SearchRepositoryProvider.kt
+package com.study.c01kotlin.data
+
+object SearchRepositoryProvider{
+    fun providerSearchRepository():SearchRepository{
+        return SearchRepository(BashimApiService.create())
+    }
+}
+================================
+                </listing>
+            </details>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p></p>
+            <p><a href="https://developer.android.com/guide/topics/ui/layout/recyclerview">recyclerview gradle dependency</a></p>
+            <p>    implementation 'com.android.support:recyclerview-v7:28.0.0'</p>
+            <p>android add non-null asserted(||)call </p>
+            <p>1:42</p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p></p>
+            <p></p>
+            <p>Выводит список файлов. Нельзя попасть на содержимое сайта.</p>
+            <p>C01Kotlin\build.gradle</p>
+            <p>app\build.gradle</p>
+            <p>AndroidManifest.xml</p>
+            <p>activity_main.xml</p>
+            <p>source_item.xml</p>
+            <p>data\BashimApiService.kt</p>
+            <p>data\ChangeSourceListener.kt</p>
+            <p>data\Quote.kt</p>
+            <p>data\SearchRepository.kt</p>
+            <p>data\SearchRepositoryProvider.kt</p>
+            <p>MainActivity.kt</p>
+            <p>QuotesActivity.kt</p>
+            <p>QuotesAdapter.kt</p>
+            <p>SourcesOfQuotesAdapter.kt</p>
+            <p></p>
+            <p></p>
+            <details>
+                <summary style="color: blueviolet">_C01Kotlin_</summary>
+                <listing style="background-color: #DEF;">
+================================
+D:\programs\android\C01Kotlin\build.gradle
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext.kotlin_version = '1.3.31'
+    ext.butterknife_version = '8.5.1'
+    repositories {
+        google()
+        jcenter()
+
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.4.1'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+================================
+D:\programs\android\C01Kotlin\app\build.gradle
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "29.0.0"
+    defaultConfig {
+        applicationId "com.study.c01kotlin"
+        minSdkVersion 19
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    //retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.6.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.6.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.6.0'
+
+    //rxandroid
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+
+    //butterknife
+    implementation "com.jakewharton:butterknife:$butterknife_version"
+    kapt "com.jakewharton:butterknife-compiler:$butterknife_version"
+
+    //recyclerview
+    implementation 'com.android.support:recyclerview-v7:26.1.0'
+    implementation 'com.android.support:cardview-v7:26.1.0'
+
+}
+
+================================
+D:\programs\android\C01Kotlin\app\src\main\AndroidManifest.xml
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.study.c01kotlin"&gt;
+    &lt;uses-permission android:name="android.permission.INTERNET"/&gt;
+    &lt;application
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme"&gt;
+        &lt;activity android:name=".MainActivity"&gt;
+            &lt;intent-filter&gt;
+                &lt;action android:name="android.intent.action.MAIN"/&gt;
+
+                &lt;category android:name="android.intent.category.LAUNCHER"/&gt;
+            &lt;/intent-filter&gt;
+        &lt;/activity&gt;
+        &lt;activity android:name=".QuotesActivity" /&gt;
+    &lt;/application&gt;
+
+&lt;/manifest&gt;
+================================
+D:\programs\android\C01Kotlin\app\src\main\res\layout\activity_main.xml
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/darker_gray"
+        tools:context=".MainActivity"&gt;
+
+    &lt;android.support.v7.widget.RecyclerView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" tools:layout_editor_absoluteY="0dp"
+            tools:layout_editor_absoluteX="0dp"/&gt;
+
+
+&lt;/android.support.constraint.ConstraintLayout&gt;
+================================
+D:\programs\android\C01Kotlin\app\src\main\res\layout\source_item.xml
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"&gt;
+
+    &lt;android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:elevation="100dp"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="parent"&gt;
+        &lt;android.support.v7.widget.AppCompatTextView
+                android:id="@+id/text"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:padding="5dp"
+                android:textAlignment="center"
+                android:text="@string/app_name"/&gt;
+    &lt;/android.support.v7.widget.CardView&gt;
+&lt;/android.support.constraint.ConstraintLayout&gt;
+================================
+================================
+D:\programs\android\C01Kotlin\app\src\main\java\com\study\c01kotlin\data\BashimApiService.kt
+package com.study.c01kotlin.data
+
+import com.google.gson.Gson
+import com.google.gson.GsonBuilder
+import retrofit2.Retrofit
+import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
+import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.http.GET
+import retrofit2.http.Query
+
+interface BashimApiService{
+
+    @GET("api/get")
+    fun searchQuotes(
+        @Query("site") site: String,
+        @Query("name") name: String,
+        @Query("num") num: Int
+    ):io.reactivex.Observable&lt;List&lt;Quote&gt;&gt;
+
+    @GET("api/sources")
+    fun searchSources():io.reactivex.Observable&lt;List&lt;List&lt;SourceOfQuotes&gt;&gt;&gt;
+
+    companion object Factory{
+        fun create():BashimApiService{
+            val gson:Gson =  GsonBuilder().setLenient().create()
+            val retrofit = Retrofit.Builder()
+                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+                .addConverterFactory(GsonConverterFactory.create(gson))
+                .baseUrl("http://umorili.herokuapp.com/")
+                .build();
+            return  retrofit.create(BashimApiService::class.java)
+        }
+    }
+}
+================================
+D:\programs\android\C01Kotlin\app\src\main\java\com\study\c01kotlin\data\ChangeSourceListener.kt
+package com.study.c01kotlin.data
+
+import java.text.FieldPosition
+
+interface ChangeSourceListener{
+    fun sourceChanged(position: Int)
+}
+================================
+D:\programs\android\C01Kotlin\app\src\main\java\com\study\c01kotlin\data\Quote.kt
+package com.study.c01kotlin.data
+
+import com.google.gson.annotations.SerializedName
+
+data class Quote (
+   @SerializedName("site") val site: String,
+   @SerializedName("name")  val name: String,
+   @SerializedName("desk")  val desk: String,
+   @SerializedName("htmlText")   val htmlText: String,
+   @SerializedName("link")  val link: String
+)
+
+data class SourceOfQuotes (
+    @SerializedName("site") val site: String,
+    @SerializedName("name")  val name: String,
+    @SerializedName("url")  val url : String,
+    @SerializedName("parsel")  val parsel : String,
+    @SerializedName("encoding")  val encoding: String,
+    @SerializedName("linkpar")  val linkpar: String,
+    @SerializedName("desc")  val desc: String
+)
+
+================================
+D:\programs\android\C01Kotlin\app\src\main\java\com\study\c01kotlin\data\SearchRepository.kt
+package com.study.c01kotlin.data
+
+import java.lang.invoke.CallSite
+
+class SearchRepository (val apiService: BashimApiService){
+
+    fun searchQuotes(site: String, name: String): io.reactivex.Observable&lt;List&lt;Quote&gt;&gt; {
+        return apiService.searchQuotes(site, name, 50)
+    }
+
+    fun searchSourcesOfQuotes(): io.reactivex.Observable&lt;List&lt;List&lt;SourceOfQuotes&gt;&gt;&gt;{
+        return apiService.searchSources()
+    }
+
+}
+================================
+D:\programs\android\C01Kotlin\app\src\main\java\com\study\c01kotlin\data\SearchRepositoryProvider.kt
+package com.study.c01kotlin.data
+
+object SearchRepositoryProvider{
+    fun providerSearchRepository():SearchRepository{
+        return SearchRepository(BashimApiService.create())
+    }
+}
+================================
+D:\programs\android\C01Kotlin\app\src\main\java\com\study\c01kotlin\MainActivity.kt
+package com.study.c01kotlin
+
+import android.content.Intent
+import android.support.v7.app.AppCompatActivity
+import android.os.Bundle
+import android.support.v7.widget.LinearLayoutManager
+import android.support.v7.widget.RecyclerView
+import android.util.Log
+import butterknife.BindView
+import butterknife.ButterKnife
+import com.study.c01kotlin.data.Quote
+import com.study.c01kotlin.data.SearchRepository
+import com.study.c01kotlin.data.SearchRepositoryProvider
+import com.study.c01kotlin.data.SourceOfQuotes
+import io.reactivex.android.schedulers.AndroidSchedulers
+import io.reactivex.disposables.CompositeDisposable
+import io.reactivex.schedulers.Schedulers
+import layout.SourcesOfQuotesAdapter
+
+const val tag: String = "MainActivity"
+
+class MainActivity : AppCompatActivity() {
+     fun sourceChanged(position: Int){
+     Log.d(tag, "from main = ${adapter[position]}")
+     val intent = Intent(applicationContext, QuotesActivity::class.java)
+        intent.putExtra(INTENT_NAME_NAME, adapter[position].name)
+        intent.putExtra(INTENT_SITE_NAME, adapter[position].site)
+        startActivity(intent)
+    }
+
+
+    @BindView(R.id.list)
+    lateinit var listView: RecyclerView
+    val comositeDisposable: CompositeDisposable = CompositeDisposable()
+    val searchRepository: SearchRepository = SearchRepositoryProvider.providerSearchRepository()
+    lateinit var adapter:SourcesOfQuotesAdapter
+
+    private val list: MutableList&lt;SourceOfQuotes&gt; = mutableListOf()
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        ButterKnife.bind(this)
+        val llm = LinearLayoutManager(this)
+        llm.orientation = LinearLayoutManager.VERTICAL
+        listView.layoutManager = llm
+
+
+        comositeDisposable.add(
+            searchRepository.searchSourcesOfQuotes()
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeOn(Schedulers.io())
+                .subscribe({result -&gt;
+                    result.forEach{
+                        list.addAll(it)
+                    }
+//                    adapter= SourcesOfQuotesAdapter(list)
+//                    adapter.addListener(this)
+//                    listView.adapter = adapter
+                    listView.adapter = SourcesOfQuotesAdapter(list)
+                    Log.d(tag,list.toString());
+                })
+        )
+
+//        val quote:Quote = Quote("site","name","desk","htmlText","link")
+//        val searchRepository = SearchRepositoryProvider.providerSearchRepository()
+//        searchRepository.searchSourcesOfQuotes()
+    }
+}
+
+================================
+D:\programs\android\C01Kotlin\app\src\main\java\com\study\c01kotlin\QuotesActivity.kt
+package com.study.c01kotlin
+
+import android.content.Intent
+import android.support.v7.app.AppCompatActivity
+import android.os.Bundle
+import android.support.v7.widget.LinearLayoutManager
+import android.support.v7.widget.RecyclerView
+import android.util.Log
+import butterknife.BindView
+import butterknife.ButterKnife
+import com.study.c01kotlin.data.Quote
+import com.study.c01kotlin.data.SearchRepository
+import com.study.c01kotlin.data.SearchRepositoryProvider
+import com.study.c01kotlin.data.SourceOfQuotes
+import io.reactivex.android.schedulers.AndroidSchedulers
+import io.reactivex.disposables.CompositeDisposable
+import io.reactivex.schedulers.Schedulers
+import layout.SourcesOfQuotesAdapter
+
+const val INTENT_SITE_NAME = "site"
+const val INTENT_NAME_NAME = "name"
+
+class QuotesActivity : AppCompatActivity() {
+
+    @BindView(R.id.list)
+    lateinit var listView: RecyclerView
+    val comositeDisposable: CompositeDisposable = CompositeDisposable()
+    val repository: SearchRepository = SearchRepositoryProvider.providerSearchRepository()
+    lateinit var adapter: SourcesOfQuotesAdapter
+
+    private val list: MutableList&lt;Quote&gt; = mutableListOf()
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        ButterKnife.bind(this)
+        val llm = LinearLayoutManager(this)
+        llm.orientation = LinearLayoutManager.VERTICAL
+        listView.layoutManager = llm
+
+        val site = intent.getStringExtra(INTENT_SITE_NAME)
+        val name = intent.getStringExtra(INTENT_NAME_NAME)
+        comositeDisposable.add(
+            repository.searchQuotes(site, name)
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeOn(Schedulers.io())
+                .subscribe({ result -&gt;
+                    {
+                        list.addAll(result)
+                    }
+                    listView.adapter = QuotesAdapter(list)
+                    Log.d(tag, list.toString());
+                })
+        )
+
+    }
+}
+
+================================
+D:\programs\android\C01Kotlin\app\src\main\java\com\study\c01kotlin\QuotesAdapter.kt
+package com.study.c01kotlin
+
+import android.support.v7.widget.RecyclerView
+import android.text.Html
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import com.study.c01kotlin.R
+import com.study.c01kotlin.data.ChangeSourceListener
+import com.study.c01kotlin.data.Quote
+import com.study.c01kotlin.data.SourceOfQuotes
+import kotlinx.android.synthetic.main.source_item.view.*
+
+class QuotesAdapter(list: MutableList&lt;Quote&gt;) :
+    RecyclerView.Adapter&lt;QuotesAdapter.ViewHolder&gt;() {
+
+    private val mItems: MutableList&lt;Quote&gt; = list
+
+    override fun onCreateViewHolder(p0: ViewGroup, p1: Int): ViewHolder {
+        val layoutInflater = LayoutInflater.from(p0!!.context)
+        val view = layoutInflater.inflate(R.layout.source_item, p0, false)
+        return ViewHolder(view).listen{ position, type -&gt;
+        }
+    }
+
+
+    override fun getItemCount(): Int {
+        return mItems.size
+    }
+
+    override fun onBindViewHolder(p0: ViewHolder, p1: Int) {
+        val item = mItems[p1]
+        p0.textView.text = Html.fromHtml(item.htmlText)
+    }
+
+    class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+        val textView = view.text!!
+    }
+
+    fun &lt;T: RecyclerView.ViewHolder&gt; T.listen(event: (position: Int, type:Int) -&gt; Unit):T{
+        itemView.setOnClickListener{
+            event.invoke(adapterPosition, getItemViewType())
+        }
+        return this
+    }
+
+    operator fun get(position: Int):Quote{
+        return mItems[position]
+    }
+}
+
+================================
+D:\programs\android\C01Kotlin\app\src\main\java\com\study\c01kotlin\SourcesOfQuotesAdapter.kt
+package layout
+
+import android.support.v7.widget.RecyclerView
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import com.study.c01kotlin.R
+import com.study.c01kotlin.data.ChangeSourceListener
+import com.study.c01kotlin.data.SourceOfQuotes
+import kotlinx.android.synthetic.main.source_item.view.*
+
+class SourcesOfQuotesAdapter(list: MutableList&lt;SourceOfQuotes&gt;) :
+    RecyclerView.Adapter&lt;SourcesOfQuotesAdapter.ViewHolder&gt;() {
+
+    private val mListners: MutableList&lt;ChangeSourceListener&gt; = mutableListOf()
+    private val mItems: MutableList&lt;SourceOfQuotes&gt; = list
+
+    override fun onCreateViewHolder(p0: ViewGroup, p1: Int): SourcesOfQuotesAdapter.ViewHolder {
+
+        val layoutInflater = LayoutInflater.from(p0!!.context)
+        val view = layoutInflater.inflate(R.layout.source_item, p0, false)
+        return ViewHolder(view)
+    }
+
+
+    override fun getItemCount(): Int {
+        return mItems.size
+    }
+
+    override fun onBindViewHolder(p0: SourcesOfQuotesAdapter.ViewHolder, p1: Int) {
+        val item = mItems[p1]
+        p0.textView.text = item.desc
+    }
+
+    class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+        val textView = view.text!!
+    }
+
+    fun addListener(listener: ChangeSourceListener){
+        mListners.add(listener)
+
+    }
+
+    fun changeSource(position: Int){
+        mListners.forEach{
+            it.sourceChanged(position)
+        }
+    }
+
+    fun &lt;T: RecyclerView.ViewHolder&gt; T.listen(event: (position: Int, type:Int) -&gt; Unit):T{
+        itemView.setOnClickListener{
+            event.invoke(adapterPosition, getItemViewType())
+        }
+        return this
+    }
+
+    operator fun get(position: Int):SourceOfQuotes{
+        return mItems[position]
+    }
+
+
+}
+================================
+================================
+                </listing>
+            </details>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p></p>
+            <p>from main = SourceOfQuotes(site=det.org.ru, name=Deti, url=http://det.org.ru, parsel=.history, encoding=windows-1251, linkpar=/?quote=, desc=Говорят дети)</p>
+            <p></p>
+            <p></p>
+            <p>Все в порядке</p>
+            <details>
+                <summary style="color: blueviolet">_C01Kotlin_</summary>
+                <listing style="background-color: #DEF;">
+C01Kotlin\build.gradle
+app\build.gradle
+AndroidManifest.xml
+activity_main.xml
+source_item.xml
+data\BashimApiService.kt
+data\ChangeSourceListener.kt
+data\Quote.kt
+data\SearchRepository.kt
+data\SearchRepositoryProvider.kt
+MainActivity.kt
+QuotesActivity.kt
+QuotesAdapter.kt
+SourcesOfQuotesAdapter.kt
+================================
+================================
+C01Kotlin\build.gradle
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext.kotlin_version = '1.3.31'
+    ext.butterknife_version = '8.5.1'
+    repositories {
+        google()
+        jcenter()
+
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.4.1'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+
+================================
+app\build.gradle
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "29.0.0"
+    defaultConfig {
+        applicationId "com.study.c01kotlin"
+        minSdkVersion 19
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    //retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.6.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.6.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.6.0'
+
+    //rxandroid
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+
+    //butterknife
+    implementation "com.jakewharton:butterknife:$butterknife_version"
+    kapt "com.jakewharton:butterknife-compiler:$butterknife_version"
+
+    //recyclerview
+    implementation 'com.android.support:recyclerview-v7:26.1.0'
+    implementation 'com.android.support:cardview-v7:26.1.0'
+
+}
+================================
+AndroidManifest.xml
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.study.c01kotlin"&gt;
+    &lt;uses-permission android:name="android.permission.INTERNET"/&gt;
+    &lt;application
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme"&gt;
+        &lt;activity android:name=".MainActivity"&gt;
+            &lt;intent-filter&gt;
+                &lt;action android:name="android.intent.action.MAIN"/&gt;
+
+                &lt;category android:name="android.intent.category.LAUNCHER"/&gt;
+            &lt;/intent-filter&gt;
+        &lt;/activity&gt;
+        &lt;activity android:name=".QuotesActivity" /&gt;
+    &lt;/application&gt;
+
+&lt;/manifest&gt;
+
+================================
+activity_main.xml
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/darker_gray"
+        tools:context=".MainActivity"&gt;
+
+    &lt;android.support.v7.widget.RecyclerView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" tools:layout_editor_absoluteY="0dp"
+            tools:layout_editor_absoluteX="0dp"/&gt;
+
+
+&lt;/android.support.constraint.ConstraintLayout&gt;
+
+================================
+source_item.xml
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"&gt;
+
+    &lt;android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:elevation="100dp"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="parent"&gt;
+        &lt;android.support.v7.widget.AppCompatTextView
+                android:id="@+id/text"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:padding="5dp"
+                android:textAlignment="center"
+                android:text="@string/app_name"/&gt;
+    &lt;/android.support.v7.widget.CardView&gt;
+&lt;/android.support.constraint.ConstraintLayout&gt;
+
+================================
+data\BashimApiService.kt
+package com.study.c01kotlin.data
+
+import com.google.gson.Gson
+import com.google.gson.GsonBuilder
+import retrofit2.Retrofit
+import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
+import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.http.GET
+import retrofit2.http.Query
+
+interface BashimApiService{
+
+    @GET("api/get")
+    fun searchQuotes(
+        @Query("site") site: String,
+        @Query("name") name: String,
+        @Query("num") num: Int
+    ):io.reactivex.Observable&lt;List&lt;Quote&gt;&gt;
+
+    @GET("api/sources")
+    fun searchSources():io.reactivex.Observable&lt;List&lt;List&lt;SourceOfQuotes&gt;&gt;&gt;
+
+    companion object Factory{
+        fun create():BashimApiService{
+            val gson:Gson =  GsonBuilder().setLenient().create()
+            val retrofit = Retrofit.Builder()
+                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+                .addConverterFactory(GsonConverterFactory.create(gson))
+                .baseUrl("http://umorili.herokuapp.com/")
+                .build();
+            return  retrofit.create(BashimApiService::class.java)
+        }
+    }
+}
+
+================================
+data\ChangeSourceListener.kt
+package com.study.c01kotlin.data
+
+import java.text.FieldPosition
+
+interface ChangeSourceListener{
+    fun sourceChanged(position: Int)
+}
+
+================================
+data\Quote.kt
+package com.study.c01kotlin.data
+
+import com.google.gson.annotations.SerializedName
+
+data class Quote (
+   @SerializedName("site") val site: String,
+   @SerializedName("name")  val name: String,
+   @SerializedName("desc")  val desc: String,
+   @SerializedName("htmlText")   val htmlText: String,
+   @SerializedName("elementPureHtml")   val elementPureHtml: String,
+   @SerializedName("link")  val link: String
+)
+
+data class SourceOfQuotes (
+    @SerializedName("site") val site: String,
+    @SerializedName("name")  val name: String,
+    @SerializedName("url")  val url : String,
+    @SerializedName("parsel")  val parsel : String,
+    @SerializedName("encoding")  val encoding: String,
+    @SerializedName("linkpar")  val linkpar: String,
+    @SerializedName("desc")  val desc: String,
+    @SerializedName("htmlText")   val htmlText: String
+)
+
+
+================================
+data\SearchRepository.kt
+package com.study.c01kotlin.data
+
+import java.lang.invoke.CallSite
+
+class SearchRepository (val apiService: BashimApiService){
+
+    fun searchQuotes(site: String, name: String): io.reactivex.Observable&lt;List&lt;Quote&gt;&gt; {
+        return apiService.searchQuotes(site, name, 50)
+    }
+
+    fun searchSourcesOfQuotes(): io.reactivex.Observable&lt;List&lt;List&lt;SourceOfQuotes&gt;&gt;&gt;{
+        return apiService.searchSources()
+    }
+
+}
+
+================================
+data\SearchRepositoryProvider.kt
+package com.study.c01kotlin.data
+
+object SearchRepositoryProvider{
+    fun providerSearchRepository():SearchRepository{
+        return SearchRepository(BashimApiService.create())
+    }
+}
+
+
+================================
+MainActivity.kt
+package com.study.c01kotlin
+
+import android.content.Intent
+import android.support.v7.app.AppCompatActivity
+import android.os.Bundle
+import android.support.v7.widget.LinearLayoutManager
+import android.support.v7.widget.RecyclerView
+import android.util.Log
+import butterknife.BindView
+import butterknife.ButterKnife
+import com.study.c01kotlin.data.*
+import io.reactivex.android.schedulers.AndroidSchedulers
+import io.reactivex.disposables.CompositeDisposable
+import io.reactivex.schedulers.Schedulers
+import layout.SourcesOfQuotesAdapter
+
+const val tag: String = "MainActivity"
+
+class MainActivity : AppCompatActivity(), ChangeSourceListener {
+     override fun sourceChanged(position: Int){
+     Log.d(tag, "from main = ${adapter[position]}")
+     val intent = Intent(applicationContext, QuotesActivity::class.java)
+        intent.putExtra(INTENT_NAME_NAME, adapter[position].name)
+        intent.putExtra(INTENT_SITE_NAME, adapter[position].site)
+        startActivity(intent)
+    }
+
+
+    @BindView(R.id.list)
+    lateinit var listView: RecyclerView
+    val comositeDisposable: CompositeDisposable = CompositeDisposable()
+    val searchRepository: SearchRepository = SearchRepositoryProvider.providerSearchRepository()
+    lateinit var adapter:SourcesOfQuotesAdapter
+
+    private val list: MutableList&lt;SourceOfQuotes&gt; = mutableListOf()
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        ButterKnife.bind(this)
+        val llm = LinearLayoutManager(this)
+        llm.orientation = LinearLayoutManager.VERTICAL
+        listView.layoutManager = llm
+
+
+        comositeDisposable.add(
+            searchRepository.searchSourcesOfQuotes()
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeOn(Schedulers.io())
+                .subscribe({result -&gt;
+                    result.forEach{
+                        list.addAll(it)
+                    }
+                    adapter= SourcesOfQuotesAdapter(list)
+                    adapter.addListener(this)
+                    listView.adapter = adapter
+//                    listView.adapter = SourcesOfQuotesAdapter(list)
+                    Log.d(tag,"123" + list.toString());
+                })
+        )
+
+//        val quote:Quote = Quote("site","name","desk","htmlText","link")
+//        val searchRepository = SearchRepositoryProvider.providerSearchRepository()
+//        searchRepository.searchSourcesOfQuotes()
+    }
+}
+
+
+================================
+QuotesActivity.kt
+package com.study.c01kotlin
+
+import android.content.Intent
+import android.support.v7.app.AppCompatActivity
+import android.os.Bundle
+import android.support.v7.widget.LinearLayoutManager
+import android.support.v7.widget.RecyclerView
+import android.util.Log
+import butterknife.BindView
+import butterknife.ButterKnife
+import com.study.c01kotlin.data.Quote
+import com.study.c01kotlin.data.SearchRepository
+import com.study.c01kotlin.data.SearchRepositoryProvider
+import com.study.c01kotlin.data.SourceOfQuotes
+import io.reactivex.android.schedulers.AndroidSchedulers
+import io.reactivex.disposables.CompositeDisposable
+import io.reactivex.schedulers.Schedulers
+import layout.SourcesOfQuotesAdapter
+
+const val INTENT_SITE_NAME = "site"
+const val INTENT_NAME_NAME = "name"
+
+class QuotesActivity : AppCompatActivity() {
+
+    @BindView(R.id.list)
+    lateinit var listView: RecyclerView
+    val comositeDisposable: CompositeDisposable = CompositeDisposable()
+    val repository: SearchRepository = SearchRepositoryProvider.providerSearchRepository()
+    lateinit var adapter: SourcesOfQuotesAdapter
+
+    private val list: MutableList&lt;Quote&gt; = mutableListOf()
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        ButterKnife.bind(this)
+        val llm = LinearLayoutManager(this)
+        llm.orientation = LinearLayoutManager.VERTICAL
+        listView.layoutManager = llm
+
+        val site = intent.getStringExtra(INTENT_SITE_NAME)
+        val name = intent.getStringExtra(INTENT_NAME_NAME)
+        Log.d(tag, "site and name " + site + " " + name)
+
+
+        comositeDisposable.add(
+            repository.searchQuotes(site, name)
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeOn(Schedulers.io())
+                .subscribe({ result -&gt;
+                        list.addAll(result)
+                    listView.adapter = QuotesAdapter(list)
+                    Log.d(tag, list.toString());
+                })
+        )
+
+    }
+}
+================================
+QuotesAdapter.kt
+package com.study.c01kotlin
+
+import android.support.v7.widget.RecyclerView
+import android.text.Html
+import android.util.Log
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import com.study.c01kotlin.R
+import com.study.c01kotlin.data.ChangeSourceListener
+import com.study.c01kotlin.data.Quote
+import com.study.c01kotlin.data.SourceOfQuotes
+import kotlinx.android.synthetic.main.source_item.view.*
+
+class QuotesAdapter(list: MutableList&lt;Quote&gt;) :
+    RecyclerView.Adapter&lt;QuotesAdapter.ViewHolder&gt;() {
+
+    private val mItems: MutableList&lt;Quote&gt; = list
+
+    override fun onBindViewHolder(p0: ViewHolder, p1: Int) {
+        val item = mItems[p1]
+        p0.textView.text = Html.fromHtml(item.elementPureHtml)
+//        p0.textView.text = item.htmlText
+//        p0.textView.text = "123"
+       Log.d(tag, "123 " + item.elementPureHtml)
+    }
+
+
+    override fun onCreateViewHolder(p0: ViewGroup, p1: Int): ViewHolder {
+        val layoutInflater = LayoutInflater.from(p0!!.context)
+        val view = layoutInflater.inflate(R.layout.source_item, p0, false)
+        return ViewHolder(view).listen{ position, type -&gt;
+        }
+    }
+
+
+    override fun getItemCount(): Int {
+        return mItems.size
+    }
+
+    class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+        val textView = view.text!!
+    }
+
+    fun &lt;T: RecyclerView.ViewHolder&gt; T.listen(event: (position: Int, type:Int) -&gt; Unit):T{
+        itemView.setOnClickListener{
+            event.invoke(adapterPosition, getItemViewType())
+        }
+        return this
+    }
+
+    operator fun get(position: Int):Quote{
+        return mItems[position]
+    }
+}
+================================
+SourcesOfQuotesAdapter.kt
+package layout
+
+import android.support.v7.widget.RecyclerView
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import com.study.c01kotlin.R
+import com.study.c01kotlin.data.ChangeSourceListener
+import com.study.c01kotlin.data.SourceOfQuotes
+import kotlinx.android.synthetic.main.source_item.view.*
+
+class SourcesOfQuotesAdapter(list: MutableList&lt;SourceOfQuotes&gt;) :
+    RecyclerView.Adapter&lt;SourcesOfQuotesAdapter.ViewHolder&gt;() {
+
+    private val mListners: MutableList&lt;ChangeSourceListener&gt; = mutableListOf()
+    private val mItems: MutableList&lt;SourceOfQuotes&gt; = list
+
+    override fun onBindViewHolder(p0: SourcesOfQuotesAdapter.ViewHolder, p1: Int) {
+        val item = mItems[p1]
+        p0.textView.text = item.desc
+    }
+
+    override fun onCreateViewHolder(p0: ViewGroup, p1: Int): SourcesOfQuotesAdapter.ViewHolder {
+        val layoutInflater = LayoutInflater.from(p0!!.context)
+        val view = layoutInflater.inflate(R.layout.source_item, p0, false)
+        return ViewHolder(view).listen{
+            position, type -&gt;
+            changeSource(position)
+        }
+    }
+
+    override fun getItemCount(): Int {
+        return mItems.size
+    }
+
+    class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+        val textView = view.text!!
+    }
+
+    fun addListener(listener: ChangeSourceListener){
+        mListners.add(listener)
+
+    }
+
+    fun changeSource(position: Int){
+        mListners.forEach{
+            it.sourceChanged(position)
+        }
+    }
+
+    fun &lt;T: RecyclerView.ViewHolder&gt; T.listen(event: (position: Int, type:Int) -&gt; Unit):T{
+        itemView.setOnClickListener{
+            event.invoke(adapterPosition, getItemViewType())
+        }
+        return this
+    }
+
+    operator fun get(position: Int):SourceOfQuotes{
+        return mItems[position]
+    }
+}
+================================
+================================
+                </listing>
+            </details>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <details>
+                <summary style="color: blueviolet">__</summary>
+                <listing style="background-color: #DEF;">
+================================
+
+
+================================
+
+
+================================
+                </listing>
+            </details>
+            <p></p>
+            <p></p>
+        </li>
+    </ol>
+    <p><a href="https://www.youtube.com/watch?reload=9&v=OaTZbNyMit4&t=334s">Как написать Android-приложение на Kotlin [GeekBrains]</a>
+    <a href=""></a>
+    <a href=""></a>
+    <a href=""></a>
+    <a href=""></a>
+    <a href=""></a>
+    <a href=""></a>
+    <a href=""></a></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+</body>
+
+</html>

@@ -1,23 +1,6 @@
-'''
-l3 = l1 + l2
-l1 = 
-aa  
-[1](11)  
-bb  
-[2](22)  
-[3](33) 
-l2 =
-1  
-2  
-3   
-4   
-l3=
-aa
-[1](11)
-1
-bb
-[2](22)
-2
-[3](33)
-3
-'''    
+python3 ptexplorer.py -d sample.pka sample.xml
+python ptexplorer.py -d xx.pka xx.xml
+python3 ptexplorer.py -e sample.xml sample.pkt
+python ptexplorer.py -e xx.xml xx.pkt
+
+    

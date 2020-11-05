@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<base target="_blank">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<style>
+		p {
+			margin: 0px;
+		}
+
+		.b1 {
+			border: dotted 1px;
+		}
+
+		td {
+			border: dotted 1px;
+		}
+
+		.margin1 {
+			margin-left: 20px;
+		}
+	</style>
+</head>
+
+<body>
+	<p>Разработка мобильных приложений под Android\Уровень 1</p>
+	<ol>
+		<li>
+			<p>Кто никогда не слышал про unix-а</p>
+			<p>Основа - ядро - KERNEL</p>
+			<p>127.0.0.1 - интерфес не привязан ни к доной железке</p>
+			<p>Ядро считает, что интерфейс есть.</p>
+			<p>Если ядро считает, значит и все считают</p>
+			<p>Все программы считают</p>
+			<p>Программы ничего не могут делать самостоятельно</p>
+			<p>Чтение диска, посылание пакетов, вывод на видеокарту - благодаря тому , что есть ядро, которое выполняет системные вызовы</p>
+			<p>KERNEL - linux system</p>
+			<p>[PROCESS] - это контейнер, в котором работают программы [PROGRAM]</p>
+			<p>принтер,память, диск, - это файл</p>
+			<p>система безопасности, как программы работают с файлами</p>
+			<p>[PROGRAM3]-процесс, у которого уникальный идентификатор PID</p>
+			<p>Каждый процесс кому-то принадлежит user UID</p>
+			<p>[PROGRAM3] PID UID</p>
+			<p>root UID==0</p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+		</li>
+		<li>
+			<p>Ограничения на программы накладывает Андроид</p>
+			<p>GIDs G-group групповой идентификатор, программа-процесс членство в группе</p>
+			<p>программа будет работать с файлом если права UID и GIDs совпадают</p>
+			<p>Когда пакетный менеджер устанавливает программу apk (android pakage ), он придумывает очередной GID UID</p>
+			<p>исключение: есле несколько программ из JAVA-пакета, то можно попросить , чтобы несколько программ имели одинаковые GID и UID</p>
+			<p>когда добавляются привелегии, добавляются GID1 GID2</p>
+			<p>GID UID GID1 GID2</p>
+			<p></p>
+		</li>
+		<li>
+			<p></p>
+			<p>Android-1-Rev_1.11.pdf</p>
+			<p>В 2005
+				году Google выкупила Android за $130 млн.</p>
+			<p>Как отметил Дэвид Лове, вице-
+				президент компании, на симпозиуме в Стэнфорде: «Приобретение Android —
+				это самое значительное приобретение Google за все время существования
+				компании».</p>
+			<p>Каждое приложение Android выполняется в собственном процессе, со
+				своим собственным экземпляром виртуальной машины Dalvik (или ART).
+				ВМ Dalvik - DVM</p>
+			<p>DVM - java c изменениями, т.к. стандартная машина java использует стековый подход, при вызове функции в стеке выделяется память и т.д. и т.п., повышенное потребление памяти - повышенное потребление электропитания</p>
+			<p>DVM - память не стековая, память - регистровая Dalvik - деревня в Исландии, где жила бабушка одного из разработчиков Android</p>
+			<p>DVM - компиляция при запуске программы</p>
+			<p>ART VM - компиляция при установке .dex - dalvik execute</p>
+			<p>Как работает</p>
+			<p>KERNEL</p>
+			<p>[PROGRAM3] <span>процесс</span></p>
+			<p>[DVM(APPLICATION)] <span>Вирт. машина на которой работает Ваше приложение</span></p>
+			<p>Как работает 2</p>
+			<p>KERNEL</p>
+			<p>[PROGRAM3]</p>
+			<p>[DVM()] <span>Zygote - пустая виртуальная машина</span></p>
+			<p>Единственный способ в UNIX создать процесс - это клонировать уже существующий</p>
+			<p>Первый процесс делается особым образом, а все остальные процессы являются его потомками</p>
+			<p>Как работает 2</p>
+			<p>KERNEL</p>
+			<p>[PROGRAM3]</p>
+			<p>[DVM()] <span>Zygote</span></p>
+			<p>[DVM(Application)]</p>
+			<p>При запуске приложения: Zygote - клонируется, и в ней запускается приложение</p>
+			<table>
+				<tr>
+					<td>
+						<p>Стандартное приложение Java</p>
+						<p></p>
+					</td>
+					<td>
+						<p>Загружается все приложение</p>
+						<p>У приложения есть точка входа</p>
+						<p>Приложение запускается</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p>Android приложение</p>
+						<p></p>
+					</td>
+					<td>
+						<p>Приложение состоит из большого количества компонентов</p>
+						<p>и инстанциируются, впрыскиваютсч в VM только те, которые реально необходимы</p>
+						<p>нет такого понятия, как единственная точка входа и т.д.</p>
+						<p>приложение спит, и вдруг разбужено, т.к. широковещательный приемник должен принять, какойто сигнал</p>
+						<p>Broadcast Receiver впрыскивается в VM принимает сигнал, обрабатывает, после этого приложение может смело закрываться </p>
+						<p>Все происходит обсолютно асинхронно</p>
+						<p>Программист не имеет никакой власти над жизненным циклом приложения</p>
+						<p>Приложение может быть убитов любой момент, когда операционная система этого захочет</p>
+					</td>
+				</tr>
+			</table>
+			<p>LRU - Last R Use</p>
+			<p>После убивания приложения, оно еще не убито и остается в памяти, и убивается с течением времени по принципу LRU</p>
+			<p>[DVM(BR)] UID == GID GIDs</p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p><a href="http://developer.android.com/reference/android/Manifest.permission.html">http://developer.android.com/reference/android/Manifest.permission.html</a></p>
+			<p>приложение в Android</p>
+			<ol>
+				<li>Activity - интерфейс UI</li>
+				<li>Service</li>
+				<li>Broadcast Receiver</li>
+				<li>Content Provider)</li>
+			</ol>
+			<p>Архитектура приложения</p>
+			<ol>
+				<li>код</li>
+				<li>ресурсы</li>
+				<li>мета-информацию (Манифест</li>
+			</ol>
+			<p>INTENT - маленькие сообщения</p>
+			<p>StartActivity*(intent)</p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+		</li>
+		<li>
+			<p>Android Studio</p>
+			<p>Defoult Settings</p>
+			<p>Android SDK</p>
+			<p>Android 6.0</p>
+			<p><em>Launch Standalone SDK Manager</em></p>
+			<ol>
+				<li>
+					<p>Tools</p>
+					<p>Android SDK Tools</p>
+					<p>Android SDK Platform-tools</p>
+					<p>Android SDK Build-tools 23.0.2</p>
+					<p></p>
+				</li>
+				<li>
+					<p></p>
+					<p></p>
+					<p></p>
+					<p></p>
+					<p></p>
+				</li>
+				<li>
+					<p>Android 2.3.3(API 10)</p>
+					<p>Intel x86 Atom System Image</p>
+					<p>Позволит создать Устройство, которое будет работать с версией 2.3</p>
+					<p></p>
+					<p></p>
+				</li>
+				<li>
+					<p>Extras</p>
+					<p>Android Support Library</p>
+					<p>Библиотека совместимости</p>
+					<p>Inte x86 Emulator(HAXM installer)</p>
+					<p></p>
+					<p></p>
+				</li>
+			</ol>
+			<p></p>
+			<p></p>
+			<p></p>
+		</li>
+		<li>
+			<p>HelloAndroid</p>
+			<p>Phone and Tablet</p>
+			<p>API 10: Android 2.3.3 (Ginger bread)</p>
+			<p>student.example.com</p>
+			<p>D:\mailCloud\prjother\04android\HelloAndroid</p>
+			<p>Empty Activity</p>
+			<p>MainActivity</p>
+			<p>Layout Name: activity_main</p>
+			<p>5.4_FWVGA_API_</p>
+			<p></p>
+			<pre>package student.example.helloandroid;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    }
+}</pre>
+			<p></p>
+			<pre>
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"&gt;
+
+    &lt;TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" /&gt;
+
+&lt;/android.support.constraint.ConstraintLayout&gt;
+
+</pre>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+		</li>
+		<li>
+			<p>Help</p>
+			<ul>
+				<li>Lincenses</li>
+				<li type="disc">Default Deymap Reference</li>
+			</ul>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+		</li>
+		<li>
+			<ul>
+				<li>
+					<p>
+						&lt;xml version="1.0" encoding="utf-8"?&gt;
+					</p>
+					<p>стандартный xml заголовок</p>
+				</li>
+				<li>ConstraintLayout - Один корневой элемент</li>
+				<li>
+					<p>xmlns:android="http://schemas.android.com/apk/res/android"</p>
+					<p>xmlns:app="http://schemas.android.com/apk/res-auto"</p>
+					<p>xmlns:tools="http://schemas.android.com/tools"</p>
+					<p>- описание пространств имен</p>
+				</li>
+				<li>
+					<p>&lt;TextView</p>
+					<p>android:layout_width="wrap_content"</p>
+					<p>android:layout_height="wrap_content"</p>
+					<p>android:text="Hello World!"</p>
+					<p>app:layout_constraintBottom_toBottomOf="parent"</p>
+					<p>app:layout_constraintLeft_toLeftOf="parent"</p>
+					<p>app:layout_constraintRight_toRightOf="parent"</p>
+					<p>app:layout_constraintTop_toTopOf="parent" /&gt;</p>
+					<p></p>
+					<p> - внутри корневого элемента один элемент</p>
+				</li>
+			</ul>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+		</li>
+		<li>
+			<p></p>
+			<p>Пространство имен, то что стоит до двоеточия:</p>
+			<p>android:</p>
+			<p>app:</p>
+			<p>tools:</p>
+			<table>
+				<tr>
+					<td>layout_width</td>
+					<td>ширина элемента</td>
+					<td>match_parent</td>
+					<td>все пространство родителя</td>
+				</tr>
+				<tr>
+					<td>paddingBottom</td>
+					<td>отступ снизу</td>
+					<td>16dp</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</table>
+
+			<p>padding - то что отделяет границу элемента от внутренних элементов</p>
+			<p>padding для внутренних</p>
+			<p>margin для внешних</p>
+			<p>tools:context</p>
+			<p>понимать графическому товарищу, к какой активности(MainActivity) относится разметка</p>
+			<p>layout_constraintBottom_toBottomOf</p>
+			<p>TextView - по центру и побольше</p>
+			<ol>
+				<li>layout_width="match_parent"</li>
+				<li>textAlignment="center"</li>
+				<li>textSize="55dp"</li>
+				<li>
+					<p>android:text="Hello World!\n\</p>
+					<p>123\n\</p>
+					<p>456"</p>
+				</li>
+			</ol>
+		</li>
+		<li>
+			<p></p>
+			<pre>    &lt;TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#faa"
+        android:text="Hello World!"
+        android:textAlignment="center"
+        android:textColor="#00a"
+        android:textSize="55sp"
+        android:textStyle="bold|italic"
+        /&gt;</pre>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+		</li>
+		<li>
+			<p>Вопрос локализации приложения</p>
+			<p>Какой язык, и т.д.</p>
+			<p>у google есть сервис, где переведут</p>
+			<p>Не писать в разметке текста</p>
+			<p>Для разного языка текстовые ресурсы будут иметь одно название, но разное содержание</p>
+			<p>HardCoding string - жестко закодированная строка</p>
+			<p>Alt-Enter - несколько решений проблем</p>
+			<p>Extract string resource</p>
+			<p>Suppress: Add tools:ignore="HardcodedText" attribute</p>
+			<p>Extract string resource</p>
+			<p>Override Resource in Other Configurations...</p>
+			<p>Rearrange tag attributes</p>
+			<p>Remove attribute</p>
+			<p>Inject language or reference</p>
+			<p>Extract string resource</p>
+			<p>Extract Resource</p>
+			<table>
+				<tr>
+					<td>Resource name:</td>
+					<td>button_text</td>
+				</tr>
+				<tr>
+					<td>Resource value:</td>
+					<td>Click me!</td>
+				</tr>
+				<tr>
+					<td>Source set:</td>
+					<td>main</td>
+				</tr>
+				<tr>
+					<td>File name:</td>
+					<td>Strings.xml</td>
+				</tr>
+				<tr>
+					<td>Create the resource in directories:</td>
+					<td>values</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+				</tr>
+			</table>
+			<p>Ctrl-B - откроется strings.xml</p>
+			<pre>&lt;resources>
+    &lt;string name="app_name"&gt;HelloAndroid&lt;/string&gt;
+    &lt;string name="button_text"&gt;Click me!&lt;/string&gt;
+&lt;/resources&gt;
+</pre>
+			<p>Edit translations for all locales in the translations editor.</p>
+			<p></p>
+			<pre>    public void onClick(View view) {
+        Toast.makeText(this, "The button has been pressed", Toast.LENGTH_LONG).show();
+    }
+</pre>
+			<pre>    public void onClick(View view) {
+        Toast.makeText(this, R.string.button_message, Toast.LENGTH_LONG).show();
+    }
+</pre>
+		</li>
+		<li>
+			<p> android:id="@+id/button1"
+			</p>
+			<p>Button button = findViewById(R.id.button1);</p>
+			<p>button.setOnClickListener(new View.OnClickListener() {</p>
+			<p>@Override</p>
+			<p>public void onClick(View view) {</p>
+			<p>Toast.makeText(MainActivity.this, R.string.button_message, Toast.LENGTH_LONG).show();</p>
+			<p>}</p>
+			<p>});</p>
+			<p>Ошибки</p>
+			<p>logcat</p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+		</li>
+		<li>
+			<p>Состояния активностей</p>
+			<div style="font-size: 30px;">
+				<p>OnCreate</p>
+				<div class="margin1">
+					<p>onStart</p>
+					<div class="margin1">
+						<p>onResume</p>
+						<p>onPause</p>
+					</div>
+					<p>onStop</p>
+				</div>
+
+				<p>OnDestroy</p>
+			</div>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+		</li>
+		<li>
+			<p>Start a new Android Studio project</p>
+			<p>file:///D:/mailCloud/prjother/04android/rm02.html</p>
+			<p>Empty Activity</p>
+			<p>Next</p>
+			<table>
+				<tr>
+					<td>Name</td>
+					<td>HelloAndroid</td>
+				</tr>
+				<tr>
+					<td>Package name</td>
+					<td>student.example.helloandroid</td>
+				</tr>
+				<tr>
+					<td>Save location</td>
+					<td>D:\mailCloud\prjother\04android\freon\HelloAndroid</td>
+				</tr>
+				<tr>
+					<td>Language</td>
+					<td>Java</td>
+				</tr>
+				<tr>
+					<td>Minimum API level</td>
+					<td>API 15: Andorid 4.0.3 (IceCreamSandwich)</td>
+				</tr>
+			</table>
+			<p>Finish</p>
+			<p>D:\mailCloud\prjother\04android\freon\ HelloAndroid\ app\src\main\res\values\strings.xml</p>
+			<pre>&lt;resources>
+    &lt;string name="app_name">HelloAndroid1&lt;/string>
+    &lt;string name="button_text">on click&lt;/string>
+&lt;/resources>
+</pre>
+			<p>D:\mailCloud\prjother\04android\freon\ HelloAndroid\ app\src\main\res\layout\activity_main.xml</p>
+			<pre>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity"&gt;
+
+    &lt;Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="#faa"
+        android:text="@string/button_text"
+        android:textAlignment="center"
+        android:textColor="#00a" /&gt;
+
+    &lt;TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button1"
+        android:layout_centerHorizontal="true"
+        android:background="#faa"
+        android:text="123 \n 456 \n 789"
+        android:textAlignment="center"
+        android:textColor="#00a"
+        android:textSize="55sp" /&gt;
+
+&lt;/android.widget.RelativeLayout&gt;</pre>
+
+			<p>D:\mailCloud\prjother\04android\freon\HelloAndroid\ app\src\main\java\student\example\ helloandroid\MainActivity.java</p>
+
+			<pre>package student.example.helloandroid;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        Button button = findViewById(R.id.button1);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(MainActivity.this, "click me", Toast.LENGTH_LONG).show();
+            }
+        });
+    }
+}
+</pre>
+			<p></p>
+		</li>
+		<li>
+			<p>activity lifecycle</p>
+			<pre>package student.example.acacycle;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        Toast.makeText(this, "onCreate", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    protected  void onStart(){
+        super.onStart();
+        Toast.makeText(this, "onStart", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    protected  void onResume(){
+        super.onResume();
+        Toast.makeText(this, "onResume", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    protected  void onPause(){
+        super.onPause();
+        Toast.makeText(this, "onPause", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    protected  void onStop(){
+        super.onStop();
+        Toast.makeText(this, "onStop", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    protected  void onDestroy(){
+        super.onDestroy();
+        Toast.makeText(this, "onDestroy", Toast.LENGTH_SHORT).show();
+    }
+
+}
+
+    @Override
+    protected  void onStop(){
+        super.onStop();
+        Toast.makeText(this, "onStop", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    protected  void onFinish(){
+        super.onFinish();
+        Toast.makeText(this, "onFinish", Toast.LENGTH_SHORT).show();
+    }
+
+}
+</pre>
+			<p>
+				Camel Notetion
+			</p>
+			<p>Class - SomeClass</p>
+			<p>mClass - член класса</p>
+			<p>someVariable</p>
+			<p>sStaticClasssMember - static</p>
+			<p>SOME_CONSTANT</p>
+			<p>Имя класса RedSquare</p>
+			<p>getTime() - метод с глагола</p>
+			<p>APL</p>
+			<p>Ресурсы</p>
+			<p>Отделение ресурсов от кода программы</p>
+			<p><b>bbbbbbbbb</b></p>
+			<p><i>iiiiiiiiiiiiiiiiiiiiiiii</i></p>
+			<p><u>uuuuuuuuuu</u></p>
+			<p>Имя ресурса - маленькие буквы с символом подчеркивания</p>
+			<p>
+				&lt;string name="greeting_msg"&gt;&lt;b&gt;Превед!&lt;b&gt;&lt;/string&gt;
+			</p>
+			<p>String greeting = getString(R.string.greeting_msg);</p>
+			<p><b>Превед!</b></p>
+			<p><a href="https://developer.android.com/">http://d.android.com</a></p>
+			<p><a href="https://developer.android.com/reference/android/widget/Toast?hl=en">toast</a></p>
+			<p></p>
+			<p>open static Toast!</p>
+			<p>makeText(context: Context!, text: CharSequence!, duration: Int)</p>
+			<p>Make a standard toast that just contains a text view.</p>
+			<p>open static Toast!</p>
+			<p>makeText(context: Context!, resId: Int, duration: Int)</p>
+			<p>Make a standard toast that just contains a text view with the text from a resource.</p>
+			<p>1</p>
+			<pre>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;resources&gt;
+    &lt;color name="colorPrimary"&gt;#008577&lt;/color&gt;
+    &lt;color name="colorPrimaryDark"&gt;#00574B&lt;/color&gt;
+    &lt;color name="colorAccent"&gt;#D81B60&lt;/color&gt;
+    &lt;color name="screen_background_color"&gt;#4FF0&lt;/color&gt;
+    &lt;color name="view_background_color"&gt;#FFF0&lt;/color&gt;
+    &lt;color name="view_text_color"&gt;#8004&lt;/color&gt;
+&lt;/resources&gt;</pre>
+			<p>2</p>
+			<pre>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;android.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/screen_background_color"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity"&gt;
+
+    &lt;TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@color/view_background_color"
+        android:text="@string/hello"
+        android:textAlignment="center"
+        android:textColor="@color/view_text_color"
+        android:textSize="55sp" /&gt;
+
+&lt;/android.widget.LinearLayout&gt;</pre>
+			<p>3</p>
+			<pre>package student.example.a30colors;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        Toast.makeText(this, "onCreate", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    protected  void onStart(){
+        super.onStart();
+        Toast.makeText(this, "onStart", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    protected  void onResume(){
+        super.onResume();
+        Toast.makeText(this, "onResume", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    protected  void onPause(){
+        super.onPause();
+        Toast.makeText(this, "onPause", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    protected  void onStop(){
+        super.onStop();
+        Toast.makeText(this, "onStop", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    protected  void onDestroy(){
+        super.onDestroy();
+        Toast.makeText(this, "onDestroy", Toast.LENGTH_SHORT).show();
+    }
+
+}
+</pre>
+			<p>button.setTextColor(0x88FF0000)</p>
+			<p>Независимые</p>
+			<p>dp - Density-independent Pixels</p>
+			<p>sp - Scale-independent Pixels</p>
+			<p>pt
+				Points - 1/72 of an inch based on the physical size of the screen.</p>
+			<p>Визуальные стили и темы</p>
+			<p>тема - для приложения</p>
+			<p>стиль - для вьюхи</p>
+			<p>дочерние элементы стили не наследуют</p>
+			<p>calc</p>
+			<p><a href="https://stackoverflow.com/questions/2025282/what-is-the-difference-between-px-dip-dp-and-sp">What is the difference between “px”, “dip”, “dp” and “sp”?</a></p>
+			<p></p>
+			<pre>/* AUTO-GENERATED FILE. DO NOT MODIFY.
+ * R.java
+ D:\mailCloud\prjother\04android\neon\
+ A30Colors\app\build\generated\not_namespaced_r_class_sources\debug\
+ processDebugResources\r\student\example\a30colors
+ * This class was automatically generated by the
+ * aapt tool from the resource data it found. It
+ * should not be modified by hand.
+ */
+
+package student.example.a30colors;
+
+public final class R {
+	public static final class attr {
+	}
+	public static final class color {
+		public static final int view_background_color=0x7f040058;
+		public static final int view_text_color=0x7f040059;
+	}
+}</pre>
+			<p>@color/view_background_color</p>
+			<p>@android:string/dialog_alert_title</p>
+			<p>@+id/id_text_view"</p>
+			<p>android:layout_below="@id/button1"</p>
+			<p>res/value/strings.xml</p>
+			<p>res/value-fr/strings.xml</p>
+<p>Страна: RU</p>
+			<p>MCC-код: 250</p>
+			<p>MNC-код: 20</p>
+			<p>Бренд: Tele2</p>
+			<p>Все можно сделать:</p>
+			<p>Нет предела извращению.</p>
+			<p><a href="https://developer.android.com/ndk/guides">Create or Import a Native Project</a></p>
+			<p><a href="https://habr.com/ru/post/203014/">Введение в Android NDK</a></p>
+			<p></p>
+			<p>ls</p>
+			<p>ip route show </p>
+			<p>getprop net.dns1</p>
+			<p>$echo $PATH</p>
+			<p>2-курс время по udp</p>
+			<p>drivera под android - курс Линукс системного программирования</p>
+			<p><a href="https://play.google.com/store/apps/details?id=org.pocketworkstation.pckeyboard">Hacker's Keyboard</a></p>
+			<p></p>
+			<p></p>
+			<p><a href="https://ru.wikipedia.org/wiki/Model-View-Controller">Model-View-Controller</a></p>
+			<p><a href="https://www.ibm.com/support/knowledgecenter/ru/SSRS7Z_8.6.0/com.ibm.programmingcm.doc/dcmcm064.htm">Работа с IBM Content Manager версии 8</a></p>
+			<p><a href="https://github.com/jackpal/Android-Terminal-Emulator/wiki/Android-Shell-Command-Reference">Android Shell Command Reference</a></p>
+			<p></p>
+			<p>до стр. 52</p>
+		</li>
+		<li>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+		</li>
+		<li>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+		</li>
+		<li>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+		</li>
+		<li>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+		</li>
+		<li>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+		</li>
+		<li>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+		</li>
+	</ol>
+
+	<p><a href="\\NAS-9C-1A-64\MLAPINPC-ReadyCloud0\01freon\avi\02progr\01web\[Специалист] Разработка мобильных приложений под Android\Уровень 1">\\NAS-9C-1A-64\MLAPINPC-ReadyCloud0\01freon\avi\02progr\01web\[Специалист] Разработка мобильных приложений под Android\Уровень 1</a></p>
+	<p><a href="https://developer.android.com/studio">download Android Studio</a></p>
+	<p><a href="https://www.youtube.com/watch?v=7TVL0xoCnD8&list=PLmRNNqEA7JoMS92MM19DAMa089fpGqIwD">Android. Быстрый старт. Установка и настройка. Урок 1 [GeekBrains]</a></p>
+	<p><a href="https://www.huaweiusbdrivers.com/2018/02/download-huawei-usb-driver-2018-for.html">huawei-usb-driver</a></p>
+	<p>v не работает v</p>
+	<p><a href="https://samsungusbdriver.net/samsung-galaxy-tab-info-driver-usb-download.html">samsungusbdriver</a></p>
+	<table>
+		<tr>
+			<td>The Code Completion feature lets you quickly complete different kinds of statements in the code. For example, start typing a class name and press Ctrl+Space to complete it. When multiple choices are available, they are shown in the lookup list.</td>
+			<td>Функция завершения кода позволяет быстро выполнять различные типы операторов в коде. Например, начните вводить имя класса и нажмите Ctrl+пробел, чтобы завершить его. Если доступно несколько вариантов, они отображаются в списке поиска.</td>
+		</tr>
+		<tr>
+			<td>You can quickly find all places where a particular class, method or variable is used in the whole project by positioning the caret at the symbol's name or at its usage in code and pressing Alt+F7</td>
+			<td>Вы можете быстро найти все места, где конкретный класс, метод или переменная используется во всем проекте, разместив курсор на имени символа или при его использовании в коде и нажав Alt+F7</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
+	<div style="background-color: #ffa;">
+		<p>How to solve java.lang.IllegalArgumentException: Unable to locate adb (100% works)</p>
+		<ol>
+			<li>
+				<p>Go ot the "program and features" and unisnstall "Avast Antivirus"</p>
+				<p>Go to the link and download "SDK platform tools"</p>
+				<p><a href="https://developer.android.com/studio/releases/platform-tools">SDK platform tools</a></p>
+				<p>Download SDK Platform-Tools for Windows</p>
+				<p></p>
+				<p></p>
+				<p></p>
+				<p></p>
+			</li>
+			<li>
+				<p>copy "adb" and past it to sde\platform tools</p>
+				<p>D:\tmp\dload\platform-tools_r29.0.1-windows\platform-tools</p>
+				<p>adb.exe</p>
+				<p>C:\Users\freon\AppData\Local\Android\Sdk\platform-tools</p>
+				<p></p>
+				<p></p>
+				<p></p>
+				<p></p>
+			</li>
+			<li>
+				<p></p>
+			</li>
+		</ol>
+	</div>
+	<p>Перенос строк</p>
+	<p>File/Settings/General/Soft Wraps</p>
+	<p>[v] Use soft wraps(обертывания) en editor</p>
+	<p><a href="https://developer.android.com/reference/android/widget/TextView.html#attr_android:textStyle">textStyle developer.android.com</a></p>
+	<p>KeyMap Reference</p>
+	<p>Ctrl-Alt-L - выровнять текст()</p>
+	<p>Alt-Enter</p>
+	<p>Ctrl-B - перейти к содержимому</p>
+	<p>Ctrl-D</p>
+	<p>Shift-F6</p>
+	<p>Ctrl-Alt-O - импорты ненужные</p>
+	<p>Ctrl-Shift-U - low/high register</p>
+	<p>Ctrl-Q - на функцию для подсказки</p>
+	<p>Ctrl-Y - строка убралась</p>
+	<p>Ctrl-Alt-C - создать константу</p>
+	<p></p>
+	<p></p>
+	<p>При сохранении можно сделать так, чтобы все выравнивалось</p>
+	<p><a href="https://dropmefiles.com/">https://dropmefiles.com/</a></p>
+	<p></p>
+	<p></p>
+	<table>
+		<tr>
+			<td>layout</td>
+			<td>размещение</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
+</body></html>

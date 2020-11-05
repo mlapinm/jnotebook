@@ -1,4 +1,8 @@
 
+
+
+
+PART 6 Navigating the Packet tracer tool
 packet tracer 7.3
 options-preferences
 Customize User Experence
@@ -11,31 +15,16 @@ Dialogs
 CLI command line interface
 18 
 
-PART 8
-Would you like to enter the initial configuration dialog? [yes/no]: n
-
-
-Press RETURN to get started!
-
-Router>
+PART 8 Configuring a router
 Router>ena
 Router#
 Router#config t
 Enter configuration commands, one per line.  End with CNTL/Z.
-r1(config)#hostname R1
+R1(config)#hostname R1
+R1(config)#int f0/0
 R1(config-if)#IP ADDRESS 192.168.1.254 255.255.255.0
 R1(config-if)#NO SHUT
-
-R1(config-if)#
-%LINK-5-CHANGED: Interface FastEthernet0/0, changed state to up
-
-%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/0, changed state to up
-
-R1(config-if)#^Z
-R1#
-%SYS-5-CONFIG_I: Configured from console by console
-
-R1#
+R1#wr
 R1#
 
 R1#shOW IP INT BRIEF
@@ -43,8 +32,6 @@ Interface              IP-Address      OK? Method Status                Protocol
 FastEthernet0/0        192.168.1.254   YES manual up                    up 
 FastEthernet0/1        unassigned      YES unset  administratively down down 
 Vlan1                  unassigned      YES unset  administratively down down
-R1#
-ctrl z
 
  
 PART9 Configuring a switch
@@ -1175,22 +1162,483 @@ sh ip eigrp neibor
 sh ip eigrp topology
 
  
-part 7
+part 74
+
+R0
+10.0.0.0/30
+c 10.1.1.4 s0/0/0
+d 10.1.1.8 10.1.1.6 s0/0/0 
+d 10.1.1.12 10.1.1.6 s0/0/0 
+d 10.1.1.16 10.1.1.29 s0/0/1 
+d 10.1.1.20 10.1.1.29 s0/0/1 
+d 10.1.1.24 10.1.1.29 s0/0/1 
+c 10.1.1.28 s0/0/1 
+c 192.168.100.0/24 f0/0  
+d 192.168.200.0/24 10.1.1.6 
+
+int s0/0/0
+10.1.1.5/30
+
+
+R1
+int f0/0
+10.1.1.9/30
  
-part 7
+part 75
  
-part 7
+part 76
  
-part 7
+part 77
+
+lo1 1.1.1.1/32
+lo2 2.2.2.2/32
+lo3 3.3.3.3/32
+lo4 4.4.4.4/32
+192.168.1.0/24
+
+conf t
+hostname R1
+int f0/0
+ip address 192.168.1.1 255.255.255.0
+no sh
+exi
+do wr
+
+conf t
+hostname R2
+int f0/0
+ip address 192.168.1.2 255.255.255.0
+no sh
+exi
+do wr
+
+conf t
+hostname R3
+int f0/0
+ip address 192.168.1.3 255.255.255.0
+no sh
+exi
+do wr
+
+conf t
+hostname R4
+int f0/0
+ip address 192.168.1.4 255.255.255.0
+no sh
+exi
+do wr
+
+R1
+router ospf 1
+network 192.168.1.0 0.0.0.255 area 0
+do wr
+
+R2
+router ospf 1
+network 192.168.1.0 0.0.0.255 area 0
+do wr
+
+R3
+router ospf 1
+network 192.168.1.0 0.0.0.255 area 0
+do wr
+
+R4
+router ospf 1
+network 192.168.1.0 0.0.0.255 area 0
+do wr
+
+R4#sh ip route 
+
+C    192.168.1.0/24 is directly connected, FastEthernet0/0
+
+R4#sh ip ospf int f0/0
+
+FastEthernet0/0 is up, line protocol is up
+  Internet address is 192.168.1.4/24, Area 0
+
+  Process ID 1, Router ID 192.168.1.4, Network Type BROADCAST, Cost: 1
+  Transmit Delay is 1 sec, State DROTHER, Priority 1
+  Designated Router (ID) 192.168.1.1, Interface address 192.168.1.1
+  Backup Designated Router (ID) 192.168.1.2, Interface address 192.168.1.2
+  
+R4#sh ip ospf neighbor 
+
+Neighbor ID     Pri   State           Dead Time   Address         Interface
+192.168.1.2       1   FULL/BDR        00:00:39    192.168.1.2     FastEthernet0/0
+192.168.1.3       1   2WAY/DROTHER    00:00:33    192.168.1.3     FastEthernet0/0
+192.168.1.1       1   FULL/DR         00:00:37    192.168.1.1     FastEthernet0/0
+
+p7716.pkt
+R1#clear ip ospf process 
+
+R2
+clear ip ospf process 
+y
+
+R1(config)#int loopback 1
+
+R1(config-if)#
+%LINK-5-CHANGED: Interface Loopback1, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface Loopback1, changed state to up
+
+R1(config-if)#ip address 1.1.1.1 255.255.255.255
+R1(config-if)#router ospf 1
+R1(config-router)#network 1.1.1.1 0.0.0.0 area 0
+R1(config-router)#do wr
+Building configuration...
+[OK]
+
+R2
+int lo2
+ip address 2.2.2.2 255.255.255.255
+exi
+router ospf 1
+network 2.2.2.2 0.0.0.0 area 0
+do wr
+
+R3
+int lo3
+ip address 3.3.3.3 255.255.255.255
+exi
+router ospf 1
+network 3.3.3.3 0.0.0.0 area 0
+do wr
+
+R4
+int lo4
+ip address 4.4.4.4 255.255.255.255
+exi
+router ospf 1
+network 4.4.4.4 0.0.0.0 area 0
+do wr
+
+R4#sh ip rout
+R4#sh ip ospf int f0/0
+
+R2#clear ip ospf process
+R3#clear ip ospf process
+
+Switch#reload
+
+R3#sh ip ospf int f0/0
+  Transmit Delay is 1 sec, State BDR, Priority 1
+
+R3(config)#int f0/0
+R3(config-if)#ip ospf priority 255
+R3(config-if)#do wr
+
+R3#sh ip ospf int f0/0
+  Transmit Delay is 1 sec, State BDR, Priority 255
+
+R2(config)#int f0/0
+R2(config-if)#ip ospf priority 254
+R2(config-if)#do wr
+
  
-part 7
+part 78
+AREA 0
+AREA 1
+AREA 2
+ABR
+ABR
+Lo1 1.1.1.1/32
+Lo2 2.2.2.2/32
+Lo3 3.3.3.3/32
+Lo4 4.4.4.4/32
+Lo5 5.5.5.5/32
+10.1.1.4/30
+10.1.1.8/30
+10.1.1.12/30
+10.1.1.16/30
+
+R1
+hostname R1
+int g0/0
+ip address 10.1.1.5 255.255.255.252
+no sh
+int g0/1
+ip address 10.1.1.9 255.255.255.252
+no sh
+int lo1
+ip address 1.1.1.1 255.255.255.255
+no sh
+ex
+do wr
+
+R2
+hostname R2
+int g0/0
+ip address 10.1.1.6 255.255.255.252
+no sh
+int g0/1
+ip address 10.1.1.13 255.255.255.252
+no sh
+int lo2
+ip address 2.2.2.2 255.255.255.255
+no sh
+ex
+do wr
+
+no int lo1
+
+
+R3
+hostname R3
+int g0/0
+ip address 10.1.1.10 255.255.255.252
+no sh
+int g0/1
+ip address 10.1.1.17 255.255.255.252
+no sh
+int lo3
+ip address 3.3.3.3 255.255.255.255
+no sh
+ex
+do wr
+
+R4
+hostname R4
+int g0/0
+ip address 10.1.1.14 255.255.255.252
+no sh
+int lo4
+ip address 4.4.4.4 255.255.255.255
+no sh
+ex
+do wr
+
+R5
+hostname R5
+int g0/0
+ip address 10.1.1.18 255.255.255.252
+no sh
+int lo5
+ip address 5.5.5.5 255.255.255.255
+no sh
+ex
+do wr
+
+R4#sh protocols 
+
+R4(config)#router ospf 1
+R4(config-router)#network 4.4.4.4 0.0.0.0 area 1
+R4(config-router)#network 10.1.1.12 0.0.0.3 area 1
+R4(config-router)#do wr
+
+R2
+router ospf 1
+network 10.1.1.12 0.0.0.3 area 1
+network 10.1.1.4 0.0.0.3 area 0
+network 2.2.2.2 0.0.0.0 area 0
+do wr
+
+R5
+router ospf 1
+network 10.1.1.16 0.0.0.3 area 2
+network 5.5.5.5 0.0.0.0 area 2
+do wr
+
+R3
+router ospf 1
+network 10.1.1.16 0.0.0.3 area 2
+network 10.1.1.8 0.0.0.3 area 0
+network 3.3.3.3 0.0.0.0 area 0
+do wr
+
+R1
+router ospf 1
+network 10.1.1.4 0.0.0.3 area 0
+network 10.1.1.8 0.0.0.3 area 0
+network 1.1.1.1 0.0.0.0 area 0
+do wr
+
+
  
-part 7
+part 79
+Switch#sh mac-address-table 
+
+Switch#sh vlan 
  
-part 7
+part 80
+Switch(config)#line con 0
+Switch(config-line)#exi
+Switch(config)#
+
+Switch(config)#int vlan 1
+
+Switch(config)#int f0/1
+
+Switch#sh run
+
+Switch#sh vtp status 
+
+Switch#sh mac-address-table 
+
+Switch#sh int trunk 
+
+Switch#sh cdp neighbors 
+
+Switch#sh cdp neighbors detail 
+
+Switch#sh port-security 
+Switch#sh spanning-tree 
+
+sh run/start
+sh mac-address-table
+sh vlan
+sh vtp status
+sh interface trunk
+sh spanning-tree
+sh cdp neighbors
+sh cdp neighbor details
+
  
-part 7
+part 81
+
+Switch(config)#hostname SW1
+SW1(config)#enable password cisco
+SW1(config)#enable secret student
+SW1(config)#service password-encryption
+SW1(config)#banner motd $ welcome to SW1 $
+SW1(config)#username ldiaz privilege 15 password 0 cisco
+SW1(config)#ip domain-lookup
+SW1(config)#ip domain-name cisco
+SW1(config)#ip name-server 192.168.100.100
+SW1(config)#line vty 0 15
+SW1(config-line)#password cisco
+SW1(config-line)#login local
+SW1(config-line)#logging synchronous
+SW1(config-line)#exec-timeout 0 0
+SW1(config-line)#transport input all
+SW1(config-line)#line con 0
+SW1(config-line)#password cisco
+SW1(config-line)#login local
+SW1(config-line)#exec-timeout 0 0
+SW1(config-line)#logging synchronous
+SW1(config-line)#do wr
+
+SW1(config)#int vlan 1
+SW1(config-if)#ip address 192.168.100.253 255.255.255.0
+
+SW1(config)#ip default-gateway 192.168.100.254
+do wr
+
+sw1
+hostname SW1
+enable password cisco
+enable secret student
+service password-encryption
+banner motd $ welcome to SW1 $
+username ldiaz privilege 15 password 0 cisco
+ip domain-lookup
+ip domain-name cisco
+ip name-server 192.168.100.100
+line vty 0 15
+password cisco
+login local
+logging synchronous
+exec-timeout 0 0
+transport input all
+line con 0
+password cisco
+login local
+exec-timeout 0 0
+logging synchronous
+exi
+int vlan 1
+ip address 192.168.100.253 255.255.255.0
+ip default-gateway 192.168.100.254
+do wr
+
  
-part 7
+part 83
+VLAN100 HOST 
+192.168.100.
+
+Switch(config)#hostname SW1
+SW1(config)#do sh vlan
+
+SW1(config)#vlan 100
+
+SW1(config)#vlan 100
+SW1(config-vlan)#name FACULTY
+SW1(config-vlan)#vlan 101
+SW1(config-vlan)#name STUDENTS
+SW1(config-vlan)#exi
+
+hostname SW2
+vlan 100
+name FACULTY
+vlan 101
+name STUDENTS
+exi
+do wr
+
+int f0/3
+switchport mode access
+switchport access vlan 100
+int f0/4
+switchport mode access
+switchport access vlan 101
+do wr
+
+SW1(config)#int range f0/1-2
+SW1(config-if-range)#switchport mode trunk
+
+SW1#sh int trunk
+
+sw2
+int range f0/1-2
+switchport mode trunk
+
+SW1#sh int trunk
+Port        Vlans in spanning tree forwarding state and not pruned
+Fa0/1       1,100,101
+
+ 
+part 84
+Switch#sh spanning-tree
+
+
+ 
+part 85
+stp election of root bridge criteria:
+1. priority number: 32769 (lowest)
+2. mac address of switch: (lowest)
+3. combo of priority/mac is called bridge 
+-----------------------------------------
+stp election to block a port
+1. picks the switch with the highest mac address
+2. bandwidth (slowest bandwidth to block)
+3. highesst port number to block
+
+
+
+ 
+part 86
+
+SW2(config)#spanning-tree vlan 1,10,20 priority 0
+
+ 
+part 87
+
+Switch(config-if-range)#int range f0/3-10
+Switch(config-if-range)#spanning-tree  bpduguard enable 
+
+Switch#sh int f0/10
+FastEthernet0/10 is down, line protocol is down (disabled)
+
+
+ 
+part 8
+ 
+part 8
+ 
+part 8
+ 
+part 8
+ 
  
  

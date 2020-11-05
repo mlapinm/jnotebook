@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<base target="_blank">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<style>
+		p {
+			margin: 0px;
+		}
+
+		.b1 {
+			border: dotted 1px;
+		}
+
+		td {
+			border: dotted 1px;
+		}
+
+		.margin1 {
+			margin-left: 20px;
+		}
+
+	</style>
+</head>
+
+<body>
+	<ol>
+		<li>
+			<p>Android-1-Rev_1.11.pdf</p>
+			<p>page 111</p>
+			<p>Лабораторная работа «Использование Диалога»</p>
+			<p>1. Создайте проект DialogSample.</p>
+			<p>2. В главной Активности реализуйте Диалог со списком из трех</p>
+			<p>поисковых систем. Выбор элемента списка должен приводить к показу</p>
+			<p>соответствующей web-страницы.</p>
+			<p>3. Реализуйте то же самое с помощью радиокнопок.</p>
+			<p>4. Добавьте в Диалог строку поиска и добейтесь, чтобы пользователю</p>
+			<p>показывались результаты поиска в выбранной поисковой системе.</p>
+			<p>a56dialog</p>
+			<listing>
+==============================================
+layout/activity_main.xml
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"&gt;
+
+    &lt;Button
+        android:id="@+id/selectButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:onClick="onClick"
+        android:text="Select Your Search Engine"
+        android:textSize="18sp" /&gt;
+
+    &lt;Button
+        android:id="@+id/selectButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/selectButton1"
+        android:layout_centerHorizontal="true"
+        android:onClick="onClick"
+        android:text="Select Your Search Engine Again"
+        android:textSize="18sp" /&gt;
+
+&lt;/RelativeLayout&gt;
+
+==============================================
+com/example/freon/a56dialog/BrowserCall.java
+package com.example.freon.a56dialog;
+
+interface BrowserCall {
+    void callBrowser(int idx);
+}
+
+
+==============================================
+com/example/freon/a56dialog/DialogFragment1.java
+package com.example.freon.a56dialog;
+
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.DialogInterface;
+import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.support.v4.app.DialogFragment;
+import android.widget.Toast;
+
+public class DialogFragment1 extends DialogFragment {
+
+    @NonNull
+    @Override
+    public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
+//        return super.onCreateDialog(savedInstanceState);
+        AlertDialog.Builder builder =
+                new AlertDialog.Builder(getActivity());
+        builder.setTitle("select")
+                .setItems(MainActivity.ENGINE_NAMES,
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                //which содержит индекс выбранного элемента списка
+                                Activity activity = getActivity();
+                                if (activity instanceof BrowserCall){
+                                    ((BrowserCall)activity).callBrowser(which);
+                                }else {
+                                    Toast.makeText(activity, "Sory, unable to call Browser ",Toast.LENGTH_LONG).show();
+
+                                }
+                            }
+                        });
+        return builder.create();
+    }
+
+
+}
+
+
+==============================================
+com/example/freon/a56dialog/MainActivity.java
+package com.example.freon.a56dialog;
+
+import android.content.Intent;
+import android.net.Uri;
+import android.support.v4.app.DialogFragment;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Toast;
+
+public class MainActivity extends AppCompatActivity implements BrowserCall {
+
+    final static  CharSequence[] ENGINE_NAMES = {"Google", "Yahoo", "Yandex",};
+    final static  String[] ENGINE_URLS = {"google.com", "yahoo.com", "yandex.ru",};
+    final static  String URL_PREFIX = "http://";
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    }
+
+    public void callBrowser(int idx){
+        Uri webpage = Uri.parse(URL_PREFIX+ENGINE_URLS[idx]);
+        Intent intent = new Intent(Intent.ACTION_VIEW, webpage);
+        if(intent.resolveActivity(getPackageManager()) != null){
+            startActivity(intent);
+        }
+    }
+
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.selectButton1:
+                DialogFragment dialogFragment1 = new DialogFragment1();
+                dialogFragment1.show(getSupportFragmentManager(),"Dialog One");
+                //callBrowser(0);
+                Toast.makeText(this, "111111",Toast.LENGTH_LONG).show();
+                break;
+            case R.id.selectButton2:
+                callBrowser(1);
+                Toast.makeText(this, "222222",Toast.LENGTH_LONG).show();
+                break;
+                default:
+                    Toast.makeText(this, "OOPS",Toast.LENGTH_LONG).show();
+        }
+    }
+}
+==============================================
+			</listing>
+			<p></p>
+			<p></p>
+			<p></p>
+		</li>
+		<li>
+			<p></p>
+			<p>113</p>
+			<p>Лабораторная работа «Использование Широковещательных</p>
+			<p>Приемников»</p>
+			<p>1. Создайте проект ReceiverSample и реализуйте в нем Приемник,</p>
+			<p>показывающий при приеме сообщения с помощью Toast'а переданную</p>
+			<p>с Намерении информацию.</p>
+			<p>2. Модифицируйте результат лабораторной работы «Использование</p>
+			<p>Диалога» так, чтобы результаты работы Диалога передавались</p>
+			<p>Приемнику.</p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+		</li>
+		<li>
+			<p></p>
+            <p>Лабораторная работа «Использование Широковещательных</p>
+            <p>Приемников»</p>
+            <p>1. Создайте проект ReceiverSample и реализуйте в нем Приемник,</p>
+            <p>показывающий при приеме сообщения с помощью Toast'а переданную</p>
+            <p>с Намерении информацию.</p>
+        <p></p>
+        <listing>
+a57trans - передатчик - приемник
+===================================================
+layout/activity_main.xml
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"&gt;
+
+    &lt;EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="18sp" /&gt;
+
+    &lt;Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editText"
+        android:onClick="onClick"
+        android:layout_centerHorizontal="true"
+        android:text="@android:string/ok"
+        android:textSize="18sp" /&gt;
+
+&lt;/RelativeLayout&gt;
+===================================================
+study/com/a57trans/MainActivity.java
+package study.com.a57trans;
+
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.Toast;
+
+public class MainActivity extends AppCompatActivity {
+
+    static final String ACTION_SEND_TEXT = "study.com.a57trans.intent.action.SEND_TEXT";
+    private static final String KEY_TEXT = "KEY_TEXT";
+    EditText mEditText;
+
+    BroadcastReceiver mReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            String string = intent.getStringExtra(KEY_TEXT);
+            if(string!=null) {
+                Toast.makeText(getBaseContext(), "onReceive = " + string, Toast.LENGTH_LONG).show();
+            }
+        }
+    };
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        mEditText = findViewById(R.id.editText);
+        registerReceiver(mReceiver, new IntentFilter(ACTION_SEND_TEXT));
+    }
+
+    public void onClick(View view) {
+        String string = mEditText.getText().toString().trim();
+        mEditText.setText("");
+        if(string.length()&gt;0){
+            Intent intent = new Intent(ACTION_SEND_TEXT);
+            intent.putExtra(KEY_TEXT, string);
+            sendBroadcast(intent);
+        }
+
+        Toast.makeText(this, "onClick = " + string, Toast.LENGTH_LONG).show();
+    }
+}
+===================================================
+        </listing>
+
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+		</li>
+		<li>
+			<p><a href="http://dropmefiles.com">dropmefiles</a></p>
+			<p>static final String ACTION_SEND_TEXT = "study.com.a57trans.intent.action.SEND_TEXT";
+            </p>
+			<p>FLAG_ACTIVITY_NEW_TASK</p>
+			<p><a href="https://startandroid.ru/ru/uroki/vse-uroki-spiskom/190-urok-116-povedenie-activity-v-task-intent-flagi-launchmode-affinity.html">Урок 116. Поведение Activity в Task. Intent-флаги, launchMode, affinity</a></p>
+			<p><a href="https://developer.android.com/reference/android/content/Intent">FLAG_ACTIVITY_NEW_TASK</a></p>
+			<p><a href="https://developer.android.com/reference/android/content/Intent.html#FLAG_ACTIVITY_NEW_TASK">FLAG_ACTIVITY_NEW_TASK2</a></p>
+			<p></p>
+			<p></p>
+		</li>
+		<li>
+			<p>D:\programs\android\A58Receiver\app</p>
+            <listing>
+=================================================
+layout/activity_main.xml
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"&gt;
+
+    &lt;TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="#88F"
+        android:text="1"
+        android:textAlignment="center"
+        android:textSize="18sp" /&gt;
+
+&lt;/RelativeLayout&gt;
+=================================================
+study/com/a58receiver/MainActivity.java
+package study.com.a58receiver;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.widget.TextView;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        String string = getIntent().getStringExtra(Receiver.KEY_TEXT);
+        TextView textView = findViewById(R.id.textView);
+        textView.setText(string);
+    }
+}
+=================================================
+study/com/a58receiver/Receiver.java:16
+package study.com.a58receiver;
+
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+
+public class Receiver extends BroadcastReceiver {
+
+    public static final String KEY_TEXT = "KEY_TEXT";
+
+    @Override
+    public void onReceive(Context context, Intent intent) {
+        String string = intent.getStringExtra(KEY_TEXT);
+        if(string != null){
+            Intent intent1 = new Intent(context, MainActivity.class);
+            intent1.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            intent1.putExtra(KEY_TEXT, string);
+            context.startActivity(intent1);
+        }
+
+    }
+}
+=================================================
+app/src/main/AndroidManifest.xml:19
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="study.com.a58receiver"&gt;
+
+    &lt;application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"&gt;
+        &lt;activity android:name=".MainActivity"&gt;
+            &lt;intent-filter&gt;
+                &lt;action android:name="android.intent.action.MAIN" /&gt;
+
+                &lt;category android:name="android.intent.category.LAUNCHER" /&gt;
+            &lt;/intent-filter&gt;
+        &lt;/activity&gt;
+        &lt;receiver android:name=".Receiver"&gt;
+            &lt;intent-filter&gt;
+                &lt;action android:name="study.com.a57trans.intent.action.SEND_TEXT" /&gt;
+            &lt;/intent-filter&gt;
+        &lt;/receiver&gt;
+    &lt;/application&gt;
+
+&lt;/manifest&gt;
+=================================================
+
+
+
+            </listing>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+		</li>
+		<li>
+			<p></p>
+			<p><a href="https://www.youtube.com/watch?v=6EwdS19ndss">Работа с Git в редакторе Brackets (например с GitHub)</a></p>
+			<p>Nexus</p>
+			<p></p>
+			<p></p>
+		</li>
+		<li>
+			<p></p>
+<listing>
+A57Trans
+========================================
+D:\programs\android\A57Trans\app\src
+      \main\res\layout\activity_main.xml
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"&gt;
+
+    &lt;EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="18sp" /&gt;
+
+    &lt;Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editText"
+        android:layout_centerHorizontal="true"
+        android:onClick="onClick"
+        android:text="@android:string/ok"
+        android:textSize="18sp" /&gt;
+
+    &lt;TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button"
+        android:hint="time string"
+        android:textSize="18sp" /&gt;
+
+&lt;/RelativeLayout&gt;
+========================================
+D:\programs\android\A57Trans\app\src
+      \main\java\study\com\a57trans\MainActivity.java
+package study.com.a57trans;
+
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import static android.content.Intent.FLAG_ACTIVITY_NEW_TASK;
+
+public class MainActivity extends AppCompatActivity {
+
+    static final String ACTION_SEND_TEXT =
+            "study.com.a57trans.intent.action.SEND_TEXT";
+    static final String ACTION_SEND_TIMESTAMP =
+            "study.com.a57trans.intent.action.SEND_TIMESTAMP";
+    private static final String KEY_TEXT = "KEY_TEXT";
+    private static final String KEY_TIMESTAMP = "KEY_TIMESTAMP";
+    EditText mEditText;
+    TextView mTextView;
+
+    BroadcastReceiver mReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            long time = intent.getLongExtra(KEY_TIMESTAMP, 0);
+            if(time != 0) {
+                String string = "";//
+                SimpleDateFormat simpleDateFormat =
+                        new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSZ");
+                string = simpleDateFormat.format(time);
+                mTextView.setText(string);
+                Toast.makeText(getBaseContext(), "onReceive = " + string, Toast.LENGTH_LONG).show();
+            }
+        }
+    };
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        mEditText = findViewById(R.id.editText);
+        mTextView = findViewById(R.id.textView);
+        registerReceiver(mReceiver, new IntentFilter(ACTION_SEND_TIMESTAMP));
+    }
+
+    public void onClick(View view) {
+        String string = mEditText.getText().toString().trim();
+        mEditText.setText("");
+        if(string.length()&gt;0){
+            Intent intent = new Intent(ACTION_SEND_TEXT);
+            intent.putExtra(KEY_TEXT, string);
+            sendBroadcast(intent);
+        }
+
+        Toast.makeText(this, "onClick = " + string, Toast.LENGTH_LONG).show();
+    }
+}
+========================================
+
+a58receiver
+========================================
+D:\programs\android\A58Receiver\app
+      \src\main\res\layout\activity_main.xml
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"&gt;
+
+    &lt;TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="#88F"
+        android:text="1"
+        android:textAlignment="center"
+        android:textSize="18sp" /&gt;
+
+&lt;/RelativeLayout&gt;
+========================================
+D:\programs\android\A58Receiver\app
+      \src\main\java\study\com\a58receiver\MainActivity.java
+package study.com.a58receiver;
+
+import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.widget.TextView;
+
+public class MainActivity extends AppCompatActivity {
+
+    public static final String ACTION_SEND_TIMESTAMP =
+            "study.com.a57trans.intent.action.SEND_TIMESTAMP";
+           //study.com.a57trans.intent.action.SEND_TIMESTAMP
+    public static final String KEY_TIMESTAMP = "KEY_TIMESTAMP";
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        String string = getIntent().getStringExtra(Receiver.KEY_TEXT);
+        TextView textView = findViewById(R.id.textView);
+        textView.setText(string);
+        Intent intent = new Intent(ACTION_SEND_TIMESTAMP);
+        intent.putExtra(KEY_TIMESTAMP, System.currentTimeMillis());
+        sendBroadcast(intent);
+    }
+}
+
+========================================
+D:\programs\android\A58Receiver\app
+      \src\main\java\study\com\a58receiver\Receiver.java
+package study.com.a58receiver;
+
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+
+public class Receiver extends BroadcastReceiver {
+
+    public static final String KEY_TEXT = "KEY_TEXT";
+
+    @Override
+    public void onReceive(Context context, Intent intent) {
+        String string = intent.getStringExtra(KEY_TEXT);
+        if(string != null){
+            Intent intent1 = new Intent(context, MainActivity.class);
+            intent1.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            intent1.putExtra(KEY_TEXT, string);
+            context.startActivity(intent1);
+        }
+
+    }
+}
+
+========================================
+D:\programs\android\A58Receiver\app
+      \src\main\AndroidManifest.xml
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="study.com.a58receiver"&gt;
+
+    &lt;application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"&gt;
+        &lt;activity android:name=".MainActivity"&gt;
+            &lt;intent-filter&gt;
+                &lt;action android:name="android.intent.action.MAIN" /&gt;
+
+                &lt;category android:name="android.intent.category.LAUNCHER" /&gt;
+            &lt;/intent-filter&gt;
+        &lt;/activity&gt;
+        &lt;receiver android:name=".Receiver"&gt;
+            &lt;intent-filter&gt;
+                &lt;action android:name="study.com.a57trans.intent.action.SEND_TEXT" /&gt;
+            &lt;/intent-filter&gt;
+        &lt;/receiver&gt;
+    &lt;/application&gt;
+
+&lt;/manifest&gt;
+========================================
+</listing>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+		</li>
+		<li>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+		</li>
+		<li>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+		</li>
+		<li>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+		</li>
+	</ol>
+
+</body>
+
+</html>

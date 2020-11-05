@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <base target="_blank">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+    <style>
+        p {
+            margin: 0px;
+        }
+
+        .b1 {
+            border: dotted 1px;
+        }
+
+        td {
+            border: dotted 1px;
+        }
+
+        span {
+            background-color: #FFF;
+        }
+
+        .margin1 {
+            margin-left: 20px;
+        }
+
+        details summary::-webkit-details-marker {
+            display: none;
+        }
+
+    </style>
+</head>
+
+<body>
+    <ol>
+        <li>
+            <p></p>
+            <p></p>
+            <table>
+                <tr>
+                    <td>Project name:</td>
+                    <td>E01Kot</td>
+                </tr>
+                <tr>
+                    <td>Project location:</td>
+                    <td>D:\mailCloud\prjother\007Kotlin\E01Kot</td>
+                </tr>
+                <tr>
+                    <td>Project SDK:</td>
+                    <td>1.8(java version"1.8.0_150")</td>
+                </tr>
+                <tr>
+                    <td>Use library:</td>
+                    <td>KotlinJavaRuntime</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p></p>
+            <p>Kotlin: Урок 1. String Templates</p>
+    <listing>
+fun main(args: Array&lt;String&gt;){
+    var name: String = "Alex"
+    var name2 = "Yuri"
+    var a: Int = 1
+    var b: Int = 2
+    println("$name --- $name2")
+    println("a + b = ${a + b}")
+}
+    </listing>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p></p>
+<p>Kotlin: Урок 2. Переменные var vs. val</p>
+            <p></p>
+            <p>var - mutable</p>
+            <p>val - non mutable</p>
+            <details>
+                <summary style="color: blueviolet">_E01Kot_</summary>
+                <listing style="background-color: #DEF;">
+================================
+D:\mailCloud\prjother\007Kotlin\E01Kot\src\Main.kt
+fun main(args: Array&lt;String&gt;){
+    val userJava = UserJava("malapin@rambler.ru")
+    println("java " + userJava.email)
+
+    val userKotlin = UserKotlin("malapin@yandex.ru")
+    println("kotlin " + userKotlin.email)
+}
+================================
+D:\mailCloud\prjother\007Kotlin\E01Kot\src\UserJava.java
+public class UserJava {
+
+   private final String email;
+
+    public UserJava(String email){
+        this.email = email;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+}
+================================
+D:\mailCloud\prjother\007Kotlin\E01Kot\src\UserKotlin.kt
+class UserKotlin (val email: String)
+================================
+================================
+                </listing>
+            </details>
+            <p></p>
+            <p>C:\Program Files\JetBrains\IntelliJ IDEA 2018.1\plugins\Kotlin\kotlinc\lib\kotlin-stdlib-jdk8.jar" MainKt</p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p></p>
+<p>Kotlin: Урок 3. Типы данных Kotlin</p>
+            <p>Ctrl-B - на типе Primitives.kt</p>
+            <p></p>
+    <listing>
+//D:\mailCloud\prjother\007Kotlin\E01Kot\src\Main.kt
+
+fun main(args: Array&lt;String&gt;){
+    var a6: Byte   = 127    //8
+    var a0: Short = 123     //16
+    var a1: String = "123"
+    var a8: Char = '0'
+    var a2: Int = 123       //32
+    var a3: Long = 123      //64
+    var a4: Double = .2    //64
+    var a7: Double = .2e2    //64
+    var a5: Float = .2F    //32
+
+    var b1: Long = a2.toLong()
+    var b2: Int = a8.toInt()
+    var b3: Boolean = true
+    b3 = false
+
+
+    println("a1 = $a1, a2 = $a2, a3 = $a3, a4 = $a4, a5 = $a5 ")
+    println("b2 = $b2, b3 = $b3 " + b3.toString())
+}
+    </listing>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p></p>
+ <p>Kotlin: Урок 4. Функции</p>
+           <p></p>
+           <listing>
+ //D:\mailCloud\prjother\007Kotlin\E01Kot\src\Main.kt
+
+fun main(args: Array&lt;String&gt;){
+    println("f1 = ${firstFunction()} ")
+    println("function4(1,2) = ${function4(1,2.0)}")
+}
+
+fun firstFunction(): Int{
+
+    return 1;
+}
+
+fun secondFunction(a: Long):Int{
+
+    return a.toInt()
+}
+
+fun thirdFunction(){
+
+}
+
+fun function4(a:Long,b:Double) = a + b
+    </listing>
+           <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p></p>
+            <p></p>
+<p>Kotlin: Урок 5. NPE и Null Safety</p>
+            <p>? - согласие на то, что переменная может быть null</p>
+            <p>string!!. - согласие на то, что переменная может быть null</p>
+           <listing>
+ //D:\mailCloud\prjother\007Kotlin\E01Kot\src\Main.kt
+
+fun main(args: Array&lt;String&gt;){
+
+    var string: String? = null
+    string = getString(null)
+    val size = string!!.length
+
+    println("size string = $size")
+}
+
+fun getString(string: String?):String?{
+    return string
+}
+//Exception in thread "main" kotlin.KotlinNullPointerException
+	//at MainKt.main(Main.kt:8)    </listing>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+       <li>
+            <p></p>
+            <p></p>
+<p>Kotlin: Урок 6. Работа с классами и их свойствами</p>
+            <p></p>
+            <p></p>
+           <listing>
+ //D:\mailCloud\prjother\007Kotlin\E01Kot\src\Main.kt
+
+fun main(args: Array&lt;String&gt;){
+    var people = People("12")
+
+    println(people.toString())
+    println(people.name)
+
+    val person = Person("Ivan",  "Petrov",3)
+    println(person.firstName + " " + person.age)
+
+    val car = Car(30, 20)
+    println(car.isNew)
+    car.isNew = true
+    println(car.isNew)
+
+}
+=================================
+D:\mailCloud\prjother\007Kotlin\E01Kot\src\People.kt
+class People {
+
+
+
+    var name:String = ""
+    get() = field.toUpperCase()
+
+    override fun toString(): String {
+        return name
+    }
+
+    constructor(name:String){
+        this.name = name
+    }
+
+
+
+}
+=================================
+D:\mailCloud\prjother\007Kotlin\E01Kot\src\Person.kt
+class Person (var firstName:String, var lastName:String,
+              var age: Int = 0){
+
+
+}
+=================================
+D:\mailCloud\prjother\007Kotlin\E01Kot\src\Car.kt
+class Car (private var weight: Int, private var size: Int) {
+    var isNew: Boolean = false
+        get() {
+            return weight > size
+        }
+        set(value){
+            field = value
+        }
+}
+=================================
+    </listing>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p></p>
+<p>Kotlin: Урок 7. Пакеты - Импорт методов и классов</p>
+            <p></p>
+           <listing>
+ //D:\mailCloud\prjother\007Kotlin\E01Kot\src\Main.kt
+import animals.cat.CatA
+import animals.superMethod1
+import animals.superMethod2
+
+//D:\mailCloud\prjother\007Kotlin\E01Kot\src\animals\cat\CatA.kt
+package animals.cat
+
+class CatA {
+    fun a1(){
+        println("CatA.a1")
+    }
+    fun a2(){
+        println("CatA.a2")
+    }
+}
+//D:\mailCloud\prjother\007Kotlin\E01Kot\src\animals\Utils2.kt
+package animals
+
+fun superMethod2(){
+    println("superMethod2")
+}
+//D:\mailCloud\prjother\007Kotlin\E01Kot\src\animals\Utils.kt
+package animals
+
+fun superMethod1(){
+    println("superMethod1")
+}
+//
+    </listing>
+			<p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p></p>
+<p>Kotlin: Урок 8. Enum - Перечесления и их роль</p>
+            <p></p>
+           <listing>
+ //D:\mailCloud\prjother\007Kotlin\E01Kot\src\Main.kt
+
+fun main(args: Array&lt;String&gt;){
+
+    println(Colors.GREEN)
+    println(Colors.BLACK.name)
+    var message: Colors = Colors.WHITE
+    var message2: String = Colors.RED.name
+    println(message.toString() + " " + message2)
+
+}
+//D:\mailCloud\prjother\007Kotlin\E01Kot\src\Colors.kt
+enum class Colors {
+    RED,
+    BLACK,
+    GREEN,
+    WHITE,
+}
+    </listing>
+			<p></p>
+            <p></p>
+             <listing>
+ //D:\mailCloud\prjother\007Kotlin\E01Kot\src\Main.kt
+
+fun main(args: Array&lt;String&gt;){
+
+    println(Colors.GREEN)
+    println(Colors.BLACK.name)
+    var message: Colors = Colors.WHITE
+    var message2: String = Colors.RED.name
+    println(message.toString()  + " "
+            + message.colorHex  + " "
+            + message2)
+
+}
+//D:\mailCloud\prjother\007Kotlin\E01Kot\src\Colors.kt
+enum class Colors (var colorHex:String){
+    RED("#FF0000"),
+    BLACK("#000000"),
+    GREEN("#00FF00"),
+    WHITE("#FFFFFF"),
+}
+    </listing>
+          <p></p>
+            <p></p>
+            <p></p>
+             <listing>
+ //D:\mailCloud\prjother\007Kotlin\E01Kot\src\Main.kt
+
+fun main(args: Array&lt;String&gt;){
+    println(Color.GREEN)
+    println(Color.BLACK.name)
+    var message: Color = Color.RED
+    var message2: String = Color.WHITE.name
+    println(message.toString()  + " "
+            + message.colorHex  + " "
+            + message.opacity  + " "
+            + message2)
+    message.some()
+
+}
+//D:\mailCloud\prjother\007Kotlin\E01Kot\src\Colors.kt
+enum class Color (var colorHex:String, var opacity:Double?= 1.0){
+    RED("#FF0000", .5),
+    BLACK("#000000"),
+    GREEN("#00FF00"),
+    WHITE("#FFFFFF");
+
+    fun some() {
+        println(this.name
+                + " " + this.colorHex
+                + " " + this.opacity
+        )
+    }
+}
+    </listing>
+          <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p></p>
+<p>Kotlin: Урок 9. When - Оператор выбора</p>
+            <p></p>
+			<p></p>
+           <listing>
+     var n = 8
+    var result = when(n){
+        1 -&gt; "One"
+       2 -&gt; "Two"
+       3 -&gt; "Three"
+       4 -&gt; "Four"
+       5 -&gt; "Five"
+       6 -&gt; "Six"
+       else -&gt; "None"
+    }
+    println(result)
+
+ //D:\mailCloud\prjother\007Kotlin\E01Kot\src\Main.kt
+import Color.*
+fun main(args: Array&lt;String&gt;){
+    val color = Color.GREEN
+    var result = when(color){
+        RED -&gt; "Красный"
+        BLACK -&gt; "Черный"
+        GREEN -&gt; "Зеленый"
+        WHITE -&gt; "Белый"
+
+       else -&gt; "None"
+    }
+    println(result)
+}
+    </listing>
+            <p></p>
+            <p></p>
+           <listing>
+ import Color.*
+
+ //D:\mailCloud\prjother\007Kotlin\E01Kot\src\Main.kt
+
+fun main(args: Array&lt;String&gt;){
+     println(getFavoriteColor(GREEN))
+}
+
+fun getFavoriteColor(color:Color)=when(color){
+    RED -&gt; "Красный"
+    BLACK -&gt; "Черный"
+    GREEN -&gt; "Зеленый"
+    WHITE -&gt; "Белый"
+
+    else -&gt; "None"
+}
+    </listing>
+            <p></p>
+           <listing>
+import Color.*
+
+ //D:\mailCloud\prjother\007Kotlin\E01Kot\src\Main.kt
+
+fun main(args: Array&lt;String&gt;){
+     println(getFavoriteColor(GREEN))
+}
+
+fun getFavoriteColor(color:Color)=when(color){
+    RED, BLACK -&gt; "Красный или Черный"
+    GREEN -&gt; "Зеленый"
+    WHITE -&gt; "Белый"
+
+    else -&gt; "None"
+}
+    </listing>
+            <p></p>
+           <listing>
+ //D:\mailCloud\prjother\007Kotlin\E01Kot\src\Main.kt
+
+fun main(args: Array&lt;String&gt;){
+    var result = when(setOf(BLACK, RED)) {
+        setOf(RED, BLACK) -&gt; "Красный-Черный"
+        setOf(GREEN,WHITE) -&gt; "Зеленый-Белый"
+        else -&gt; "None"
+    }
+
+        println(result)
+}
+    </listing>
+            <p></p>
+            <p></p>
+			<p></p>
+           <listing>
+ //D:\mailCloud\prjother\007Kotlin\E01Kot\src\Main.kt
+
+fun main(args: Array&lt;String&gt;){
+
+    var a = 2
+    var b = 4
+
+    when{
+        (a &gt; b) -> println("$a &gt; $b = true")
+        (a &lt; b) -> println("$a &lt; $b = true")
+        (a == b) -> println("$a == $b = true")
+    }
+    if( a &gt; b){
+        println("$a &gt; $b = true")
+    }
+    if( a &lt; b){
+        println("$a &lt; $b = true")
+    }
+    if( a == b){
+        println("$a == $b = true")
+    }
+
+}
+    </listing>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p></p>
+<p>Kotlin: Урок 10. Интерфейсы</p>
+            <p>override - переопределенный метод</p>
+			<p></p>
+           <listing>
+ //D:\mailCloud\prjother\007Kotlin\E01Kot\src\Main.kt
+import interfaces.A
+import interfaces.B
+import interfaces.MyInterface
+fun main(args: Array&lt;String&gt;){
+
+    var a: MyInterface = A()
+    var b: MyInterface = B()
+
+    a.fun1()
+    b.fun1()
+    println("a.property1 = ${a.property1}, " +
+            "b.property1 = ${b.property1}")
+}
+//D:\mailCloud\prjother\007Kotlin\E01Kot\src\interfaces\MyInterface.kt
+package interfaces
+
+interface MyInterface {
+
+    val property1:Int
+
+    fun fun1()
+}
+//D:\mailCloud\prjother\007Kotlin\E01Kot\src\interfaces\A.kt
+package interfaces
+
+class A: MyInterface {
+    override val property1: Int
+        get() = 3
+
+    override fun fun1() {
+        println("A")
+    }
+}
+//D:\mailCloud\prjother\007Kotlin\E01Kot\src\interfaces\B.kt
+package interfaces
+
+class B:MyInterface {
+
+    override val property1: Int
+        get() = 4
+
+    override fun fun1() {
+        println("B")
+    }
+}
+//
+    </listing>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p></p>
+<p>Kotlin: Урок 11. Абстрактные классы и модификатор open</p>
+            <p></p>
+            <p>final - не наследуется. По умолчанию все классы final.</p>
+            <p>open -  разрешено наследовать</p>
+            <p>Наследовать несколько классов нельзя.</p>
+           <listing>
+ //D:\mailCloud\prjother\007Kotlin\E01Kot\src\Main.kt
+import abstracts.BaseTemplate
+
+fun main(args: Array&lt;String&gt;){
+   val aTemplate : BaseTemplate = ATemplate()
+
+    aTemplate.metod1()
+    aTemplate.metod1()
+    aTemplate.metod1()
+    println(aTemplate.count)
+    aTemplate.minus()
+    println(aTemplate.count)
+
+}
+//D:\mailCloud\prjother\007Kotlin\E01Kot\src\abstracts\ATemplate.kt
+package abstracts
+
+class ATemplate : BaseTemplate() {
+    override fun minus() {
+        count--
+    }
+}
+//D:\mailCloud\prjother\007Kotlin\E01Kot\src\abstracts\BaseTemplate.kt
+package abstracts
+
+abstract class BaseTemplate {
+
+    var count = 0
+    fun metod1() {
+        count++
+        println("metod1")
+    }
+
+    abstract fun minus()
+
+}
+    </listing>
+			<p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p></p>
+<p>Kotlin: Урок 12. Модификатор open и область его применения</p>
+            <p></p>
+           <listing>
+ //D:\mailCloud\prjother\007Kotlin\E01Kot\src\Main.kt
+import openexam.Driver
+import openexam.Person
+
+fun main(args: Array&lt;String&gt;){
+fun main(args: Array<String>) {
+    val person = Person("Vasya")
+    println("" + person
+            + " " + person.getAddress()
+            + " age =  " + person.age
+    )
+    val driver = Driver()
+    println("" + driver
+            + " " + driver.getAddress()
+            + " age = " + driver.age
+    )
+
+}
+//D:\mailCloud\prjother\007Kotlin\E01Kot\src\openexam\Driver.ktD:\mailCloud\prjother\007Kotlin\E01Kot\src\openexam\Person.kt
+package openexam
+
+class Driver: Person() {
+
+    override val age:Int = 2
+
+    override fun getAddress():String{
+        return "Saint-Petersburg"
+    }
+}
+
+//D:\mailCloud\prjother\007Kotlin\E01Kot\src\openexam\Person.kt
+package openexam
+
+open class Person(val name: String = "Petya") {
+
+    open val age: Int = 0
+
+    open fun getAddress():String = "Moscow"
+
+    override fun toString(): String {
+        return "Person(name = '$name')"
+    }
+
+}
+    </listing>
+			<p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p></p>
+<p>Kotlin: Урок 13. Модификаторы доступа</p>
+            <p>public - All Все</p>
+            <p>private</p>
+            <p>protected</p>
+            <p>internal - доступ внутри пакета</p>
+           <listing>
+
+Packages
+v E01Kotlin
+	Main.kt
+	Mouse
+	&gt;Libraries
+v E01Kotlin01
+	Main.kt
+	&gt;Libraries
+
+ //D:\mailCloud\prjother\007Kotlin\E01Kot\src\Main.kt
+
+fun main(args: Array&lt;String&gt;){
+
+}
+    </listing>
+			<p></p>
+            <p>Error:(2, 17) Kotlin: Cannot access 'Mouse': it is internal in ''</p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p></p>
+            <p></p>
+           <listing>
+ //D:\mailCloud\prjother\007Kotlin\E01Kot\src\Main.kt
+
+fun main(args: Array&lt;String&gt;){
+
+}
+    </listing>
+			<p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p></p>
+            <p></p>
+           <listing>
+ //D:\mailCloud\prjother\007Kotlin\E01Kot\src\Main.kt
+
+fun main(args: Array&lt;String&gt;){
+
+}
+    </listing>
+			<p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p></p>
+            <p></p>
+           <listing>
+ //D:\mailCloud\prjother\007Kotlin\E01Kot\src\Main.kt
+
+fun main(args: Array&lt;String&gt;){
+
+}
+    </listing>
+			<p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p></p>
+            <p></p>
+           <listing>
+ //D:\mailCloud\prjother\007Kotlin\E01Kot\src\Main.kt
+
+fun main(args: Array&lt;String&gt;){
+
+}
+    </listing>
+			<p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p></p>
+            <p></p>
+           <listing>
+ //D:\mailCloud\prjother\007Kotlin\E01Kot\src\Main.kt
+
+fun main(args: Array&lt;String&gt;){
+
+}
+    </listing>
+			<p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p></p>
+            <p></p>
+           <listing>
+ //D:\mailCloud\prjother\007Kotlin\E01Kot\src\Main.kt
+
+fun main(args: Array&lt;String&gt;){
+
+}
+    </listing>
+			<p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p></p>
+            <p></p>
+           <listing>
+ //D:\mailCloud\prjother\007Kotlin\E01Kot\src\Main.kt
+
+fun main(args: Array&lt;String&gt;){
+
+}
+    </listing>
+			<p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p></p>
+            <p></p>
+			<p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p></p>
+            <p></p>
+			<p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p></p>
+            <p></p>
+			<p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p></p>
+            <p></p>
+			<p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p></p>
+            <p></p>
+			<p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p></p>
+            <p></p>
+			<p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p></p>
+            <p></p>
+			<p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p></p>
+            <p></p>
+			<p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <details>
+                <summary style="color: blueviolet">__</summary>
+                <listing style="background-color: #DEF;">
+                    ================================
+
+
+                    ================================
+
+
+                    ================================
+                </listing>
+            </details>
+            <p></p>
+            <p></p>
+        </li>
+    </ol>
+    <p></p>
+    <p></p>
+    <p></p>
+    <table>
+        <tr>
+            <td>To see your local history of changes in a file, invoke Local History | Show History from the context menu. You can navigate through different file versions, see the differences and roll back to any previous version.
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Use the same context menu item to see the history of changes on a directory. You will never lose any code with this feature!</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <p>D:\mailCloud\prjother\007Kotlin\E01Kot\src\Main.kt</p>
+    <listing>
+fun main(args: Array&.t;String&gt;){
+    var name: String = "Alex"
+    var name2 = "Yuri"
+    var a: Int = 1
+    var b: Int = 2
+    println("$name --- $name2")
+    println("a + b = ${a + b}")
+}
+    </listing>
+    <p></p>
+<p>Kotlin: Урок 0. Введение</p>
+<p>Kotlin: Урок 1. String Templates</p>
+<p>Kotlin: Урок 2. Переменные var vs. val</p>
+<p>Kotlin: Урок 3. Типы данных Kotlin</p>
+<p>Kotlin: Урок 4. Функции</p>
+<p>Kotlin: Урок 5. NPE и Null Safety</p>
+<p>Kotlin: Урок 6. Работа с классами и их свойствами</p>
+<p>Kotlin: Урок 7. Пакеты - Импорт методов и классов</p>
+<p>Kotlin: Урок 8. Enum - Перечесления и их роль</p>
+<p>Kotlin: Урок 9. When - Оператор выбора</p>
+<p>Kotlin: Урок 10. Интерфейсы</p>
+<p>Kotlin: Урок 11. Абстрактные классы и модификатор open</p>
+<p>Kotlin: Урок 12. Модификатор open и область его применения</p>
+<p>Kotlin: Урок 13. Модификаторы доступа</p>
+<p>Kotlin: Урок 14. Крутость и гибкость циклов</p>
+<p>Kotlin: Урок 15. Использование модификатора IN</p>
+<p>Kotlin: Урок 16. Как пишутся POJO в Kotlin?</p>
+<p>Kotlin: Урок 17. Sealed Классы</p>    <p></p>
+    <p></p>
+    <p></p>
+    <p>
+        <a href="https://www.youtube.com/watch?v=L9k_NdTaMeI&list=PLIU76b8Cjem4ZOt3tlWykUX1AjL9zE19t">Базовый курс по Kotlin</a>
+        <a href="https://kotlinlang.org/">https://kotlinlang.org/</a>
+        <a href=""></a>
+        <a href=""></a>
+        <a href=""></a>
+        <a href=""></a>
+        <a href=""></a>
+        <a href=""></a>
+    </p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+</body>
+
+</html>

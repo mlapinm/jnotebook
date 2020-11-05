@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <base target="_blank">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+    <style>
+        p {
+            margin: 0px;
+        }
+
+        .b1 {
+            border: dotted 1px;
+        }
+
+        td {
+            border: dotted 1px;
+        }
+
+        span {
+            background-color: #FFF;
+        }
+
+        .margin1 {
+            margin-left: 20px;
+        }
+
+        details summary::-webkit-details-marker {
+            display: none;
+        }
+
+    </style>
+</head>
+
+<body>
+    <ol>
+        <li>
+            <p>B51Image</p>
+            <p></p>
+            <p>D:\programs\android\B51Image\app\build.gradle</p>
+            <p>targetSdkVersion 22</p>
+            <p>28</p>
+            <p>07-22 10:48:33.483 4270-4270/study.com.b51image W/ImageView: Unable to open content: content://media/external/images/media/17</p>
+            <p>java.lang.SecurityException: Permission Denial: reading com.android.providers.media.MediaProvider uri content://media/external/images/media/17 from pid=4270, uid=10055 requires android.permission.READ_EXTERNAL_STORAGE, or grantUriPermission()</p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <details>
+                <summary style="color: blueviolet">_B51Image_</summary>
+                <listing style="background-color: #DEF;">
+================================
+D:\programs\android\B51Image\app\src\main\AndroidManifest.xml
+    &lt;uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /&gt;
+================================
+D:\programs\android\B51Image\app\src\main\res\layout\activity_main.xml
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"&gt;
+
+    &lt;android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"&gt;
+
+        &lt;android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" /&gt;
+
+    &lt;/android.support.design.widget.AppBarLayout&gt;
+
+    &lt;include layout="@layout/content_main" /&gt;
+
+    &lt;android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@android:drawable/ic_dialog_email" /&gt;
+
+&lt;/android.support.design.widget.CoordinatorLayout&gt;
+================================
+D:\programs\android\B51Image\app\src\main\res\layout\content_main.xml
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main"&gt;
+
+    &lt;TextView
+        android:id="@+id/info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFA"
+        android:text="123"
+        android:textSize="18sp" /&gt;
+
+    &lt;ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" /&gt;
+
+&lt;/LinearLayout&gt;
+================================
+D:\programs\android\B51Image\app\src\main\java\study\com\b51image\MainActivity.java
+package study.com.b51image;
+
+import android.content.Intent;
+import android.net.Uri;
+import android.os.Bundle;
+import android.provider.MediaStore;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.util.Log;
+import android.view.View;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+public class MainActivity extends AppCompatActivity {
+
+    private Uri uri;
+    private ImageView image;
+    private TextView info;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        FloatingActionButton fab = findViewById(R.id.fab);
+
+        image = findViewById(R.id.image);
+        info = findViewById(R.id.info);
+
+        info.setText("321");
+        image.setImageResource(android.R.drawable.ic_media_play);
+
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                        .setAction("Action", null).show();
+                pickImage();
+
+            }
+        });
+    }
+
+    private void pickImage() {
+        Intent intent = new Intent (Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+
+        startActivityForResult(intent, 12);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data){
+        if(requestCode != 12){
+            super.onActivityResult(requestCode, resultCode, data);
+        }
+
+        if(resultCode != RESULT_OK){
+            //пользователь отказался
+            return;
+        }
+
+        uri = data.getData();
+
+        info.setText(uri.toString());
+        image.setImageURI(uri);
+
+        Log.d("happy", uri.toString());
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+}
+================================
+                </listing>
+            </details>
+            <img src="irm25.png">
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p>Android device monitor -  depricated</p>
+            <p>View/Tool Windows/Device File Explorer</p>
+            <p></p>
+            <p></p>
+            <p>/data/data/study.com.b51image</p>
+            <p>/storage/sdcard/DCIM/Camera/IMG_20190722_034119.jpg</p>
+            <p>/data/user/0/study.com.b51image/files/img_1563820310220.png</p>
+            <p>/storage/sdcard/Android/data/study.com.b51image/files/Pictures/img_1563849595964.png</p>
+            <p>/storage/sdcard/Pictures/img_1563850003214.png</p>
+            <details>
+               <p></p>
+                <summary style="color: blueviolet">_B51Image_</summary>
+                <listing style="background-color: #DEF;">
+                    ================================
+D:\programs\android\B51Image\app\src\main\AndroidManifest.xml
+    &lt;uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /&gt;
+    &lt;uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /&gt;
+    &lt;uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /&gt;
+================================
+D:\programs\android\B51Image\app\src\main\res\layout\activity_main.xml
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"&gt;
+
+    &lt;android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"&gt;
+
+        &lt;android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" /&gt;
+
+    &lt;/android.support.design.widget.AppBarLayout&gt;
+
+    &lt;include layout="@layout/content_main" /&gt;
+
+    &lt;android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@android:drawable/ic_dialog_email" /&gt;
+
+&lt;/android.support.design.widget.CoordinatorLayout&gt;
+================================
+D:\programs\android\B51Image\app\src\main\res\layout\content_main.xml
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main"&gt;
+
+    &lt;TextView
+        android:id="@+id/info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFA"
+        android:text="123"
+        android:textSize="18sp" /&gt;
+
+    &lt;ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" /&gt;
+
+&lt;/LinearLayout&gt;
+================================
+D:\programs\android\B51Image\app\src\main\java\study\com\b51image\MainActivity.java
+package study.com.b51image;
+
+import android.Manifest;
+import android.content.Context;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
+import android.os.Bundle;
+import android.os.Environment;
+import android.provider.MediaStore;
+import android.support.annotation.NonNull;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.util.Log;
+import android.view.View;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+
+public class MainActivity extends AppCompatActivity {
+
+    private Uri uri;
+    private ImageView image;
+    private TextView info;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        FloatingActionButton fab = findViewById(R.id.fab);
+
+        image = findViewById(R.id.image);
+        info = findViewById(R.id.info);
+
+        info.setText("321");
+        image.setImageResource(android.R.drawable.ic_media_play);
+
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                        .setAction("Action", null).show();
+                pickImage();
+
+            }
+        });
+    }
+
+    private void pickImage() {
+        Intent intent = new Intent(Intent.ACTION_PICK,
+                MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+
+        startActivityForResult(intent, 12);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode != 12) {
+            super.onActivityResult(requestCode, resultCode, data);
+        }
+
+        if (resultCode != RESULT_OK) {
+            //пользователь отказался
+            return;
+        }
+
+        uri = data.getData();
+
+
+        Log.d("happy", uri.toString());
+        copyImageWrapper();
+
+    }
+
+    private void copyImageWrapper(){
+        int result = ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
+        if(result == PackageManager.PERMISSION_GRANTED){
+            copyImage();
+            return;
+        }
+
+        ActivityCompat.requestPermissions(this,
+                new String[]{ Manifest.permission.WRITE_EXTERNAL_STORAGE},
+                42);
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        if(requestCode == 42){
+            int result = grantResults[0];
+            if(result == PackageManager.PERMISSION_GRANTED){
+                copyImage();
+            } else {
+                info.setText("permission denied");
+            }
+        }else {
+            super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        }
+    }
+
+    private void copyImage() {
+        info.setText(uri.toString());
+        image.setImageURI(uri);
+        try {
+//        File dir = getFilesDir();
+//        File dir = getCacheDir();
+           //доступность внешнего накопителя
+          if(!Environment.MEDIA_MOUNTED.equals(
+                  Environment.getExternalStorageState())){
+              return;
+          }
+
+//        File dir = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
+            File dir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
+            dir.mkdir();
+
+            Log.d("happy", "free: " + dir.getFreeSpace());
+
+            Log.d("happy", dir.getAbsolutePath());
+            File out = new File(dir, "img_" +
+                    System.currentTimeMillis() +
+                    ".png");
+            FileOutputStream os = new FileOutputStream(out);
+            InputStream is = getContentResolver().openInputStream(uri);
+            byte[] buffer = new byte[1024];
+            int len;
+            while ((len = is.read(buffer)) != -1) {
+                os.write(buffer, 0, len);
+            }
+            is.close();
+            os.close();
+            Log.d("happy", out.getAbsolutePath());
+            Log.d("happy", "len: " + out.length());
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+}
+================================
+
+
+================================
+
+
+================================
+
+
+================================
+                </listing>
+            </details>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p>Приложение показывает в интерфейсе последнюю сохраненную картинку.</p>
+            <p>Последнее имя файла в SharedPreferences(общие настройки).</p>
+            <p>SharedPreferences PreferencesHelper вынесем в отдельный класс.</p>
+            <p>SharedPreferences - синглтон</p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p>https://stackoverflow.com</p>
+            <p>load image to imageview from file</p>
+            <listing>
+if(imgFile.exists()){
+    Bitmap myBitmap = BitmapFactory.decodeFile(imgFile.getAbsolutePath());
+    ImageView myImage = (ImageView) findViewById(R.id.imageviewTest);
+    myImage.setImageBitmap(myBitmap);
+}
+            </listing>
+            <p></p>
+            <p>Добавлено сохранение ранее выбранной картинки.</p>
+            <details>
+                <summary style="color: blueviolet">_B51Image_</summary>
+                <listing style="background-color: #DEF;">
+================================
+D:\programs\android\B51Image\app\src\main\java\study\com\b51image\PreferencesHelper.java
+package study.com.b51image;
+
+import android.content.Context;
+import android.content.SharedPreferences;
+
+public class PreferencesHelper {
+    private final SharedPreferences prefs;
+    Context context;
+
+    static PreferencesHelper instance = null;
+
+    public static PreferencesHelper getInstance(Context context) {
+        if (instance == null){
+            instance = new PreferencesHelper(context);
+        }
+        return instance;
+    }
+
+    public static final String PREFS_NAME = "MyPrefs";
+
+    public PreferencesHelper(Context context) {
+        this.context = context;
+
+        prefs = context.getSharedPreferences(PREFS_NAME, 0);
+    }
+
+    public static final String FILENAME_KEY = "FILENAME_KEY";
+    public  String getPrefsName(){
+        return prefs.getString(FILENAME_KEY,"");
+
+    }
+    public void setFilename(String name){
+        prefs.edit().putString(FILENAME_KEY, name).apply();
+    }
+}
+================================
+D:\programs\android\B51Image\app\src\main\java\study\com\b51image\MainActivity.java
+package study.com.b51image;
+
+import android.Manifest;
+import android.content.Context;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
+import android.os.Bundle;
+import android.os.Environment;
+import android.provider.MediaStore;
+import android.support.annotation.NonNull;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.util.Log;
+import android.view.View;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+
+public class MainActivity extends AppCompatActivity {
+
+    private Uri uri;
+    private ImageView image;
+    private TextView info;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        FloatingActionButton fab = findViewById(R.id.fab);
+
+        image = findViewById(R.id.image);
+        info = findViewById(R.id.info);
+
+        info.setText("321");
+        image.setImageResource(android.R.drawable.ic_media_play);
+
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                        .setAction("Action", null).show();
+                pickImage();
+
+            }
+        });
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        String filename = PreferencesHelper.getInstance(this)
+                .getPrefsName();
+        if(filename != null &&
+        ContextCompat.checkSelfPermission(this,
+                Manifest.permission.WRITE_EXTERNAL_STORAGE)
+        == PackageManager.PERMISSION_GRANTED){
+
+            Bitmap myBitmap = BitmapFactory.decodeFile(filename);
+            image.setImageBitmap(myBitmap);
+            info.setText(filename);
+        }
+
+    }
+
+    private void pickImage() {
+        Intent intent = new Intent(Intent.ACTION_PICK,
+                MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+
+        startActivityForResult(intent, 12);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode != 12) {
+            super.onActivityResult(requestCode, resultCode, data);
+        }
+
+        if (resultCode != RESULT_OK) {
+            //пользователь отказался
+            return;
+        }
+
+        uri = data.getData();
+
+
+        Log.d("happy", uri.toString());
+        copyImageWrapper();
+
+    }
+
+    private void copyImageWrapper(){
+        int result = ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
+        if(result == PackageManager.PERMISSION_GRANTED){
+            copyImage();
+            return;
+        }
+
+        ActivityCompat.requestPermissions(this,
+                new String[]{ Manifest.permission.WRITE_EXTERNAL_STORAGE},
+                42);
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        if(requestCode == 42){
+            int result = grantResults[0];
+            if(result == PackageManager.PERMISSION_GRANTED){
+                copyImage();
+            } else {
+                info.setText("permission denied");
+            }
+        }else {
+            super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        }
+    }
+
+    private void copyImage() {
+        info.setText(uri.toString());
+        image.setImageURI(uri);
+        try {
+//        File dir = getFilesDir();
+//        File dir = getCacheDir();
+           //доступность внешнего накопителя
+          if(!Environment.MEDIA_MOUNTED.equals(
+                  Environment.getExternalStorageState())){
+              return;
+          }
+
+//        File dir = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
+            File dir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
+            dir.mkdir();
+
+            Log.d("happy", "free: " + dir.getFreeSpace());
+
+            Log.d("happy", dir.getAbsolutePath());
+            File out = new File(dir, "img_" +
+                    System.currentTimeMillis() +
+                    ".png");
+            FileOutputStream os = new FileOutputStream(out);
+            InputStream is = getContentResolver().openInputStream(uri);
+            byte[] buffer = new byte[1024];
+            int len;
+            while ((len = is.read(buffer)) != -1) {
+                os.write(buffer, 0, len);
+            }
+            is.close();
+            os.close();
+            Log.d("happy", out.getAbsolutePath());
+            Log.d("happy", "len: " + out.length());
+
+            PreferencesHelper.getInstance(this)
+                    .setFilename(out.getAbsolutePath());
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+}
+================================
+                </listing>
+            </details>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p>Программная TextView</p>
+            <p></p>
+            <listing>
+        TextView textView = new TextView(getApplicationContext());
+        textView.setText("123");
+        textView.setBackgroundColor(0xFFFF0000);
+        textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 22);
+        layout = findViewById(R.id.layout);
+        layout.addView(textView);
+            </listing>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p>SufaceViewLesson</p>
+            <p>surfaceChanged - будет вызван, когда прямоугольная поверхность изменится(экран повернули) и при создании.</p>
+            <p>surfaceChanged(SurfaceHolder holder, int format, int width, int height)</p>
+            <p>width, height - чтобы в SurfaceView что-то рисовать.</p>
+            <p>startPaint с параметрами width и height</p>
+            <p>drawBitmap - для привязки рисунка к экрану.</p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p>Красная точка по центру</p>
+            <details>
+                <summary style="color: blueviolet">_B52Surface_</summary>
+                <listing style="background-color: #DEF;">
+================================
+D:\programs\android\B52Surface\app\src\main\res\layout\activity_main.xml
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"&gt;
+
+    &lt;TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FF8"
+        android:text="123"
+        android:textSize="16sp" /&gt;
+
+    &lt;SurfaceView
+        android:id="@+id/surfaceView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" /&gt;
+
+&lt;/LinearLayout&gt;
+================================
+D:\programs\android\B52Surface\app\src\main\java\study\com\b52surface\MainActivity.java
+package study.com.b52surface;
+
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.Paint;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.Surface;
+import android.view.SurfaceHolder;
+import android.view.SurfaceView;
+import android.view.View;
+
+public class MainActivity extends AppCompatActivity {
+
+    private SurfaceView surfaceView;
+    private SurfaceHolder surfaceHolder;
+    private Surface surface;
+    private Bitmap bitmap;
+    private int width;
+    private int height;
+    private Canvas canvas;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        surfaceView = findViewById(R.id.surfaceView);
+
+        surfaceHolder = surfaceView.getHolder();
+
+        surfaceHolder.addCallback(callBack);
+    }
+
+    SurfaceHolder.Callback2 callBack = new SurfaceHolder.Callback2(){
+
+        @Override
+        public void surfaceCreated(SurfaceHolder holder) {
+
+        }
+
+        @Override
+        public void surfaceChanged(SurfaceHolder holder, int format, int width, int height) {
+
+            startPaint(width, height);
+        }
+
+        @Override
+        public void surfaceDestroyed(SurfaceHolder holder) {
+
+        }
+
+        @Override
+        public void surfaceRedrawNeeded(SurfaceHolder holder) {
+        }
+    };
+
+    private void startPaint(int width, int height){
+        this.width = width;
+        this.height = height;
+
+        surface = surfaceHolder.getSurface();
+
+        bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
+        canvas = new Canvas(bitmap);
+
+        drawDot(width/2, height/2);
+    }
+
+    private int paintColor = 0xFFFF0000;
+    private Paint drawPaint = new Paint();
+    {
+        drawPaint.setColor(paintColor);
+        drawPaint.setStyle(Paint.Style.STROKE);
+        drawPaint.setStrokeJoin(Paint.Join.ROUND);
+        drawPaint.setStrokeCap(Paint.Cap.ROUND);
+        drawPaint.setStrokeWidth(20);
+    }
+
+    private void drawDot(float x, float y){
+        canvas.drawPoint(x, y, drawPaint);
+
+        drawBitmap();
+    }
+
+    private void drawBitmap(){
+        Canvas canvasSurface = surface.lockCanvas(null);
+        canvasSurface.drawBitmap(bitmap,0,0, null);
+        surface.unlockCanvasAndPost(canvasSurface);
+    }
+}
+================================
+                </listing>
+            </details>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p>Рисовать синие линии от Климова</p>
+            <p></p>
+            <details>
+                <summary style="color: blueviolet">_B53Surface_</summary>
+                <listing style="background-color: #DEF;">
+================================
+D:\programs\android\B53Surface\app\src\main\AndroidManifest.xml
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.study.myapplication"&gt;
+
+    &lt;application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"&gt;
+        &lt;activity android:name=".TestActivity"&gt;
+            &lt;intent-filter&gt;
+                &lt;action android:name="android.intent.action.MAIN" /&gt;
+
+                &lt;category android:name="android.intent.category.LAUNCHER" /&gt;
+            &lt;/intent-filter&gt;
+        &lt;/activity&gt;
+    &lt;/application&gt;
+
+&lt;/manifest&gt;
+================================
+D:\programs\android\B53Surface\app\src\main\res\layout\activity_main.xml
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".TestActivity"&gt;
+
+
+&lt;/LinearLayout&gt;
+================================
+D:\programs\android\B53Surface\app\src\main\java\com\study\myapplication\TestActivity.java
+package com.study.myapplication;
+
+import android.app.Activity;
+import android.content.Context;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.Path;
+import android.os.Bundle;
+import android.view.MotionEvent;
+import android.view.SurfaceHolder;
+import android.view.SurfaceView;
+import android.view.Window;
+import android.widget.TextView;
+
+import java.util.Random;
+
+
+public class TestActivity extends Activity {
+
+    @Override
+    public void onCreate(Bundle icicle) {
+        super.onCreate(icicle);
+
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        setContentView(new MySurfaceView(this));
+    }
+
+    class MySurfaceView extends SurfaceView {
+
+        Path path;
+
+        Thread thread = null;
+        SurfaceHolder surfaceHolder;
+        volatile boolean running = false;
+
+        private Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
+        Random random;
+
+        public MySurfaceView(Context context) {
+            super(context);
+            surfaceHolder = getHolder();
+            paint.setStyle(Paint.Style.STROKE);
+            paint.setStrokeWidth(3);
+            paint.setColor(Color.BLUE);
+        }
+
+        @Override
+        public boolean onTouchEvent(MotionEvent event) {
+            if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                path = new Path();
+                path.moveTo(event.getX(), event.getY());
+            } else if (event.getAction() == MotionEvent.ACTION_MOVE) {
+                path.lineTo(event.getX(), event.getY());
+            } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                path.lineTo(event.getX(), event.getY());
+            }
+
+            if (path != null) {
+                Canvas canvas = surfaceHolder.lockCanvas();
+                canvas.drawPath(path, paint);
+                surfaceHolder.unlockCanvasAndPost(canvas);
+            }
+
+            return true;
+        }
+    }
+}
+================================
+                </listing>
+            </details>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p></p>
+            <p></p>
+            <details>
+                <summary style="color: blueviolet">_B52Surface_</summary>
+                <listing style="background-color: #DEF;">
+================================
+D:\programs\android\B52Surface\app\src\main\java\study\com\b52surface\MainActivity.java
+package study.com.b52surface;
+
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.Paint;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.MotionEvent;
+import android.view.Surface;
+import android.view.SurfaceHolder;
+import android.view.SurfaceView;
+import android.view.View;
+
+public class MainActivity extends AppCompatActivity {
+
+    private SurfaceView surfaceView;
+    private SurfaceHolder surfaceHolder;
+    private Surface surface;
+    private Bitmap bitmap;
+    private int width;
+    private int height;
+    private Canvas canvas;
+    private float lastX;
+    private float lastY;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        surfaceView = findViewById(R.id.surfaceView);
+
+        surfaceHolder = surfaceView.getHolder();
+
+        surfaceHolder.addCallback(callBack);
+    }
+
+    SurfaceHolder.Callback2 callBack = new SurfaceHolder.Callback2(){
+
+        @Override
+        public void surfaceCreated(SurfaceHolder holder) {
+
+        }
+
+        @Override
+        public void surfaceChanged(SurfaceHolder holder, int format, int width, int height) {
+            stopPaint();
+            startPaint(width, height);
+        }
+
+        @Override
+        public void surfaceDestroyed(SurfaceHolder holder) {
+            stopPaint();
+
+        }
+
+        @Override
+        public void surfaceRedrawNeeded(SurfaceHolder holder) {
+        }
+    };
+
+    private void startPaint(int width, int height){
+        this.width = width;
+        this.height = height;
+
+        surface = surfaceHolder.getSurface();
+
+        bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
+        canvas = new Canvas(bitmap);
+
+        //drawDot(width/2, height/2);
+
+        surfaceView.setOnTouchListener(onTouchListener);
+    }
+
+    private void stopPaint(){
+        surface = null;
+        surfaceView.setOnTouchListener(null);
+    }
+
+    View.OnTouchListener onTouchListener = new View.OnTouchListener() {
+        @Override
+        public boolean onTouch(View v, MotionEvent event) {
+            //Log.d("happy", event.toString());
+            if(event.getAction() == MotionEvent.ACTION_DOWN){
+                drawDot(event.getX(), event.getY());
+            }else if(event.getAction() == MotionEvent.ACTION_DOWN||
+                    event.getAction() == MotionEvent.ACTION_MOVE){
+               drawLine(event.getX(), event.getY());
+            }
+            return true;
+        }
+    };
+
+    private int paintColor = 0xFFFF0000;
+    private Paint drawPaint = new Paint();
+    {
+        drawPaint.setColor(paintColor);
+        drawPaint.setStyle(Paint.Style.STROKE);
+        drawPaint.setStrokeJoin(Paint.Join.ROUND);
+        drawPaint.setStrokeCap(Paint.Cap.ROUND);
+        drawPaint.setStrokeWidth(20);
+    }
+
+    private void drawDot(float x, float y){
+        canvas.drawPoint(x, y, drawPaint);
+        lastX = x;
+        lastY = y;
+
+        drawBitmap();
+    }
+
+    private void drawLine(float x, float y){
+        canvas.drawLine( lastX, lastY, x, y, drawPaint);
+        lastX = x;
+        lastY = y;
+        drawBitmap();
+    }
+
+    private void drawBitmap(){
+        Canvas canvasSurface = surface.lockCanvas(null);
+        canvasSurface.drawBitmap(bitmap,0,0, null);
+        surface.unlockCanvasAndPost(canvasSurface);
+    }
+}
+================================
+                </listing>
+            </details>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <details>
+                <summary style="color: blueviolet">__</summary>
+                <listing style="background-color: #DEF;">
+================================
+
+
+================================
+
+
+================================
+                </listing>
+            </details>
+            <p>
+                <span>QMediaPlayer</span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </p>
+            <p></p>
+        </li>
+    </ol>
+</body>
+
+</html>

@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+	<base target="_blank">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+	<style>
+		p {
+			margin: 0px;
+		}
+
+		.b1 {
+			border: dotted 1px;
+		}
+
+		td {
+			border: dotted 1px;
+		}
+		span {background-color: #FFF;}
+
+		.margin1 {
+			margin-left: 20px;
+		}
+details summary::-webkit-details-marker {
+  display: none;
+}
+	</style>
+</head>
+<body>
+   <ol>
+       <li>
+           <p>Настраиваемые Представления  (Custom Views)</p>
+           <p></p>
+           <details>
+               <summary style="color: blueviolet">_B42List_</summary>
+               <listing style="background-color: #DEF;">
+================================
+D:\programs\android\B42List\app\src\main\res\layout\activity_main.xml
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"&gt;
+
+    &lt;ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" /&gt;
+
+    &lt;Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button" /&gt;
+
+&lt;/LinearLayout&gt;
+================================
+D:\programs\android\B42List\app\src\main\java\study\com\b42list\MainActivity.java
+package study.com.b42list;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ListView;
+
+public class MainActivity extends AppCompatActivity {
+
+    private ListView listView;
+    private Button button;
+    static final String[] data = new String[]{"one", "two", "three"};
+    private ArrayAdapter&lt;String&gt; adapter;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        listView = findViewById(R.id.listView);
+        button = findViewById(R.id.button);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                doButton();
+            }
+        });
+
+        adapter = new ArrayAdapter&lt;String&gt;(this,
+                android.R.layout.simple_list_item_1, data);
+        listView.setAdapter(adapter);
+
+    }
+
+    private void doButton(){
+        //TODO
+
+    }
+}
+================================
+               </listing>
+           </details>
+
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+       </li>
+       <li>
+           <p></p>
+           <p><a href="http://www.activeandroid.com/">activeandroid</a></p>
+           <p><a href="https://github.com/pardom-zz/ActiveAndroid/wiki/Getting-started">Getting started</a></p>
+           <p> maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }</p>
+           <p>add to D:\programs\android\B42List\build.gradle allprojects/repositories</p>
+           <p>compile 'com.michaelpardo:activeandroid:3.1.0-SNAPSHOT'
+</p>
+           <p>add to D:\programs\android\B42List\app\build.gradle dependencies</p>
+           <p>implementation 'com.michaelpardo:activeandroid:3.1.0-SNAPSHOT'
+</p>
+           <p>add to D:\programs\android\B42List\app\build.gradle dependencies</p>
+           <p><a href="https://github.com/pardom/ActiveAndroid/archive/master.zip"> download the ActiveAndroid library</a></p>
+           <p>activeandroid-3.0.jar</p>
+           <p>D:\programs\android\B42List\app\libs</p>
+		   <p>manifest</p>
+            <p>&lt;meta-data android:name="AA_DB_NAME" android:value="Pickrand" /&gt;</p>
+		   <p>&lt;meta-data android:name="AA_DB_VERSION" android:value="5" /&gt;</p>
+		   <p></p>
+		   <p></p>
+           <details>
+               <summary style="color: blueviolet">_B42List_</summary>
+               <listing style="background-color: #DEF;">
+================================
+D:\programs\android\B42List\app\src\main\res\layout\activity_main.xml
+
+================================
+D:\programs\android\B42List\app\src\main\java\study\com\b42list\MainActivity.java
+
+================================
+D:\programs\android\B42List\app\src\main\java\study\com\b42list\MyApplication.java
+package study.com.b42list;
+
+import android.app.Application;
+
+import com.activeandroid.ActiveAndroid;
+
+public class MyApplication extends Application {
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        <span>ActiveAndroid.initialize(this);</span>
+    }
+}
+
+================================
+D:\programs\android\B42List\app\src\main\AndroidManifest.xml
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="study.com.b42list"&gt;
+
+    &lt;application
+        <span>android:name=".MyApplication"</span>
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"&gt;
+        &lt;activity android:name=".MainActivity"&gt;
+            &lt;intent-filter&gt;
+                &lt;action android:name="android.intent.action.MAIN" /&gt;
+
+                &lt;category android:name="android.intent.category.LAUNCHER" /&gt;
+            &lt;/intent-filter&gt;
+        &lt;/activity&gt;
+        <span>&lt;meta-data android:name="AA_DB_NAME" android:value="Pickrand" /&gt;
+            &lt;meta-data android:name="AA_DB_VERSION" android:value="5" /&gt;</span>
+
+    &lt;/application&gt;
+
+&lt;/manifest&gt;
+================================
+D:\programs\android\B42List\build.gradle
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        google()
+        jcenter()
+
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.4.1'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+<span>//        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }</span>
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+
+================================
+D:\programs\android\B42List\app\build.gradle
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion "29.0.0"
+    defaultConfig {
+        applicationId "study.com.b42list"
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+<span>//    implementation 'com.michaelpardo:activeandroid:3.1.0-SNAPSHOT'</span>
+}
+================================
+D:\programs\android\B42List\app\src\main\java\study\com\b42list\Sepulka.java
+package study.com.b42list;
+
+import com.activeandroid.Model;
+import com.activeandroid.annotation.Column;
+import com.activeandroid.annotation.Table;
+
+@Table(name = "Categories")
+public class Sepulka extends Model {
+
+    @Column(name = "foo")
+    public String foo;
+
+    @Column(name = "bar")
+    public String bar;
+}
+================================
+               </listing>
+           </details>
+		   <p>&lt;meta-data android:name="study.com.b42list.Sepulka" /&gt;
+</p>
+		   <p>SQL(query) error or missing database.</p>
+		   <p>Слишком старая. Для Delvik.</p>
+		   <p>ORM</p>
+		   <p></p>
+		   <p></p>
+
+       </li>
+       <li>
+           <p></p>
+           <p><a href="https://github.com/codepath/android_guides/wiki/ActiveAndroid-Guide#loading-with-content-providers">Loading with Content Providers</a></p>
+           <listing>
+&lt;application ...&gt;
+    &lt;provider android:authorities="com.example" android:exported="false"
+              android:name="com.activeandroid.content.ContentProvider" /&gt;
+    ...
+&lt;/application&gt;
+           </listing>
+           <p>android:authorities - как правило название пакета, для доступа к базе</p>
+           <p>exported - доступ есть;</p>
+           <p>Efficient Android Threading</p>
+           <p>9:40</p>
+           <p></p>
+           <p></p>
+           <details>
+               <summary style="color: blueviolet">_B44List32_</summary>
+               <listing style="background-color: #DEF;">
+================================
+D:\programs\android\B44List32\build.gradle
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        google()
+        jcenter()
+
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.4.1'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+================================
+D:\programs\android\B44List32\app\build.gradle
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion "29.0.0"
+    defaultConfig {
+        applicationId "study.com.b44list32"
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    implementation 'com.michaelpardo:activeandroid:3.1.0-SNAPSHOT'
+//    build 'com.michaelpardo:activeandroid:3.1.0-SNAPSHOT'
+
+}
+================================
+D:\programs\android\B44List32\app\src\main\AndroidManifest.xml
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="study.com.b44list32"&gt;
+
+    &lt;application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"&gt;
+        &lt;activity android:name=".MainActivity"&gt;
+            &lt;intent-filter&gt;
+                &lt;action android:name="android.intent.action.MAIN" /&gt;
+
+                &lt;category android:name="android.intent.category.LAUNCHER" /&gt;
+            &lt;/intent-filter&gt;
+        &lt;/activity&gt;
+
+        &lt;meta-data
+            android:name="AA_DB_NAME"
+            android:value="Pickrand.db" /&gt;
+        &lt;meta-data
+            android:name="AA_DB_VERSION"
+            android:value="5" /&gt;
+        &lt;meta-data
+            android:name="AA_MODELS"
+            android:value="study.com.b44list32.Sepulka" /&gt;
+
+        &lt;provider
+            android:name="com.activeandroid.content.ContentProvider"
+            android:authorities="com.example"
+            android:exported="false" /&gt;
+
+    &lt;/application&gt;
+
+&lt;/manifest&gt;
+================================
+D:\programs\android\B44List32\app\src\main\res\layout\activity_main.xml
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="study.com.b44list32.MainActivity"&gt;
+
+    &lt;ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" /&gt;
+
+    &lt;Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hello World!" /&gt;
+&lt;/LinearLayout&gt;
+================================
+D:\programs\android\B44List32\app\src\main\java\study\com\b44list32\MainActivity.java
+package study.com.b44list32;
+
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ListAdapter;
+import android.widget.ListView;
+
+import com.activeandroid.query.Select;
+
+import java.util.List;
+
+public class MainActivity extends AppCompatActivity {
+
+    private ListView list;
+    private Button button;
+
+    static final String[] data = new String[] { "one", "two", "three" };
+    private ListAdapter adapter;
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        list = (ListView)findViewById(R.id.list);
+        button = (Button)findViewById(R.id.button);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                doButton();
+            }
+        });
+
+        adapter = new ArrayAdapter&lt;String&gt;(
+                this,
+                android.R.layout.simple_list_item_1,
+                data
+        );
+
+        list.setAdapter(adapter);
+
+    }
+
+    private void doButton() {
+        // TODO
+
+        Sepulka s = new Sepulka();
+        s.foo = "Hello" + System.currentTimeMillis();
+        s.bar = "Hello" + System.currentTimeMillis();
+
+        s.save();
+
+        List&lt;Sepulka&gt; ses = new Select().from(Sepulka.class).execute();
+        Log.d("happy", ses.toString());
+    }
+}
+================================
+D:\programs\android\B44List32\app\src\main\java\study\com\b44list32\MyApplication.java
+package study.com.b44list32;
+
+import android.app.Application;
+
+import com.activeandroid.ActiveAndroid;
+
+/**
+ * Created by Student2 on 02.04.2016.
+ */
+public class MyApplication extends Application {
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+
+        ActiveAndroid.initialize(this);
+    }
+}
+================================
+D:\programs\android\B44List32\app\src\main\java\study\com\b44list32\Sepulka.java
+package study.com.b44list32;
+
+
+import android.provider.BaseColumns;
+
+import com.activeandroid.Model;
+import com.activeandroid.annotation.Column;
+import com.activeandroid.annotation.Table;
+
+/**
+ * Created by Student2 on 02.04.2016.
+ */
+@Table(name = "Categories", id = BaseColumns._ID)
+public class Sepulka extends Model {
+
+    public Sepulka() {
+        super();
+    }
+
+    @Column(name = "foo")
+    public String foo;
+
+    @Column(name = "bar")
+    public String bar;
+}
+================================
+               </listing>
+           </details>
+           <p>26:30</p>
+           <p>Не работает</p>
+           <p></p>
+       </li>
+       <li>
+           <p>Widgets</p>
+           <p><a href="https://developer.android.com/guide/practices/ui_guidelines/widget_design.html">App Widget Design Guidelines</a>
+           <a href="https://xakep.ru/2015/06/11/coding-android-widget-site-availability/">Пишем виджет для Android, который показывает доступность сайта</a>
+           <a href="https://www.youtube.com/watch?v=xGQJg31TPtU">Simple App Widget - Android Studio Tutorial youtube</a>
+           <a href=""></a>
+           <a href=""></a>
+           <a href=""></a></p>
+           <p><span>Студия отказывается компилировать ссылаясь на отсутствие активити: "Default activity not found".</span>
+           <span>Run → Edit Configurations.</span>
+           <span>В Launch Options выберите Default Activity;</span>
+           <span></span>
+           <span></span>
+           <span></span>
+           <span></span>
+           <span></span></p>
+           <p>Widget Preview Builder</p>
+           <p>Ставится на android, а затем из него и т.д. вытаскивается виджет.</p>
+           <p></p>
+           <details>
+               <summary style="color: blueviolet">__</summary>
+               <listing style="background-color: #DEF;">
+================================
+D:\programs\android\WidgetDemo\build.gradle
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        jcenter()
+        google()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.4.1'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+    }
+}
+
+================================
+D:\programs\android\WidgetDemo\app\build.gradle
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion '29.0.0'
+
+    defaultConfig {
+        applicationId "com.example.lab2_5"
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+}
+
+================================
+D:\programs\android\WidgetDemo\app\src\main\AndroidManifest.xml
+&lt;manifest
+    package="com.example.lab2_5"
+    xmlns:android="http://schemas.android.com/apk/res/android"&gt;
+
+    &lt;application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"&gt;
+
+        &lt;receiver android:name=".ClockWidgetProvider"&gt;
+            &lt;meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/appwidget_provider"/&gt;
+
+            &lt;intent-filter&gt;
+                &lt;action android:name="android.appwidget.action.APPWIDGET_UPDATE"/&gt;
+            &lt;/intent-filter&gt;
+
+            &lt;intent-filter&gt;
+                &lt;action android:name="com.example.AUTO_UPDATE"/&gt;
+            &lt;/intent-filter&gt;
+        &lt;/receiver&gt;
+
+        &lt;activity android:name=".ClockWidgetActivity"&gt;
+            &lt;intent-filter&gt;
+                &lt;action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/&gt;
+            &lt;/intent-filter&gt;
+        &lt;/activity&gt;
+
+    &lt;/application&gt;
+
+&lt;/manifest&gt;
+
+================================
+D:\programs\android\WidgetDemo\app\src\main\res\layout\activity_clock_widget.xml
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"&gt;
+
+    &lt;EditText
+        android:id="@+id/city_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="City"/&gt;
+
+    &lt;Button
+        android:id="@+id/ok_button"
+        android:layout_width="72dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/city_edit_text"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="8dp"
+        android:text="OK"/&gt;
+
+&lt;/RelativeLayout&gt;
+================================
+D:\programs\android\WidgetDemo\app\src\main\res\layout\clock_widget.xml
+D:\programs\android\WidgetDemo\app\src\main\res\layout\clock_widget.xml
+================================
+D:\programs\android\WidgetDemo\app\src\main\java\com\example\lab2_5\AlarmUtil.java
+package com.example.lab2_5;
+
+import android.app.AlarmManager;
+import android.app.PendingIntent;
+import android.content.Context;
+import android.content.Intent;
+
+import java.util.Calendar;
+
+public class AlarmUtil {
+    public static final void setAlarm(Context context, String action, long interval) {
+        AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(context, 0, new Intent(action), PendingIntent.FLAG_CANCEL_CURRENT);
+        Calendar calendar = Calendar.getInstance();
+        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), interval, pendingIntent);
+    }
+
+    public static final void cancelAlarm(Context context, String action) {
+        AlarmManager am = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(context, 0, new Intent(action), PendingIntent.FLAG_CANCEL_CURRENT);
+        am.cancel(pendingIntent);
+    }
+}
+
+================================
+D:\programs\android\WidgetDemo\app\src\main\java\com\example\lab2_5\ClockWidgetActivity.java
+package com.example.lab2_5;
+
+import android.app.AlarmManager;
+import android.app.PendingIntent;
+import android.content.Context;
+import android.content.Intent;
+
+import java.util.Calendar;
+
+public class AlarmUtil {
+    public static final void setAlarm(Context context, String action, long interval) {
+        AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(context, 0, new Intent(action), PendingIntent.FLAG_CANCEL_CURRENT);
+        Calendar calendar = Calendar.getInstance();
+        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), interval, pendingIntent);
+    }
+
+    public static final void cancelAlarm(Context context, String action) {
+        AlarmManager am = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(context, 0, new Intent(action), PendingIntent.FLAG_CANCEL_CURRENT);
+        am.cancel(pendingIntent);
+    }
+}
+
+================================
+D:\programs\android\WidgetDemo\app\src\main\java\com\example\lab2_5\ClockWidgetProvider.java
+package com.example.lab2_5;
+
+import android.app.PendingIntent;
+import android.app.SearchManager;
+import android.appwidget.AppWidgetManager;
+import android.appwidget.AppWidgetProvider;
+import android.content.ComponentName;
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
+import android.widget.RemoteViews;
+
+import java.util.Date;
+
+public class ClockWidgetProvider extends AppWidgetProvider {
+    public static final String ACTION_AUTO_UPDATE = "com.example.AUTO_UPDATE";
+    public static final int UPDATE_INTERVAL = 1000;
+
+    @Override
+    public void onReceive(Context context, Intent intent) {
+        super.onReceive(context, intent);
+        if (intent.getAction().equals(ACTION_AUTO_UPDATE)) {
+            AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(context);
+            ComponentName componentName = new ComponentName(context, ClockWidgetProvider.class);
+            int[] widgetIds = appWidgetManager.getAppWidgetIds(componentName);
+            onUpdate(context, appWidgetManager, widgetIds);
+        }
+    }
+
+    @Override
+    public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
+        SharedPreferences preferences = context.getSharedPreferences(ClockWidgetActivity.WIDGET_PREF, Context.MODE_PRIVATE);
+        for (int id : appWidgetIds) {
+            updateWidget(context, appWidgetManager, preferences, id);
+        }
+    }
+
+    private static void updateWidget(Context context, AppWidgetManager appWidgetManager, SharedPreferences preferences, int widgetID) {
+        String widgetCity = preferences.getString(ClockWidgetActivity.WIDGET_CITY + widgetID, null);
+        if (widgetCity == null) {
+            return;
+        }
+        showWidgetContent(context, appWidgetManager, widgetID, widgetCity);
+    }
+
+    public static final void showWidgetContent(Context context, AppWidgetManager appWidgetManager, int id, String city) {
+        RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.clock_widget);
+
+        Date curDate = new Date();
+        String time = String.format("%02d:%02d:%02d", curDate.getHours(), curDate.getMinutes(), curDate.getSeconds());
+        views.setTextViewText(R.id.current_time_text_view, time);
+        views.setTextViewText(R.id.search_button, city);
+
+        Intent intent = new Intent(Intent.ACTION_SEARCH);
+        intent.putExtra(SearchManager.QUERY, city);
+        PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, intent, 0);
+        views.setOnClickPendingIntent(R.id.search_button, pendingIntent);
+
+        appWidgetManager.updateAppWidget(id, views);
+    }
+
+
+    @Override
+    public void onEnabled(Context context) {
+        AlarmUtil.setAlarm(context, ACTION_AUTO_UPDATE, UPDATE_INTERVAL);
+//        PackageManager packageManager = context.getPackageManager();
+//        ComponentName componentName = new ComponentName(context, ClockWidgetProvider.class);
+//        packageManager.setComponentEnabledSetting(componentName, PackageManager.COMPONENT_ENABLED_STATE_ENABLED, PackageManager.DONT_KILL_APP);
+    }
+
+    @Override
+    public void onDisabled(Context context) {
+        AlarmUtil.cancelAlarm(context, ACTION_AUTO_UPDATE);
+//        PackageManager packageManager = context.getPackageManager();
+//        ComponentName componentName = new ComponentName(context, ClockWidgetProvider.class);
+//        packageManager.setComponentEnabledSetting(componentName, PackageManager.COMPONENT_ENABLED_STATE_DISABLED, PackageManager.DONT_KILL_APP);
+    }
+}
+================================
+D:\programs\android\WidgetDemo\app\src\main\java\com\example\lab2_5\MyPP.java
+package com.example.lab2_5;
+
+import android.appwidget.AppWidgetProvider;
+
+public class MyPP extends AppWidgetProvider {
+}
+================================
+</listing>
+           </details>
+
+           <p></p>
+           <p></p>
+       </li>
+       <li>
+           <p>Frameworks for Net</p>
+           <p><a href="https://square.github.io/retrofit/">Retrofit
+Download LatestGitHubSquare
+A type-safe HTTP client for Android and Java</a>
+           <a href="https://github.com/square/retrofit">square/retrofit</a>
+           <a href="https://startandroid.ru/ru/blog/506-retrofit.html">Как в Android получить данные с сервера с помощью Retrofit</a></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+       </li>
+        <li>
+            <p><a href="https://developer.android.com/topic/libraries/data-binding">Data Binding Library</a></p>
+            <p><a href="https://www.youtube.com/watch?v=_luUjCPG-Pc">Android Declarative layout using Data Binding Library.youtube</a></p>
+            <p></p>
+            <p><a href="https://github.com/codepath/android_guides/wiki/Dependency-Injection-with-Dagger-2">Dependency Injection with Dagger 2</a></p>
+            <p><a href="https://startandroid.ru/ru/16-course/dagger2/424-urok-1.html">Зачем нужен Dagger</a></p>
+            <p><a href="https://www.fandroid.info/android-design-support-library-podderzhka-komponentov-material-design-v-prilozheniyah-s-android-2-1-do-android-5-s-primerami/">Android Design Support Library — поддержка компонентов Material Design в приложениях с Android 2.1 до Android 5+ (с примерами)</a></p>
+            <p><a href="https://square.github.io/picasso/">Picasso</a></p>
+            <p><a href="https://android-arsenal.com/details/1/7520">Android Arsenal</a></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+       <li>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+       </li>
+       <li>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+       </li>
+       <li>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+       </li>
+       <li>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+       </li>
+       <li>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+       </li>
+       <li>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+       </li>
+       <li>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <details>
+               <summary style="color: blueviolet">__</summary>
+               <listing style="background-color: #DEF;">
+================================
+
+
+================================
+
+
+================================
+               </listing>
+           </details>
+           <p></p>
+           <p></p>
+       </li>
+        <li>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+      </ol>
+
+</body>
+</html>

@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+	<base target="_blank">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<style>
+		p {
+			margin: 0px;
+		}
+
+		.b1 {
+			border: dotted 1px;
+		}
+
+		td {
+			border: dotted 1px;
+		}
+
+		.margin1 {
+			margin-left: 20px;
+		}
+
+	</style>
+</head>
+<body>
+   <ol>
+       <li>
+           <p>B21Fragm</p>
+           <p><a href="https://medium.com/square-corner-blog/advocating-against-android-fragments-81fd0b462c97">Advocating Against Android Fragments</a></p>
+           <p><a href="https://www.vogella.com/tutorials/AndroidFragments/article.html">Building dynamic user interfaces in Android with fragments - Tutorial</a></p>
+           <p><a href="https://developer.android.com/guide/components/fragments">Фрагменты</a></p>
+           <p>
+               <span>рефакторинг</span>
+               <span>bundle</span>
+               <span>пачка</span>
+               <span>getInstance</span>
+               <span>экземпляр</span>
+               <span></span>
+               <span></span>
+               <span></span>
+           </p>
+           <p>Команда позволяет не множить Fragment</p>
+           <p>setRetainInstance(true);</p>
+           <listing style="background-color: #DEF;">
+===================================
+D:\programs\android\B21Fragm\app\src\main\res\layout\activity_main.xml
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"&gt;
+
+    &lt;TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#BBF"
+        android:text="123"
+        android:textSize="22sp" /&gt;
+
+    &lt;!--&lt;fragment--&gt;
+    &lt;!--android:id="@+id/fragment1"--&gt;
+    &lt;!--android:name="study.com.b21fragm.MyFragment"--&gt;
+    &lt;!--android:layout_width="match_parent"--&gt;
+    &lt;!--android:layout_height="wrap_content" /&gt;--&gt;
+
+    &lt;FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"&gt;
+
+    &lt;/FrameLayout&gt;
+
+&lt;/LinearLayout&gt;
+
+===================================
+D:\programs\android\B21Fragm\app\src\main\java\study\com\b21fragm\MainActivity.java
+package study.com.b21fragm;
+
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.util.Log;
+import android.widget.FrameLayout;
+
+public class MainActivity extends AppCompatActivity {
+
+    private FrameLayout frameLayout;
+    private FragmentTransaction fragmentTransaction;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        frameLayout = findViewById(R.id.frameLayout);
+        Logger.logMe();
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        if(frameLayout.getChildCount() == 0) {
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            fragmentTransaction = fragmentManager.beginTransaction();
+
+            MyFragment fragment = MyFragment.getInstance("qqq  "
+                + hashCode());
+            fragmentTransaction.add(R.id.frameLayout, fragment);
+
+            fragmentTransaction.commit();
+        }else{
+            Log.d("happy"," " + frameLayout.getChildCount()
+                    + " don't insert fragment");
+        }
+        Logger.logMe();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Logger.logMe();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Logger.logMe();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Logger.logMe();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Logger.logMe();
+    }
+}
+
+===================================
+D:\programs\android\B21Fragm\app\src\main\res\layout\fragment_my.xml
+ &lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"&gt;
+
+    &lt;TextView
+        android:id="@+id/textViewFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#dfd"
+        android:text="I'm fragment."
+        android:textSize="25sp" /&gt;
+
+    &lt;TextView
+        android:id="@+id/textViewFragment2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFE"
+        android:textSize="25sp"
+        android:textStyle="italic" /&gt;
+
+&lt;/LinearLayout&gt;
+===================================
+D:\programs\android\B21Fragm\app\src\main\java\study\com\b21fragm\MyFragment.java
+package study.com.b21fragm;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
+
+public class MyFragment extends Fragment {
+
+    public static final String PARAMETER_1 = "parameter1";
+    TextView textView2;
+
+    public static MyFragment getInstance(String string){
+        Bundle bundle;
+        bundle = new Bundle();
+        bundle.putString(PARAMETER_1, string);
+
+        MyFragment fragment = new MyFragment();
+        fragment.setArguments(bundle);
+
+        return fragment;
+    }
+
+    @Override
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+        Logger.logMe();
+    }
+
+    @Nullable
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater,
+                             @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        super.onCreateView(inflater, container, savedInstanceState);
+        View view = inflater.inflate(R.layout.fragment_my, container, false);
+        Logger.logMe();
+
+        textView2 = view.findViewById(R.id.textViewFragment2);
+        Bundle bundle = getArguments();
+        if(bundle != null && bundle.containsKey("parameter1")){
+            String string = bundle.getString("parameter1");
+            textView2.setText(string);
+        }
+        Log.d("happy", "onCreate fragment " + hashCode());
+
+        return view;
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        Logger.logMe();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        Logger.logMe();
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        Logger.logMe();
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        Logger.logMe();
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        Logger.logMe();
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        Logger.logMe();
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        Logger.logMe();
+    }
+}
+===================================
+D:\programs\android\B22Pager\app\src\main\java\study\com\b22pager\Logger.java
+package study.com.b22pager;
+
+import android.util.Log;
+
+public class Logger {
+    public static void logAll() {
+        StackTraceElement[] stack = Thread.currentThread().getStackTrace();
+        for (int i = 0; i < stack.length; i++) {
+            Log.d("happy", " " + i + " " +
+                    stack[i].getClassName() +
+                    " " + stack[i].getMethodName());
+        }
+    }
+
+    public static void logMe() {
+        StackTraceElement[] stack = Thread.currentThread().getStackTrace();
+        Log.d("happy", stack[3].getClassName() +
+                " " + stack[3].getMethodName());
+    }
+}
+
+===================================
+           </listing>
+           <p></p>
+           <p></p>
+           <p></p>
+       </li>
+       <li>
+           <p>B22Pager</p>
+           <p>PagerView</p>
+           <p>AsingTask запихивает бизнес логику в Активити - плохо, нет полного разделения.</p>
+           <listing style="background-color: #FED;">
+===================================
+D:\programs\android\B22Pager\app\src\main\res\layout\activity_main.xml
+&lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"&gt;
+
+    &lt;TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#BBF"
+        android:text="123"
+        android:textSize="22sp" /&gt;
+
+    &lt;android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"&gt;
+
+    &lt;/android.support.v4.view.ViewPager&gt;
+
+&lt;/LinearLayout&gt;
+===================================
+D:\programs\android\B22Pager\app\src\main\java\study\com\b22pager\MainActivity.java
+package study.com.b22pager;
+
+import android.support.v4.view.ViewPager;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+
+public class MainActivity extends AppCompatActivity {
+
+    private ViewPager viewPager;
+    private MyPagerAdapter adapter;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        viewPager = findViewById(R.id.viewPager);
+        adapter = new MyPagerAdapter(getSupportFragmentManager());
+        viewPager.setAdapter(adapter);
+
+    }
+}
+===================================
+D:\programs\android\B22Pager\app\src\main\java\study\com\b22pager\MyPagerAdapter.java
+package study.com.b22pager;
+
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+
+public class MyPagerAdapter extends FragmentPagerAdapter {
+    public MyPagerAdapter(FragmentManager fm) {
+        super(fm);
+    }
+
+    @Override
+    public Fragment getItem(int i) {
+        return MyFragment.getInstance("page " + i);
+    }
+
+    @Override
+    public int getCount() {
+        return 5;
+    }
+}
+===================================
+           </listing>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+       </li>
+       <li>
+           <p>B23List</p>
+           <p></p>
+           <p>
+               <span>ArrayAdapter</span>
+               <span>ListView</span>
+               <span>onFinishInflate</span>
+               <span>setAdapter</span>
+               <span></span>
+               <span></span>
+               <span></span>
+           </p>
+           <p></p>
+           <listing style="background-color: #FF4;">
+===================================
+D:\programs\android\B23List\app\src\main\res\layout\activity_main.xml
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"&gt;
+
+    &lt;TextView
+        android:textSize="22sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="123"/&gt;
+
+    &lt;study.com.b23list.ItemListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"&gt;
+
+    &lt;/study.com.b23list.ItemListView&gt;
+
+&lt;/LinearLayout&gt;
+===================================
+D:\programs\android\B23List\app\src\main\java\study\com\b23list\MainActivity.java
+package study.com.b23list;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    }
+}
+===================================
+D:\programs\android\B23List\app\src\main\java\study\com\b23list\ItemListView.java
+package study.com.b23list;
+
+import android.content.Context;
+import android.util.AttributeSet;
+import android.widget.ListView;
+
+//import javax.swing.text.html.ListView;
+
+public class ItemListView extends ListView {
+
+
+    private ItemListAdapter adaptor;
+
+    public ItemListView(Context context, AttributeSet attrs) {
+        super(context, attrs);
+    }
+
+    @Override
+    protected void onFinishInflate() {
+        super.onFinishInflate();
+
+        adaptor = new ItemListAdapter(getContext());
+        setAdapter(adaptor);
+    }
+}
+===================================
+D:\programs\android\B23List\app\src\main\java\study\com\b23list\ItemListAdapter.java
+package study.com.b23list;
+
+import android.content.Context;
+import android.widget.ArrayAdapter;
+
+class ItemListAdapter extends ArrayAdapter&lt;String&gt; {
+
+    static final String[] values = {
+            "1 Республика Адыгея"
+            ,"2 Республика Башкортостан"
+            ,"3 Республика Бурятия"
+            ,"4 Республика Алтай"
+            ,"5 Республика Дагестан"
+            ,"6 Республика Ингушетия"
+            ,"7 Кабардино-Балкарская Республика"
+            ,"8 Республика Калмыкия"
+            ,"9 Республика Карачаево-Черкессия"
+            ,"10 Республика Карелия"
+            ,"11 Республика Коми"
+            ,"12 Республика Марий Эл"
+            ,"13 Республика Мордовия"
+            ,"14 Республика Саха (Якутия)"
+            ,"15 Республика Северная Осетия - Алания"
+            ,"16 Республика Татарстан"
+            ,"17 Республика Тыва"
+            ,"18 Удмуртская Республика"
+            ,"19 Республика Хакасия"
+            ,"20 Чеченская Республика"
+            ,"21 Чувашская Республика"
+            ,"22 Алтайский край"
+            ,"23 Краснодарский край"
+            ,"24 Красноярский край"
+            ,"25 Приморский край"
+            ,"26 Ставропольский край"
+            ,"27 Хабаровский край"
+            ,"28 Амурская область"
+            ,"29 Архангельская область"
+            ,"30 Астраханская область"
+            ,"31 Белгородская область"
+            ,"32 Брянская область"
+            ,"33 Владимирская область"
+            ,"34 Волгоградская область"
+            ,"35 Вологодская область"
+            ,"36 Воронежская область"
+            ,"37 Ивановская область"
+            ,"38 Иркутская область"
+            ,"39 Калининградская область"
+            ,"40 Калужская область"
+            ,"41 Камчатский край"
+            ,"42 Кемеровская область"
+            ,"43 Кировская область"
+            ,"44 Костромская область"
+            ,"45 Курганская область"
+            ,"46 Курская область"
+            ,"47 Ленинградская область"
+            ,"48 Липецкая область"
+            ,"49 Магаданская область"
+            ,"50 Московская область"
+            ,"51 Мурманская область"
+            ,"52 Нижегородская область"
+            ,"53 Новгородская область"
+            ,"54 Новосибирская область"
+            ,"55 Омская область"
+            ,"56 Оренбургская область"
+            ,"57 Орловская область"
+            ,"58 Пензенская область"
+            ,"59 Пермский край"
+            ,"60 Псковская область"
+            ,"61 Ростовская область"
+            ,"62 Рязанская область"
+            ,"63 Самарская область"
+            ,"64 Саратовская область"
+            ,"65 Сахалинская область"
+            ,"66 Свердловская область"
+            ,"67 Смоленская область"
+            ,"68 Тамбовская область"
+            ,"69 Тверская область"
+            ,"70 Томская область"
+            ,"71 Тульская область"
+            ,"72 Тюменская область"
+            ,"73 Ульяновская область"
+            ,"74 Челябинская область"
+            ,"75 Забайкальский край"
+            ,"76 Ярославская область"
+            ,"77 город Москва"
+            ,"78 город Санкт-Петербург"
+            ,"79 Еврейская автономная область"
+            ,"80 Забайкальский край"
+            ,"81 Пермский край"
+            ,"82 Автономная Республика Крым"
+            ,"83 Ненецкий автономный округ"
+            ,"84 Красноярский край"
+            ,"85 Иркутская область"
+            ,"86 Ханты-Мансийский автономный округ ЮГРА"
+            ,"87 Чукотский автономный округ"
+            ,"88 Красноярский край"
+            ,"89 Ямало-Ненецкий автономный округ"
+            ,"90 Московская область "
+            ,"91 Калининградская область"
+            ,"92 Севастополь"
+            ,"93 Краснодарский край"
+            ,"94 (Байконур, Антарктика) "
+            ,"95 Чеченская Республика"
+            ,"96 Свердловская область"
+            ,"97 город Москва"
+            ,"98 город Санкт-Петербург"
+            ,"99 город Москва",
+    };
+
+
+    public ItemListAdapter(Context context) {
+        super(context, android.R.layout.simple_list_item_1, values);
+
+    }
+}
+===================================
+           </listing>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+       </li>
+       <li>
+           <p>B23List</p>
+           <p>Не хотите, не понимаете, не можете</p>
+           <p></p>
+           <listing style="background-color: #DED;">
+===================================
+D:\programs\android\B22Pager\app\src\main\res\layout\activity_main.xml
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;study.com.b23list.DualPaneContaner
+    android:id="@+id/mainActivity"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".MainActivity"&gt;
+
+    &lt;study.com.b23list.ItemListView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3" /&gt;
+
+    &lt;include
+        layout="@layout/detail_layout"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="7" /&gt;
+
+&lt;/study.com.b23list.DualPaneContaner&gt;
+===================================
+D:\programs\android\B23List\app\src\main\java\study\com\b23list\MainActivity.java
+package study.com.b23list;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+
+public class MainActivity extends AppCompatActivity {
+
+    private DetailView detailView;
+    private DualPaneContaner mainActivity;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        mainActivity = findViewById(R.id.mainActivity);
+
+    }
+
+    public DualPaneContaner getMainActivity() {
+        return mainActivity;
+    }
+}
+===================================
+D:\programs\android\B23List\app\src\main\res\layout\detail_layout.xml
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;study.com.b23list.DetailView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/detailView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"&gt;
+
+    &lt;TextView
+        android:id="@+id/info"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#EEF"
+        android:text="info"
+        android:textSize="25sp" /&gt;
+
+&lt;/study.com.b23list.DetailView&gt;
+===================================
+D:\programs\android\B23List\app\src\main\java\study\com\b23list\DualPaneContaner.java
+package study.com.b23list;
+
+import android.content.Context;
+import android.util.AttributeSet;
+import android.view.View;
+import android.widget.LinearLayout;
+
+public class DualPaneContaner extends LinearLayout implements PaneContaner {
+    private DetailView detailView;
+
+    public DualPaneContaner(Context context, AttributeSet attrs) {
+        super(context, attrs);
+    }
+
+    @Override
+    protected void onFinishInflate() {
+        super.onFinishInflate();
+        detailView = findViewById(R.id.detailView);
+    }
+
+    @Override
+    public void showItem(String string) {
+        detailView.showItem(string);
+    }
+
+}
+===================================
+D:\programs\android\B23List\app\src\main\java\study\com\b23list\PaneContaner.java
+package study.com.b23list;
+
+interface PaneContaner {
+    void showItem(String string);
+}
+===================================
+D:\programs\android\B23List\app\src\main\java\study\com\b23list\DetailView.java
+package study.com.b23list;
+
+import android.content.Context;
+import android.util.AttributeSet;
+import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+public class DetailView extends LinearLayout {
+
+
+    private TextView itemView;
+
+    public DetailView(Context context, AttributeSet attrs) {
+        super(context, attrs);
+    }
+
+    @Override
+    protected void onFinishInflate() {
+        super.onFinishInflate();
+
+        itemView = findViewById(R.id.info);
+
+    }
+
+    public void showItem(String string){
+        itemView.setText(string);
+    }
+}
+===================================
+D:\programs\android\B23List\app\src\main\java\study\com\b23list\ItemListView.java
+package study.com.b23list;
+
+import android.content.Context;
+import android.util.AttributeSet;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ListView;
+
+//import javax.swing.text.html.ListView;
+
+public class ItemListView extends ListView {
+
+
+    private ItemListAdapter adaptor;
+
+    public ItemListView(Context context, AttributeSet attrs) {
+        super(context, attrs);
+    }
+
+    @Override
+    protected void onFinishInflate() {
+        super.onFinishInflate();
+
+        adaptor = new ItemListAdapter(getContext());
+        setAdapter(adaptor);
+
+        setOnItemClickListener(new OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView&lt;?&gt; parent, View view, int position, long id) {
+                String string = adaptor.getItem(position);
+                MainActivity activity = (MainActivity) getContext();
+                PaneContaner paneContaner = activity.getMainActivity();
+                paneContaner.showItem(string);
+            }
+        });
+    }
+}
+===================================
+D:\programs\android\B23List\app\src\main\java\study\com\b23list\ItemListAdapter.java
+package study.com.b23list;
+
+import android.content.Context;
+import android.widget.ArrayAdapter;
+
+class ItemListAdapter extends ArrayAdapter&lt;String&gt; {
+
+    static final String[] values = {
+            "1 Республика Адыгея"
+            ,"2 Республика Башкортостан"
+            ,"3 Республика Бурятия"
+            ,"4 Республика Алтай"
+            ,"5 Республика Дагестан"
+            ,"6 Республика Ингушетия"
+            ,"7 Кабардино-Балкарская Республика"
+            ,"8 Республика Калмыкия"
+            ,"9 Республика Карачаево-Черкессия"
+            ,"10 Республика Карелия"
+            ,"11 Республика Коми"
+            ,"12 Республика Марий Эл"
+            ,"13 Республика Мордовия"
+            ,"14 Республика Саха (Якутия)"
+            ,"15 Республика Северная Осетия - Алания"
+            ,"16 Республика Татарстан"
+            ,"17 Республика Тыва"
+            ,"18 Удмуртская Республика"
+            ,"19 Республика Хакасия"
+            ,"20 Чеченская Республика"
+            ,"21 Чувашская Республика"
+            ,"98 город Санкт-Петербург"
+            ,"99 город Москва",
+    };
+
+    public ItemListAdapter(Context context) {
+        super(context, android.R.layout.simple_list_item_1, values);
+    }
+}
+===================================
+           </listing>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+       </li>
+       <li>
+           <p></p>
+           <p><a href="https://developer.android.com/guide/topics/resources/providing-resources?hl=ru">land</a></p>
+           <p></p>
+           <listing style="background-color: #FED;">
+========================
+D:\programs\android\B23List\app\src\main\java\study\com\b23list\MainActivity.java
+package study.com.b23list;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+
+public class MainActivity extends AppCompatActivity {
+
+
+    private PaneContaner mainActivity;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        mainActivity = findViewById(R.id.mainActivity);
+
+    }
+
+    public PaneContaner getMainActivity() {
+        return mainActivity;
+    }
+}
+
+========================
+D:\programs\android\B23List\app\src\main\res\layout\activity_main.xml
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;study.com.b23list.SinglePaneContainer xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"&gt;
+
+    &lt;study.com.b23list.ItemListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" /&gt;
+
+&lt;/study.com.b23list.SinglePaneContainer&gt;
+========================
+D:\programs\android\B23List\app\src\main\res\layout-land\activity_main.xml
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;study.com.b23list.DualPaneContaner
+    android:id="@+id/mainActivity"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".MainActivity"&gt;
+
+    &lt;study.com.b23list.ItemListView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3" /&gt;
+
+    &lt;include
+        layout="@layout/detail_layout"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="7" /&gt;
+
+&lt;/study.com.b23list.DualPaneContaner&gt;
+========================
+========================
+D:\programs\android\B23List\app\src\main\java\study\com\b23list\SinglePaneContainer.java
+package study.com.b23list;
+
+import android.content.Context;
+import android.util.AttributeSet;
+import android.view.View;
+import android.widget.FrameLayout;
+
+public class SinglePaneContainer extends FrameLayout implements PaneContaner {
+    private View listView;
+
+    public SinglePaneContainer(Context context, AttributeSet attrs) {
+        super(context, attrs);
+    }
+
+    @Override
+    protected void onFinishInflate() {
+        super.onFinishInflate();
+
+         listView = getChildAt(0);
+    }
+
+    @Override
+    public void showItem(String string) {
+        removeViewAt(0);
+        View.inflate(getContext(), R.layout.detail_layout, this);
+        DetailView detailView = (DetailView)getChildAt(0);
+        detailView.showItem(string);
+    }
+}
+
+           </listing>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+       </li>
+       <li>
+           <p>Обработка кнопки. Надо при Single не закрываться и возвращаться в listView</p>
+           <p>в mainActivity при нажатии вызывается метод onBackPress(). В метод onBackPress() вставляем implements onBackPress() из PaneConteiner, который возвращает True, когда не надо вываливаться из программы. Mетод из Dual всегда возвращает false.Метод из Single, когда показывает list возвращает false. Метод из Single, когда показывает детали возвращает true. Метод из Single, когда показывает детали уничтажает текущее изображение и показывает list. </p>
+           <listing style="background-color: #BDF">
+==========================
+D:\programs\android\B23List\app\src\main\java\study\com\b23list\MainActivity.java
+    @Override
+    public void onBackPressed() {
+        if(mainActivity.onBackPressed())
+            return;
+        super.onBackPressed();
+    }
+==========================
+D:\programs\android\B23List\app\src\main\java\study\com\b23list\PaneContaner.java
+package study.com.b23list;
+
+interface PaneContaner {
+    void showItem(String string);
+    boolean onBackPressed();
+}
+==========================
+D:\programs\android\B23List\app\src\main\java\study\com\b23list\DualPaneContaner.java
+    @Override
+    public boolean onBackPressed() {
+        return false;
+    }
+==========================
+D:\programs\android\B23List\app\src\main\java\study\com\b23list\SinglePaneContainer.java
+    @Override
+    public boolean onBackPressed() {
+        if(isListAttached())
+            return false;
+        removeViewAt(0);
+        addView(listView);
+        return true;
+    }
+==========================
+           </listing>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+       </li>
+       <li>
+           <p>B25Lstdt</p>
+           <p>Здесь мы положили на будущее.</p>
+           <p>А здесь это будущее наступило.</p>
+           <p>не перерисовывает элементы у которых id не изменялся</p>
+           <listing style="background-color: #ВED;">
+     @Override
+    public long getItemId(int position) {
+        return getItem(position).hashCode();
+    }
+
+    @Override
+    public boolean hasStableIds() {
+        return true;
+    }
+
+           </listing>
+           <p>про Id забыть. В следующий раз.</p>
+           <p>B25Lstdt</p>
+           <listing style="background-color: #ВED;">
+============================================
+D:\programs\android\B25Lstdt\app\src\main\res\layout\activity_main.xml
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"&gt;
+
+    &lt;ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" /&gt;
+
+&lt;/LinearLayout&gt;
+============================================
+D:\programs\android\B25Lstdt\app\src\main\java\com\example\freon\b25lstdt\MainActivity.java
+package com.example.freon.b25lstdt;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import org.w3c.dom.Text;
+
+public class MainActivity extends AppCompatActivity {
+
+    private ListView listView;
+    private MyAdapter adapter;
+    private String[] data;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        data = Data.values;
+
+        listView = findViewById(R.id.listView);
+
+        adapter = new MyAdapter();
+        adapter.setData(data);
+
+        listView.setAdapter(adapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView&lt;?&gt; parent, View view, int position, long id) {
+                String string = "click on " + (position+1);
+                //Toast.makeText(view.getContext(), string, Toast.LENGTH_LONG).show();
+
+                String[] newData = new String[data.length + 1];
+                for(int i = 0;i&lt; data.length;i++){
+                    newData[i] = data[i];
+                }
+                newData[newData.length-1]=string;
+                data = newData;
+                adapter.setData(data);
+            }
+        });
+    }
+}
+
+============================================
+D:\programs\android\B25Lstdt\app\src\main\res\layout\item.xml
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:orientation="vertical"&gt;
+
+    &lt;LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"&gt;
+
+        &lt;TextView
+            android:id="@+id/data1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#FFFF80"
+            android:textSize="25sp" /&gt;
+
+        &lt;TextView
+            android:id="@+id/data2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="7"
+            android:background="#DDFFD0"
+            android:textSize="25sp" /&gt;
+    &lt;/LinearLayout&gt;
+
+    &lt;TextView
+        android:id="@+id/data3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFAAFF"
+        android:textSize="25sp" /&gt;
+
+&lt;/LinearLayout&gt;
+============================================
+D:\programs\android\B25Lstdt\app\src\main\java\com\example\freon\b25lstdt\MyAdapter.java
+package com.example.freon.b25lstdt;
+
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.TextView;
+
+import java.util.zip.Inflater;
+
+public class MyAdapter extends BaseAdapter {
+    String[] data = new String[0];
+    LayoutInflater inflater;
+
+
+    public void setData(String[] newData){
+        data = newData;
+        notifyDataSetChanged();
+    }
+
+    @Override
+    public int getCount() {
+        if(data != null)
+            return data.length;
+        return 0;
+    }
+
+    @Override
+    public Object getItem(int position) {
+        return data[position];
+    }
+
+    @Override
+    public long getItemId(int position) {
+        return getItem(position).hashCode();
+    }
+
+    @Override
+    public boolean hasStableIds() {
+        return true;
+    }
+
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent) {
+        if(inflater == null){
+            inflater = (LayoutInflater)parent.getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        }
+        View itemView;
+        MyHolder myHolder;
+        if(convertView == null){
+            itemView = inflater.inflate(R.layout.item, parent, false);
+            TextView data1 = (TextView) itemView.findViewById(R.id.data1);
+            TextView data2 = (TextView) itemView.findViewById(R.id.data2);
+            final TextView data3 = (TextView) itemView.findViewById(R.id.data3);
+            data3.setVisibility(View.GONE);
+            myHolder = new MyHolder(data1 , data2 , data3);
+
+            data1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if(data3.getVisibility() == View.VISIBLE){
+                        data3.setVisibility(View.GONE);
+                    }else {
+                        data3.setVisibility(View.VISIBLE);
+                    }
+                }
+            });
+
+            itemView.setTag(myHolder);
+        } else {
+            itemView = convertView;
+            myHolder = (MyHolder)convertView.getTag();
+        }
+        String item = (String)getItem(position);
+        myHolder.data1.setText("" + (position + 1));
+        myHolder.data2.setText(item);
+        String string = "/-\\|";
+        for(int i=0;i&lt;8;i++){
+            string += string;
+        }
+        myHolder.data3.setText(string);
+        itemView.setTag(myHolder);
+        return itemView;
+    }
+
+    public static final class MyHolder{
+        TextView data1;
+        TextView data2;
+        TextView data3;
+        public MyHolder(TextView data1, TextView data2, TextView data3 ){
+            this.data1 = data1;
+            this.data2 = data2;
+            this.data3 = data3;
+        }
+    }
+}
+
+============================================
+D:\programs\android\B25Lstdt\app\src\main\java\com\example\freon\b25lstdt\Data.java
+package com.example.freon.b25lstdt;
+
+public class Data {
+    public static final String[] values = new String[]{
+            "1 Республика Адыгея"
+            ,"2 Республика Башкортостан"
+            ,"3 Республика Бурятия"
+            ,"4 Республика Алтай"
+            ,"5 Республика Дагестан"
+            ,"6 Республика Ингушетия"
+    };
+}
+============================================
+		   </listing>
+           <p>Рассмотреть фрагменты. Жизненный цикл фрагментов. Создать фрагмент с помощью layout. Создать фрагмент с помощью фрагмент-мененджера. Разобрали view которая умеет листать фрагменты слева на право padding. Передать фрагменту параметры, которые используются при создании фрагмента. Определить методы для фрагмента, чтобы его можно было дернуть из activity. Кастомные view. Вьюха на базе listview. Вьюха на базе линейного layout. Вьюха на базе линейного layout и frame layout, которая умеет передавать сообщения. Научились из Вьюхи обращаться к ее активити. Удалять Вьюху из интерфейса и добавлять заново. Как работает адаптер и зачем нужен холдер.</p>
+           <p></p>
+           <p></p>
+           <p></p>
+       </li>
+       <li>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+       </li>
+   </ol>
+
+</body>
+</html>

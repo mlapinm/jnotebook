@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<base target="_blank">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<style>
+		p {
+			margin: 0px;
+		}
+
+		.b1 {
+			border: dotted 1px;
+		}
+
+
+		.bg1 {
+
+}
+
+		td {
+			border: dotted 1px;
+		}
+
+		.margin1 {
+			margin-left: 20px;
+		}
+
+
+	</style>
+</head>
+<body>
+<ol>
+	<li>
+		<p>Заполнение списка , из ListArray</p>
+		<p>и добавление элементов по ОК в начало</p>
+		<p></p>
+		<listing>
+layout/activity_main.xml
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"&gt;
+
+    &lt;RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" &gt;
+        &lt;Button
+            android:id="@+id/save_button"
+            android:onClick="buttonSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="@android:string/ok" /&gt;
+        &lt;EditText
+            android:id="@+id/edit_text"
+            android:layout_width="match_parent"
+            android:layout_toLeftOf="@id/save_button"
+            android:layout_height="wrap_content"
+            android:hint="Новая запись" /&gt;
+    &lt;/RelativeLayout&gt;
+    &lt;ListView
+        android:id="@+id/myListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" /&gt;
+
+&lt;/LinearLayout&gt;
+=============================================================
+layout/list_view.xml
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+
+    &lt;TextView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/noteView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textSize="16sp"/&gt;
+=============================================================
+com/example/freon/a41base/MainActivity.java
+package com.example.freon.a41base;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.EditText;
+import android.widget.ListView;
+import android.widget.Toast;
+
+import java.util.ArrayList;
+
+public class MainActivity extends AppCompatActivity {
+
+    ListView mListView;
+    String[] strings = {"1","2","3"};
+    ArrayList mArrayList;
+    ArrayAdapter&lt;String&gt; mStringArrayAdapter;
+    EditText mEditText;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        mListView = (ListView)findViewById(R.id.myListView);
+        mArrayList = new ArrayList() ;
+        mArrayList.add("1");
+        mArrayList.add("2");
+        mEditText = (EditText)findViewById(R.id.edit_text);
+        mStringArrayAdapter = new ArrayAdapter&lt;String&gt;(this, R.layout.list_view, mArrayList);
+        mListView.setAdapter(mStringArrayAdapter);
+    }
+
+    public void buttonSave(View view) {
+        String string = mEditText.getText().toString();
+        mArrayList.add(0, string);
+
+        mStringArrayAdapter.notifyDataSetChanged();
+        Toast.makeText(this,"onclick  = "+strings[1]+ " " +strings[2], Toast.LENGTH_LONG).show();
+    }
+}
+
+		</listing>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+	</li>
+	<li>
+		<p>A41base2. Балванка будет дописана.</p>
+		<p>список - пустой, едиттекст, батон</p>
+		<p>батон - тоаст содержимое  едиттекста</p>
+		<p></p>
+		<listing>
+layout/activity_main.xml
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"&gt;
+
+    &lt;RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" &gt;
+        &lt;Button
+            android:id="@+id/save_button"
+            android:onClick="buttonSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="@android:string/ok" /&gt;
+        &lt;EditText
+            android:id="@+id/edit_text"
+            android:layout_width="match_parent"
+            android:layout_toLeftOf="@id/save_button"
+            android:layout_height="wrap_content"
+            android:hint="Новая запись" /&gt;
+    &lt;/RelativeLayout&gt;
+    &lt;ListView
+        android:id="@+id/myListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" /&gt;
+&lt;/LinearLayout&gt;
+==================================================================
+layout/list_view.xml
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+
+&lt;TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/noteView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:textSize="16sp"/&gt;
+==================================================================
+com/example/freon/a41base2/MainActivity.java
+package com.example.freon.a41base2;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.EditText;
+import android.widget.ListView;
+import android.widget.Toast;
+
+import java.util.ArrayList;
+
+public class MainActivity extends AppCompatActivity {
+
+    ListView mListView;
+    EditText mEditText;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        mListView = (ListView)findViewById(R.id.myListView);
+        mEditText = (EditText)findViewById(R.id.edit_text);
+    }
+
+    public void buttonSave(View view) {
+        String string = mEditText.getText().toString();
+        Toast.makeText(this,"onclick  = " + string, Toast.LENGTH_LONG).show();
+    }
+}
+						</listing>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+	</li>
+	<li>
+		<p>a86clstorefile</p>
+		<p>com/example/freon/a86clstorefile/Store.java</p>
+		<listing>
+package com.example.freon.a86clstorefile;
+
+//Класс Store для записи текста в файл инициализируется (контекстом и) именем файла
+//mStore = new Store(this, mFileName);
+//для чтения: string = mStore.getString();
+//для записи: mStore.storeString(string);
+
+import android.content.Context;
+import android.widget.Toast;
+
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+
+import static android.content.Context.MODE_PRIVATE;
+
+
+public class Store {
+    Context mContext;
+    String mFileName;
+
+    public Store(Context context, String fileName){
+        mContext = context;
+        mFileName = fileName;
+    }
+
+    String getString(){
+        String string2 = "";
+        try {
+            InputStream inputStream = mContext.openFileInput(mFileName);
+            InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
+
+            BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+            String string1;
+            StringBuilder stringBuilder = new StringBuilder();
+            while ((string1 = bufferedReader.readLine()) != null) {
+                stringBuilder.append(string1 + "\n");
+                Toast.makeText(mContext,"123  " + string1, Toast.LENGTH_LONG).show();
+            }
+            inputStream.close();
+            string2 = stringBuilder.toString();
+       } catch (Throwable throwable) {
+            Toast.makeText(mContext, throwable.toString(), Toast.LENGTH_LONG).show();
+        }
+
+        return string2;
+    }
+
+    void  storeString(String string1){
+        if (string1 != null) {
+            try {
+                OutputStream outputStream = mContext.openFileOutput(mFileName, MODE_PRIVATE);
+                OutputStreamWriter outputStreamWriter = new OutputStreamWriter(outputStream);
+                outputStreamWriter.write(string1);
+                outputStreamWriter.close();
+                Toast.makeText(mContext, "write file1.txt.", Toast.LENGTH_LONG).show();
+            } catch (Throwable throwable) {
+                Toast.makeText(mContext, throwable.toString(), Toast.LENGTH_LONG).show();
+            }
+        }
+    }
+}
+		</listing>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+	</li>
+	<li>
+		<p>A44Base</p>
+		<div class="container bg-info">
+			<p>1,2</p>
+			<listing>
+======================================================
+layout/activity_main.xml
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="study.com.a41base3.MainActivity"&gt;
+
+    &lt;Button
+        android:id="@+id/okButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:onClick="onOkButtonClick"
+        android:text="@android:string/ok"
+        android:textSize="26sp" /&gt;
+
+    &lt;EditText
+        android:id="@+id/inputField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/okButton"
+        android:hint="Enter note"
+        android:textSize="26sp" /&gt;
+
+    &lt;ListView
+        android:id="@+id/notesList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/inputField" /&gt;
+&lt;/RelativeLayout&gt;
+======================================================
+layout/note.xml
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"&gt;
+
+    &lt;TextView
+        android:id="@+id/noteView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="3dp"
+        android:textSize="15sp" /&gt;
+
+&lt;/LinearLayout&gt;
+======================================================
+com/example/freon/a44base/DbOpenHelper.java
+package com.example.freon.a44base;
+
+import android.content.ContentValues;
+import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
+import android.widget.Toast;
+
+/**
+ * Created by argon on 25.06.2019.
+ */
+
+public class DbOpenHelper extends SQLiteOpenHelper {
+
+    final static String DB_NAME = "notes.db";
+    final static String DB_TABLE = "notes";
+    final static String COLUMN_NOTE = "note";
+    final static int DB_VERSION = 1;
+
+    // SQL-запрос для создания БД
+    private static final String DB_CREATE = "CREATE TABLE "
+            + DB_TABLE +
+            " ( _id INTEGER PRIMARY KEY AUTOINCREMENT, " +
+            COLUMN_NOTE
+            + " TEXT NOT NULL);";
+
+    Context mContext;
+
+    public DbOpenHelper(Context context) {
+        super(context, DB_NAME, null, DB_VERSION);
+        mContext = context;
+
+    }
+
+    @Override
+    public void onCreate(SQLiteDatabase db) {
+        db.execSQL(DB_CREATE);
+        //TODO DELETE AFTER DEBBUGING
+        ContentValues values = new ContentValues(1);
+        for(int i=0; i&lt;5;i++){
+            values.put(COLUMN_NOTE, "Note #" + i);
+            Toast.makeText(mContext, COLUMN_NOTE +"Note #" + i, Toast.LENGTH_LONG).show();
+            db.insert(DB_TABLE, null,values);
+        }
+    }
+
+    @Override
+    public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
+
+    }
+}
+
+======================================================
+com/example/freon/a44base/MainActivity.java
+package com.example.freon.a44base;
+
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.support.v4.widget.SimpleCursorAdapter;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.ListView;
+
+public class MainActivity extends AppCompatActivity {
+
+    private static final String[] FIELDS =
+            {"_id", DbOpenHelper.COLUMN_NOTE, };
+    private static final String[] FROM =
+            {DbOpenHelper.COLUMN_NOTE,};
+    private static final int[] TO = {R.id.noteView, };
+    private static final java.lang.String ORDER = "_id DESC";
+    EditText mInputField;
+    ListView mNotesList;
+
+    SimpleCursorAdapter mAdapter;
+
+    DbOpenHelper mHelper = new DbOpenHelper(this);
+    SQLiteDatabase mDb;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        mInputField = (EditText)findViewById(R.id.inputField);
+        mNotesList = (ListView)findViewById(R.id.notesList);
+        mAdapter = new SimpleCursorAdapter(this,
+                R.layout.note, null, FROM, TO, 0 );
+        mNotesList.setAdapter(mAdapter);
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        mDb = mHelper.getWritableDatabase();
+        Cursor c = mDb.query(DbOpenHelper.DB_TABLE, FIELDS,
+                null, null, null, null, ORDER);
+        mAdapter.swapCursor(c);
+    }
+
+    public void onOkButtonClick(View view) {
+    }
+}
+======================================================
+			</listing>
+<img src="img1base.png" alt="">
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+
+		</div>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+	</li>
+	<li>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+	</li>
+	<li>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+	</li>
+	<li>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+	</li>
+	<li>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+	</li>
+	<li>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+	</li>
+	<li>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+	</li>
+	<li>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+	</li>
+	<li>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p>bg-white</p>
+		<p>bg-blue</p>
+		<p>bg-primary	голубой</p>
+		<p>bg-da</p>
+		<p>bg-transparent</p>
+		<p>bg-saccess</p>
+		<p>bg-info		голубой- серый норм</p>
+		<p>bg-l</p>
+		<p>bg-warning		оранжевый</p>
+		<p>bg-</p>
+		<p>bg-inverse</p>
+		<p>bg-faded</p>
+		<p>bg-danger		red</p>
+		<p>bg-light		*</p>
+		<p>bg-secondary	темно серый</p>
+		<p>bg-lig</p>
+		<p>bg-dark</p>		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+	</li>
+</ol>
+
+</body>
+</html>
