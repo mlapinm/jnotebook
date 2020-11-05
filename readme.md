@@ -1,10 +1,10 @@
-[freecodecamp](#freecodecamp)  
+[freecodecamp fcc](#freecodecamp-fcc)  
 [javascript js](#javascript-js)  
 []()  
 
 
 
-## freecodecamp
+## freecodecamp fcc
 [freecodecamp](fcc/readme.md)  
 Responsive Web Design Certification (300 hours)  
 Basic HTML and HTML5  
