@@ -1,37 +1,7 @@
 
-html06lyrics/a0202song.md
-html06lyrics/a0402song.md
-
-
-acer Aspire V5-471P
-ms2360
-25103988520
-https://www.acer.com/ac/ru/RU/content/support-product/4583?b=1&pn=NX.M3UER.003
-vs-471 ms2360
-
-dism /online /export-driver /destination:E:\Drivers
-
-
-
-Z:\installed\utils\usb
-rufus-2.17.exe
-
-
-Z:\installed2
-Windows 7 SP1 x86-x64 Ru 9in1 Upd 06.2019 by OVGorskiy.iso
-
-
 
 ccna rus
-b0477vip.md 37
-b0478vip.md 38
-b0480vip.md 39
 
-
-
-b0454vip.md 18 
-b04562vip.md 19
-b0462vip.md 31
 tensorflor
 
 

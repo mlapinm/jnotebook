@@ -1,6 +1,2 @@
-python3 ptexplorer.py -d sample.pka sample.xml
-python ptexplorer.py -d xx.pka xx.xml
-python3 ptexplorer.py -e sample.xml sample.pkt
-python ptexplorer.py -e xx.xml xx.pkt
 
     

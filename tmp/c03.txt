@@ -1645,11 +1645,712 @@ SW2(config)#do sh vtp stat
 
 
  
-part 8
+part 89
+Switch(config)#hostname CORE1
+CORE1(config)#spanning-tree vlan 1,10,20 priority 0
+CORE1(config)#vlan 10
+CORE1(config-vlan)#name faculty
+CORE1(config-vlan)#vlan 20
+CORE1(config-vlan)#name students
+
+spanning-tree vlan 1,10,20 priority 0
+vlan 10
+name faculty
+vlan 20
+name students
+do wr
+
+
+CORE1#sh vlan
+CORE1#sh spanning-tree 
+CORE1(config)#vtp domain cisco
+CORE1#sh vtp status 
+CORE1(config)#int range f0/22-24
+CORE1(config-if-range)#switchport mode trunk
+CORE1#sh int trunk
+
+Switch(config)#hostname Faculty
+Faculty(config)#vtp mode client 
+Faculty(config)#do sh vlan
+Faculty(config)#do sh vtp stat
+
+Faculty(config)#int range f0/1-15
+Faculty(config)#switchport mode access
+Faculty(config)#swithcport access vlan 10
+Faculty(config-if-range)#spanning-tree portfast 
+Faculty(config-if-range)#spanning-tree bpduguard enable 
+
+Switch(config)#hostname Students
+Students(config)#vtp mode client
+Students(config)#int range f0/1-15
+Students(config-if-range)#switchport mode access
+Students(config-if-range)#switchport access vlan 20
+% Access VLAN does not exist. Creating vlan 20
+Students(config-if-range)#span
+Students(config-if-range)#spanning-tree port
+Students(config-if-range)#spanning-tree portfast 
+Students(config-if-range)#spanning-tree bpduguard enable 
+
  
-part 8
+part 90
+
+Faculty(config)#int range f0/1-15
+Faculty(config-if-range)#switchport port-security 
+Faculty(config-if-range)#switchport port-security mac-address sticky 
+Faculty(config-if-range)#switchport port-security max 2
+Faculty(config-if-range)#switchport port-security violation shutdown 
+Faculty(config-if-range)#do wr
+
+int range f0/1-15
+switchport port-security
+switchport port-security mac-address sticky 
+switchport port-security max 2
+switchport port-security violation shutdown 
+do wr
+
+Faculty#show port-security 
  
-part 8
+part 91
+
+CORE1#sh int trunk
+
+CORE1#sh ru
+
+Router(config)#hostname R1
+R1(config)#int f0/0
+R1(config-if)#no sh
+R1(config-if)#int f0/0.10
+R1(config-subif)#encap dot1Q  10
+R1(config-subif)#ip address 192.168.10.254 255.255.255.0
+
+R1(config-subif)#int f0/0.20
+R1(config-subif)#encap dot1Q  20
+R1(config-subif)#ip address 192.168.20.254 255.255.255.0
+
+R1#sh ip int brief 
+
+Students
+192.168.20.1
+255.255.255.0
+192.168.20.254
+Faculty
+192.168.20.1
+255.255.255.0
+192.168.20.254
+
+
+ 
+part 92
+
+CORE1
+hostname CORE1
+spanning-tree vlan 1,10,20 priority 0
+vtp domain cisco
+vlan 10
+name TEACHES
+vlan 20
+name STUDENTS
+exi
+int range f0/22-24
+switchport mode trunk
+do wr
+
+CORE1#sh vlan
+CORE1#sh vtp status
+
+CORE1(config)#int vlan 1
+CORE1(config-if)#ip address 192.168.1.253 255.255.255.0
+CORE1(config-if)#no sh
+
+CORE1(config-if)#exi
+CORE1(config)#ip default-gateway 192.168.1.254
+
+TEACHERS
+hostname TEACHERS
+vtp mode client
+do wr
+
+TEACHERS(config)#int range f0/1-15
+TEACHERS(config-if-range)#switchport access vlan 10
+TEACHERS(config-if-range)#switchport port-security 
+TEACHERS(config-if-range)#switchport port-security mac-address sticky 
+TEACHERS(config-if-range)#switchport port-security maximum 1
+TEACHERS(config-if-range)#switchport port-security violation shutdown 
+TEACHERS(config-if-range)#spanning-tree  portfast 
+TEACHERS(config-if-range)#spanning-tree bpduguard enable 
+TEACHERS(config-if-range)#do wr
+
+TEACHERS
+int range f0/1-15
+switchport mode access
+switchport access vlan 10
+switchport port-security 
+switchport port-security mac-address sticky 
+switchport port-security maximum 1
+switchport port-security violation shutdown 
+spanning-tree  portfast 
+spanning-tree bpduguard enable
+do wr
+
+int vlan 1
+ip address 192.168.1.252 255.255.255.0
+no sh
+exi
+ip default-gateway 192.168.1.254
+do wr
+
+sh vlan
+sh port-secur
+
+STUDENTS
+hostname STUDENTS
+vtp mode client
+int range f0/1-15
+switchport mode access
+switchport access vlan 20
+switchport port-security 
+switchport port-security mac-address sticky 
+switchport port-security maximum 1
+switchport port-security violation shutdown 
+spanning-tree  portfast 
+spanning-tree bpduguard enable
+do wr
+
+int vlan 1
+ip address 192.168.1.251 255.255.255.0
+no sh
+exi
+ip default-gateway 192.168.1.254
+do wr
+
+sh vlan
+sh port-secur
+
+CORE2
+hostname CORE2
+spanning-tree vlan 1,30,40 priority 0
+vtp domain cisco
+vlan 30
+name ACCT
+vlan 40
+name HR
+exi
+int range f0/22-24
+switchport mode trunk
+do wr
+
+ACCT
+hostname ACCT
+vtp mode client
+int range f0/1-15
+switchport mode access
+switchport access vlan 30
+switchport port-security 
+switchport port-security mac-address sticky 
+switchport port-security maximum 1
+switchport port-security violation shutdown 
+spanning-tree  portfast 
+spanning-tree bpduguard enable
+do wr
+
+//
+int vlan 1
+ip address 192.168.1.251 255.255.255.0
+no sh
+exi
+ip default-gateway 192.168.1.254
+do wr
+//
+
+HR
+hostname HR
+vtp mode client
+int range f0/1-15
+switchport mode access
+switchport access vlan 40
+switchport port-security 
+switchport port-security mac-address sticky 
+switchport port-security maximum 1
+switchport port-security violation shutdown 
+spanning-tree  portfast 
+spanning-tree bpduguard enable
+do wr
+
+part 93
+
+
+CORE3
+hostname CORE3
+spanning-tree vlan 1,50,60 priority 0
+vtp domain cisco
+vlan 50
+name REGISTRAR
+vlan 60
+name EXECUTIVE
+exi
+int range f0/22-24
+switchport mode trunk
+do wr
+
+REGISTRAR
+hostname REGISTRAR
+vtp mode client
+int range f0/1-15
+switchport mode access
+switchport access vlan 50
+switchport port-security 
+switchport port-security mac-address sticky 
+switchport port-security maximum 1
+switchport port-security violation shutdown 
+spanning-tree  portfast 
+spanning-tree bpduguard enable
+do wr
+
+EXECUTIVE
+hostname EXECUTIVE
+vtp mode client
+int range f0/1-15
+switchport mode access
+switchport access vlan 60
+switchport port-security 
+switchport port-security mac-address sticky 
+switchport port-security maximum 1
+switchport port-security violation shutdown 
+spanning-tree  portfast 
+spanning-tree bpduguard enable
+do wr
+
+R1
+hostname R1
+int f0/0
+no sh
+int f0/0.1
+encap dot1Q  1
+ip address 192.168.1.254 255.255.255.0
+int f0/0.10
+encap dot1Q  10
+ip address 192.168.10.254 255.255.255.0
+int f0/0.20
+encap dot1Q  20
+ip address 192.168.20.254 255.255.255.0
+do wr
+
+sh ip route
+sh ip int brief 
+
+R2
+hostname R2
+int f0/0
+no sh
+int f0/0.30
+encap dot1Q  30
+ip address 192.168.30.254 255.255.255.0
+int f0/0.40
+encap dot1Q  40
+ip address 192.168.40.254 255.255.255.0
+do wr
+
+R3
+hostname R3
+int f0/0
+no sh
+int f0/0.50
+encap dot1Q  50
+ip address 192.168.50.254 255.255.255.0
+int f0/0.60
+encap dot1Q  60
+ip address 192.168.60.254 255.255.255.0
+do wr
+
+R1
+router eigrp 100
+net 192.168.1.0
+net 192.168.10.0
+net 192.168.20.0
+net 10.0.0.0
+no auto-summary
+do wr
+
+R2
+router eigrp 100
+net 192.168.1.0
+net 192.168.30.0
+net 192.168.40.0
+net 10.0.0.0
+no auto-summary
+do wr
+
+R3
+router eigrp 100
+net 192.168.1.0
+net 192.168.50.0
+net 192.168.60.0
+net 10.0.0.0
+no auto-summary
+do wr
+ 
+R3
+int s0/0/1
+ip address 10.1.1.10 255.255.255.252
+no sh
+do wr
+
+R2
+int s0/0/0
+ip address 10.1.1.9 255.255.255.252
+no sh
+int s0/0/1
+ip address 10.1.1.6 255.255.255.252
+no sh
+do wr
+
+R1
+int s0/0/0
+ip address 10.1.1.5 255.255.255.252
+no sh
+do wr
+
+ 
+ 
+ 
+part 94
+
+acls is a set of conditions. permit or deny
+
+standrd
+
+extended
+
+named(standard/extended)
+
+
+a acl is read in order 1,2,3,...
+
+an acl has an implicit deny at the end
+
+one acl per int, per protocol, per direction
+
+you can't remove a number acl lies within the group
+
+on top most specific, on the bottom most general
+
+wilcard masking
+
+
+ 
+part 95
+
+Standard: 1-99, limited to source address
+  you must apply nearest the dest
+  
+access-list 1 deny 192.168.20.0 0.0.0.255
+access-list 1 deny 192.168.10.0 0.0.0.255
+access-list 1 permint any
+
+access-list 2 permit 192.168.10.1 0.0.0.0
+
+  or
+  
+access-list 2 permit host 192.168.10.1
+
+R1
+access-list 1 deny 192.168.20.0 0.0.0.255
+access-list 1 deny 192.168.10.0 0.0.0.255
+access-list 1 permit any
+
+R1#sh access-lists 
+
+R1
+int f0/0.1
+ip access-group 1 out
+do wr
+
+R1#sh ip int f0/0.1
+  Outgoing access list is 1
+
+R1
+line vty 0 15
+access-class 2 in
+
+
+
+ 
+part 96
+extended:100-199,place it nearest the source, protocols,
+  source and dest. addresses, port numbers
+  
+pc0 is the only pc to have www to
+everyone else should denied www to
+all other traffic is allowed
+
+access-list 100 permit tcp host 192.168.100.1 host 1.1.1.1 eq 80
+access-list 100 deny tcp any host 1.1.1.1 eq 80
+access-list 100 permit ip any any
+do wr
+
+Router(config)#int f0/1
+Router(config-if)#ip access-group 100 out
+Router(config-if)#do wr
+
+
+
+
+Router#erase startup-config 
+Router#reload
+
+Router(config)#int f0/0
+Router(config-if)#ip address 192.168.100.254 255.255.255.0
+Router(config-if)#no shut
+Router(config-if)#int f0/1
+Router(config-if)#ip address 1.1.1.254 255.255.255.0
+Router(config-if)#no shut
+Router(config-if)#do wr
+
+
+
+
+
+
+
+
+ 
+part 97
+
+nat
+network address translation:
+
+static nat: ip nat inside source static   10.1.1.1 98.97.96.95 (1000!)
+
+dynamic nat: pool of 1000!!!
+
+nat overload (PAT): pool of 1 ip :)
+
+
+
+
+part 98
+
+inside local: source ip address
+
+inside global: source ip address translated
+
+outside local: destination ip address public address
+
+outside global: destination ip address public address
+
+
+ 
+part 99
+
+nat everload
+
+ip nat inside (f0/0)
+
+ip nat outside (f0/1)
+
+ip nat pool laz 1.1.1.254 1.1.1.254 netmask 255.255.255.0 
+access-list 1 permit 192.168.1.0 0.0.0.255
+ip nat inside source list 1 pool laz overload
+
+ip nat pool laz 1.1.1.1 1.1.1.200 netmask 255.255.255.0 
+access-list 1 permit 192.168.1.0 0.0.0.255
+ip nat inside source list 1 pool laz
+
+ 
+part 100
+
+Router(config)#int f0/0
+Router(config-if)#ip address 192.168.1.254 255.255.255.0
+Router(config-if)#no shut
+Router(config-if)#hostname nat
+nat(config)#do wr
+
+nat(config)#int f0/0
+nat(config-if)#ip nat inside 
+nat(config-if)#int f0/1
+nat(config-if)#ip address 1.1.1.254 255.255.255.0
+nat(config-if)#no shut
+nat(config-if)#ip nat outside 
+nat(config-if)#do wr
+
+nat(config)#ip nat pool laz 1.1.1.254 1.1.1.254 netmask 255.255.255.0
+nat(config)#access-list 10 permit 192.168.1.0 0.0.0.255
+nat(config)#ip nat inside source list 10 pool laz overload
+
+nat#sh ip nat translations 
+
+nat#sh ip nat translations 
+Pro  Inside global     Inside local       Outside local      Outside global
+tcp 1.1.1.254:1025     192.168.1.1:1025   1.1.1.1:80         1.1.1.1:80
+
+
+
+
+
+
+ 
+part 101
+ 
+part 102
+
+what is a wan?
+a distance between locations
+b speed used to source and destination
+c you lease a wan
+d you own a wan
+
+
+ 
+part 104
+frame relay
+
+cir: committed information rate (guaranteed)256
+  if you surpass the cir the bits will be marked
+  with "de"
+  
+access-rate: of t1 1.544mbps
+ 
+part 105
+
+dlci:data link connection identifier
+192.168.1.1/24: DLCI 102
+
+Router(config)#int s0/0/0
+Router(config-if)#encapsulation frame-relay 
+Router(config)#int s0/0/0.102 point-to-point 
+Router(config-subif)#ip address 192.168.1.1 255.255.255.0
+Router(config-subif)#frame-relay interface-dlci 102
+Router(config-subif)#do wr
+
+Router(config)#int s0/0/0.103 point-to-point 
+Router(config-subif)#ip address 192.168.3.1 255.255.255.0
+Router(config-subif)#frame-relay interface-dlci 103
+Router(config-subif)#do wr
+
+
+ 
+part 106
+
+Router(config)#hostname R1
+R1(config)#int s0/0/0 
+R1(config-if)#no sh
+R1(config-if)#encapsulation frame-relay 
+R1(config)#int s0/0/0.102 point-to-point 
+R1(config-subif)#frame-relay interface-dlci 102
+R1(config-subif)#ip address 192.168.1.1 255.255.255.0
+R1(config-subif)#int s0/0/0.103 point-to-point 
+R1(config-subif)#frame-relay interface-dlci 103
+R1(config-subif)#ip address 192.168.3.1 255.255.255.0
+R1(config-subif)#do wr
+
+hostname R2
+int s0/0/0 
+no sh
+encapsulation frame-relay 
+int s0/0/0.201 point-to-point 
+frame-relay interface-dlci 201
+ip address 192.168.1.2 255.255.255.0
+int s0/0/0.203 point-to-point 
+frame-relay interface-dlci 203
+ip address 192.168.2.1 255.255.255.0
+do wr
+
+
+hostname R3
+int s0/0/0 
+no sh
+encapsulation frame-relay 
+int s0/0/0.301 point-to-point 
+frame-relay interface-dlci 301
+ip address 192.168.3.2 255.255.255.0
+int s0/0/0.302 point-to-point 
+frame-relay interface-dlci 302
+ip address 192.168.2.2 255.255.255.0
+do wr
+
+Cloud0
+Interface Serial1
+DLCI	Name
+102		R1-R2
+103		R1-R3
+
+Interface Serial2
+DLCI	Name
+201		R2-R1
+203		R2-R3
+
+Interface Serial3
+DLCI	Name
+301		R3-R1
+302		R3-R2
+
+connections frame relay
+FrPort  Sublink ToPort  Sublink
+Serial1 R1-R2	Serial2 R2-R1
+Serial1 R1-R3	Serial3 R3-R1
+Serial2 R2-R3	Serial3 R3-R2
+
+R1(config)#router rip 
+R1(config-router)#version 2
+R1(config-router)#net 192.168.1.0
+R1(config-router)#net 192.168.3.0
+R1(config-router)#no auto-summary 
+R1(config-router)#do wr
+
+R1(config)#
+router rip 
+version 2
+net 192.168.1.0
+net 192.168.2.0
+no auto-summary 
+do wr
+
+R1(config)#
+router rip 
+version 2
+net 192.168.2.0
+net 192.168.3.0
+no auto-summary 
+do wr
+
+R3#sh ip rout
+
+Gateway of last resort is not set
+
+R    192.168.1.0/24 [120/1] via 192.168.3.1, 00:00:28, Serial0/0/0.301
+                    [120/1] via 192.168.2.1, 00:00:02, Serial0/0/0.302
+C    192.168.2.0/24 is directly connected, Serial0/0/0.302
+C    192.168.3.0/24 is directly connected, Serial0/0/0.301
+
+R3#ping 192.168.1.1
+R3#ping 192.168.1.2
+R3#ping 192.168.2.1
+R3#ping 192.168.2.2
+ 
+part 107
+
+R2#sh frame-relay lmi
+R2#sh frame-relay pvc
+R2#sh frame-relay map
+
+
+
+ 
+part 108
+
+PPP Dedicated Connections
+Open Standard WAN protocol
+ - NCP, LCP
+ - LCP gives various encapsulation options
+    - Authentication, compression, Error detection,
+	  Multilink capabilities, PPP callback 
+
+
+ 
+part 10
+ 
+part 10
+ 
  
  
  
