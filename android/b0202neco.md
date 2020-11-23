@@ -18,7 +18,7 @@ Pacage name | com.example.b0202lesson 1
 Save location | D:\avi02prog\b0202andr\b0202lesson
 Language | Java
 Minimum SDK | Api 23: Android 6.0 (Marshmallow)
-  
+   
 1 - название сайта наоборот  
   
 Finish  
