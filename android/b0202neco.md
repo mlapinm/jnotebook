@@ -11,6 +11,8 @@
 - Start new AS project
 - Empty Activity
 ### Configure your project
+--|--
+__|__
 name | b0202lesson
 Pacage name | com.example.b0202lesson 1
 Save location | D:\avi02prog\b0202andr\b0202lesson
