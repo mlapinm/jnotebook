@@ -95,8 +95,8 @@ stop - procesed
 
 
 ## Navigation Drawer Activity
-Разработка Android приложений/Урок 4-1/Справочник рыбака
-урок-4-справочник-рыбака
+Разработка Android приложений/Урок 4-1/Справочник рыбака  
+урок-4-справочник-рыбака  
 [Урок 4: Справочник рыбака](https://neco-desarrollo.es/%D1%83%D1%80%D0%BE%D0%BA-4-%D1%81%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%87%D0%BD%D0%B8%D0%BA-%D1%80%D1%8B%D0%B1%D0%B0%D0%BA%D0%B0)  
 [Разработка Android приложений/Урок 4-1/Справочник рыбака](https://www.youtube.com/watch?v=56OOq6aVse8&list=PLmjT2NFTgg1c-CC0l6GuvpH7_2JZBxqzf&index=9)  
 
