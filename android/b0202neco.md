@@ -142,8 +142,15 @@ New repository name: AndrFreon
 Description share
 
 
-https://github.com/mlapinm/b02andr/a0502hello
+https://github.com/mlapinm/b02andr/a0503hello   
+### push to toolbar
+File Settings Menus and Toolbars Main Toolbar  
+VCS Local Changes Toolbar  
 
+### to commit
+View Tool Window Git  
+context menu Reset Current Change to here  
+hard  
   
 ## footer
 [Android Developers Training Course overviews](https://developer.android.com/courses/fundamentals-training/toc-v2?hl=ru)  
