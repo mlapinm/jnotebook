@@ -122,6 +122,7 @@ textColor holo_orange_light
 \app\src\main\res\values
 
 ## SharedPreferences
+b0312pref  
 [Сохранение данных на ANDROID/ УРОК 12N](https://www.youtube.com/watch?v=324Bq1CAq1w)  
 [Урок 12N/SharedPreferences](https://neco-desarrollo.es/2020/09/%D1%83%D1%80%D0%BE%D0%BA-12n-sharedpreferences)  
 ```
@@ -136,6 +137,26 @@ textColor holo_orange_light
         return counter1;
     }
 ```
+
+## Jsoup Currency 
+b0316curr  
+[Приложение "Курс Валют" Часть 1/Парсинг сайта/Уроки по Android Studio Java](https://www.youtube.com/watch?v=Wi_xydwosx8&list=PLmjT2NFTgg1c-CC0l6GuvpH7_2JZBxqzf&index=48)  
+[Парсинг сайтов: Урок 3](https://neco-desarrollo.es/2020/04/%D0%BF%D0%B0%D1%80%D1%81%D0%B8%D0%BD%D0%B3-%D1%81%D0%B0%D0%B9%D1%82%D0%BE%D0%B2-%D1%83%D1%80%D0%BE%D0%BA-3)  
+[Парсинг сайтов урок 4](https://neco-desarrollo.es/2020/04/%D0%BF%D0%B0%D1%80%D1%81%D0%B8%D0%BD%D0%B3-%D1%81%D0%B0%D0%B9%D1%82%D0%BE%D0%B2-%D1%83%D1%80%D0%BE%D0%BA-4)  
+[Минфин ua](https://minfin.com.ua/currency/)  
+
+build.gradle   
+dependencies
+implementation 'org.jsoup:jsoup:1.13.1'  
+
+Logcat Edit Filter Configuration
+EnterName: MyLog
+Log Tag: MyLog
+
+app/src/main/AndroidManifest.xml
+    <uses-permission android:name="android.permission.INTERNET" />
+
+
 
 ## How to use Git in Android Studio
 [How to use Git in Android Studio](https://www.youtube.com/watch?v=_d4fFFAJKVA)  
@@ -159,8 +180,9 @@ Description share
 
 https://github.com/mlapinm/b02andr/a0503hello   
 ### push to toolbar
-File Settings Menus and Toolbars Main Toolbar  
-VCS Local Changes Toolbar  
+File Settings Menus and Toolbars Main Toolbar   
+Navigation Bar Toolbar NavBarVcsGroup  
+Main Toolbar MainToolBarSettings VCS Actions  
 
 ### to commit
 View Tool Window Git  
