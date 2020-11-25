@@ -121,6 +121,21 @@ textColor holo_orange_light
 ## Добавление ресурса string-array
 \app\src\main\res\values
 
+## SharedPreferences
+[Сохранение данных на ANDROID/ УРОК 12N](https://www.youtube.com/watch?v=324Bq1CAq1w)  
+[Урок 12N/SharedPreferences](https://neco-desarrollo.es/2020/09/%D1%83%D1%80%D0%BE%D0%BA-12n-sharedpreferences)  
+```
+    private void saveData(int counter1){
+        SharedPreferences.Editor editor = pref.edit();
+        editor.putInt(sCouter1, counter1);
+        editor.apply();
+    }
+
+    private int readData(){
+        counter1 = pref.getInt(sCouter1, 0);
+        return counter1;
+    }
+```
 
 ## How to use Git in Android Studio
 [How to use Git in Android Studio](https://www.youtube.com/watch?v=_d4fFFAJKVA)  
