@@ -1,8 +1,1 @@
-#jupyter-notebook-script.py
-import sys
-import notebook.notebookapp 
-
-notebook.notebookapp.NotebookApp.notebook_dir = u'C:\\path\\to\\folder'
-
-sys.exit(notebook.notebookapp.main())
-
+D:\mailCloud2\Cloud Mail.Ru\prjother\089hosts\A02Nh\html6ccna

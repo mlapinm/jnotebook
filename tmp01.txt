@@ -1,3 +1,32 @@
+^Table \d\d?-\d\d? [A-Z]
+
+¦  10466
+Technet24
+|||
+8
+NOTE
+This page intentionally left blank
+
+* - 1
+Table end
+
+1.1.1.0/24
+
+10.1.1.4/30
+10.1.1.8/30
+
+Virtual IP address
+192.168.1.100/24
+192.168.1.0/24
+7789 0008 2823 8545
+Active Router
+R0
+Standby Router
+R1
+
+
+
+
 
 html06lyrics/a0202song.md
 html06lyrics/a0402song.md
