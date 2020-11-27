@@ -696,8 +696,19 @@ much once
    
    
    
-## 
-   
+## x27speech
+recognition
+install
+1 recognize_google
+2 recognize_sphinx
+3 Microphone
+закладки tmp02
+Path
+clipboard
+1 what in clipboard
+2 codecs
+3 end
+footer   
    
    
    
