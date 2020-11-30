@@ -571,7 +571,10 @@ API jQuery
 [x23dict](#x23dict)
 [x24dict](#x24dict)
 [x25dict](#x25dict)
-
+[x27speech](#x27speech)  
+[](#)  
+[](#)  
+[](#)  
 
 
 
