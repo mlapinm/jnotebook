@@ -1,5 +1,6 @@
 ## android
 [Разработка приложений на Android Studio Светофор](b0202neco.md)  
+[Android App Development](#Android-App-Development)  
 []()  
 []()  
 
@@ -26,8 +27,17 @@
 []()  
 []()  
 []()  
-[]()  
 
 []()  
 []()  
-[]()  
+
+## Android App Development  
+[Android App Development](b0212devnami.md)  
+Android Studio Create New App project - YouTube  
+Android TableLayout Example - YouTube  
+Android LinearLayout Example - YouTube  
+Android Relative Layout Example - YouTube  
+Android WebView Example - YouTube  
+Android User Interface Basic Widgets - YouTube  
+Android Center Button Element on Screen - YouTube  
+
