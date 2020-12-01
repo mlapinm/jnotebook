@@ -1,5 +1,5 @@
 ## android
-[Разработка приложений на Android Studio Светофор]([#Разработка-приложений-на-Android-Studio-Светофор)  
+[Разработка приложений на Android Studio Светофор](#Разработка-приложений-на-Android-Studio-Светофор)  
 [Android App Development](#Android-App-Development)  
 []()  
 []()  
