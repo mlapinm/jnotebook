@@ -48,30 +48,40 @@
 ## Справочник Рыбака на Kotlin /Урок 8/Android Studio 2020 - YouTube  
 [Справочник Рыбака на Kotlin /Урок 8/Android Studio 2020 - YouTube](https://www.youtube.com/watch?v=DwUnpTEQVG4&list=PLmjT2NFTgg1clSDgx1YYOuVyZuCXVjfuR&index=8)  
 [l2082int - github](https://github.com/mlapinm/b03andr)  
-1. image asset ic_fish ic_na ic_sna ic_history 
-1. values\themes.xml 
+- image asset ic_fish ic_na ic_sna ic_history 
+- values\themes.xml 
 ```
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
 ```
-1. values\strings.xml  
+- values\strings.xml  
 ```
     <string name="fish">Рыба</string>
     <string name="na">Наживка</string>
     <string name="sna">Снасти</string>
     <string name="history">Истории</string>
 ```
-1. dimens.xml  
-        ```
-        <?xml version="1.0" encoding="utf-8"?>
-        <resources>
-            <dimen name="header_main_height">200dp</dimen>
-        </resources>
-        ```
-1. layout\header_main_menu.xml  
-1. menu\drawer_main_menu.xml
-1. layout\activity_main.xml  
+- dimens.xml  
 ```
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="header_main_height">200dp</dimen>
+</resources>
+```
+- layout\header_main_menu.xml  
+- menu\drawer_main_menu.xml
+- layout\activity_main.xml  
+```
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start" >
+
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
         android:layout_width="wrap_content"
@@ -81,8 +91,9 @@
         app:menu="@menu/drawer_main_menu"
         app:headerLayout="@layout/header_main_menu"
         />
+</androidx.drawerlayout.widget.DrawerLayout>
 ```
-1. 
+
 ## Урок 8: Справочник Рыбака (Слушатель нажатий меню)
 ## Имплементация интерфейса NavigationMenu в MainActivity
 ## Справочник Рыбака на Kotlin /Урок 9/Android Studio 2020 - YouTube  
