@@ -129,11 +129,89 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 }
 ```
-## Имплементация интерфейса NavigationMenu в MainActivity
+###### Имплементация интерфейса NavigationMenu в MainActivity
 ## Справочник Рыбака на Kotlin /Урок 9/Android Studio 2020 - YouTube  
 [Справочник Рыбака на Kotlin /Урок 9/Android Studio 2020 - YouTube](https://www.youtube.com/watch?v=-vxTwjgW3MY&list=PLmjT2NFTgg1clSDgx1YYOuVyZuCXVjfuR&index=9)  
 [l2092Recyc - github](https://github.com/mlapinm/b03andr)  
 ## Включение RecyclerView в MainActivity 
+- main_content.xml 
+```
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+```
+- item_layout.xml
+```
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/caras" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView TextView"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+```
+- ListItem.kt
+```
+data class ListItem (
+    var image_id: Int,
+    var titleText: String,
+    var contentText: String
+)
+```
+- MyAdapter.kt
+```
+class MyAdapter( listArray:ArrayList<ListItem>, context: Context): RecyclerView.Adapter<MyAdapter.ViewHolder>() {
+
+
+    class ViewHolder(view: View): RecyclerView.ViewHolder(view) {
+
+    }
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+        TODO("Not yet implemented")
+    }
+
+    override fun getItemCount(): Int {
+        TODO("Not yet implemented")
+    }
+
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        TODO("Not yet implemented")
+    }
+
+}
+```
+- 
+- 
+- 
 ## Справочник Рыбака на Kotlin /Урок 10/Android Studio 2020 - YouTube  
 [Справочник Рыбака на Kotlin /Урок 10/Android Studio 2020 - YouTube](https://www.youtube.com/watch?v=b5viX8gPRr0&list=PLmjT2NFTgg1clSDgx1YYOuVyZuCXVjfuR&index=10)  
 [l2102 - github](https://github.com/mlapinm/b03andr)  
