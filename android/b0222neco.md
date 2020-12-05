@@ -215,6 +215,63 @@ class MyAdapter( listArray:ArrayList<ListItem>, context: Context): RecyclerView.
 ## Справочник Рыбака на Kotlin /Урок 10/Android Studio 2020 - YouTube  
 [Справочник Рыбака на Kotlin /Урок 10/Android Studio 2020 - YouTube](https://www.youtube.com/watch?v=b5viX8gPRr0&list=PLmjT2NFTgg1clSDgx1YYOuVyZuCXVjfuR&index=10)  
 [l2102 - github](https://github.com/mlapinm/b03andr)  
+- shuca.png nalim caras som
+- layout\main_content.xml
+- layout\item_layout.xml
+- MainActivity
+- com\example\l2102list\ListItem.kt
+- com\example\l2102list\MyAdapter.kt
+- values\array.xml
+  
+  
+- com\example\l2102list\MyAdapter.kt
+```
+    fun updateAdapter(listArray: List<ListItem>){
+        listArrR.clear()
+        listArrR.addAll(listArray)
+        notifyDataSetChanged()
+    }
+```
+- MainActivity
+```
+    fun fillArrays(titleArray:Array<String>, contentArray:Array<String>,
+    imageArray:IntArray):List<ListItem>{
+        var listItemArray = ArrayList<ListItem>()
+        for(i in 0..titleArray.size - 1){
+            var listItem = ListItem(imageArray[i],titleArray[i],contentArray[i])
+            listItemArray.add(listItem)
+        }
+        return listItemArray
+    }
+
+    override fun onNavigationItemSelected(item: MenuItem): Boolean {
+
+        when(item.itemId){
+            R.id.id_fish -> {
+                Toast.makeText(this, "id_fish", Toast.LENGTH_LONG).show()
+                adapter?.updateAdapter(fillArrays(resources.getStringArray(R.array.fish),
+                    resources.getStringArray(R.array.fish_content),
+                    getImageId(R.array.fish_image_array)))
+            }
+            R.id.id_na -> {
+                Toast.makeText(this, "id_na", Toast.LENGTH_LONG).show()
+                adapter?.updateAdapter(fillArrays(resources.getStringArray(R.array.na),
+                resources.getStringArray(R.array.na_content),
+                getImageId(R.array.na_image_array)))
+            }
+            R.id.id_sna -> {
+                Toast.makeText(this, "id_sna", Toast.LENGTH_LONG).show()
+            }
+            R.id.id_history -> {
+                Toast.makeText(this, "id_history", Toast.LENGTH_LONG).show()
+            }
+        }
+        return true
+    }
+
+
+
+```
 ## Справочник Рыбака на Kotlin /Урок 11/Android Studio 2020 - YouTube  
 [Справочник Рыбака на Kotlin /Урок 11/Android Studio 2020 - YouTube](https://www.youtube.com/watch?v=jTt1ja0r8rw&list=PLmjT2NFTgg1clSDgx1YYOuVyZuCXVjfuR&index=11)  
 [l2112 - github](https://github.com/mlapinm/b03andr)  
