@@ -46,10 +46,12 @@
 [l2072 - github](https://github.com/mlapinm/b03andr)  
 ## Справочник Рыбака на Kotlin /Урок 8/Android Studio 2020 - YouTube  
 [Справочник Рыбака на Kotlin /Урок 8/Android Studio 2020 - YouTube](https://www.youtube.com/watch?v=DwUnpTEQVG4&list=PLmjT2NFTgg1clSDgx1YYOuVyZuCXVjfuR&index=8)  
-[l2082 - github](https://github.com/mlapinm/b03andr)  
+[l2082 - github](https://github.com/mlapinm/b03andr)
+## Имплементация интерфейса NavigationMenu в MainActivity
 ## Справочник Рыбака на Kotlin /Урок 9/Android Studio 2020 - YouTube  
 [Справочник Рыбака на Kotlin /Урок 9/Android Studio 2020 - YouTube](https://www.youtube.com/watch?v=-vxTwjgW3MY&list=PLmjT2NFTgg1clSDgx1YYOuVyZuCXVjfuR&index=9)  
 [l2092 - github](https://github.com/mlapinm/b03andr)  
+## Включение RecicledView в MainActivity 
 ## Справочник Рыбака на Kotlin /Урок 10/Android Studio 2020 - YouTube  
 [Справочник Рыбака на Kotlin /Урок 10/Android Studio 2020 - YouTube](https://www.youtube.com/watch?v=b5viX8gPRr0&list=PLmjT2NFTgg1clSDgx1YYOuVyZuCXVjfuR&index=10)  
 [l2102 - github](https://github.com/mlapinm/b03andr)  
