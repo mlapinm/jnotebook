@@ -95,6 +95,40 @@
 ```
 
 ## Урок 8: Справочник Рыбака (Слушатель нажатий меню)
+```
+class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
+
+    var nav_view: NavigationView? = null
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        nav_view = findViewById(R.id.nav_view)
+        nav_view?.setNavigationItemSelectedListener(this)
+
+    }
+
+    override fun onNavigationItemSelected(item: MenuItem): Boolean {
+
+        when(item.itemId){
+            R.id.id_fish -> {
+                Toast.makeText(this, "id_fish", Toast.LENGTH_LONG).show()
+            }
+            R.id.id_na -> {
+                Toast.makeText(this, "id_na", Toast.LENGTH_LONG).show()
+            }
+            R.id.id_sna -> {
+                Toast.makeText(this, "id_sna", Toast.LENGTH_LONG).show()
+            }
+            R.id.id_history -> {
+                Toast.makeText(this, "id_history", Toast.LENGTH_LONG).show()
+            }
+        }
+        return true
+    }
+}
+```
 ## Имплементация интерфейса NavigationMenu в MainActivity
 ## Справочник Рыбака на Kotlin /Урок 9/Android Studio 2020 - YouTube  
 [Справочник Рыбака на Kotlin /Урок 9/Android Studio 2020 - YouTube](https://www.youtube.com/watch?v=-vxTwjgW3MY&list=PLmjT2NFTgg1clSDgx1YYOuVyZuCXVjfuR&index=9)  
