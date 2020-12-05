@@ -62,14 +62,14 @@
     <string name="history">Истории</string>
 ```
 1. dimens.xml  
-```
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <dimen name="header_main_height">200dp</dimen>
-</resources>
-```
+        ```
+        <?xml version="1.0" encoding="utf-8"?>
+        <resources>
+            <dimen name="header_main_height">200dp</dimen>
+        </resources>
+        ```
 1. layout\header_main_menu.xml  
-
+1. menu\drawer_main_menu.xml
 1. layout\activity_main.xml  
 ```
     <com.google.android.material.navigation.NavigationView
