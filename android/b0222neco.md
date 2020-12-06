@@ -299,6 +299,7 @@ webView.loadUrl("file:///android_asset/item_3.html")
 - html src="file:///android_asset/img_01.jpg"
 - resource
   - [Загружаем локальные страницы и картинки - alexanderklimov](http://developer.alexanderklimov.ru/android/views/webview.php#local)  
+  - [falnatshehv- MarkdownView - github](https://github.com/falnatsheh/MarkdownView)
  
 
 ## Курс по Android Studio и Kotlin/AlertDialog - YouTube  
