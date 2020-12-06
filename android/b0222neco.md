@@ -288,7 +288,7 @@ class MyAdapter( listArray:ArrayList<ListItem>, context: Context): RecyclerView.
 [l2142webview - github](https://github.com/mlapinm/b03andr)  
 l2142webview  
 - get html 
- - https://html-online.com/editor/
+  - https://html-online.com/editor/
 - `app` `file` `new` `folder` `Assets Folder` 
 - MainActivity
 ```
@@ -298,7 +298,7 @@ webView.loadUrl("file:///android_asset/item_3.html")
 - html  src="file:///android_res/drawable/img_05.jpg"
 - html src="file:///android_asset/img_01.jpg"
 - resource
- - [Загружаем локальные страницы и картинки - alexanderklimov](http://developer.alexanderklimov.ru/android/views/webview.php#local)  
+  - [Загружаем локальные страницы и картинки - alexanderklimov](http://developer.alexanderklimov.ru/android/views/webview.php#local)  
  
 
 ## Курс по Android Studio и Kotlin/AlertDialog - YouTube  
