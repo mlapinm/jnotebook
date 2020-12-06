@@ -283,7 +283,24 @@ class MyAdapter( listArray:ArrayList<ListItem>, context: Context): RecyclerView.
 [l2132 - github](https://github.com/mlapinm/b03andr)  
 ## Создание мобильного приложения на Kotlin/Урок 14/Android Studio - YouTube  
 [Создание мобильного приложения на Kotlin/Урок 14/Android Studio - YouTube](https://www.youtube.com/watch?v=Wep1nffnAW0&list=PLmjT2NFTgg1clSDgx1YYOuVyZuCXVjfuR&index=14)  
-[l2142 - github](https://github.com/mlapinm/b03andr)  
+## WebView
+
+[l2142webview - github](https://github.com/mlapinm/b03andr)  
+l2142webview  
+- get html 
+ - https://html-online.com/editor/
+- `app` `file` `new` `folder` `Assets Folder` 
+- MainActivity
+```
+webView.loadUrl("file:///android_asset/item_3.html")
+```
+
+- html  src="file:///android_res/drawable/img_05.jpg"
+- html src="file:///android_asset/img_01.jpg"
+- resource
+ - [Загружаем локальные страницы и картинки - alexanderklimov](http://developer.alexanderklimov.ru/android/views/webview.php#local)  
+ 
+
 ## Курс по Android Studio и Kotlin/AlertDialog - YouTube  
 [Курс по Android Studio и Kotlin/AlertDialog - YouTube](https://www.youtube.com/watch?v=VnjarCa4Evg&list=PLmjT2NFTgg1clSDgx1YYOuVyZuCXVjfuR&index=15)  
 [l2152 - github](https://github.com/mlapinm/b03andr)  
