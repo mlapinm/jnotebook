@@ -311,15 +311,58 @@ webView.loadUrl("file:///android_asset/item_3.html")
 ## SQLite База Данных на Андроид KOTLIN/ Урок 17 - YouTube  
 [SQLite База Данных на Андроид KOTLIN/ Урок 17 - YouTube](https://www.youtube.com/watch?v=tQot9NMbtiw&list=PLmjT2NFTgg1clSDgx1YYOuVyZuCXVjfuR&index=17)  
 [l2172 - github](https://github.com/mlapinm/b03andr)  
+l2172db  
+
+[Save data using SQLite](https://developer.android.com/training/data-storage/sqlite)  
+
+For these reasons, we highly recommended using the `Room Persistence` Library as an abstraction layer for accessing information in your app's SQLite databases.  
+
+- new package db
+- myObjNameClass new file/class object  
+
+
+
 ## SQLite база данных KOTLIN БЛОКНОТ Часть 1 - YouTube  
 [SQLite база данных KOTLIN БЛОКНОТ Часть 1 - YouTube](https://www.youtube.com/watch?v=udnaDIWjamg&list=PLmjT2NFTgg1clSDgx1YYOuVyZuCXVjfuR&index=18)  
-[l2182 - github](https://github.com/mlapinm/b03andr)  
+[l2182nota - github](https://github.com/mlapinm/b03andr)   
+l2182nota  
+com\example\l2182nota\MainActivity.kt
+```
+    val myDbManager = MyDbManager(this)
+
+	myDbManager.openDb()
+	myDbManager.insertToDb("title_1", "content_1")
+	val dataList = myDbManager.readDbData()
+	for( item in dataList){
+		Log.i("info", item)
+	}
+	
+    fun onClickNew(view: View) {
+        var intent = Intent(this, EditActivity::class.java)
+        startActivity(intent)
+    }
+```
+packet db  
+com\example\l2182nota\db\MyDbNameClass.kt   
+com\example\l2182nota\db\MyDbManager.kt  
+com\example\l2182nota\db\MyDbHelper.kt  
+  
 ## SQLite база данных KOTLIN БЛОКНОТ Часть 2 - YouTube  
 [SQLite база данных KOTLIN БЛОКНОТ Часть 2 - YouTube](https://www.youtube.com/watch?v=_4zx41whaXs&list=PLmjT2NFTgg1clSDgx1YYOuVyZuCXVjfuR&index=19)  
-[l2192 - github](https://github.com/mlapinm/b03andr)  
+[l2192notb - github](https://github.com/mlapinm/b03andr)  
+l2192notb  
+
+com\example\l2182nota\EditActivity.kt  
+layout\activity_main.xml  
+layout\activity_edit.xml  
+```
+src\main\AndroidManifest.xml  
+        <activity android:name=".EditActivity"></activity>  
+```  
+
 ## SQLite база данных KOTLIN БЛОКНОТ Часть 3 - YouTube  
 [SQLite база данных KOTLIN БЛОКНОТ Часть 3 - YouTube](https://www.youtube.com/watch?v=BS6Z4EkWUR4&list=PLmjT2NFTgg1clSDgx1YYOuVyZuCXVjfuR&index=20)  
-[l2202 - github](https://github.com/mlapinm/b03andr)  
+[l2202notc - github](https://github.com/mlapinm/b03andr)  
 
 
 
