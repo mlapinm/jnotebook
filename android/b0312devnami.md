@@ -83,6 +83,22 @@
 ## Android WebView Example - YouTube  
 [Android WebView Example - YouTube](https://www.youtube.com/watch?v=IJpV5U_T-_M&list=PLUY1lsOTtPeJfTsngpo7H_tzJrIUcam9l&index=5)  
 [b1205web - github](https://github.com/mlapinm/b04andr)  
+- com\example\b1205web\MainActivity.java  
+```
+    public void onClickButton1(View view) {
+        Intent intent = new Intent(context, WebActivity.class);
+        startActivity(intent);
+    }
+```
+- com\example\b1205web\WebActivity.java  
+```
+        webView1 = (WebView)findViewById(R.id.webview1);
+
+        webView1.getSettings().setJavaScriptEnabled(true);
+        webView1.loadUrl("https://en.wikipedia.org/");
+```
+
+
 ## Android User Interface Basic Widgets - YouTube  
 [Android User Interface Basic Widgets - YouTube](https://www.youtube.com/watch?v=Ja_DQ7XT2b0&list=PLUY1lsOTtPeJfTsngpo7H_tzJrIUcam9l&index=6)  
 [b1206 - github](https://github.com/mlapinm/b04andr)  
@@ -95,12 +111,45 @@
 ## Android Open URL in Browser WebView - YouTube  
 [Android Open URL in Browser WebView - YouTube](https://www.youtube.com/watch?v=cr4CmxaDr04&list=PLUY1lsOTtPeJfTsngpo7H_tzJrIUcam9l&index=9)  
 [b1209url - github](https://github.com/mlapinm/b04andr)  
+com\example\b1209url\MainActivity.java  
+```
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://ru.wikipedia.org"));
+        startActivity(intent);
+
+```
 ## Android Logging Example - YouTube  
 [Android Logging Example - YouTube](https://www.youtube.com/watch?v=Jsi5wkY9Bew&list=PLUY1lsOTtPeJfTsngpo7H_tzJrIUcam9l&index=10)  
 [b1210logging - github](https://github.com/mlapinm/b04andr)  
+com\example\b1210logging\MainActivity.java  
+```
+        Log.e("error", "This is error");
+        Log.v("warning", "This is warning");
+        Log.i("info", "This is info");
+        Log.d("debug", "This is debug");
+        Log.v("verbose", "This is verbose");
+```
 ## Android ListView Example - YouTube  
 [Android ListView Example - YouTube](https://www.youtube.com/watch?v=T9xdj1EvtbQ&list=PLUY1lsOTtPeJfTsngpo7H_tzJrIUcam9l&index=11)  
 [b1211list - github](https://github.com/mlapinm/b04andr)  
+com\example\b1211list\MainActivity.java  
+```
+        ArrayAdapter adapter = new ArrayAdapter(this,
+                R.layout.listview1_row, listArray1);
+
+        ListView listView = (ListView)findViewById(R.id.listView1);
+
+        listView.setAdapter(adapter);
+```
+layout\listview1_row.xml
+```
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:textSize="24sp" />```    
 ## Android Get Total RAM Size of Device - YouTube  
 [Android Get Total RAM Size of Device - YouTube](https://www.youtube.com/watch?v=TqAwLMt8jN8&list=PLUY1lsOTtPeJfTsngpo7H_tzJrIUcam9l&index=12)  
 [b1212ram - github](https://github.com/mlapinm/b04andr)  
