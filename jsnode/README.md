@@ -2,7 +2,7 @@
 [NodeJS Navigate to URL - DevNami](#NodeJS-Navigate-to-URL---DevNami)  
 [Learn Nodejs Full Tutorial for Beginners FCC NoobCoder](#Learn-Nodejs-Full-Tutorial-for-Beginners-FCC-NoobCoder)  
 [Creating Todo MongoDB CRUD Application from Scratch](#Creating-Todo-MongoDB-CRUD-Application-from-Scratch)  
-[](#)  
+[Learn JavaScript by Building 7 Games - Full Course](#Learn-JavaScript-by-Building-7-Games---Full-Course)  
 [](#)  
 [](#)  
 [](#)  
@@ -70,8 +70,15 @@ Part 8: Fetch API POST Request - YouTube
 Part 9: Fetch API DELETE Request - YouTube
 Part 10: Fetch API PUT Request - YouTube
 Part 11: User Input Validation - YouTube
-## 
-[]()  
+## Learn JavaScript by Building 7 Games - Full Course
+[Learn JavaScript by Building 7 Games - Full Course](f2082snake.md)  
+1 Memory Game - Level 1  
+2 Whack-a-mole - level 1  
+3 Connect Four - level 1  
+4 Nokia 3310 Snake - level 2  
+5 Space Invaders - level 2  
+6 Frogger - level 2  
+7 Tetris - level 3  
 ## 
 []()  
 ## 

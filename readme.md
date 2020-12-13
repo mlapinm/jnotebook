@@ -54,5 +54,6 @@ JavaScript Уровень 1 Основы веб-программирования
 NodeJS Navigate to URL - DevNami  
 Learn Nodejs Full Tutorial for Beginners FCC NoobCoder  
 Creating Todo MongoDB CRUD Application from Scratch  
+Learn JavaScript by Building 7 Games - Full Course  
 ## 
 []()  

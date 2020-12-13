@@ -1,48 +1,28 @@
-1 [Creating Todo MongoDB CRUD Application from Scratch Overview - YouTube](#Creating-Todo-MongoDB-CRUD-Application-from-Scratch-Overview---YouTube)  
-2 [Part 1: Setting Up our Application - YouTube](#Part-1:-Setting-Up-our-Application---YouTube)  
-3 [Part 2: Server Side Read Portion - YouTube](#Part-2:-Server-Side-Read-Portion---YouTube)  
-4 [Part 3: Server Side Update Portion - YouTube](#Part-3:-Server-Side-Update-Portion---YouTube)  
-5 [Part 4: Server Side Create Portion - YouTube](#Part-4:-Server-Side-Create-Portion---YouTube)  
-6 [Part 5: Server Side Delete Portion - YouTube](#Part-5:-Server-Side-Delete-Portion---YouTube)  
-7 [Part 6: Creating Our Index.html File - YouTube](#Part-6:-Creating-Our-Index.html-File---YouTube)  
-8 [Part 7: Fetch API GET Request - YouTube](#Part-7:-Fetch-API-GET-Request---YouTube)  
-9 [Part 8: Fetch API POST Request - YouTube](#Part-8:-Fetch-API-POST-Request---YouTube)  
-10 [Part 9: Fetch API DELETE Request - YouTube](#Part-9:-Fetch-API-DELETE-Request---YouTube)  
-11 [Part 10: Fetch API PUT Request - YouTube](#Part-10:-Fetch-API-PUT-Request---YouTube)  
-12 [Part 11: User Input Validation - YouTube](#Part-11:-User-Input-Validation---YouTube)  
-## Creating Todo MongoDB CRUD Application from Scratch Overview - YouTube  
-[Creating Todo MongoDB CRUD Application from Scratch Overview - YouTube](https://www.youtube.com/watch?v=U7vikICNygc&list=PLvTjg4siRgU1ucYFHJy1tkwFjf73D0fGa&index=1)  
+1 [kubowania/memory-game: JavaScript, HTML and CSS grid-based game](#kubowania/memory-game:-JavaScript,-HTML-and-CSS-grid-based-game)  
+2 [kubowania/whack-a-mole: Vanilla JavaScript game](#kubowania/whack-a-mole:-Vanilla-JavaScript-game)  
+3 [kubowania/connect-four: A Pure JavaScript grid-based game](#kubowania/connect-four:-A-Pure-JavaScript-grid-based-game)  
+4 [kubowania/Nokia3310-Snake: A vanilla JavaScript game with tutorial](#kubowania/Nokia3310-Snake:-A-vanilla-JavaScript-game-with-tutorial)  
+5 [kubowania/space-invaders: A vanilla JavaScript game with HTML and CSS](#kubowania/space-invaders:-A-vanilla-JavaScript-game-with-HTML-and-CSS)  
+6 [kubowania/Frogger: A retro grid-based game in vanilla JavaScript, HTML and CSS](#kubowania/Frogger:-A-retro-grid-based-game-in-vanilla-JavaScript,-HTML-and-CSS)  
+7 [kubowania/Tetris: A vanilla javascript game](#kubowania/Tetris:-A-vanilla-javascript-game)  
+## kubowania/memory-game: JavaScript, HTML and CSS grid-based game  
+[kubowania/memory-game: JavaScript, HTML and CSS grid-based game](https://github.com/kubowania/memory-game)  
   
-## Part 1: Setting Up our Application - YouTube  
-[Part 1: Setting Up our Application - YouTube](https://www.youtube.com/watch?v=XhoaRFYAlEc&list=PLvTjg4siRgU1ucYFHJy1tkwFjf73D0fGa&index=2)  
+## kubowania/whack-a-mole: Vanilla JavaScript game  
+[kubowania/whack-a-mole: Vanilla JavaScript game](https://github.com/kubowania/whack-a-mole)  
   
-## Part 2: Server Side Read Portion - YouTube  
-[Part 2: Server Side Read Portion - YouTube](https://www.youtube.com/watch?v=EI_qpDHRUfQ&list=PLvTjg4siRgU1ucYFHJy1tkwFjf73D0fGa&index=3)  
+## kubowania/connect-four: A Pure JavaScript grid-based game  
+[kubowania/connect-four: A Pure JavaScript grid-based game](https://github.com/kubowania/connect-four)  
   
-## Part 3: Server Side Update Portion - YouTube  
-[Part 3: Server Side Update Portion - YouTube](https://www.youtube.com/watch?v=lz0cdQKPSUo&list=PLvTjg4siRgU1ucYFHJy1tkwFjf73D0fGa&index=4)  
+## kubowania/Nokia3310-Snake: A vanilla JavaScript game with tutorial  
+[kubowania/Nokia3310-Snake: A vanilla JavaScript game with tutorial](https://github.com/kubowania/Nokia3310-Snake)  
   
-## Part 4: Server Side Create Portion - YouTube  
-[Part 4: Server Side Create Portion - YouTube](https://www.youtube.com/watch?v=tXPi-6o6SLU&list=PLvTjg4siRgU1ucYFHJy1tkwFjf73D0fGa&index=5)  
+## kubowania/space-invaders: A vanilla JavaScript game with HTML and CSS  
+[kubowania/space-invaders: A vanilla JavaScript game with HTML and CSS](https://github.com/kubowania/space-invaders)  
   
-## Part 5: Server Side Delete Portion - YouTube  
-[Part 5: Server Side Delete Portion - YouTube](https://www.youtube.com/watch?v=zzOsSAuqI2g&list=PLvTjg4siRgU1ucYFHJy1tkwFjf73D0fGa&index=6)  
+## kubowania/Frogger: A retro grid-based game in vanilla JavaScript, HTML and CSS  
+[kubowania/Frogger: A retro grid-based game in vanilla JavaScript, HTML and CSS](https://github.com/kubowania/Frogger)  
   
-## Part 6: Creating Our Index.html File - YouTube  
-[Part 6: Creating Our Index.html File - YouTube](https://www.youtube.com/watch?v=M1CfumCoNZg&list=PLvTjg4siRgU1ucYFHJy1tkwFjf73D0fGa&index=7)  
-  
-## Part 7: Fetch API GET Request - YouTube  
-[Part 7: Fetch API GET Request - YouTube](https://www.youtube.com/watch?v=QNjXFsCWNaA&list=PLvTjg4siRgU1ucYFHJy1tkwFjf73D0fGa&index=8)  
-  
-## Part 8: Fetch API POST Request - YouTube  
-[Part 8: Fetch API POST Request - YouTube](https://www.youtube.com/watch?v=Gj_NlmjtLCM&list=PLvTjg4siRgU1ucYFHJy1tkwFjf73D0fGa&index=9)  
-  
-## Part 9: Fetch API DELETE Request - YouTube  
-[Part 9: Fetch API DELETE Request - YouTube](https://www.youtube.com/watch?v=oqrKYyWTvIA&list=PLvTjg4siRgU1ucYFHJy1tkwFjf73D0fGa&index=10)  
-  
-## Part 10: Fetch API PUT Request - YouTube  
-[Part 10: Fetch API PUT Request - YouTube](https://www.youtube.com/watch?v=CbXJPF-ei_A&list=PLvTjg4siRgU1ucYFHJy1tkwFjf73D0fGa&index=11)  
-  
-## Part 11: User Input Validation - YouTube  
-[Part 11: User Input Validation - YouTube](https://www.youtube.com/watch?v=Hn-w9mx8FF4&list=PLvTjg4siRgU1ucYFHJy1tkwFjf73D0fGa&index=12)  
+## kubowania/Tetris: A vanilla javascript game  
+[kubowania/Tetris: A vanilla javascript game](https://github.com/kubowania/Tetris)  
   
