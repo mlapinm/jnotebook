@@ -15,6 +15,76 @@
   
 ## Part 1: Setting Up our Application - YouTube  
 [Part 1: Setting Up our Application - YouTube](https://www.youtube.com/watch?v=XhoaRFYAlEc&list=PLvTjg4siRgU1ucYFHJy1tkwFjf73D0fGa&index=2)  
+- D:\avi02prog\f02node\f2012crud\  
+- npm init -y
+- npm install body-parser
+- npm install express
+- npm install mongodb
+- npm install path
+- package.json
+  - "main": "app.js",
+- app.js
+- db.js
+db.js     
+```
+const MongoClient = require('mongodb').MongoClient
+const ObjectID = require('mongodb').ObjectID
+const dbname = "crud_mongodb"
+const url = "mongodb://localhost:27017"
+const mongoOptions = {
+  useUnifiedTopology: true,
+  useNewUrlParser : true}
+
+const state = {
+  db : null
+}
+
+const connect = (cb)=>{
+  if(state.db){
+    cb()
+  }else{
+    MongoClient.connect(url, mongoOptions, (err, client)=>{
+      if(err){
+        cb(err)
+      }else{
+        state.db = client.db(dbname)
+        cb()
+      }
+    })
+  }
+}
+
+const getPrimaryKey = (_id)=>{
+  return ObjectID(_id)
+}
+
+const getDB = ()=>{
+  return state.db
+}
+module.exports = {getDB, connect, getPrimaryKey}
+```
+app.js  
+```
+const express = require('express')
+const bodyParser = require('body-parser')
+const app = express()
+app.use(bodyParser.json())
+const path = require('path')
+
+const db = require('./db')
+const collection = "todo"
+
+db.connect((err)=>{
+  if(err){
+    console.log('unable to connect to database')
+    process.exit(1)
+  }else{
+    app.listen(3000, ()=>{
+      console.log("connected to database, app listening on port 3000")
+    })
+  }
+})
+```   
   
 ## Part 2: Server Side Read Portion - YouTube  
 [Part 2: Server Side Read Portion - YouTube](https://www.youtube.com/watch?v=EI_qpDHRUfQ&list=PLvTjg4siRgU1ucYFHJy1tkwFjf73D0fGa&index=3)  
@@ -46,3 +116,22 @@
 ## Part 11: User Input Validation - YouTube  
 [Part 11: User Input Validation - YouTube](https://www.youtube.com/watch?v=Hn-w9mx8FF4&list=PLvTjg4siRgU1ucYFHJy1tkwFjf73D0fGa&index=12)  
   
+  
+  
+## footer
+[Getting Started With MongoDB. Installing MongoDB For Windows 10](https://www.youtube.com/watch?v=3TvDUiclcFk&list=PLvTjg4siRgU1XVKER93YtJ2tCTXHCTBlT)    
+
+https://www.mongodb.com/  
+https://www.mongodb.com/try/download/community  
+https://fastdl.mongodb.org/windows/mongodb-windows-x86_64-4.4.2-signed.msi  
+mongod.exe  
+C:\Program Files\MongoDB\Server\4.4\bin  
+add path
+cmd
+mongod
+
+{"t":{"$date":"2020-12-13T17:06:34.266+03:00"},"s":"I",  "c":"STORAGE",  "id":4615611, "ctx":"initandlisten","msg":"MongoDB starting","attr":{"pid":11528,"port":27017,"dbPath":"C:/data/db/","architecture":"64-bit","host":"LAPTOP-GRIR1G62"}}  
+
+C:\data\db
+http://localhost:27017/
+
