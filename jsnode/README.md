@@ -1,8 +1,12 @@
 ## jsnode
 [NodeJS Navigate to URL - DevNami](#NodeJS-Navigate-to-URL---DevNami)  
 [Learn Nodejs Full Tutorial for Beginners FCC NoobCoder](#Learn-Nodejs-Full-Tutorial-for-Beginners-FCC-NoobCoder)  
+[MongoDB For Beginners](#MongoDB-For-Beginners)  
 [Creating Todo MongoDB CRUD Application from Scratch](#Creating-Todo-MongoDB-CRUD-Application-from-Scratch)  
 [Learn JavaScript by Building 7 Games - Full Course](#Learn-JavaScript-by-Building-7-Games---Full-Course)  
+[Data Visualization with D3](#Data-Visualization-with-D3)  
+[](#)  
+[](#)  
 [](#)  
 [](#)  
 [](#)  
@@ -57,6 +61,9 @@
 22 Getting Started With EJS Templates With Express
 23 How does MiddleWare Work and Creating Custom Middleware
 24 Working With The Express Router
+## MongoDB For Beginners
+[MongoDB For Beginners](f2052mongo.md)  
+
 ## Creating Todo MongoDB CRUD Application from Scratch
 [Creating Todo MongoDB CRUD Application from Scratch](f2042noobcoder.md)  
 Part 1: Setting Up our Application - YouTube
@@ -79,8 +86,8 @@ Part 11: User Input Validation - YouTube
 5 Space Invaders - level 2  
 6 Frogger - level 2  
 7 Tetris - level 3  
-## 
-[]()  
+## Data Visualization with D3
+[Data Visualization with D3](f2102d3.md)  
 ## 
 []()  
 ## 
