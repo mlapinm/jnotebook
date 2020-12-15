@@ -88,7 +88,42 @@ db.connect((err)=>{
   
 ## Part 2: Server Side Read Portion - YouTube  
 [Part 2: Server Side Read Portion - YouTube](https://www.youtube.com/watch?v=EI_qpDHRUfQ&list=PLvTjg4siRgU1ucYFHJy1tkwFjf73D0fGa&index=3)  
+### 1  
+```
+app.get('/', (req, res)=>{
+  res.sendFile(path.join(__dirname, 'index.html'))
+})
+
+app.get('/getTodos', (req, res)=>{
+  db.getDB().collection(collection).find({}).toArray((err, documents)=>{
+    if(err){
+      console.log(err)
+    }else{
+      console.log(documents)
+      res.json(documents)
+    }
+  })
+})
+```  
+### 2
+mongo  
+```
+MongoDB shell version v4.4.2
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+```
   
+```
+> use crud_mongodb
+switched to db crud_mongodb
+> db.todo.insert({todo: "clean room"})
+WriteResult({ "nInserted" : 1 })
+> db.todo.insert({todo: "clean garage"})
+WriteResult({ "nInserted" : 1 })
+> ^C
+bye 
+```  
+http://localhost:3000/gettodos  
+[{"_id":"5fd7ad6a0ff636cf22fd4e76","todo":"clean room"},{"_id":"5fd7adc50ff636cf22fd4e77","todo":"clean garage"}]    
 ## Part 3: Server Side Update Portion - YouTube  
 [Part 3: Server Side Update Portion - YouTube](https://www.youtube.com/watch?v=lz0cdQKPSUo&list=PLvTjg4siRgU1ucYFHJy1tkwFjf73D0fGa&index=4)  
   
