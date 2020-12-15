@@ -5,7 +5,7 @@
 [Creating Todo MongoDB CRUD Application from Scratch](#Creating-Todo-MongoDB-CRUD-Application-from-Scratch)  
 [Learn JavaScript by Building 7 Games - Full Course](#Learn-JavaScript-by-Building-7-Games---Full-Course)  
 [Data Visualization with D3](#Data-Visualization-with-D3)  
-[](#)  
+[Уроки jQuery Web Developer Blog](#Уроки-jQuery-Web-Developer-Blog)  
 [](#)  
 [](#)  
 [](#)  
@@ -88,8 +88,8 @@ Part 11: User Input Validation - YouTube
 7 Tetris - level 3  
 ## Data Visualization with D3
 [Data Visualization with D3](f2102d3.md)  
-## 
-[]()  
+## Уроки jQuery Web Developer Blog
+[Уроки jQuery Web Developer Blog](q2022devblog.md)  
 ## 
 []()  
 ## 
