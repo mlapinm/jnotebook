@@ -1,44 +1,72 @@
-1 [Getting Started With MongoDB. Installing MongoDB For Windows 10 - YouTube](#Getting-Started-With-MongoDB.-Installing-MongoDB-For-Windows-10---YouTube)  
-2 [Installing Visual Studio Code: Setting up to use with MongoDB via Intergrated Terminal - YouTube](#Installing-Visual-Studio-Code:-Setting-up-to-use-with-MongoDB-via-Intergrated-Terminal---YouTube)  
-3 [Creating our Database in MongoDB. Inserting and Finding Documents. - YouTube](#Creating-our-Database-in-MongoDB.-Inserting-and-Finding-Documents.---YouTube)  
-4 [MongoDB is a SchemaLess DataBase - YouTube](#MongoDB-is-a-SchemaLess-DataBase---YouTube)  
-5 [Using the insertMany Method to Insert Multiple Documents in MongoDB - YouTube](#Using-the-insertMany-Method-to-Insert-Multiple-Documents-in-MongoDB---YouTube)  
-6 [Query the Database with the find and findOne method - YouTube](#Query-the-Database-with-the-find-and-findOne-method---YouTube)  
-7 [Using Query Comparison Operators in MongoDB - YouTube](#Using-Query-Comparison-Operators-in-MongoDB---YouTube)  
-8 [Working with Arrays with Array Query Operators and Query Comparison Operators - YouTube](#Working-with-Arrays-with-Array-Query-Operators-and-Query-Comparison-Operators---YouTube)  
-9 [Using Projections Within MongoDB to Limit Fields - YouTube](#Using-Projections-Within-MongoDB-to-Limit-Fields---YouTube)  
-10 [Updating Documents with the Update,UpdateOne, and UpdateMany Methods in MongoDB - YouTube](#Updating-Documents-with-the-Update,UpdateOne,-and-UpdateMany-Methods-in-MongoDB---YouTube)  
-11 [Deleting Documents with the Remove,DeleteOne, and DeleteMany Methods in MongoDB - YouTube](#Deleting-Documents-with-the-Remove,DeleteOne,-and-DeleteMany-Methods-in-MongoDB---YouTube)  
-## Getting Started With MongoDB. Installing MongoDB For Windows 10 - YouTube  
-[Getting Started With MongoDB. Installing MongoDB For Windows 10 - YouTube](https://www.youtube.com/watch?v=3TvDUiclcFk&list=PLvTjg4siRgU1XVKER93YtJ2tCTXHCTBlT)  
+1 [Введение. Синтаксис - YouTube](#Введение.-Синтаксис---YouTube)  
+2 [Выбор селекторов. Оптимизация выборки - YouTube](#Выбор-селекторов.-Оптимизация-выборки---YouTube)  
+3 [Работа с CSS. Изменения атрибутов элемента. - YouTube](#Работа-с-CSS.-Изменения-атрибутов-элемента.---YouTube)  
+4 [События в jquery - YouTube](#События-в-jquery---YouTube)  
+5 [Анимация. Часть 1.Hide.Show.SlideUp.SlideDown - YouTube](#Анимация.-Часть-1.Hide.Show.SlideUp.SlideDown---YouTube)  
+6 [Анимация. Часть 2.Fade.Animate - YouTube](#Анимация.-Часть-2.Fade.Animate---YouTube)  
+7 [Манипуляции с DOM . Часть 1.After.Before.Append - YouTube](#Манипуляции-с-DOM-.-Часть-1.After.Before.Append---YouTube)  
+8 [Манипуляции с DOM . Часть 2.Replace.Wrap.Clone.Detach - YouTube](#Манипуляции-с-DOM-.-Часть-2.Replace.Wrap.Clone.Detach---YouTube)  
+9 [Манипуляции с DOM.Offset,Position,Height,innerHeight - YouTube](#Манипуляции-с-DOM.Offset,Position,Height,innerHeight---YouTube)  
+10 [Как сделать адаптивное меню на jQuery. уроки jQuery. - YouTube](#Как-сделать-адаптивное-меню-на-jQuery.-уроки-jQuery.---YouTube)  
+11 [Уроки jQuery практика- как сделать адаптивное меню с Flexbox и jQuery - YouTube](#Уроки-jQuery-практика--как-сделать-адаптивное-меню-с-Flexbox-и-jQuery---YouTube)  
+12 [Уроки jQuery практика- как сделать слайдер - YouTube](#Уроки-jQuery-практика--как-сделать-слайдер---YouTube)  
+13 [Уроки jQuery практика- как сделать кнопку наверх (back to top) как вконтакте - YouTube](#Уроки-jQuery-практика--как-сделать-кнопку-наверх-(back-to-top)-как-вконтакте---YouTube)  
+14 [Уроки jQuery практика- анимация счетчика чисел - YouTube](#Уроки-jQuery-практика--анимация-счетчика-чисел---YouTube)  
+15 [Уроки jQuery практика- делаем To Do приложение - YouTube](#Уроки-jQuery-практика--делаем-To-Do-приложение---YouTube)  
+16 [Уроки jQuery практика- делаем Skill bar для портфолио - YouTube](#Уроки-jQuery-практика--делаем-Skill-bar-для-портфолио---YouTube)  
+17 [Уроки jQuery практика- делаем простой аккордеон - YouTube](#Уроки-jQuery-практика--делаем-простой-аккордеон---YouTube)  
+18 [Уроки jQuery практика- меняем фон страницы при скролле - YouTube](#Уроки-jQuery-практика--меняем-фон-страницы-при-скролле---YouTube)  
+## Введение. Синтаксис - YouTube  
+[Введение. Синтаксис - YouTube](https://www.youtube.com/watch?v=B4jWRrz3FUM&list=PLVfMKQXDAhGXQcouhIblV910Rv7lRscH3&index=1)  
   
-## Installing Visual Studio Code: Setting up to use with MongoDB via Intergrated Terminal - YouTube  
-[Installing Visual Studio Code: Setting up to use with MongoDB via Intergrated Terminal - YouTube](https://www.youtube.com/watch?v=54iI586Iv_w&list=PLvTjg4siRgU1XVKER93YtJ2tCTXHCTBlT&index=2)  
+## Выбор селекторов. Оптимизация выборки - YouTube  
+[Выбор селекторов. Оптимизация выборки - YouTube](https://www.youtube.com/watch?v=pfsef_VWFR8&list=PLVfMKQXDAhGXQcouhIblV910Rv7lRscH3&index=2)  
   
-## Creating our Database in MongoDB. Inserting and Finding Documents. - YouTube  
-[Creating our Database in MongoDB. Inserting and Finding Documents. - YouTube](https://www.youtube.com/watch?v=5lVmmTNMy60&list=PLvTjg4siRgU1XVKER93YtJ2tCTXHCTBlT&index=3)  
+## Работа с CSS. Изменения атрибутов элемента. - YouTube  
+[Работа с CSS. Изменения атрибутов элемента. - YouTube](https://www.youtube.com/watch?v=eFrtW9O7Rtk&list=PLVfMKQXDAhGXQcouhIblV910Rv7lRscH3&index=3)  
   
-## MongoDB is a SchemaLess DataBase - YouTube  
-[MongoDB is a SchemaLess DataBase - YouTube](https://www.youtube.com/watch?v=jzYjReNMQ5A&list=PLvTjg4siRgU1XVKER93YtJ2tCTXHCTBlT&index=4)  
+## События в jquery - YouTube  
+[События в jquery - YouTube](https://www.youtube.com/watch?v=p7ey_crD_UY&list=PLVfMKQXDAhGXQcouhIblV910Rv7lRscH3&index=4)  
   
-## Using the insertMany Method to Insert Multiple Documents in MongoDB - YouTube  
-[Using the insertMany Method to Insert Multiple Documents in MongoDB - YouTube](https://www.youtube.com/watch?v=yaRSZwUJIrY&list=PLvTjg4siRgU1XVKER93YtJ2tCTXHCTBlT&index=5)  
+## Анимация. Часть 1.Hide.Show.SlideUp.SlideDown - YouTube  
+[Анимация. Часть 1.Hide.Show.SlideUp.SlideDown - YouTube](https://www.youtube.com/watch?v=Ydx9h2HrHeg&list=PLVfMKQXDAhGXQcouhIblV910Rv7lRscH3&index=5)  
   
-## Query the Database with the find and findOne method - YouTube  
-[Query the Database with the find and findOne method - YouTube](https://www.youtube.com/watch?v=kn00aKesr6E&list=PLvTjg4siRgU1XVKER93YtJ2tCTXHCTBlT&index=6)  
+## Анимация. Часть 2.Fade.Animate - YouTube  
+[Анимация. Часть 2.Fade.Animate - YouTube](https://www.youtube.com/watch?v=TM78nW0oEMU&list=PLVfMKQXDAhGXQcouhIblV910Rv7lRscH3&index=6)  
   
-## Using Query Comparison Operators in MongoDB - YouTube  
-[Using Query Comparison Operators in MongoDB - YouTube](https://www.youtube.com/watch?v=a3Py3blDvUI&list=PLvTjg4siRgU1XVKER93YtJ2tCTXHCTBlT&index=7)  
+## Манипуляции с DOM . Часть 1.After.Before.Append - YouTube  
+[Манипуляции с DOM . Часть 1.After.Before.Append - YouTube](https://www.youtube.com/watch?v=q7zjIHJXuSg&list=PLVfMKQXDAhGXQcouhIblV910Rv7lRscH3&index=7)  
   
-## Working with Arrays with Array Query Operators and Query Comparison Operators - YouTube  
-[Working with Arrays with Array Query Operators and Query Comparison Operators - YouTube](https://www.youtube.com/watch?v=XrCdkMBCh5w&list=PLvTjg4siRgU1XVKER93YtJ2tCTXHCTBlT&index=8)  
+## Манипуляции с DOM . Часть 2.Replace.Wrap.Clone.Detach - YouTube  
+[Манипуляции с DOM . Часть 2.Replace.Wrap.Clone.Detach - YouTube](https://www.youtube.com/watch?v=xE0tNP2SEDg&list=PLVfMKQXDAhGXQcouhIblV910Rv7lRscH3&index=8)  
   
-## Using Projections Within MongoDB to Limit Fields - YouTube  
-[Using Projections Within MongoDB to Limit Fields - YouTube](https://www.youtube.com/watch?v=oSSNHTeXHuc&list=PLvTjg4siRgU1XVKER93YtJ2tCTXHCTBlT&index=9)  
+## Манипуляции с DOM.Offset,Position,Height,innerHeight - YouTube  
+[Манипуляции с DOM.Offset,Position,Height,innerHeight - YouTube](https://www.youtube.com/watch?v=wurHaYZR9ck&list=PLVfMKQXDAhGXQcouhIblV910Rv7lRscH3&index=9)  
   
-## Updating Documents with the Update,UpdateOne, and UpdateMany Methods in MongoDB - YouTube  
-[Updating Documents with the Update,UpdateOne, and UpdateMany Methods in MongoDB - YouTube](https://www.youtube.com/watch?v=fnw6qYwohmQ&list=PLvTjg4siRgU1XVKER93YtJ2tCTXHCTBlT&index=10)  
+## Как сделать адаптивное меню на jQuery. уроки jQuery. - YouTube  
+[Как сделать адаптивное меню на jQuery. уроки jQuery. - YouTube](https://www.youtube.com/watch?v=TOlHXNINzUU&list=PLVfMKQXDAhGXQcouhIblV910Rv7lRscH3&index=10)  
   
-## Deleting Documents with the Remove,DeleteOne, and DeleteMany Methods in MongoDB - YouTube  
-[Deleting Documents with the Remove,DeleteOne, and DeleteMany Methods in MongoDB - YouTube](https://www.youtube.com/watch?v=OeoOWwZ1k9I&list=PLvTjg4siRgU1XVKER93YtJ2tCTXHCTBlT&index=11)  
+## Уроки jQuery практика- как сделать адаптивное меню с Flexbox и jQuery - YouTube  
+[Уроки jQuery практика- как сделать адаптивное меню с Flexbox и jQuery - YouTube](https://www.youtube.com/watch?v=tgVen6pc6i0&list=PLVfMKQXDAhGXQcouhIblV910Rv7lRscH3&index=11)  
+  
+## Уроки jQuery практика- как сделать слайдер - YouTube  
+[Уроки jQuery практика- как сделать слайдер - YouTube](https://www.youtube.com/watch?v=u4qJcO5hLdQ&list=PLVfMKQXDAhGXQcouhIblV910Rv7lRscH3&index=12)  
+  
+## Уроки jQuery практика- как сделать кнопку наверх (back to top) как вконтакте - YouTube  
+[Уроки jQuery практика- как сделать кнопку наверх (back to top) как вконтакте - YouTube](https://www.youtube.com/watch?v=d049Mr1WSFE&list=PLVfMKQXDAhGXQcouhIblV910Rv7lRscH3&index=13)  
+  
+## Уроки jQuery практика- анимация счетчика чисел - YouTube  
+[Уроки jQuery практика- анимация счетчика чисел - YouTube](https://www.youtube.com/watch?v=ykS16GArbTk&list=PLVfMKQXDAhGXQcouhIblV910Rv7lRscH3&index=14)  
+  
+## Уроки jQuery практика- делаем To Do приложение - YouTube  
+[Уроки jQuery практика- делаем To Do приложение - YouTube](https://www.youtube.com/watch?v=BygJB_h5n2w&list=PLVfMKQXDAhGXQcouhIblV910Rv7lRscH3&index=15)  
+  
+## Уроки jQuery практика- делаем Skill bar для портфолио - YouTube  
+[Уроки jQuery практика- делаем Skill bar для портфолио - YouTube](https://www.youtube.com/watch?v=r_3FcNmYwL0&list=PLVfMKQXDAhGXQcouhIblV910Rv7lRscH3&index=16)  
+  
+## Уроки jQuery практика- делаем простой аккордеон - YouTube  
+[Уроки jQuery практика- делаем простой аккордеон - YouTube](https://www.youtube.com/watch?v=nWmN_yn0IHI&list=PLVfMKQXDAhGXQcouhIblV910Rv7lRscH3&index=17)  
+  
+## Уроки jQuery практика- меняем фон страницы при скролле - YouTube  
+[Уроки jQuery практика- меняем фон страницы при скролле - YouTube](https://www.youtube.com/watch?v=7eU48GpO2y8&list=PLVfMKQXDAhGXQcouhIblV910Rv7lRscH3&index=18)  
   
