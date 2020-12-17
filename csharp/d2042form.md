@@ -140,3 +140,6 @@ d2042_132Resize
 this.BackColor = Color.White;
 this.TransparencyKey = Color.White;
 ```
+
+
+d2042_142Clipboard
