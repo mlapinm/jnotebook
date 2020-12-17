@@ -45,8 +45,38 @@
 [footer](#footer)  
 
 ## C# Console Project Visual Studio - YouTube  
-[C# Console Project Visual Studio - YouTube](https://www.youtube.com/watch?v=-ASUsKFI09Q&list=PLUY1lsOTtPeL7c58TruqNKAEwxNUBAy7b&index=44)  
-  
+[C# Console Project Visual Studio - YouTube]https://dotnet.microsoft.com/download
+https://dotnet.microsoft.com/download/dotnet-core/thank-you/sdk-3.1.404-windows-x64-installer
+dotnet new console
+- C# ms-dotnettools.csharp  
+- https://dotnet.microsoft.com/download/dotnet-core
+- dotnet new console
+- dotnet run
+## winform
+- https://www.youtube.com/watch?v=1HZBlw3xsak
+- PowerShell
+- dotnet new winforms
+- dotnet run  
+https://code.visualstudio.com/docs/languages/csharp  
+
+```
+using System;
+
+namespace d2022hello
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello World!");
+        }
+    }
+}
+```
+
+
+## C# While Loop - YouTube  
+[C# While Loop - YouTube](https://www.youtube.com/watch?v=f_RQMIY8H3U&list=PLUY1lsOTtPeL7c58TruqNKAEwxNUBAy7b&index=43)  
 ```
            int a = 10;
 
@@ -67,13 +97,24 @@ Value of a: 17
 Value of a: 18
 Value of a: 19
 ```
-
-## C# While Loop - YouTube  
-[C# While Loop - YouTube](https://www.youtube.com/watch?v=f_RQMIY8H3U&list=PLUY1lsOTtPeL7c58TruqNKAEwxNUBAy7b&index=43)  
   
 ## C# Switch Statement - YouTube  
 [C# Switch Statement - YouTube](https://www.youtube.com/watch?v=5Jnb2ifDZx4&list=PLUY1lsOTtPeL7c58TruqNKAEwxNUBAy7b&index=42)  
-  
+```
+            string color = "yellow";
+
+            switch(color){
+                case "white":
+                Console.WriteLine("white");
+                break;
+                case "blue":
+                Console.WriteLine("blue");
+                break;
+                default:
+                Console.WriteLine("invalid color : " + color);
+                break;
+            }
+```  
 ## C# Stack Collection - YouTube  
 [C# Stack Collection - YouTube](https://www.youtube.com/watch?v=k_NHIJ-zB4k&list=PLUY1lsOTtPeL7c58TruqNKAEwxNUBAy7b&index=41)  
   

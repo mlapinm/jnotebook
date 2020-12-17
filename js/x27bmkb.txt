@@ -18,12 +18,107 @@
 18 [Уроки jQuery практика- меняем фон страницы при скролле - YouTube](#Уроки-jQuery-практика--меняем-фон-страницы-при-скролле---YouTube)  
 ## Введение. Синтаксис - YouTube  
 [Введение. Синтаксис - YouTube](https://www.youtube.com/watch?v=B4jWRrz3FUM&list=PLVfMKQXDAhGXQcouhIblV910Rv7lRscH3&index=1)  
-  
+### 1
+```
+$(document).ready(()=>{
+  $("h1").css("color", "blue")
+})
+```
+### 2
+```
+$(()=>{
+  $("h1").css("color", "yellow")
+})
+```
+### 3 
+```
+$(()=>{
+  $("h1").css("color", "yellow")
+})
+$(()=>{
+  $("h1").css("background", "black")
+})
+```
+### 4
+```
+$(()=>{
+  $("h1").html("new text")
+})
+```
+### 5
+```
+$("#bu_start").click(()=>{
+  $("#message")
+  .css("background", "green")
+  .css("color", "blue")
+})
+$("#bu_reset").click(()=>{
+location.reload()
+})
+```
 ## Выбор селекторов. Оптимизация выборки - YouTube  
 [Выбор селекторов. Оптимизация выборки - YouTube](https://www.youtube.com/watch?v=pfsef_VWFR8&list=PLVfMKQXDAhGXQcouhIblV910Rv7lRscH3&index=2)  
+```
+  <header>
+    <h3>like to see you</h3>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+  </header>
+  <div id="content" class="wrapper box">
+    <article>
+      <h4>Title1</h4>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illum fugit architecto minima aliquid aperiam! Possimus, nobis! Repudiandae exercitationem rerum nemo reprehenderit. 
+        Assumenda officiis alias unde porro quos distinctio quas.
+      </p>
+      </article>
+      <article>
+        <h4>Title2</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illum fugit architecto minima aliquid aperiam! Possimus, nobis! Repudiandae exercitationem rerum nemo reprehenderit. 
+          Assumenda officiis alias unde porro quos distinctio quas.
+        </p>
+        </article>
+      </div>
+    <footer>&copy;copyright 2021</footer>
+```
+```
+$("#content").css("background", "yellow")
+// $(".wrapper").css("background", "yellow")
+// $("h3, h4").css("background", "yellow")
+// $("article h4").css("background", "yellow")
+// $("article").find("h4").css("background", "yellow")
+// $("h3 + p").css("background", "yellow")
+// $("footer").prev().css("background", "yellow")
+// $("h3").next().css("background", "yellow")
+// $("*").css("background", "yellow")
+// $("article > h4").css("background", "yellow")
+// $("article > *").css("background", "yellow")
+```  
   
 ## Работа с CSS. Изменения атрибутов элемента. - YouTube  
 [Работа с CSS. Изменения атрибутов элемента. - YouTube](https://www.youtube.com/watch?v=eFrtW9O7Rtk&list=PLVfMKQXDAhGXQcouhIblV910Rv7lRscH3&index=3)  
+### 1
+```
+$(".box").css({
+  'color' : 'yellow',
+  'background' : "green",
+  'margin' : "30px"
+})
+```
+### 2  
+```
+$(".box").css({
+  color : 'yellow',
+  background : "green",
+  margin : "60px",
+  fontSize: "30px"
+})
+```
+### 3
+```
+/// $("#content").css('height',"300px")
+$("#content").css('height', (i, value)=>{
+  return parseFloat(value) * 1.5
+})
+```
   
 ## События в jquery - YouTube  
 [События в jquery - YouTube](https://www.youtube.com/watch?v=p7ey_crD_UY&list=PLVfMKQXDAhGXQcouhIblV910Rv7lRscH3&index=4)  
