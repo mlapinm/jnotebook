@@ -58,6 +58,8 @@ dotnet new console
 - dotnet new winforms
 - dotnet run  
 https://code.visualstudio.com/docs/languages/csharp  
+https://docs.microsoft.com/ru-ru/dotnet/api/system.collections.queue?view=netframework-4.8#examples  
+
 
 ```
 using System;
@@ -114,55 +116,309 @@ Value of a: 19
                 Console.WriteLine("invalid color : " + color);
                 break;
             }
+			// invalid color : yellow
 ```  
 ## C# Stack Collection - YouTube  
 [C# Stack Collection - YouTube](https://www.youtube.com/watch?v=k_NHIJ-zB4k&list=PLUY1lsOTtPeL7c58TruqNKAEwxNUBAy7b&index=41)  
+
+```
+using System.Collections.Generic;
+
+
+            Stack<String> st = new Stack<String>();
+            st.Push("abc");
+            st.Push("bbc");
+            st.Push("cbc");
+            st.Push("dbc");
+
+            Console.WriteLine(st.Pop() + " pop");
+
+            foreach(String v in st){
+                Console.WriteLine(v);
+            }
+            Console.Read();
+```
   
 ## C# SortedList Class - YouTube  
 [C# SortedList Class - YouTube](https://www.youtube.com/watch?v=gHd4hmqPm18&list=PLUY1lsOTtPeL7c58TruqNKAEwxNUBAy7b&index=40)  
-  
+```
+using System.IO;
+using System.Text;
+
+            SortedList<String, String> st = new SortedList<String, String>();
+            st.Add("01", "abc");
+            st.Add("02", "bbc");
+            st.Add("03", "cbc");
+            st.Add("04", "dbc");
+
+            ICollection<String> keys = st.Keys;
+
+            foreach(String k in keys){
+                Console.WriteLine(k + " - " + st[k]);
+            }
+            Console.ReadLine();
+// 01 - abc
+// 02 - bbc
+// 03 - cbc
+// 04 - dbc
+```  
 ## C# Read Text File - YouTube  
 [C# Read Text File - YouTube](https://www.youtube.com/watch?v=1KoQpdoreVc&list=PLUY1lsOTtPeL7c58TruqNKAEwxNUBAy7b&index=39)  
-  
+```
+            try{
+                string text1;
+                var FileStream = new FileStream(@"./d2022.txt",
+                FileMode.Open, FileAccess.Read);
+
+                using(var StreamReader = new StreamReader(FileStream, Encoding.UTF8)){
+                    text1 = StreamReader.ReadToEnd();
+                }
+
+                Console.WriteLine(text1);
+
+            }catch(Exception e){
+                Console.WriteLine(e);
+            }
+
+            Console.Read();
+// sunday
+// monday
+```  
 ## C# Queue Collection Class - YouTube  
 [C# Queue Collection Class - YouTube](https://www.youtube.com/watch?v=kgmfFQ5SYK8&list=PLUY1lsOTtPeL7c58TruqNKAEwxNUBAy7b&index=38)  
+
+```
+using System.Collections;
+
+            Queue qt = new Queue();
+
+            qt.Enqueue('A');
+            qt.Enqueue('B');
+            qt.Enqueue('C');
+            qt.Enqueue('D');
+
+            qt.Dequeue();
+            foreach(char c in qt){
+                Console.WriteLine(c);
+            }
+
+            Console.Read();
+// B
+// C
+// D
+```
   
 ## C# List Collection Class - YouTube  
 [C# List Collection Class - YouTube](https://www.youtube.com/watch?v=_F6FHUxjT08&list=PLUY1lsOTtPeL7c58TruqNKAEwxNUBAy7b&index=37)  
-  
+```
+using System.Collections.Generic;
+
+            List<String> lt = new List<string>();
+            lt.Add("abc");
+            lt.Add("bbc");
+            lt.Add("cbc");
+            lt.Add("dbc");
+
+            foreach(String value in lt){
+                Console.WriteLine(value);
+            }
+
+            Console.Read();
+// abc
+// bbc
+// cbc
+// dbc
+```  
 ## C# Inheritance - YouTube  
 [C# Inheritance - YouTube](https://www.youtube.com/watch?v=_duFHdJBZ8c&list=PLUY1lsOTtPeL7c58TruqNKAEwxNUBAy7b&index=36)  
-  
+```
+
+        class addition{
+            protected int x = 3;
+            protected int y = 4;
+        }
+
+        class multiply : addition{
+            public int result(){
+                return x*y;
+            }
+        }
+
+
+        static void Main(string[] args)
+        {
+            multiply obj = new multiply();
+            Console.WriteLine(obj.result());
+
+            Console.Read();
+        }
+        // 12
+```  
 ## C# If Else Condition - YouTube  
 [C# If Else Condition - YouTube](https://www.youtube.com/watch?v=0pA2iT1EnOs&list=PLUY1lsOTtPeL7c58TruqNKAEwxNUBAy7b&index=35)  
-  
+```
+            int a = 30;
+
+            if(a<20){
+                Console.WriteLine("a is less than 20");
+            }else{
+                Console.WriteLine("a is greater than 20");
+            }
+
+            Console.Read();
+        }
+        // a is greater than 20
+```  
 ## C# Hashtable - YouTube  
 [C# Hashtable - YouTube](https://www.youtube.com/watch?v=equBeaoP6ls&list=PLUY1lsOTtPeL7c58TruqNKAEwxNUBAy7b&index=34)  
-  
+```
+using System.Collections;
+
+Hashtable hashtable = new Hashtable();
+
+hashtable.Add("01", "abc");
+hashtable.Add("02", "bbc");
+hashtable.Add("03", "cbc");
+hashtable.Add("04", "dbc");
+
+ICollection keys = hashtable.Keys;
+
+foreach(String key in keys){
+	Console.WriteLine(key + " : " + hashtable[key]);
+}
+
+ Console.Read();
+// 01 : abc
+// 04 : dbc
+// 03 : cbc
+// 02 : bbc        
+```  
 ## C# Functions - YouTube  
 [C# Functions - YouTube](https://www.youtube.com/watch?v=jqcMBsmEH9I&list=PLUY1lsOTtPeL7c58TruqNKAEwxNUBAy7b&index=33)  
-  
+```
+public static int Add(int x, int y){
+	return x + y;
+}
+static void Main(string[] args)
+{
+	int result = Add(3, 4);
+	Console.WriteLine(result);
+}
+// 7
+```  
 ## C# For Loop - YouTube  
 [C# For Loop - YouTube](https://www.youtube.com/watch?v=LaRSlbCEius&list=PLUY1lsOTtPeL7c58TruqNKAEwxNUBAy7b&index=32)  
-  
+```
+for(int i=10;i<20;i++){
+	Console.WriteLine("Value of i : " + i);
+}
+
+Console.Read();
+
+// Value of i : 10
+// Value of i : 11
+// Value of i : 12
+// Value of i : 13
+// Value of i : 14
+// Value of i : 15
+// Value of i : 16
+// Value of i : 17
+// Value of i : 18
+// Value of i : 19
+```  
 ## C# For Each Loop - YouTube  
 [C# For Each Loop - YouTube](https://www.youtube.com/watch?v=eUzPj57sxvU&list=PLUY1lsOTtPeL7c58TruqNKAEwxNUBAy7b&index=31)  
-  
+```
+String[] color = {"blue", "yellow", "red", "green"};
+
+foreach(String value in color){
+	Console.WriteLine(value);
+}
+
+Console.Read();
+// blue
+// yellow
+// red
+// green
+```  
 ## C# Exception Handling - YouTube  
 [C# Exception Handling - YouTube](https://www.youtube.com/watch?v=apjJn1bV7jU&list=PLUY1lsOTtPeL7c58TruqNKAEwxNUBAy7b&index=30)  
-  
+```
+try{
+	int count = Convert.ToInt16("22");
+	Console.WriteLine(count);
+}catch(Exception e){
+	Console.WriteLine(e);
+}finally{
+	Console.WriteLine("String to int failed");
+}
+```  
 ## C# Do While Loop - YouTube  
 [C# Do While Loop - YouTube](https://www.youtube.com/watch?v=n9GXhA8V6qc&list=PLUY1lsOTtPeL7c58TruqNKAEwxNUBAy7b&index=29)  
-  
+```
+int a = 10;
+do{
+	Console.WriteLine("Value of A : " + a);
+	a++;
+}while(a < 21);
+// Value of A : 10
+// Value of A : 11
+// Value of A : 12
+// Value of A : 13
+// Value of A : 14
+// Value of A : 15
+// Value of A : 16
+// Value of A : 17
+// Value of A : 18
+// Value of A : 19
+// Value of A : 20
+```  
 ## C# Dictionary Collection - YouTube  
 [C# Dictionary Collection - YouTube](https://www.youtube.com/watch?v=pwI4r1KO5HQ&list=PLUY1lsOTtPeL7c58TruqNKAEwxNUBAy7b&index=28)  
-  
+```
+using System.Collections.Generic;
+
+Dictionary<String, int> dic = new Dictionary<String, int>(){
+	{"abc", 1},
+	{"bbc", 2},
+	{"cbc", 3},
+	{"dbc", 4}
+};
+
+foreach(KeyValuePair<String, int> pair in dic){
+	Console.WriteLine("{0}, {1}", pair.Key, pair.Value);
+}
+// abc, 1
+// bbc, 2
+// cbc, 3
+// dbc, 4            
+```  
 ## C# Create Thread - YouTube  
 [C# Create Thread - YouTube](https://www.youtube.com/watch?v=NL9fcmkPW3g&list=PLUY1lsOTtPeL7c58TruqNKAEwxNUBAy7b&index=27)  
-  
+```
+try{
+	Thread thread = new Thread(new ThreadStart(stuff));
+	thread.Start();
+}catch(Exception e){
+	Console.WriteLine(e);
+}
+
+static void stuff(){
+	Console.WriteLine("Thread 1 running");
+}
+```  
 ## C# Create Text File - YouTube  
 [C# Create Text File - YouTube](https://www.youtube.com/watch?v=av1ZuT8Lf3A&list=PLUY1lsOTtPeL7c58TruqNKAEwxNUBAy7b&index=26)  
-  
+```
+try{
+	TextWriter textWriter = new StreamWriter("./new02.txt", true);
+	textWriter.WriteLine("123");
+	textWriter.Close();
+	Console.WriteLine("File Worked");
+}catch(Exception e){
+	Console.WriteLine(e);
+}
+```  
 ## C# Create Class - YouTube  
 [C# Create Class - YouTube](https://www.youtube.com/watch?v=npxJIL8MpwQ&list=PLUY1lsOTtPeL7c58TruqNKAEwxNUBAy7b&index=25)  
   
