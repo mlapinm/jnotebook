@@ -57,7 +57,10 @@ Creating Todo MongoDB CRUD Application from Scratch
 Learn JavaScript by Building 7 Games - Full Course  
 ## csharp
 [csharp](./csharp/README.md)  
+Console Projects devnami  
+Create WinForms Projects  
   
+Visual Studio Code Csharp Beginner Tutorial Hello World   
 ## 
 []()  
   
