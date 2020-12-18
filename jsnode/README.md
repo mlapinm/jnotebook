@@ -6,7 +6,7 @@
 [Learn JavaScript by Building 7 Games - Full Course](#Learn-JavaScript-by-Building-7-Games---Full-Course)  
 [Data Visualization with D3](#Data-Visualization-with-D3)  
 [Уроки jQuery Web Developer Blog](#Уроки-jQuery-Web-Developer-Blog)  
-[](#)  
+[jQuery Beau teaches JavaScript](#jQuery-Beau-teaches-JavaScript)  
 [](#)  
 [](#)  
 [](#)  
@@ -90,8 +90,36 @@ Part 11: User Input Validation - YouTube
 [Data Visualization with D3](f2102d3.md)  
 ## Уроки jQuery Web Developer Blog
 [Уроки jQuery Web Developer Blog](q2022devblog.md)  
-## 
-[]()  
+1 Введение. Синтаксис - YouTube
+2 Выбор селекторов. Оптимизация выборки - YouTube
+3 Работа с CSS. Изменения атрибутов элемента. - YouTube
+4 События в jquery - YouTube
+5 Анимация. Часть 1.Hide.Show.SlideUp.SlideDown - YouTube
+6 Анимация. Часть 2.Fade.Animate - YouTube
+7 Манипуляции с DOM . Часть 1.After.Before.Append - YouTube
+8 Манипуляции с DOM . Часть 2.Replace.Wrap.Clone.Detach - YouTube
+9 Манипуляции с DOM.Offset,Position,Height,innerHeight - YouTube
+10 Как сделать адаптивное меню на jQuery. уроки jQuery. - YouTube
+11 Уроки jQuery практика- как сделать адаптивное меню с Flexbox и jQuery - YouTube
+12 Уроки jQuery практика- как сделать слайдер - YouTube
+13 Уроки jQuery практика- как сделать кнопку наверх (back to top) как вконтакте - YouTube
+14 Уроки jQuery практика- анимация счетчика чисел - YouTube
+15 Уроки jQuery практика- делаем To Do приложение - YouTube
+16 Уроки jQuery практика- делаем Skill bar для портфолио - YouTube
+17 Уроки jQuery практика- делаем простой аккордеон - YouTube
+18 Уроки jQuery практика- меняем фон страницы при скролле - YouTube  
+## jQuery Beau teaches JavaScript
+[jQuery Beau teaches JavaScript](q2032beau.md)  
+1 Getting started with jQuery (tutorial) - Beau teaches JavaScript - YouTube
+2 jQuery events - Beau teaches JavaScript - YouTube
+3 jQuery effects - Beau teaches JavaScript - YouTube
+4 animate in jQuery - Beau teaches JavaScript - YouTube
+5 jQuery: get and set with http, text, val, and attr - Beau teaches JavaScript - YouTube
+6 jQuery: add and remove DOM elements - Beau teaches JavaScript - YouTube
+7 jQuery: CSS and classes - YouTube
+8 jQuery: Dom Traversal (find parent and child nodes) - Beau teaches JavaScript - YouTube
+9 jQuery: AJAX - Beau teaches JavaScript - YouTube
+10 jQuery vs vanilla JavaScript - Beau teaches JavaScript - YouTube
 ## 
 []()  
 ## 
