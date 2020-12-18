@@ -1,167 +1,40 @@
-1 [Введение. Синтаксис - YouTube](#Введение.-Синтаксис---YouTube)  
-2 [Выбор селекторов. Оптимизация выборки - YouTube](#Выбор-селекторов.-Оптимизация-выборки---YouTube)  
-3 [Работа с CSS. Изменения атрибутов элемента. - YouTube](#Работа-с-CSS.-Изменения-атрибутов-элемента.---YouTube)  
-4 [События в jquery - YouTube](#События-в-jquery---YouTube)  
-5 [Анимация. Часть 1.Hide.Show.SlideUp.SlideDown - YouTube](#Анимация.-Часть-1.Hide.Show.SlideUp.SlideDown---YouTube)  
-6 [Анимация. Часть 2.Fade.Animate - YouTube](#Анимация.-Часть-2.Fade.Animate---YouTube)  
-7 [Манипуляции с DOM . Часть 1.After.Before.Append - YouTube](#Манипуляции-с-DOM-.-Часть-1.After.Before.Append---YouTube)  
-8 [Манипуляции с DOM . Часть 2.Replace.Wrap.Clone.Detach - YouTube](#Манипуляции-с-DOM-.-Часть-2.Replace.Wrap.Clone.Detach---YouTube)  
-9 [Манипуляции с DOM.Offset,Position,Height,innerHeight - YouTube](#Манипуляции-с-DOM.Offset,Position,Height,innerHeight---YouTube)  
-10 [Как сделать адаптивное меню на jQuery. уроки jQuery. - YouTube](#Как-сделать-адаптивное-меню-на-jQuery.-уроки-jQuery.---YouTube)  
-11 [Уроки jQuery практика- как сделать адаптивное меню с Flexbox и jQuery - YouTube](#Уроки-jQuery-практика--как-сделать-адаптивное-меню-с-Flexbox-и-jQuery---YouTube)  
-12 [Уроки jQuery практика- как сделать слайдер - YouTube](#Уроки-jQuery-практика--как-сделать-слайдер---YouTube)  
-13 [Уроки jQuery практика- как сделать кнопку наверх (back to top) как вконтакте - YouTube](#Уроки-jQuery-практика--как-сделать-кнопку-наверх-(back-to-top)-как-вконтакте---YouTube)  
-14 [Уроки jQuery практика- анимация счетчика чисел - YouTube](#Уроки-jQuery-практика--анимация-счетчика-чисел---YouTube)  
-15 [Уроки jQuery практика- делаем To Do приложение - YouTube](#Уроки-jQuery-практика--делаем-To-Do-приложение---YouTube)  
-16 [Уроки jQuery практика- делаем Skill bar для портфолио - YouTube](#Уроки-jQuery-практика--делаем-Skill-bar-для-портфолио---YouTube)  
-17 [Уроки jQuery практика- делаем простой аккордеон - YouTube](#Уроки-jQuery-практика--делаем-простой-аккордеон---YouTube)  
-18 [Уроки jQuery практика- меняем фон страницы при скролле - YouTube](#Уроки-jQuery-практика--меняем-фон-страницы-при-скролле---YouTube)  
-## Введение. Синтаксис - YouTube  
-[Введение. Синтаксис - YouTube](https://www.youtube.com/watch?v=B4jWRrz3FUM&list=PLVfMKQXDAhGXQcouhIblV910Rv7lRscH3&index=1)  
-### 1
-```
-$(document).ready(()=>{
-  $("h1").css("color", "blue")
-})
-```
-### 2
-```
-$(()=>{
-  $("h1").css("color", "yellow")
-})
-```
-### 3 
-```
-$(()=>{
-  $("h1").css("color", "yellow")
-})
-$(()=>{
-  $("h1").css("background", "black")
-})
-```
-### 4
-```
-$(()=>{
-  $("h1").html("new text")
-})
-```
-### 5
-```
-$("#bu_start").click(()=>{
-  $("#message")
-  .css("background", "green")
-  .css("color", "blue")
-})
-$("#bu_reset").click(()=>{
-location.reload()
-})
-```
-## Выбор селекторов. Оптимизация выборки - YouTube  
-[Выбор селекторов. Оптимизация выборки - YouTube](https://www.youtube.com/watch?v=pfsef_VWFR8&list=PLVfMKQXDAhGXQcouhIblV910Rv7lRscH3&index=2)  
-```
-  <header>
-    <h3>like to see you</h3>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-  </header>
-  <div id="content" class="wrapper box">
-    <article>
-      <h4>Title1</h4>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illum fugit architecto minima aliquid aperiam! Possimus, nobis! Repudiandae exercitationem rerum nemo reprehenderit. 
-        Assumenda officiis alias unde porro quos distinctio quas.
-      </p>
-      </article>
-      <article>
-        <h4>Title2</h4>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illum fugit architecto minima aliquid aperiam! Possimus, nobis! Repudiandae exercitationem rerum nemo reprehenderit. 
-          Assumenda officiis alias unde porro quos distinctio quas.
-        </p>
-        </article>
-      </div>
-    <footer>&copy;copyright 2021</footer>
-```
-```
-$("#content").css("background", "yellow")
-// $(".wrapper").css("background", "yellow")
-// $("h3, h4").css("background", "yellow")
-// $("article h4").css("background", "yellow")
-// $("article").find("h4").css("background", "yellow")
-// $("h3 + p").css("background", "yellow")
-// $("footer").prev().css("background", "yellow")
-// $("h3").next().css("background", "yellow")
-// $("*").css("background", "yellow")
-// $("article > h4").css("background", "yellow")
-// $("article > *").css("background", "yellow")
-```  
+1 [Getting started with jQuery (tutorial) - Beau teaches JavaScript - YouTube](#Getting-started-with-jQuery-(tutorial)---Beau-teaches-JavaScript---YouTube)  
+2 [jQuery events - Beau teaches JavaScript - YouTube](#jQuery-events---Beau-teaches-JavaScript---YouTube)  
+3 [jQuery effects - Beau teaches JavaScript - YouTube](#jQuery-effects---Beau-teaches-JavaScript---YouTube)  
+4 [animate in jQuery - Beau teaches JavaScript - YouTube](#animate-in-jQuery---Beau-teaches-JavaScript---YouTube)  
+5 [jQuery: get and set with http, text, val, and attr - Beau teaches JavaScript - YouTube](#jQuery:-get-and-set-with-http,-text,-val,-and-attr---Beau-teaches-JavaScript---YouTube)  
+6 [jQuery: add and remove DOM elements - Beau teaches JavaScript - YouTube](#jQuery:-add-and-remove-DOM-elements---Beau-teaches-JavaScript---YouTube)  
+7 [jQuery: CSS and classes - YouTube](#jQuery:-CSS-and-classes---YouTube)  
+8 [jQuery: Dom Traversal (find parent and child nodes) - Beau teaches JavaScript - YouTube](#jQuery:-Dom-Traversal-(find-parent-and-child-nodes)---Beau-teaches-JavaScript---YouTube)  
+9 [jQuery: AJAX - Beau teaches JavaScript - YouTube](#jQuery:-AJAX---Beau-teaches-JavaScript---YouTube)  
+10 [jQuery vs vanilla JavaScript - Beau teaches JavaScript - YouTube](#jQuery-vs-vanilla-JavaScript---Beau-teaches-JavaScript---YouTube)  
+## Getting started with jQuery (tutorial) - Beau teaches JavaScript - YouTube  
+[Getting started with jQuery (tutorial) - Beau teaches JavaScript - YouTube](https://www.youtube.com/watch?v=KhtEmR2A1Fw&list=PLWKjhJtqVAbkyK9woUZUtunToLtNGoQHB&index=1)  
   
-## Работа с CSS. Изменения атрибутов элемента. - YouTube  
-[Работа с CSS. Изменения атрибутов элемента. - YouTube](https://www.youtube.com/watch?v=eFrtW9O7Rtk&list=PLVfMKQXDAhGXQcouhIblV910Rv7lRscH3&index=3)  
-### 1
-```
-$(".box").css({
-  'color' : 'yellow',
-  'background' : "green",
-  'margin' : "30px"
-})
-```
-### 2  
-```
-$(".box").css({
-  color : 'yellow',
-  background : "green",
-  margin : "60px",
-  fontSize: "30px"
-})
-```
-### 3
-```
-/// $("#content").css('height',"300px")
-$("#content").css('height', (i, value)=>{
-  return parseFloat(value) * 1.5
-})
-```
+## jQuery events - Beau teaches JavaScript - YouTube  
+[jQuery events - Beau teaches JavaScript - YouTube](https://www.youtube.com/watch?v=IR7Jbkuh824&list=PLWKjhJtqVAbkyK9woUZUtunToLtNGoQHB&index=2)  
   
-## События в jquery - YouTube  
-[События в jquery - YouTube](https://www.youtube.com/watch?v=p7ey_crD_UY&list=PLVfMKQXDAhGXQcouhIblV910Rv7lRscH3&index=4)  
+## jQuery effects - Beau teaches JavaScript - YouTube  
+[jQuery effects - Beau teaches JavaScript - YouTube](https://www.youtube.com/watch?v=nwK0pJQZMPI&list=PLWKjhJtqVAbkyK9woUZUtunToLtNGoQHB&index=3)  
   
-## Анимация. Часть 1.Hide.Show.SlideUp.SlideDown - YouTube  
-[Анимация. Часть 1.Hide.Show.SlideUp.SlideDown - YouTube](https://www.youtube.com/watch?v=Ydx9h2HrHeg&list=PLVfMKQXDAhGXQcouhIblV910Rv7lRscH3&index=5)  
+## animate in jQuery - Beau teaches JavaScript - YouTube  
+[animate in jQuery - Beau teaches JavaScript - YouTube](https://www.youtube.com/watch?v=ALhxxnTl5Co&list=PLWKjhJtqVAbkyK9woUZUtunToLtNGoQHB&index=4)  
   
-## Анимация. Часть 2.Fade.Animate - YouTube  
-[Анимация. Часть 2.Fade.Animate - YouTube](https://www.youtube.com/watch?v=TM78nW0oEMU&list=PLVfMKQXDAhGXQcouhIblV910Rv7lRscH3&index=6)  
+## jQuery: get and set with http, text, val, and attr - Beau teaches JavaScript - YouTube  
+[jQuery: get and set with http, text, val, and attr - Beau teaches JavaScript - YouTube](https://www.youtube.com/watch?v=veL0_Rb97dE&list=PLWKjhJtqVAbkyK9woUZUtunToLtNGoQHB&index=5)  
   
-## Манипуляции с DOM . Часть 1.After.Before.Append - YouTube  
-[Манипуляции с DOM . Часть 1.After.Before.Append - YouTube](https://www.youtube.com/watch?v=q7zjIHJXuSg&list=PLVfMKQXDAhGXQcouhIblV910Rv7lRscH3&index=7)  
+## jQuery: add and remove DOM elements - Beau teaches JavaScript - YouTube  
+[jQuery: add and remove DOM elements - Beau teaches JavaScript - YouTube](https://www.youtube.com/watch?v=0GKgrEJjJDE&list=PLWKjhJtqVAbkyK9woUZUtunToLtNGoQHB&index=6)  
   
-## Манипуляции с DOM . Часть 2.Replace.Wrap.Clone.Detach - YouTube  
-[Манипуляции с DOM . Часть 2.Replace.Wrap.Clone.Detach - YouTube](https://www.youtube.com/watch?v=xE0tNP2SEDg&list=PLVfMKQXDAhGXQcouhIblV910Rv7lRscH3&index=8)  
+## jQuery: CSS and classes - YouTube  
+[jQuery: CSS and classes - YouTube](https://www.youtube.com/watch?v=MmtfrjLLjJ0&list=PLWKjhJtqVAbkyK9woUZUtunToLtNGoQHB&index=7)  
   
-## Манипуляции с DOM.Offset,Position,Height,innerHeight - YouTube  
-[Манипуляции с DOM.Offset,Position,Height,innerHeight - YouTube](https://www.youtube.com/watch?v=wurHaYZR9ck&list=PLVfMKQXDAhGXQcouhIblV910Rv7lRscH3&index=9)  
+## jQuery: Dom Traversal (find parent and child nodes) - Beau teaches JavaScript - YouTube  
+[jQuery: Dom Traversal (find parent and child nodes) - Beau teaches JavaScript - YouTube](https://www.youtube.com/watch?v=Thnv77n2e6Q&list=PLWKjhJtqVAbkyK9woUZUtunToLtNGoQHB&index=8)  
   
-## Как сделать адаптивное меню на jQuery. уроки jQuery. - YouTube  
-[Как сделать адаптивное меню на jQuery. уроки jQuery. - YouTube](https://www.youtube.com/watch?v=TOlHXNINzUU&list=PLVfMKQXDAhGXQcouhIblV910Rv7lRscH3&index=10)  
+## jQuery: AJAX - Beau teaches JavaScript - YouTube  
+[jQuery: AJAX - Beau teaches JavaScript - YouTube](https://www.youtube.com/watch?v=Wl-VvvNCk2A&list=PLWKjhJtqVAbkyK9woUZUtunToLtNGoQHB&index=9)  
   
-## Уроки jQuery практика- как сделать адаптивное меню с Flexbox и jQuery - YouTube  
-[Уроки jQuery практика- как сделать адаптивное меню с Flexbox и jQuery - YouTube](https://www.youtube.com/watch?v=tgVen6pc6i0&list=PLVfMKQXDAhGXQcouhIblV910Rv7lRscH3&index=11)  
-  
-## Уроки jQuery практика- как сделать слайдер - YouTube  
-[Уроки jQuery практика- как сделать слайдер - YouTube](https://www.youtube.com/watch?v=u4qJcO5hLdQ&list=PLVfMKQXDAhGXQcouhIblV910Rv7lRscH3&index=12)  
-  
-## Уроки jQuery практика- как сделать кнопку наверх (back to top) как вконтакте - YouTube  
-[Уроки jQuery практика- как сделать кнопку наверх (back to top) как вконтакте - YouTube](https://www.youtube.com/watch?v=d049Mr1WSFE&list=PLVfMKQXDAhGXQcouhIblV910Rv7lRscH3&index=13)  
-  
-## Уроки jQuery практика- анимация счетчика чисел - YouTube  
-[Уроки jQuery практика- анимация счетчика чисел - YouTube](https://www.youtube.com/watch?v=ykS16GArbTk&list=PLVfMKQXDAhGXQcouhIblV910Rv7lRscH3&index=14)  
-  
-## Уроки jQuery практика- делаем To Do приложение - YouTube  
-[Уроки jQuery практика- делаем To Do приложение - YouTube](https://www.youtube.com/watch?v=BygJB_h5n2w&list=PLVfMKQXDAhGXQcouhIblV910Rv7lRscH3&index=15)  
-  
-## Уроки jQuery практика- делаем Skill bar для портфолио - YouTube  
-[Уроки jQuery практика- делаем Skill bar для портфолио - YouTube](https://www.youtube.com/watch?v=r_3FcNmYwL0&list=PLVfMKQXDAhGXQcouhIblV910Rv7lRscH3&index=16)  
-  
-## Уроки jQuery практика- делаем простой аккордеон - YouTube  
-[Уроки jQuery практика- делаем простой аккордеон - YouTube](https://www.youtube.com/watch?v=nWmN_yn0IHI&list=PLVfMKQXDAhGXQcouhIblV910Rv7lRscH3&index=17)  
-  
-## Уроки jQuery практика- меняем фон страницы при скролле - YouTube  
-[Уроки jQuery практика- меняем фон страницы при скролле - YouTube](https://www.youtube.com/watch?v=7eU48GpO2y8&list=PLVfMKQXDAhGXQcouhIblV910Rv7lRscH3&index=18)  
+## jQuery vs vanilla JavaScript - Beau teaches JavaScript - YouTube  
+[jQuery vs vanilla JavaScript - Beau teaches JavaScript - YouTube](https://www.youtube.com/watch?v=X65s7WQLWJY&list=PLWKjhJtqVAbkyK9woUZUtunToLtNGoQHB&index=10)  
   
