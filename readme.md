@@ -53,8 +53,12 @@ JavaScript Уровень 1 Основы веб-программирования
 [jsnode](./jsnode/README.md)  
 NodeJS Navigate to URL - DevNami  
 Learn Nodejs Full Tutorial for Beginners FCC NoobCoder  
+MongoDB For Beginners  
 Creating Todo MongoDB CRUD Application from Scratch  
 Learn JavaScript by Building 7 Games - Full Course  
+Data Visualization with D3  
+Уроки jQuery Web Developer Blog  
+jQuery Beau teaches JavaScript  
 ## csharp
 [csharp](./csharp/README.md)  
 Console Projects devnami  
