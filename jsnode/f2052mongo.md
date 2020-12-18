@@ -18,13 +18,54 @@
   
 ## Installing Visual Studio Code: Setting up to use with MongoDB via Intergrated Terminal - YouTube  
 [Installing Visual Studio Code: Setting up to use with MongoDB via Intergrated Terminal - YouTube](https://www.youtube.com/watch?v=54iI586Iv_w&list=PLvTjg4siRgU1XVKER93YtJ2tCTXHCTBlT&index=2)  
+- mongod
+- mongo
+- mongo dbs  
+```
+admin         0.000GB
+config        0.000GB
+crud_mongodb  0.000GB
+local         0.000GB
+```
   
 ## Creating our Database in MongoDB. Inserting and Finding Documents. - YouTube  
 [Creating our Database in MongoDB. Inserting and Finding Documents. - YouTube](https://www.youtube.com/watch?v=5lVmmTNMy60&list=PLvTjg4siRgU1XVKER93YtJ2tCTXHCTBlT&index=3)  
-  
+mongo
+```
+> use school
+switched to db school
+> db.students.insert({"name": "Bob","GPA":4.0})
+WriteResult({ "nInserted" : 1 })
+> db.students.find()
+{ "_id" : ObjectId("5fdb71c3c6cc8dedce4f4eb0"), "name" : "Bob", "GPA" : 4 }
+> db.faculty.insert({name : "peter", salary : 4000})
+WriteResult({ "nInserted" : 1 })
+> db.faculty.find()
+{ "_id" : ObjectId("5fdb7549c6cc8dedce4f4eb1"), "name" : "peter", "salary" : 4000 }
+
+> show dbs
+admin         0.000GB
+config        0.000GB
+crud_mongodb  0.000GB
+local         0.000GB
+school        0.000GB
+
+> use school
+switched to db school
+> show collections
+faculty
+students
+
+
+
+```  
 ## MongoDB is a SchemaLess DataBase - YouTube  
 [MongoDB is a SchemaLess DataBase - YouTube](https://www.youtube.com/watch?v=jzYjReNMQ5A&list=PLvTjg4siRgU1XVKER93YtJ2tCTXHCTBlT&index=4)  
-  
+```
+> db.students.find()
+{ "_id" : ObjectId("5fdb71c3c6cc8dedce4f4eb0"), "name" : "Bob", "GPA" : 4 }
+{ "_id" : ObjectId("5fdb7a79c6cc8dedce4f4eb2"), "lol" : "lol" }
+```  
 ## Using the insertMany Method to Insert Multiple Documents in MongoDB - YouTube  
 [Using the insertMany Method to Insert Multiple Documents in MongoDB - YouTube](https://www.youtube.com/watch?v=yaRSZwUJIrY&list=PLvTjg4siRgU1XVKER93YtJ2tCTXHCTBlT&index=5)  
   
