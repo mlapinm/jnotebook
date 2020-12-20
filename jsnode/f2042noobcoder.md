@@ -11,7 +11,7 @@
 11 [Part 10: Fetch API PUT Request - YouTube](#Part-10:-Fetch-API-PUT-Request---YouTube)  
 12 [Part 11: User Input Validation - YouTube](#Part-11:-User-Input-Validation---YouTube)  
 [footer](#footer)  
-![title]("img_f2042.png")
+![title](./img_f2042.png)
 ## Creating Todo MongoDB CRUD Application from Scratch Overview - YouTube  
 [Creating Todo MongoDB CRUD Application from Scratch Overview - YouTube](https://www.youtube.com/watch?v=U7vikICNygc&list=PLvTjg4siRgU1ucYFHJy1tkwFjf73D0fGa&index=1)  
 ### serverside
