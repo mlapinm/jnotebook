@@ -12,6 +12,17 @@
 12 [Part 11: User Input Validation - YouTube](#Part-11:-User-Input-Validation---YouTube)  
 ## Creating Todo MongoDB CRUD Application from Scratch Overview - YouTube  
 [Creating Todo MongoDB CRUD Application from Scratch Overview - YouTube](https://www.youtube.com/watch?v=U7vikICNygc&list=PLvTjg4siRgU1ucYFHJy1tkwFjf73D0fGa&index=1)  
+### serverside
+##### nodejs
+##### expressjs
+### database
+##### mongodb
+### clientside
+##### jquery
+##### fetch api
+##### bootstrap
+### programming language 
+##### javascript
   
 ## Part 1: Setting Up our Application - YouTube  
 [Part 1: Setting Up our Application - YouTube](https://www.youtube.com/watch?v=XhoaRFYAlEc&list=PLvTjg4siRgU1ucYFHJy1tkwFjf73D0fGa&index=2)  
@@ -126,16 +137,163 @@ http://localhost:3000/gettodos
 [{"_id":"5fd7ad6a0ff636cf22fd4e76","todo":"clean room"},{"_id":"5fd7adc50ff636cf22fd4e77","todo":"clean garage"}]    
 ## Part 3: Server Side Update Portion - YouTube  
 [Part 3: Server Side Update Portion - YouTube](https://www.youtube.com/watch?v=lz0cdQKPSUo&list=PLvTjg4siRgU1ucYFHJy1tkwFjf73D0fGa&index=4)  
-  
+## 1
+```
+app.put('/:id', (req, res)=>{
+  const todoID = req.params.id
+  const userInput = req.body
+  db.getDB().collection(collection).findOneAndUpdate(
+    {_id : db.getPrimaryKey(todoID)},
+    {$set : {todo : userInput.todo}}, 
+    {returnOriginal : false}, (err, result)=>{
+      if(err){
+        console.log(err)
+      }else{
+        res.json(result)
+      }
+    }
+  )
+})
+```
+## 2
+- postman
+- put localhost:3000/5fd7adc50ff636cf22fd4e77
+- body raw {"todo" : "clean room3"}
+- responce body pretty json
+- send  
+## 3
+```
+{
+    "lastErrorObject": {
+        "n": 1,
+        "updatedExisting": true
+    },
+    "value": {
+        "_id": "5fd7adc50ff636cf22fd4e77",
+        "todo": "clean room3"
+    },
+    "ok": 1
+}
+```  
 ## Part 4: Server Side Create Portion - YouTube  
 [Part 4: Server Side Create Portion - YouTube](https://www.youtube.com/watch?v=tXPi-6o6SLU&list=PLvTjg4siRgU1ucYFHJy1tkwFjf73D0fGa&index=5)  
-  
+## 1
+```
+app.post('/', (req, res)=>{
+  const userInput = req.body;
+  db.getDB().collection(collection).insertOne(userInput, (err, result)=>{
+    if(err){
+      console.log();
+    }else{
+      res.json({result: result, document : result.ops[0]})
+    }
+  })
+})
+```
+## 2
+- post localhost:3000/
+- {"todo" : "clean something"}
+```
+{
+    "result": {
+        "result": {
+            "n": 1,
+            "ok": 1
+        },
+        "connection": {
+            "_events": {},
+            "_eventsCount": 4,
+            "id": 1,
+            "address": "127.0.0.1:27017",
+            "bson": {},
+            "socketTimeout": 0,
+            "host": "localhost",
+            "port": 27017,
+            "monitorCommands": false,
+            "closed": false,
+            "destroyed": false,
+            "lastIsMasterMS": 1
+        },
+        "ops": [
+            {
+                "todo": "clean something",
+                "_id": "5fddc808753ed937d0c4444c"
+            }
+        ],
+        "insertedCount": 1,
+        "insertedId": "5fddc808753ed937d0c4444c",
+        "n": 1,
+        "ok": 1
+    },
+    "document": {
+        "todo": "clean something",
+        "_id": "5fddc808753ed937d0c4444c"
+    }
+}
+```
+## 4
+```
+> db.todo.find({}).pretty()
+{ "_id" : ObjectId("5fd7ad6a0ff636cf22fd4e76"), "todo" : "clean room2" }    
+{ "_id" : ObjectId("5fd7adc50ff636cf22fd4e77"), "todo" : "clean room3" }    
+{ "_id" : ObjectId("5fddc808753ed937d0c4444c"), "todo" : "clean something" }
+```  
 ## Part 5: Server Side Delete Portion - YouTube  
 [Part 5: Server Side Delete Portion - YouTube](https://www.youtube.com/watch?v=zzOsSAuqI2g&list=PLvTjg4siRgU1ucYFHJy1tkwFjf73D0fGa&index=6)  
-  
+## 1
+```
+```
+## 2
+get localhost:3000/getTodos
+```
+[
+    {
+        "_id": "5fd7ad6a0ff636cf22fd4e76",
+        "todo": "clean room2"
+    },
+    {
+        "_id": "5fd7adc50ff636cf22fd4e77",
+        "todo": "clean room3"
+    },
+    {
+        "_id": "5fddc808753ed937d0c4444c",
+        "todo": "clean something"
+    }
+]
+```
+## 3
+localhost:3000/5fd7ad6a0ff636cf22fd4e76  
+```
+{
+    "lastErrorObject": {
+        "n": 1
+    },
+    "value": {
+        "_id": "5fd7ad6a0ff636cf22fd4e76",
+        "todo": "clean room2"
+    },
+    "ok": 1
+}
+```
+## 4
+get localhost:3000/getTodos  
+```
+[
+    {
+        "_id": "5fd7adc50ff636cf22fd4e77",
+        "todo": "clean room3"
+    },
+    {
+        "_id": "5fddc808753ed937d0c4444c",
+        "todo": "clean something"
+    }
+]
+```  
 ## Part 6: Creating Our Index.html File - YouTube  
 [Part 6: Creating Our Index.html File - YouTube](https://www.youtube.com/watch?v=M1CfumCoNZg&list=PLvTjg4siRgU1ucYFHJy1tkwFjf73D0fGa&index=7)  
-  
+-  https://getbootstrap.com/docs/4.5/getting-started/introduction/#starter-template  
+- https://getbootstrap.com/docs/4.5/components/forms/#form-groups
+-   
 ## Part 7: Fetch API GET Request - YouTube  
 [Part 7: Fetch API GET Request - YouTube](https://www.youtube.com/watch?v=QNjXFsCWNaA&list=PLvTjg4siRgU1ucYFHJy1tkwFjf73D0fGa&index=8)  
   
