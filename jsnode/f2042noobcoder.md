@@ -10,6 +10,8 @@
 10 [Part 9: Fetch API DELETE Request - YouTube](#Part-9:-Fetch-API-DELETE-Request---YouTube)  
 11 [Part 10: Fetch API PUT Request - YouTube](#Part-10:-Fetch-API-PUT-Request---YouTube)  
 12 [Part 11: User Input Validation - YouTube](#Part-11:-User-Input-Validation---YouTube)  
+[footer](#footer)  
+![title]("./img-f2042.png")
 ## Creating Todo MongoDB CRUD Application from Scratch Overview - YouTube  
 [Creating Todo MongoDB CRUD Application from Scratch Overview - YouTube](https://www.youtube.com/watch?v=U7vikICNygc&list=PLvTjg4siRgU1ucYFHJy1tkwFjf73D0fGa&index=1)  
 ### serverside
@@ -296,16 +298,84 @@ get localhost:3000/getTodos
 -   
 ## Part 7: Fetch API GET Request - YouTube  
 [Part 7: Fetch API GET Request - YouTube](https://www.youtube.com/watch?v=QNjXFsCWNaA&list=PLvTjg4siRgU1ucYFHJy1tkwFjf73D0fGa&index=8)  
-  
+```
+    const getTodos = ()=>{
+      fetch('/getTodos', {method : "get"}).then((response)=>{
+        return response.json();
+      }).then((data)=>{
+        console.log(data)
+        displayTodos(data)
+      })
+    }
+	
+    getTodos()
+```  
 ## Part 8: Fetch API POST Request - YouTube  
 [Part 8: Fetch API POST Request - YouTube](https://www.youtube.com/watch?v=Gj_NlmjtLCM&list=PLvTjg4siRgU1ucYFHJy1tkwFjf73D0fGa&index=9)  
-  
+```
+    form.submit((e)=>{
+      e.preventDefault()
+      fetch('/', {
+        method : 'post',
+        body : JSON.stringify({todo : todoUserInput.val()}),
+        headers : {
+          "Content-Type" : "application/json; charset=utf-8"
+        }
+      }).then((response)=>{
+        return response.json()
+      }).then((data)=>{
+        if(data.result.ok == 1 && data.result.n == 1){
+          let ids = buildIDS(data.document)
+          display.prepend(buildTemplate(data.document, ids))
+          // editTodo(data.document, ids.todoID, ids.editID)
+          // deleteTodo(data.document, ids.listItemID, ids.deleteID)
+        }
+        resetTodosInput()
+      })
+    })
+```  
 ## Part 9: Fetch API DELETE Request - YouTube  
 [Part 9: Fetch API DELETE Request - YouTube](https://www.youtube.com/watch?v=oqrKYyWTvIA&list=PLvTjg4siRgU1ucYFHJy1tkwFjf73D0fGa&index=10)  
-  
+```
+    const deleteTodo = (todo, listItemID, deleteID)=>{
+      let deleteBtn = $(`#${deleteID}`)
+      deleteBtn.click(()=>{
+        fetch(`/${todo._id}`,{
+          method : "delete"
+        }).then((response)=>{
+          return response.json()
+        }).then((data)=>{
+          if(data.ok == 1){
+            $(`#${listItemID}`).remove()
+          }
+        })
+      })
+    }
+```  
 ## Part 10: Fetch API PUT Request - YouTube  
 [Part 10: Fetch API PUT Request - YouTube](https://www.youtube.com/watch?v=CbXJPF-ei_A&list=PLvTjg4siRgU1ucYFHJy1tkwFjf73D0fGa&index=11)  
-  
+```
+    const editTodo = (todo, todoID, editID)=>{
+      let editBtn = $(`#${editID}`)
+      editBtn.click(()=>{
+        fetch(`/${todo._id}`, {
+          method : "put",
+          headers : {
+            "Content-Type" : "application/json; charset=utf-8"
+          },
+          body : JSON.stringify({todo : todoUserInput.val()})
+        }).then((response)=>{
+          return response.json()
+        }).then((data)=>{
+          if(data.ok == 1){
+            let todoIndex = $(`#${todoID}`)
+            todoIndex.html(data.value.todo)
+            resetTodosInput()
+          }
+        })
+      })
+    }
+```  
 ## Part 11: User Input Validation - YouTube  
 [Part 11: User Input Validation - YouTube](https://www.youtube.com/watch?v=Hn-w9mx8FF4&list=PLvTjg4siRgU1ucYFHJy1tkwFjf73D0fGa&index=12)  
   
@@ -328,3 +398,6 @@ mongod
 C:\data\db
 http://localhost:27017/
 
+## termux android server js
+https://play.google.com/store/apps/details?id=com.termux&hl=en_IN  
+[How to run Node.js Express Server in Android](https://sbrocks.medium.com/how-to-run-node-js-express-server-in-android-230459a6f3c4)
