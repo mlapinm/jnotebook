@@ -2,10 +2,14 @@
 [Create WinForms Projects](#Create-WinForms-Projects)    
 [](#)    
 [](#)    
-[](#)    
-[](#)    
+[How to Set up Visual Studio Code for C and C++ Programming - YouTube][](#)    
 [](#)    
 [Visual Studio Code Csharp Beginner Tutorial Hello World](#Visual-Studio-Code-Csharp-Beginner-Tutorial-Hello-World)    
+[](#)    
+[](#)    
+[How to Set up Visual Studio Code for C and C++ Programming - YouTube](#How-to-Set-up-Visual-Studio-Code-for-C-and-C-Programming---YouTube)    
+[C Programming Tutorial for Beginners](#C-Programming-Tutorial-for-Beginners)    
+[](#)    
 [](#)    
 [](#)    
 
@@ -60,11 +64,11 @@
 ## 
 []()  
   
-## 
-[]()  
+## How to Set up Visual Studio Code for C and C++ Programming - YouTube
+[How to Set up Visual Studio Code for C and C++ Programming - YouTube](c2022setup.md)  
   
-## 
-[]()  
+## C Programming Tutorial for Beginners
+[C Programming Tutorial for Beginners](c2042fcc.md)  
   
 ## 
 []()  
