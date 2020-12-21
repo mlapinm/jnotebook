@@ -33,6 +33,11 @@ int main(){
   - MingW-W64-builds	Rolling	Windows Windows Logo	7.2.0/5.0.3	C, C++, Fortran	4 (gdb, libiconf, python, zlib)  
 - add path
   - C:\Program Files (x86)\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0  
+  
+  
+Build Tools для Visual Studio 2019  
+https://visualstudio.microsoft.com/ru/downloads/
+
 
   
   
