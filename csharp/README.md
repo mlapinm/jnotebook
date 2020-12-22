@@ -2,7 +2,7 @@
 [Create WinForms Projects](#Create-WinForms-Projects)    
 [](#)    
 [](#)    
-[How to Set up Visual Studio Code for C and C++ Programming - YouTube][](#)    
+[How to Set up Visual Studio Code for C and C++ Programming - YouTube](#)    
 [](#)    
 [Visual Studio Code Csharp Beginner Tutorial Hello World](#Visual-Studio-Code-Csharp-Beginner-Tutorial-Hello-World)    
 [](#)    
@@ -41,8 +41,8 @@
 17 C# Dictionary Collection - YouTube
 18 C# Create Thread - YouTube
 
-## [Create WinForms Projects
-[[Create WinForms Projects](./d2042form.md)  
+## Create WinForms Projects
+[Create WinForms Projects](./d2042form.md)  
 1 Visual C# Create WinForms Project - YouTube
 2 Visual C# Change Windows Form Icon - YouTube
 3 Visual C# Color Dialog Control - YouTube
