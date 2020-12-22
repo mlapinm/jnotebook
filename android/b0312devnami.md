@@ -140,7 +140,7 @@ com\example\b1211list\MainActivity.java
 
         listView.setAdapter(adapter);
 ```
-layout\listview1_row.xml
+layout\listview1_row.xml  
 ```
 <?xml version="1.0" encoding="utf-8"?>
 <TextView xmlns:android="http://schemas.android.com/apk/res/android"
@@ -149,7 +149,8 @@ layout\listview1_row.xml
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="5dp"
-    android:textSize="24sp" />```    
+    android:textSize="24sp" />
+```    
 ## Android Get Total RAM Size of Device - YouTube  
 [Android Get Total RAM Size of Device - YouTube](https://www.youtube.com/watch?v=TqAwLMt8jN8&list=PLUY1lsOTtPeJfTsngpo7H_tzJrIUcam9l&index=12)  
 [b1212ram - github](https://github.com/mlapinm/b04andr)  
