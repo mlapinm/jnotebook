@@ -74,7 +74,21 @@ Course Contents
 
 ## Разработка приложений на Android Studio Светофор
 [Разработка приложений на Android Studio Светофор](b0202neco.md)  
-
+1 Setup Android Studio
+2 2 Start new AS project
+3 Configure your project
+4 AVD Manager
+5 Разработка Android приложений/ Урок 2 / Activity
+6 Android Studio Уроки Для Начинающих / Урок 3N
+7 Светофор Разработка Android приложений / Урок 3 - 1
+8 Разработка Android приложений / Урок 3 - 2
+9 Разработка Android приложений / Урок 3 - 3
+10 Navigation Drawer Activity
+11 Добавление ресурса string-array
+12 SharedPreferences
+13 Jsoup Currency
+14 How to use Git in Android Studio
+15 footer
 
 ## Android Studio Kotlin
 [Android Studio Kotlin](b0222neco.md)  
