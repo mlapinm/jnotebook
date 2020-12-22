@@ -68,7 +68,36 @@
   
 ## C Programming Tutorial for Beginners
 [C Programming Tutorial for Beginners](c2042fcc.md)  
-  
+1 (0:00:00) Introduction
+2 (0:01:22) Windows Setup
+3 (0:05:02) Mac Setup
+4 (0:09:04) Hello World
+5 (0:12:51) Drawing a Shape
+6 (0:20:56) Variables
+7 (0:32:25) Data Types
+8 (0:38:32) Printf
+9 (0:45:22) Working With Numbers
+10 (0:52:20) Comments
+11 (0:56:00) Constants
+12 (1:00:13) Getting User Input
+13 (1:12:08) Building a Basic Calculator
+14 (1:17:43) Building a Mad Libs Game
+15 (1:26:29) Arrays
+16 (1:36:44) Functions
+17 (1:45:37) Return Statement
+18 (1:53:21) If Statements
+19 (2:07:11) Building a Better Calculator
+20 (2:14:51) Switch Statements
+21 (2:21:27) Structs
+22 (2:29:43) While Loops
+23 (2:37:48) Building a Guessing Game
+24 (2:50:11) For Loops
+25 (2:59:05) 2D Arrays & Nested Loops
+26 (3:09:10) Memory Addresses
+27 (3:17:20) Pointers
+28 (3:27:41) Dereferencing Pointers
+29 (3:32:37) Writing Files
+30 (3:41:52) Reading Files    
 ## 
 []()  
   
