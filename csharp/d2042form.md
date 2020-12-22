@@ -11,6 +11,7 @@
 11 [Visual C# SaveFileDialog Control - YouTube](#Visual-C-SaveFileDialog-Control---YouTube)   
 12 [Visual C# Resize Windows Form - YouTube](#Visual-C-Resize-Windows-Form---YouTube)   
 13 [Visual C# Windows Form Transparency - YouTube](#Visual-C-Windows-Form-Transparency---YouTube)   
+[footer](#footer)  
 ## Visual C# Create WinForms Project - YouTube  
 [Visual C# Create WinForms Project - YouTube](https://www.youtube.com/watch?v=eByGuqy5bcw&list=PLUY1lsOTtPeL8korF_BXhfwyVpas_EEVY)  
 D:\programs\d02sharp  
@@ -143,3 +144,9 @@ this.TransparencyKey = Color.White;
 
 
 d2042_142Clipboard
+
+## footer
+[Create a C# Application from Start to Finish - Complete Course - fcc 24 hours](https://www.youtube.com/watch?v=wfWxdh-_k_4)    
+не в тему  
+
+
