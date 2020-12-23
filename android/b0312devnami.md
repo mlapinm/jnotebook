@@ -68,6 +68,90 @@
 [Kotlin How to Write to Text File - YouTube](#Kotlin-How-to-Write-to-Text-File---YouTube)  
 
 ## Android App Development
+[Android Studio Create New App project - YouTube](#Android-Studio-Create-New-App-project---YouTube)  
+[Android TableLayout Example - YouTube](#Android-TableLayout-Example---YouTube)  
+[Android LinearLayout Example - YouTube](#Android-LinearLayout-Example---YouTube)  
+[Android Relative Layout Example - YouTube](#Android-Relative-Layout-Example---YouTube)  
+[Android WebView Example - YouTube](#Android-WebView-Example---YouTube)  
+WebView loadUrl setJavaScriptEnabled  
+[Android User Interface Basic Widgets - YouTube](#Android-User-Interface-Basic-Widgets---YouTube)  
+[Android Center Button Element on Screen - YouTube](#Android-Center-Button-Element-on-Screen---YouTube)  
+[Android Layout Change background - YouTube](#Android-Layout-Change-background---YouTube)  
+[Android Open URL in Browser WebView - YouTube](#Android-Open-URL-in-Browser-WebView---YouTube)  
+Intent.ACTION_VIEW Uri.parse startActivity  
+[Android Logging Example - YouTube](#Android-Logging-Example---YouTube)  
+Log.e(v,i,d,v)  
+[Android ListView Example - YouTube](#Android-ListView-Example---YouTube)  
+ArrayAdapter ListView setAdapter  
+[Android Get Total RAM Size of Device - YouTube](#Android-Get-Total-RAM-Size-of-Device---YouTube)  
+ActivityManager getSystemService ACTIVITY_SERVICE MemoryInfo getMemoryInfo availMem  
+[Android Get External Storage Space SD Card - YouTube](#Android-Get-External-Storage-Space-SD-Card---YouTube)  
+StatFs Environment getExternalStorageDirectory getBlockSizeLong getBlockCountLong  
+[Android Toast Message Example - YouTube](#Android-Toast-Message-Example---YouTube)  
+Toast makeText LENGTH_LONG  
+[Android Check for Device Camera Availability - YouTube](#Android-Check-for-Device-Camera-Availability---YouTube)  
+getApplicationContext getPackageManager PackageManager hasSystemFeature FEATURE_CAMERA   
+[Android Alert Dialog Example - YouTube](#Android-Alert-Dialog-Example---YouTube)  
+AlertDialog Builder setTitle setMessage setNegativeButton create show  
+[Android Open PDF in WebView - YouTube](#Android-Open-PDF-in-WebView---YouTube)  
+manifest uses-permission permission.INTERNET READ_EXTERNAL_STORAGE application activity  
+Intent startActivity WebView getSettings setJavaScriptEnabled loadUrl  
+[Android 2D Graphics Draw Circle - YouTube](#Android-2D-Graphics-Draw-Circle---YouTube)  
+[Android 2D Graphics Draw Rectangle - YouTube](#Android-2D-Graphics-Draw-Rectangle---YouTube)  
+[Android CalendarView Widget Example - YouTube](#Android-CalendarView-Widget-Example---YouTube)  
+[Android Get Device Orientation - YouTube](#Android-Get-Device-Orientation---YouTube)  
+[Android Digital Clock TextClock Example - YouTube](#Android-Digital-Clock-TextClock-Example---YouTube)  
+[Android CountDown Timer - YouTube](#Android-CountDown-Timer---YouTube)  
+CountDownTimer
+[Android Get Battery Level Information - YouTube](#Android-Get-Battery-Level-Information---YouTube)  
+BroadcastReceiver BatteryManager IntentFilter Intent.ACTION_BATTERY_CHANGED registerReceiver  
+[Android Get IMEI Number - YouTube](#Android-Get-IMEI-Number---YouTube)  
+[Android Get Device Model Information - YouTube](#Android-Get-Device-Model-Information---YouTube)  
+[Android Get IMSI Number - YouTube](#Android-Get-IMSI-Number---YouTube)  
+[Android Get Mobile Operator Details - YouTube](#Android-Get-Mobile-Operator-Details---YouTube)  
+[Android Get Wifi Information - YouTube](#Android-Get-Wifi-Information---YouTube)  
+[Android Pass Data Between Activity - YouTube](#Android-Pass-Data-Between-Activity---YouTube)  
+[Android ProgressBar Example - YouTube](#Android-ProgressBar-Example---YouTube)  
+[Android Read Text File - YouTube](#Android-Read-Text-File---YouTube)  
+[Android Scrollable TextView - YouTube](#Android-Scrollable-TextView---YouTube)  
+[Android SeekBar Example - YouTube](#Android-SeekBar-Example---YouTube)  
+[Android Send SMS Message Example - YouTube](#Android-Send-SMS-Message-Example---YouTube)  
+[Android Switch Button Example - YouTube](#Android-Switch-Button-Example---YouTube)  
+[Android ToggleButton Example - YouTube](#Android-ToggleButton-Example---YouTube)  
+[Android Vibrate Device Example - YouTube](#Android-Vibrate-Device-Example---YouTube)  
+[Android VideoView Example - YouTube](#Android-VideoView-Example---YouTube)  
+[Android Get Device ID - YouTube](#Android-Get-Device-ID---YouTube)  
+[Android MediaPlayer Play Audio File - YouTube](#Android-MediaPlayer-Play-Audio-File---YouTube)  
+[Android Create Notification Alert - YouTube](#Android-Create-Notification-Alert---YouTube)  
+[Android RatingBar Example - YouTube](#Android-RatingBar-Example---YouTube)  
+[Android Enable Disable Wifi - YouTube](#Android-Enable-Disable-Wifi---YouTube)  
+[Android TimePicker Example - YouTube](#Android-TimePicker-Example---YouTube)  
+[Android Create Signed APK in Android Studio - YouTube](#Android-Create-Signed-APK-in-Android-Studio---YouTube)  
+[Android App Make Phone Call - YouTube](#Android-App-Make-Phone-Call---YouTube)  
+[Android Create SQLite database - YouTube](#Android-Create-SQLite-database---YouTube)  
+[Kotlin How to Install Compiler on Windows - YouTube](#Kotlin-How-to-Install-Compiler-on-Windows---YouTube)  
+[Kotlin How to Create Class and Object - YouTube](#Kotlin-How-to-Create-Class-and-Object---YouTube)  
+[Kotlin How to Create Hello World Console Application - YouTube](#Kotlin-How-to-Create-Hello-World-Console-Application---YouTube)  
+[Kotlin How to create Interface - YouTube](#Kotlin-How-to-create-Interface---YouTube)  
+[Kotlin How to Use Variables and Data Types - YouTube](#Kotlin-How-to-Use-Variables-and-Data-Types---YouTube)  
+[Kotlin How to Use Do While Loop - YouTube](#Kotlin-How-to-Use-Do-While-Loop---YouTube)  
+[Kotlin How to Use Exception Handling Try Catch - YouTube](#Kotlin-How-to-Use-Exception-Handling-Try-Catch---YouTube)  
+[Kotlin How to Use For Loop - YouTube](#Kotlin-How-to-Use-For-Loop---YouTube)  
+[Kotlin How to Create Function - YouTube](#Kotlin-How-to-Create-Function---YouTube)  
+[Kotlin How to Create Function with Parameters - YouTube](#Kotlin-How-to-Create-Function-with-Parameters---YouTube)  
+[Kotlin How to Use If Else Expression - YouTube](#Kotlin-How-to-Use-If-Else-Expression---YouTube)  
+[Kotlin How to Use While Loop - YouTube](#Kotlin-How-to-Use-While-Loop---YouTube)  
+[Kotlin How to Use Multiple Inheritance - YouTube](#Kotlin-How-to-Use-Multiple-Inheritance---YouTube)  
+[Kotlin How to Read CSV File - YouTube](#Kotlin-How-to-Read-CSV-File---YouTube)  
+[Kotlin How to Read JSON File - YouTube](#Kotlin-How-to-Read-JSON-File---YouTube)  
+[Kotlin How to Read Text File - YouTube](#Kotlin-How-to-Read-Text-File---YouTube)  
+[Kotlin How to Read XML File - YouTube](#Kotlin-How-to-Read-XML-File---YouTube)  
+[Kotlin How to Use When Expression - YouTube](#Kotlin-How-to-Use-When-Expression---YouTube)  
+[Kotlin How to Write to Text File - YouTube](#Kotlin-How-to-Write-to-Text-File---YouTube)  
+
+
+
+## Android App Development
 ## Android Studio Create New App project - YouTube  
 [Android Studio Create New App project - YouTube](https://www.youtube.com/watch?v=iiAovTckXF0&list=PLUY1lsOTtPeJfTsngpo7H_tzJrIUcam9l&index=1)  
 [b1201 - github](https://github.com/mlapinm/b04andr)  
@@ -154,24 +238,116 @@ layout\listview1_row.xml
 ## Android Get Total RAM Size of Device - YouTube  
 [Android Get Total RAM Size of Device - YouTube](https://www.youtube.com/watch?v=TqAwLMt8jN8&list=PLUY1lsOTtPeJfTsngpo7H_tzJrIUcam9l&index=12)  
 [b1212ram - github](https://github.com/mlapinm/b04andr)  
+```
+        ActivityManager activityManager = (ActivityManager)getSystemService(ACTIVITY_SERVICE);
+        ActivityManager.MemoryInfo memoryInfo = new ActivityManager.MemoryInfo();
+        activityManager.getMemoryInfo(memoryInfo);
+
+        final long mem = memoryInfo.availMem / 1048576;
+        textView1 = (TextView)findViewById(R.id.textView1);
+        textView1.setText(" " + mem + " MB");
+```
 ## Android Get External Storage Space SD Card - YouTube  
 [Android Get External Storage Space SD Card - YouTube](https://www.youtube.com/watch?v=sKtrYBQGtyI&list=PLUY1lsOTtPeJfTsngpo7H_tzJrIUcam9l&index=13)  
 [b1213Storage - github](https://github.com/mlapinm/b04andr)  
+```
+        StatFs statFs = new StatFs(Environment.getExternalStorageDirectory().getPath());
+        megaBytesAvailable = (long) statFs.getBlockSizeLong()
+                * (long) statFs.getBlockCountLong()
+                / 1048576  ;
+
+        textView1.setText(" " + megaBytesAvailable + " MB");
+```
 ## Android Toast Message Example - YouTube  
 [Android Toast Message Example - YouTube](https://www.youtube.com/watch?v=qDxzu5LUbYE&list=PLUY1lsOTtPeJfTsngpo7H_tzJrIUcam9l&index=14)  
 [B1214toast - github](https://github.com/mlapinm/b04andr)  
+```
+Toast.makeText(getApplicationContext(), "This is toast example",
+        Toast.LENGTH_LONG).show();
+```
 ## Android Check for Device Camera Availability - YouTube  
 [Android Check for Device Camera Availability - YouTube](https://www.youtube.com/watch?v=YMQzqnzi-CY&list=PLUY1lsOTtPeJfTsngpo7H_tzJrIUcam9l&index=15)  
 [b1215camavail - github](https://github.com/mlapinm/b04andr)  
+```
+        if(packageManager.hasSystemFeature(PackageManager.FEATURE_CAMERA)){
+            Toast.makeText(getApplicationContext(), "Camera Available",
+                    Toast.LENGTH_LONG).show();
+        }else{
+            Toast.makeText(getApplicationContext(), "Camera Not Available",
+                    Toast.LENGTH_LONG).show();
+        }
+```
 ## Android Alert Dialog Example - YouTube  
 [Android Alert Dialog Example - YouTube](https://www.youtube.com/watch?v=jOY9jfLSCHk&list=PLUY1lsOTtPeJfTsngpo7H_tzJrIUcam9l&index=16)  
 [b1216alert - github](https://github.com/mlapinm/b04andr)  
+```
+        final AlertDialog.Builder builder = new AlertDialog.Builder(context);
+
+        builder.setTitle("Alert Start");
+        builder.setMessage("Click to Exit");
+        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.cancel();
+            }
+        });
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();
+```
 ## Android Open PDF in WebView - YouTube  
 [Android Open PDF in WebView - YouTube](https://www.youtube.com/watch?v=W4_JSLy1fsc&list=PLUY1lsOTtPeJfTsngpo7H_tzJrIUcam9l&index=17)  
 [b1217pdf - github](https://github.com/mlapinm/b04andr)  
+```
+<manifest>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+<application>
+        <activity android:name=".WebActivity"></activity>
+```
+
+```
+        Intent intent = new Intent(getApplicationContext(), WebActivity.class);
+        startActivity(intent);
+```
+com\example\b1217pdf\WebActivity.java  
+```
+        webView1 = (WebView)findViewById(R.id.webview1);
+        webView1.getSettings().setJavaScriptEnabled(true);
+        webView1.loadUrl("http://www.adobe.com/content/dam/acom/en/devnet/acrobat/pdfs/PDFOpenParameters.pdf");
+```
 ## Android 2D Graphics Draw Circle - YouTube  
 [Android 2D Graphics Draw Circle - YouTube](https://www.youtube.com/watch?v=wIcOBLqVq4Q&list=PLUY1lsOTtPeJfTsngpo7H_tzJrIUcam9l&index=18)  
 [b1218circle - github](https://github.com/mlapinm/b04andr)  
+```
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(new MyView(this));
+//        R.layout.activity_main
+    }
+
+    private class MyView extends View {
+        public MyView(Context context) {
+            super(context);
+        }
+
+        @Override
+        protected void onDraw(Canvas canvas) {
+            super.onDraw(canvas);
+            int x = getWidth();
+            int y = getHeight();
+            int radius = 100;
+            Paint paint = new Paint();
+            paint.setStyle(Paint.Style.FILL);
+            paint.setColor(Color.WHITE);
+            canvas.drawPaint(paint);
+            paint.setColor(Color.parseColor("#da4747"));
+            canvas.drawCircle(x/2, y/2, radius, paint);
+        }
+    }
+```
 ## Android 2D Graphics Draw Rectangle - YouTube  
 [Android 2D Graphics Draw Rectangle - YouTube](https://www.youtube.com/watch?v=4Mo2rVOgn4M&list=PLUY1lsOTtPeJfTsngpo7H_tzJrIUcam9l&index=19)  
 [b1219rect - github](https://github.com/mlapinm/b04andr)  
@@ -187,9 +363,42 @@ layout\listview1_row.xml
 ## Android CountDown Timer - YouTube  
 [Android CountDown Timer - YouTube](https://www.youtube.com/watch?v=-CD2eSfPW8U&list=PLUY1lsOTtPeJfTsngpo7H_tzJrIUcam9l&index=23)  
 [b1223timer - github](https://github.com/mlapinm/b04andr)  
+```
+        CountDownTimer countDownTimer = new CountDownTimer(60*1000, 10) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+                textView1.setText("Countdown: " + millisUntilFinished);
+            }
+
+            @Override
+            public void onFinish() {
+                textView1.setText("Countdown End");
+            }
+        }.start();
+```
 ## Android Get Battery Level Information - YouTube  
 [Android Get Battery Level Information - YouTube](https://www.youtube.com/watch?v=_BXkqy2mmlE&list=PLUY1lsOTtPeJfTsngpo7H_tzJrIUcam9l&index=24)  
 [b1224battery - github](https://github.com/mlapinm/b04andr)  
+```
+    private TextView textView1;
+
+    private BroadcastReceiver mBroadcastReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            int level = intent.getIntExtra(BatteryManager.EXTRA_LEVEL, 0);
+            textView1.setText(String.valueOf(level) + " %");
+        }
+    };
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        textView1 = (TextView)findViewById(R.id.textView1);
+        this.registerReceiver(this.mBroadcastReceiver, new IntentFilter(Intent.ACTION_BATTERY_CHANGED));
+    }
+```
 ## Android Get IMEI Number - YouTube  
 [Android Get IMEI Number - YouTube](https://www.youtube.com/watch?v=DgxXN6JJOkQ&list=PLUY1lsOTtPeJfTsngpo7H_tzJrIUcam9l&index=25)  
 [b1225imei - github](https://github.com/mlapinm/b04andr)  
