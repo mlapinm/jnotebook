@@ -77,7 +77,7 @@ onRestart
 
 ## Светофор Разработка Android приложений / Урок 3 - 1
 [Разработка Android приложений / Урок 3 - 1](https://www.youtube.com/watch?v=PKGCAs_4p4w&list=PLmjT2NFTgg1c-CC0l6GuvpH7_2JZBxqzf&index=4)  
-b0206traflite traffic light
+b0204traflite traffic light
 
 LinerLayout horizontal
 background grey  
