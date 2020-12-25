@@ -1032,9 +1032,53 @@ public class MainActivity extends AppCompatActivity {
 ## Android App Make Phone Call - YouTube  
 [Android App Make Phone Call - YouTube](https://www.youtube.com/watch?v=ySUye16MTbQ&list=PLUY1lsOTtPeJfTsngpo7H_tzJrIUcam9l&index=47)  
 [b1247call - github](https://github.com/mlapinm/b04andr)  
+```
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+```
+```
+    public void onClickButton1(View view) {
+        String sNumber = editText1.getText().toString();
+        try{
+            Intent intent = new Intent(Intent.ACTION_CALL);
+            intent.setData(Uri.parse("tel" + sNumber));
+            startActivity(intent);
+
+        }catch (SecurityException e){
+            System.out.println(e);
+        }
+```
 ## Android Create SQLite database - YouTube  
 [Android Create SQLite database - YouTube](https://www.youtube.com/watch?v=k-1ihIa0vbE&list=PLUY1lsOTtPeJfTsngpo7H_tzJrIUcam9l&index=48)  
 [b1248sqlite - github](https://github.com/mlapinm/b04andr)  
+```
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        textView1 = (TextView)findViewById(R.id.textView1);
+
+        String sName;
+
+        SQLiteDatabase db = openOrCreateDatabase("MyDB", MODE_PRIVATE, null);
+        db.execSQL("CREATE TABLE IF NOT EXISTS myTable(Name VARCHAR, Age INT(3));");
+        db.execSQL("INSERT INTO myTable VALUES('Ari', 27)");
+        db.execSQL("INSERT INTO myTable VALUES('Ami', 37)");
+        Cursor cursor = db.rawQuery("SELECT * FROM myTable", null);
+        cursor.moveToFirst();
+        Log.d("Ari", cursor.getString(cursor.getColumnIndex("Name")));
+        Log.d("Ari", cursor.getString(cursor.getColumnIndex("Age")));
+        cursor.move(1);
+        Log.d("Ari", cursor.getString(cursor.getColumnIndex("Name")));
+        Log.d("Ari", cursor.getString(cursor.getColumnIndex("Age")));
+        cursor.move(-1);
+        Log.d("Ari", cursor.getString(cursor.getColumnIndex("Name")));
+        Log.d("Ari", cursor.getString(cursor.getColumnIndex("Age")));
+        sName = cursor.getString(cursor.getColumnIndex("Name"));
+        db.close();
+        textView1.setText(sName);
+    }
+```
 ## Kotlin How to Install Compiler on Windows - YouTube  
 [Kotlin How to Install Compiler on Windows - YouTube](https://www.youtube.com/watch?v=VsLj5qDFlws&list=PLUY1lsOTtPeJfTsngpo7H_tzJrIUcam9l&index=49)  
 [b1249 - github](https://github.com/mlapinm/b04andr)  
