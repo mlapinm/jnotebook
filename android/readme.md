@@ -1,7 +1,8 @@
 ## android
 [Android App Development](#Android-App-Development)  
 [Intro to Java Programming - Course for Absolute Beginners](#Intro-to-Java-Programming---Course-for-Absolute-Beginners)  
-[Разработка приложений на Android Studio Светофор](#Разработка-приложений-на-Android-Studio-Светофор)  
+[Setup Android Studio](#Setup-Android-Studio)
+[Android приложение Фонарик](#Android-приложение-Фонарик)  
 [Android Studio Kotlin](#Android-Studio-Kotlin)  
 [projects b02andr](#projects-b02andr)  
 []()  
@@ -72,23 +73,14 @@ Course Contents
 (3:25:23) Interfaces
 (3:37:32) Enums
 
-## Разработка приложений на Android Studio Светофор
-[Разработка приложений на Android Studio Светофор](b0202neco.md)  
-1 Setup Android Studio
-2 2 Start new AS project
-3 Configure your project
-4 AVD Manager
-5 Разработка Android приложений/ Урок 2 / Activity
-6 Android Studio Уроки Для Начинающих / Урок 3N
-7 Светофор Разработка Android приложений / Урок 3 - 1
-8 Разработка Android приложений / Урок 3 - 2
-9 Разработка Android приложений / Урок 3 - 3
-10 Navigation Drawer Activity
-11 Добавление ресурса string-array
-12 SharedPreferences
-13 Jsoup Currency
-14 How to use Git in Android Studio
-15 footer
+## Setup Android Studio
+[Setup Android Studio](b0202neco.md)  
+Setup Android Studio  
+установим программу Android Studio настроим данную программу, создадим эмулятор для проверки приложений и загрузим наше первое приложение  
+footer  
+
+## Android приложение Фонарик
+[Android приложение Фонарик](b0212neco.md)  
 
 ## Android Studio Kotlin
 [Android Studio Kotlin](b0222neco.md)  
