@@ -1,8 +1,8 @@
 ## android
 [Android App Development](#Android-App-Development)  
 [Intro to Java Programming - Course for Absolute Beginners](#Intro-to-Java-Programming---Course-for-Absolute-Beginners)  
-[Setup Android Studio](#Setup-Android-Studio)
-[Android приложение Фонарик](#Android-приложение-Фонарик)  
+[Setup Android Studio](#Setup-Android-Studio)  
+[Android приложение Фонарик 80](#Android-приложение-Фонарик)  
 [Android Studio Kotlin](#Android-Studio-Kotlin)  
 [projects b02andr](#projects-b02andr)  
 []()  
