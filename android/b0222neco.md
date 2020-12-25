@@ -26,24 +26,222 @@
 ## Уроки по Kotlin на Android Studio 2020/Урок 1 - YouTube  
 [Уроки по Kotlin на Android Studio 2020/Урок 1 - YouTube](https://www.youtube.com/watch?v=MjXS7xImZLw&list=PLmjT2NFTgg1clSDgx1YYOuVyZuCXVjfuR)  
 [l2012var - github](https://github.com/mlapinm/b03andr)  
+```
+class MainActivity : AppCompatActivity() {
+
+    private var textView1: TextView? = null
+    private var layout1: ConstraintLayout? = null
+    private var start: Boolean = false
+    private var counter: Int = 0
+
+    private var n1:Byte = 1
+    private var n2:Short = 2
+    private var n3:Int = 3
+    private var n4:Long = 4
+    private var n5:Float = 5.0f
+    private var n6:Double = 6.0
+    private var b7:Boolean = true
+    private var s8:Char = '8'
+    private var s9:String = "99 9 99"
+
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        textView1 = findViewById(R.id.textView1)
+        layout1 = findViewById(R.id.layout1)
+
+        Thread{
+            start = true
+            while (start){
+                Thread.sleep(500)
+
+                runOnUiThread(){
+                    textView1?.setText(counter.toString())
+                    if(counter == 5){
+                        layout1?.setBackgroundColor(Color.GRAY)
+                    }else if(counter == 10){
+                        layout1?.setBackgroundColor(Color.YELLOW)
+                    }
+                    counter++
+                }
+
+            }
+        }.start()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        start = false
+    }
+}
+```
 ## Уроки по Kotlin на Android Studio 2020/Урок 2 - YouTube  
 [Уроки по Kotlin на Android Studio 2020/Урок 2 - YouTube](https://www.youtube.com/watch?v=sbIYtbuW32w&list=PLmjT2NFTgg1clSDgx1YYOuVyZuCXVjfuR&index=2)  
-[l2022 - github](https://github.com/mlapinm/b03andr)  
+[l2022string - github](https://github.com/mlapinm/b03andr)  
+```
+        val textView1: TextView? = findViewById<TextView>(R.id.textView1)
+        textView1?.setText("efgh");
+```
 ## Уроки по Kotlin на Android Studio 2020/Урок 3 - YouTube  
 [Уроки по Kotlin на Android Studio 2020/Урок 3 - YouTube](https://www.youtube.com/watch?v=JrDIgznDb3g&list=PLmjT2NFTgg1clSDgx1YYOuVyZuCXVjfuR&index=3)  
 [l2032 - github](https://github.com/mlapinm/b03andr)  
+```
+class MainActivity : AppCompatActivity() {
+
+    private var textView1: TextView? = null
+    private var textView2: TextView? = null
+    private var counter: Int = 0
+    var text: String = "В <магазине> осталось 123 яблока а может и <больше> всем привет <как> дела"
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        textView1 = findViewById<TextView>(R.id.textView1)
+        textView2 = findViewById<TextView>(R.id.textView2)
+
+        textView1?.setText(text)
+        for (i in 0 until text.length - 1){
+            if(text[i] == '<'){
+                counter++
+            }
+        }
+        textView2?.setText(counter.toString())
+        var startPosition = IntArray(counter)
+        var endPosition = IntArray(counter)
+        var startCounter: Int = 0
+        var endCounter: Int = 0
+        for (i in 0 until text.length - 1){
+            if(text[i] == '<'){
+                startPosition[startCounter] = i
+                startCounter++
+            }
+            if(text[i] == '>'){
+                endPosition[endCounter] = i
+                endCounter++
+            }
+        }
+        var textFounArray = Array(counter){""}
+        for(i in 0 until startPosition.size){
+            textFounArray[i] = text.substring(startPosition[i]+1, endPosition[i])
+        }
+        var textFound : String = ""
+        var k: Int = 0
+        for(i in 0 until textFounArray.size ){
+            textFound += textFounArray[i] + " " + k.toString() + " , "
+            k++
+        }
+        textView2?.setText(textFound)
+        var s1 : String = text.substringAfter('<')
+        var s2 : String = s1.substringBefore('>')
+        Toast.makeText(this,s2, Toast.LENGTH_LONG).show()
+    }
+}
+```
 ## Создаем приложение "Светофор" на Kotlin/Урок 4 - YouTube  
 [Создаем приложение "Светофор" на Kotlin/Урок 4 - YouTube](https://www.youtube.com/watch?v=3rSCU7G9ZMs&list=PLmjT2NFTgg1clSDgx1YYOuVyZuCXVjfuR&index=4)  
-[l2042 - github](https://github.com/mlapinm/b03andr)  
+[l2042trlight - github](https://github.com/mlapinm/b03andr)  
+```
+class MainActivity : Activity() {
+
+    var ivTl: ImageView? = null
+    var ibStartStop: ImageButton? = null
+    var timer: Timer? = null
+    var isRun: Boolean = false
+    var imArray: IntArray = intArrayOf(R.drawable.semafor_green,
+            R.drawable.semafor_yellow, R.drawable.semafor_red)
+    var counter: Int = 0
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        ivTl = findViewById(R.id.ivTl)
+        ibStartStop = findViewById(R.id.ibStartStop)
+
+    }
+
+    fun onClickStartStop(view: View) {
+        view as ImageButton
+        if(isRun == false){
+            mStart()
+            view.setImageResource(R.drawable.button_stop)
+            isRun = true
+        }else{
+            timer?.cancel()
+            view.setImageResource(R.drawable.button_start)
+            isRun = false
+        }
+    }
+
+    fun mStart(){
+        timer = Timer()
+        counter = 0
+        timer?.schedule(object : TimerTask(){
+            override fun run() {
+                runOnUiThread {
+                    ivTl?.setImageResource(imArray[counter])
+                    counter++
+                    if(counter == 3){
+                        counter = 0
+                    }
+                }
+            }
+        },0, 1000)
+    }
+}
+```
 ## Уроки по Kotlin на Android Studio 2020/Урок 5 - YouTube  
 [Уроки по Kotlin на Android Studio 2020/Урок 5 - YouTube](https://www.youtube.com/watch?v=ykPYkUn6Evk&list=PLmjT2NFTgg1clSDgx1YYOuVyZuCXVjfuR&index=5)  
-[l2052 - github](https://github.com/mlapinm/b03andr)  
+[l2052activity - github](https://github.com/mlapinm/b03andr)  
+```
+        <activity android:name=".SecondActivity"></activity>
+```
+```
+    fun onClickSecond(view: View) {
+        val intent = Intent(this, SecondActivity::class.java).apply {
+            putExtra("message2", "it's from MainActivity")
+        }
+        startActivity(intent)
+    }
+```
+com\example\l2052activity\SecondActivity.kt  
+```
+        var textView : TextView? = null
+        textView = findViewById(R.id.textView)
+
+        var intent = intent
+        var string = intent?.getCharSequenceExtra("message2")
+        textView?.setText(string)
+```
 ## Уроки по Kotlin на Android Studio 2020/Урок 6/ListView - YouTube  
 [Уроки по Kotlin на Android Studio 2020/Урок 6/ListView - YouTube](https://www.youtube.com/watch?v=hsDheCHsbkU&list=PLmjT2NFTgg1clSDgx1YYOuVyZuCXVjfuR&index=6)  
 [l2062 - github](https://github.com/mlapinm/b03andr)  
+```
+        var listView = findViewById<ListView>(R.id.listView)
+
+        var arrayList = ArrayList<String>()
+        arrayList.add("Sunday")
+        arrayList.add("Monday")
+        arrayList.add("Tuesday")
+        arrayList.add("")
+
+        val adapter = ArrayAdapter(this,
+                android.R.layout.simple_expandable_list_item_1,
+                arrayList)
+        listView.adapter = adapter
+        listView.setOnItemClickListener{parent, view, position, id ->
+            Toast.makeText(this,
+                    "Pressed item position $position ${arrayList.get(position)}",
+                    Toast.LENGTH_LONG).show()
+        }
+```
 ## Справочник Рыбака на Kotlin /Урок 7/Android Studio 2020 - YouTube  
 [Справочник Рыбака на Kotlin /Урок 7/Android Studio 2020 - YouTube](https://www.youtube.com/watch?v=tqiO_QDzg1g&list=PLmjT2NFTgg1clSDgx1YYOuVyZuCXVjfuR&index=7)  
-[l2072 - github](https://github.com/mlapinm/b03andr)  
+[l2072fisherman - github](https://github.com/mlapinm/b03andr)  
+![1](b0222neco_01img.png)
 ## Урок 7: Справочник Рыбака (Создание меню)
 ## Справочник Рыбака на Kotlin /Урок 8/Android Studio 2020 - YouTube  
 [Справочник Рыбака на Kotlin /Урок 8/Android Studio 2020 - YouTube](https://www.youtube.com/watch?v=DwUnpTEQVG4&list=PLmjT2NFTgg1clSDgx1YYOuVyZuCXVjfuR&index=8)  
@@ -53,6 +251,7 @@
 ```
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
 ```
 - values\strings.xml  
 ```
@@ -274,13 +473,57 @@ class MyAdapter( listArray:ArrayList<ListItem>, context: Context): RecyclerView.
 ```
 ## Справочник Рыбака на Kotlin /Урок 11/Android Studio 2020 - YouTube  
 [Справочник Рыбака на Kotlin /Урок 11/Android Studio 2020 - YouTube](https://www.youtube.com/watch?v=jTt1ja0r8rw&list=PLmjT2NFTgg1clSDgx1YYOuVyZuCXVjfuR&index=11)  
-[l2112 - github](https://github.com/mlapinm/b03andr)  
+[l2112content - github](https://github.com/mlapinm/b03andr)  
 ## Справочник Рыбака на Kotlin /Урок 12/Android Studio 2020 - YouTube  
 [Справочник Рыбака на Kotlin /Урок 12/Android Studio 2020 - YouTube](https://www.youtube.com/watch?v=5eJWUWKQMXQ&list=PLmjT2NFTgg1clSDgx1YYOuVyZuCXVjfuR&index=12)  
 [l2122 - github](https://github.com/mlapinm/b03andr)  
 ## Создаем Компас на Kotlin/Урок 13/Android Studio - YouTube  
 [Создаем Компас на Kotlin/Урок 13/Android Studio - YouTube](https://www.youtube.com/watch?v=Efe-vYd-20w&list=PLmjT2NFTgg1clSDgx1YYOuVyZuCXVjfuR&index=13)  
-[l2132 - github](https://github.com/mlapinm/b03andr)  
+[l2143compass - github](https://github.com/mlapinm/b03andr)  
+```
+class MainActivity : AppCompatActivity(),SensorEventListener {
+    var manager:SensorManager? = null
+    var current_degree:Int = 0
+    var tvDegree: TextView? = null
+    var imDinamic: ImageView? = null
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        manager = getSystemService(Context.SENSOR_SERVICE) as SensorManager
+
+        tvDegree = findViewById<TextView>(R.id.tvDegree)
+        imDinamic = findViewById<ImageView>(R.id.imDinamic)
+
+    }
+
+    override fun onResume() {
+        super.onResume()
+        manager?.registerListener(this,manager?.getDefaultSensor(Sensor.TYPE_ORIENTATION),SensorManager.SENSOR_DELAY_GAME)
+
+    }
+
+    override fun onPause() {
+        super.onPause()
+        manager?.unregisterListener(this)
+    }
+
+    override fun onAccuracyChanged(p0: Sensor?, p1: Int) {
+
+    }
+
+    override fun onSensorChanged(p0: SensorEvent?) {
+        val degree:Int = p0?.values?.get(0)?.toInt()!!
+        tvDegree?.text = degree.toString()
+        val rotationAnim = RotateAnimation(current_degree.toFloat(),(-degree).toFloat(),Animation.RELATIVE_TO_SELF,
+                0.5f,Animation.RELATIVE_TO_SELF,0.5f)
+        rotationAnim.duration = 210
+        rotationAnim.fillAfter = true
+        current_degree = -degree
+        imDinamic?.startAnimation(rotationAnim)
+    }
+}
+```
 ## Создание мобильного приложения на Kotlin/Урок 14/Android Studio - YouTube  
 [Создание мобильного приложения на Kotlin/Урок 14/Android Studio - YouTube](https://www.youtube.com/watch?v=Wep1nffnAW0&list=PLmjT2NFTgg1clSDgx1YYOuVyZuCXVjfuR&index=14)  
 ## WebView
@@ -299,15 +542,87 @@ webView.loadUrl("file:///android_asset/item_3.html")
 - html src="file:///android_asset/img_01.jpg"
 - resource
   - [Загружаем локальные страницы и картинки - alexanderklimov](http://developer.alexanderklimov.ru/android/views/webview.php#local)  
-  - [falnatshehv- MarkdownView - github](https://github.com/falnatsheh/MarkdownView)
- 
+  - [falnatshehv- MarkdownView - github](https://github.com/falnatsheh/MarkdownView)  
+```
+        var webView = findViewById<WebView>(R.id.webView)
+        webView.settings.javaScriptEnabled = true
 
+        webView.loadUrl("file:///android_asset/item_3.html")
+```
 ## Курс по Android Studio и Kotlin/AlertDialog - YouTube  
 [Курс по Android Studio и Kotlin/AlertDialog - YouTube](https://www.youtube.com/watch?v=VnjarCa4Evg&list=PLmjT2NFTgg1clSDgx1YYOuVyZuCXVjfuR&index=15)  
 [l2152 - github](https://github.com/mlapinm/b03andr)  
+```
+class MainActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        mMultiDialog()
+    }
+
+    private fun mSimpleDialog(){
+        val builder = AlertDialog.Builder(this)
+        builder.setTitle("Week")
+        builder.setMessage("day")
+        builder.setNeutralButton("info"){ dialogInterface: DialogInterface,
+                                          i: Int ->
+            Toast.makeText(this,"Info", Toast.LENGTH_LONG).show()
+        }
+        builder.show()
+    }
+
+    private fun mMultiDialog(){
+        val builder = AlertDialog.Builder(this)
+        builder.setTitle("Week")
+        builder.setMultiChoiceItems(R.array.string_array,null){
+            dialogInterface: DialogInterface,
+            i: Int,
+            b: Boolean ->
+            Toast.makeText(this,
+                    " "+ i + ":" + b, Toast.LENGTH_LONG).show()
+
+        }
+        builder.setNeutralButton("info"){ dialogInterface: DialogInterface,
+                                          i: Int ->
+        Toast.makeText(this,"Info", Toast.LENGTH_LONG).show()
+        }
+        builder.show()
+    }
+}
+```
 ## Уроки по Kotlin: Урок 16, Android Studio и Сохранение данных в Android - YouTube  
 [Уроки по Kotlin: Урок 16, Android Studio и Сохранение данных в Android - YouTube](https://www.youtube.com/watch?v=kloLNIkrBI4&list=PLmjT2NFTgg1clSDgx1YYOuVyZuCXVjfuR&index=16)  
 [l2162 - github](https://github.com/mlapinm/b03andr)  
+```
+class MainActivity : AppCompatActivity() {
+
+    var pref: SharedPreferences? = null
+
+    var editText: EditText? = null
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        editText = findViewById(R.id.editText)
+        pref = getSharedPreferences("Text", Context.MODE_PRIVATE)
+
+        var s = pref?.getString("Text", "")
+        editText?.setText(s)
+
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        var s : String = editText?.text.toString()
+        val editor = pref?.edit()
+        editor?.putString("Text", s)
+        editor?.apply()
+
+    }
+}
+```
 ## SQLite База Данных на Андроид KOTLIN/ Урок 17 - YouTube  
 [SQLite База Данных на Андроид KOTLIN/ Урок 17 - YouTube](https://www.youtube.com/watch?v=tQot9NMbtiw&list=PLmjT2NFTgg1clSDgx1YYOuVyZuCXVjfuR&index=17)  
 [l2172 - github](https://github.com/mlapinm/b03andr)  
@@ -320,8 +635,49 @@ For these reasons, we highly recommended using the `Room Persistence` Library as
 - new package db
 - myObjNameClass new file/class object  
 
+```
+class MainActivity : AppCompatActivity() {
+
+    var edTitle: EditText? = null
+    var edContent: EditText? = null
+    var tvTest: TextView? = null
+    val myDbManager = MyDbManager(this)
 
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        edTitle = findViewById(R.id.edTitle)
+        edContent = findViewById(R.id.edContent)
+        tvTest = findViewById(R.id.tvTest)
+        tvTest?.text = ""
+        myDbManager.openDb()
+        val dataList = myDbManager.readDbData()
+        for( item in dataList){
+            tvTest?.append(item)
+            tvTest?.append("\n")
+        }
+        Log.i("info", "This is info.")
+    }
+
+    fun onClickSave(view: View) {
+        tvTest?.text = ""
+        myDbManager.openDb()
+        myDbManager.insertToDb(edTitle?.text.toString(), edContent?.text.toString())
+        val dataList = myDbManager.readDbData()
+        for( item in dataList){
+            tvTest?.append(item)
+            tvTest?.append("\n")
+        }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        myDbManager.closeDb()
+    }
+}
+```
 ## SQLite база данных KOTLIN БЛОКНОТ Часть 1 - YouTube  
 [SQLite база данных KOTLIN БЛОКНОТ Часть 1 - YouTube](https://www.youtube.com/watch?v=udnaDIWjamg&list=PLmjT2NFTgg1clSDgx1YYOuVyZuCXVjfuR&index=18)  
 [l2182nota - github](https://github.com/mlapinm/b03andr)   

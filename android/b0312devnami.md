@@ -438,6 +438,12 @@ public class MainActivity extends AppCompatActivity {
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 ```
+```
+    //Keep the device awake
+    getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+//        getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+```
+[Keep the screen on](https://developer.android.com/training/scheduling/wakelock#java)   
 ## Android CountDown Timer - YouTube  
 [Android CountDown Timer - YouTube](https://www.youtube.com/watch?v=-CD2eSfPW8U&list=PLUY1lsOTtPeJfTsngpo7H_tzJrIUcam9l&index=23)  
 [b1223timer - github](https://github.com/mlapinm/b04andr)  
@@ -463,9 +469,16 @@ public class MainActivity extends AppCompatActivity {
     private BroadcastReceiver mBroadcastReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
-            int level = intent.getIntExtra(BatteryManager.EXTRA_LEVEL, 0);
-            textView1.setText(String.valueOf(level) + " %");
-        }
+            int level = 0;
+            level = intent.getIntExtra(BatteryManager.EXTRA_LEVEL, 0);
+            int status = intent.getIntExtra(BatteryManager.EXTRA_STATUS, -1);
+            boolean isCharging = status == BatteryManager.BATTERY_STATUS_CHARGING ||
+                    status == BatteryManager.BATTERY_STATUS_FULL;
+            String s1 = "";
+            s1 += String.valueOf(level) + " %" + " ";
+            s1 += "isCharging : " + isCharging + "\n";
+            textView1.setText(s1);
+         }
     };
 
     @Override
