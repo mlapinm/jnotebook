@@ -76,37 +76,424 @@
   
 ## #2 - HELLO WORLD ON REAL DEVICE AND EMULATOR | REACT NATIVE TUTORIALS WITH EXPO IN HINDI  
 [#2 - HELLO WORLD ON REAL DEVICE AND EMULATOR | REACT NATIVE TUTORIALS WITH EXPO IN HINDI](https://www.youtube.com/watch?v=XaDlVvfGKO8&list=PLB97yPrFwo5gxB5SuNWzH73t2Su65KN2f&index=3)  
+- npm install -g expo-cli 
+- D:\programs\b07react>expo --version  
+  4.0.17
+- expo init b2022amazing
+- 
+- 
+
+```
+import { StyleSheet, Text, View, Button, Alert } from 'react-native';
+
+export default class App extends React.Component {
+  render(){
+    const simpleAlertHandler = () => {
+      //function to make simple alert
+      alert('Hello I am Simple Alert');
+    };
+      return (
+      <View style={styles.container}>
+        <Text style={styles.text}>coder never quit</Text>
+        <Button title="awesome"
+        onPress={simpleAlertHandler} />
+        <StatusBar style="auto" />
+      </View>
+    );
+  }
+
+}
+```
   
 ## React Native web | react native with expo tutorials in  
 [React Native web | react native with expo tutorials in](https://www.youtube.com/watch?v=8FJPTNgzOmA&list=PLB97yPrFwo5gxB5SuNWzH73t2Su65KN2f&index=4)  
-  
+- android emulator...
+- expo start    
+```
+export default function App()  {
+  return (
+    <View style={styles.container}>
+      <Text style={styles.text}>Amazing app!</Text>
+      <StatusBar style="auto" />
+    </View>
+  );
+}
+```
+```
+<Text style={styles.text}>Amazing app!</Text>
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  text: {
+    color: 'blue',
+    backgroundColor: 'yellow',
+    fontSize: 30
+  }
+});
+```  
 ## #3 - UNDERSTANDING JSX IN REACT NATIVE | REACT NATIVE TUTORIALS IN HINDI  
 [#3 - UNDERSTANDING JSX IN REACT NATIVE | REACT NATIVE TUTORIALS IN HINDI](https://www.youtube.com/watch?v=qwvfOKykFyk&list=PLB97yPrFwo5gxB5SuNWzH73t2Su65KN2f&index=5)  
-  
+```
+export default class App extends React.Component {
+  render(){
+    const simpleAlertHandler = () => {
+      //function to make simple alert
+      alert('Hello I am Simple Alert {st}');
+    };
+    var r1 = Math.random();
+    const diap = ['eat', 'sleep', 'code'];
+    const listdc = diap.map(data=>{
+      return <Text style={styles.text}>{data}</Text>
+    })
+      return (
+      <View style={styles.container}>
+        <Text >{r1}</Text>
+        {listdc}
+        <Button title="awesome"
+        onPress={simpleAlertHandler} />
+        <StatusBar style="auto" />
+      </View>
+    );
+  }
+
+}
+```
 ## #4 - CUSTOM COMPONENTS IN REACT NATIVE | REACT NATIVE TUTORIALS IN HINDI  
 [#4 - CUSTOM COMPONENTS IN REACT NATIVE | REACT NATIVE TUTORIALS IN HINDI](https://www.youtube.com/watch?v=MxROcT8a-4s&list=PLB97yPrFwo5gxB5SuNWzH73t2Su65KN2f&index=6)  
-  
+```
+const MyData = ()=>{
+  return (
+    <Text style={styles.text}>Wah wah wah</Text>
+  )
+}
+
+export default class App extends React.Component {
+  render(){
+      return (
+      <View style={styles.container}>
+        <Text >text1</Text>
+        <MyData />
+        <MyData />
+        <MyData />
+        <StatusBar style="auto" />
+      </View>
+    );
+  }
+}
+```
 ## #5 - PROPS IN REACT NATIVE | REACT NATIVE WITH EXPO TUTORIALS IN HINDI  
 [#5 - PROPS IN REACT NATIVE | REACT NATIVE WITH EXPO TUTORIALS IN HINDI](https://www.youtube.com/watch?v=lM_UVkhaUeI&list=PLB97yPrFwo5gxB5SuNWzH73t2Su65KN2f&index=7)  
-  
+### 1
+```
+class MyData extends React.Component {
+  render(){
+    return (
+      <Text style={styles.text}>
+        {this.props.name} {this.props.status} {this.props.age}
+        </Text>
+    )
+    }
+}
+
+export default class App extends React.Component {
+  render(){
+      return (
+      <View style={styles.container}>
+        <MyData name="John" status="Dow" age="33" />
+        <MyData name="Vasya" status="Ivanov" age="43"  />
+        <MyData name="Smith" status="Smith" age="35"  />
+        <StatusBar style="auto" />
+      </View>
+    );
+  }
+}
+```
+### 1.2
+```
+class MyData extends React.Component {
+  render(){
+    return (
+      <View>
+      <Text style={styles.text}>
+        {this.props.name} {this.props.status} {this.props.age}
+        </Text>
+      <Text style={styles.text}>
+      {this.props.name} {this.props.status} {this.props.age}
+      </Text>
+      </View>
+  )
+    }
+}
+```  
+### 2
+```
+const MyData = (props)=> {
+    return (
+      <View>
+      <Text style={styles.text}>
+        {props.name} {props.status}
+        </Text>
+      <Text>{props.age}</Text>
+      </View>
+    )
+}
+
+export default class App extends React.Component {
+  render(){
+      return (
+      <View style={styles.container}>
+        <MyData name="John" status="Dow" age="33" />
+        <MyData name="Vasya" status="Ivanov" age="43"  />
+        <MyData name="Smith" status="Smith" age="35"  />
+        <StatusBar style="auto" />
+      </View>
+    );
+  }
+}
+```
 ## #6 - state and setState in react native | REACT NATIVE WITH EXPO TUTORIALS IN HINDI  
 [#6 - state and setState in react native | REACT NATIVE WITH EXPO TUTORIALS IN HINDI](https://www.youtube.com/watch?v=aDkrepLsSmM&list=PLB97yPrFwo5gxB5SuNWzH73t2Su65KN2f&index=8)  
-  
+```
+export default class App extends React.Component {
+  state = {
+    name : "John"
+  }
+  handleSt = () => {
+    this.setState({
+      name : "Smith"
+    })
+    console.log("updated ", this.state)
+  }
+    render(){
+      return (
+      <View style={styles.container}>
+        <Text style={styles.text}>{this.state.name}</Text>
+        <Button title="click me" onPress={this.handleSt} />
+        <StatusBar style="auto" />
+      </View>
+    );
+  }
+}
+```
+### 1
+```
+onPress={this.handleSt}
+handleSt = () => {
+```
+### 2  
+```
+onPress={()=>{this.handleSt()}}
+handleSt() {
+```
 ## #7 - Flexbox and Stylesheets in react native for layouts | react native tutorials in  
 [#7 - Flexbox and Stylesheets in react native for layouts | react native tutorials in](https://www.youtube.com/watch?v=y3k2E6_VxZ4&list=PLB97yPrFwo5gxB5SuNWzH73t2Su65KN2f&index=9)  
-  
+[Layout with Flexbox](https://reactnative.dev/docs/flexbox)    
+```
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignContent: 'flex-start',
+    flexDirection: "row",
+    flexWrap: "wrap"
+  },
+  text: {
+    color: 'blue',
+    height: 180,
+    width: 180,
+    backgroundColor: 'skyblue',
+    fontSize: 30,
+    borderWidth: 1
+  }
+```
+- to multiple lines using flexWrap:'wrap'
 ## #8- built in components in react native | react native tutorials with expo in  
 [#8- built in components in react native | react native tutorials with expo in](https://www.youtube.com/watch?v=gk4FMKr41nc&list=PLB97yPrFwo5gxB5SuNWzH73t2Su65KN2f&index=10)  
-  
+```
+export default class App extends React.Component {
+  state = {
+    text : "text1"
+  }
+    render(){
+      return (
+      <View style={styles.container}>
+        <Text style={styles.text}>{this.state.text}</Text>
+        <TextInput placeholder="Type Here" 
+        onChangeText={(text)=>{
+          this.setState({text:text})
+          }}/>
+          <Button title="click me" 
+          onPress = {() => {
+            alert(this.state.text);
+            console.log("33333");
+          } } />
+        <StatusBar style="auto" />
+      </View>
+    );
+  }
+}
+```
+### 2
+```
+export default class App extends React.Component {
+  state = {
+    text : "text1"
+  }
+    render(){
+      return (
+      <View style={styles.container}>
+        <ScrollView>
+        <Image 
+          source={{uri: 'https://img1.goodfon.ru/original/2560x1440/c/85/prazdnik-svecha-ogon-korobka.jpg'}}
+          style={styles.img}
+          />
+          <Image 
+          source={{uri: 'https://img1.goodfon.ru/original/2560x1440/c/85/prazdnik-svecha-ogon-korobka.jpg'}}
+          style={styles.img}
+          />
+          <Image 
+          source={{uri: 'https://img1.goodfon.ru/original/2560x1440/c/85/prazdnik-svecha-ogon-korobka.jpg'}}
+          style={styles.img}
+          />
+          <Image 
+          source={{uri: 'https://img1.goodfon.ru/original/2560x1440/c/85/prazdnik-svecha-ogon-korobka.jpg'}}
+          style={styles.img}
+          />
+        </ScrollView>
+        <Text style={styles.text}>{this.state.text}</Text>
+        <StatusBar style="auto" />
+      </View>
+    );
+  }
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    // alignItems: 'center',
+    justifyContent: 'center',
+  },
+  text: {
+    color: 'blue',
+    backgroundColor: 'skyblue',
+    fontSize: 30,
+    borderWidth: 1
+  },
+  img:{
+    width:300,
+    height:300,
+    margin:3,
+    borderRadius: 3
+  }
+});
+```  
+images.pexels.com  
+https://assets.imgix.net/unsplash/bridge.jpg?auto=compress&w=900&h=600&fit=crop  
 ## #9 - fetch data externally in react native | componentDidMount | react native tutorials in  
 [#9 - fetch data externally in react native | componentDidMount | react native tutorials in](https://www.youtube.com/watch?v=_0W-g5omCaY&list=PLB97yPrFwo5gxB5SuNWzH73t2Su65KN2f&index=11)  
-  
+jsonplaceholder.typicode.com  
+http://jsonplaceholder.typicode.com/users
+```
+export default class App extends React.Component {
+  state = {
+    text : "text1"
+  }
+  componentDidMount(){
+    fetch("http://jsonplaceholder.typicode.com/users")
+    .then(data=>data.json())
+    .then(data2=>{
+      console.log(data2)
+      this.setState({
+        text:data2[1].name
+      })
+    })
+  }
+    render(){
+      return (
+      <View style={styles.container}>
+        <Text style={styles.text}>{this.state.text}</Text>
+        <StatusBar style="auto" />
+      </View>
+    );
+  }
+}
+```
 ## #1 - Love percentage calculator in react native part 1 of 5 | react native tutorials in  
 [#1 - Love percentage calculator in react native part 1 of 5 | react native tutorials in](https://www.youtube.com/watch?v=St1QVbq7A0g&list=PLB97yPrFwo5gxB5SuNWzH73t2Su65KN2f&index=12)  
-  
+https://github.com/callstack/react-native-paper  
+https://reactnativepaper.com/  
+https://callstack.github.io/react-native-paper/index.html  
+https://callstack.github.io/react-native-paper/getting-started.html  
+- npm install react-native-paper
+- npm start  
+```
+import { StatusBar } from 'expo-status-bar';
+import { TextInput } from 'react-native-paper';
+import React from 'react';
+import { StyleSheet, Text, View, Button, Alert } from 'react-native';
+
+
+
+export default class App extends React.Component {
+  state = {
+    text : ""
+  }
+   componentDidMount(){
+
+  }
+    render(){
+      return (
+      <View style={styles.container}>
+        <Text style={styles.text}>{this.state.text}</Text>
+        <TextInput
+      label="fname"
+      value= {this.state.text}
+      onChangeText={text => this.setState({text})}
+    />
+
+        <StatusBar style="auto" />
+      </View>
+    );
+  }
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+
+  },
+  text: {
+    color: 'blue',
+    backgroundColor: 'skyblue',
+    fontSize: 30,
+    borderWidth: 1
+  },
+  img:{
+    width:300,
+    height:300,
+    margin:3,
+    borderRadius: 3
+  }
+});
+```
+### 2
+https://callstack.github.io/react-native-paper/text-input.html  
+
 ## #2 - Love percentage calculator in react native part 2 of 5 | react native tutorials in  
 [#2 - Love percentage calculator in react native part 2 of 5 | react native tutorials in](https://www.youtube.com/watch?v=Lf5xWQ7e_WI&list=PLB97yPrFwo5gxB5SuNWzH73t2Su65KN2f&index=13)  
-  
+### 3
+[Appbar.Header](https://callstack.github.io/react-native-paper/appbar-header.html)  
+import { Appbar } from 'react-native-paper';  
+material ui icons  
+https://material.io/resources/icons/?style=baseline  
+npm install @material-ui/icons  
 ## #3 - Love percentage calculator in react native part 3 of 5 | react native tutorials in  
 [#3 - Love percentage calculator in react native part 3 of 5 | react native tutorials in](https://www.youtube.com/watch?v=J8HQc6KG0xg&list=PLB97yPrFwo5gxB5SuNWzH73t2Su65KN2f&index=14)  
   

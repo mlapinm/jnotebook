@@ -1,5 +1,5 @@
 
-
+## Walkthrough App
 1 [_Walkthrough: Let's Build an App! - YouTube](#Walkthrough-Let's-Build-an-App!---YouTube)  
 2 [_Walkthrough: Setup on the App - YouTube](#Walkthrough-Setup-on-the-App---YouTube)  
 3 [_Walkthrough: Initial Run of the App - YouTube](#Walkthrough-Initial-Run-of-the-App---YouTube)  
@@ -14,6 +14,8 @@
 12 [_Walkthrough: Adding a Picker - YouTube](#Walkthrough-Adding-a-Picker---YouTube)  
 ## Walkthrough: Let's Build an App! - YouTube  
 [Walkthrough: Let's Build an App! - YouTube](https://www.youtube.com/watch?v=9M-hfeFLPoc&list=PLp8YCP6EV3eJwUvFF1R1KOho_Cc7wMf9f)  
+react-native init r2042blmob --template typescript
+
   
 ## Walkthrough: Setup on the App - YouTube  
 [Walkthrough: Setup on the App - YouTube](https://www.youtube.com/watch?v=lMDnlGppB-w&list=PLp8YCP6EV3eJwUvFF1R1KOho_Cc7wMf9f&index=2)  
