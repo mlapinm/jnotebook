@@ -116,4 +116,7 @@ const styles = StyleSheet.create({
   }
 });
 ```
+## expo eject
+expo eject  
+yarn android  
   

@@ -5,7 +5,7 @@
 [Android приложение Фонарик 80](#Android-приложение-Фонарик)  
 [Android Studio Kotlin](#Android-Studio-Kotlin)  
 [projects b02andr](#projects-b02andr)  
-[]()  
+[Firestore Tutorial](#Firestore-Tutorial)  
 []()  
 []()  
 
@@ -176,8 +176,26 @@ footer
 [projects b02andr](b2022prj.md)  
 
 
-## 
-[]()  
+## Firestore Tutorial
+[Firestore Tutorial](b3022fb.md)  
+1 - WHAT IS CLOUD FIRESTORE?
+2 - SETTING UP FIREBASE & FIRST DOCUMENT
+3 - RETRIEVE DATA FROM DOCUMENT
+4 - SNAPSHOT LISTENER
+5 - MERGE AND UPDATE
+6 - DELETE DATA
+7 - CUSTOM JAVA OBJECT
+8 - ADD AND RETRIEVE MULTIPLE DOCUMENTS
+9 - SIMPLE QUERIES
+10 - COMPOUND QUERIES
+11 - MERGE TASKS TO CREATE OR-QUERIES
+12 - PAGINATION
+13 - DOCUMENT CHANGES
+14 - BATCHED WRITES
+15 - TRANSACTIONS
+16 - ARRAYS
+17 - NESTED OBJECTS
+18 - SUBCOLLECTIONS AND CONSIDERATIONS
 
 
 ## 
