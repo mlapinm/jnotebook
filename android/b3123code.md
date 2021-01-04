@@ -1,3 +1,5 @@
+## FirebaseUI Firestore RecyclerView
+## FirebaseUI Firestore RecyclerView
 [1 - PREPARATIONS - Android Studio Tutorial](#1---PREPARATIONS---Android-Studio-Tutorial)  
 [2 - LAYOUTS & MODEL CLASS - Android Studio Tutorial](#2---LAYOUTS-&-MODEL-CLASS---Android-Studio-Tutorial)  
 [3 - FIRESTORE RECYCLER ADAPTER - Android Studio Tutorial](#3---FIRESTORE-RECYCLER-ADAPTER---Android-Studio-Tutorial)  
@@ -22,3 +24,4 @@
 ## 6 - ON CLICK INTERFACE - Android Studio Tutorial  
 [6 - ON CLICK INTERFACE - Android Studio Tutorial](https://www.youtube.com/watch?v=3WR4QAiVuCw&list=PLrnPJCHvNZuAXdWxOzsN5rgG2M4uJ8bH1&index=6)  
   
+
