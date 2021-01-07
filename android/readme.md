@@ -6,8 +6,10 @@
 [Android Studio Kotlin](#Android-Studio-Kotlin)  
 [projects b02andr](#projects-b02andr)  
 [Firestore Tutorial](#Firestore-Tutorial)  
-[]()  
-[]()  
+[Coding in flow](#Coding-in-flow)  
+[](#)  
+[](#)  
+[](#)  
 
 [htmlpreview-github](https://htmlpreview.github.io/)  
 [rm01andr](https://htmlpreview.github.io/?https://github.com/mlapinm/jnotebook/blob/master/android/rm01andr.html)  
@@ -198,10 +200,57 @@ footer
 18 - SUBCOLLECTIONS AND CONSIDERATIONS
 
 
-## 
-[]()  
-
-
+## Coding in flow
+[Coding in flow](b6004flow.md)  
+`Fragments/Dialogs - Android Programming`
+`RecyclerView + CardView Tutorial - Android`
+`Activites - Android Programming`
+`Images, Animations, Transitions - Android Programming`
+`Simple & Easy App Features - Android Programming`
+`Third Party Libraries & Tools - Android Programming`
+`Using Colors - Android Programming`
+`Data Persistence - Android Programming`
+`Displaying, Styling & Animating Text - Android Program`
+`Pickers - Android Programming`
+`Runtime Permission Request - Android Programming`
+`Android Studio / IntelliJ IDEA Features & Plugins`
+`Date & Time - Android Programming`
+`Menus - Android Programming`
+`Tic Tac Toe - Android Studio Tutorial (With Code)`
+`Online Features / Networking - Android Programming`
+`Image Loading Libraries - Android Programming`
+`Adapter Class Examples - Android Programming`
+`Android Studio & Emulator Settings`
+`Firebase Tutorials - Android Programming`
+`Toasts - Android Programming`
+`CountDownTimer Tutorial (Start/Pause/Reset + Input Ti`
+`Bottom Sheets - Android Programming`
+`GSON Tutorial - Android Programming`
+`Media Playback - Android Programming`
+`General Android/Programming Knowledge`
+`Android Studio Productivity Tips & Tricks`
+`Playing Sounds and Music - Android Programming`
+`Layout Tutorials - Android Programming`
+`Styling Android Studio / IntelliJ IDEA`
+`Cloud Firestore Android Tutorial`
+`Spinners - Android Programming`
+`EditText Tutorials - Android Programming`
+`Threading - Android Programming`
+`Notifications & Notification Channels Tutorial - Android Pro`
+`Services & Background Tasks - Android Programming`
+`BroadcastReceiver Tutorial - Android Programming`
+`Spans and Spannables - Android Programming`
+`FirebaseUI - Firestore + RecyclerView (FirestoreRecycler`
+`Android Architecture Components Beginner Tutorial - Roo`
+`Retrofit Tutorial for Beginners - Android Programming`
+`Dagger 2 Beginner Tutorial - Android Programming`
+`Navigation - Android Programming`
+`Android Threads, Looper, MessageQueue & Handler Explain`
+`Kotlin Course for Beginners and Java DevsKotlin Course for Beginners and Java Devs`
+`Kotlin RecyclerView Tutorial (2020 with AndroidX)`
+`MVVM Image Search App with Architecture Components`
+`Getting Started With Navigation Component`
+`MVVM To-Do List App with Flow and Architecture Compo`
 ## 
 []()  
 
