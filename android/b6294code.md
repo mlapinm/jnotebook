@@ -1,13 +1,4 @@
-## Tic Tac Toe - Android Studio Tutorial (With Code)
-## How to Make a Tic Tac Toe Game in Android - Part 1 - THE LAYOUT - Android Studio Tutorial
-[How to Make a Tic Tac Toe Game in Android - Part 1 - THE LAYOUT - Android Studio Tutorial](https://www.youtube.com/watch?v=apDL78MFR3o&list=PLrnPJCHvNZuA0ykzsHIdQUC5yKxArSM2V&index=1)  
-  
-## How to Make a Tic Tac Toe Game in Android - Part 2 - 2D ARRAY AND CHECKING FOR A WINNER
-[How to Make a Tic Tac Toe Game in Android - Part 2 - 2D ARRAY AND CHECKING FOR A WINNER](https://www.youtube.com/watch?v=9nVSYkQoV5I&list=PLrnPJCHvNZuA0ykzsHIdQUC5yKxArSM2V&index=2)  
-  
-## How to Make a Tic Tac Toe Game in Android - Part 3 - FINISHING THE GAME - Android Studio Tutorial
-[How to Make a Tic Tac Toe Game in Android - Part 3 - FINISHING THE GAME - Android Studio Tutorial](https://www.youtube.com/watch?v=HTO0QmZAbTg&list=PLrnPJCHvNZuA0ykzsHIdQUC5yKxArSM2V&index=3)  
-  
-## How to Make a Tic Tac Toe Game in Android - Part 4 - ORIENTATION CHANGE & RESET FUNCTIONALITY
-[How to Make a Tic Tac Toe Game in Android - Part 4 - ORIENTATION CHANGE & RESET FUNCTIONALITY](https://www.youtube.com/watch?v=YcP0HB-dgQs&list=PLrnPJCHvNZuA0ykzsHIdQUC5yKxArSM2V&index=4)  
+## Working with JSON on Android
+## What is JSON?
+[What is JSON?](https://www.youtube.com/watch?v=0IoG-mSvWSo&list=PLrnPJCHvNZuBdsuDMl3I-EOEOnCh6JNF3&index=1)  
   

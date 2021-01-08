@@ -1,37 +1,40 @@
-## Android Studio Productivity Tips & Tricks
-## 6 Helpful Android Studio Shortcuts That Will Make You More Productive
-[6 Helpful Android Studio Shortcuts That Will Make You More Productive](https://www.youtube.com/watch?v=DLa-QWb8d-0&list=PLrnPJCHvNZuD5mUhTDHRvKSr3XySIpRJ5)  
+## MVVM Image Search App with Architecture Components
+## Project Setup - MVVM Image Search App with Architecture Components & Retrofit #1
+[Project Setup - MVVM Image Search App with Architecture Components & Retrofit #1](https://www.youtube.com/watch?v=m_cMJehM9xc&list=PLrnPJCHvNZuC_pEfFlZuTmjlY4T3DTtED)  
   
-## Navigate Through Android Studio More Quickly with These Shortcuts
-[Navigate Through Android Studio More Quickly with These Shortcuts](https://www.youtube.com/watch?v=mEGheS1i3ws&list=PLrnPJCHvNZuD5mUhTDHRvKSr3XySIpRJ5&index=2)  
+## Layouts & Model Class - MVVM Image Search App with Architecture Components & Retrofit #2
+[Layouts & Model Class - MVVM Image Search App with Architecture Components & Retrofit #2](https://www.youtube.com/watch?v=IPWnPGLAK8Y&list=PLrnPJCHvNZuC_pEfFlZuTmjlY4T3DTtED&index=2)  
   
-## Auto Generate Constructor + Getter/Setter (With Custom Variable Naming) - Android Studio Tutorial
-[Auto Generate Constructor + Getter/Setter (With Custom Variable Naming) - Android Studio Tutorial](https://www.youtube.com/watch?v=zw2MiPo87nI&list=PLrnPJCHvNZuD5mUhTDHRvKSr3XySIpRJ5&index=3)  
+## Navigation Component - MVVM Image Search App with Architecture Components & Retrofit #3
+[Navigation Component - MVVM Image Search App with Architecture Components & Retrofit #3](https://www.youtube.com/watch?v=oCpwq-TX0wc&list=PLrnPJCHvNZuC_pEfFlZuTmjlY4T3DTtED&index=3)  
   
-## Android Studio / IntelliJ Clipboard History
-[Android Studio / IntelliJ Clipboard History](https://www.youtube.com/watch?v=kYw21e-vkjo&list=PLrnPJCHvNZuD5mUhTDHRvKSr3XySIpRJ5&index=4)  
+## API Interface - MVVM Image Search App with Architecture Components & Retrofit #4
+[API Interface - MVVM Image Search App with Architecture Components & Retrofit #4](https://www.youtube.com/watch?v=IRL5Z6CarBw&list=PLrnPJCHvNZuC_pEfFlZuTmjlY4T3DTtED&index=4)  
   
-## How to Revert Changes and Restore Deleted Files in Android Studio / IntelliJ IDEA with Local History
-[How to Revert Changes and Restore Deleted Files in Android Studio / IntelliJ IDEA with Local History](https://www.youtube.com/watch?v=2A5F34TofMY&list=PLrnPJCHvNZuD5mUhTDHRvKSr3XySIpRJ5&index=5)  
+## Dependency Injection with Hilt - MVVM Image Search App with Architecture Components & Retrofit #5
+[Dependency Injection with Hilt - MVVM Image Search App with Architecture Components & Retrofit #5](https://www.youtube.com/watch?v=pRBhrrpAyP8&list=PLrnPJCHvNZuC_pEfFlZuTmjlY4T3DTtED&index=5)  
   
-## 5 More Helpful Android Studio Shortcuts
-[5 More Helpful Android Studio Shortcuts](https://www.youtube.com/watch?v=iZRMt57NF8Y&list=PLrnPJCHvNZuD5mUhTDHRvKSr3XySIpRJ5&index=6)  
+## PagingSource & PagingData - MVVM Image Search App with Architecture Components & Retrofit #6
+[PagingSource & PagingData - MVVM Image Search App with Architecture Components & Retrofit #6](https://www.youtube.com/watch?v=y2M8gLBUeW4&list=PLrnPJCHvNZuC_pEfFlZuTmjlY4T3DTtED&index=6)  
   
-## Batch Import Images for Different Screen Resolutions - Android Studio Tutorial
-[Batch Import Images for Different Screen Resolutions - Android Studio Tutorial](https://www.youtube.com/watch?v=bbFLDR6X2D8&list=PLrnPJCHvNZuD5mUhTDHRvKSr3XySIpRJ5&index=7)  
+## PagingDataAdapter - MVVM Image Search App with Architecture Components & Retrofit #7
+[PagingDataAdapter - MVVM Image Search App with Architecture Components & Retrofit #7](https://www.youtube.com/watch?v=r3bGlWtUcuY&list=PLrnPJCHvNZuC_pEfFlZuTmjlY4T3DTtED&index=7)  
   
-## How to Create Your Own Live Templates in Android Studo / IntelliJ
-[How to Create Your Own Live Templates in Android Studo / IntelliJ](https://www.youtube.com/watch?v=IOaAOe38p50&list=PLrnPJCHvNZuD5mUhTDHRvKSr3XySIpRJ5&index=8)  
+## Header & Footer - MVVM Image Search App with Architecture Components & Retrofit #8
+[Header & Footer - MVVM Image Search App with Architecture Components & Retrofit #8](https://www.youtube.com/watch?v=EjD_3ifOxVA&list=PLrnPJCHvNZuC_pEfFlZuTmjlY4T3DTtED&index=8)  
   
-## How to Use Bookmarks in Android Studio / IntelliJ IDEA
-[How to Use Bookmarks in Android Studio / IntelliJ IDEA](https://www.youtube.com/watch?v=tg33rKs3NtU&list=PLrnPJCHvNZuD5mUhTDHRvKSr3XySIpRJ5&index=9)  
+## Search Functionality - MVVM Image Search App with Architecture Components & Retrofit #9
+[Search Functionality - MVVM Image Search App with Architecture Components & Retrofit #9](https://www.youtube.com/watch?v=We1cVhZHirk&list=PLrnPJCHvNZuC_pEfFlZuTmjlY4T3DTtED&index=9)  
   
-## Quickly Reset the App Data (and more) with ADB Idea - Android Studio Tutorial
-[Quickly Reset the App Data (and more) with ADB Idea - Android Studio Tutorial](https://www.youtube.com/watch?v=7uDEEjnw-yg&list=PLrnPJCHvNZuD5mUhTDHRvKSr3XySIpRJ5&index=10)  
+## LoadStateListener - MVVM Image Search App with Architecture Components & Retrofit #10
+[LoadStateListener - MVVM Image Search App with Architecture Components & Retrofit #10](https://www.youtube.com/watch?v=xao8KwaaKwQ&list=PLrnPJCHvNZuC_pEfFlZuTmjlY4T3DTtED&index=10)  
   
-## Find Thousands of Code Templates with Exynap - Android Studio Tutorial
-[Find Thousands of Code Templates with Exynap - Android Studio Tutorial](https://www.youtube.com/watch?v=8yiXN72ZUno&list=PLrnPJCHvNZuD5mUhTDHRvKSr3XySIpRJ5&index=11)  
+## Navigating to the Detail Screen - MVVM Image Search App with Architecture Components & Retrofit #11
+[Navigating to the Detail Screen - MVVM Image Search App with Architecture Components & Retrofit #11](https://www.youtube.com/watch?v=sLY7ywrYUNw&list=PLrnPJCHvNZuC_pEfFlZuTmjlY4T3DTtED&index=11)  
   
-## Add a Code Minimap to Android Studio like in Sublime with CodeGlance
-[Add a Code Minimap to Android Studio like in Sublime with CodeGlance](https://www.youtube.com/watch?v=rmyDQmYKSEo&list=PLrnPJCHvNZuD5mUhTDHRvKSr3XySIpRJ5&index=12)  
+## Implementing the DetailsFragment - MVVM Image Search App with Architecture Components & Retrofit #12
+[Implementing the DetailsFragment - MVVM Image Search App with Architecture Components & Retrofit #12](https://www.youtube.com/watch?v=RJusvbfSX-0&list=PLrnPJCHvNZuC_pEfFlZuTmjlY4T3DTtED&index=12)  
+  
+## Handling Process Death - MVVM Image Search App with Architecture Components & Retrofit #13
+[Handling Process Death - MVVM Image Search App with Architecture Components & Retrofit #13](https://www.youtube.com/watch?v=KsKXYOLrTXw&list=PLrnPJCHvNZuC_pEfFlZuTmjlY4T3DTtED&index=13)  
   

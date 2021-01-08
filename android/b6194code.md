@@ -1,7 +1,7 @@
-## Pickers - Android Programming
-## Color Picker Dialog (AmbilWarna) - Android Studio Tutorial
-[Color Picker Dialog (AmbilWarna) - Android Studio Tutorial](https://www.youtube.com/watch?v=7qXwgD45b4w&list=PLrnPJCHvNZuA7RUZo2FtTyVSt0rz2oga7&index=4)  
+## Runtime Permission Request - Android Programming
+## How to Request a Run Time Permission - Android Studio Tutorial
+[How to Request a Run Time Permission - Android Studio Tutorial](https://www.youtube.com/watch?v=SMrB97JuIoM&list=PLrnPJCHvNZuDKMpu23RJ2NjQif6FuYzRV)  
   
-## ColorSeekBar Library - Android Studio Tutorial
-[ColorSeekBar Library - Android Studio Tutorial](https://www.youtube.com/watch?v=FPuGe9N2aGU&list=PLrnPJCHvNZuA7RUZo2FtTyVSt0rz2oga7&index=5)  
+## How to Make a Phone Call from Your App (+ Permission Request) - Android Studio Tutorial
+[How to Make a Phone Call from Your App (+ Permission Request) - Android Studio Tutorial](https://www.youtube.com/watch?v=UDwj5j4tBYg&list=PLrnPJCHvNZuDKMpu23RJ2NjQif6FuYzRV&index=4)  
   

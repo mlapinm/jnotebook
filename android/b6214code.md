@@ -1,13 +1,19 @@
-## Runtime Permission Request - Android Programming
-## How to Request a Run Time Permission - Android Studio Tutorial
-[How to Request a Run Time Permission - Android Studio Tutorial](https://www.youtube.com/watch?v=SMrB97JuIoM&list=PLrnPJCHvNZuDKMpu23RJ2NjQif6FuYzRV)  
+## RecyclerView + Volley + Picasso Tutorial - Android Prog
+## RecyclerView + JSON Parsing - Part 1 - CHOOSING AN API AND PREPARATIONS - Android Studio Tutorial
+[RecyclerView + JSON Parsing - Part 1 - CHOOSING AN API AND PREPARATIONS - Android Studio Tutorial](https://www.youtube.com/watch?v=bPDW9SdsGMo&list=PLrnPJCHvNZuBCiCxN8JPFI57Zhr5SusRL&index=1)  
   
-## Easier Permission Requests with PermissionsDispatcher Library - Android Studio Tutorial
-[Easier Permission Requests with PermissionsDispatcher Library - Android Studio Tutorial](https://www.youtube.com/watch?v=RLCykrvV5Ww&list=PLrnPJCHvNZuDKMpu23RJ2NjQif6FuYzRV&index=2)  
+## RecyclerView + JSON Parsing - Part 2 - CREATING A MODEL - Android Studio Tutorial
+[RecyclerView + JSON Parsing - Part 2 - CREATING A MODEL - Android Studio Tutorial](https://www.youtube.com/watch?v=8h5HM7ZGpMs&list=PLrnPJCHvNZuBCiCxN8JPFI57Zhr5SusRL&index=2)  
   
-## EasyPermissions Library - Android Studio Tutorial
-[EasyPermissions Library - Android Studio Tutorial](https://www.youtube.com/watch?v=iHbdDAOJHIU&list=PLrnPJCHvNZuDKMpu23RJ2NjQif6FuYzRV&index=3)  
+## RecyclerView + JSON Parsing - Part 3 - CREATING THE ADAPTER - Android Studio Tutorial
+[RecyclerView + JSON Parsing - Part 3 - CREATING THE ADAPTER - Android Studio Tutorial](https://www.youtube.com/watch?v=mMzT4fSHU-8&list=PLrnPJCHvNZuBCiCxN8JPFI57Zhr5SusRL&index=3)  
   
-## How to Make a Phone Call from Your App (+ Permission Request) - Android Studio Tutorial
-[How to Make a Phone Call from Your App (+ Permission Request) - Android Studio Tutorial](https://www.youtube.com/watch?v=UDwj5j4tBYg&list=PLrnPJCHvNZuDKMpu23RJ2NjQif6FuYzRV&index=4)  
+## RecyclerView + JSON Parsing - Part 4 - PARSING JSON WITH VOLLEY - Android Studio Tutorial
+[RecyclerView + JSON Parsing - Part 4 - PARSING JSON WITH VOLLEY - Android Studio Tutorial](https://www.youtube.com/watch?v=bRvLg27EWp0&list=PLrnPJCHvNZuBCiCxN8JPFI57Zhr5SusRL&index=4)  
+  
+## RecyclerView + JSON Parsing - Part 5 - PREPARING THE DETAIL ACTIVITY - Android Studio Tutorial
+[RecyclerView + JSON Parsing - Part 5 - PREPARING THE DETAIL ACTIVITY - Android Studio Tutorial](https://www.youtube.com/watch?v=JjjsadfVSfw&list=PLrnPJCHvNZuBCiCxN8JPFI57Zhr5SusRL&index=5)  
+  
+## RecyclerView + JSON Parsing - Part 6 - ON ITEM CLICK LISTENER INTERFACE - Android Studio Tutorial
+[RecyclerView + JSON Parsing - Part 6 - ON ITEM CLICK LISTENER INTERFACE - Android Studio Tutorial](https://www.youtube.com/watch?v=WtLZK1kh-yM&list=PLrnPJCHvNZuBCiCxN8JPFI57Zhr5SusRL&index=6)  
   

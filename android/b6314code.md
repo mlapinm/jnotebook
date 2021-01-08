@@ -1,37 +1,25 @@
-## Online Features / Networking - Android Programming
-## WebView - Android Studio Tutorial
-[WebView - Android Studio Tutorial](https://www.youtube.com/watch?v=TUXui5ItBkM&list=PLrnPJCHvNZuCPNCW2xdriIUgxmo9-QcFi&index=11)  
+## Adapter Class Examples - Android Programming
+## Adapter & ViewHolder - Simple RecyclerView in Kotlin (2020 with AndroidX) Part 2
+[Adapter & ViewHolder - Simple RecyclerView in Kotlin (2020 with AndroidX) Part 2](https://www.youtube.com/watch?v=afl_i6uvvU0&list=PLrnPJCHvNZuBAaN07RO7boUrFT4gkDlpL)  
   
-## Downloadable Fonts - Android Studio Tutorial
-[Downloadable Fonts - Android Studio Tutorial](https://www.youtube.com/watch?v=6m6Duw1znKE&list=PLrnPJCHvNZuCPNCW2xdriIUgxmo9-QcFi&index=12)  
+## Item Click Listener - Simple RecyclerView in Kotlin (2020 with AndroidX) Part 4
+[Item Click Listener - Simple RecyclerView in Kotlin (2020 with AndroidX) Part 4](https://www.youtube.com/watch?v=wKFJsrdiGS8&list=PLrnPJCHvNZuBAaN07RO7boUrFT4gkDlpL&index=2)  
   
-## How to Send an Email via Intent - Android Studio Tutorial
-[How to Send an Email via Intent - Android Studio Tutorial](https://www.youtube.com/watch?v=tZ2YEw6SoBU&list=PLrnPJCHvNZuCPNCW2xdriIUgxmo9-QcFi&index=13)  
+## How to Filter a RecyclerView with SearchView - Android Studio Tutorial
+[How to Filter a RecyclerView with SearchView - Android Studio Tutorial](https://www.youtube.com/watch?v=sJ-Z9G0SDhc&list=PLrnPJCHvNZuBAaN07RO7boUrFT4gkDlpL&index=6)  
   
-## Open Playstore Page Programmatically (Rate Me Button) - Android Studio Tutorial
-[Open Playstore Page Programmatically (Rate Me Button) - Android Studio Tutorial](https://www.youtube.com/watch?v=OwZcZwXWegk&list=PLrnPJCHvNZuCPNCW2xdriIUgxmo9-QcFi&index=14)  
+## Custom Spinner - Android Studio Tutorial
+[Custom Spinner - Android Studio Tutorial](https://www.youtube.com/watch?v=GeO5F0nnzAw&list=PLrnPJCHvNZuBAaN07RO7boUrFT4gkDlpL&index=13)  
   
-## How to Create a Rate Me Dialog with the Android-Rate Library - Android Studio Tutorial
-[How to Create a Rate Me Dialog with the Android-Rate Library - Android Studio Tutorial](https://www.youtube.com/watch?v=lS26PLG1_Ws&list=PLrnPJCHvNZuCPNCW2xdriIUgxmo9-QcFi&index=15)  
+## AutoCompleteTextView with Custom Adapter Part 2 - ARRAY ADAPTER AND FILTER - Android Studio Tutorial
+[AutoCompleteTextView with Custom Adapter Part 2 - ARRAY ADAPTER AND FILTER - Android Studio Tutorial](https://www.youtube.com/watch?v=ocM1Yw_ktqM&list=PLrnPJCHvNZuBAaN07RO7boUrFT4gkDlpL&index=23)  
   
-## Simple HTTP Request with OkHttp - Android Studio Tutorial
-[Simple HTTP Request with OkHttp - Android Studio Tutorial](https://www.youtube.com/watch?v=oGWJ8xD2W6k&list=PLrnPJCHvNZuCPNCW2xdriIUgxmo9-QcFi&index=16)  
+## App Widget Part 4 - ADAPTER-BASED WIDGETS - Android Studio Tutorial
+[App Widget Part 4 - ADAPTER-BASED WIDGETS - Android Studio Tutorial](https://www.youtube.com/watch?v=MMiuy9jK6X8&list=PLrnPJCHvNZuBAaN07RO7boUrFT4gkDlpL&index=24)  
   
-## How to Parse a Json Using Volley - SIMPLE GET REQUEST - Android Studio Tutorial
-[How to Parse a Json Using Volley - SIMPLE GET REQUEST - Android Studio Tutorial](https://www.youtube.com/watch?v=y2xtLqP8dSQ&list=PLrnPJCHvNZuCPNCW2xdriIUgxmo9-QcFi&index=17)  
+## App Widget Part 5 - WIDGET STACKVIEW / LISTVIEW ON CLICK LISTENER - Android Studio Tutorial
+[App Widget Part 5 - WIDGET STACKVIEW / LISTVIEW ON CLICK LISTENER - Android Studio Tutorial](https://www.youtube.com/watch?v=4RQ40gQd0_4&list=PLrnPJCHvNZuBAaN07RO7boUrFT4gkDlpL&index=25)  
   
-## Volley Singleton Pattern - Android Studio Tutorial
-[Volley Singleton Pattern - Android Studio Tutorial](https://www.youtube.com/watch?v=viyPg_ootVs&list=PLrnPJCHvNZuCPNCW2xdriIUgxmo9-QcFi&index=18)  
-  
-## RecyclerView + JSON Parsing - Part 1 - CHOOSING AN API AND PREPARATIONS - Android Studio Tutorial
-[RecyclerView + JSON Parsing - Part 1 - CHOOSING AN API AND PREPARATIONS - Android Studio Tutorial](https://www.youtube.com/watch?v=bPDW9SdsGMo&list=PLrnPJCHvNZuCPNCW2xdriIUgxmo9-QcFi&index=19)  
-  
-## RecyclerView + JSON Parsing - Part 2 - CREATING A MODEL - Android Studio Tutorial
-[RecyclerView + JSON Parsing - Part 2 - CREATING A MODEL - Android Studio Tutorial](https://www.youtube.com/watch?v=8h5HM7ZGpMs&list=PLrnPJCHvNZuCPNCW2xdriIUgxmo9-QcFi&index=20)  
-  
-## RecyclerView + JSON Parsing - Part 4 - PARSING JSON WITH VOLLEY - Android Studio Tutorial
-[RecyclerView + JSON Parsing - Part 4 - PARSING JSON WITH VOLLEY - Android Studio Tutorial](https://www.youtube.com/watch?v=bRvLg27EWp0&list=PLrnPJCHvNZuCPNCW2xdriIUgxmo9-QcFi&index=22)  
-  
-## RecyclerView + JSON Parsing - Part 5 - PREPARING THE DETAIL ACTIVITY - Android Studio Tutorial
-[RecyclerView + JSON Parsing - Part 5 - PREPARING THE DETAIL ACTIVITY - Android Studio Tutorial](https://www.youtube.com/watch?v=JjjsadfVSfw&list=PLrnPJCHvNZuCPNCW2xdriIUgxmo9-QcFi&index=23)  
+## App Widget Part 6 - UPDATE COLLECTION WIDGET - Android Studio Tutorial
+[App Widget Part 6 - UPDATE COLLECTION WIDGET - Android Studio Tutorial](https://www.youtube.com/watch?v=0ehrgrKi9eE&list=PLrnPJCHvNZuBAaN07RO7boUrFT4gkDlpL&index=26)  
   

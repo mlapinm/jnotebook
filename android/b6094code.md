@@ -1,64 +1,76 @@
-## Simple & Easy App Features - Android Programming
-## How to Create a Custom Button (With Images) in Android Studio
-[How to Create a Custom Button (With Images) in Android Studio](https://www.youtube.com/watch?v=Nn4-Vn7qk9k&list=PLrnPJCHvNZuCaFbD-1TsnRaO39huczYcA&index=4)  
+## Images, Animations, Transitions - Android Programming
+## Easily Create Animations with the AndroidViewAnimation Library - Android Studio Tutorial
+[Easily Create Animations with the AndroidViewAnimation Library - Android Studio Tutorial](https://www.youtube.com/watch?v=otMSB-dFuY8&list=PLrnPJCHvNZuARS1W7qMt-zxBNqWYZpOg6&index=1)  
   
-## Slide Animation Between Activites - Android Studio Tutorial
-[Slide Animation Between Activites - Android Studio Tutorial](https://www.youtube.com/watch?v=0s6x3Sn4eYo&list=PLrnPJCHvNZuCaFbD-1TsnRaO39huczYcA&index=5)  
+## Batch Import Images for Different Screen Resolutions - Android Studio Tutorial
+[Batch Import Images for Different Screen Resolutions - Android Studio Tutorial](https://www.youtube.com/watch?v=bbFLDR6X2D8&list=PLrnPJCHvNZuARS1W7qMt-zxBNqWYZpOg6&index=2)  
   
-## How to Add a Toolbar - Android Studio Tutorial
-[How to Add a Toolbar - Android Studio Tutorial](https://www.youtube.com/watch?v=DMkzIOLppf4&list=PLrnPJCHvNZuCaFbD-1TsnRaO39huczYcA&index=9)  
+## Image Slider - Android Studio Tutorial
+[Image Slider - Android Studio Tutorial](https://www.youtube.com/watch?v=Q2FPDI99-as&list=PLrnPJCHvNZuARS1W7qMt-zxBNqWYZpOg6&index=4)  
+  
+## How to Load an Image from a Url with Picasso - Android Studio Tutorial
+[How to Load an Image from a Url with Picasso - Android Studio Tutorial](https://www.youtube.com/watch?v=Tdb_WSEEZbQ&list=PLrnPJCHvNZuARS1W7qMt-zxBNqWYZpOg6&index=5)  
+  
+## Picasso Resizing & Scaling - Android Studio Tutorial
+[Picasso Resizing & Scaling - Android Studio Tutorial](https://www.youtube.com/watch?v=0rJM67GFO4Y&list=PLrnPJCHvNZuARS1W7qMt-zxBNqWYZpOg6&index=6)  
+  
+## How to Create an Image Slider with Picasso + ViewPager - Android Studio Tutorial
+[How to Create an Image Slider with Picasso + ViewPager - Android Studio Tutorial](https://www.youtube.com/watch?v=tM7rwJoK-18&list=PLrnPJCHvNZuARS1W7qMt-zxBNqWYZpOg6&index=7)  
   
 ## How to Create a Custom Button (With XML ShapeDrawables) in Android Studio
-[How to Create a Custom Button (With XML ShapeDrawables) in Android Studio](https://www.youtube.com/watch?v=Z1w3y0saKjY&list=PLrnPJCHvNZuCaFbD-1TsnRaO39huczYcA&index=27)  
+[How to Create a Custom Button (With XML ShapeDrawables) in Android Studio](https://www.youtube.com/watch?v=Z1w3y0saKjY&list=PLrnPJCHvNZuARS1W7qMt-zxBNqWYZpOg6&index=8)  
   
-## Radio Buttons & Radio Groups - Android Studio Tutorial
-[Radio Buttons & Radio Groups - Android Studio Tutorial](https://www.youtube.com/watch?v=fwSJ1OkK304&list=PLrnPJCHvNZuCaFbD-1TsnRaO39huczYcA&index=32)  
+## Collapsing Toolbar with Image - Android Studio Tutorial
+[Collapsing Toolbar with Image - Android Studio Tutorial](https://www.youtube.com/watch?v=6UmHGn076To&list=PLrnPJCHvNZuARS1W7qMt-zxBNqWYZpOg6&index=9)  
   
-## SeekBar - Listening to Progress Changes - Android Studio Tutorial
-[SeekBar - Listening to Progress Changes - Android Studio Tutorial](https://www.youtube.com/watch?v=G03ZR0jKtVs&list=PLrnPJCHvNZuCaFbD-1TsnRaO39huczYcA&index=33)  
+## TextSwitcher with Animation - Android Studio Tutorial
+[TextSwitcher with Animation - Android Studio Tutorial](https://www.youtube.com/watch?v=Aybw0wDeaSQ&list=PLrnPJCHvNZuARS1W7qMt-zxBNqWYZpOg6&index=10)  
   
-## Circular Determinate ProgressBar - Android Studio Tutorial
-[Circular Determinate ProgressBar - Android Studio Tutorial](https://www.youtube.com/watch?v=hSfN_aYKkzo&list=PLrnPJCHvNZuCaFbD-1TsnRaO39huczYcA&index=34)  
+## How to Add a Fading Text Animation with the FadingTextView Library - Android Studio Tutorial
+[How to Add a Fading Text Animation with the FadingTextView Library - Android Studio Tutorial](https://www.youtube.com/watch?v=-3N2xeNiq98&list=PLrnPJCHvNZuARS1W7qMt-zxBNqWYZpOg6&index=11)  
   
-## Circular Determinate ProgressBar with Background and Text - Android Studio Tutorial
-[Circular Determinate ProgressBar with Background and Text - Android Studio Tutorial](https://www.youtube.com/watch?v=YsHHXg1vbcc&list=PLrnPJCHvNZuCaFbD-1TsnRaO39huczYcA&index=35)  
+## Shared Element Transition - Android Studio Tutorial
+[Shared Element Transition - Android Studio Tutorial](https://www.youtube.com/watch?v=DkSlk03-opA&list=PLrnPJCHvNZuARS1W7qMt-zxBNqWYZpOg6&index=12)  
   
-## ViewFlipper - Android Studio Tutorial
-[ViewFlipper - Android Studio Tutorial](https://www.youtube.com/watch?v=2c-GbJ-c_eA&list=PLrnPJCHvNZuCaFbD-1TsnRaO39huczYcA&index=40)  
+## How to Create a Custom Button (With Images) in Android Studio
+[How to Create a Custom Button (With Images) in Android Studio](https://www.youtube.com/watch?v=Nn4-Vn7qk9k&list=PLrnPJCHvNZuARS1W7qMt-zxBNqWYZpOg6&index=13)  
   
-## Circular Reveal Animation - Android Studio Tutorial
-[Circular Reveal Animation - Android Studio Tutorial](https://www.youtube.com/watch?v=o2dUAm_ruSg&list=PLrnPJCHvNZuCaFbD-1TsnRaO39huczYcA&index=41)  
+## Create Resizable 9 Patch Images - Android Studio Tutorial
+[Create Resizable 9 Patch Images - Android Studio Tutorial](https://www.youtube.com/watch?v=FZEPg-8tJgo&list=PLrnPJCHvNZuARS1W7qMt-zxBNqWYZpOg6&index=14)  
   
 ## Drawable Animations - Android Studio Tutorial
-[Drawable Animations - Android Studio Tutorial](https://www.youtube.com/watch?v=scZYIAZrMWk&list=PLrnPJCHvNZuCaFbD-1TsnRaO39huczYcA&index=42)  
+[Drawable Animations - Android Studio Tutorial](https://www.youtube.com/watch?v=scZYIAZrMWk&list=PLrnPJCHvNZuARS1W7qMt-zxBNqWYZpOg6&index=15)  
   
-## Press Back Again to Exit - Android Studio Tutorial
-[Press Back Again to Exit - Android Studio Tutorial](https://www.youtube.com/watch?v=1Nmy88n7CZ8&list=PLrnPJCHvNZuCaFbD-1TsnRaO39huczYcA&index=46)  
+## Circular Reveal Animation - Android Studio Tutorial
+[Circular Reveal Animation - Android Studio Tutorial](https://www.youtube.com/watch?v=o2dUAm_ruSg&list=PLrnPJCHvNZuARS1W7qMt-zxBNqWYZpOg6&index=16)  
   
-## Enable / Disable WiFi Programmatically - Android Studio Tutorial
-[Enable / Disable WiFi Programmatically - Android Studio Tutorial](https://www.youtube.com/watch?v=5u_OlpE81p0&list=PLrnPJCHvNZuCaFbD-1TsnRaO39huczYcA&index=69)  
+## ViewFlipper - Android Studio Tutorial
+[ViewFlipper - Android Studio Tutorial](https://www.youtube.com/watch?v=2c-GbJ-c_eA&list=PLrnPJCHvNZuARS1W7qMt-zxBNqWYZpOg6&index=17)  
   
-## How to Keep the Screen ON in an Android Activity - Android Studio Tutorial
-[How to Keep the Screen ON in an Android Activity - Android Studio Tutorial](https://www.youtube.com/watch?v=LYxE1XrLydY&list=PLrnPJCHvNZuCaFbD-1TsnRaO39huczYcA&index=73)  
+## Blur Effect on an Image - Android Studio Tutorial
+[Blur Effect on an Image - Android Studio Tutorial](https://www.youtube.com/watch?v=3oOVdZpeUww&list=PLrnPJCHvNZuARS1W7qMt-zxBNqWYZpOg6&index=18)  
   
-## Start App on Boot - Android Studio Tutorial
-[Start App on Boot - Android Studio Tutorial](https://www.youtube.com/watch?v=4_CkU9L2mCo&list=PLrnPJCHvNZuCaFbD-1TsnRaO39huczYcA&index=74)  
+## Animated Gradient Background like Instagram - Android Studio Tutorial
+[Animated Gradient Background like Instagram - Android Studio Tutorial](https://www.youtube.com/watch?v=x_DXXGvyfh8&list=PLrnPJCHvNZuARS1W7qMt-zxBNqWYZpOg6&index=19)  
   
-## How to Change the Apps Starting (Default) Activity - Android Studio Tutorial
-[How to Change the Apps Starting (Default) Activity - Android Studio Tutorial](https://www.youtube.com/watch?v=6eES56mxfMs&list=PLrnPJCHvNZuCaFbD-1TsnRaO39huczYcA&index=75)  
+## How to Use the Palette Class to Extract Colors from An Image - Android Studio Tutorial
+[How to Use the Palette Class to Extract Colors from An Image - Android Studio Tutorial](https://www.youtube.com/watch?v=-s13C93-v_Q&list=PLrnPJCHvNZuARS1W7qMt-zxBNqWYZpOg6&index=20)  
   
-## Delay and Repeat Code Execution with Handler PostDelayed - Android Studio Tutorial
-[Delay and Repeat Code Execution with Handler PostDelayed - Android Studio Tutorial](https://www.youtube.com/watch?v=3pgGVBmSVq0&list=PLrnPJCHvNZuCaFbD-1TsnRaO39huczYcA&index=76)  
+## KenBurnsView Library - Android Studio Tutorial
+[KenBurnsView Library - Android Studio Tutorial](https://www.youtube.com/watch?v=tjERNKtUo6s&list=PLrnPJCHvNZuARS1W7qMt-zxBNqWYZpOg6&index=21)  
+  
+## Persistent Bottom Sheet - Android Studio Tutorial
+[Persistent Bottom Sheet - Android Studio Tutorial](https://www.youtube.com/watch?v=x_juFIQeTgI&list=PLrnPJCHvNZuARS1W7qMt-zxBNqWYZpOg6&index=27)  
   
 ## Move Views out of the Way with dodgeInsetEdges - Android Studio Tutorial
-[Move Views out of the Way with dodgeInsetEdges - Android Studio Tutorial](https://www.youtube.com/watch?v=jpRBlNHeUcs&list=PLrnPJCHvNZuCaFbD-1TsnRaO39huczYcA&index=77)  
+[Move Views out of the Way with dodgeInsetEdges - Android Studio Tutorial](https://www.youtube.com/watch?v=jpRBlNHeUcs&list=PLrnPJCHvNZuARS1W7qMt-zxBNqWYZpOg6&index=28)  
   
-## Dice Roller (With Code and Image Files) - Android Studio Tutorial
-[Dice Roller (With Code and Image Files) - Android Studio Tutorial](https://www.youtube.com/watch?v=mphvDG4d96c&list=PLrnPJCHvNZuCaFbD-1TsnRaO39huczYcA&index=78)  
+## How to Build a Simple Spin the Bottle Game in Android Studio (Incl. Code and Image Files)
+[How to Build a Simple Spin the Bottle Game in Android Studio (Incl. Code and Image Files)](https://www.youtube.com/watch?v=bqgseI9pHwE&list=PLrnPJCHvNZuARS1W7qMt-zxBNqWYZpOg6&index=30)  
   
-## Simple Dialog with 1 Button - Android Studio Tutorial
-[Simple Dialog with 1 Button - Android Studio Tutorial](https://www.youtube.com/watch?v=Bsm-BlXo2SI&list=PLrnPJCHvNZuCaFbD-1TsnRaO39huczYcA&index=79)  
+## ConstraintLayout Tutorial Part 5 - PLACEHOLDERS & ANIMATIONS - Android Studio Tutorial
+[ConstraintLayout Tutorial Part 5 - PLACEHOLDERS & ANIMATIONS - Android Studio Tutorial](https://www.youtube.com/watch?v=LQ1DKrCYwz4&list=PLrnPJCHvNZuARS1W7qMt-zxBNqWYZpOg6&index=31)  
   
-## How to Update the UI with Every New Minute - Android Studio Tutorial
-[How to Update the UI with Every New Minute - Android Studio Tutorial](https://www.youtube.com/watch?v=hXWVaAyXkoQ&list=PLrnPJCHvNZuCaFbD-1TsnRaO39huczYcA&index=80)  
+## ConstraintLayout Tutorial Part 6 - CONSTRAINTSETS - Android Studio Tutorial
+[ConstraintLayout Tutorial Part 6 - CONSTRAINTSETS - Android Studio Tutorial](https://www.youtube.com/watch?v=-sPOtGqd5OA&list=PLrnPJCHvNZuARS1W7qMt-zxBNqWYZpOg6&index=32)  
   

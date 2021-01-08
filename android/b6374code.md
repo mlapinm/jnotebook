@@ -1,13 +1,16 @@
-## Android Studio & Emulator Settings
-## How to Change the IDE Text Size in Android Studio and Activate Mouse Wheel Zoom
-[How to Change the IDE Text Size in Android Studio and Activate Mouse Wheel Zoom](https://www.youtube.com/watch?v=8KQTBiUemYo&list=PLrnPJCHvNZuAt6otixVMdUVM6pIlJ64Ov&index=3)  
+## General Android/Programming Knowledge
+## Kotlin for Beginners - Part 22 - WHAT ARE CLASSES? WHAT IS OBJECT-ORIENTED PROGRAMMING?
+[Kotlin for Beginners - Part 22 - WHAT ARE CLASSES? WHAT IS OBJECT-ORIENTED PROGRAMMING?](https://www.youtube.com/watch?v=ikxsvMyHVlM&list=PLrnPJCHvNZuDKeQdD6AIu_vo4J_hPpMWl&index=1)  
   
-## How to Enable Developer Options on Your Android Device or Emulator (USB Debugging)
-[How to Enable Developer Options on Your Android Device or Emulator (USB Debugging)](https://www.youtube.com/watch?v=Yxqq7bT1K2A&list=PLrnPJCHvNZuAt6otixVMdUVM6pIlJ64Ov&index=4)  
+## What is Context in Android Programming?
+[What is Context in Android Programming?](https://www.youtube.com/watch?v=-e6lyXIkIl0&list=PLrnPJCHvNZuDKeQdD6AIu_vo4J_hPpMWl&index=2)  
   
-## How to Use the Fingerprint Sensor on the Android Studio Emulator
-[How to Use the Fingerprint Sensor on the Android Studio Emulator](https://www.youtube.com/watch?v=L_Det7hWCLU&list=PLrnPJCHvNZuAt6otixVMdUVM6pIlJ64Ov&index=5)  
+## android:onClick vs setOnClickListener
+[android:onClick vs setOnClickListener](https://www.youtube.com/watch?v=cMVlhTT9fL4&list=PLrnPJCHvNZuDKeQdD6AIu_vo4J_hPpMWl&index=3)  
   
-## How to Delete Emulators and System Images in Android Studio to Free up Disk Space
-[How to Delete Emulators and System Images in Android Studio to Free up Disk Space](https://www.youtube.com/watch?v=_p9BK8Yv794&list=PLrnPJCHvNZuAt6otixVMdUVM6pIlJ64Ov&index=8)  
+## What Is @Override? - Android Studio Tutorial
+[What Is @Override? - Android Studio Tutorial](https://www.youtube.com/watch?v=6oVLReTIm9I&list=PLrnPJCHvNZuDKeQdD6AIu_vo4J_hPpMWl&index=6)  
+  
+## Testing Terminology Explained - Testing on Android Part 1
+[Testing Terminology Explained - Testing on Android Part 1](https://www.youtube.com/watch?v=OB-P1uIgl6Y&list=PLrnPJCHvNZuDKeQdD6AIu_vo4J_hPpMWl&index=8)  
   
