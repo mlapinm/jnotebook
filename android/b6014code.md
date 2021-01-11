@@ -1652,7 +1652,67 @@ public class MainActivity extends AppCompatActivity {
 ```  
 ## Simple Dialog with 1 Button - Android Studio Tutorial
 [Simple Dialog with 1 Button - Android Studio Tutorial](https://www.youtube.com/watch?v=Bsm-BlXo2SI&list=PLrnPJCHvNZuBkhcesO6DfdCghl6ZejVPc&index=18)  
-  
+```
+package com.example.freon.b601218dialog3;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+
+public class MainActivity extends AppCompatActivity {
+    Button button;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        button = findViewById(R.id.button);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                new LittleDialog().show(getSupportFragmentManager(),
+                        "little dialog");
+            }
+        });
+    }
+}
+
+package com.example.freon.b601218dialog3;
+
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.DialogInterface;
+import android.os.Bundle;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatDialogFragment;
+
+public class LittleDialog extends AppCompatDialogFragment {
+
+    @NonNull
+    @Override
+    public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        builder.setTitle("Title")
+                .setMessage("Message")
+                .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                    }
+                });
+        return builder.create();
+    }
+}
+
+
+
+
+```  
 ## AlertDialog + Passing Event to Activity - Android Studio Tutorial
 [AlertDialog + Passing Event to Activity - Android Studio Tutorial](https://www.youtube.com/watch?v=r_87U6oHLFc&list=PLrnPJCHvNZuBkhcesO6DfdCghl6ZejVPc&index=19)  
   

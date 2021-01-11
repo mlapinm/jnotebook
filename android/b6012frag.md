@@ -122,14 +122,21 @@ https://github.com/hotchemi/Android-Rate
 [Simple Dialog with 1 Button - Android Studio Tutorial](https://www.youtube.com/watch?v=Bsm-BlXo2SI&list=PLrnPJCHvNZuBkhcesO6DfdCghl6ZejVPc&index=18)  
   
 [b601218dialog](b6014code.md)  
+[b601218dialog2](b6014code.md)  
+[b601218dialog3](b6014code.md)  
+AppCompatDialogFragment onCreateDialog
+AlertDialog Builder setTitle setMessage setPositiveButton OnClickListener create  
+dialog show getSupportFragmentManager  
+getActivity  
+
 ## AlertDialog + Passing Event to Activity - Android Studio Tutorial
 [AlertDialog + Passing Event to Activity - Android Studio Tutorial](https://www.youtube.com/watch?v=r_87U6oHLFc&list=PLrnPJCHvNZuBkhcesO6DfdCghl6ZejVPc&index=19)  
-  
-[b6012frag](b6014code.md)  
+[b601219interf](b6014code.md)  
+onAttach ClassCastException   
 ## Fragments, Alternative Layout Files & Include - Android Data Binding Tutorial Part 2
 [Fragments, Alternative Layout Files & Include - Android Data Binding Tutorial Part 2](https://www.youtube.com/watch?v=uDU_cKgnBzk&list=PLrnPJCHvNZuBkhcesO6DfdCghl6ZejVPc&index=20)  
   
-[b6012frag](b6014code.md)  
+[b601220Binding](b6014code.md)  
 
 
 ## footer
