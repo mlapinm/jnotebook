@@ -50,12 +50,14 @@ getParcelableExtra
 [b6052acti](b6054code.md)  
 ## Slide Animation Between Activites - Android Studio Tutorial
 [Slide Animation Between Activites - Android Studio Tutorial](https://www.youtube.com/watch?v=0s6x3Sn4eYo&list=PLrnPJCHvNZuAe5r049EpzxQGZSybBX_tk&index=6)  
-  
-[b6052acti](b6054code.md)  
+https://www.android-examples.com/android-multiple-animations-on-views-using-xml/  
+[Android Animation Samples Repository](https://github.com/android/animation-samples#android-animation-samples-repository)    
+[b605206anim2](b6054code.md)  
+
 ## Intent Animation Library - Android Studio Tutorial
 [Intent Animation Library - Android Studio Tutorial](https://www.youtube.com/watch?v=C8MrscyUXz8&list=PLrnPJCHvNZuAe5r049EpzxQGZSybBX_tk&index=7)  
   
-[b6052acti](b6054code.md)  
+[b6052anim](b6054code.md)  
 ## Swipe Close Activity with Slidr Library - Android Studio Tutorial
 [Swipe Close Activity with Slidr Library - Android Studio Tutorial](https://www.youtube.com/watch?v=Ci5146VOyg4&list=PLrnPJCHvNZuAe5r049EpzxQGZSybBX_tk&index=8)  
   
