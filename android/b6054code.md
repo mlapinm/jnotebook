@@ -42,17 +42,17 @@ public class MainActivity extends AppCompatActivity {
   
 ## Send Custom Object to Activity Using Parcelable - Android Studio Tutorial
 [Send Custom Object to Activity Using Parcelable - Android Studio Tutorial](https://www.youtube.com/watch?v=WBbsvqSu0is&list=PLrnPJCHvNZuAe5r049EpzxQGZSybBX_tk&index=4)  
-1 [AndroidManifest.xml](#AndroidManifest.xml)   
-2 [MainActivity.java](#MainActivity.java)   
-3 [ItemLittle.java](#ItemLittle.java)   
-4 [AdapterLittle.java](#AdapterLittle.java)   
-5 [SecondActivity.java](#SecondActivity.java)   
-6 [activity_main.xml](#activity_main.xml)   
-7 [layout_item.xml](#layout_item.xml)   
-8 [activity_second.xml](#activity_second.xml)   
-9 [ic_android2.xml](#ic_android2.xml)   
-10 [ic_audio.xml](#ic_audio.xml)   
-11 [ic_sun.xml](#ic_sun.xml)   
+1 [AndroidManifest.xml](#AndroidManifestxml)   
+2 [MainActivity.java](#MainActivityjava)   
+3 [ItemLittle.java](#ItemLittlejava)   
+4 [AdapterLittle.java](#AdapterLittlejava)   
+5 [SecondActivity.java](#SecondActivityjava)   
+6 [activity_main.xml](#activity_mainxml)   
+7 [layout_item.xml](#layout_itemxml)   
+8 [activity_second.xml](#activity_secondxml)   
+9 [ic_android2.xml](#ic_android2xml)   
+10 [ic_audio.xml](#ic_audioxml)   
+11 [ic_sun.xml](#ic_sunxml)   
 ## AndroidManifest.xml
 ```
 <?xml version="1.0" encoding="utf-8"?>
