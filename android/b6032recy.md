@@ -34,15 +34,36 @@ itemView
 - onBindViewHolder заполняет поля holder из list item в соответствии с position
 - getItemCount возвращает size itemLittles  
   
-[b6032recy](b6034code.md)  
+[b603202rec](b6034code.md)  
 ## RecyclerView + CardView - Part 3 - INSERT & REMOVE ITEMS - Android Studio Tutorial
 [RecyclerView + CardView - Part 3 - INSERT & REMOVE ITEMS - Android Studio Tutorial](https://www.youtube.com/watch?v=kaf2dCd8Zfs&list=PLrnPJCHvNZuBtTYUuc5Pyo4V7xZ2HNtf4&index=3)  
-  
-[b603204rec](b6034code.md)  
+editTextInsert buttonInsert editTextRemove buttonRemove  
+Integer.parseInt  
+RecyclerView.Adapter notifyItemInserted notifyItemRemoved  
+
+[b603203rec](b6034code.md)  
 ## RecyclerView + CardView - Part 4 - ON-ITEM-CLICK INTERFACE - Android Studio Tutorial
 [RecyclerView + CardView - Part 4 - ON-ITEM-CLICK INTERFACE - Android Studio Tutorial](https://www.youtube.com/watch?v=bhhs4bwYyhc&list=PLrnPJCHvNZuBtTYUuc5Pyo4V7xZ2HNtf4&index=4)  
   
-[b6032recy](b6034code.md)  
+[b603204rec](b6034code.md)  
+OnClickListener onClickItem(position)  
+## создание ListenerLittle в AdapterLittle
+- public interface ListenerLittle
+- void onClick(position)
+- listenerLittle
+- метод setOnClickListener
+## подключнение listenerLittle в AdapterLittle
+- конструктор ViewHolderLittle принимает itemView и listenerLittle
+- на itemView устанавливается(View.setOnClickListener) OnClickListener c метедом onClick
+- в onClick проверяется, что listenerLittle не null
+- то вызывается listenerLittle.onItemClick  
+## MainActivity
+- mAdapterLittle.setOnClickListener(new ListenerLittle)
+- `реализация` ListenerLittle.onClick(position) 
+ - Toast 
+ - itemLittles change element mAdapter.notifyItemChanged(position)
+ - intent new Activity
+
 ## RecyclerView + CardView - Part 5 - CLICKING SPECIFIC ITEMS - Android Studio Tutorial
 [RecyclerView + CardView - Part 5 - CLICKING SPECIFIC ITEMS - Android Studio Tutorial](https://www.youtube.com/watch?v=HMjI7cLsyfw&list=PLrnPJCHvNZuBtTYUuc5Pyo4V7xZ2HNtf4&index=5)  
   

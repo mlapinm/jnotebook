@@ -133,6 +133,7 @@ getActivity
 [AlertDialog + Passing Event to Activity - Android Studio Tutorial](https://www.youtube.com/watch?v=r_87U6oHLFc&list=PLrnPJCHvNZuBkhcesO6DfdCghl6ZejVPc&index=19)  
 [b601219interf](b6014code.md)  
 onAttach ClassCastException   
+OnClickListener onOkClick  
 ## Fragments, Alternative Layout Files & Include - Android Data Binding Tutorial Part 2
 [Fragments, Alternative Layout Files & Include - Android Data Binding Tutorial Part 2](https://www.youtube.com/watch?v=uDU_cKgnBzk&list=PLrnPJCHvNZuBkhcesO6DfdCghl6ZejVPc&index=20)  
   

@@ -1,20 +1,49 @@
 ## Activites - Android Programming
 ## How to Make a Button Open a New Activity - Android Studio Tutorial
-[How to Make a Button Open a New Activity - Android Studio Tutorial](https://www.youtube.com/watch?v=bgIUdb-7Rqo&list=PLrnPJCHvNZuAe5r049EpzxQGZSybBX_tk)  
+[How to Make a Button Open a New Activity - Android Studio Tutorial](https://www.youtube.com/watch?v=bgIUdb-7Rqo&list=PLrnPJCHvNZuAe5r049EpzxQGZSybBX_tk)   
   
-[b6052acti](b6054code.md)  
+[b605201acti](b6054code.md)  
+Intent startActivity    
 ## How to Open a New Activity and Pass Variables to It - Android Studio Tutorial
 [How to Open a New Activity and Pass Variables to It - Android Studio Tutorial](https://www.youtube.com/watch?v=eL69kj-_Wvs&list=PLrnPJCHvNZuAe5r049EpzxQGZSybBX_tk&index=2)  
   
-[b6052acti](b6054code.md)  
+[b605202pass](b6054code.md)  
+```
+Intent intent = new Intent(this, SecondActivity.class);
+intent.putExtra("count", count);
+
+startActivity(intent);
+
+
+Intent intent = getIntent();
+int count = 0;
+count = intent.getIntExtra("count", 0);
+
+<activity android:name=".SecondActivity"
+	android:parentActivityName=".MainActivity"></activity>
+
+
+```
 ## Send Data Back from Child Activity with startActivityForResult - Android Studio Tutorial
 [Send Data Back from Child Activity with startActivityForResult - Android Studio Tutorial](https://www.youtube.com/watch?v=AD5qt7xoUU8&list=PLrnPJCHvNZuAe5r049EpzxQGZSybBX_tk&index=3)  
   
-[b6052acti](b6054code.md)  
+[b605203back](b6054code.md)  
+startActivityForResult onActivityResult    
+finish()  
+  
 ## Send Custom Object to Activity Using Parcelable - Android Studio Tutorial
 [Send Custom Object to Activity Using Parcelable - Android Studio Tutorial](https://www.youtube.com/watch?v=WBbsvqSu0is&list=PLrnPJCHvNZuAe5r049EpzxQGZSybBX_tk&index=4)  
   
-[b6052acti](b6054code.md)  
+[b605204rec6](b6054code.md)  
+implements Parcelable
+Select Methods to Implement  
+discribeContents():int
+writeToParcel(parcel:Parcel, i:int):void  
+  
+Add parcelable implementation    
+
+getParcelableExtra 
+```
 ## The Activity Lifecycle Explained - Android Studio Tutorial
 [The Activity Lifecycle Explained - Android Studio Tutorial](https://www.youtube.com/watch?v=UJN3AL4tiqw&list=PLrnPJCHvNZuAe5r049EpzxQGZSybBX_tk&index=5)  
   
