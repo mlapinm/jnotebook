@@ -1,32 +1,69 @@
 ## Notifications - Android Programming
 ## Simple Firebase Notification in 3 Minutes - Android Studio Tutorial
 [Simple Firebase Notification in 3 Minutes - Android Studio Tutorial](https://www.youtube.com/watch?v=JVokoelQ1RI&list=PLrnPJCHvNZuDR7-cBjRXssxYK0Y5EEKzr&index=1)  
+[b607201fire](b6074code.md)  
+b607201fire2  
+```
+build.gradle (project-level)
+
+    Add rules to include the Google Services Gradle plugin:
+        classpath 'com.google.gms:google-services:4.3.3'
+
+
+ 
+app/build.gradle
+
+    Apply the Google Services Gradle plugin:
+        apply plugin: 'com.google.gms.google-services'
+
+    Add the library dependency:
+        implementation 'com.google.firebase:firebase-inappmessaging-display:19.0.3'
+```  
+
+
+https://console.firebase.google.com/project/b607201fire2/notification  
+https://console.firebase.google.com/project/b607201fire2/notification/compose  
+Аудитория  
+`Сегмент пользователей`  
+
+Передавать сообщение адресату, если…  
+Приложение  com.example.freon.b607201fire2	  
+   
+3  
+Планирование  
+Отправить сейчас  
+4  
+События-конверсии (необязательно)  
+5  
+Дополнительные параметры (необязательно)  
+`Проверить`   
+`Опубликовать`  
   
-[b6072noti](b6074code.md)  
 ## Notifications Tutorial Part 1 - NOTIFICATION CHANNELS - Android Studio Tutorial
 [Notifications Tutorial Part 1 - NOTIFICATION CHANNELS - Android Studio Tutorial](https://www.youtube.com/watch?v=tTbd1Mfi-Sk&list=PLrnPJCHvNZuDR7-cBjRXssxYK0Y5EEKzr&index=2)  
   
-[b6072noti](b6074code.md)  
+[b607202noti](b6074code.md)  
+b607202noti2  
 ## Notifications Tutorial Part 2 - ACTION BUTTONS & COLOR - Android Studio Tutorial
 [Notifications Tutorial Part 2 - ACTION BUTTONS & COLOR - Android Studio Tutorial](https://www.youtube.com/watch?v=CZ575BuLBo4&list=PLrnPJCHvNZuDR7-cBjRXssxYK0Y5EEKzr&index=3)  
   
-[b6072noti](b6074code.md)  
+[b607203noti](b6074code.md)  
 ## Notifications Tutorial Part 3 - BIG TEXT STYLE + INBOX STYLE - Android Studio Tutorial
 [Notifications Tutorial Part 3 - BIG TEXT STYLE + INBOX STYLE - Android Studio Tutorial](https://www.youtube.com/watch?v=lVzhzi2e_Zw&list=PLrnPJCHvNZuDR7-cBjRXssxYK0Y5EEKzr&index=4)  
   
-[b6072noti](b6074code.md)  
+[b607204noti](b6074code.md)  
 ## Notifications Tutorial Part 4 - BIG PICTURE STYLE + MEDIA STYLE - Android Studio Tutorial
 [Notifications Tutorial Part 4 - BIG PICTURE STYLE + MEDIA STYLE - Android Studio Tutorial](https://www.youtube.com/watch?v=s0Q2QKZ4OP8&list=PLrnPJCHvNZuDR7-cBjRXssxYK0Y5EEKzr&index=5)  
   
-[b6072noti](b6074code.md)  
+[b607205noti](b6074code.md)  
 ## Notifications Tutorial Part 5 - MESSAGING STYLE + DIRECT REPLY - Android Studio Tutorial
 [Notifications Tutorial Part 5 - MESSAGING STYLE + DIRECT REPLY - Android Studio Tutorial](https://www.youtube.com/watch?v=DsFYPTnCbs8&list=PLrnPJCHvNZuDR7-cBjRXssxYK0Y5EEKzr&index=6)  
   
-[b6072noti](b6074code.md)  
+[b607206noti](b6074code.md)  
 ## Notifications Tutorial Part 6 - PROGRESS BAR NOTIFICATION - Android Studio Tutorial
 [Notifications Tutorial Part 6 - PROGRESS BAR NOTIFICATION - Android Studio Tutorial](https://www.youtube.com/watch?v=IHNC7OtOEI4&list=PLrnPJCHvNZuDR7-cBjRXssxYK0Y5EEKzr&index=7)  
   
-[b6072noti](b6074code.md)  
+[b607207noti](b6074code.md)  
 ## Notifications Tutorial Part 7 - NOTIFICATION GROUPS - Android Studio Tutorial
 [Notifications Tutorial Part 7 - NOTIFICATION GROUPS - Android Studio Tutorial](https://www.youtube.com/watch?v=ZC4x4eEBU9U&list=PLrnPJCHvNZuDR7-cBjRXssxYK0Y5EEKzr&index=8)  
   

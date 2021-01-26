@@ -1,0 +1,45 @@
+gradient_1.xml
+gradient_2.xml
+gradient_3.xml
+gradient_list.xml
+====
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient
+        android:angle="225"
+        android:endColor="#044fab"
+        android:startColor="#ffd6d3" />
+</shape>
+====
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient
+        android:angle="135"
+        android:endColor="#43b4ef"
+        android:startColor="#32ff3f" />
+</shape>
+====
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient
+        android:angle="45"
+        android:endColor="#933c94"
+        android:startColor="#517f95" />
+</shape>
+====
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/gradient_1"
+        android:duration="4000"/>
+
+    <item android:drawable="@drawable/gradient_2"
+        android:duration="4000"/>
+
+    <item android:drawable="@drawable/gradient_3"
+        android:duration="4000"/>
+
+</animation-list>
+====
+gradient_1.xmlgradient_2.xmlgradient_3.xmlgradient_list.xml
+====
