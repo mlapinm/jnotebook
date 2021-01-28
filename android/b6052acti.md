@@ -95,8 +95,13 @@ protected void onCreate(Bundle savedInstanceState) {
 ## Swipe Close Activity with Slidr Library - Android Studio Tutorial
 [Swipe Close Activity with Slidr Library - Android Studio Tutorial](https://www.youtube.com/watch?v=Ci5146VOyg4&list=PLrnPJCHvNZuAe5r049EpzxQGZSybBX_tk&index=8)  
   
-[b6052acti](b6054code.md)  
+[b605206slidr](b6054code.md)  
+B605206slidr2  
+implementation 'com.r0adkll:slidableactivity:2.1.0'  
+implementation 'com.r0adkll:slidableactivity:2.0.6'  
+work not all  
+
 ## How to Change the Apps Starting (Default) Activity - Android Studio Tutorial
 [How to Change the Apps Starting (Default) Activity - Android Studio Tutorial](https://www.youtube.com/watch?v=6eES56mxfMs&list=PLrnPJCHvNZuAe5r049EpzxQGZSybBX_tk&index=9)  
   
-[b6052acti](b6054code.md)  
+[b605207default](b6054code.md)  

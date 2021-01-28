@@ -56,7 +56,8 @@ https://developer.android.com/topic/libraries/architecture?hl=de
 ## Room + ViewModel + LiveData + RecyclerView (MVVM) Part 7 - ADD NOTE ACTIVITY - Android Tutorial
 [Room + ViewModel + LiveData + RecyclerView (MVVM) Part 7 - ADD NOTE ACTIVITY - Android Tutorial](https://www.youtube.com/watch?v=RhGMd8SsA14&list=PLrnPJCHvNZuDJsRLWnl-AV4WQVgkJ1HU4&index=12)  
   
-[B6172data](b6174code.md)  
+[B617112mvvm](b6174code.md)  
+B617114mvvm  
 ## Room + ViewModel + LiveData + RecyclerView (MVVM) Part 8 - SWIPE TO DELETE - Android Studio Tutorial
 [Room + ViewModel + LiveData + RecyclerView (MVVM) Part 8 - SWIPE TO DELETE - Android Studio Tutorial](https://www.youtube.com/watch?v=QJUCD32dzHE&list=PLrnPJCHvNZuDJsRLWnl-AV4WQVgkJ1HU4&index=13)  
   

@@ -67,11 +67,11 @@ b607202noti2
 ## Notifications Tutorial Part 7 - NOTIFICATION GROUPS - Android Studio Tutorial
 [Notifications Tutorial Part 7 - NOTIFICATION GROUPS - Android Studio Tutorial](https://www.youtube.com/watch?v=ZC4x4eEBU9U&list=PLrnPJCHvNZuDR7-cBjRXssxYK0Y5EEKzr&index=8)  
   
-[b6072noti](b6074code.md)  
+[b607208noti](b6074code.md)  
 ## Notifications Tutorial Part 8 - NOTIFICATION CHANNEL GROUPS - Android Studio Tutorial
 [Notifications Tutorial Part 8 - NOTIFICATION CHANNEL GROUPS - Android Studio Tutorial](https://www.youtube.com/watch?v=KspZ0N0NK40&list=PLrnPJCHvNZuDR7-cBjRXssxYK0Y5EEKzr&index=9)  
   
-[b6072noti](b6074code.md)  
+[b607209noti](b6074code.md)  
 ## Notifications Tutorial Part 9 - NOTIFICATION CHANNEL SETTINGS - Android Studio Tutorial
 [Notifications Tutorial Part 9 - NOTIFICATION CHANNEL SETTINGS - Android Studio Tutorial](https://www.youtube.com/watch?v=kfaZTF95Pt4&list=PLrnPJCHvNZuDR7-cBjRXssxYK0Y5EEKzr&index=10)  
   
@@ -79,12 +79,12 @@ b607202noti2
 ## Notifications Tutorial Part 10 - DELETE NOTIFICATION CHANNELS - Android Studio Tutorial
 [Notifications Tutorial Part 10 - DELETE NOTIFICATION CHANNELS - Android Studio Tutorial](https://www.youtube.com/watch?v=3Je9ZEAAjfA&list=PLrnPJCHvNZuDR7-cBjRXssxYK0Y5EEKzr&index=11)  
   
-[b6072noti](b6074code.md)  
+[b607210noti](b6074code.md)  
 ## How to Create a Custom Notification on Android
 [How to Create a Custom Notification on Android](https://www.youtube.com/watch?v=axcdnRAcqLw&list=PLrnPJCHvNZuDR7-cBjRXssxYK0Y5EEKzr&index=12)  
   
-[b6072noti](b6074code.md)  
+[b607211noti](b6074code.md)  
 ## AlarmManager - Android Studio Tutorial
 [AlarmManager - Android Studio Tutorial](https://www.youtube.com/watch?v=yrpimdBRk5Q&list=PLrnPJCHvNZuDR7-cBjRXssxYK0Y5EEKzr&index=13)  
   
-[b6072noti](b6074code.md)  
+[b607212alarm](b6074code.md)  

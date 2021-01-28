@@ -18,21 +18,21 @@ class AdapterLittle
 
 ExampleAdapter  
 ## 1 MainActivity
-- есть itemLittles для отображения
-- создается adapter из itemLittles
-- leanerLayoutManager от this
-- recycleVew устанавливается leanerLayoutManager
-- recycleVew устанавливается adapter  
+- РµСЃС‚СЊ itemLittles РґР»СЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ
+- СЃРѕР·РґР°РµС‚СЃСЏ adapter РёР· itemLittles
+- leanerLayoutManager РѕС‚ this
+- recycleVew СѓСЃС‚Р°РЅР°РІР»РёРІР°РµС‚СЃСЏ leanerLayoutManager
+- recycleVew СѓСЃС‚Р°РЅР°РІР»РёРІР°РµС‚СЃСЏ adapter  
 ## 2 adapter  
-ItemLittle - поле из itemLittles  
+ItemLittle - РїРѕР»Рµ РёР· itemLittles  
 itemLittles  
 itemView  
-- viewHolder - содержит все view из itemView
-- в конструкторе принимается экземпляр itemView и обычно инициализируются все поля такие же как в itemView
-- в onCreateViewHolder создается c помощью inflate View из itemView и group parent, которая передается в создаваемый viewHolder  
-(viewHolder возвращается)
-- onBindViewHolder заполняет поля holder из list item в соответствии с position
-- getItemCount возвращает size itemLittles  
+- viewHolder - СЃРѕРґРµСЂР¶РёС‚ РІСЃРµ view РёР· itemView
+- РІ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂРµ РїСЂРёРЅРёРјР°РµС‚СЃСЏ СЌРєР·РµРјРїР»СЏСЂ itemView Рё РѕР±С‹С‡РЅРѕ РёРЅРёС†РёР°Р»РёР·РёСЂСѓСЋС‚СЃСЏ РІСЃРµ РїРѕР»СЏ С‚Р°РєРёРµ Р¶Рµ РєР°Рє РІ itemView
+- РІ onCreateViewHolder СЃРѕР·РґР°РµС‚СЃСЏ c РїРѕРјРѕС‰СЊСЋ inflate View РёР· itemView Рё group parent, РєРѕС‚РѕСЂР°СЏ РїРµСЂРµРґР°РµС‚СЃСЏ РІ СЃРѕР·РґР°РІР°РµРјС‹Р№ viewHolder  
+(viewHolder РІРѕР·РІСЂР°С‰Р°РµС‚СЃСЏ)
+- onBindViewHolder Р·Р°РїРѕР»РЅСЏРµС‚ РїРѕР»СЏ holder РёР· list item РІ СЃРѕРѕС‚РІРµС‚СЃС‚РІРёРё СЃ position
+- getItemCount РІРѕР·РІСЂР°С‰Р°РµС‚ size itemLittles  
   
 [b603202rec](b6034code.md)  
 ## RecyclerView + CardView - Part 3 - INSERT & REMOVE ITEMS - Android Studio Tutorial
@@ -47,19 +47,19 @@ RecyclerView.Adapter notifyItemInserted notifyItemRemoved
   
 [b603204rec](b6034code.md)  
 OnClickListener onClickItem(position)  
-## создание ListenerLittle в AdapterLittle
+## СЃРѕР·РґР°РЅРёРµ ListenerLittle РІ AdapterLittle
 - public interface ListenerLittle
 - void onClick(position)
 - listenerLittle
-- метод setOnClickListener
-## подключнение listenerLittle в AdapterLittle
-- конструктор ViewHolderLittle принимает itemView и listenerLittle
-- на itemView устанавливается(View.setOnClickListener) OnClickListener c метедом onClick
-- в onClick проверяется, что listenerLittle не null
-- то вызывается listenerLittle.onItemClick  
+- РјРµС‚РѕРґ setOnClickListener
+## РїРѕРґРєР»СЋС‡РЅРµРЅРёРµ listenerLittle РІ AdapterLittle
+- РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ ViewHolderLittle РїСЂРёРЅРёРјР°РµС‚ itemView Рё listenerLittle
+- РЅР° itemView СѓСЃС‚Р°РЅР°РІР»РёРІР°РµС‚СЃСЏ(View.setOnClickListener) OnClickListener c РјРµС‚РµРґРѕРј onClick
+- РІ onClick РїСЂРѕРІРµСЂСЏРµС‚СЃСЏ, С‡С‚Рѕ listenerLittle РЅРµ null
+- С‚Рѕ РІС‹Р·С‹РІР°РµС‚СЃСЏ listenerLittle.onItemClick  
 ## MainActivity
 - mAdapterLittle.setOnClickListener(new ListenerLittle)
-- `реализация` ListenerLittle.onClick(position) 
+- `СЂРµР°Р»РёР·Р°С†РёСЏ` ListenerLittle.onClick(position) 
  - Toast 
  - itemLittles change element mAdapter.notifyItemChanged(position)
  - intent new Activity
@@ -67,4 +67,5 @@ OnClickListener onClickItem(position)
 ## RecyclerView + CardView - Part 5 - CLICKING SPECIFIC ITEMS - Android Studio Tutorial
 [RecyclerView + CardView - Part 5 - CLICKING SPECIFIC ITEMS - Android Studio Tutorial](https://www.youtube.com/watch?v=HMjI7cLsyfw&list=PLrnPJCHvNZuBtTYUuc5Pyo4V7xZ2HNtf4&index=5)  
   
-[b6032recy](b6034code.md)  
+[b603205rec](b6034code.md)  
+copy of b603204rec

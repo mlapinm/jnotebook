@@ -153,7 +153,7 @@ implementation 'com.flaviofaria:kenburnsview:1.0.7'
 ## How to Build a Simple Spin the Bottle Game in Android Studio (Incl. Code and Image Files)
 [How to Build a Simple Spin the Bottle Game in Android Studio (Incl. Code and Image Files)](https://www.youtube.com/watch?v=bqgseI9pHwE&list=PLrnPJCHvNZuARS1W7qMt-zxBNqWYZpOg6&index=30)  
   
-[b6092imag](b6094code.md)  
+[b609232bottle](b6094code.md)  
 ## ConstraintLayout Tutorial Part 5 - PLACEHOLDERS & ANIMATIONS - Android Studio Tutorial
 [ConstraintLayout Tutorial Part 5 - PLACEHOLDERS & ANIMATIONS - Android Studio Tutorial](https://www.youtube.com/watch?v=LQ1DKrCYwz4&list=PLrnPJCHvNZuARS1W7qMt-zxBNqWYZpOg6&index=31)  
   
