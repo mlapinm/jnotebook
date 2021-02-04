@@ -1,83 +1,25 @@
-<?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/layout"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.codinginflow.constraintlayout.MainActivity">
+package com.codinginflow.broadcastexample;
 
-    <android.support.constraint.Placeholder
-        android:id="@+id/placeholder"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+import android.content.IntentFilter;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 
-    <ImageView
-        android:id="@+id/robot"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_marginBottom="32dp"
-        android:onClick="swapView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/audio"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/ic_android" />
+public class MainActivity extends AppCompatActivity {
+    OrderedReceiver1 orderedReceiver1 = new OrderedReceiver1();
 
-    <ImageView
-        android:id="@+id/audio"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_marginBottom="32dp"
-        android:onClick="swapView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/palette"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/robot"
-        app:srcCompat="@drawable/ic_audio" />
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
 
-    <ImageView
-        android:id="@+id/palette"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_marginBottom="32dp"
-        android:onClick="swapView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/heart"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/audio"
-        app:srcCompat="@drawable/ic_palette" />
+        IntentFilter filter = new IntentFilter("com.codinginflow.EXAMPLE_ACTION");
+        filter.setPriority(1);
+        registerReceiver(orderedReceiver1, filter);
+    }
 
-    <ImageView
-        android:id="@+id/heart"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_marginBottom="32dp"
-        android:onClick="swapView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/happy"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/palette"
-        app:srcCompat="@drawable/ic_heart" />
-
-    <ImageView
-        android:id="@+id/happy"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_marginBottom="32dp"
-        android:onClick="swapView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/heart"
-        app:srcCompat="@drawable/ic_happy" />
-
-</android.support.constraint.ConstraintLayout>
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        unregisterReceiver(orderedReceiver1);
+    }
+}

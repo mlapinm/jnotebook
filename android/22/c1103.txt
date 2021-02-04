@@ -1,34 +1,52 @@
-<?xml version="1.0" encoding="utf-8"?>
-<merge xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:parentTag="android.support.constraint.ConstraintLayout">
+package com.codinginflow.broadcastexample;
 
-    <android.support.constraint.Placeholder
-        android:id="@+id/placeholder_image"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:content="@+id/image"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintDimensionRatio="16:9"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.SystemClock;
+import android.widget.Toast;
 
-    <android.support.constraint.Placeholder
-        android:id="@+id/placeholder_button"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginEnd="64dp"
-        android:layout_marginBottom="8dp"
-        app:content="@+id/button"
-        app:layout_constraintBottom_toBottomOf="@+id/placeholder_image"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/placeholder_image"
-        app:layout_constraintVertical_bias="0.465" />
+public class OrderedReceiver2 extends BroadcastReceiver {
 
-</merge>
+    @Override
+    public void onReceive(final Context context, Intent intent) {
+        final Handler handler = new Handler();
+
+        final PendingResult pendingResult = goAsync();
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                SystemClock.sleep(10000);
+
+                int resultCode = pendingResult.getResultCode();
+                String resultData = pendingResult.getResultData();
+                Bundle resultExtras = pendingResult.getResultExtras(true);
+                String stringExtra = resultExtras.getString("stringExtra");
+
+                resultCode++;
+                stringExtra += "->OR2";
+
+                final String toastText = "OR2\n" +
+                        "resultCode: " + resultCode + "\n" +
+                        "resultData: " + resultData + "\n" +
+                        "stringExtra: " + stringExtra;
+
+                handler.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        Toast.makeText(context, toastText, Toast.LENGTH_LONG).show();
+                    }
+                });
+
+                resultData = "OR2";
+                resultExtras.putString("stringExtra", stringExtra);
+
+                pendingResult.setResult(resultCode, resultData, resultExtras);
+                pendingResult.finish();
+            }
+        }).start();
+    }
+}

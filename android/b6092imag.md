@@ -33,7 +33,7 @@ implementation 'com.squareup.picasso:picasso:2.5.2'
 ```
 https://cdn.pixabay.com/photo/2017/11/06/18/39/apple-2924531_1280.jpg  
 https://cdn.pixabay.com/photo/2017/11/06/18/39/apple-2924531__480.jpg  
-
+https://pixabay.com/ru/  
 ## Picasso Resizing & Scaling - Android Studio Tutorial
 [Picasso Resizing & Scaling - Android Studio Tutorial](https://www.youtube.com/watch?v=0rJM67GFO4Y&list=PLrnPJCHvNZuARS1W7qMt-zxBNqWYZpOg6&index=6)  
   
@@ -157,8 +157,11 @@ implementation 'com.flaviofaria:kenburnsview:1.0.7'
 ## ConstraintLayout Tutorial Part 5 - PLACEHOLDERS & ANIMATIONS - Android Studio Tutorial
 [ConstraintLayout Tutorial Part 5 - PLACEHOLDERS & ANIMATIONS - Android Studio Tutorial](https://www.youtube.com/watch?v=LQ1DKrCYwz4&list=PLrnPJCHvNZuARS1W7qMt-zxBNqWYZpOg6&index=31)  
   
-[b6092imag](b6094code.md)  
+[b609242animat](b6094code.md)  
 ## ConstraintLayout Tutorial Part 6 - CONSTRAINTSETS - Android Studio Tutorial
 [ConstraintLayout Tutorial Part 6 - CONSTRAINTSETS - Android Studio Tutorial](https://www.youtube.com/watch?v=-sPOtGqd5OA&list=PLrnPJCHvNZuARS1W7qMt-zxBNqWYZpOg6&index=32)  
   
-[b6092imag](b6094code.md)  
+[b609252imag](b6094code.md)  
+b609254imag  
+ok  
+
