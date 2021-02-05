@@ -37,6 +37,7 @@ dependencies {
 [Retrofit Tutorial Part 1 - SIMPLE GET REQUEST - Android Studio Tutorial](https://www.youtube.com/watch?v=4JGvDUlfk7Y&list=PLrnPJCHvNZuCB6HJnqCdJ174JV7IwDsFQ&index=28)  
   
 [b613072get](b6134code.md)  
+b613074get
 https://jsonplaceholder.typicode.com/
 https://square.github.io/retrofit/  
 implementation 'com.squareup.retrofit2:retrofit:(insert latest version)'   

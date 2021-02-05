@@ -1,0 +1,39 @@
+
+[
+{
+"title": "foo",
+"body": "bar",
+"userId": 1,
+"id": 1
+},
+{
+"userId": 1,
+"id": 2
+"title": "qui est esse",
+"body": "est rerum tempore vitae\nsequi sint nihil riprihenderit dolor",
+},
+{
+"userId": 1,
+"id": 3
+"title": "qui est esse",
+"body": "est rerum tempore vitae\nsequi sint nihil riprihenderit dolor",
+},
+{
+"userId": 1,
+"id": 4
+"title": "qui est esse",
+"body": "est rerum tempore vitae\nsequi sint nihil riprihenderit dolor",
+}
+]
+
+
+
+
+==== 
+
+ ## Retrofit Tutorial Part 1 - SIMPLE GET REQUEST - Android Studio Tutorial
+[Retrofit Tutorial Part 1 - SIMPLE GET REQUEST - Android Studio Tutorial](https://www.youtube.com/watch?v=4JGvDUlfk7Y&list=PLrnPJCHvNZuCB6HJnqCdJ174JV7IwDsFQ&index=28)  
+  
+[b613072get](b6134code.md)  
+b613074get
+ 
