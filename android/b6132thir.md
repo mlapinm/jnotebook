@@ -62,11 +62,13 @@ implementation 'com.squareup.retrofit2:retrofit:(insert latest version)'
 ## Retrofit Tutorial Part 5 - LOG HTTP REQUEST & RESPONSE WITH LOGGING INTERCEPTOR - Android Tutorial
 [Retrofit Tutorial Part 5 - LOG HTTP REQUEST & RESPONSE WITH LOGGING INTERCEPTOR - Android Tutorial](https://www.youtube.com/watch?v=R2c5Pv5cXc0&list=PLrnPJCHvNZuCB6HJnqCdJ174JV7IwDsFQ&index=32)  
   
-[B613112thir](b6134code.md)  
+[B6131125retrofit](b6134code.md)  
+implementation("com.squareup.okhttp3:logging-interceptor:4.9.0")  
+
 ## Retrofit Tutorial Part 6 - HOW TO ADD HEADERS - Android Studio Tutorial
 [Retrofit Tutorial Part 6 - HOW TO ADD HEADERS - Android Studio Tutorial](https://www.youtube.com/watch?v=c1b2HehvL2M&list=PLrnPJCHvNZuCB6HJnqCdJ174JV7IwDsFQ&index=33)  
   
-[B613122thir](b6134code.md)  
+[B6131226retrofit](b6134code.md)  
 ## GSON Tutorial Part 1 - SIMPLE (DE)SERIALIZATION - Android Studio Tutorial
 [GSON Tutorial Part 1 - SIMPLE (DE)SERIALIZATION - Android Studio Tutorial](https://www.youtube.com/watch?v=f-kcvxYZrB4&list=PLrnPJCHvNZuCB6HJnqCdJ174JV7IwDsFQ&index=34)  
   
@@ -94,6 +96,7 @@ empty
   
 [B613172volley1](b6134code.md)  
 B613173volley1  
+B613173json.json  
 https://www.androidhive.info/2014/09/android-json-parsing-using-volley/  
 https://developer.android.com/training/volley/index.html  
     implementation 'com.android.volley:volley:1.1.1'  
