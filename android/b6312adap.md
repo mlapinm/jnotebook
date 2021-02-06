@@ -21,6 +21,7 @@
 [AutoCompleteTextView with Custom Adapter Part 2 - ARRAY ADAPTER AND FILTER - Android Studio Tutorial](https://www.youtube.com/watch?v=ocM1Yw_ktqM&list=PLrnPJCHvNZuBAaN07RO7boUrFT4gkDlpL&index=23)  
   
 [b6312adap](b6314code.md)  
+[AutoCompleteTextView with Custom Adapter Part 2 - ARRAY ADAPTER AND FILTER](b6412cust.md)  
 ## App Widget Part 4 - ADAPTER-BASED WIDGETS - Android Studio Tutorial
 [App Widget Part 4 - ADAPTER-BASED WIDGETS - Android Studio Tutorial](https://www.youtube.com/watch?v=MMiuy9jK6X8&list=PLrnPJCHvNZuBAaN07RO7boUrFT4gkDlpL&index=24)  
   
