@@ -16,10 +16,12 @@
 [b6312adap](b6314code.md)  
 ## Custom Spinner - Android Studio Tutorial
 [Custom Spinner - Android Studio Tutorial](https://www.youtube.com/watch?v=GeO5F0nnzAw&list=PLrnPJCHvNZuBAaN07RO7boUrFT4gkDlpL&index=13)  
+[AutoCompleteTextView - Android Studio Tutorial](b6112simp.md#AutoCompleteTextView---Android-Studio-Tutorial)  
   
 [b6312adap](b6314code.md)  
 ## AutoCompleteTextView with Custom Adapter Part 2 - ARRAY ADAPTER AND FILTER - Android Studio Tutorial
 [AutoCompleteTextView with Custom Adapter Part 2 - ARRAY ADAPTER AND FILTER - Android Studio Tutorial](https://www.youtube.com/watch?v=ocM1Yw_ktqM&list=PLrnPJCHvNZuBAaN07RO7boUrFT4gkDlpL&index=23)  
+[MultiAutoCompleteTextView - Android Studio Tutorial](b6112simp.md#MultiAutoCompleteTextView---Android-Studio-Tutorial)  
   
 [b6312adap](b6314code.md)  
 ## App Widget Part 4 - ADAPTER-BASED WIDGETS - Android Studio Tutorial
