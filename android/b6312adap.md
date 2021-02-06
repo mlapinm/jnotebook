@@ -3,10 +3,12 @@
 [Adapter & ViewHolder - Simple RecyclerView in Kotlin (2020 with AndroidX) Part 2](https://www.youtube.com/watch?v=afl_i6uvvU0&list=PLrnPJCHvNZuBAaN07RO7boUrFT4gkDlpL)  
   
 [b6312adap](b6314code.md)  
+[Adapter Class Examples - Android Programming](b6512kotl.md)  
 ## Item Click Listener - Simple RecyclerView in Kotlin (2020 with AndroidX) Part 4
 [Item Click Listener - Simple RecyclerView in Kotlin (2020 with AndroidX) Part 4](https://www.youtube.com/watch?v=wKFJsrdiGS8&list=PLrnPJCHvNZuBAaN07RO7boUrFT4gkDlpL&index=2)  
   
 [b6312adap](b6314code.md)  
+[Adapter Class Examples - Android Programming](b6512kotl.md)  
 ## How to Filter a RecyclerView with SearchView - Android Studio Tutorial
 [How to Filter a RecyclerView with SearchView - Android Studio Tutorial](https://www.youtube.com/watch?v=sJ-Z9G0SDhc&list=PLrnPJCHvNZuBAaN07RO7boUrFT4gkDlpL&index=6)  
   
