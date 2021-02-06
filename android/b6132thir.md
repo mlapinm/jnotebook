@@ -37,7 +37,7 @@ dependencies {
 [Retrofit Tutorial Part 1 - SIMPLE GET REQUEST - Android Studio Tutorial](https://www.youtube.com/watch?v=4JGvDUlfk7Y&list=PLrnPJCHvNZuCB6HJnqCdJ174JV7IwDsFQ&index=28)  
   
 [b613072get](b6134code.md)  
-b613074get
+b613074get  
 https://jsonplaceholder.typicode.com/
 https://square.github.io/retrofit/  
 implementation 'com.squareup.retrofit2:retrofit:(insert latest version)'   
@@ -49,16 +49,16 @@ implementation 'com.squareup.retrofit2:retrofit:(insert latest version)'
 ## Retrofit Tutorial Part 2 - URL MANIPULATION: @PATH @QUERY @QUERYMAP @URL - Android Studio Tutorial
 [Retrofit Tutorial Part 2 - URL MANIPULATION: @PATH @QUERY @QUERYMAP @URL - Android Studio Tutorial](https://www.youtube.com/watch?v=TyJEDhauUeQ&list=PLrnPJCHvNZuCB6HJnqCdJ174JV7IwDsFQ&index=29)  
   
-[B613082thir](b6134code.md)  
+[B613082manip](b6134code.md)  
   
 ## Retrofit Tutorial Part 3 - POST REQUEST & FORM URLENCODED - Android Studio Tutorial
 [Retrofit Tutorial Part 3 - POST REQUEST & FORM URLENCODED - Android Studio Tutorial](https://www.youtube.com/watch?v=GP5OyYDu_mU&list=PLrnPJCHvNZuCB6HJnqCdJ174JV7IwDsFQ&index=30)  
   
-[B613092thir](b6134code.md)  
+[B6130923retrofit](b6134code.md)  
 ## Retrofit Tutorial Part 4 - PUT, PATCH & DELETE REQUEST - Android Studio Tutorial
 [Retrofit Tutorial Part 4 - PUT, PATCH & DELETE REQUEST - Android Studio Tutorial](https://www.youtube.com/watch?v=xKEFGsMUG8s&list=PLrnPJCHvNZuCB6HJnqCdJ174JV7IwDsFQ&index=31)  
   
-[B613102thir](b6134code.md)  
+[B6131024retrofit](b6134code.md)  
 ## Retrofit Tutorial Part 5 - LOG HTTP REQUEST & RESPONSE WITH LOGGING INTERCEPTOR - Android Tutorial
 [Retrofit Tutorial Part 5 - LOG HTTP REQUEST & RESPONSE WITH LOGGING INTERCEPTOR - Android Tutorial](https://www.youtube.com/watch?v=R2c5Pv5cXc0&list=PLrnPJCHvNZuCB6HJnqCdJ174JV7IwDsFQ&index=32)  
   
@@ -84,6 +84,7 @@ implementation 'com.squareup.retrofit2:retrofit:(insert latest version)'
 [GSON Tutorial Part 3 - ARRAYS AND LISTS - Android Studio Tutorial](https://www.youtube.com/watch?v=xbo1G02c2VM&list=PLrnPJCHvNZuCB6HJnqCdJ174JV7IwDsFQ&index=36)  
   
 [B613152gson3](b6134code.md)  
+empty  
 ## GSON Tutorial Part 4 - @EXPOSE AND TRANSIENT - Android Studio Tutorial
 [GSON Tutorial Part 4 - @EXPOSE AND TRANSIENT - Android Studio Tutorial](https://www.youtube.com/watch?v=qY6R8IadCqA&list=PLrnPJCHvNZuCB6HJnqCdJ174JV7IwDsFQ&index=37)  
   
