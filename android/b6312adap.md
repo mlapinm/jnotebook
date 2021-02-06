@@ -25,6 +25,9 @@
   
 [b6312adap](b6314code.md)  
 ## App Widget Part 4 - ADAPTER-BASED WIDGETS - Android Studio Tutorial
+[Simple App Widget - Android Studio Tutorial](https://www.youtube.com/watch?v=xGQJg31TPtU&list=PLrnPJCHvNZuDCoET8jL2VK4YVRNhVEy0K)  
+[b631012widget](b6314code.md)    
+
 [App Widget Part 4 - ADAPTER-BASED WIDGETS - Android Studio Tutorial](https://www.youtube.com/watch?v=MMiuy9jK6X8&list=PLrnPJCHvNZuBAaN07RO7boUrFT4gkDlpL&index=24)  
   
 [b6312adap](b6314code.md)  
