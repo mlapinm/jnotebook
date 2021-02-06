@@ -11,6 +11,7 @@
 [Adapter Class Examples - Android Programming](b6512kotl.md)  
 ## How to Filter a RecyclerView with SearchView - Android Studio Tutorial
 [How to Filter a RecyclerView with SearchView - Android Studio Tutorial](https://www.youtube.com/watch?v=sJ-Z9G0SDhc&list=PLrnPJCHvNZuBAaN07RO7boUrFT4gkDlpL&index=6)  
+[AutoCompleteTextView with Custom Adapter Part 2 - ARRAY ADAPTER AND FILTER](b6412cust.md)  
   
 [b6312adap](b6314code.md)  
 ## Custom Spinner - Android Studio Tutorial
@@ -21,7 +22,6 @@
 [AutoCompleteTextView with Custom Adapter Part 2 - ARRAY ADAPTER AND FILTER - Android Studio Tutorial](https://www.youtube.com/watch?v=ocM1Yw_ktqM&list=PLrnPJCHvNZuBAaN07RO7boUrFT4gkDlpL&index=23)  
   
 [b6312adap](b6314code.md)  
-[AutoCompleteTextView with Custom Adapter Part 2 - ARRAY ADAPTER AND FILTER](b6412cust.md)  
 ## App Widget Part 4 - ADAPTER-BASED WIDGETS - Android Studio Tutorial
 [App Widget Part 4 - ADAPTER-BASED WIDGETS - Android Studio Tutorial](https://www.youtube.com/watch?v=MMiuy9jK6X8&list=PLrnPJCHvNZuBAaN07RO7boUrFT4gkDlpL&index=24)  
   
