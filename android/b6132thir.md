@@ -97,6 +97,8 @@ empty
 [B613172volley1](b6134code.md)  
 B613173volley1  
 B613173json.json  
+https://raw.githubusercontent.com/mlapinm/jnotebook/master/android/B613173json.json  
+
 https://www.androidhive.info/2014/09/android-json-parsing-using-volley/  
 https://developer.android.com/training/volley/index.html  
     implementation 'com.android.volley:volley:1.1.1'  
@@ -119,19 +121,25 @@ https://jsonplaceholder.typicode.com/users
 ## Dagger 2 Tutorial Part 2 - COMPONENT, PROVISION METHODS & CONSTRUCTOR INJECTION - Android Tutorial
 [Dagger 2 Tutorial Part 2 - COMPONENT, PROVISION METHODS & CONSTRUCTOR INJECTION - Android Tutorial](https://www.youtube.com/watch?v=wJkHYBf8VkA&list=PLrnPJCHvNZuCB6HJnqCdJ174JV7IwDsFQ&index=42)  
   
-[B6132thir](b6134code.md)  
+[B613212p02dagger](b6134code.md)  
+2.31.2  
+ implementation 'com.google.dagger:dagger:2.31.2'  
+ annotationProcessor 'com.google.dagger:dagger-compiler:2.31.2'    
+
 ## Dagger 2 Tutorial Part 3 - FIELD INJECTION - Android Studio Tutorial
 [Dagger 2 Tutorial Part 3 - FIELD INJECTION - Android Studio Tutorial](https://www.youtube.com/watch?v=tgY4Jw8OFZI&list=PLrnPJCHvNZuCB6HJnqCdJ174JV7IwDsFQ&index=43)  
   
-[B6132thir](b6134code.md)  
+[B613222p03dagger](b6134code.md)  
 ## Dagger 2 Tutorial Part 4 - METHOD INJECTION - Android Studio Tutorial
 [Dagger 2 Tutorial Part 4 - METHOD INJECTION - Android Studio Tutorial](https://www.youtube.com/watch?v=P9vZ5UAiY_k&list=PLrnPJCHvNZuCB6HJnqCdJ174JV7IwDsFQ&index=44)  
   
-[B6132thir](b6134code.md)  
+[B613232p04dagger](b6134code.md)  
 ## Dagger 2 Tutorial Part 5 - MODULES & PROVIDER METHODS - Android Studio Tutorial
 [Dagger 2 Tutorial Part 5 - MODULES & PROVIDER METHODS - Android Studio Tutorial](https://www.youtube.com/watch?v=m5K6FO_DH1k&list=PLrnPJCHvNZuCB6HJnqCdJ174JV7IwDsFQ&index=45)  
   
-[B6132thir](b6134code.md)  
+[B613242p05dagger](b6134code.md)  
+empty  
+
 ## Dagger 2 Tutorial Part 6 - PROVIDING INTERFACES WITH @BINDS - Android Studio Tutorial
 [Dagger 2 Tutorial Part 6 - PROVIDING INTERFACES WITH @BINDS - Android Studio Tutorial](https://www.youtube.com/watch?v=3itfTHKFOqY&list=PLrnPJCHvNZuCB6HJnqCdJ174JV7IwDsFQ&index=46)  
   
