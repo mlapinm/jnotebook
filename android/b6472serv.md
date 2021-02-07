@@ -40,3 +40,8 @@ B647013serv
 [BroadcastReceiver Tutorial Part 8 - GOASYNC + PENDINGRESULT - Android Studio Tutorial](https://www.youtube.com/watch?v=dRfJp1W5l8M&list=PLrnPJCHvNZuBhmqlWEQfvxbNtY6B_XJ3n&index=12)  
   
 [B6471028broad](b6474code.md)  
+
+## Start аndroid: Урок 95. Service. Обратная связь с помощью PendingIntent (Android Studio)
+[Start аndroid: Урок 95. Service. Обратная связь с помощью PendingIntent (Android Studio)][(https://www.youtube.com/watch?v=Xs--p1DxHxo)  
+[95 code](https://startandroid.ru/ru/uroki/vse-uroki-spiskom/160-urok-95-service-obratnaja-svjaz-s-pomoschju-pendingintent.html)  
+B647112pending
