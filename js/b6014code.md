@@ -1,0 +1,22 @@
+## 1
+## 11 - Панель инструментов и статус бар
+[11 - Панель инструментов и статус бар](https://www.youtube.com/watch?v=KZEYWURHBPo&list=PLfAlku7WMht4Vm6ewLgdP9Ou8SCk4Zhar&index=11)  
+  
+## 12 - Диалоговые окна (1/3)
+[12 - Диалоговые окна (1/3)](https://www.youtube.com/watch?v=Qzx_NnUv0DU&list=PLfAlku7WMht4Vm6ewLgdP9Ou8SCk4Zhar&index=12)  
+  
+## 13 - Диалоговые окна (2/3)
+[13 - Диалоговые окна (2/3)](https://www.youtube.com/watch?v=dHiqSj910J4&list=PLfAlku7WMht4Vm6ewLgdP9Ou8SCk4Zhar&index=13)  
+  
+## 14 - Диалоговые окна (3/3)
+[14 - Диалоговые окна (3/3)](https://www.youtube.com/watch?v=YX0yggSH7pE&list=PLfAlku7WMht4Vm6ewLgdP9Ou8SCk4Zhar&index=14)  
+  
+## 15 - Canvas и геометрические примитивы
+[15 - Canvas и геометрические примитивы](https://www.youtube.com/watch?v=oaHYYk_4gEE&list=PLfAlku7WMht4Vm6ewLgdP9Ou8SCk4Zhar&index=15)  
+  
+## 16 - Работа с Canvas (статические изменения фигур)
+[16 - Работа с Canvas (статические изменения фигур)](https://www.youtube.com/watch?v=mZOOB2cBMZg&list=PLfAlku7WMht4Vm6ewLgdP9Ou8SCk4Zhar&index=16)  
+  
+## 17 - Анимированная отрисовка
+[17 - Анимированная отрисовка](https://www.youtube.com/watch?v=vLFnh3iCp_8&list=PLfAlku7WMht4Vm6ewLgdP9Ou8SCk4Zhar&index=17)  
+  

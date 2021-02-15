@@ -138,40 +138,52 @@ https://jsonplaceholder.typicode.com/users
 [Dagger 2 Tutorial Part 5 - MODULES & PROVIDER METHODS - Android Studio Tutorial](https://www.youtube.com/watch?v=m5K6FO_DH1k&list=PLrnPJCHvNZuCB6HJnqCdJ174JV7IwDsFQ&index=45)  
   
 [B613242p05dagger](b6134code.md)  
-empty  
+ D/Car: Tires inflate  
+ D/Car: Remote connected  
+ D/Car: drive    
 
 ## Dagger 2 Tutorial Part 6 - PROVIDING INTERFACES WITH @BINDS - Android Studio Tutorial
 [Dagger 2 Tutorial Part 6 - PROVIDING INTERFACES WITH @BINDS - Android Studio Tutorial](https://www.youtube.com/watch?v=3itfTHKFOqY&list=PLrnPJCHvNZuCB6HJnqCdJ174JV7IwDsFQ&index=46)  
   
-[B6132thir](b6134code.md)  
+[B613252p06dagger](b6134code.md)  
 ## Dagger 2 Tutorial Part 7 - HOW TO INJECT VALUES AT RUNTIME - Android Studio Tutorial
 [Dagger 2 Tutorial Part 7 - HOW TO INJECT VALUES AT RUNTIME - Android Studio Tutorial](https://www.youtube.com/watch?v=pAZtgwHJpBg&list=PLrnPJCHvNZuCB6HJnqCdJ174JV7IwDsFQ&index=47)  
   
-[B6132thir](b6134code.md)  
+[B613262p07dagger](b6134code.md)  
+B613264p07dagger  
 ## Dagger 2 Tutorial Part 8 - @COMPONENT.BUILDER, @BINDSINSTANCE & @NAMED - Android Studio Tutorial
 [Dagger 2 Tutorial Part 8 - @COMPONENT.BUILDER, @BINDSINSTANCE & @NAMED - Android Studio Tutorial](https://www.youtube.com/watch?v=3tIvekCTSJg&list=PLrnPJCHvNZuCB6HJnqCdJ174JV7IwDsFQ&index=48)  
   
-[B6132thir](b6134code.md)  
+[B613274p08dagger](b6134code.md)  
 ## Dagger 2 Tutorial Part 9 - UNDERSTANDING THE GENERATED CODE - Android Studio Tutorial
 [Dagger 2 Tutorial Part 9 - UNDERSTANDING THE GENERATED CODE - Android Studio Tutorial](https://www.youtube.com/watch?v=2m63wk0M9vM&list=PLrnPJCHvNZuCB6HJnqCdJ174JV7IwDsFQ&index=49)  
   
-[B6132thir](b6134code.md)  
+[B613282p09dagger](b6134code.md)  
 ## Dagger 2 Tutorial Part 10 - @SINGLETON - Android Studio Tutorial
 [Dagger 2 Tutorial Part 10 - @SINGLETON - Android Studio Tutorial](https://www.youtube.com/watch?v=qiNuUUPLlkk&list=PLrnPJCHvNZuCB6HJnqCdJ174JV7IwDsFQ&index=50)  
   
-[B6132thir](b6134code.md)  
+[B613282p09dagger](b6134code.md)  
 ## Dagger 2 Tutorial Part 11 - CUSTOM SCOPES & COMPONENT DEPENDENCIES - Android Studio Tutorial
 [Dagger 2 Tutorial Part 11 - CUSTOM SCOPES & COMPONENT DEPENDENCIES - Android Studio Tutorial](https://www.youtube.com/watch?v=V-CF0BGA-3w&list=PLrnPJCHvNZuCB6HJnqCdJ174JV7IwDsFQ&index=51)  
   
-[B6132thir](b6134code.md)  
+[B613302p11dagger](b6134code.md)  
 ## Dagger 2 Tutorial Part 12 - SUBCOMPONENTS - Android Studio Tutorial
 [Dagger 2 Tutorial Part 12 - SUBCOMPONENTS - Android Studio Tutorial](https://www.youtube.com/watch?v=cLT3jsJdxuk&list=PLrnPJCHvNZuCB6HJnqCdJ174JV7IwDsFQ&index=52)  
   
-[B6132thir](b6134code.md)  
+[B613312p12dagger](b6134code.md)  
+ D/Car: Tires inflate  
+ D/Car: Remote connected  
+ D/Car: Tires inflate  
+ D/Car: Remote connected  
+ D/Car: Diesel Engine started 120  
+.car.Car@726cdba  
+ D/Car: Diesel Engine started 120  
+.car.Car@610746b  
 ## Dagger 2 Tutorial Part 13 - @SUBCOMPONENT.BUILDER - Android Studio Tutorial
 [Dagger 2 Tutorial Part 13 - @SUBCOMPONENT.BUILDER - Android Studio Tutorial](https://www.youtube.com/watch?v=zoj9MYxup-0&list=PLrnPJCHvNZuCB6HJnqCdJ174JV7IwDsFQ&index=53)  
   
-[B6132thir](b6134code.md)  
+[B613322p13dagger](b6134code.md)  
+empty
 ## Dagger 2 Tutorial Part 14 - @COMPONENT.FACTORY - Android Studio Tutorial
 [Dagger 2 Tutorial Part 14 - @COMPONENT.FACTORY - Android Studio Tutorial](https://www.youtube.com/watch?v=V9wSqfvErak&list=PLrnPJCHvNZuCB6HJnqCdJ174JV7IwDsFQ&index=54)  
   
