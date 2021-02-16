@@ -1,4 +1,14 @@
-## 1   
+ 
+[1 - Установка tkinter](https://www.youtube.com/watch?v=3sf2MRgLNN0&list=PLfAlku7WMht4Vm6ewLgdP9Ou8SCk4Zhar)   
+[2 - Организания главного окна](https://www.youtube.com/watch?v=mm-J9pYBcQ0&list=PLfAlku7WMht4Vm6ewLgdP9Ou8SCk4Zhar&index=2)   
+[3 - Упаковщик pack](https://www.youtube.com/watch?v=spin3l5XNiI&list=PLfAlku7WMht4Vm6ewLgdP9Ou8SCk4Zhar&index=3)   
+[4 - Упаковщик grid](https://www.youtube.com/watch?v=hEYv0IK724U&list=PLfAlku7WMht4Vm6ewLgdP9Ou8SCk4Zhar&index=4)   
+[5 - Метод bind](https://www.youtube.com/watch?v=kLY0O_me8-s&list=PLfAlku7WMht4Vm6ewLgdP9Ou8SCk4Zhar&index=5)   
+[6 - События мыши](https://www.youtube.com/watch?v=TSyT1uOCZms&list=PLfAlku7WMht4Vm6ewLgdP9Ou8SCk4Zhar&index=6)   
+[7 - События клавиатуры](https://www.youtube.com/watch?v=bh9zsbaLaGs&list=PLfAlku7WMht4Vm6ewLgdP9Ou8SCk4Zhar&index=7)   
+[8 - Секундомер](https://www.youtube.com/watch?v=F-TAPB87vCU&list=PLfAlku7WMht4Vm6ewLgdP9Ou8SCk4Zhar&index=8)   
+[9 - Использование ООП](https://www.youtube.com/watch?v=GhkyLQ6A6Yw&list=PLfAlku7WMht4Vm6ewLgdP9Ou8SCk4Zhar&index=9)   
+[10 - Выпадающее меню](https://www.youtube.com/watch?v=rRE-GgE8ajE&list=PLfAlku7WMht4Vm6ewLgdP9Ou8SCk4Zhar&index=10)   
 [11 - Панель инструментов и статус бар](https://www.youtube.com/watch?v=KZEYWURHBPo&list=PLfAlku7WMht4Vm6ewLgdP9Ou8SCk4Zhar&index=11)   
 [12 - Диалоговые окна (1/3)](https://www.youtube.com/watch?v=Qzx_NnUv0DU&list=PLfAlku7WMht4Vm6ewLgdP9Ou8SCk4Zhar&index=12)   
 [13 - Диалоговые окна (2/3)](https://www.youtube.com/watch?v=dHiqSj910J4&list=PLfAlku7WMht4Vm6ewLgdP9Ou8SCk4Zhar&index=13)   
