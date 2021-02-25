@@ -33,7 +33,7 @@ This module will show you how to get the user to input data. You will learn abou
 https://alison.com/courses/programming-concepts-with-python-revised/content  
 http://aka.ms/intopythoncode  
 https://github.com/GeekTrainer/Introduction-Programming-Python  
-  
+https://document.online-convert.com/ru/convert/pptx-to-pdf  
   
   
   
