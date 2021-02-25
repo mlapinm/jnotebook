@@ -1,0 +1,478 @@
+
+
+https://alison.com/courses/categories
+
+
+
+A new project app was set up using Firebase and Android Studio. 
+Firebase offers a range of tools and SDKs such as: Analytics, Authentication, Database, Storage, Hosting, Cloud Functions, Notifications and more. 
+The files and assets that accompany this course, are available to download from the resources section in the main course menu. 
+The app's theme was changed to match the primary and accent colours in the mockup drawing.  
+Work was done on the user interface (UI), specifically the controller for adding new posts or "thoughts". 
+There are three category buttons for posts: Funny, Serious and Crazy, plus a Popular view.
+The following elements were added to the app and customised: three toggle buttons, a single line text field, a multi-line text field and a post button. 
+In the database, field and value pairs were added for: number of comments, number of likes, timestamp and text field. 
+Four toggle buttons were added, positioned and customised. Text, IDs and on-click actions were set.
+The recycler view on the main activity page, was configured to the database.
+A new kotlin class file called ThoughtsAdaptor was created, which will display the array of thoughts from the database. 
+
+
+
+Firestore and Android (Part 1) - Lesson Summary
+Alison TeamAmazing! You're halfway!
+Mlapin Mlapin
+ Module Progress:
+
+
+
+
+Data from the database was configured to display in the app, using the thoughts adaptor. 
+Listener values were set, so that a snapshot of the thoughts are displayed.
+An "observer" or "listener" was set to address the problem of one-time fetching, so when a new post is created it is updated in the UI. 
+A variable was written so that the correct updates are displayed in the different categories (funny, serious, crazy and popular).
+A timestamp query was added to display the posts in descending order, by date and time. 
+Posts in the Popular category, display in descending order according to the number of 'likes'. 
+Refactoring was applied to the MainActivity file, to clean up repetitive code. 
+Code was added to the ThoughtsAdaptor file, to implement the 'like' function, so that the value increases when the star image is clicked on. 
+In order for the 'like' feature to function properly, a composite index from Firestore was imported.
+
+
+This topic presents a list of the intended learning outcomes for Module 2 of the following course: Create Android Apps Using Firestore, on Alison.com.
+
+
+Module Two Learning Outcomes
+After completing this module you will be able to:
+Configure text fields and buttons based on a mockup design
+Create user authentication settings in Firebase
+Customise the view controller based on user status
+Develop a comments function for the app
+Explain the heirarchical structure of documents in the database
+Apply security rules for the app in Firestore
+
+
+
+The app mockups were examined, assets were imported and work was done on the 'login' and 'create user' screens. 
+The android asset files that accompany this course, are available to download from the course resources section.
+The login and create user text fields and buttons were configured, using the attributes menu in android studio.
+A user was created using Firebase authentication; the authentication file was downloaded from the Firestore library.
+Firebase/Firestore sign in authentication methods include: Email/Password; Phone; Google; Facebook and Twitter. 
+A new document was added to the database, when the create user function was tested in the simulation.
+When a user logs in to the app, their details must match those in the database, or the login will not be successful. 
+The app will display different messages depending on the user status, i.e. logged in or logged out.
+When the user logs out, the posts disppear and the menu buttons are inactive, until the user logs in again.
+The comments feature for the app was developed; a database document with a username and document ID, is created for each new comment, which is stored in a subcollection called 'Comments'. 
+
+
+Work was done to display comments in the app; the comment text fields for username, comment and timestamp were configured in android studio. 
+The files are structured heirarchically in the database, i.e. thoughts, documents and comments. 
+The comments icon and the number of comments field, were imported and customised. 
+Once the user is logged in, it should not be necessary to input the username again when posting a thought. Consequently, the username text field was removed.
+Security rules were applied to the database that enable only logged in or authenticated users, to read and write to the app. 
+The security rule written in the database, applied to the thoughts collection specifically. However, this cascades to comments by using a 'wildcard' command.
+Alternative ways of writing security rules were demonstrated.
+
+
+
+Module Three Learning Outcomes
+After completing this module you will be able to:
+Develop security rules using Firestore
+Understand the functions for editing and deleting posts and comments
+Describe how to configure an options menu
+Demonstrate how to configure an alert box with buttons
+Summarise the function of success and failure listeners
+Use a function to hide the keyboard 
+Edit a function to delete subcollections 
+
+
+Alison TeamNew!
+Take our free course in Marine Refrigeration and Climate Control, and take your knowledge up a notch!
+
+ 
+
+Start learning now!
+
+Alison
+6 days ago
+Alison Team
+Give the most effective care to those suffering with Dementia
+
+ 
+
+Take our free course now
+
+Alison
+6 days ago
+Alison Team
+FREE Project Management Diploma!
+
+ 
+
+Boost your Project Management Career here!
+
+Alison
+6 days ago
+Alison Team
+FREE Workplace Personality Test - Find out where YOUR talents & interests would be best suited!
+
+ 
+
+Take the 18 minute test here!
+
+Earlier Notifications
+Alison
+a month ago
+Alison Team
+Looking for a change in 2021? Learn how to land your ideal job with our free course!
+
+ 
+
+Earn a better future for you!
+
+Alison
+a month ago
+Alison Team
+No better time to really hone your photography skills! Why not take our Digital Photography course for free?
+
+Lesson Summary
+Additional work was done on security rules to match the implementation and work was done on new app features, such as the ability to edit and delete comments and posts. 
+The learner was advised to download the files that accompany this course, which are available in the course resources section. 
+The ability to edit and delete posts and comments, was assigned to the owners of the posts and comments only. Code enabling this, was added to the relevant files. 
+An icon for the edit/delete menu option, was imported from the assets folder. 
+Work was done on creating the edit and delete buttons in the options menu. 
+The edit/delete alert box buttons were configured; colours and constraints were set. 
+A function to hide the keyboard was written into the UpdateCommentActivity file. 
+All logged in users were able to update and delete posts and comments, so this was restricted to the owners of the content. 
+The process of deleting posts was demonstrated and learners were invited to edit a post, as an exercise.
+When a document is deleted in Firestore, any subcollections associated with that document are not automatically deleted, so this functionality was implemented.
+
+
+
+Code was written in the security rules section in Firestore, to provide deletion rights to the owners of posts only.
+Two app simulations (emulators) were opened side-by-side, to show real-time updates by two different users. 
+The security rules were updated so that when a user deletes a "thought" (post), any associated comments are also deleted.
+An overview of the app's development was presented. 
+Firestore is recommended as a useful resource for real-time database technology. 
+The instructor invited learners to modify the project app and "make it their own", using what they have learned in the course. 
+The 'edit thoughts' feature was not enabled in this project. The instructor invited learners to develop this function and to customise the app with e.g. different colours and assets.
+
+
+This assessment enables you to review your learning, so you can determine your knowledge and understanding of the following course:
+Create Android Apps Using Firestore
+If you do not achieve the required standard after the first attempt, you can re-take the assessment until a successful outcome is achieved.
+
+
+
+
+Create Android Apps Using Firestore - End of Course Assessment
+Learning Outcomes
+
+You will be assessed on the following Learning Outcomes:
+- Set up a project using Firestore and Android Studio.
+- Develop the features of a user interface (UI).
+- Create and customise toggle buttons.
+- Set listener values and snapshots.
+- Implement a 'like' function.
+- Configure text fields and buttons.
+- Create user authentication settings in Firestore.
+- Develop a comments function for the app.
+- Explain the hierarchical structure of documents in Firestore.
+- Apply security rules in Firestore.
+- Describe the functions for editing and deleting posts and comments.
+- Describe how to configure an options menu.
+- Demonstrate how to configure an alert box with buttons.
+You will be assessed on the following Learning Outcomes:
+- Set up a project using Firestore and Android Studio.
+- Develop the features of a user interface (UI).
+- Create and customise toggle buttons.
+- Set listener values and snapshots.
+- Implement a 'like' function.
+- Configure text fields and buttons.
+- Create user authentication settings in Firestore.
+- Develop a comments function for the app.
+- Explain the hierarchical structure of documents in Firestore.
+- Apply security rules in Firestore.
+- Describe the functions for editing and deleting posts and comments.
+- Describe how to configure an options menu.
+- Demonstrate how to configure an alert box with buttons.
+
+login logout
+1
+You will be assessed on the following Learning Outcomes:
+- Set up a project using Firestore and Android Studio.
+- Develop the features of a user interface (UI).
+- Create and customise toggle buttons.
+- Set listener values and snapshots.
+- Implement a 'like' function.
+- Configure text fields and buttons.
+- Create user authentication settings in Firestore.
+- Develop a comments function for the app.
+- Explain the hierarchical structure of documents in Firestore.
+- Apply security rules in Firestore.
+- Describe the functions for editing and deleting posts and comments.
+- Describe how to configure an options menu.
+- Demonstrate how to configure an alert box with buttons.
+
+
+
+TRUE OR FALSE? The instructor invited course participants to customise the app with different colours and assets, as a practice exercise.
+
+TRUE OR FALSE? The instructor invited course participants to customise the app with different colours and assets, as a practice exercise.
+ПРАВДА ИЛИ ЛОЖЬ? Инструктор предложил участникам курса настроить приложение с различными цветами и активами в качестве практического упражнения.
+
+
+Which pair of numbers represents the transparency value in hexadecimal code?
+
+FILL-IN-THE-BLANK: A new document with a document ID, is created in the ________ for each new comment made.
+FILL-IN-THE-BLANK: Новый документ с идентификатором документа создается в _ _ _ _ _ _ _ для каждого нового сделанного комментария.
+
+TRUE OR FALSE? It is necessary to input the username when posting a thought, even if the user is already logged in.
+
+
+FILL-IN-THE-BLANK: Posts in the Popular category, are displayed in descending order according to the number of "_____".
+FILL-IN-THE-BLANK: Сообщения в Популярной категории отображаются в порядке убывания в соответствии с номером"____".
+
+The emulator Google API list is checked in the AVD Manager in Android Studio, to make sure it is set up for which services?
+Список эмулятора Google API проверяется в менеджере AVD в Android Studio, чтобы убедиться, что он настроен для каких сервисов?
+
+TRUE OR FALSE? The "Don't have a user/account?" link is on the Create user screen.
+ПРАВДА ИЛИ ЛОЖЬ? "У вас нет пользователя/учетной записи?" ссылка находится на экране Создания пользователя.
+
+TRUE OR FALSE? The instructor invited course participants to create a new app from scratch, using what they have learned in the course.
+
+
+FILL-IN-THE-BLANK: Firestore was recommended in this course, as a useful resource for real-time ________ technology.
+
+
+FILL-IN-THE-BLANK: The security rule written in the database for the thoughts collection, cascades to comments by using a ________ command.
+FILL-IN-THE-BLANK: Правило безопасности, записанное в базе данных для коллекции мыслей, каскадируется в комментарии с помощью команды______.
+---00=======
+What does the recycler view on the main activity page display?
+
+Which category in the main activity page is not included in the add thoughts page?
+
+Arrange the database files in the correct hierarchichal order, i.e. first to last (top to bottom):
+
+Which elements in the post thoughts view were customised? Choose four:
+
+
+Firebase sign in/authentication methods include which of the following methods?
+
+Which special file from Firestore, is required to implement the 'like' function?
+
+
+FILL-IN-THE-BLANK: Data from the database is configured to display in the app, using the thoughts _______.
+
+
+FILL-IN-THE-BLANK: Data from the database is configured to display in the app, using the thoughts _______.
+
+FILL-IN-THE-BLANK: When the user logs ___, the posts disappear from the recycler view and the menu buttons become inactive.
+
+
+TRUE OR FALSE? When a document is deleted in Firestore, any subcollections associated with that document are not automatically deleted; this functionality has to be programmed.
+
+Which type of function is set to address the problem of one-time fetching, so that when a new post is created it is updated correctly in the UI?
+
+
+Sorry! You failed.
+You can always try the assessment again.
+
+
+
+
+
+
+Which class of file will display the array of thoughts from the database?
+Kotlin
+Java
+XML
+
+The emulator Google API list is checked in the AVD Manager in Android Studio, to make sure it is set up for which services?
+iTunes
+Google Play
+Network
+45
+TRUE OR FALSE? The "Don't have a user/account?" link is on the Create user screen.
+True
+False -0
+FILL-IN-THE-BLANK: A new document with a document ID, is created in the ________ for each new comment made.
+comments -1
+
+Security rules applied to the database, enable which type of users to read and write to the app?
+Trial
+Authenticated
+Premium
+Click on the correct answer. Then click Submit answer.
+
+TRUE OR FALSE? The instructor advised course participants to create an app, as a practice exercise, that allows users to post and edit content and interact with others.
+True
+False
+
+The app text fields are customised, using which menu in android studio?
+Configurations
+Drag the correct answer into the space provided. Then click Submit answer.
+Elements
+Drag the correct answer into the space provided. Then click Submit answer.
+Attributes
+
+FILL-IN-THE-BLANK: When a new user is successfully created, a document containing information about the user, is added to the ________.
+users 0
+TRUE OR FALSE? The comments display view is created, using the same format as the thoughts adaptor.
+true
+
+Which special file from Firestore, is required to implement the 'like' function?
+File composite
+Composite index
+Index category - 0
+
+Which type of function is set to address the problem of one-time fetching, so that when a new post is created it is updated correctly in the UI?
+A transmitter -0
+Drag the correct answer into the space provided. Then click Submit answer.
+An "observer" or "listener"
+Drag the correct answer into the space provided. Then click Submit answer.
+A migrator
+
+Which elements in the post thoughts view were customised? Choose four:
+Post button
+Toggle buttons
+Username field
+Text field
+Radio buttons
+Image
+
+Which elements in the post thoughts view were customised? Choose four:
+Post button
+Toggle buttons
+Username field
+Text field
+Radio buttons
+Image
+
+
+FILL-IN-THE-BLANK: Data from the database is configured to display in the app, using the thoughts _______.
+adapter  -0
+
+
+TRUE OR FALSE? A new comment can be added by a user, when they click on a "thought" or post.
+True
+False - 0
+
+88888888888888888888888
+
+TRUE OR FALSE? The ability to edit and delete posts and comments, is assigned to the owners of the posts and comments only.
+True
+
+False
+
+
+
+
+TRUE OR FALSE? The "Don't have a user/account?" link is on the Create user screen.
+FALSE
+
+
+
+1
+TRUE OR FALSE? A new comment can be added by a user, when they click on a "thought" or post.
+True
+False -
+2
+FILL-IN-THE-BLANK: A new document with a document ID, is created in the ________ for each new comment made.
+comments
+3
+
+FILL-IN-THE-BLANK: When a new user is successfully created, a document containing information about the user, is added to the ________.
+4
+Which special file from Firestore, is required to implement the 'like' function?
+File composite  
+Composite index  v
+Index category
+
+
+
+5
+
+Which type of function is set to address the problem of one-time fetching, so that when a new post is created it is updated correctly in the UI?
+A transmitter
+An "observer" or "listener"
+A migrator
+
+6
+
+FILL-IN-THE-BLANK: Data from the database is configured to display in the app, using the thoughts _______.
+
+
+7
+TRUE OR FALSE? A new comment can be added by a user, when they click on a "thought" or post.
+
+true
+
+
+8
+
+Firebase sign in/authentication methods include which of the following methods?
+YouTube
+Facebook
+Email/Password
+Phone
+Google
+Twitter
+
+
+=======
+
+
+FILL-IN-THE-BLANK: The security rule written in the database for the thoughts collection, cascades to comments by using a ________ command.
+currentUser
+
+
+Which type of function is set to address the problem of one-time fetching, so that when a new post is created it is updated correctly in the UI?
+A transmitter
+Drag the correct answer into the space provided. Then click Submit answer.
+An "observer" or "listener"
+Drag the correct answer into the space provided. Then click Submit answer.
+A migrator
+
+FILL-IN-THE-BLANK: Data from the database is configured to display in the app, using the thoughts _______.
+RecycleView
+
+Arrange the database files in the correct hierarchichal order, i.e. first to last (top to bottom):
+
+Thoughts
+
+Documents
+
+Comments
+Select the correct answers from the drop-down list. Then click Submit answer.
+
+
+FILL-IN-THE-BLANK: A new document with a document ID, is created in the ________ for each new comment made.
+collection
+
+TRUE OR FALSE? When a user logs in to the app, their details must match those in the database, or the login will not be successful.
+True
+
+FILL-IN-THE-BLANK: Posts in the Popular category, are displayed in descending order according to the number of "_____".
+likes
+
+Which name is given to the mobile app in the project?
+RMDN
+Drag the correct answer into the space provided. Then click Submit answer.
+RANDOM
+Drag the correct answer into the space provided. Then click Submit answer.
+RNDM
+
+
+Which of the following tools and SDKs does Firebase offer?
+Cloud Functions
+Storage and Hosting
+Database
+Authentication
+Analytics
+Notifications
+
+
+
+
+=======
+
+
