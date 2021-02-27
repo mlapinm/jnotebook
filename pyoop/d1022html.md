@@ -65,6 +65,7 @@ name attribute - Provides programmatic access (on the server)
 class attribute - CSS hook for stylings
 
 ```
+https://htmlpreview.github.io/?https://github.com/mlapinm/jnotebook/blob/master/pyoop/d1024/l032.html
 ## MODULE 2 Using HTML5 And CSS3 To Format A Web PageNot Started
 #### In this module you will learn about global attributes that can be added to virtually any HTML5 element and how to correctly format them within a HTML5 element. The course then shows you how to link a HTML web page to a cascading style sheet file. You will learn how to code style sheet instructions that style the various HTML5 elements in the web page. You will also learn about Progressive enhancement in web design that emphasizes accessibility, semantic HTML markup, and external style sheet.
 ### Using HTML5 And CSS3 To Format A Web Page - Learning Outcomes
