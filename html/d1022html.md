@@ -1,6 +1,7 @@
 ### Section 1: Html5 And Css3 Web Programming
 ## MODULE 1 Using HTML5 And CSS3 To Build A Web Page50% Complete
 #### In this module you will learn how HTML structures the content on a web page and how CSS styles the content on a web page. The course begins by showing you the structure of a HTML5 web page - you will learn how to declare a HTML5 document and set up the head and body sections of a web page. You will then learn about a wide range of HTML5 elements and their functions and uses.
+[l032](https://mlapinm.github.io/d1024/l032.html)  
 ### Using HTML5 And CSS3 To Build A Web Page - Learning Outcomes
 ### Introduction To Course
 ### Creating Your First HTML5 Web Page With CSS3
