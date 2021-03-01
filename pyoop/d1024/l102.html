@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Lesson 10 - Creating Forms</title>
+</head>
+<body>
+
+<h1>Creating Forms</h1>
+
+<form action="form.aspx" method="get">
+<p>
+  <label for="">Customer name: 
+    <input name="customerName" id="customerName" type="text" maxlength="10" placeholder="What is your name?">
+  </label>
+</p>
+
+
+<fieldset>
+  <legend>Pizza Size</legend>
+  <p><label for=""><input type="radio" name="size" value="small" checked>Small (10 inch)</label></p>
+  <p><label for=""><input type="radio" name="size" value="medium">Medium (12 inch)</label></p>
+  <p><label for=""><input type="radio" name="size" value="large">Large (14 inch)</label></p>
+</fieldset>
+
+<fieldset>
+  <legend>Pizza Toppings</legend>
+  <p><label for=""><input type="checkbox" name="toppings" value="bacon"> Bacon </label></p>
+  <p><label for=""><input type="checkbox" name="toppings" value="cheese"> Cheese </label></p>
+  <p><label for=""><input type="checkbox" name="toppings" value="onion" checked> Onion </label></p>
+  <p><label for=""><input type="checkbox" name="toppings" value="mooshroom"> Mushroom </label></p>
+</fieldset>
+
+<p>Crust
+  <select name="" id="">
+    <option value="c1">Normal</option>
+    <option value="c2">Chicago Deep Dish (+ $2)</option>
+    <option value="c3">New York Think</option>
+  </select>
+</p>
+
+<p><label for="comments">Delivery Instructions:</label>
+  <textarea name="comments" id="" cols="50" rows="10" placeholder="How do we get to your house?"></textarea>
+</p>
+
+<p><input type="submit" value="Continue to Step 2"></p>
+<p><input type="reset" value="Reset Values"></p>
+</form>
+
+
+</body>
+</html>
