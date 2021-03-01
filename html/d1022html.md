@@ -679,11 +679,14 @@ h1{
 https://kyleschaeffer.com/css-font-size-em-vs-px-vs-pt-vs-percent  
   
 ### CSS3 Color And Background Properties
-
+https://mlapinm.github.io/d1024/l142.html  
 
 ### CSS3 List And Table Properties
+https://mlapinm.github.io/d1024/l152.html  
 ### CSS3 Box Properties
+https://mlapinm.github.io/d1024/l162.html  
 ### Working With CSS3 Font-Face
+Lesson 17 - font-face
 ### Using CSS3 Selectors To Style Web Pages - Lesson Summary
 
 ```
