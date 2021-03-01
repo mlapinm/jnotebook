@@ -425,6 +425,8 @@ th element - represents a header cell in a table
 ```
 ## MODULE 3 Working With Forms
 #### In this module you will learn how to create a correctly formatted form using the HTML5 element and create different types of form inputs. You will also learn how to identify and use input types for the input element, and identify and use attributes for the input element.
+[Creating Forms 1](https://mlapinm.github.io/d1024/l102.html)  
+[Creating Forms 2](https://mlapinm.github.io/d1024/l112.html)  
 ```
 Upon successful completion of this module you will be able to:  
 Identify how to create a correctly formatted form using the <form> </form> HTMI5 element.  
@@ -506,8 +508,11 @@ Identify and use block style HTML5 elements.
 
 
 ### Using CSS3 Selectors To Style Web Pages - Learning Outcomes
+[Lesson 12 - Fun With CSS Selectors](https://mlapinm.github.io/d1024/l122.html)  
 ### Understanding Cascading Style Sheets
 ### CSS3 Font And Text Properties
+https://mlapinm.github.io/d1024/l132.html  
+
 
 <h1>font-family</h1>
 <p style="font-family:Arial;">font-family:Arial;</p>
