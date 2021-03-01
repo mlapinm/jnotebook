@@ -815,7 +815,7 @@ Describe how to work with Scalable Vector Graphics (SVG) in HTML5.
 
 ```
 
-
+https://mlapinm.github.io/d1024/l192.html  
 
 ### HTML5 Canvas, Video And SVG Elements - Learning Outcomes
 ### Embedding Video In HTML5
