@@ -820,7 +820,10 @@ https://mlapinm.github.io/d1024/l192.html
 ### HTML5 Canvas, Video And SVG Elements - Learning Outcomes
 ### Embedding Video In HTML5
 ### Working With The HTML5 Canvas
+https://mlapinm.github.io/d1924/l192.html  
 ### Working With SVG In HTML5
+https://mlapinm.github.io/d2024/l192.html  
+https://softouch.on.ca/kb/data/SVG%20Essentials.%202E.pdf  
 ### Where To Go From Here
 ### HTML5 Canvas, Video And SVG Elements - Lesson Summary
 ### Section 2: Learn Javascript And Jquery Web Programming Skills
@@ -867,43 +870,6 @@ SVG images are resolution and device independent.
 
 
 
-## MODULE 7 Writing Your First JavaScript Application
-#### In this module you will learn about JavaScript variables, and programming concepts such as declaring variables using the var key word and naming JavaScript variables using identifiers. You will learn about HTML events such as onclick and how JavaScript methods can be used to work with events. You will learn about the different types of conditional statements, their correct syntax and examples of their use.
-### Writing Your First JavaScript Application - Learning Outcomes
-### Series Introduction
-### Writing Your First JavaScript Application
-### Dissecting The First JavaScript Application You Wrote
-### Writing JavaScript In Visual Web Developer Express
-### JavaScript Variables, Types, Operators And Expressions
-### Writing Your First JavaScript Application - Lesson Summary
-## MODULE 8 JavaScript Programming Concepts
-#### In this module you will learn about the different types of JavaScript loops (for, for/in, while and do/while loops) and their correct syntax. You will learn about JavaScript arrays which are objects used to store multiple values in a single variable. You will also learn about the different types of 'falsy' values and 'truthy' values. Finally, you will learn about the main types of errors in JavaScript code and how to minimize these errors.
-### JavaScript Programming Concepts - Learning Outcomes
-### Conditional Logic In JavaScript
-### JavaScript Functions
-### JavaScript Array
-### Looping Statements In JavaScript
-### Understanding Function Versus Global Scope
-### JavaScript Programming Concepts - Lesson Summary
-## MODULE 9 JavaScript And The Document Object Model
-#### In this module you will be introduced to the concept of the Document Object Model and how you can add greater functionality to your web pages using jQuery plugins. When a web page is loaded, the browser creates a Document Object Model (DOM) of the page. The HTML DOM model is constructed as a tree of objects and JavaScript can interact with elements in the DOM to add much greater functionality and interactivity to web pages.
-### JavaScript And The Document Object Model - Learning Outcomes
-### Working With External JavaScript Files
-### Organizing And Simplifying JavaScript With Object
-### Understanding The Document Object Model
-### JavaScript And The Document Object Model - Lesson Summary
-## MODULE 10 Introduction To JQuery
-#### In this module you will learn about jQuery which is the most popular JavaScript library in use today. You will learn how jQuery's syntax is designed to make it easier to navigate a document, select DOM elements, create animations, handle events, and develop Ajax applications. You will learn about jQuery plug-ins which are available on the Web and cover a range of functions such as drag and drop, dynamic lists, events and many others. You will learn how to link your web pages to a jQuery plugin.
-### Introduction To JQuery - Learning Outcomes
-### Getting Started With JQuery
-### JQuery Selectors
-### JQuery Events
-### Installing And Utilizing JQuery Plugins
-### Unobtrusive JavaScript
-### Using JQuery To Retrieve JSON Via AJAX
-### Fundamentals Of JavaScript Closures
-### Series Wrap-Up
-### Introduction To JQuery - Lesson Summary  
   
 ## Footer
   
