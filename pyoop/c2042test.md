@@ -306,4 +306,57 @@ Configuration Mode
 
 
 
+
+To configure any protocol/packet for priority, the router must first know what is to be matched. What configuration command will tell the router what to match?
+NBAR
+Service-policy
+Policy-map
+Class-map м
+
+
+The router that was ACTIVE in an HSRP group failed, and then the role of ACTIVE moved to what was the STANDBY router. When the original router comes back online it will not retake the role of ACTIVE, unless you've configured what?
+Standby IP
+Standby refresh
+Standby preempt м
+Standby priority
+
+What do VLANs create?
+WAN connections
+Collision domains
+Broadcast domains м
+Subnets
+
+
+What type of Switchport will carry all tagged VLAN traffic by default?
+Serial
+Routed
+Trunk м
+Access
+
+Which of the following is a packet marking?
+FTP
+DSCP м
+MPLS
+HTTP
+
+What configuration construct is used to set the marking and priority of packets matched by a class-map?
+DSCP м
+Policy-map
+Service-policy
+ToS
+
+At what layer of the OSI is the use of FHRP going to provide redundancy?
+Layer 1
+Layer 2
+Layer 3 м
+Layer 4
+
+What must be configured for a router to take the "ACTIVE" role in an HSRP standby group? Specifically, what setting allows you to choose the router to be ACTIVE?
+Standby group priority м
+Track interface
+Standby group number
+Standby group IP
+
+
 ```
+
