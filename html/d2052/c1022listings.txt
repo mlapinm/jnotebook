@@ -1,0 +1,32 @@
+
+
+
+
+test = {
+  "number": [],
+  "type": [],
+  "asks": [],
+  "responses":[],
+  "variants": []
+}
+
+
+==================
+
+test = {
+  "type": [],
+  "asks": [
+    "What does 'check out' mean in the sentence:",
+    "Check out the Blue Frog or the space-age Pod restaurant..."
+  ],
+  "responses":[
+    "Try or investigate"
+  ],
+  "variants": [
+    "Avoid",
+    "Pay by cheque",
+    "Try or investigate",
+    "Cross off"
+  ]
+}
+

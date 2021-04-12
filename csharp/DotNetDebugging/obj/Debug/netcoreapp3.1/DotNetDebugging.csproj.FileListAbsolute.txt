@@ -1,0 +1,13 @@
+D:\mailCloud\prjother\089hosts\jnotebook\csharp\DotNetDebugging\bin\Debug\netcoreapp3.1\DotNetDebugging.exe
+D:\mailCloud\prjother\089hosts\jnotebook\csharp\DotNetDebugging\bin\Debug\netcoreapp3.1\DotNetDebugging.deps.json
+D:\mailCloud\prjother\089hosts\jnotebook\csharp\DotNetDebugging\bin\Debug\netcoreapp3.1\DotNetDebugging.runtimeconfig.json
+D:\mailCloud\prjother\089hosts\jnotebook\csharp\DotNetDebugging\bin\Debug\netcoreapp3.1\DotNetDebugging.runtimeconfig.dev.json
+D:\mailCloud\prjother\089hosts\jnotebook\csharp\DotNetDebugging\bin\Debug\netcoreapp3.1\DotNetDebugging.dll
+D:\mailCloud\prjother\089hosts\jnotebook\csharp\DotNetDebugging\bin\Debug\netcoreapp3.1\DotNetDebugging.pdb
+D:\mailCloud\prjother\089hosts\jnotebook\csharp\DotNetDebugging\obj\Debug\netcoreapp3.1\DotNetDebugging.csprojAssemblyReference.cache
+D:\mailCloud\prjother\089hosts\jnotebook\csharp\DotNetDebugging\obj\Debug\netcoreapp3.1\DotNetDebugging.AssemblyInfoInputs.cache
+D:\mailCloud\prjother\089hosts\jnotebook\csharp\DotNetDebugging\obj\Debug\netcoreapp3.1\DotNetDebugging.AssemblyInfo.cs
+D:\mailCloud\prjother\089hosts\jnotebook\csharp\DotNetDebugging\obj\Debug\netcoreapp3.1\DotNetDebugging.csproj.CoreCompileInputs.cache
+D:\mailCloud\prjother\089hosts\jnotebook\csharp\DotNetDebugging\obj\Debug\netcoreapp3.1\DotNetDebugging.dll
+D:\mailCloud\prjother\089hosts\jnotebook\csharp\DotNetDebugging\obj\Debug\netcoreapp3.1\DotNetDebugging.pdb
+D:\mailCloud\prjother\089hosts\jnotebook\csharp\DotNetDebugging\obj\Debug\netcoreapp3.1\DotNetDebugging.genruntimeconfig.cache

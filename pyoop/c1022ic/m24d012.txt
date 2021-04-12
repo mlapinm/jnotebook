@@ -1,0 +1,75 @@
+
+
+HQ(config)#int f1/0
+HQ(config-if)#ip addr
+HQ(config-if)#ip address 172.16.5.2 255.255.255.252
+HQ(config-if)#no sh
+
+
+BranchA(config)#int f0/0
+BranchA(config-if)#ip address 172.16.4.2 255.255.255.252
+BranchA(config-if)#no sh
+
+Branch(config)#int f1/0
+Branch(config-if)#ip address 172.16.4.1 255.255.255.252
+Branch(config-if)#no sh
+
+
+HQ(config)#router ospf 50
+HQ(config-router)#network 192.168.1.0 0.0.0.255 area 0
+HQ(config-router)#network 209.165.201.0 0.0.0.255 area 0
+HQ(config-router)#network 172.16.5.0 0.0.0.255 area 0
+
+
+Branch(config-router)#router ospf 50
+Branch(config-router)#network 10.1.0.0 0.0.255.255 area 51
+Branch(config-router)#network 209.165.201.0 0.0.0.255 area 0
+Branch(config-router)#network 172.16.4.0 0.0.0.255 area 0
+
+Branch(config-router)#do sh ospf nei
+
+Branch(config-router)#do sh ip rout
+
+no network 172.16.0.0 0.0.255.255 area 1
+
+deb ip os adj
+OSPF adjacency events
+
+BranchA(config-router)#network 172.16.0.0 0.0.3.255 area 1
+
+
+BranchA(config)#int loopback 0
+BranchA(config-if)#ip address 172.16.1.1 255.255.255.0
+BranchA(config-if)#int loopback 1
+BranchA(config-if)#ip address 172.16.2.1 255.255.255.0
+BranchA(config-if)#int loopback 2
+BranchA(config-if)#ip address 172.16.3.1 255.255.255.0
+
+
+
+BranchA(config)#router ospf 50
+BranchA(config-router)#network 172.16.4.2 0.0.0.0 area 0
+BranchA(config-router)#network 172.16.5.1 0.0.0.0 area 0
+
+BranchA(config-router)#do sh ip osp int
+
+
+BranchA(config)#line console 0
+BranchA(config-line)#logging synchronous 
+
+Branch#sh ip route 
+
+Branch#sh ip int f0/0.10
+
+
+pc1
+C:\>ping 192.168.1.100
+C:\>ping 172.16.2.1
+
+
+
+
+
+
+
+

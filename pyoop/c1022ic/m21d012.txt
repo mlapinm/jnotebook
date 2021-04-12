@@ -1,0 +1,72 @@
+
+
+Branch(config-subif)#int f0/0
+Branch(config-if)#no sh
+Branch(config-if)#no shutdown 
+
+
+Branch(config-subif)#int f0/0.1
+Branch(config-subif)#encapsulation dot1Q 1
+Branch(config-subif)#ip add
+Branch(config-subif)#ip address 10.1.1.1 255.255.255.0
+Branch(config-subif)#int f0/0.10
+Branch(config-subif)#encapsulation dot1Q 10
+Branch(config-subif)#ip address 10.1.10.1 255.255.255.0
+Branch(config-subif)#int f0/0.20
+Branch(config-subif)#encapsulation dot1Q 20
+Branch(config-subif)#ip address 10.1.20.1 255.255.255.0
+
+
+SW1(config)#vlan 10 
+SW1(config-vlan)#name PC1
+SW1(config-vlan)#ex
+SW1(config)#int f0/1
+SW1(config-if)#sw mode access 
+SW1(config-if)#sw access vlan 10
+SW1(config-if)#ex
+
+SW1#show vlan 
+
+SW1(config)#int f0/3
+SW1(config-if)#sw mode trunk 
+
+SW1#show interfaces f0/3 sw
+
+SW1(config)#int f0/2
+SW1(config-if)#sw mode trunk 
+
+SW2(config)#int f0/1
+SW2(config-vlan)#name PC2
+
+SW2(config)#int f0/1
+SW2(config-if)#switchport mode access 
+SW2(config-if)#switchport access vlan 20
+
+SW1(config)#vlan 20
+SW1(config-vlan)#name PC2
+
+
+HQ(config)#int f0/0
+HQ(config-if)#ip address 192.168.1.1 255.255.255.0
+HQ(config-if)#no shutdown 
+
+
+HQ(config-if)#int f0/1
+HQ(config-if)#ip address 209.165.201.2 255.255.255.252
+HQ(config-if)#no shutdown 
+
+Branch(config)#int f0/1
+Branch(config-if)#ip address 209.165.201.1 255.255.255.252
+Branch(config-if)#no sh
+
+
+
+
+
+
+
+
+
+====
+
+m14f01.txt

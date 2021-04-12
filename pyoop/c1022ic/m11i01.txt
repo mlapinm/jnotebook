@@ -1,0 +1,80 @@
+
+PAgP
+
+Router(config-if)#no ip address
+
+
+Router#show ip interface brief 
+
+Router(config)#int f0/1
+Router(config-if)#do sh ip int br
+Router(config-if)#shutdown 
+Router(config-if)#do sh ip int br
+
+
+Router(config)#int f0/0
+Router(config-if)#ip address 10.1.1.1 255.255.255.0
+Router(config-if)#no sh
+Router(config-if)#no shutdown 
+Router(config-if)#do sh ip int br
+Interface              IP-Address      OK? Method Status                Protocol 
+FastEthernet0/0        10.1.1.1        YES manual up                    up 
+
+
+Router(config)#int f0/0
+Router(config-if)#ip address 10.2.2.1 255.255.255.0
+Router(config-if)#no shutdown 
+Router(config-if)#do sh ip int br
+
+
+Router#conf t
+Router(config)#line console 0
+Router(config-line)#loggin synchronous 
+Router(config-line)#exec-timeout 60
+Router(config-line)#exi
+Router(config)#no ip domain-lookup 
+Router(config)#exi
+Router#write memory 
+
+Router#show clock 
+*0:51:48.402 UTC Mon Mar 1 1993
+Router#clock set 07:46:00 Mar 20 2021
+Router#show clock 
+7:46:6.16 UTC Sat Mar 20 2021
+
+## HQ
+f0/1
+ip address 209.165.201.2 255.255.255.224
+
+ip route 10.1.1.0 255.255.255.0 209.165.201.1
+
+255 254 252 248 240 224 1111 0000
+
+Branch(config)#int f0/1
+Branch(config-if)#do sh ip int bri
+Branch(config-if)#ip address 209.165.201.1 255.255.255.224
+Branch(config-if)#do sh ip int bri
+
+
+HQ(config-if)#ip address 209.165.201.2 255.255.255.224
+HQ(config-if)#no sh
+HQ(config-if)#do sh ip int bri
+FastEthernet0/1        209.165.201.2   YES manual up                    up 
+
+Branch(config)#ip route 0.0.0.0 0.0.0.0 209.165.201.2
+
+ip route 0.0.0.0 0.0.0.0 209.165.201.1
+
+Branch#show ip route 
+
+C:\>tracert 10.2.2.100
+
+Tracing route to 10.2.2.100 over a maximum of 30 hops: 
+
+  1   0 ms      0 ms      0 ms      10.1.1.1
+  2   0 ms      0 ms      0 ms      209.165.201.2
+  3   0 ms      0 ms      0 ms      10.2.2.100
+
+Trace complete.
+
+ 

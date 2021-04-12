@@ -1,0 +1,15 @@
+
+
+
+//R1(config-if)#frame-relay map ip 10.100.100.2 102 broadcast 
+//R2(config-if)#frame-relay map ip 10.100.100.3 203 broadcast 
+//R3(config-if)#frame-relay map ip 10.100.100.1 301 broadcast 
+
+R2#show frame-relay map 
+
+
+===
+
+https://www.youtube.com/watch?v=hgYTS1BmHo0&list=PL113F286C864FEB90&index=64
+
+

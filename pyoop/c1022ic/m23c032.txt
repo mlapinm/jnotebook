@@ -1,0 +1,26 @@
+
+
+Branch(config)#router ospf 50
+Branch(config-router)#network 10.1.0.0 0.0.255.255 area 0
+Branch(config-router)#network 209.165.0.0 0.0.255.255 area 0
+Branch(config-router)#do sh ip prot
+
+
+HQ(config)#router ospf 50
+HQ(config-router)#network 209.165.0.0 0.0.255.255 area 0
+HQ(config-router)#network 192.168.1.0 0.0.0.255 area 0
+
+
+HQ#sh ip route
+HQ#sh ip ospf neighbor 
+HQ#sh ip ospf database 
+
+HQ(config)#router ospf 50
+HQ(config-router)#distance 80
+
+HQ#sh ip route
+HQ#sh ip eigrp topology 
+
+
+
+

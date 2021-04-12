@@ -1,0 +1,66 @@
+
+unicast-routing
+branch
+f0/0.10
+2001:10::1/64
+f0/1
+2001:2::1/64
+f1/0
+2001:3::1/64
+hq
+f0/0
+2001:192::1/64
+f0/1
+2001:2::2/64
+f1/0
+2001:4::2/64
+branchA
+f0/0
+2001:3::2/64
+f0/1
+2001:4::1/64
+pc1
+2001:10::100/64
+server
+2001:192::100/64
+
+
+Branch(config)#ipv6 router ospf 1
+Branch(config-rtr)#router-id 1.1.1.1
+
+Branch(config-subif)#int f0/0.10
+Branch(config-subif)#ipv6 ospf 1 area 0
+Branch(config-subif)#int f0/0.20
+Branch(config-subif)#ipv6 ospf 1 area 0
+Branch(config-subif)#int f0/1
+Branch(config-if)#ipv6 ospf 1 area 0
+Branch(config-if)#int f1/0
+Branch(config-if)#ipv6 ospf 1 area 0
+
+
+BranchA(config)#ipv6 router ospf 1
+BranchA(config-rtr)#router-id 2.2.2.2
+
+BranchA(config-rtr)#int f0/0
+BranchA(config-if-range)#ipv6 ospf 1 area 0
+BranchA(config-rtr)#int f0/1
+BranchA(config-if-range)#ipv6 ospf 1 area 0
+
+BranchA#sh ipv6 ospf neighbor 
+
+HQ(config)#ipv6 router ospf 1
+HQ(config-rtr)#router-id 3.3.3.3
+
+HQ(config-rtr)#int f0/0
+HQ(config-if-range)#ipv6 ospf 1 area 0
+HQ(config-rtr)#int f0/1
+HQ(config-if-range)#ipv6 ospf 1 area 0
+HQ(config-rtr)#int f1/0
+HQ(config-if-range)#ipv6 ospf 1 area 0
+
+
+C:\>ping 2001:192::100
+
+
+
+

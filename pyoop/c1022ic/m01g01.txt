@@ -1,0 +1,141 @@
+
+Exit config: Ctrl-Z, end
+
+D:\mailCloud\prjother\089hosts\jnotebook\linx\savesCcna\saves  
+
+D:\mailCloud\prjother\089hosts\jnotebook\pyoop\c1022ic  
+
+m01g02
+
+enable disable
+logout
+[enter]
+erase sturtup-config
+
+## switch0
+Switch>enable 
+Switch#erase startup-config 
+Erasing the nvram filesystem will remove all configuration files! Continue? [confirm]
+[OK]
+Erase of nvram: complete
+%SYS-7-NV_BLOCK_INIT: Initialized the geometry of nvram
+Switch#
+Switch#delete vlan.dat
+Delete filename [vlan.dat]?
+Delete flash:/vlan.dat? [confirm]
+%Error deleting flash:/vlan.dat (No such file or directory)
+reload
+
+## switch0
+enable
+
+erase startup-config
+delete vlan.dat
+reload
+
+Switch>en
+Switch#show startup-config 
+startup-config is not present
+Switch#show version 
+Cisco IOS Software, C2960 Software (C2960-LANBASE-M), Version 12.2(25)FX, RELEASE SOFTWARE (fc1)
+
+Switch#show flash: 
+Directory of flash:/
+
+    1  -rw-     4414921          <no date>  c2960-lanbase-mz.122-25.FX.bin
+
+64016384 bytes total (59601463 bytes free)
+
+## switch name and host address
+Switch#configure terminal 
+Enter configuration commands, one per line.  End with CNTL/Z.
+Switch(config)#
+
+Switch(config)#hostname SW1
+SW1(config)#
+
+int vlan 1
+
+SW1(config-if)#ip address 10.1.1.11 255.255.255.0
+
+SW1(config-if)#no shutdown 
+
+SW1(config-if)#
+%LINK-5-CHANGED: Interface Vlan1, changed state to up
+
+## PC0
+10.1.1.100
+255.255.255.0
+
+ping 10.1.1.11
+
+C:\>ping 10.1.1.11
+
+Pinging 10.1.1.11 with 32 bytes of data:
+
+Reply from 10.1.1.11: bytes=32 time<1ms TTL=255
+
+## SW2
+
+conf t 
+int vlan 1
+ip address 10.1.1.11 255.255.255.0
+no shutdown 
+
+Switch(config-if)#ex
+Switch(config)#hostname SW2
+
+SW1#show clock 
+*0:56:31.535 UTC Mon Mar 1 1993
+
+SW1#clock set 16:34:00 19 March 2021
+SW1#show clock 
+16:34:3.854 UTC Fri Mar 19 2021
+
+
+SW2#show terminal
+History is enabled, history size is 10.
+
+
+
+
+
+SW2#configure t
+SW2(config)#line console 0
+SW2(config-line)#history size 100
+SW2#show terminal
+
+SW2(config)#no ip domain-lookup 
+
+SW2(config)#line console 0
+SW2(config-line)#exec-timeout 60
+
+SW2(config-line)#logging synchronous 
+
+## to save work
+SW2#copy running-config startup-config 
+Destination filename [startup-config]? 
+Building configuration...
+[OK]
+
+SW2#write 
+Building configuration...
+[OK]
+
+SW1>en
+SW1#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+SW1(config)#line console 0
+SW1(config-line)#logging synchronous 
+SW1(config-line)#exec-timeout 60
+SW1(config-line)#history size 100
+SW1(config-line)#end
+SW1#
+%SYS-5-CONFIG_I: Configured from console by console
+
+SW1#copy run start
+Destination filename [startup-config]? 
+Building configuration...
+[OK]
+SW1#
+

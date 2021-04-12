@@ -1,0 +1,20 @@
+
+SW1#show ip interface brief 
+SW1#show running-config 
+
+
+
+
+SW1#configure t
+SW1(config)#interface f0/1
+SW1(config-if)#shutdown 
+ 
+SW1(config-if)#no shutdown 
+
+## Router0
+
+
+Router#sh ip int bri
+Router(config-if)#ip address 10.1.1.1 255.255.255.0
+Router(config-if)#no sh
+

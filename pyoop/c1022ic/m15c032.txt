@@ -1,0 +1,63 @@
+
+
+2001:DB9:1::/64
+2001:DB9:2::/64
+2001:DB9:3::/64
+
+
+2001:DB9:1::9
+2001:DB9:1::1
+
+2001:DB9:3::9
+2001:DB9:3::1
+
+
+R0(config)#ipv6 unicast-routing 
+R0(config)#int g0/0
+R0(config-if)#ipv6 address 2001:DB9:1::1/64
+R0(config-if)#int g0/1
+R0(config-if)#ipv6 address 2001:DB9:2::1/64
+
+R0(config-if)#do sh ipv6 int br
+
+
+R1(config)#ipv6 unicast-routing 
+R1(config)#int g0/0
+R1(config-if)#ipv6 add
+R1(config-if)#ipv6 address 2001:DB9:3::1/64
+R1(config-if)#int g0/1
+R1(config-if)#ipv6 address 2001:DB9:2::2/64
+R1(config-if)#do sh ipv6 int br
+
+R0(config)#ipv6 route 2001:DB9:3::/64 g0/1 2001:DB9:2::2
+
+R0#sh ipv6 route
+
+R1(config)#ipv6 route 2001:DB9:1::/64 g0/1 2001:DB9:2::1
+
+R1#sh ipv6 route 
+
+C:\>ping 2001:DB9:3::9
+
+http://2001:DB9:3::9
+
+R0(config)#ipv6 access-list BLOCK_WEB
+
+
+R0(config-ipv6-acl)#deny tcp host 2001:DB9:1::9 host 2001:DB9:3::9 eq 80
+R0(config-ipv6-acl)#permit ipv6 any any
+R0#show ipv6 access-list BLOCK_WEB
+
+R0(config)#int g0/1
+R0(config-if)#ipv6 traffic-filter BLOCK_WEB out
+
+http://2001:DB9:3::9
+
+R0#sh ipv6 access-list 
+
+
+
+
+
+
+

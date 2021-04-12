@@ -1,0 +1,156 @@
+
+
+
+SW1#sh vlan
+VLAN Name                             Status    Ports
+---- -------------------------------- --------- -------------------------------
+1    default                          active    Fa0/1, Fa0/2, Fa0/3, Fa0/4
+
+SW1#conf t
+SW1(config)#vlan 10
+SW1(config-vlan)#name PC1
+
+SW1(config-if)#do sh vlan
+
+VLAN Name                             Status    Ports
+---- -------------------------------- --------- -------------------------------
+1    default                          active    Fa0/2, Fa0/3, 
+
+10   PC1                              active    Fa0/1
+
+SW2
+
+vlan 10
+
+name PC1
+exit
+int f0/1
+sw mod acc
+sw access vlan 10
+exit
+exit
+show vlan
+
+10   PC1                              active    Fa0/1
+
+SW2#sh int f0/2 sw
+Name: Fa0/2
+Switchport: Enabled
+Administrative Mode: dynamic auto
+
+Operational Mode: static access
+
+Administrative Trunking Encapsulation: dot1q
+Operational Trunking Encapsulation: native
+Negotiation of Trunking: On
+Access Mode VLAN: 1 (default)
+Trunking Native Mode VLAN: 1 (default)
+
+Trunking VLANs Enabled: All
+
+SW1(config)#int f0/2
+SW1(config-if)#switch mode trunk
+
+SW1(config-if)#do sh int f0/2 switch
+Name: Fa0/2
+Switchport: Enabled
+Administrative Mode: trunk
+
+Operational Mode: trunk
+
+Administrative Trunking Encapsulation: dot1q
+Operational Trunking Encapsulation: dot1q
+Negotiation of Trunking: On
+Access Mode VLAN: 1 (default)
+
+Trunking VLANs Enabled: All
+
+SW2
+int f0/2
+switch mode trunk
+do sh int f0/2 switch
+
+m14f012.pkt
+
+SW2(config)#vlan 20
+SW2(config-vlan)#name PC2
+SW2(config-vlan)#do sh vlan
+
+SW2(config-vlan)#ex
+SW2(config)#int f0/1
+SW2(config-if)#switch access vlan 20
+
+10   PC1                              active    
+20   PC2                              active    Fa0/1
+
+wr
+
+Branch#sh ip int brief
+Branch#sh running-config 
+
+SW1#sh cdp neighbors
+
+SW1(config)#vlan 20
+SW1(config-vlan)#name PC2
+
+SW1(config)#int f0/3
+SW1(config-if)#switchport mode trunk 
+SW1(config-if)#switchport trunk allowed vlan 1,10,20
+
+Branch#sho int f0/0
+  Internet address is 10.1.1.1/24
+
+Branch(config)#int f0/0
+Branch(config-if)#no ip address 10.1.1.1 255.255.255.0
+
+Branch(config-if)#int f0/0.1
+Branch(config-subif)#encapsulation dot1Q 1
+Branch(config-subif)#ip address 10.1.1.1 255.255.255.0
+
+Branch(config-subif)#int f0/0.10
+Branch(config-subif)#encapsulation dot1Q 10
+Branch(config-subif)#ip address 10.1.10.1 255.255.255.0
+Branch(config-subif)#int f0/0.20
+Branch(config-subif)#encapsulation dot1Q 20
+Branch(config-subif)#ip address 10.1.20.1 255.255.255.0
+
+m14f02.pkt
+
+Branch(config)#ip dhcp pool VLAN10
+Branch(dhcp-config)#network 10.1.10.0 255.255.255.0
+Branch(dhcp-config)#default-router 10.1.10.1
+Branch(dhcp-config)#
+
+Branch(dhcp-config)#dns-server 10.1.10.1
+
+Branch(dhcp-config)#ex
+Branch(config)#ip dhcp excluded-address 10.1.10.1 10.1.10.99
+
+
+
+Branch(config)#ip dhcp pool VLAN20
+Branch(dhcp-config)#network 10.1.20.0 255.255.255.0
+Branch(dhcp-config)#default-router 10.1.20.1
+Branch(dhcp-config)#dns-server 10.1.20.1
+Branch(dhcp-config)#exi
+Branch(config)#ip dhcp excluded-address 10.1.20.1 10.1.20.99
+
+do wr
+
+Branch#sh ip dhcp binding 
+
+Branch(config)#ip route 0.0.0.0 0.0.0.0 209.165.201.2 
+
+HQ(config)#ip route 10.1.10.0 255.255.255.0 209.165.201.1
+HQ(config)#ip route 10.1.20.0 255.255.255.0 209.165.201.1
+
+m14f022.pkt
+
+Branch(config)#no ip dhcp pool VLAN10
+Branch(config)#no ip dhcp pool VLAN20
+
+Branch(config)#int f0/0.1
+Branch(config-subif)#ip helper-address 10.2.2.200
+
+
+

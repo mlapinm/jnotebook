@@ -1,0 +1,45 @@
+
+
+
+R1(config)#int f0/1
+R1(config-if)#ip address 10.0.0.1 255.255.255.0
+R1(config-if)#no sh
+
+R1(config)#int f0/0
+R1(config-if)#ip address 10.1.0.1 255.255.255.0
+R1(config-if)#no sh
+
+R0(config)#int f0/0
+R0(config-if)#ip address 10.1.0.2 255.255.255.0
+R0(config-if)#no sh
+
+R0(config)#int f0/1
+R0(config-if)#ip address 10.2.0.1 255.255.255.0
+R0(config-if)#no sh
+
+Tunnel0:10.10.0.1/24
+Tunnel0:10.10.0.2/24
+
+
+R1(config)#int tunnel 0
+R1(config-if)#ip address 10.10.0.1 255.255.255.0
+R1(config-if)#tunnel source f0/0 
+R1(config-if)#tunnel destination 10.1.0.2
+
+
+R0(config)#int tunnel 0
+R0(config-if)#ip address 10.10.0.2 255.255.255.0
+R0(config-if)#tunnel source f0/0
+R0(config-if)#tunnel destination 10.1.0.1 
+
+
+R1(config)#ip route 10.2.0.0 255.255.255.0 10.10.0.2
+R0(config)#ip route 10.0.0.0 255.255.255.0 10.10.0.1
+
+C:\>ping 10.2.0.2
+
+R1(config-if)#tunnel mode gre ip
+
+R0(config)#int tunnel 0
+R0(config-if)#tunnel mode gre ip
+

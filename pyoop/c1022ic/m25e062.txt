@@ -1,0 +1,43 @@
+
+
+
+R0(config)#vpdn enable 
+R0(config)#vpdn-group mygroup
+R0(config-vpdn)#accept-dialin 
+
+
+R0(config)#vpdn enable 
+R0(config)#vpdn-group mygroup
+R0(config-vpdn)#accept-dialin 
+R0(config-vpdn-acc-in)#protocol pppoe 
+% This command is not supported by Packet Tracer.
+
+
+
+R0(config-vpdn-acc-in)#virtual-template 1
+% PPPoE config from vpdn-group is converted to pppoe-profile based config.
+% Continue PPPoE configuration under 'bba-group pppoe global'
+R0(config-vpdn-acc-in)#
+
+R0(config)#int virtual-Template 1
+R0(config-if)#ip unnumbered f0/0
+R0(config-if)#peer default ip address pool mypool
+
+R0(config-if)#ppp authentication chap 
+??
+
+R0(config)#int f0/0
+R0(config-if)#pppoe enable 
+
+
+R0(config)#int f0/0
+R0(config-if)#ip address 1.1.1.1 255.0.0.0
+
+R0(config)#ip local pool mypool 10.1.1.1 10.1.1.10
+R0(config)#username c password 0 c
+
+
+
+
+
+

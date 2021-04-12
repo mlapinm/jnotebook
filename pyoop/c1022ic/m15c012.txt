@@ -1,0 +1,82 @@
+
+
+BranchA(config)#do sh ipv6 int brief
+BranchA(config)#ipv6 unicast-routing 
+
+
+BranchA(config-if)#int f0/1
+BranchA(config-if)#ipv6 address autoconfig 
+
+FE80::203:E4FF:FE84:2502
+FE80:0000:0000:0000:0203:E4FF:FE84:2502
+16*8 = 128
+FE80::203:E4               FF:FE84:2502
+
+BranchA(config-if)#no ipv6 address autoconfig 
+BranchA(config-if)#no ipv6 address
+BranchA(config-if)#do sh ipv6 int brief
+
+BranchA(config-if)#int f1/0
+BranchA(config-if)#ipv6 addr
+BranchA(config-if)#ipv6 address 2001:0011::1/64
+BranchA(config-if)#do sh ipv6 int brief
+
+FastEthernet1/0            [up/up]
+    FE80::201:42FF:FEE4:5A01
+    2001:11::1
+
+BranchA(config-if)#int f0/1
+BranchA(config-if)#ipv6 address 2001:0015::1/64
+BranchA(config-if)#int f1/1
+BranchA(config-if)#ipv6 address 2001:0014::1/64
+
+BranchA(config-if)#int f0/0.1
+BranchA(config-subif)#ipv6 addr 2001:0001::1/64
+BranchA(config-subif)#int f0/0.10
+BranchA(config-subif)#ipv6 addr 2001:0010::1/64
+BranchA(config-subif)#int f0/0.20
+BranchA(config-subif)#ipv6 addr 2001:0020::1/64
+
+BranchB(config)#ipv6 unicast-routing 
+BranchB(config)#int f1/0
+BranchB(config-if)#ipv6 address 2001:11::2/64
+
+BranchB(config)#do ping ipv6 2001:11::1
+
+BranchB(config)#int f1/1
+BranchB(config-if)#ipv6 address 2001:12::2/64
+BranchB(config-if)#int f0/1
+BranchB(config-if)#ipv6 address 2001:3::1/64
+BranchB(config-if)#do wr
+BranchB(config-if)#do sh ipv6 int br
+
+
+BranchC(config)#ipv6 unicast-routing 
+BranchC(config)#int f1/0
+BranchC(config-if)#ipv6 add
+BranchC(config-if)#ipv6 address 2001:14::2/64
+
+BranchC(config-if)#int f1/1
+BranchC(config-if)#ipv6 address 2001:13::1/64
+BranchC(config-if)#int f0/0
+BranchC(config-if)#ipv6 address 2001:4::1/64
+
+
+HQ(config)#ipv6 unicast-routing 
+HQ(config)#int f1/0
+HQ(config-if)#ipv6 address 2001:12::1/64
+HQ(config-if)#do ping ipv6 2001:12::2
+HQ(config-if)#int f1/1
+HQ(config-if)#ipv6 address 2001:13::2/64
+HQ(config-if)#do ping ipv6 2001:13::1
+HQ(config-if)#int f0/1
+HQ(config-if)#ipv6 address 2001:15::2/64
+HQ(config-if)#int f0/0
+HQ(config-if)#ipv6 address 2001:2::1/64
+
+
+
+
+
+
+

@@ -1,0 +1,84 @@
+
+BranchA(config)#line console 0
+BranchA(config-line)#logging synchronous 
+
+
+BranchA(config-if)#int s0/0/0
+BranchA(config-if)#ip address 172.16.4.2 255.255.255.252
+BranchA(config-if)#ip address 172.16.4.2 255.255.255.255
+Bad mask /32 for address 172.16.4.2
+BranchA(config-if)#ip address 172.16.4.2 255.255.255.0
+BranchA(config-if)#int s0/0/1
+BranchA(config-if)#ip address 172.16.5.1 255.255.255.0
+
+
+
+HQ(config)#int f1/0
+HQ(config-if)#no ip address 
+
+HQ(config-if)#int s0/0/0
+HQ(config-if)#ip address 172.16.5.2 255.255.255.0
+
+Branch(config-if)#int s0/0/0
+Branch(config-if)#ip address 172.16.4.1 255.255.255.0
+
+
+Branch(config-if)#do sh cont s0/0/0
+Interface Serial0/0/0
+Hardware is PowerQUICC MPC860
+DCE V.35, clock rate 2000000
+
+BranchA#sh cont
+BranchA#sh controllers s0/0/0
+Interface Serial0/0/0
+Hardware is PowerQUICC MPC860
+DCE V.35, clock rate 2000000
+
+BranchA>en
+BranchA#sh cont s0/0/0
+Interface Serial0/0/0
+Hardware is PowerQUICC MPC860
+DTE V.35 TX and RX clocks detected
+
+Branch(config-if)#clock rate 64000
+This command applies only to DCE interfaces
+
+HQ(config-if)#clock rate 64000
+
+BranchA#sh ip ospf neighbor 
+
+HQ(config-if)#do sh int s0/0/0
+
+--------
+
+ppp
+
+HQ(config)#int s0/0/0
+HQ(config-if)#encapsulation ppp
+HQ(config-if)#do sh ip int br
+
+Branch(config)#int s0/0/0
+Branch(config-if)#encapsulation ppp
+Branch(config-if)#do sh ip int br
+
+BranchA(config)#int s0/0/0
+BranchA(config-if)#enc ppp
+BranchA(config-if)#int s0/0/1
+BranchA(config-if)#enc ppp
+BranchA(config-if)#do sh ip int br
+
+
+BranchA(config)#username Branch password cisco
+
+BranchA(config)#int s0/0/0
+BranchA(config-if)#ppp authentication chap 
+
+Branch(config-if)#ppp authentication chap 
+
+
+Branch(config)#username BranchA password cisco
+
+
+
+
+

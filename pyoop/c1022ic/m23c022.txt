@@ -1,0 +1,19 @@
+
+
+Branch#sh ip eigrp interfaces 
+
+
+Branch#debug eigrp packets 
+Branch#u all
+
+Branch(config-router)#passive-interface f0/1
+
+Branch(config-router)#no passive-interface f0/1
+
+
+
+
+
+
+
+

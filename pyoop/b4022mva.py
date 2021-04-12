@@ -1,30 +1,20 @@
-first_value = '  FIRST challenge         '
 
-print(f"{first_value.strip().capitalize():^35}")
-#       First Challenge        
+import b4023mva as processor
 
-second_value = '-  second challenge  -'
+my_list = [5, 'Dan', '4', 7, 'Steve', 'Amy', 'Rhonda', 4, '9', 'Jill', 7, 'Kim']
+my_bad_list = 5
 
-print(second_value.replace('-', ' ').strip().capitalize())
-# Second challenge
+numbers = processor.process_numbers(my_list)
+# numbers = processor.process_numbers(my_list)
+print(numbers)
 
-print(first_value.strip().lower().replace("first", "second").capitalize().rjust(30))
-#               Second challenge
+names = processor.process_names(my_list)
+print(names)
 
-fourth_value = 'fourth'
-fifth_value = 'fifth'
-sixth_value = 'sixth'
-print(fourth_value, fifth_value, sixth_value, sep = '#')
-# fourth#fifth#sixth
-print()
+numbers = processor.process_numbers(my_bad_list)
+print(numbers)
 
-print("    ", fourth_value)
-print("    ", fifth_value)
-print("    ", sixth_value)
-#      fourth
-#      fifth
-#      sixth
-
-
+names = processor.process_names(my_bad_list)
+print(names)
 
 

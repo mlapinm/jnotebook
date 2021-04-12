@@ -668,7 +668,135 @@ Use the C# Windows Presentation Foundation application for event-driven programm
 
 ```
 ### Enumerations And The Switch Decision Statement
+
+```
+      Console.WriteLine("Type in a super hero's name to see his hickname:");
+      string userValue = "superman";
+      Console.WriteLine(userValue);
+      switch(userValue.ToUpper()){
+        case "BATMAN":
+          Console.WriteLine("Caped Crusader");
+          break;
+        case "SUPERMAN":
+          Console.WriteLine("Man of Steel");
+          break;
+        case "GREENLANTERN":
+          Console.WriteLine("Emerald Knight");
+          break;
+        default:
+          Console.WriteLine("Does not compute");
+          break;
+      }
+
+```
+
+```
+      Console.WriteLine("ForegroundColor - " + Console.ForegroundColor);
+      Console.WriteLine("ForegroundColor number - " + (int)Console.ForegroundColor);
+      Console.BackgroundColor = ConsoleColor.Red;
+ 
+      string[] colors = Enum.GetNames(typeof( ConsoleColor));
+      Console.WriteLine("Count of colors - " + colors.Length);
+      int k = 0;
+      foreach(var color in colors){
+        Console.WriteLine($"{k++:d2} {color}");
+      }
+//ForegroundColor - Gray
+//ForegroundColor number -7
+//Count of colors - 16
+//00 Black
+//01 DarkBlue
+//02 DarkGreen
+//03 DarkCyan
+//04 DarkRed
+//05 DarkMagenta
+//06 DarkYellow
+//07 Gray
+//08 DarkGray
+//09 Blue
+//10 Green
+//11 Cyan
+//12 Red
+//13 Magenta
+//14 Yellow
+//15 White
+
+```
+
+```
+      SuperHero superHero = SuperHero.Superman;
+      Console.WriteLine(superHero + " - " + (int)superHero);
+
+
+```
+
+```
+
+      Console.WriteLine("Type in a superhero's name to see his nickname: ");
+      string userValue = "Superman";
+
+      SuperHero superHero;
+
+      if(Enum.TryParse<SuperHero>(userValue, true, out superHero)){
+        Console.WriteLine(superHero);
+        switch (superHero)
+        {
+          case SuperHero.Batman:
+            Console.WriteLine("Caped Crusader");
+            break;
+          case SuperHero.Superman:
+            Console.WriteLine("Man of Steel");
+            break;
+          case SuperHero.GreenLantern:
+            Console.WriteLine("Emerald Knight");
+            break;
+          default:
+            break;
+        }
+      }else{
+        Console.WriteLine("Does not compute");
+      }
+      Console.ReadLine();
+    }
+
+    enum SuperHero{
+      Batman,
+      Superman,
+      GreenLantern
+    }
+    // Type in a superhero's name to see his nickname:
+    // Superman
+    // Man of Steel
+
+```
+
+
 ### Gracefully Handling Exceptions
+```
+      string text = "";
+      try
+      {
+        StreamReader reader = new StreamReader("values1.txt");
+        string line = "";
+        while(line != null){
+           line = reader.ReadLine();
+           if(line != null){
+            text += line + "\n";
+           }
+          }
+
+      }catch(Exception e){
+          Console.WriteLine(e.Message);
+
+      }finally{
+        Console.WriteLine("finally");
+        // Perform any cleanup to roll back the data or close connections
+        // to files, database, network, etc.
+      }
+      Console.WriteLine(text);
+
+```
+
 ### C# Programming - Decision Statements And Handling Exceptions - Lesson Summary
 
 
@@ -676,17 +804,587 @@ Use the C# Windows Presentation Foundation application for event-driven programm
 In this module you will learn how to create and manage groups of related objects using collections. You will learn about Language-Integrated Query (LINQ) and how it offers a consistent model for working with data across various kinds of data sources and formats. You will learn how to use the C# WPF application and which parameters the AddHandler statement takes.  
 ### C# Programming - Collections And Event-Driven Programming - Learning Outcomes
 ### Working With Collections
+```
+      ArrayList arrayList = new ArrayList();
+      List<int> list = new List<int>();
+
+      arrayList.Add(1);
+      arrayList.Add("String");
+      foreach (var e in arrayList)
+      {
+        Console.WriteLine(e);
+      }
+      // 1
+      // String
+
+
+
+      Dictionary<string, int> dict = new Dictionary<string, int>();
+      dict.Add("first", 1);
+      dict.Add("cecond", 2);
+      Console.WriteLine(dict["first"]);
+      foreach(var e in dict){
+        Console.WriteLine(e.Key + " - " + e.Value);
+      }
+      //1
+      //first - 1
+      //second - 2
+
+      List<Car> cars = new List<Car>
+      {
+        new Car {Make = "OldMobile", Model = "Cutlas Supreme"},
+        new Car {Make = "Geo", Model = "Prism"},
+        new Car {Make = "Nissan", Model = "Altima"},
+      };
+
+      foreach (var e in cars){
+        Console.WriteLine(e.Format());
+      }
+      //OldMobile - Cutlas Supreme - 0 -
+      //Geo - Prism - 0 -
+      //Nissan - Altima - 0 -
+
+```
 ### Filtering And Managing Data Collections Using LINQ
+https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/working-with-linq  
+```
+            List<Car> myCars = new List<Car>() {
+                new Car() { Make="BMW", Model="550i", Color=CarColor.Blue, StickerPrice=55000, Year=2009 },
+                new Car() { Make="Toyota", Model="4Runner", Color=CarColor.White, StickerPrice=35000, Year=2010 },
+                new Car() { Make="BMW", Model="745li", Color=CarColor.Black, StickerPrice=75000, Year=2008 },
+                new Car() { Make="Ford", Model="Escape", Color=CarColor.White, StickerPrice=28000, Year=2008 },
+                new Car() { Make="BMW", Model="550i", Color=CarColor.Black, StickerPrice=57000, Year=2010 }
+            };
+
+
+      // We'll add code here!
+      /*
+            var bmws = from car in myCars
+                       where car.Make == "BMW"
+                       && car.Year == 2010
+                       //select car;
+                       select new { car.Make, car.Model, car.Year };
+      */
+      var orderedCars = from car in myCars
+                        orderby car.Year descending
+                        select car;
+
+
+            foreach (var car in orderedCars)
+            {
+                Console.WriteLine("{0} - {1} - {2}", car.Make, car.Model, car.Year);
+            }
+
+      //Toyota - 4Runner - 2010
+      //BMW - 550i - 2010
+      //BMW - 550i - 2009
+      //BMW - 745li - 2008
+      //Ford - Escape - 2008
+
+
+
+```
+
+```
+
+var _bmws = myCars.Where(p => p.Year == 2010).Where(p => p.Make == "BMW");
+
+      var _orderedCars = myCars.OrderByDescending(p => p.Year);
+
+      var sum = myCars.Sum(p => p.StickerPrice);
+
+
+```
+
 ### Understanding Event-Driven Programming
+https://docs.microsoft.com/ru-ru/dotnet/desktop/wpf/introduction-to-wpf?view=netframeworkdesktop-4.8  
+```
+  public partial class MainWindow : Window
+  {
+    public MainWindow()
+    {
+      InitializeComponent();
+
+      button.Click += buttonClicked;
+    }
+
+    private void buttonClicked(object sender, RoutedEventArgs e)
+    {
+      //throw new NotImplementedException();
+      label.Content = "Hello World";
+    }
+  }
+
+
+```
+
+```
+  public partial class WebForm1 : System.Web.UI.Page
+  {
+    protected void Page_Load(object sender, EventArgs e)
+    {
+      Button1.Click += ButtonClicked;
+
+    }
+
+    private void ButtonClicked(object sender, EventArgs e)
+    {
+      Label1.Text = "Hello World";
+      //throw new NotImplementedException();
+    }
+  }
+
+
+```
+http://is.gd/application_lifecycle  
+http://is.gd/page_lifecycle  
+http://is.gd/wpf_lifetime  
+  
+
 ### Where To Go From Here
 ### C# Programming - Collections And Event-Driven Programming - Lesson Summary
+```
+The key points from this module are:
+For many applications, you want to create and manage groups of related objects.
 
+The following are ways to group objects:
+• Create arrays of objects
+• Create collections of objects
+
+A collection is a class, so you must declare an instance of the class before you can add elements to that collection.
+Generic collection - A collection which enforces type safety so that no other data type can be added to it.
+
+ The following statements is true about retrieving an element from a generic collection:
+• You do not have to determine its data type or convert it.
+• You do have to determine its data type or convert it.
+
+Arrays - A fixed number of strongly-typed objects
+
+Collections - Can grow and shrink dynamically as the needs of the application change.
+For some collections, you can assign a key to any object that you put into the collection so that you can quickly retrieve the object by using the key.
+
+The acronym LINQ stands for Language-Integrated Query
+
+All LINQ query operations consist of the following distinct actions:
+• Obtain the data source.
+• Create the query.
+• Execute the query.
+
+LINQ offers a consistent model for working with data across various kinds of data sources and formats.
+In LINQ the actual execution of the query is deferred until you iterate over the query variable in a foreach statement.
+In LINQ the query results are retrieved using the for each statement.
+
+In the C# WPF application the abbreviation 'WPF' stands for Windows Presentation Foundation.
+In the C# WPF application, the acronym XAML stands for Extensible Application Markup Language
+
+In the Initialized method of a project, the AddHandler statement registers the event.
+
+The AddHandler statement takes the following parameters:
+• A parameter that specifies the resource and event.
+• A parameter that specifies the event handler method that will be run.
+
+
+
+
+```
 ## MODULE 10 Diploma In C# Programming - Second Assessment
-### You must score 80% or more to pass this assessment.
+### You must score 80% or more to pass this assessment.  
+```
+When using the FileStream class which of the following methods perform synchronous operations? Choose three.
+Duplicate method x
+CopyTo method
+Read method
+Write method
+
+True or False - Constructors have the same name as the class, and usually initialize the data members of the new object.
+True v
+False
+
+Inheritance is the ability to create a class from another class. Click and drag the classes on the right to match the classes on the left.
+Super class 
+Sub 
+class
+
+Derived 
+class
+Base 
+class
+
+Parent 
+class
+Child class
+
+
+
+In try-catch statements the catch clauses specify which of the following? 
+Choose one.
+Collections of different data types.
+Enumerations of different objects.
+Handlers for different exceptions. v
+
+
+Which keyword is used to declare an enumerated type? 
+Choose one.
+declare keyword
+enum keyword v
+enumer keyword
+enumer_Type keyword
+
+Which of the following creates a new instance of the class Car? 
+Choose one.
+Car new myCar = Car();
+Car myCar = new Car(); v
+Car new car = myCar();
+Car myCar() = new Car;
+
+True or False - In C# programming a method defines an attribute of a class.
+True x
+False v
+
+True or False - For some collections, you can assign a key to any object that you put into the collection so that you can quickly retrieve the object by using the key.
+True v
+False
+
+When using the FileStream class which of the following methods perform asynchronous operations? Choose three.
+DeleteAsync method x
+FlushAsync method
+CopyToAsync method
+WriteAsync method
+
+True or False - A method is a code block that contains a series of statements.
+True v
+False x
+
+True or False - LINQ offers a consistent model for working with data across various kinds of data sources and formats.
+True
+False
+
+Click and drag the statements on the right to match the headings on the left.
+ArraysA fixed number of strongly-typed objects.CollectionsCan grow and shrink dynamically as the needs of the application change.
+Can grow and shrink dynamically as the needs of the application change.
+
+True or False - For the C# WPF application the abbreviation 'WPF' stands for Windows Presentation Foundation.
+True v
+False
+
+True or False - A collection can only contain a fixed number of strongly-typed objects.
+True
+False
+
+Which of the following type of collection enforces type safety so that no other data type can be added to it? Choose one.
+Specific collection
+Generic collection v
+Standard collection
+Normal collection
+
+True or False - In C# programming Switch statements can evaluate only one variable while If…Else statements evaluate multiple variables.
+True
+False v
+
+Click and drag the statements on the right to match the headings on the left.
+Switch statementsCan evaluate multiple variablesIf … Else statementsEvaluates only one variable
+Evaluates only one variable
+
+Which of the following statements are true about using a finally block? 
+Choose two.
+You can clean up any resources that are allocated in a try block. v
+You can run code even if an exception occurs in the try block. v
+You can declare variables of an object using the finally statement.
+
+True or False - LINQ only works with data from a relational database such as Microsoft SQL Server.
+True
+False
+
+True or False - A collection is a class, so you must declare an instance of the class before you can add elements to that collection.
+True v
+False
+
+All LINQ query operations consist of which of the following distinct actions? Choose three.
+Execute the query. v
+Create the query. v
+Obtain the data source. v
+Convert the query. x
+
+True or False - In C# an object and a class are considered to be the same.
+True
+False v
+
+True or False - It is not possible to use more than one specific catch clause in the same try-catch statement.
+True
+False v
+
+In C# programming the try-catch statement consists of which of the following? Choose two.
+One or more catch clauses
+A try block
+Two or more methods
+
+What keyword can you use to declare a method and then call it without first creating an object because it becomes a class method? Choose one.
+property keyword
+void keyword
+static keyword v
+
+80
+
+
+```
 ### Diploma In C# Programming - Second AssessmentStart Assessment
 ### Course Assessment: Diploma In C# Programming - Revised
 ## MODULE 11 Course Assessment
+```
+Which of the following is a correctly formatted code in C#? 
+Choose one.
+Console.WriteLine("Hello World"):
+Console.WriteLine(Hello World);
+Console.WriteLine("Hello World"); v
 
+What feature in Visual Studio Express allows you to insert small blocks of reusable code in a code file using a combination of hotkeys? Choose one.
+Code Snippets v
+Code Blocks
+Code Samples
+
+Which of the following is used to declare the class 'Sport' in C# programming? Choose one.
+NameClass Sport { }
+className Sport { }
+class Sport { }
+sport Class { }
+
+
+True or False - C# directly supports multiple inheritance.
+True
+False v
+
+
+Click and drag the FileStream inheritance hierarchy into their correct order.
+Drag answers into the correct sequence.
+System.Object
+System.MarshalByRefObject
+System.IO.IsolatedStorage.IsolatedStorageFileStream
+System.IO.FileStream
+System.IO.Stream
+
+Click and drag the FileStream inheritance hierarchy into their correct order.
+Drag answers into the correct sequence.
+System.Object
+System.MarshalByRefObject
+System.IO.IsolatedStorage.IsolatedStorageFileStream
+
+Which of the following are functions of the FileStream class? 
+Choose four.
+Open files on a file system
+Write to files on a file system
+Read from files on a file system
+Close files on a file system
+Duplicate files on a file system x
+
+
+The .NET framework class library is also known by which of the following? 
+Choose one.
+Central class library
+Base class library v
+Record class library
+
+Which keyboard characters allow you to insert a comment into C# code? Choose one.
+|| keyboard characters
+// keyboard characters v
+\\ keyboard characters
+
+True or False - In C#, when declaring an array, the square brackets [] must come after the identifier, not the type.
+True
+False v
+
+When using the FileStream class which of the following methods perform synchronous operations? Choose three.
+Read method
+Write method
+CopyTo method
+Duplicate method 
+
+Which of the following statements is true about retrieving an element from a generic collection? Choose one.
+A retrieved element can only contain a fixed number of variables.
+You do not have to determine its data type or convert it. v
+You have to determine the size of the element.
+
+
+Click and drag the statements on the right to match the headings on the left.
+Switch statementsCan evaluate multiple variablesIf … Else statementsEvaluates only one variable
+Evaluates only one variable
+
+
+Which of the following is the conditional OR operator? 
+Choose one.
+[]
+()
+||
+<>
+
+
+What is the name of the method in the piece of code below? Choose one.
+ 
+static
+Main v
+void
+string
+
+In C# what keyword is used to create a new instance of a class? 
+Choose one.
+newClass
+instance
+new v
+Classnew
+
+someValue = (3*x)/100; is an example of which type of statement? 
+Choose one.
+Event statement
+Declaration statement
+Expression statement v
+
+True or False - A collection can only contain a fixed number of strongly-typed objects.
+True
+False v
+
+In the image below what does the yellow vertical bar on the left indicate? 
+Choose one.
+There is an error in the code. x
+The file needs to be saved.  v
+The code has been commented out.
+
+What keyword can you use to declare a method and then call it without first creating an object because it becomes a class method? Choose one.
+property keyword
+static keyword v
+void keyword
+
+In Visual Studio Express what feature allows you hide blocks of code? 
+Choose one.
+Code roll-up feature v
+Code hide feature
+Code visible feature
+
+Which of the following keywords allows you to break out of a for iteration loop? Choose one.
+close
+break v
+stop
+exit
+
+True or False - The foreach statement repeats a group of embedded statements for each element in an array.
+True v
+False
+
+Which of the following statements are true about the namespace keyword? Choose two.
+It is designed for providing a way to keep one set of names separate from another. v
+The class names declared in one namespace does not conflict with the same class names declared in another. v
+It contains at least one pure virtual function.
+
+True or False - C# is not case sensitive. Commands can be written using upper case or lower case letters.
+True
+False v
+
+Which of the following is the equality operator? 
+Choose one.
+if (x==y) { }
+if (x>y) { }
+if (x+y) { }
+if (x<=y) { }
+
+
+Which of the following will print out the following date format? 
+                            Monday, August 10, 2016
+Choose one.
+ToShortTimeString()
+ToLongTimeString()
+ToLongDateString() v
+ToString()
+
+In C# what name is given to a new instance of a class? 
+Choose one.
+An attribute
+A function
+An object v
+A method
+
+
+True or False - Concatenation is the process of appending one string to the end of another string.
+True v
+False
+
+True or False - For predefined value types, the equality operator (==) returns true if the values of its operands are equal, false otherwise.
+True v
+False
+
+True or False - If you declare a variable within a block construct, that variable's scope is only until the end of the block.
+True v
+False
+
+In Visual Studio Express multiple projects can be managed in which of the following? Choose one.
+Windows Explorer
+File Explorer
+Solution Explorer
+.NET Explorer
+
+In LINQ where are the query results retrieved? Choose one.
+The results statement
+The foreach statement v
+The var statement x
+
+True or False - The debug version of a C# application is the version which is usually released to the general public.
+True
+False
+
+Which of the following is the correct statement for the FileStream class? 
+Choose one.
+Provides a Stream for a file, supporting both synchronous and asynchronous read and write operations. v
+Provides a Stream for a file, only supporting synchronous read and write operations.
+Provides a Stream for a file, only supporting asynchronous read and write operations.
+
+True or False - In C# there are two 'conditional' operators that can be used to expand and enhance an evaluation.
+True v
+False
+
+True or False - In C# programming Switch statements can evaluate only one variable while If…Else statements evaluate multiple variables.
+True
+False v
+
+Which keyboard characters allow you to comment out multiple lines of C# code? Choose one.
+<* *>
+{* *}
+/* */
+|* *|
+Choose one answer.
+
+
+Which of the following are children of the System.IO.Stream class? 
+Choose three.
+System.IO.Pipes.PipeStream
+System.IO.BufferedStream
+System.Printing.PrintQueueStream
+System.MarshalByRefObject x
+
+
+When starting a new project in Visual Studio Express which of the applications do you select to start writing C# code? Click on the correct section in the image below.
+conole.application
+
+
+In try-catch statements the catch clauses specify which of the following? 
+Choose one.
+Collections of different data types.
+Handlers for different exceptions. v
+Enumerations of different objects.
+
+
+93
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```
 ## footer
 
 https://docs.microsoft.com/ru-ru/dotnet/core/tutorials/with-visual-studio-code  

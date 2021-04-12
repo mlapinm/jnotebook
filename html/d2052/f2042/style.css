@@ -1,0 +1,46 @@
+
+
+p{
+  margin:2px;
+}
+h4{
+  margin:2px;
+}
+
+.rounded{
+  border: 1px solid black;
+}
+
+.selected {
+  background-color:yellowgreen;
+}
+
+.container1{
+  height:200px;
+}
+
+.request{
+  width: 80%;
+}
+
+.request_drop{
+  float: left;
+  width: 40%;
+}
+
+.select1{
+  float: left;
+  width:40%;
+}
+
+.div2{
+  float: left;
+  width: 20%;
+}
+.proper{
+  float: left;
+  width: 5%;
+}
+.red{
+  background-color: pink;
+}

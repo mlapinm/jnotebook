@@ -1,0 +1,50 @@
+.navbar.navbar-light.navbar-expand-md.fixed-top {
+  background-color: #00C!impotant;
+  opacity: 0.9;
+}
+
+.nav-link.active {
+  color: #00C;
+  font-size: 13px;
+}
+
+.fa.fa-apple.apple-logo {
+  font-size: 21px;
+}
+
+body {
+  padding-top: 50px;
+}
+
+.product {
+  padding-top: 50px;
+  text-align: center;
+}
+
+.product h1 {
+  font-size: 40px;
+}
+
+.product .links {
+  font-size: 20px;
+}
+
+.product .links .learn-more {
+  margin-right: 30px;
+}
+
+.product.iphone-x {
+  background-color: #f0f0f0;
+}
+
+.product-small {
+  height: 550px;
+  padding-top: 40px;
+  margin: 0 0 10px 10px;
+  text-align: center;
+}
+
+.product-small.iphone-8 {
+  background-color: #f9f0eb;
+}
+

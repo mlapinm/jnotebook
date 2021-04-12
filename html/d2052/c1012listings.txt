@@ -1,0 +1,260 @@
+
+
+
+
+========================
+
+$(()=>{
+ 
+let tests = [
+{
+  asks: [
+    "What does 'check out' mean in the sentence:",
+    "Check out the Blue Frog or the space-age Pod restaurant..."
+  ],
+  responses:[
+    "Try or investigate"
+  ],
+  "variants": [
+    "Avoid",
+    "Pay by cheque",
+    "Try or investigate",
+    "Cross off"
+  ]
+},
+{
+  asks: [
+    "Why would a certain level of fitness be required to go on the Northern Lights tour?"
+  ],
+  responses:[
+    "Quite a lot of physical activity is involved"
+  ],
+  "variants": [
+    "To put people off",
+    "To make people feel bad",
+    "Quite a lot of physical activity is involved"
+  ]
+},
+{
+  asks: [
+    "I prefer walking ____ driving."
+  ],
+  responses:[
+    "than"
+  ],
+  variants: [
+    "with",
+    "than",
+    "and"
+  ]
+},
+{
+  asks: [
+    "TRUE OR FALSE: We add -iest to adjectives ending in -y, e.g. happiest, funniest."
+  ],
+  responses:[
+    "True"
+  ],
+  variants: [
+    "True",
+    "False"
+  ]
+},
+{
+  asks: [
+    "Are there any adjectives in this sentence?:",
+    "It was a nightmare."
+  ],
+  responses:[
+    "No"
+  ],
+  variants: [
+    "Yes",
+    "No"
+  ]
+},
+{
+  asks: [
+    "What is the correct definition of the phrase: somewhere hot?"
+  ],
+  responses:[
+    "A country with hot weather"
+  ],
+  variants: [
+    "Hot food",
+    "Something that will burn you",
+    "A country with hot weather"
+  ]
+},
+{
+  asks: [
+    "TRUE OR FALSE: Adjectives are used to describe nouns (people, places and things)."
+  ],
+  responses:[
+    "True"
+  ],
+  variants: [
+    "True",
+    "False"
+  ]
+},
+{
+  asks: [
+    "Which from below are amenities you will find in most towns and cities? Choose three."
+  ],
+  responses:[
+    "Restaurants",
+    "Banks",
+    "Shops"
+  ],
+  variants: [
+    "Sheep",
+    "Livestock",
+    "Farmland",
+    "Restaurants",
+    "Banks",
+    "Shops"
+  ]
+},
+{
+  asks: [
+    "Why do we say: 'on the right hand side', instead of 'on the right'?"
+  ],
+  responses:[
+    "So they know it is to the right of the person"
+  ],
+  variants: [
+    "because the person must raise their hand",
+    "So they know it is to the right of the person",
+    "because we're pointing",
+    "because it's polite"
+  ]
+},
+{
+  asks: [
+    "What does an 'expert guide' do for people when they're travelling?"
+  ],
+  responses:[
+    "show them the best place to go"
+  ],
+  variants: [
+    "provide medical assistance",
+    "book accommodation and flights",
+    "sell them things",
+    "show them the best place to go"
+  ]
+},
+{
+  asks: [
+    "",
+    ""
+  ],
+  responses:[
+    "",
+    ""
+  ],
+  variants: [
+    "",
+    "",
+    ""
+  ]
+},
+]
+
+=========
+$(()=>{
+ 
+var test = {
+  asks: [
+    "What does 'check out' mean in the sentence:",
+    "Check out the Blue Frog or the space-age Pod restaurant..."
+  ],
+  responses:[
+    "Try or investigate"
+  ],
+  variants: [
+    "Avoid",
+    "Pay by cheque",
+    "Try or investigate",
+    "Cross off"
+  ]
+}  
+$(".test").text(test.variants)
+
+})
+
+
+==============================================
+
+$(()=>{
+  
+  var answerP1 = $("<p>What does 'check out' mean in the sentence:<p>")
+ var answerP2 = $("<p>Check out the Blue Frog or the space-age Pod restaurant...<p>")
+  var answer = $("<div></div>")
+  answerP1.appendTo(answer)
+  answerP2.appendTo(answer)
+  answer.appendTo(".container")
+  
+  var div1 =$("<div>Avoid</div>")
+  var div2 =$("<div>Pay by cheque</div>")
+  var div3 =$("<div>Try or investigate</div>")
+  var div4 =$("<div>Cross off</div>")
+  
+  div1.appendTo(".container")
+  div2.appendTo(".container")
+  div3.appendTo(".container")
+  div4.appendTo(".container")
+  
+  div1.addClass("selected")
+ 
+  div1.click((e)=>{
+    $(e.target).removeClass("selected")
+    console.log(e.target)
+  })
+  
+  $('<br>').appendTo(".container")
+  
+  var button1 = $("<button>test</button>")
+  
+  button1.on('click',()=>{
+    var text = input1.val()
+    $('#h4').css({'color':'blue'})  
+    $("#h4").text(text)
+    
+  })
+  button1.appendTo(".container")
+
+})
+
+
+========================================
+
+$(()=>{
+  
+  var answerP1 = $("<p>Complete the sentence by choosing the correct form of the verb in brackets:<p>")
+ var answerP2 = $("<p>Mumbai [be] India’s most modern and most happening city.<p>")
+  var answer = $("<div></div>")
+  answerP1.appendTo(answer)
+  answerP2.appendTo(answer)
+  answer.appendTo(".container")
+  
+  var input1 = $("<input type='text'>")
+  input1.val("234")
+  input1.appendTo(".container")
+  
+  var button1 = $("<button>test</button>")
+  
+  button1.on('click',()=>{
+    var text = input1.val()
+    $('#h4').css({'color':'blue'})  
+    $("#h4").text(text)
+    
+  })
+  button1.appendTo(".container")
+
+})
+====
+https://codepen.io/mlapin/pen/YzNXOOg
+https://codepen.io/mlapin/full/YzNXOOg
+
+https://codepen.io/mlapin/full/bGgEybb

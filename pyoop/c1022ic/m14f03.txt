@@ -1,0 +1,148 @@
+
+
+m14f03.pkt
+
+ospf  Open Shortest Path First
+
+BranchA#sh ip route 
+BranchA(config)#no ip route 0.0.0.0 0.0.0.0 209.165.201.2
+
+HQ(config)#no ip route 10.1.10.0 255.255.255.0 209.165.201.1
+HQ(config)#no ip route 10.1.20.0 255.255.255.0 209.165.201.1
+
+172.16.1.1/30
+172.16.1.2/30
+172.16.1.5/30
+172.16.1.6/30
+172.16.1.9/30
+172.16.1.10/30
+172.16.1.13/30
+172.16.1.14/30
+
+
+BranchA(config)#int f1/0
+BranchA(config-if)#ip address 175.16.1.1 255.255.255.252
+BranchA(config-if)#no sh
+
+BranchB(config)#int f1/0
+BranchB(config-if)#ip address 175.16.1.2 255.255.255.252
+BranchB(config-if)#no sh
+BranchB(config-if)#int f0/0
+BranchB(config-if)#ip address 192.168.1.1 255.255.255.0
+BranchB(config-if)#no sh
+
+BranchB#ping 192.168.1.100
+
+BranchB
+int f1/1
+ip address 175.16.1.5 255.255.255.252
+no sh
+
+HQ
+int f1/0
+ip address 175.16.1.6 255.255.255.252
+no sh
+
+HQ#sh ip int bri
+
+HQ
+int f1/1
+ip address 175.16.1.9 255.255.255.252
+no sh
+
+BranchC
+
+Router(config)#line console 0
+Router(config-line)#logging synchronous 
+
+
+int f1/1
+ip address 175.16.1.10 255.255.255.252
+no sh
+
+int f0/0
+ip address 192.168.2.1 255.255.255.0
+no sh
+
+int f1/0
+ip address 175.16.1.13 255.255.255.252
+no sh
+
+BranchA
+int f1/1
+ip address 175.16.1.14 255.255.255.252
+no sh
+
+======================
+
+BranchC(config)#router ospf 50
+
+BranchC(config-router)#router-id 0.0.0.4
+
+BranchC(config-router)#network 192.168.2.0 0.0.0.255 area 0
+BranchC(config-router)#network 175.16.0.0 0.0.255.255 area 0
+
+BranchC#sh ip protocols 
+BranchC#sh ip ospf interface 
+
+HQ
+
+HQ#sh ip route 
+
+HQ(config)#router ospf 1
+HQ(config-router)#net
+HQ(config-router)#network 10.2.2.0 0.0.0.255 area 0
+HQ(config-router)#network 209.165.201.0 0.0.0.255 area 0
+HQ(config-router)#network 175.16.0.0 0.0.255.255 area 0
+
+HQ#sh ip rou
+HQ#show ip ospf neighbor 
+
+BranchC#sh ip ospf neighbor 
+
+HQ(config)#router ospf 1
+HQ(config-router)#router-id 0.0.0.1
+HQ(config-router)#Reload or use "clear ip ospf process" command, for this to take effect
+HQ#clear ip ospf process
+Reset ALL OSPF processes? [no]: yes
+
+BranchB(config)#router ospf 50
+BranchB(config-router)#router-id 0.0.0.2
+BranchB(config-router)#network 192.168.1.0 0.0.0.255 area 0
+BranchB(config-router)#network 175.16.0.0 0.0.0.255 area 0
+
+
+PC4
+C:\>tracert 192.168.2.100
+
+Tracing route to 192.168.2.100 over a maximum of 30 hops: 
+
+  1   0 ms      0 ms      0 ms      192.168.1.1
+  2   0 ms      0 ms      0 ms      175.16.1.6
+  3   0 ms      0 ms      0 ms      175.16.1.10
+  4   0 ms      0 ms      0 ms      192.168.2.100
+
+
+BranchA(config)#router ospf 50
+BranchA(config-router)#router-id 0.0.0.1
+BranchA(config-router)#network 10.1.0.0 0.0.255.255 area 0
+BranchA(config-router)#network 175.16.0.0 0.0.255.255 area 0
+BranchA(config-router)#network 209.165.201.0 0.0.0.255 area 0
+
+HQ#sh ip protocols 
+
+
+router ospf 50
+router-id 0.0.0.1
+network 10.1.0.0 0.0.255.255 area 0
+network 175.16.0.0 0.0.255.255 area 0
+network 209.165.201.0 0.0.0.255 area 0
+
+HQ#sh ip ospf neighbor 
+HQ#sh ip ospf database 
+
+
+BranchA#clear ip ospf process
+
+
+
