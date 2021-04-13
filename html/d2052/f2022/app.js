@@ -1,161 +1,22 @@
-$(()=>{
- 
-let tests = [
-{
-  asks: [
-    "What does 'check out' mean in the sentence:",
-    "Check out the Blue Frog or the space-age Pod restaurant..."
-  ],
-  responses:[
-    "Try or investigate"
-  ],
-  "variants": [
-    "Avoid",
-    "Pay by cheque",
-    "Try or investigate",
-    "Cross off"
-  ]
-},
-{
-  asks: [
-    "Why would a certain level of fitness be required to go on the Northern Lights tour?"
-  ],
-  responses:[
-    "Quite a lot of physical activity is involved"
-  ],
-  "variants": [
-    "To put people off",
-    "To make people feel bad",
-    "Quite a lot of physical activity is involved"
-  ]
-},
-{
-  asks: [
-    "I prefer walking ____ driving."
-  ],
-  responses:[
-    "than"
-  ],
-  variants: [
-    "with",
-    "than",
-    "and"
-  ]
-},
-{
-  asks: [
-    "TRUE OR FALSE: We add -iest to adjectives ending in -y, e.g. happiest, funniest."
-  ],
-  responses:[
-    "True"
-  ],
-  variants: [
-    "True",
-    "False"
-  ]
-},
-{
-  asks: [
-    "Are there any adjectives in this sentence?:",
-    "It was a nightmare."
-  ],
-  responses:[
-    "No"
-  ],
-  variants: [
-    "Yes",
-    "No"
-  ]
-},
-{
-  asks: [
-    "What is the correct definition of the phrase: somewhere hot?"
-  ],
-  responses:[
-    "A country with hot weather"
-  ],
-  variants: [
-    "Hot food",
-    "Something that will burn you",
-    "A country with hot weather"
-  ]
-},
-{
-  asks: [
-    "TRUE OR FALSE: Adjectives are used to describe nouns (people, places and things)."
-  ],
-  responses:[
-    "True"
-  ],
-  variants: [
-    "True",
-    "False"
-  ]
-},
-{
-  asks: [
-    "Which from below are amenities you will find in most towns and cities? Choose three."
-  ],
-  responses:[
-    "Restaurants",
-    "Banks",
-    "Shops"
-  ],
-  variants: [
-    "Sheep",
-    "Livestock",
-    "Farmland",
-    "Restaurants",
-    "Banks",
-    "Shops"
-  ]
-},
-{
-  asks: [
-    "Why do we say: 'on the right hand side', instead of 'on the right'?"
-  ],
-  responses:[
-    "So they know it is to the right of the person"
-  ],
-  variants: [
-    "because the person must raise their hand",
-    "So they know it is to the right of the person",
-    "because we're pointing",
-    "because it's polite"
-  ]
-},
-{
-  asks: [
-    "What does an 'expert guide' do for people when they're travelling?"
-  ],
-  responses:[
-    "show them the best place to go"
-  ],
-  variants: [
-    "provide medical assistance",
-    "book accommodation and flights",
-    "sell them things",
-    "show them the best place to go"
-  ]
-},
-{
-  asks: [
-    "",
-    ""
-  ],
-  responses:[
-    "",
-    ""
-  ],
-  variants: [
-    "",
-    "",
-    ""
-  ]
-},
-]
 
-class Round{
+
+
+$(()=>{
+
+  
+  let tests = []
+  let url = "m01.json"
+  $.getJSON(url, function(data) {
+    data.forEach(element => {
+      
+      tests.push(element)
+    });
+  }).then(()=>{
+  
+
+
+
+class RoundSimple{
   
   constructor(test){
     this.test = test
@@ -168,10 +29,15 @@ class Round{
     }
     for (var name in this.test.variants){
       var text = this.test.variants[name]
-      const div1 = $("<div>"+ text +"</div>")
-      div1.addClass("rounded")
+      const div1 = $("<div></div>")
+
+      const div11 = $("<div>"+ text +"</div>")
+      div11.addClass("request")
+      div11.addClass("rounded")
+      div11.appendTo(div1)
+
       div1.appendTo(".container1")
-      div1.click((e)=>{
+      div11.click((e)=>{
         if($(e.target).hasClass("selected")){
           $(e.target).removeClass("selected")
         }else{
@@ -179,15 +45,254 @@ class Round{
         }
       })
     }
-
-
+  }
+  testing(){
+    let appropriate = true
+    let items = Array.from($(".selected"))
+    let selects = [] 
+    $(".selected").each((i,e)=>{
+      selects.push($(e).text())
+    })    
+    selects.sort() 
+    let responses = tests[number].responses
+    responses.sort()
+    // responses.pop() 
+    appropriate = selects.toString() === responses.toString() 
+   
+    return appropriate
   }
   
 }
 
+class RoundInput{
+
+  input = null
+  constructor(test){
+    this.test = test
+  }
+  
+  show(){
+    for (var name in this.test.asks){
+      var text = this.test.asks[name]
+      $("<p>"+ text +"</p>").appendTo(".container1")
+    }
+
+  this.input = $("<input type='text' size='40'>")  
+  this.input.appendTo(".container1")
+
+  }
+  testing(){
+    let appropriate = true
+    let text = this.input.val()
+    appropriate = this.test.responses.find((e, i) => {
+      return e == text
+    })? true : false
+
+    return appropriate
+  }
+}
+
+class RoundOrdered{
+  asks = []
+  selects = []
+  propers = []
+
+  input = null
+  
+  constructor(test){
+    this.test = test
+  }
+  
+  show(){
+    $(".test").text(this.test.variants[0])
+
+    for (var name in this.test.asks){
+      var text = this.test.asks[name]
+      $("<p>"+ text +"</p>").appendTo(".container1")
+    }
+  
+    for (var o in this.test.variants[1]){
+      const select1 = $("<select></select>")
+      select1.addClass("select1")
+      for (var o in this.test.variants){
+        const textOption = this.test.variants[o]
+        const option = $("<option>"+textOption+"</option>")
+        option.appendTo(select1)
+      }
+      this.selects.push(select1)
+    }
+
+   let k = 0;
+    for (var name in this.test.variants){
+      var text = this.test.variants[name]
+      this.asks.push(text)
+      const div1 = $("<div></div>")
+
+      const div11 = $("<div>"+ text +"</div>")
+      div11.addClass("request_drop")
+      div11.addClass("rounded")
+      // div11.appendTo(div1)
+
+
+      this.selects[k].appendTo(div1)
+
+      const div12 = $("<div>_</div>")
+      div12.addClass("proper")
+      div12.addClass("rounded")
+      // div12.appendTo(div1)
+      this.propers.push(div12)
+
+      const divEmpty = $("<div style='clear:both'></div>")
+      divEmpty.appendTo(div1)
+
+      div1.appendTo(".container1")
+      div11.click((e)=>{
+        if($(e.target).hasClass("selected")){
+          $(e.target).removeClass("selected")
+        }else{
+          $(e.target).addClass("selected")
+        }
+      })
+      k += 1
+    }
+    //onsubmit()
+
+  }
+  testing(){
+    let appropriate = true
+
+    var len = this.selects.length
+
+    let selectVals = []
+    this.selects.forEach((select) => {
+      let val = $(select).val()
+      selectVals.push(val)
+    })
+
+    appropriate = 
+      this.test.responses.toString() == selectVals.toString()
+    return appropriate
+
+  }
+}
+
+class RoundDrop{
+  asks = []
+  selects = []
+  propers = []
+  
+  constructor(test){
+    this.test = test
+  }
+  
+  show(){
+    $(".test").text(this.test.variants[0])
+
+    for (var name in this.test.asks){
+      var text = this.test.asks[name]
+      $("<p>"+ text +"</p>").appendTo(".container1")
+    }
+  
+    for (var o in this.test.variants[1]){
+      const select1 = $("<select></select>")
+      select1.addClass("select1")
+      for (var o in this.test.variants[1]){
+        const textOption = this.test.variants[1][o]
+        const option = $("<option>"+textOption+"</option>")
+        option.appendTo(select1)
+      }
+      this.selects.push(select1)
+    }
+
+   let k = 0;
+    for (var name in this.test.variants[0]){
+      var text = this.test.variants[0][name]
+      this.asks.push(text)
+      const div1 = $("<div></div>")
+
+      const div11 = $("<div>"+ text +"</div>")
+      div11.addClass("request_drop")
+      div11.addClass("rounded")
+      div11.appendTo(div1)
+
+
+      this.selects[k].appendTo(div1)
+
+      const div12 = $("<div>_</div>")
+      div12.addClass("proper")
+      div12.addClass("rounded")
+      div12.appendTo(div1)
+      this.propers.push(div12)
+
+      const divEmpty = $("<div style='clear:both'></div>")
+      divEmpty.appendTo(div1)
+
+      div1.appendTo(".container1")
+      div11.click((e)=>{
+        if($(e.target).hasClass("selected")){
+          $(e.target).removeClass("selected")
+        }else{
+          $(e.target).addClass("selected")
+        }
+      })
+      k += 1
+    }
+    //onsubmit()
+  }
+
+  testing(){
+    let appropriate = true
+
+    var len = this.selects.length
+
+    let selectVals = []
+    this.selects.forEach((select) => {
+      let val = $(select).val()
+      selectVals.push(val)
+    })
+
+    for( let i = 0 ; i < len ; i++){
+      let ask = this.asks[i]
+      let resp = selectVals[i] 
+      // console.log(ask, resp, this.test.responses)
+
+      let res = this.test.responses.find((e, i) => {
+        let ret = e[0] == ask && e[1] == resp
+         return ret
+      })
+
+      if(res){
+        this.propers[i].text('v')
+        this.propers[i].removeClass("red")
+      }else{
+        this.propers[i].text('x')
+        this.propers[i].addClass("red")
+      }
+    }
+
+    this.propers.forEach((val) => {
+      let text = val.text()
+      if (text != 'v'){
+        appropriate = false;
+      }
+    })
+    return appropriate
+  }
+}
+
 let number = 0
 let numberMax = tests.length-1
-const round = new Round(tests[number])  
+let round = null  
+if(tests[number].type == 'simple'){
+  round = new RoundSimple(tests[number])  
+} else if(tests[number].type == 'ordered'){
+  round = new RoundOrdered(tests[number])  
+} else if(tests[number].type == 'drop'){
+  round = new RoundDrop(tests[number])  
+}else if(tests[number].type == 'input'){
+  round = new RoundInput(tests[number])  
+}
+
 round.show()  
 $(".container1").addClass("rounded")
 
@@ -198,7 +303,16 @@ $(".next").click(()=>{
     number+=1
   }
   $("#h4").text("" + (number+1))
-  const round = new Round(tests[number])  
+
+  if(tests[number].type == 'simple'){
+    round = new RoundSimple(tests[number])  
+  } else if(tests[number].type == 'ordered'){
+    round = new RoundOrdered(tests[number])  
+  } else if(tests[number].type == 'drop'){
+    round = new RoundDrop(tests[number])  
+  }else if(tests[number].type == 'input'){
+    round = new RoundInput(tests[number])  
+  }  
   round.show()  
   $(".result").text("Result: ")
 })  
@@ -210,26 +324,31 @@ $(".previouse").click(()=>{
     number-=1
   }
   $("#h4").text("" + (number+1))
-  const round = new Round(tests[number])  
-  round.show()  
+  if(tests[number].type == 'simple'){
+    round = new RoundSimple(tests[number])  
+  } else if(tests[number].type == 'ordered'){
+    round = new RoundOrdered(tests[number])  
+  } else if(tests[number].type == 'drop'){
+    round = new RoundDrop(tests[number])  
+  }else if(tests[number].type == 'input'){
+  round = new RoundInput(tests[number])  
+}
+round.show()  
   $(".result").text("Result: ")
 })  
   
 $(".submit").click(()=>{
-  
- let items = Array.from($(".selected"))
- let selects = [] 
- $(".selected").each((i,e)=>{
-   selects.push($(e).text())
- }) 
- selects.sort() 
- let responses = tests[number].responses
- responses.sort()
- // responses.pop() 
- let isTrue = selects.toString() === responses.toString() 
-   $(".result").text("Result: " + isTrue)
- console.log(isTrue) 
- console.log(responses) 
+  onsubmit()
+
 })  
-$(".test").text(tests[number].variants)
+
+function onsubmit(){
+  let isTrue = round.testing()
+  $(".result").text("Result: " + isTrue)
+  // console.log(isTrue) 
+}
+
+
+// $(".test").text(tests[number].variants)
+})
 })

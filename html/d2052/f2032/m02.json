@@ -1,19 +1,5 @@
 [
   {
-    "number": "1",
-    "type": "input",
-    "asks": [
-      "Complete the sentence by choosing the correct form of the verb in brackets:",
-      "Mumbai [be] India\u2019s most modern and most happening city."
-    ],
-    "responses": [
-      "is"
-    ],
-    "variants": [
-      "ff"
-    ]
-  },
-  {
     "number": "2",
     "type": "simple",
     "asks": [
@@ -28,6 +14,20 @@
       "Pay by cheque",
       "Try or investigate",
       "Cross off"
+    ]
+  },
+  {
+    "number": "1",
+    "type": "input",
+    "asks": [
+      "Complete the sentence by choosing the correct form of the verb in brackets:",
+      "Mumbai [be] India\u2019s most modern and most happening city."
+    ],
+    "responses": [
+      "is"
+    ],
+    "variants": [
+      "ff"
     ]
   },
   {
