@@ -1,0 +1,77 @@
+
+
+BRANCH(config)#int s0/0/0
+BRANCH(config-if)#ip address 172.16.50.1 255.255.255.0
+BRANCH(config-if)#ipv6 address 2001:50::1/64
+BRANCH(config-if)#encapsulation frame-relay 
+BRANCH(config-if)#no sh
+
+BRANCH#traceroute 172.16.50.2
+
+
+HQ(config)#int s0/0/0
+HQ(config-if)#ip address 172.16.50.2 255.255.255.0
+HQ(config-if)#ipv6 address 2001:50::2/64
+HQ(config-if)#encapsulation frame-relay 
+HQ(config-if)#no sh
+
+HQ#ping 172.16.50.1
+
+HQ#sh frame-relay pvc
+
+HQ#show frame-relay map 
+
+
+BRANCH(config)#ip access-list standard NAT-OUT
+BRANCH(config-std-nacl)#permit 10.1.10.0 0.0.0.255
+BRANCH(config-std-nacl)#permit 10.1.20.0 0.0.0.255
+
+BRANCH(config)#ip nat inside source list NAT-OUT int f0/1 overload 
+
+BRANCH(config)#int f0/0.10
+BRANCH(config-subif)#ip nat inside 
+
+BRANCH(config-subif)#int f0/0.20
+BRANCH(config-subif)#ip nat inside 
+
+BRANCH(config-subif)#int f0/1
+BRANCH(config-if)#ip nat outside 
+
+BRANCH#show ip nat translations 
+
+
+BRANCH#show ip nat translations 
+BRANCH#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+BRANCH(config)#ip rou
+BRANCH(config)#ip route ?
+  A.B.C.D  Destination prefix
+BRANCH(config)#ip route 0.0.0.0 0.0.0.0 209.165.201.1
+
+BRANCH(config)#ip route 0.0.0.0 0.0.0.0 209.165.201.1
+
+BRANCH#sh ip rout
+
+BRANCH#sh ip nat translations 
+BRANCH#sh ip access-lists 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,6 +1,781 @@
 
 
 ```
+m21
+1
+To configure any protocol/packet for priority, the router must first know what is to be matched. What configuration command will tell the router what to match?
+
+NBAR
+Policy-map
+Class-map v
+Service-policy
+
+
+2
+The router that was ACTIVE in an HSRP group failed, and then the role of ACTIVE moved to what was the STANDBY router. When the original router comes back online it will not retake the role of ACTIVE, unless you've configured what?
+Standby IP
+Standby preempt  v
+Standby priority 
+Standby refresh
+
+preempt упреждение
+
+3
+
+What must be configured for a router to take the "ACTIVE" role in an HSRP standby group? Specifically, what setting allows you to choose the router to be ACTIVE?
+
+Standby group IP
+Track interface
+Standby group number
+Standby group priority v
+
+4
+
+What type of Switchport will carry all tagged VLAN traffic by default?
+
+Routed
+Access
+Trunk v
+Serial
+
+5
+
+What configuration construct is used to set the marking and priority of packets matched by a class-map?
+
+ToS
+DSCP
+Policy-map v
+Service-policy
+
+
+6
+
+Which of the following is a packet marking?
+MPLS 
+DSCP v
+FTP
+HTTP
+
+
+7
+
+What do VLANs create?
+
+Collision domains
+Subnets
+Broadcast domains v
+WAN connections
+
+
+
+8
+
+At what layer of the OSI is the use of FHRP going to provide redundancy?
+
+Layer 3 v
+Layer 2
+Layer 1
+Layer 4
+
+
+
+9
+
+
+
+
+10
+
+m22
+
+1
+
+What command uses an echo to verify end-to-end connectivity?
+
+Ping v
+Traceroute
+ICMP
+IP
+
+2
+
+What command on a Windows PC will show you the IP to MAC address mappings?
+Arp -a v
+Traceroute
+Ping
+Arp -d
+
+3
+
+What command is used to determine the logical path a packet travels in your network?
+ICMP
+Traceroute v
+Ping
+IP
+
+4
+
+How do you verify the L2 forwarding table used by a Cisco switch?
+Show table
+Show mac v
+Arp -a
+Arp -d
+
+5
+
+True or False: An Access-List will block traffic going through a router.
+
+True
+False v
+
+
+6
+
+An IPv6 Link-Local address will start with which 2-bytes?
+
+FE80::/4 v
+2001::/3
+FFFE::/4
+FF00::/3
+
+
+7
+
+What route should be in the routing table to match all traffic that can't find a better route?
+
+Default route v
+Unknown route
+Static route
+Broadcast path
+
+
+
+8
+
+True or False: Interfaces that connect to an end-system, or another switch, do not have to have the same duplex settings for full functionality.
+
+True
+False v
+
+
+
+9
+
+What service translates a hostname or FQDN to an IP address?
+
+DNS v
+DHCP
+STP
+Traceroute
+
+
+10
+
+What router command shows you a list of the best IP routes?
+Show forwarding table
+
+Show IP route v
+Show route
+Show mac address-table
+
+
+
+m23
+
+1
+
+A router has EIGRP configured as the only routing protocol. How does EIGRP respond if there is no feasible successor route to a destination network and the successor route fails?
+
+It automatically forwards traffic to a fallback default route until a successor route is found
+EIGRP sends a Hello packet to the DR to inform it of the route failure
+It immediately sends its entire routing table to its neighbors
+It sends queries out to neighbors until a new successor route is found v
+
+2
+
+In EIGRP, what is a feasible successor (FS) and where is it stored?
+
+A FS is a backup route, stored in the topology table v
+A FS is a backup route, stored in the routing table
+A FS is a primary route, stored in the routing table
+A FS is a primary route, stored in the topology table
+
+feasible successor возможный преемник
+
+3
+
+You need to implement the use of a routing protocol that meets the following requirements: 1. Converges quickly. 2. Supports VLSM, CIDR, IP, and IPX. 3. Uses minimal bandwidth for routing updates. Which one of the following routing protocols would be the best choice?
+
+EIGRP v
+RIPv2
+RIPv1
+IGRP
+
+
+4
+
+You need to choose a routing protocol for a new company network. This network will be running IP, IPX, and Appletalk. You wish to utilize only one routing protocol. Which one would be the best choice?
+
+RIP v2
+OSPF
+EIGRP v
+IGRP
+
+5
+
+True or False: All routes used as successors must be of equal value to the same destination in order to do load balancing.
+
+True
+False v
+
+
+6
+
+You need to configure a single router into load balancing traffic across 4 unequal cost paths. Which routing protocol can satisfy this requirement?
+
+IS-IS
+OSPF
+EIGRP v
+RIP v2
+
+
+7
+
+What is EIGRP's default administrative distance (AD)?
+90  v
+100
+110
+120
+
+
+
+8
+
+Where can route summarization occur with EIGRP?
+
+Anywhere in the network  v
+Only at a classful boundary
+Only at a network area boundary
+Only at the AS boundary
+
+
+
+9
+
+A router learns about a remote network from EIGRP, OSPF, and a static route. Assuming all routing protocols are using their default administrative distance, which route will the router use to forward data to the remote network?
+
+The router will load balance and use all three routes
+The router will use the static route
+The router will use the OSPF route
+The route will use the EIGRP route
+
+
+10
+
+What parameters must you specify when you enable EIGRP routing?
+
+EIGRP routing, network number, and AS number v
+The network number and AS number
+The broadcast address and AS number
+EIGRP routing, network number, and passive interface
+
+
+1
+
+
+
+2
+
+
+
+3
+
+
+
+4
+
+
+
+5
+
+
+
+
+6
+
+
+
+
+7
+
+
+
+
+
+8
+
+
+
+
+
+9
+
+
+
+
+10
+
+
+
+
+1
+
+
+
+2
+
+
+
+3
+
+
+
+4
+
+
+
+5
+
+
+
+
+6
+
+
+
+
+7
+
+
+
+
+
+8
+
+
+
+
+
+9
+
+
+
+
+10
+
+
+
+
+1
+
+
+
+2
+
+
+
+3
+
+
+
+4
+
+
+
+5
+
+
+
+
+6
+
+
+
+
+7
+
+
+
+
+
+8
+
+
+
+
+
+9
+
+
+
+
+10
+
+
+
+
+1
+
+
+
+2
+
+
+
+3
+
+
+
+4
+
+
+
+5
+
+
+
+
+6
+
+
+
+
+7
+
+
+
+
+
+8
+
+
+
+
+
+9
+
+
+
+
+10
+
+
+
+
+1
+
+
+
+2
+
+
+
+3
+
+
+
+4
+
+
+
+5
+
+
+
+
+6
+
+
+
+
+7
+
+
+
+
+
+8
+
+
+
+
+
+9
+
+
+
+
+10
+
+
+
+
+1
+
+
+
+2
+
+
+
+3
+
+
+
+4
+
+
+
+5
+
+
+
+
+6
+
+
+
+
+7
+
+
+
+
+
+8
+
+
+
+
+
+9
+
+
+
+
+10
+
+
+
+
+1
+
+
+
+2
+
+
+
+3
+
+
+
+4
+
+
+
+5
+
+
+
+
+6
+
+
+
+
+7
+
+
+
+
+
+8
+
+
+
+
+
+9
+
+
+
+
+10
+
+
+
+
+1
+
+
+
+2
+
+
+
+3
+
+
+
+4
+
+
+
+5
+
+
+
+
+6
+
+
+
+
+7
+
+
+
+
+
+8
+
+
+
+
+
+9
+
+
+
+
+10
+
+
+
+
+1
+
+
+
+2
+
+
+
+3
+
+
+
+4
+
+
+
+5
+
+
+
+
+6
+
+
+
+
+7
+
+
+
+
+
+8
+
+
+
+
+
+9
+
+
+
+
+10
+
+
+
+
+1
+
+
+
+2
+
+
+
+3
+
+
+
+4
+
+
+
+5
+
+
+
+
+6
+
+
+
+
+7
+
+
+
+
+
+8
+
+
+
+
+
+9
+
+
+
+
+10
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+==========================================================
 
 01
 Which transport protocol is considered a Best Effort delivery system?

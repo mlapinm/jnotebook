@@ -1,0 +1,109 @@
+
+BRANCH(config)#router eigrp 1
+
+BRANCH(config-router)#network 10.1.0.0 0.0.255.255
+BRANCH(config-router)#network 172.16.0.0 0.0.255.255
+BRANCH(config-router)#network 209.165.201.2 0.0.0.0
+
+
+BRANCHA(config)#router eigrp 1
+BRANCHA(config-router)#network 172.16.0.0 0.0.255.255
+
+BRANCHA(config-router)#do sh ip eigrp int
+
+
+HQ(config)#router eigrp 1
+
+HQ(config-router)#network 172.16.0.0 0.0.255.255
+HQ(config-router)#network 209.165.201.1
+HQ(config-router)#network 192.168.0.0 0.0.255.255
+
+HQ(config-router)#do sh ip eigrp int
+HQ(config-router)#do sh ip eigrp neighbo
+
+HQ(config-router)#no auto-summary 
+
+BRANCHA(config)#router eigrp 1
+BRANCHA(config-router)#no auto-summary 
+
+BRANCH(config)#router eigrp 1
+BRANCH(config-router)#no auto-summary 
+
+BRANCH#sh ip eigrp neighbors 
+BRANCH#sh ip rou
+BRANCH#sh ipv6 route 
+
+BRANCH(config)#ipv6 router eigrp 1
+BRANCH(config-rtr)#eigrp router-id 1.1.1.1
+
+
+BRANCH(config)#int f0/0
+BRANCH(config-if)#ipv6 eigrp 1
+BRANCH(config-if)#int f0/0.10
+BRANCH(config-subif)#ipv6 eigrp 1
+BRANCH(config-subif)#int f0/0.20
+BRANCH(config-subif)#ipv6 eigrp 1
+
+BRANCH(config-subif)#int f0/1
+BRANCH(config-if)#ipv6 eigrp 1
+BRANCH(config-if)#int s0/0/0
+BRANCH(config-if)#ipv6 eigrp 1
+BRANCH(config-if)#int s0/0/1
+BRANCH(config-if)#ipv6 eigrp 1
+
+BRANCH(config-if)#int f1/0
+BRANCH(config-if)#ipv6 eigrp 1
+
+
+BRANCHA(config)#ipv6 router eigrp 1
+BRANCHA(config-rtr)#eigrp router-id 2.2.2.2
+
+BRANCHA(config)#do sh ipv int br
+
+
+BRANCHA(config)#int f0/0
+BRANCHA(config-if)#ipv6 eigrp 1
+BRANCHA(config-if)#int f0/1
+BRANCHA(config-if)#ipv6 eigrp 1
+BRANCHA(config-if)#int s0/0/0
+BRANCHA(config-if)#ipv6 eigrp 1
+BRANCHA(config-if)#int s0/0/1
+BRANCHA(config-if)#ipv6 eigrp 1
+
+BRANCHA(config-if)#do sh ipv eigrp int
+BRANCHA(config)#ipv6 router eigrp 1
+BRANCHA(config-rtr)#no sh
+BRANCHA(config-rtr)#do sh ipv eigrp int
+
+
+BRANCH(config)#do sh ipv eigrp int
+BRANCH(config)#ipv router eigrp 1
+BRANCH(config-rtr)#no sh
+
+BRANCH(config)#do sh ipv eigrp int
+
+HQ(config)#ipv6 router eigrp 1
+HQ(config-rtr)#eigrp router-id 3.3.3.3
+HQ(config-rtr)#no sh
+
+
+HQ(config)#int f0/0
+HQ(config-if)#ipv6 eigrp 1
+HQ(config-if)#int f0/1
+HQ(config-if)#ipv6 eigrp 1
+HQ(config-if)#int s0/0/0
+HQ(config-if)#ipv6 eigrp 1
+HQ(config-if)#int s0/0/1
+HQ(config-if)#ipv6 eigrp 1
+HQ(config-if)#int f1/0
+HQ(config-if)#ipv6 eigrp 1
+
+HQ(config)#int s0/0/0
+HQ(config-if)#no ipv eigrp 1
+
+10.1.20.100
+C:\>ping 192.168.1.100
+C:\>ping 2001:192::100
+
+
+

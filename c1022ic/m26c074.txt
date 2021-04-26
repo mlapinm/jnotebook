@@ -1,0 +1,138 @@
+
+S1(config)#int range f0/1-2
+S1(config-if-range)#switchport mode trunk 
+S1(config-if-range)#do sh int trunk
+
+S1(config-if-range)#shutdown 
+
+S1(config-if-range)#channel-group 1 mode active 
+S1(config-if-range)#no shutdown 
+S1(config-if)#switchport mode trunk 
+
+
+S1(config)#int vlan 1
+S1(config-if)#ip address 10.1.1.11 255.255.255.0
+S1(config)#ip default-gateway 10.1.1.1 
+
+
+S2(config)#int vlan 1
+S2(config-if)#ip address 10.1.1.12 255.255.255.0
+S2(config)#ip default-gateway 10.1.1.1
+
+
+S3(config)#int vlan 1
+S3(config-if)#ip address 10.1.1.13 255.255.255.0
+S3(config)#ip default-gateway 10.1.1.1
+
+S3(config)#int f0/3
+S3(config-if)#switchport mode trunk 
+
+
+R1(config)#int f0/0
+R1(config-if)#ip address 10.1.1.1 255.255.255.0
+R1(config-if)#no sh
+
+S3(config)#int vlan 1
+S3(config-if)#no sh
+
+
+S1#sh etherchannel summary 
+
+S2(config)#int range f0/1-2
+S2(config-if-range)#sh
+S2(config-if-range)#shutdown 
+
+S2(config-if-range)#channel-group 1 mode active 
+S2(config-if-range)#no shutdown 
+
+S2(config)#interface port-channel 1
+S2(config-if)#switchport mode trunk 
+
+
+S2(config)#int range f0/3-4
+S2(config-if-range)#sh
+S2(config-if-range)#shutdown 
+S2(config-if-range)#channel-group 2 mode passive 
+S2(config-if-range)#no shutdown 
+
+
+S2(config)#int port-channel 2
+S2(config-if)#switchport mode trunk 
+
+S2#sh etherchannel summary 
+
+
+S3(config)#int range f0/3-4
+S3(config-if-range)#sh
+S3(config-if-range)#channel-group 2 mode active 
+S3(config-if-range)#no shutdown 
+
+S3(config)#int port-channel 2
+S3(config-if)#switchport mode trunk 
+
+S3(config)#int range f0/3-4
+S3(config-if-range)#switchport mode trunk 
+
+
+S3(config)#int range f0/5-6
+S3(config-if-range)#switchport mode trunk 
+
+S1(config)#int ra f0/5-6
+S1(config-if-range)#switchport mode trunk 
+
+
+S1(config)#int range f0/5-6
+S1(config-if-range)#shutdown 
+S1(config-if-range)#channel-group 3 mode desirable 
+S1(config-if-range)#no shutdown 
+
+S1(config)#int port-channel 3
+S1(config-if)#switchport mode trunk 
+
+
+S3(config)#int ra f0/5-6
+S3(config-if-range)#shutdown 
+S3(config-if-range)#channel-group 3 mode desirable 
+S3(config-if-range)#no shutdown 
+
+S3(config)#int port-channel 3
+S3(config-if)#switchport mode trunk 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Configure EtherChannel (PAgP and LACP) in Packet Tracer
+https://www.youtube.com/watch?v=UeSgzqZcBGk
+
+---------------------
+SW1(config)#int port-channel 1
+SW1(config-if)#switchport mode trunk 
+
+
+
+
+
+
+
+
+
+

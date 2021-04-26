@@ -1,0 +1,390 @@
+[
+  {
+    "number": "01",
+    "type": "simple",
+    "asks": [
+      "__________ speaking in English?"
+    ],
+    "responses": [
+      "Are they"
+    ],
+    "variants": [
+      "They are",
+      "Are they",
+      "They"
+    ]
+  },
+  {
+    "number": "02",
+    "type": "simple",
+    "asks": [
+      "Are you learning English?",
+      "_____________ ."
+    ],
+    "responses": [
+      "Yes, I am"
+    ],
+    "variants": [
+      "Yes, I am",
+      "Yes, am",
+      "Yes, I learn"
+    ]
+  },
+  {
+    "number": "03",
+    "type": "simple",
+    "asks": [
+      "__________ the head office?"
+    ],
+    "responses": [
+      "Am I calling"
+    ],
+    "variants": [
+      "I am calling",
+      "Am I calling",
+      "I call"
+    ]
+  },
+  {
+    "number": "04",
+    "type": "simple",
+    "asks": [
+      "__________  learning about?"
+    ],
+    "responses": [
+      "What are you"
+    ],
+    "variants": [
+      "Where are you",
+      "What are you",
+      "When you"
+    ]
+  },
+  {
+    "number": "05",
+    "type": "simple",
+    "asks": [
+      "Are they having lunch?",
+      "___________ ."
+    ],
+    "responses": [
+      "Yes, they are"
+    ],
+    "variants": [
+      "Yes, eating",
+      "Yes, are",
+      "Yes, they are"
+    ]
+  },
+  {
+    "number": "06",
+    "type": "simple",
+    "asks": [
+      "They ______ in English."
+    ],
+    "responses": [
+      "are speaking"
+    ],
+    "variants": [
+      "like",
+      "am type",
+      "are talk",
+      "are speaking",
+      "is talk"
+    ]
+  },
+  {
+    "number": "07",
+    "type": "simple",
+    "asks": [
+      "____________ about the things we are selling online."
+    ],
+    "responses": [
+      "I am calling"
+    ],
+    "variants": [
+      "I am calling",
+      "I call",
+      "I am call"
+    ]
+  },
+  {
+    "number": "08",
+    "type": "simple",
+    "asks": [
+      "_________ near to the office?"
+    ],
+    "responses": [
+      "Are you living"
+    ],
+    "variants": [
+      "Are living",
+      "You are living",
+      "Are you living"
+    ]
+  },
+  {
+    "number": "10",
+    "type": "simple",
+    "asks": [
+      "I _______________ a cake."
+    ],
+    "responses": [
+      "am eating"
+    ],
+    "variants": [
+      "am taste",
+      "drink",
+      "am eating"
+    ]
+  },
+  {
+    "number": "11",
+    "type": "simple",
+    "asks": [
+      "What are you learning about?",
+      "____________ about grammar."
+    ],
+    "responses": [
+      "I am learning"
+    ],
+    "variants": [
+      "I can learn",
+      "I am learning",
+      "I learn"
+    ]
+  },
+  {
+    "number": "13",
+    "type": "simple",
+    "asks": [
+      "They _____."
+    ],
+    "responses": [
+      "are laughing"
+    ],
+    "variants": [
+      "are laugh",
+      "are laughing",
+      "laughing"
+    ]
+  },
+  {
+    "number": "14",
+    "type": "simple",
+    "asks": [
+      "I ___________ water."
+    ],
+    "responses": [
+      "am drinking"
+    ],
+    "variants": [
+      "am drink",
+      "am drinking",
+      "eating"
+    ]
+  },
+  {
+    "number": "15",
+    "type": "simple",
+    "asks": [
+      "We ___________ interesting things in our shop."
+    ],
+    "responses": [
+      "are selling"
+    ],
+    "variants": [
+      "are waking",
+      "are selling",
+      "are calling"
+    ]
+  },
+  {
+    "number": "16",
+    "type": "simple",
+    "asks": [
+      "_________ her boyfriend?"
+    ],
+    "responses": [
+      "Is the girl thinking about"
+    ],
+    "variants": [
+      "Is the girl thinking about",
+      "The girl is thinking about",
+      "The girl are learn about"
+    ]
+  },
+  {
+    "number": "17",
+    "type": "simple",
+    "asks": [
+      "Who am I talking to?",
+      "_________________ ."
+    ],
+    "responses": [
+      "I am talking to a client"
+    ],
+    "variants": [
+      "I talk to them",
+      "I talk to a client",
+      "I am talking to a client",
+      "I am talk to a me",
+      "I them talking"
+    ]
+  },
+  {
+    "number": "18",
+    "type": "simple",
+    "asks": [
+      "________________  learning English?"
+    ],
+    "responses": [
+      "Why are you"
+    ],
+    "variants": [
+      "Why are",
+      "Why are you",
+      "Why you are"
+    ]
+  },
+  {
+    "number": "19",
+    "type": "simple",
+    "asks": [
+      "________ about what they are doing."
+    ],
+    "responses": [
+      "They are thinking"
+    ],
+    "variants": [
+      "They want learn",
+      "They think",
+      "They are thinking"
+    ]
+  },
+  {
+    "number": "20",
+    "type": "simple",
+    "asks": [
+      "___________ through the office."
+    ],
+    "responses": [
+      "They are walking"
+    ],
+    "variants": [
+      "They are walking",
+      "They walking",
+      "They are run"
+    ]
+  },
+  {
+    "number": "21",
+    "type": "simple",
+    "asks": [
+      "Hello, can you speak English?",
+      "__________ ."
+    ],
+    "responses": [
+      "Yes, I can speak a little"
+    ],
+    "variants": [
+      "Yes, talk",
+      "Yes, I am",
+      "Yes, I can speak a little",
+      "Yes, I am speak",
+      "Yes, I talk"
+    ]
+  },
+  {
+    "number": "22",
+    "type": "simple",
+    "asks": [
+      "___________, please?",
+      "I?m Quentin from WQTPF12 Company"
+    ],
+    "responses": [
+      "Who's calling"
+    ],
+    "variants": [
+      "What calling",
+      "Who's calling",
+      "Where calling"
+    ]
+  },
+  {
+    "number": "23",
+    "type": "simple",
+    "asks": [
+      "__________ in their chairs?"
+    ],
+    "responses": [
+      "Are they sitting"
+    ],
+    "variants": [
+      "Are they sitting",
+      "They are",
+      "Are they calling"
+    ]
+  },
+  {
+    "number": "24",
+    "type": "simple",
+    "asks": [
+      "I am calling about the thing ______________ ."
+    ],
+    "responses": [
+      "we are selling"
+    ],
+    "variants": [
+      "we type",
+      "we are selling",
+      "we think"
+    ]
+  },
+  {
+    "number": "25",
+    "type": "simple",
+    "asks": [
+      "OK, ______________ your call."
+    ],
+    "responses": [
+      "I am transferring"
+    ],
+    "variants": [
+      "I transferring",
+      "I am transferring",
+      "I transfer"
+    ]
+  },
+  {
+    "number": "25",
+    "type": "simple",
+    "asks": [
+      "_____________ saying?"
+    ],
+    "responses": [
+      "What are they"
+    ],
+    "variants": [
+      "Where are they",
+      "What are they",
+      "What they"
+    ]
+  },
+  {
+    "number": "25",
+    "type": "simple",
+    "asks": [
+      "What are they drinking?",
+      "_____________"
+    ],
+    "responses": [
+      "They are drinking water."
+    ],
+    "variants": [
+      "They are drinking water.",
+      "They drink water.",
+      "They have water"
+    ]
+  }
+]

@@ -1,148 +1,374 @@
 01
 
+ordered
 
+Arrange the parts of a conversation into the correct order:
 
+Greeting/introduction
+Ask about the person
+Give news/information
+Show interest
+Make a suggestion
+Make an arrangement
 
+Make a suggestion
+Give news/information
+Greeting/introduction
+Ask about the person
+Show interest
+Make an arrangement
 
 02
 
+input
 
+Complete the expression by choosing the correct word:
+I'm _______ forward to it.
 
+looking
 
+ff
 
 03
 
+input
 
+Complete the question by choosing the correct word:
+Are you free __ Sunday?
 
+on
 
+ff
 
 04
 
+simple
 
+Which Western festival coincides with the Mexican Day of the Dead?
 
+Halloween
 
+Halloween
+Carnival
+Glastonbury
+Burning Man
 
 05
 
+simple
 
+TRUE OR FALSE: We use adverbs of frequency to say how often we do something.
 
+True
 
+True
+False
 
 06
 
+simple
 
+TRUE OR FALSE: 'Usually' and 'sometimes' never go at the beginning of a sentence.
 
+False
 
+True
+False
 
 07
 
+input
 
+Complete the sentence by choosing the correct word:
+Let's __ for a walk.
 
+go
 
+ff
 
 08
 
+drop
 
+Match the opposites together:
 
+intelligent
+stupid
+talkative
+quiet
+friendly
+unfriendly
+funny
+serious
+kind
+unkind
 
+intelligent
+talkative
+friendly
+funny
+kind
+unkind
+stupid
+serious
+unfriendly
+quiet
 
 09
 
+input
 
+Complete the sentence using have or has:
+They get up at 7 o'clock in the morning and ____ breakfast together.
 
+have
 
+ff
 
 10
 
+simple
 
+TRUE OR FALSE: We use 'is' to talk about people directly.
 
+True
+
+True
+False
 
 
 11
 
+simple
 
+Choose whether the sentence means 'is' or 'has':
+He's a two year old dog.
 
+is
 
+is
+has
 
 12
 
+input
 
+Complete the sentence using have or has:
+Louis ___ his own bedroom.
 
+has
 
+ff
 
 13
 
+simple
 
+TRUE OR FALSE: We pronounce stressed syllables louder.
 
+True
 
+True
+False
 
 14
 
+input
 
+Complete the question by choosing the correct word:
+What would you ____ to do?
 
+like
 
+ff
 
 15
 
+simple
 
+TRUE OR FALSE: We use apostrophe + 's' as a contraction for 'is' or 'has'.
 
+True
 
+True
+False
 
 16
 
+input
 
+Which word/article do we use with the following time expressions?:
+once _ week
+twice _ month
+three times _ year
 
+a
 
+ff
 
 17
 
+simple
 
+Complete the sentence by choosing the correct word:
+He hasn't got ___ younger sisters.
 
+any
 
+some
+any
+a
 
 18
 
-
+simple
 
 
 
 19
 
+simple
 
+Which of the following are positive statements?:
 
+Good thanks and you?
+Fantastic, see you there!
+Wonderful, how is it?
 
+Ah, that's a shame.
+Good thanks and you?
+...terrible, it's my back again.
+Oh, that's awful.
+Fantastic, see you there!
+Wonderful, how is it?
 
 20
 
+simple
 
+How do you show interest in a conversation?
 
+By responding and asking questions
 
+By interrupting the person
+By ignoring the person
+By responding and asking questions
 
 21
 
+simple
 
+TRUE OR FALSE: We use the word 'any' with questions and negatives using plural nouns:
 
+True
 
+True
+False
 
 22
 
+drop
 
+She's very talkative
+talks a lot
+It's not very interesting
+boring
+The food was really good
+very nice
+My parents are quite happy together.
+content/satisfied
 
-
+She's very talkative
+It's not very interesting
+The food was really good
+My parents are quite happy together.
+content/satisfied
+talks a lot
+boring
+very nice
 
 23
 
+input
 
+Complete the question by choosing the correct word:
+How ___ you?
 
+are
 
+ff
 
 24
 
+simple
 
+Which of the following are salutations?:
 
+Bye for now.
+It was nice to see you. Bye!
+Bye.
+See you soon.
 
+Hello, how are you?
+Bye for now.
+It was nice to see you. Bye!
+Bye.
+See you soon.
+I'm Debbie, who are you?
 
 25
+
+drop
+
+Choose the correct answers from the drop-down list. Click Submit answer.
+
+It has got three bedrooms.
+It's
+He has got a grandmother and grandfather.
+He's
+I have got a brother.
+I've
+We have got a sister.
+We've
+You have got a big house.
+You've
+She has got a pink bicycle.
+She's
+
+Choose the correct answers from the drop-down list. Click Submit answer.
+It has got three bedrooms.
+He has got a grandmother and grandfather.
+I have got a brother.
+We have got a sister.
+You have got a big house.
+She has got a pink bicycle.
+I've
+We've
+You've
+He's
+She's
+It's
+
+24
+
+simple
+
+Complete the sentence by choosing the correct word:
+It hasn't got...basement?
+
+a
+
+a
+its
+no
+
+
+=========
+
+Describing Activities
+
+
+
 
 
 

@@ -1,0 +1,46 @@
+
+
+HQ(config)#enable secret cisco
+
+HQ#disable 
+
+
+off/on - ctrl break (screen keyboard)
+
+>?
+
+rommon 6 > confreg 0x2142
+rommon 7 > reset
+
+
+
+HQ#copy startup-config running-config 
+
+HQ(config)#enable secret cisco1
+
+
+
+HQ#sh version 
+
+Configuration register is 0x2142
+
+HQ(config)#config-register 0x2102
+
+
+HQ#show version 
+
+Configuration register is 0x2142 (will be 0x2102 at next reload)
+
+!!!!!!!!!!!!!
+HQ#wr
+
+HQ#reload
+
+HQ(config)#int range f0/0-1
+HQ(config-if-range)#no shutdown 
+
+HQ(config)#no enable secret 
+
+
+
+

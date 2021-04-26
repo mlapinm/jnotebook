@@ -1,5 +1,7 @@
 01
 
+simple
+
 In the following phrases, which type of word is the second word?:
 too small
 too expensive
@@ -12,10 +14,9 @@ adverb
 adjective
 noun
 
-
-
-
 02
+
+simple
 
 Complete the sentence by choosing the correct word:
 I ____ it because it's a fun city with lots to do.
@@ -27,9 +28,9 @@ am
 do
 like
 
-
-
 03
+
+simple
 
 Complete the sentence by choosing the correct word:
 How _____ do you go?
@@ -41,22 +42,31 @@ can
 often
 will
 
-
-
 04
+
+input
 
 Which preposition does the graphic represent?
 |o|
+
 between
 
+ff
+
 05
+
+input
 
 Which polite word is missing from the sentence?:
 No ______, I'm just looking.
 
 thanks
 
+ff
+
 06
+
+simple
 
 Complete the sentence by choosing the correct word:
 One of my favourite ______ is Berlin.
@@ -68,10 +78,9 @@ places
 students
 living
 
-
-
-
 07
+
+input
 
 Which preposition does the graphic represent?
 _
@@ -79,8 +88,11 @@ o
 
 under
 
+ff
 
 08
+
+input
 
 Complete the answer by choosing the correct word:
 Q: Can I have a cup of tea please?
@@ -88,7 +100,11 @@ A: Yes, you ___.
 
 can
 
+ff
+
 09
+
+simple
 
 Which shops do we find household goods in? Choose three.
 
@@ -105,6 +121,8 @@ clothes shop
 
 10
 
+simple
+
 Complete the sentence by choosing the correct word:
 There ___ 85 apartments.
 
@@ -113,21 +131,22 @@ are
 is
 are
 
-
-
 11
 
+input
+
 Which negative word is missing from the sentences?:
-
-enough
-
 The glasses are not dark ______.
 The jacket is not big ______.
 The trousers are not long ______.
 
+enough
 
+ff
 
 12
+
+ordered
 
 What do you do there?
 Put the answer in the correct order.
@@ -138,7 +157,15 @@ go
 hiking and
 fishing
 
+I
+go
+usually
+fishing
+hiking and
+
 13
+
+simple
 
 Complete the sentence by choosing the correct word:
 _____ is your favourite place to go?
@@ -149,17 +176,20 @@ What
 Where
 Who
 
-
-
 14
+
+input
 
 Complete the sentence by choosing the correct form of the verb:
 My favourite place to (went) is Ireland.
 
 go
 
+ff
 
 15
+
+simple
 
 Complete the sentence by choosing the correct word:
 There aren't ___ underground car park spaces.
@@ -171,10 +201,9 @@ none
 some
 any
 
-
-
-
 16
+
+input
 
 Which preposition does the graphic represent?
 |o 
@@ -182,22 +211,33 @@ Which preposition does the graphic represent?
 next to
 beside
 
+ff
 
 17
+
+input
 
 Complete the sentence by choosing the correct form of the verb:
 I've (be) there twice.
 
 been
 
+ff
+
 18
 
+input
+
 Which preposition does the graphic represent?
-ф
+Ф
 
 behind
 
+ff
+
 19
+
+input
 
 Which preposition does the graphic represent?
 ||o
@@ -206,7 +246,11 @@ On the right of
 on the right of
 ON THE RIGHT OF
 
+ff
+
 20
+
+simple
 
 Which is a comma?
 
@@ -220,15 +264,20 @@ Which is a comma?
 ;
 
 
-
 21
+
+input
 
 Which word is missing from the sentence?:
 ___ I help you sir?
 
 can
 
+ff
+
 22
+
+simple
 
 In which type of statements do we use the word 'too'?
 
@@ -237,23 +286,16 @@ negative
 positive
 negative
 
-
-
 23
+
+input
 
 Which preposition does the graphic represent?
 o ||
 
 on the left of
 
-24
-
-
-
-
-
-25
-
+ff
 
 ====================
 English Course - Describing Places and Things (Elementary level)

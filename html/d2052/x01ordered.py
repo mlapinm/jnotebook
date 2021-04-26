@@ -2,6 +2,10 @@ import os
 import re
 
 class Lines:
+    '''
+    new file next b1012.txt, b1022.txt, b1032.txt
+    with 25 lines
+    '''
     linesEmpty = []
     spaces = 0
     number = 0
@@ -11,6 +15,10 @@ class Lines:
     def setNumber(self, number):
         self.number = number
         return self
+
+    def setSimple(self):
+
+        pass
 
     def setSpaces(self, spaces):
         self.spaces = spaces
@@ -67,3 +75,4 @@ lines.nextName().write()
 print(f"make file {lines.getName()} with length:")
 print(lines.length(), "=", lines.number, 'x ( 1 +', lines.spaces, ")")
 input()
+

@@ -1,0 +1,54 @@
+
+
+
+SW1(config)#int range f0/2-3
+SW1(config-if-range)#shutdown 
+SW1(config-if-range)#channel-group 1 mode active 
+SW1(config-if-range)#no shutdown 
+
+
+
+SW1(config)#int port-channel 1
+SW1(config-if)#switchport mode trunk 
+
+
+SW2(config)#int range f0/2-3
+SW2(config-if-range)#switchport mode trunk 
+SW2(config-if-range)#shutdown 
+SW2(config-if-range)#channel-group 1 mode active 
+SW2(config-if-range)#no shutdown 
+SW2(config)#int port-channel 1
+SW2(config-if)#switchport mode trunk 
+
+SW2#sh etherchannel summary 
+
+SW2#sh etherchannel port-channel 
+
+SW2#show spanning-tree 
+
+SW1(config)#int f0/1
+SW1(config-if)#switchport port-security maximum 1
+SW1(config-if)#switchport port-security violation shutdown 
+
+SW2(config)#int f0/1
+SW2(config-if)#switchport port-security maximum 1
+SW2(config-if)#switchport port-security violation shutdown 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

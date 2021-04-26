@@ -1,21 +1,13 @@
 
-
-
-$(()=>{
-
-  
+function openTest(pNameJson){
   let tests = []
-  let url = "m01.json"
-  $.getJSON(url, function(data) {
+  $.getJSON(pNameJson, function(data) {
     data.forEach(element => {
       
       tests.push(element)
     });
   }).then(()=>{
   
-
-
-
 class RoundSimple{
   
   constructor(test){
@@ -351,4 +343,22 @@ function onsubmit(){
 
 // $(".test").text(tests[number].variants)
 })
+
+}
+
+$(()=>{
+
+  var url_string = window.location.href; //window.location.href
+  var url = new URL(url_string);
+  var nameJson = url.searchParams.get("test");
+  let testJson = nameJson + ".json"
+
+  $.get(testJson)
+    .done(function() { 
+        openTest(testJson)
+    }).fail(function() { 
+      openTest("m01.json")
+        testJson = "m01.json"
+      })
 })
+//})

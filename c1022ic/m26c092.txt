@@ -1,0 +1,45 @@
+
+
+BRANCH#sh controllers s0/0/1
+
+BRANCH(config)#int s0/0/1
+BRANCH(config-if)#ip address 172.16.100.1 255.255.255.0
+BRANCH(config-if)#ipv6 address 2001:100::1/64
+BRANCH(config-if)#clock rate 64000
+
+BRANCHA(config)#int s0/0/1
+BRANCHA(config-if)#ip address 172.16.100.2 255.255.255.0
+BRANCHA(config-if)#ipv6 address 2001:100::2/64
+
+BRANCHA#sh int s0/0/1
+BRANCHA#sh contr s0/0/1
+
+
+BRANCHA(config)#int s0/0/0
+BRANCHA(config-if)#ip address 172.16.200.2 255.255.255.0
+BRANCHA(config-if)#ipv6 address 2001:200::2/64
+BRANCHA(config-if)#no sh
+
+
+HQ(config)#int s0/0/1
+HQ(config-if)#ip address 172.16.200.1 255.255.255.0
+HQ(config-if)#ipv6 address 2001:200::1/64
+HQ(config-if)#no sh
+HQ(config-if)#clock rate 64000
+
+HQ#ping 172.16.200.2
+HQ#ping ipv6 2001:200::2
+
+HQ(config-if)#encapsulation ppp 
+
+BRANCHA(config-if)#int s0/0/0
+BRANCHA(config-if)#encapsulation ppp 
+BRANCHA(config-if)#int s0/0/1
+BRANCHA(config-if)#encapsulation ppp 
+
+BRANCH(config)#int s0/0/1
+BRANCH(config-if)#encapsulation ppp 
+
+
+
+

@@ -1,0 +1,36 @@
+
+http://192.168.1.100
+
+BRANCH(config)#ip access-list extended BLOCKPC2
+BRANCH(config-ext-nacl)#deny tcp host 10.1.20.100 host 192.168.1.100 eq 80
+
+BRANCH(config)#ip access-list extended BLOCKPC2
+BRANCH(config-ext-nacl)#deny tcp host 10.1.20.100 host 192.168.1.100 eq 80
+BRANCH(config-ext-nacl)#permit ip host 10.1.20.100 host 192.168.1.100
+BRANCH(config-ext-nacl)#int f0/0.20
+BRANCH(config-subif)#ip access-group BLOCKPC2 in 
+
+BRANCH(config-subif)#do sh ip int f0/0.20
+
+BRANCH(config-subif)#do sh ip acc
+
+http://192.168.1.100
+Request Timeout
+
+C:\>ftp 192.168.1.100
+cisco cisco
+
+BRANCH(config)#ip access-list extended BLOCKPC2
+
+BRANCH(config-ext-nacl)#permit ip any any 
+BRANCH(config-ext-nacl)#do wr
+
+BRANCH(config)#no ip access-list extended BLOCKPC2
+BRANCH(config)#do sh ip acc
+
+
+
+
+
+
+

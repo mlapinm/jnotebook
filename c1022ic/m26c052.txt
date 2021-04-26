@@ -1,0 +1,17 @@
+
+
+SW2#erase startup-config 
+
+SW2#sh flash
+
+SW2#delete vlan.dat
+
+SW2#reload 
+
+
+BRANCH#erase startup-config 
+
+BRANCH#reload 
+
+
+

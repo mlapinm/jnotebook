@@ -1,0 +1,462 @@
+[
+  {
+    "number": "01",
+    "type": "ordered",
+    "asks": [
+      "Arrange the parts of a conversation into the correct order:"
+    ],
+    "responses": [
+      "Greeting/introduction",
+      "Ask about the person",
+      "Give news/information",
+      "Show interest",
+      "Make a suggestion",
+      "Make an arrangement"
+    ],
+    "variants": [
+      "Make a suggestion",
+      "Give news/information",
+      "Greeting/introduction",
+      "Ask about the person",
+      "Show interest",
+      "Make an arrangement"
+    ]
+  },
+  {
+    "number": "02",
+    "type": "input",
+    "asks": [
+      "Complete the expression by choosing the correct word:",
+      "I'm _______ forward to it."
+    ],
+    "responses": [
+      "looking"
+    ],
+    "variants": [
+      "ff"
+    ]
+  },
+  {
+    "number": "03",
+    "type": "input",
+    "asks": [
+      "Complete the question by choosing the correct word:",
+      "Are you free __ Sunday?"
+    ],
+    "responses": [
+      "on"
+    ],
+    "variants": [
+      "ff"
+    ]
+  },
+  {
+    "number": "04",
+    "type": "simple",
+    "asks": [
+      "Which Western festival coincides with the Mexican Day of the Dead?"
+    ],
+    "responses": [
+      "Halloween"
+    ],
+    "variants": [
+      "Halloween",
+      "Carnival",
+      "Glastonbury",
+      "Burning Man"
+    ]
+  },
+  {
+    "number": "05",
+    "type": "simple",
+    "asks": [
+      "TRUE OR FALSE: We use adverbs of frequency to say how often we do something."
+    ],
+    "responses": [
+      "True"
+    ],
+    "variants": [
+      "True",
+      "False"
+    ]
+  },
+  {
+    "number": "06",
+    "type": "simple",
+    "asks": [
+      "TRUE OR FALSE: 'Usually' and 'sometimes' never go at the beginning of a sentence."
+    ],
+    "responses": [
+      "False"
+    ],
+    "variants": [
+      "True",
+      "False"
+    ]
+  },
+  {
+    "number": "07",
+    "type": "input",
+    "asks": [
+      "Complete the sentence by choosing the correct word:",
+      "Let's __ for a walk."
+    ],
+    "responses": [
+      "go"
+    ],
+    "variants": [
+      "ff"
+    ]
+  },
+  {
+    "number": "08",
+    "type": "drop",
+    "asks": [
+      "Match the opposites together:"
+    ],
+    "responses": [
+      [
+        "intelligent",
+        "stupid"
+      ],
+      [
+        "talkative",
+        "quiet"
+      ],
+      [
+        "friendly",
+        "unfriendly"
+      ],
+      [
+        "funny",
+        "serious"
+      ],
+      [
+        "kind",
+        "unkind"
+      ]
+    ],
+    "variants": [
+      [
+        "intelligent",
+        "talkative",
+        "friendly",
+        "funny",
+        "kind"
+      ],
+      [
+        "unkind",
+        "stupid",
+        "serious",
+        "unfriendly",
+        "quiet"
+      ]
+    ]
+  },
+  {
+    "number": "09",
+    "type": "input",
+    "asks": [
+      "Complete the sentence using have or has:",
+      "They get up at 7 o'clock in the morning and ____ breakfast together."
+    ],
+    "responses": [
+      "have"
+    ],
+    "variants": [
+      "ff"
+    ]
+  },
+  {
+    "number": "10",
+    "type": "simple",
+    "asks": [
+      "TRUE OR FALSE: We use 'is' to talk about people directly."
+    ],
+    "responses": [
+      "True"
+    ],
+    "variants": [
+      "True",
+      "False"
+    ]
+  },
+  {
+    "number": "11",
+    "type": "simple",
+    "asks": [
+      "Choose whether the sentence means 'is' or 'has':",
+      "He's a two year old dog."
+    ],
+    "responses": [
+      "is"
+    ],
+    "variants": [
+      "is",
+      "has"
+    ]
+  },
+  {
+    "number": "12",
+    "type": "input",
+    "asks": [
+      "Complete the sentence using have or has:",
+      "Louis ___ his own bedroom."
+    ],
+    "responses": [
+      "has"
+    ],
+    "variants": [
+      "ff"
+    ]
+  },
+  {
+    "number": "13",
+    "type": "simple",
+    "asks": [
+      "TRUE OR FALSE: We pronounce stressed syllables louder."
+    ],
+    "responses": [
+      "True"
+    ],
+    "variants": [
+      "True",
+      "False"
+    ]
+  },
+  {
+    "number": "14",
+    "type": "input",
+    "asks": [
+      "Complete the question by choosing the correct word:",
+      "What would you ____ to do?"
+    ],
+    "responses": [
+      "like"
+    ],
+    "variants": [
+      "ff"
+    ]
+  },
+  {
+    "number": "15",
+    "type": "simple",
+    "asks": [
+      "TRUE OR FALSE: We use apostrophe + 's' as a contraction for 'is' or 'has'."
+    ],
+    "responses": [
+      "True"
+    ],
+    "variants": [
+      "True",
+      "False"
+    ]
+  },
+  {
+    "number": "16",
+    "type": "input",
+    "asks": [
+      "Which word/article do we use with the following time expressions?:",
+      "once _ week",
+      "twice _ month",
+      "three times _ year"
+    ],
+    "responses": [
+      "a"
+    ],
+    "variants": [
+      "ff"
+    ]
+  },
+  {
+    "number": "17",
+    "type": "simple",
+    "asks": [
+      "Complete the sentence by choosing the correct word:",
+      "He hasn't got ___ younger sisters."
+    ],
+    "responses": [
+      "any"
+    ],
+    "variants": [
+      "some",
+      "any",
+      "a"
+    ]
+  },
+  {
+    "number": "19",
+    "type": "simple",
+    "asks": [
+      "Which of the following are positive statements?:"
+    ],
+    "responses": [
+      "Good thanks and you?",
+      "Fantastic, see you there!",
+      "Wonderful, how is it?"
+    ],
+    "variants": [
+      "Ah, that's a shame.",
+      "Good thanks and you?",
+      "...terrible, it's my back again.",
+      "Oh, that's awful.",
+      "Fantastic, see you there!",
+      "Wonderful, how is it?"
+    ]
+  },
+  {
+    "number": "20",
+    "type": "simple",
+    "asks": [
+      "How do you show interest in a conversation?"
+    ],
+    "responses": [
+      "By responding and asking questions"
+    ],
+    "variants": [
+      "By interrupting the person",
+      "By ignoring the person",
+      "By responding and asking questions"
+    ]
+  },
+  {
+    "number": "21",
+    "type": "simple",
+    "asks": [
+      "TRUE OR FALSE: We use the word 'any' with questions and negatives using plural nouns:"
+    ],
+    "responses": [
+      "True"
+    ],
+    "variants": [
+      "True",
+      "False"
+    ]
+  },
+  {
+    "number": "22",
+    "type": "drop",
+    "asks": [
+      "which to"
+    ],
+    "responses": [
+      [
+        "She's very talkative",
+        "talks a lot"
+      ],
+      [
+        "It's not very interesting",
+        "boring"
+      ],
+      [
+        "The food was really good",
+        "very nice"
+      ],
+      [
+        "My parents are quite happy together.",
+        "content/satisfied"
+      ]
+    ],
+    "variants": [
+      [
+        "She's very talkative",
+        "It's not very interesting",
+        "The food was really good",
+        "My parents are quite happy together."
+      ],
+      [
+        "content/satisfied",
+        "talks a lot",
+        "boring",
+        "very nice"
+      ]
+    ]
+  },
+  {
+    "number": "23",
+    "type": "input",
+    "asks": [
+      "Complete the question by choosing the correct word:",
+      "How ___ you?"
+    ],
+    "responses": [
+      "are"
+    ],
+    "variants": [
+      "ff"
+    ]
+  },
+  {
+    "number": "24",
+    "type": "simple",
+    "asks": [
+      "Which of the following are salutations?:"
+    ],
+    "responses": [
+      "Bye for now.",
+      "It was nice to see you. Bye!",
+      "Bye.",
+      "See you soon."
+    ],
+    "variants": [
+      "Hello, how are you?",
+      "Bye for now.",
+      "It was nice to see you. Bye!",
+      "Bye.",
+      "See you soon.",
+      "I'm Debbie, who are you?"
+    ]
+  },
+  {
+    "number": "25",
+    "type": "drop",
+    "asks": [
+      "Choose the correct answers from the drop-down list. Click Submit answer."
+    ],
+    "responses": [
+      "It has got three bedrooms.",
+      "It's",
+      "He has got a grandmother and grandfather.",
+      "He's",
+      "I have got a brother.",
+      "I've",
+      "We have got a sister.",
+      "We've",
+      "You have got a big house.",
+      "You've",
+      "She has got a pink bicycle.",
+      "She's"
+    ],
+    "variants": [
+      "Choose the correct answers from the drop-down list. Click Submit answer.",
+      "It has got three bedrooms.",
+      "He has got a grandmother and grandfather.",
+      "I have got a brother.",
+      "We have got a sister.",
+      "You have got a big house.",
+      "She has got a pink bicycle.",
+      "I've",
+      "We've",
+      "You've",
+      "He's",
+      "She's",
+      "It's"
+    ]
+  },
+  {
+    "number": "24",
+    "type": "simple",
+    "asks": [
+      "Complete the sentence by choosing the correct word:",
+      "It hasn't got...basement?"
+    ],
+    "responses": [
+      "a"
+    ],
+    "variants": [
+      "a",
+      "its",
+      "no"
+    ]
+  }
+]

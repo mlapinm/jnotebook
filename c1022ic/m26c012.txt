@@ -1,0 +1,54 @@
+
+
+HQ(config)# int f0/1
+HQ(config-if)#shutdown 
+HQ(config-if)#do wr
+HQ(config-if)#ex
+
+HQ(config)#int s0/0/0
+HQ(config-if)#ip address 1.1.1.1 255.255.255.0
+
+
+HQ#copy running-config tftp: 
+Address or name of remote host []? 10.2.2.100
+Destination filename [HQ-confg]? a01running-config
+
+HQ#reload 
+
+HQ#copy tftp: running-config 
+Address or name of remote host []? 10.2.2.100
+Source filename []? a01running-config
+Destination filename [running-config]? 
+
+--------
+
+
+HQ#show flash: 
+  3   50938004 c2800nm-advipservicesk9-mz.124-15.T1.bin
+
+HQ#copy flash: tftp: 
+Source filename []? c2800nm-advipservicesk9-mz.124-15.T1.bin
+Address or name of remote host []? 10.2.2.100
+Destination filename [c2800nm-advipservicesk9-mz.124-15.T1.bin]? 
+
+HQ#copy tftp: flash: 
+Address or name of remote host []? 10.2.2.100
+Source filename []? c2800nm-advipservicesk9-mz.124-15.T1.bin
+Destination filename [c2800nm-advipservicesk9-mz.124-15.T1.bin]? 
+
+-----
+
+Switch#erase startup-config 
+
+
+SW1#sh flash: 
+Switch#delete vlan.dat
+Switch#reload 
+
+
+
+
+
+
+
+

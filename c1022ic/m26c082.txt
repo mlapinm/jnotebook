@@ -1,0 +1,82 @@
+
+
+BRANCH#sh ip int br
+BRANCH#show ip route
+
+HQ(config)#int f0/1
+HQ(config-if)#ip address 209.165.201.1 255.255.255.0
+
+HQ(config)#ip dhcp pool HQ
+HQ(dhcp-config)#network 209.165.201.0 255.255.255.0
+
+HQ(dhcp-config)#default-router 209.165.201.1
+HQ(config)#ip dhcp excluded-address 209.165.201.1 209.165.201.10
+
+HQ(config)#int f0/1
+HQ(config-if)#no sh
+
+
+BRANCH(config)#int f0/1
+BRANCH(config-if)#no sh
+BRANCH(config-if)#ip address dhcp 
+BRANCH(config-if)#do sh ip int br
+
+BRANCH(config)#int f0/1
+BRANCH(config-if)#ip address 209.165.201.2 255.255.255.0
+
+BRANCH(config)#int f1/0
+BRANCH(config-if)#ip address 172.16.4.1 255.255.255.0
+BRANCH(config-if)#no sh
+
+
+BRANCHA(config)#int f0/1
+BRANCHA(config-if)#ip address 172.16.4.2 255.255.255.0
+BRANCHA(config-if)#no sh
+BRANCHA(config-if)#do sh ip int br
+
+
+BRANCHA(config-if)#int f0/0
+BRANCHA(config-if)#ip address 172.16.5.2 255.255.255.0
+BRANCHA(config-if)#no sh
+
+
+HQ(config)#line console 0
+HQ(config-line)#logging synchronous 
+HQ(config-line)#int f1/0
+HQ(config-if)#ip address 172.16.5.1 255.255.255.0
+HQ(config-if)#no sh
+
+HQ(config)#ipv6 unicast-routing 
+
+HQ(config)#int f0/1
+HQ(config-if)#ipv6 address 2001:2::1/64
+HQ(config-if)#int f1/0
+HQ(config-if)#ipv6 address 2001:4::1/64
+HQ(config-if)#int f0/0
+HQ(config-if)#ip address 192.168.1.1 255.255.255.0
+HQ(config-if)#ipv6 address 2001:192::1/64
+HQ(config-if)#no sh
+
+
+BRANCHA(config)#int f0/0
+BRANCHA(config-if)#ipv6 address 2001:4::2/64
+BRANCHA(config-if)#int f0/1
+BRANCHA(config-if)#ipv6 address 2001:3::1/64
+
+
+BRANCH(config)#int f0/1
+BRANCH(config-if)#ipv6 address 2001:2::2/64
+BRANCH(config-if)#int f1/0
+BRANCH(config-if)#ipv6 address 2001:3::1/64
+
+BRANCH(config)#int f0/0
+BRANCH(config-if)#ipv6 address 2001:1::1/64
+BRANCH(config-if)#int f0/0.10
+BRANCH(config-subif)#ipv6 address 2001:10::1/64
+BRANCH(config-subif)#int f0/0.20
+BRANCH(config-subif)#ipv6 address 2001:20::1/64
+
+
+
+
+
