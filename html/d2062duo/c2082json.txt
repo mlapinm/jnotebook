@@ -1,0 +1,474 @@
+[
+  {
+    "ru": "Она хочет, чтобы он сказал ей правду",
+    "en": "She wants him to tell her the truth"
+  },
+  {
+    "ru": "Акушерки сказали мне, чтобы поддерживать грудное вскармливание",
+    "en": "The midwives told me to keep breastfeeding"
+  },
+  {
+    "ru": "Жареный чеснок добавить горький вкус к рису",
+    "en": "Fried garlic add a bitter taste to the rice"
+  },
+  {
+    "ru": "Я не могу стоять есть соленое мясо",
+    "en": "I ca n't stand eating salty meat"
+  },
+  {
+    "ru": "Они едят капусту в этой стране",
+    "en": "do they eat cabbage in that country"
+  },
+  {
+    "ru": "его запястья красные",
+    "en": "his wrists are red"
+  },
+  {
+    "ru": "Я подал ее от обеих грудей каждый раз",
+    "en": "I fed her from both breasts each time"
+  },
+  {
+    "ru": "Это мой запястье",
+    "en": "It is my wrist"
+  },
+  {
+    "ru": "Не кладите локти на стол",
+    "en": "Do n't put your elbows on the table"
+  },
+  {
+    "ru": "Его сын сидит на его плече",
+    "en": "His son is sitting on his shoulder"
+  },
+  {
+    "ru": "По крайней мере, твоя спина и руки не так волосаты",
+    "en": "At least your back and arms are n't so hairy"
+  },
+  {
+    "ru": "Из моей руки до моего локтя",
+    "en": "From my hand to my elbow"
+  },
+  {
+    "ru": "Я положил руку на плечо и обнял ее",
+    "en": "I put my hand on her shoulder and hugged her"
+  },
+  {
+    "ru": "Я обычно хожу в школу пешком",
+    "en": "I usually go to school on foot"
+  },
+  {
+    "ru": "Она прыгнула на ноги и побежала",
+    "en": "She jumped to her feet and ran"
+  },
+  {
+    "ru": "Некоторые люди привыкли жить с одной почкой",
+    "en": "some people get used to living with one kidney"
+  },
+  {
+    "ru": "Вы не можете сделать это, потому что ваши мышцы спины слабые",
+    "en": "You ca n't do it because your back muscles are weak"
+  },
+  {
+    "ru": "У этой девушки нет талии",
+    "en": "This girl has no waist"
+  },
+  {
+    "ru": "Это жирные масла",
+    "en": "This are fatty oils"
+  },
+  {
+    "ru": "Не говорите себе, что ваши морщины - проблема",
+    "en": "Do n't tell yourself that your wrinkles are a problem"
+  },
+  {
+    "ru": "Щеки моей жены стали красными",
+    "en": "My wife's cheeks became red"
+  },
+  {
+    "ru": "Его брови являются коричневыми",
+    "en": "His eyebrows are brown"
+  },
+  {
+    "ru": "Его подбородок слишком велик",
+    "en": "His chin is too big"
+  },
+  {
+    "ru": "Показать свой язык, пожалуйста",
+    "en": "Show your tongue please"
+  },
+  {
+    "ru": "У этого человека есть маленькая челюсть",
+    "en": "This man has a small jaw"
+  },
+  {
+    "ru": "Он пришел к нам и упал на колени",
+    "en": "He came to us and fell to his knees"
+  },
+  {
+    "ru": "Почему в раковине так много воды",
+    "en": "Why is there so much water in the sink"
+  },
+  {
+    "ru": "Гараж недостаточно велик для своей машины",
+    "en": "The garage is not big enough for their car"
+  },
+  {
+    "ru": "Каковы легкие",
+    "en": "what are the lungs"
+  },
+  {
+    "ru": "Ее штаны оранжевые",
+    "en": "Her pants are orange"
+  },
+  {
+    "ru": "Эти ваши штаны",
+    "en": "Are these your pants"
+  },
+  {
+    "ru": "Я говорю о паре штанов",
+    "en": "I am speaking about pair of pants"
+  },
+  {
+    "ru": "На воротнике и на рукавах будут большие черные кнопки",
+    "en": "On the collar and on the sleeves will be big black buttons"
+  },
+  {
+    "ru": "Я предпочитаю шляпы из искусственного меха",
+    "en": "I prefer hats made of faux fur"
+  },
+  {
+    "ru": "спереди",
+    "en": "to the front"
+  },
+  {
+    "ru": "Сутки белые",
+    "en": "The surtains are white"
+  },
+  {
+    "ru": "Шторы белые",
+    "en": "The curtains are white"
+  },
+  {
+    "ru": "Не говорите себе, что ваши морщины - проблема",
+    "en": "Do n't tell yourself that your wrinkles are a problem"
+  },
+  {
+    "ru": "Его подбородок слишком велик",
+    "en": "His chin is too big"
+  },
+  {
+    "ru": "Мне нравится ее фиолетовое платье",
+    "en": "I like her violet dress"
+  },
+  {
+    "ru": "Она дала мне кожаную сумку",
+    "en": "She gave me a leather bag"
+  },
+  {
+    "ru": "Я дам вам мои кожаные перчатки",
+    "en": "I will give you my a leather gloves"
+  },
+  {
+    "ru": "Эта вишня темно-красная",
+    "en": "This cherry is dark red"
+  },
+  {
+    "ru": "Это арбуз фруктов",
+    "en": "Is watermelon a fruit"
+  },
+  {
+    "ru": "Давайте отрезам дыню для нашего салата",
+    "en": "Let's cut a melon for our salad"
+  },
+  {
+    "ru": "Если вы принесете дыню, мы ем, это вместе",
+    "en": "If you bring a melon we eat will it together"
+  },
+  {
+    "ru": "Вишни слишком кислые",
+    "en": "The cherries are too sour"
+  },
+  {
+    "ru": "Не ешьте эти белые вишни",
+    "en": "Do not eat these white cherries"
+  },
+  {
+    "ru": "Он любит арбузы больше, чем дыни",
+    "en": "He likes watermelons more than melons"
+  },
+  {
+    "ru": "Вот ягоды для фруктового салата",
+    "en": "Here are the berries for the fruit salad"
+  },
+  {
+    "ru": "Если вы хотите, чтобы красная ягода возьмет ее",
+    "en": "If you want the red berry take it"
+  },
+  {
+    "ru": "Если вы принесете дыню, мы будем есть его вместе",
+    "en": "If you bring a melon we will eat it together"
+  },
+  {
+    "ru": "Я ем орехи",
+    "en": "I eat nuts"
+  },
+  {
+    "ru": "Это гайка",
+    "en": "It's a nut"
+  },
+  {
+    "ru": "Кто тот горит, к которому он говорит",
+    "en": "Who is that cook to whom he is speaking"
+  },
+  {
+    "ru": "Эта желтая губка для моих друзей кухни",
+    "en": "That yellow sponge is for my friends kitchen"
+  },
+  {
+    "ru": "Мальчик ест печенье",
+    "en": "The boy eats the cookie"
+  },
+  {
+    "ru": "Не ешьте этот красный гриб",
+    "en": "Do not eat that red mushroom"
+  },
+  {
+    "ru": "Перчатки обычно изготовлены из кожи",
+    "en": "Gloves are usually made of leather"
+  },
+  {
+    "ru": "Эти штаны сделаны из шерсти",
+    "en": "This pants are made of wool"
+  },
+  {
+    "ru": "Ее штаны оранжевые",
+    "en": "Her pants are orange"
+  },
+  {
+    "ru": "Эта вишня темно-красная",
+    "en": "This cherry is dark red"
+  },
+  {
+    "ru": "Это арбуз фруктов",
+    "en": "Is watermelon a fruit"
+  },
+  {
+    "ru": "Давайте отрезам дыню для нашего салата",
+    "en": "Let's cut a melon for our salad"
+  },
+  {
+    "ru": "Если вы принесете дыню, мы ем, это вместе",
+    "en": "If you bring a melon we eat will it together"
+  },
+  {
+    "ru": "Вишни слишком кислые",
+    "en": "The cherries are too sour"
+  },
+  {
+    "ru": "Не ешьте эти белые вишни",
+    "en": "Do not eat these white cherries"
+  },
+  {
+    "ru": "Он любит арбузы больше, чем дыни",
+    "en": "He likes watermelons more than melons"
+  },
+  {
+    "ru": "Вот ягоды для фруктового салата",
+    "en": "Here are the berries for the fruit salad"
+  },
+  {
+    "ru": "Если вы хотите, чтобы красная ягода возьмет его",
+    "en": "If you want the red berry take it"
+  },
+  {
+    "ru": "Если вы принесете дыню, мы будем есть его вместе",
+    "en": "If you bring a melon we will eat it together"
+  },
+  {
+    "ru": "Я ем орехи",
+    "en": "I eat nuts"
+  },
+  {
+    "ru": "Это гайка",
+    "en": "It's a nut"
+  },
+  {
+    "ru": "Кто тот горит, к которому он говорит",
+    "en": "Who is that cook to whom he is speaking"
+  },
+  {
+    "ru": "Эта желтая губка для моих друзей кухни",
+    "en": "That yellow sponge is for my friends kitchen"
+  },
+  {
+    "ru": "Мальчик ест печенье",
+    "en": "The boy eats the cookie"
+  },
+  {
+    "ru": "Не ешьте этот красный гриб",
+    "en": "Do not eat that red mushroom"
+  },
+  {
+    "ru": "Джон обычно добавляет свежий чеснок в свой суп",
+    "en": "John usually add some fresh garlic to his soup"
+  },
+  {
+    "ru": "Жарить чеснок в течение трех минут",
+    "en": "Fry the garlic for three minutes"
+  },
+  {
+    "ru": "Яблоки добавляют сладкое послевкусие",
+    "en": "An apples add a sweet aftertaste"
+  },
+  {
+    "ru": "Они легко становятся кисными",
+    "en": "they turn sour easily"
+  },
+  {
+    "ru": "Жарить чеснок в течение трех минут",
+    "en": "Fry the garlic for three minutes"
+  },
+  {
+    "ru": "Бананы вкусные",
+    "en": "The bananas are tasty"
+  },
+  {
+    "ru": "Они легко становятся кислого",
+    "en": "They easily turn sour"
+  },
+  {
+    "ru": "Картофель с луком очень вкусные",
+    "en": "Potatoes with onion are very tasty"
+  },
+  {
+    "ru": "Они используют слишком много чеснока",
+    "en": "They use too much garlic"
+  },
+  {
+    "ru": "Это яблоко слаще",
+    "en": "This apple is sweeter"
+  },
+  {
+    "ru": "Это мясо вкусно",
+    "en": "Is the meat tasty"
+  },
+  {
+    "ru": "Давайте добавим больше лука",
+    "en": "Let's add more onion"
+  },
+  {
+    "ru": "Вкус будет лучше, если добавит две чайные ложки сахара",
+    "en": "The taste will be better if she adds two teaspoons of the sugar"
+  },
+  {
+    "ru": "Это хороший вкус",
+    "en": "Is the taste good"
+  },
+  {
+    "ru": "Хорошо, хорошего вечера",
+    "en": "okay have a good evening"
+  },
+  {
+    "ru": "Этим вечером они собираются жарить картофель",
+    "en": "Are they going to fry potatoes this evening"
+  },
+  {
+    "ru": "Нет ничего лучше, чем свежая морковь",
+    "en": "There is nothing better than a fresh carrot"
+  },
+  {
+    "ru": "Я люблю картофельный суп своей матери",
+    "en": "I love my mother's potato soup"
+  },
+  {
+    "ru": "Она делает едят рыбную масло каждый день",
+    "en": "She makes eat fish oil every day"
+  },
+  {
+    "ru": "Муж моей сестры никогда не ест лук",
+    "en": "My sister's husband never eats onion"
+  },
+  {
+    "ru": "Я продаю морковь",
+    "en": "I am selling carrots"
+  },
+  {
+    "ru": "Вы используете много нефти",
+    "en": "Do you use much oil"
+  },
+  {
+    "ru": "Муж моей сестры никогда не ест лук",
+    "en": "My sister's husband never eats onion"
+  },
+  {
+    "ru": "Будете ли вы добавить любой перец",
+    "en": "Will you add any pepper"
+  },
+  {
+    "ru": "Я не могу есть это мясо без перца",
+    "en": "I ca n't eat this meat without pepper"
+  },
+  {
+    "ru": "Вам понадобится два крупных картофеля и три или четырех маленьких лука",
+    "en": "You will need two large potatoes and three or foure small onions"
+  },
+  {
+    "ru": "Она купила два галлона растительного масла",
+    "en": "She bought two gallons of vegetable oil"
+  },
+  {
+    "ru": "Я продаю морковь",
+    "en": "I am selling carrots"
+  },
+  {
+    "ru": "Пока ученые много пишут, что они вообще не писатели",
+    "en": "While scientists write a lot they are not writers at all"
+  },
+  {
+    "ru": "Эти книги немецкого писателя очень смешны",
+    "en": "This German writer's books are very funny"
+  },
+  {
+    "ru": "Он играет и выигрывает еще одну чашку",
+    "en": "he plays and wins another cup"
+  },
+  {
+    "ru": "Добавьте одну столовую ложку в то время",
+    "en": "Add one tablespoon at the time"
+  },
+  {
+    "ru": "Я могу дать ему только пол галлона воды",
+    "en": "I can gave him only half a gallon of water"
+  },
+  {
+    "ru": "Один галлон равен сто двадцать восемь унций",
+    "en": "One gallon equals one hundred twenty eight ounces"
+  },
+  {
+    "ru": "Один фунт равен шестнадцать унций",
+    "en": "One pound equals sixteen ounces"
+  },
+  {
+    "ru": "Добавьте три столовые ложки сахара",
+    "en": "Add three tablespoons of sugar"
+  },
+  {
+    "ru": "Эта маленькая бутылка - четыре унции, а большая бутылка восемь",
+    "en": "This small bottle is four ounces and a big bottle is eight"
+  },
+  {
+    "ru": "Для чего эта ложка",
+    "en": "What is this spoon for"
+  },
+  {
+    "ru": "Одна чашка равна шестнадцать столовых ложек",
+    "en": "One cup equals sixteen tablespoons"
+  },
+  {
+    "ru": "Чашки на этой полке",
+    "en": "The cups are on that shelf"
+  },
+  {
+    "ru": "Кто пьет из этой чашки",
+    "en": "Who drinks from that cup"
+  }
+]

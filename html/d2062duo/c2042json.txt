@@ -1,0 +1,458 @@
+[
+  {
+    "ru": "Пчелы вообще не опасны",
+    "en": "bees are not dangerous at all"
+  },
+  {
+    "ru": "Это муха",
+    "en": "Is that a fly"
+  },
+  {
+    "ru": "Это красные муравья",
+    "en": "These are red ants"
+  },
+  {
+    "ru": "В комнате слишком много комаров",
+    "en": "There are too many mosquitoes in the room"
+  },
+  {
+    "ru": "Вы видите маленький зеленый паук там",
+    "en": "do you see the little green spider up there"
+  },
+  {
+    "ru": "Я вижу паука на потолке",
+    "en": "I can see a spider on the ceiling"
+  },
+  {
+    "ru": "Муравей может быть маленьким, но его ноги сильны",
+    "en": "An ant might be small but its legs are strong"
+  },
+  {
+    "ru": "Эти пчелы делают мед",
+    "en": "Do these bees make honey"
+  },
+  {
+    "ru": "Гуси гуляли по улице",
+    "en": "The geese walked along the street"
+  },
+  {
+    "ru": "Когда он вернулся из США, он дал мне перо орел",
+    "en": "When he came back from the usa he gave me an eagle's feather"
+  },
+  {
+    "ru": "Совы всегда наблюдают мыши ночью",
+    "en": "owls always watch mice at night"
+  },
+  {
+    "ru": "У Гарри была снежная сова",
+    "en": "harry had a snowy owl"
+  },
+  {
+    "ru": "Совы могут видеть в темноте",
+    "en": "Owls can see in the dark"
+  },
+  {
+    "ru": "Гуси гуляли по улице",
+    "en": "the geese walked along the street"
+  },
+  {
+    "ru": "Клюк этой птицы очень большой",
+    "en": "The beak of this bird is very big"
+  },
+  {
+    "ru": "Мы ем куриные крылышки",
+    "en": "we are eating some chicken wings"
+  },
+  {
+    "ru": "У моей птицы красный клюв",
+    "en": "my bird has a red beak"
+  },
+  {
+    "ru": "Это было единственное животное в стаде с белой гривой",
+    "en": "it was the only animal in the herd with a white mane"
+  },
+  {
+    "ru": "Да, это зайцы",
+    "en": "Yes it's a hare"
+  },
+  {
+    "ru": "Это было животное с небольшими зубами длинными когтями и коротким хвостом",
+    "en": "it was animal with small teeth long claws and a short tail"
+  },
+  {
+    "ru": "обычно имеют десять до пятнадцати оленей в одном тяжело",
+    "en": "ther are usually ten to fifteen deer in one hard"
+  },
+  {
+    "ru": "Птицы не млекопитающие белые киты",
+    "en": "birds are not mammals white whales are"
+  },
+  {
+    "ru": "Тигр убьет его одним коготь",
+    "en": "a tiger would kill him with one claw"
+  },
+  {
+    "ru": "У белой лошади была длинная мягкая грива",
+    "en": "The white horse had a long soft mane"
+  },
+  {
+    "ru": "В чем разница между зайцами и кроликами",
+    "en": "What is the difference between hares and rabbits"
+  },
+  {
+    "ru": "Что вы знаете о млекопитающих",
+    "en": "What do you know about mammals"
+  },
+  {
+    "ru": "это кит, рыба",
+    "en": "is a whale a fish"
+  },
+  {
+    "ru": "Нам нужно избавиться от этого енота",
+    "en": "We need to get rid of this raccoon"
+  },
+  {
+    "ru": "Они хотели избавиться от бобров сначала",
+    "en": "They wanted to get rid of the beavers first"
+  },
+  {
+    "ru": "Вы сидите в этой комнате, как моль",
+    "en": "You are sitting in this room like a mole"
+  },
+  {
+    "ru": "Мы не можем избавиться от этих мышей",
+    "en": "We cannot get rid of these mice"
+  },
+  {
+    "ru": "Родинки убили все мои моркови",
+    "en": "The moles killed all my carrots"
+  },
+  {
+    "ru": "Это плохое представление о покупке крысы",
+    "en": "It is a bad idea to buy a rat"
+  },
+  {
+    "ru": "Моя белка ест орехи",
+    "en": "my squirrel is eating nuts"
+  },
+  {
+    "ru": "копыт копыт обычно меньше",
+    "en": "a goat's hoof is usually smaller"
+  },
+  {
+    "ru": "Мы хотим продать этот бык следующим летом",
+    "en": "we want to sell this bull next summer"
+  },
+  {
+    "ru": "Это копыта очень большие",
+    "en": "it's hooves are very big"
+  },
+  {
+    "ru": "Олень рога могут быть очень большими",
+    "en": "Deer horns can be very big"
+  },
+  {
+    "ru": "Мы не вернемся, пока не увидим льва",
+    "en": "We wo n't go back until we see a lion"
+  },
+  {
+    "ru": "Медведи опасные хищники",
+    "en": "bears are dangerous predators"
+  },
+  {
+    "ru": "Он поцарапал голову",
+    "en": "He scratched his head"
+  },
+  {
+    "ru": "Его тело было все в ранах и синяках",
+    "en": "His body was all in wounds and bruises"
+  },
+  {
+    "ru": "Мое горло больно, когда я проглочу",
+    "en": "My throat hurts when I swallow"
+  },
+  {
+    "ru": "Кашель может быть симптомом многих разных заболеваний",
+    "en": "the cough can be a symptom of many different diseases"
+  },
+  {
+    "ru": "Эта рана маленькая",
+    "en": "This wound is small"
+  },
+  {
+    "ru": "Таблетки не конфеты",
+    "en": "Pills are not candy"
+  },
+  {
+    "ru": "Симптомы могут включать кашель головную боль и лихорадка",
+    "en": "The symptoms might include cough headache and fever"
+  },
+  {
+    "ru": "Давайте остановимся, потому что я хочу кофе",
+    "en": "let's stop because I want coffee"
+  },
+  {
+    "ru": "Я рад, потому что они продают здесь кексы",
+    "en": "I am glad because they sell cupcakes here"
+  },
+  {
+    "ru": "Да, они продают мясо, но не каждый день",
+    "en": "Yes they sell meat but not every day"
+  },
+  {
+    "ru": "Хотите присоединиться к нашей встрече",
+    "en": "Do you want to join our meeting"
+  },
+  {
+    "ru": "Мои боссы не счастливы",
+    "en": "My bosses are not happy"
+  },
+  {
+    "ru": "Я хочу стать боссом здесь",
+    "en": "I want to become the boss here"
+  },
+  {
+    "ru": "Привет добро пожаловать в команду",
+    "en": "hello welcome to the team"
+  },
+  {
+    "ru": "Мы хотели бы присоединиться к вашему проекту",
+    "en": "we would like to join your project"
+  },
+  {
+    "ru": "Я могу закончить свой кофе позже",
+    "en": "I can finish my coffee later"
+  },
+  {
+    "ru": "Как насчет встречи во вторник",
+    "en": "How about an appointment on tuesday"
+  },
+  {
+    "ru": "Нью-Йорк так круто, я хочу увидеть город",
+    "en": "New York is so cool I want to see the city"
+  },
+  {
+    "ru": "Еда в этом кафе прекрасно",
+    "en": "the food in this cafe is wonderful"
+  },
+  {
+    "ru": "Мы хотели бы новую комнату нашу небольшую комнату",
+    "en": "we would like a new room our room small"
+  },
+  {
+    "ru": "Как насчет встречи во вторник",
+    "en": "how about an appointment on tuesday"
+  },
+  {
+    "ru": "Нью-Йорк так круто, я хочу увидеть город",
+    "en": "new york is so cool i wan to see the city"
+  },
+  {
+    "ru": "Мы находимся в офисе в одиннадцать часов в понедельник",
+    "en": "we are in office at eleven o'clock on monday"
+  },
+  {
+    "ru": "Я здесь изучаю, потому что моя мама - профессор",
+    "en": "I study here because my mom is a professor"
+  },
+  {
+    "ru": "Это английский ваша майор",
+    "en": "Is english your major"
+  },
+  {
+    "ru": "Я люблю эту певицу, который он так хорошо",
+    "en": "I love that singer he sings so well"
+  },
+  {
+    "ru": "Приходите и послушайте эту оперу со мной",
+    "en": "Come and listen to this opera with me"
+  },
+  {
+    "ru": "Она моя любимая певица, которую я хочу встретиться с ней",
+    "en": "She is my favorite singer I want to meet her"
+  },
+  {
+    "ru": "Когда начинается ваш концерт",
+    "en": "When does your concert start"
+  },
+  {
+    "ru": "Я знаю, Бейонс мой папа любит ее",
+    "en": "I know Beyonce my dad loves her"
+  },
+  {
+    "ru": "Вам нужно все время пойти на репетицию",
+    "en": "You need to go to the rehearsals all the time"
+  },
+  {
+    "ru": "Ваш друг играет на корзину все время",
+    "en": "Does your friend play by the violine all the time"
+  },
+  {
+    "ru": "Битлз великолепен, но я не слушаю их",
+    "en": "The Beatles are great but I do n't listen to them"
+  },
+  {
+    "ru": "Приходите и играйте с нами",
+    "en": "Come and play with us"
+  },
+  {
+    "ru": "Какие музыканты вы предпочитаете",
+    "en": "What musicians do you prefer"
+  },
+  {
+    "ru": "Вы предпочитаете рок или хип-хоп",
+    "en": "Do you prefer rock or hip hop"
+  },
+  {
+    "ru": "Прийти на концерт",
+    "en": "Come to the concert"
+  },
+  {
+    "ru": "Вскоре начинается концерт",
+    "en": "Does the concert start soon"
+  },
+  {
+    "ru": "Битлз великолепен, но я не слушаю их",
+    "en": "The Beatles are great but I'm not listen to them"
+  },
+  {
+    "ru": "Моя группа имеет репетиции каждое воскресенье",
+    "en": "My band has rehearsals every sunday"
+  },
+  {
+    "ru": "Возьми синюю линию",
+    "en": "Take the blue line"
+  },
+  {
+    "ru": "Мой сын устал, это наш отель рядом",
+    "en": "My son is tired is our hotel nearby"
+  },
+  {
+    "ru": "Есть большие университеты в моем родном городе Бостон",
+    "en": "There are great universities in my hometown Boston"
+  },
+  {
+    "ru": "Мой город переполнен",
+    "en": "My city is crowded there are two universities here"
+  },
+  {
+    "ru": "Здесь есть две университеты",
+    "en": "The tiger is not here she is feeding her baby"
+  },
+  {
+    "ru": "Тигр не здесь, она кормит своего ребенка",
+    "en": "Look that woman is feeding the snake"
+  },
+  {
+    "ru": "Посмотри, что женщина кормит змею",
+    "en": "Where is the elephant right now"
+  },
+  {
+    "ru": "Где сейчас слон прямо сейчас",
+    "en": "Look he is feeding the bear"
+  },
+  {
+    "ru": "Смотри, он кормит медведь",
+    "en": "The elephant is sleeping right now"
+  },
+  {
+    "ru": "Слон сейчас спит",
+    "en": "Our neighbors live nearby and their dog is cute"
+  },
+  {
+    "ru": "Наши соседи живут поблизости, и их собака милая",
+    "en": "Oh how often do you visit your hometown"
+  },
+  {
+    "ru": "О, как часто вы посещаете свой родной город",
+    "en": "The elephant is sleeping right now"
+  },
+  {
+    "ru": "Слон сейчас спит",
+    "en": "There are great universities in my hometown"
+  },
+  {
+    "ru": "В моем родном городе есть большие университеты",
+    "en": "Their kids live twenty miles from big city"
+  },
+  {
+    "ru": "Их дети живут в двадцати милях от большого города",
+    "en": "If we play music the bears dance"
+  },
+  {
+    "ru": "Если мы играем музыку медведей танцуют",
+    "en": "storytell"
+  },
+  {
+    "ru": "storttell",
+    "en": "my coworkers are smart"
+  },
+  {
+    "ru": "Мои коллеги умны",
+    "en": "send me your report please"
+  },
+  {
+    "ru": "Отправьте мне свой отчет, пожалуйста",
+    "en": "the food in this cafe is wonderful"
+  },
+  {
+    "ru": "Еда в этом кафе прекрасно",
+    "en": "No I'm not a police officer"
+  },
+  {
+    "ru": "Нет, я не сотрудник полиции",
+    "en": "The soccer game is starts at five o'clock"
+  },
+  {
+    "ru": "Футбольная игра начинается в пять часов",
+    "en": "I am lacky my partner cleans and cooks"
+  },
+  {
+    "ru": "Мне не хватает моего партнера, очистив и поварает",
+    "en": "My husband is a handsome lawyer"
+  },
+  {
+    "ru": "Мой муж - красивый адвокат",
+    "en": "This pink dress looks good but do you need a dress"
+  },
+  {
+    "ru": "Это розовое платье выглядит хорошо, но вам нужно платье",
+    "en": "Asking for help do not forget that no one has to help you"
+  },
+  {
+    "ru": "Запрашивая помощь не забывайте, что никто не должен вам помочь",
+    "en": "Yes I love Maria she is my girlfriend"
+  },
+  {
+    "ru": "Да, я люблю Марию, она моя девушка",
+    "en": "They worked a lot building houses and school for us"
+  },
+  {
+    "ru": "Они работали на многих строительных домах и школе для нас",
+    "en": "Dont't worry there is a pharmacy stright ahead"
+  },
+  {
+    "ru": "Не волнуйтесь, возникает аптека\n\nЯ сам повар и пою",
+    "en": "I sametimes cook and sing"
+  },
+  {
+    "ru": "Бен действительно сладкий партнер",
+    "en": "Ben is a really sweet partner"
+  },
+  {
+    "ru": "Да, есть кофе справа",
+    "en": "Yes there is a coffee on the right"
+  },
+  {
+    "ru": "Не волнуйтесь, я немного говорю по-английски",
+    "en": "Do n't worry i speak english a little"
+  },
+  {
+    "ru": "Я хочу новое платье, но эти платья уродливы",
+    "en": "I want a new dress but these dresses are ugly"
+  },
+  {
+    "ru": "Мы хотели бы, чтобы новая комната наша комната слишком мала",
+    "en": "we would like a new room our room is too small"
+  }
+]

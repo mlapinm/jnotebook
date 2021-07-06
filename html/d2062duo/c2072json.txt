@@ -1,0 +1,30 @@
+[
+  {
+    "ru": "Толпа идет на пляж",
+    "en": "The crowd goes to the beach"
+  },
+  {
+    "ru": "Небольшие инвестиции для больших результатов",
+    "en": "A small investment for great results"
+  },
+  {
+    "ru": "Вам не разрешено связаться с властями",
+    "en": "You are not allowed to contact with the authorities"
+  },
+  {
+    "ru": "Это угроза",
+    "en": "It is a threat"
+  },
+  {
+    "ru": "Он богат из-за инвестиций",
+    "en": "He is rich because of investments"
+  },
+  {
+    "ru": "Она собирается поговорить с местными властями",
+    "en": "She is going to talk to the local authorities"
+  },
+  {
+    "ru": "Угроза не была реальной",
+    "en": "The threat was not real"
+  }
+]

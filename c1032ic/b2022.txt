@@ -1,0 +1,811 @@
+So let take a look first how to implement eigrp
+
+the goal for any Dynamic routing protocol is for routers to be able exchange information between them and learn about destinations that are not directly connected those routers
+
+I so as would say it's about the discovery every networks
+
+many times people call this routing by rumor 
+
+Is this think about it one router a long ways away says hey I'm connected to this network let me tell you about him that router says hey I heard about my way to get here and then I heard about another way to get here but it's hopefully a reliable rumor that we get
+
+Now we also you have to have something that maintains the routing information as up-to-date in other words of a destination is no longer available 5 routers away 
+
+I expect that router to tell us through a removal message that we can no longer get to that destination so everyone knows to find A New Path if one becomes available to get to that same destination 
+
+Now is that how to know to choose the best path because in today is routed networks you may have very closely than a full match of connections between routers any of that from any one point of my network 
+
+I mind be able two or three or five paths to the same destination 
+
+which of those is the best one
+
+1:20
+
+kind of again the idea of driving down a freeway 
+
+I travel a lot and so without GPS I'd be in trouble 
+
+but I certainly in the old days could look at a map and say okay 
+
+I can get from here to the grocery store 
+
+I'm going to take this freeway for 10 miles to turn off the exit I should see it on my right 
+
+and what happens when that freeway 70 is closed to a car crash or construction 
+
+now I'm stuck 
+
+I don't know any other way to get there 
+
+and so that's another thing that we see would be synonym of protocols 
+
+as they maintain all that information 
+
+so they're like the local person that says 
+
+oh I just got hit by the construction 
+
+I'll take this other exit take a service tree down there no problem 
+
+so they need to know how to find the best path not just a single path 
+
+and to be able to find is I just said the new best path if the current path is no longer available 
+
+so let's take a look at dynamic routing protocols 
+
+and how they behave differently 
+
+first we're going to start with the type 
+
+whether it's an igp interrogate with protocol versus an EGP or an exterior kit with protocol 
+
+we're only focusing on igps in our course 
+
+but let me first talk a little bit about the EGP the exterior protocols 
+
+of one the only one that we commonly use is called bgp the border gateway protocol version 4 
+
+the goal is if you think about how the internet is put together with different service providers that have their customers connected to their networks 
+
+they want to advertise the routes to their customers so that all other people in the world will know how to get to their customers as part of the service or paying for 
+
+
+but if you think about it 
+
+you don't want to let service provider 'A' be able to tell service provider 'B' how to route 
+
+we just want to tell you about the existence of the routes 
+
+and that's what the egps do in this case bgp
+
+it's a list of routes with suggestions about how to route to those those customers 
+
+in the igp the interior gateway protocol 
+
+it's all about your managed group of routers 
+
+meaning it's your company your enterprise you're the service provider 
+
+they're all under a common management and we often refer to that as an autonomous system 
+
+
+and what we're doing is we're keeping track of all of the routes that exist inside of our network
+
+without sharing those routes to the people on the outside 
+
+and that's where eigrp and ospf come in their interior gateway protocols 
+
+now another difference is what do they advertise 
+
+one of the igps I didn't mention I was hoping I didn't have to it's called RIP the routing information protocol 
+
+it's an example of a distance vector 
+
+as a distance factor if you think about it I'm asking two questions 
+
+Vector which direction and distance how far 
+
+and once I learned that then I'm good I throw away everything else 
+
+a link takes a little bit different story 
+
+a link state is almost the same as saying interface 
+
+I as a router and just going to tell my neighbors which interfaces I have that are running 
+
+that are up and up and what networks are attached to 
+
+but they can look at basically their map read to your recalculate their way to get to their destination
+
+now what are the other differences between those routes were whether they were classful or classless
+
+what do I mean by that 
+
+if you remember the concept of the variable length subnet mask 
+
+that I took what was maybe a class b address 
+
+and I made subnets out of it 
+
+and then it had to change the class full boundary remember the classroom boundary of the class b 16 bits right 
+
+and so suddenly I might now have a network that looks like it's class b maybe it says 172.16 but then I said. one / 24 what did I do 
+
+I mean it look like a class c but it never was a class C 
+
+remember classfulness is all about that first octet 
+
+so a long way to get to the store a class full routing protocol ignores your subnet mask 
+
+it looks at everything as a class a b or c it doesn't care at all about your subnetting 
+
+which means it might not even know the proper paths to get to those more defined subnets 
+
+a classless routing protocol does look at variable length subnet mask
+
+so if you make the better determination for longest path 
+
+and to help make sure that it doesn't misdirect traffic just because it automatically chopped off your network address to be classful 
+
+rip version one was classful 
+
+igrp by Cisco was classful 
+
+enhanced igrp is a classless or classical protocol your choice 
+
+and ospf is also a classless protocol 
+
+it means we do care about the actual subnet masks 
+
+---- 643
+
+every routing protocol has what we call believability 
+
+hopefully I spelled that correctly 
+
+believe ability means how much do I trust you 
+
+let me go back to my analogy of me being the out of town 
+
+so you you know you have can thanks for the West coast 
+
+now I'm over here on the east coast 
+
+and then we have a local somebody's lived here for 50 years of their lives knows all the roads 
+
+and here comes the complete stranger coming in and asking the question how do you get to the store 
+
+well you know what Ken looked up a route 
+
+I told you that right 
+
+I saw one way of getting there 
+
+and so you can ask him 
+
+and Ken would say you know take exit 14 or whatever 
+
+and he asked the local the local says hey it's 5:00 p.m. don't do what Ken says 
+
+because that's going to be just a parking lot 
+
+and there's construction they already have two lanes that are closed 
+
+so you know it gives me maybe more detail or maybe more believable of an answer 
+
+the question is is which one is a stranger going to use 
+
+so yeah out of town or the guy who's local and do all the details about the routes 
+
+obviously the local would have what we call a better administrative distance and what Ken would have 
+
+and the idea is is whatever administrative distance you gave can 
+
+if you want the local guy to have a better believability index you just have to make the local or the administrative distance slower than you can't 
+
+and that's what administrative does a distance does 
+
+
+we have a belief that some protocols no more about their environment about your routes 
+
+than do others 
+
+and so that's where we see administrative distances giving to these protocols 
+
+you'll notice that enhanced igrp has a better
+or more believable administrative distance than ospf does out of the box 
+
+by the way you can change that anytime you want to 
+
+but it is the belief that eigrp has a better capability of being able to look at the best path then does OSPF 
+
+and I would agree on that 
+
+because ospf looks at only one thing you're going to find out later that it looks only at bandwidth 
+
+whereas erp looks at bandwidth and delay by default 
+
+and does a better calculation on bandwidth than ospf does out of the box 
+
+so that's why we would say eigrp is a little more believable because it's looking at more details about the routes when it's choosing ti's best route to offer
+ 
+---916
+
+let's take a look at some of the features of eigrp 
+
+first of all it has what we call rapid convergence 
+
+rapid means faster than everybody else 
+
+as an example with ospf if a neighbor or to suddenly stop sending its updates 
+
+it would take ospf 40 seconds to realize the neighbor was no longer talking before it would remove the routes and learn from that neighbor and recalculate the new routes to get to assassination 
+
+eigrp automatically keeps track if it is possible of what they call it back up best route 
+
+won't get more specific into the names successor and feasible successor later 
+
+but because of that when you get basically a message of the neighbor's gone 
+
+eigrp is going to immediately all of the other neighbors if you have a better route than my next best route 
+
+and they say no it puts the next best route in 
+
+and it continues on we're talking usually  3 maybe 6 seconds convergence time over the 30 40 seconds or more with ospf 
+
+
+yeah grp like many other routing protocols can do load balancing with what we call ecmp equal cost multipath 
+
+that means if I have two routes or three routes to the same destination and they have the same cost or metric 
+
+then I'll use all three of them kind of in a round robin some traffic goes one way another different direction as long as it's equal 
+
+now if there's any little difference between them and their metric 
+
+then ospf will no longer load balance 
+
+eigrp will do it what's called an equal  multi-path
+
+which is really cool unique.. 
+
+that means that we can have or else that might not be as good 
+
+but we'll still use them 
+I kind of look at ti this way 
+
+when I you know I've got a bunch of kids 
+
+when I go to the grocery store 
+
+I'm going to have bag after bag after bag in the backseat of my SUV and you know 
+
+I'll say to the teenager
+
+I expect you to pick up bags 
+
+help me move this stuff in 
+
+I hope as well 
+
+but I'll even look at the 2 year old 
+
+I know I saw this the other day two year old wanted a bag to carry 
+
+that's unequality path 
+
+it wasn't the best route certainly wasn't the best idea trust me 
+
+but they were still capable of carrying some traffic 
+
+and that's what we do or see if you wanted to be there with eigrp so that's pretty cool as well 
+
+most every protocol has a loop free and is classless routing at least ospf Isis 
+
+I didn't talk about that one as an igp 
+
+and so we expect that 
+
+it's because of the use of the metrics 
+
+if we take the lowest metric 
+
+we're always assuming that is the shortest path and it's a loop free path 
+
+because the higher metrics might have been a loop going to the same router twice
+
+and of course if you think about it 
+
+it doesn't use as much bandwidth for the communications like you might see with other routing protocols 
+
+if they have bounded updates 
+
+and they don't use broadcast traffic which means very few devices are even going to pay attention to the traffic that's being sent out 
+
+they're going to use the multicast to find their neighbors and so that's better than a broadcast 
+
+so those are the features of what 
+
+I hope that you will explore when we look at eigrp
+
+---1241
+
+over the years I've seen this past selection process change how it's represented when we look at training 
+
+but let me just talk about the options here and why are eigrp is considered to be so good 
+
+first of all it uses what's called a metric to find the best path 
+
+now the metric as you'll see later is made up by default of a combination of the bandwidth and the delay on a link and there's more to it it's not just a simple addition I'm saying it uses both of those 
+
+and it comes up with a value 
+
+and so what happens is when we start to look at the how we advertised our information 
+
+we have these things called an advertised distance and reported distance and it all kind of depends on who you're talking to
+
+so let's call this over here router a 
+
+and router a is going to learn about this network 10111 
+
+maybe I had too many ones 1011 there we go 
+
+and and so what this router knows is that it's distance it's reported distance actually what we are looking at here the feasible distance is what we usually used to call it is a thousand 
+
+and now when I advertise that route to my neighbor 
+
+
+the neighbor says okay you're advertising it has a distance of 1000 
+
+but I know it's going to cost me another thousand just to get to you 
+
+so I'm going to put in there that might feasible distance is going to be 2,000 
+
+what you advertise to me plus what it cost to get there 
+
+as an example I live in a somewhat remote part of the country not a big city by big city people ..
+
+and I used to get this to tell you how long ago was fax is over the fax machine at the office it said round trip airfare Chicago to Miami 99 bucks 
+
+and I thought well that's cool 
+
+and so that's the advertisement right they said hey 99 bucks to get to from Miami to Chicago 
+
+but then when I didn't realize is I still had to pay for the airfare to Chicago which by the time I added that in ..
+
+there that's what we're doing here 
+
+you're the travel company advertised and then I had to figure out what it cost to get there 
+
+and so that's how we look at the path selection so after everything's put together whoever's got the lowest metric is the one that we're going to use 
+
+now let me talk to you about this concept of lowest metric 
+
+because I think this is and you know ..
+
+I don't know how else to put this together other than just have a bunch of routers make sure that we have more than one path 
+
+
+all right 
+
+so there we go there's Miami 
+
+just talked about it 
+
+and and so as we're looking at our routing tables 
+
+I realize that probably after I do metric lookups that this might be my shortest path for this might be my shortest path 
+
+
+but every router is going to know about the past because they're all involved in that path 
+
+and you know when you consider that I'm advertising a path to this router and this router is advertising it to I mean they're all learning about it 
+
+it's not the best path 
+
+but when I advertise my route 
+
+my route to get advertised to this guy over here 
+
+and then that guy's going to re-advertise it to me even though you know I already knew it 
+
+that's just how they do 
+
+they you comes in one interface goes out to all the other neighbors 
+
+all right when I look at that metric and I see that maybe this metric was a thousand 
+
+and the route being advertised me in this direction let's say comes in at 3,000 
+
+
+well that's probably because I have you're basically saying look I'm going to go here 
+
+then here back to you to get to this direction 
+
+and so because that metric is so high that has an indication that it may be a loop to get back to what was the shortest path which is why we always look at the lowest number 
+
+and that's what creates that loop free topology that the lowest number is believed to always be a loop free path 
+
+if it has a higher number in my feet because you did go in a circle only to come back to where you started from and then make that trip sometimes my flights feel like that 
+
+I don't know how it is that I get scheduled on these weird flights 
+
+but sometimes I think they need to use eigrp who can be a flight schedule 
+
+---- 1704
+
+now when we continue to talk about the path selection 
+
+there's a number of tables that we need to be aware of and so we're looking at this from the point of view of router c
+
+when we advertise and if you care we use a multicast address of 2240010 that anybody who is speaking eigrp is going to listen to 
+
+and it and that's how we discover our neighbors 
+
+and one of the first tables we create as a neighbor table 
+
+the reason for that is that and think about it this way like I assigned to say a number to my neighbor
+
+that way if I learn about a route from or many routes from a neighbor 
+
+and that neighbor goes down I can immediately say hey get rid of all of router A is routes becouse that that the router is not there anymore
+
+---1746
+
+anyway so that we have that we know the interface that we connected to them on with that multicast address 
+
+that I just talked about the 2240010 
+
+now from there each neighbor is always going to be directly connected they'll never be another route of between me and a neighbor on the same to be able to get from one of the other 
+
+
+now what we're going to do is we're going to exchange routes between each other 
+
+and that's where we're going to create the topology table 
+
+not all of the routes somebody tells me about we're going to be the best route 
+
+in fact what I'm going to do is I'm going to look at those 
+
+I'm going to choose the best route out of all of my neighbors to any destination so every destination in this case the 1011 network too many ones again 
+
+
+why it has the best metric 
+
+what was that metric well rotary advertised it took a thousand to get there told it to me and I realized it took a thousand for me to get there so that was 2000 
+
+router b said it takes the advertised $1,500 to get there 
+
+I still had to add the thousand to get there so it's the second best one 
+
+
+now the other thing I told you that there's a backup route 
+
+a backup route is the thing called the feasible successor 
+
+now in order to be a feasible successor 
+
+this is an important aspect is that the administrative distance 
+
+I shouldn't say the administrative distance the advertise distance has to be lower than my best distance that I have before 
+
+total distance feasible distance ft 
+
+if it's not at
+
+then it means that I might have been going through a loop 
+
+if the advertised distance is worse than my bestest since ever 
+
+that mean I went through another router to come back here and then take that path to get to my destination 
+
+yeah it could very well have meant that so that's how we get it feasible successor 
+
+if that administrative distance is not better than the route even though it's in my topology table will never become a feasible successor 
+
+
+and then well actually it could at some point if we find out after everything's been updated and everyone's talk to each other that maybe that is the only route 
+
+then it could be but it's not automatic that's that fast convergence I was talking about 
+
+and then of course we take all the successor routes 
+
+and those are the ones that become the routes in the routing table 
+
+and and so that's basically the topology table through that we got the successor maybe feasible successor best routes successor route goes into the routing table 
+
+and that's what we use for all the packets that are received by the router to look to see if we're going to route them to those destinations 
+
+
+--- 2033
+
+eigrp has the K values
+
+and I say that because when you looked at the original equation there was k1 equals k3 equals k5 and K2 equals K4 as part of these 
+
+so you decided might doing bandwidth and delay 
+
+and if I wanted to in my house is going to add reliability and load as a part of the equation 
+
+and and the reason I said equally believable is not that the bandwidth and delay were equal to each other but these were each day value had a value of 0 or value of one on 
+
+and so that was an important aspect as to whether or not we cared about bandwidth and delay 
+
+join you all want to know that 
+
+yeah probably not unless you might see it on a test somewhere when you do the command show IP protocols 
+
+
+you we'll see an indication of what I mean K values 
+
+so anyway this is k1 this is k3 and they both equal one and that's probably what I should have done in that little top part to say YK won't equals k3 out of that by default that's what they do 
+
+whereas these k values basically are zeros 
+
+
+they're off 
+
+but you can turn them on 
+
+it's not recommended it's really not needed 
+
+but because of all of those criteria that we look at 
+
+we can actually make the decision about what's the best route mathematically by using those values and putting them in to our table 
+
+now at some point you might say well what's k5 can 
+
+well we used to tell people optionally you could use MTU 
+
+empty you is a different creature 
+
+and I don't want to get into the what the MTU does unless we get into some advanced eigrp 
+
+
+let's just say we're not going to utilize that for making the best route calculation 
+
+but it did have a decision criteria it wasn't actually used in the creation of the metric 
+
+but helping is kind of that final acquaintance about the whether or not we're going to use routes 
+
+
+all right now here's an example of the equation that we use but it basically comes down to bandwidth and delay 
+
+which by the way was the same as the predecessor igrrp 
+
+but Igrp was a class full protocol it was a distance Vector on not this hybrid or this in advance disinfector like eigrp 
+
+there's a fancy way of saying it's the distance factor that has a lot of link state capabilities 
+
+and so we multiplied that by 256 so we can actually get a more granular feel of what the actual metric was 
+
+and I know that sounds funny but it was actually some division done in this sorry in this calculation that they didn't quite show you but what it basically did is if I had a let's say my route to route 1 have a metric pair of 105.83 five and the other one had 105. 726 
+
+we'd round them both up to look equal we'd say hey the metrics 106 
+
+but now that we multiply those numbers by 256 and the essence removing that decimal point at least two spaces of not more over 
+
+so we're getting a granular or better look at which is the best route instead of the rounding errors 
+
+all right that's called history folks 
+
+you might not be asked a lot of those questions anymore but just so you understand kind of where that came from and why it was added in there
+
+these values you can find as far as bandwidth delay in the restroom when you do a show interface 
+
+well so there's empty you there's the bandwidth on this 1.5 4 4 
+
+here's the delay that we're seeing reliability is 100% $255 out of 255 transmit load is almost zero one out of 255 
+
+and the receive load is almost zero 
+
+well what do we say we used well at circle too many things bandwidth right and delay 
+
+that we're looking at and then optionally we did say you could add in some of the other factors 
+
+but that's what the information comes from so you can see that as the interface statistics change 
+
+and there's a very good likelihood that some of the information about the best routes may also change 
+
+the configuration for eigrp it starts off the same as with any routing protocol 
+
+
+you're in global config you type router 
+
+then the routing protocol in this case eigrp 
+
+and then we include the autonomous system that is not a process ID but we saw with OSPF 
+
+that is the autonomous system that either you make up about an air hoping you never talk to the internet world with a routing protocol 
+
+or it's one that was assigned to you 
+
+and just like IP addresses that are global or assigned to you 
+
+from there you then list the network for each interface that you want to have two things happen 
+
+when you want the network that this interface is connected to the advertised in eigrp 
+
+and you want to have the chance to form a neighbor over that interface 
+
+so we put in this interface and really if this is a cloud you probably don't want a neighbor 
+
+so we still have the passive option but we do want to advertise that network into the rest of their cloud 
+
+and then we have this interface of the one that one that's also going to be advertised and hopefully creating a neighbor relationship with this headquarters router 
+
+and it looks like we will because we're advertising the same network but oh what on earth did they do here 
+
+they added a wild card mask 
+
+yep that can still be used that would just mean like it does with OSP yeah if there were two or more interfaces or one or more interface 
+
+
+that match the combination of ip and wild card mask that it would include all of those interfaces for being advertised and trying to form neighbors 
+
+so you can do that as well 
+
+here grp is not as picky about its neighbors like ospf 
+
+you know we talked about whole times maybe and things like that and you know what the timers don't have to agree like they do notice yet but what does is the autonomous system 
+
+if these two routers are going to be neighbors they have to be within the same autonomous system that you've created otherwise you can basically think of each other as being a foreigners of being managed by separate independent companies and they won't become neighbors 
+
+the same with authentication if you put authentication in here they got to have the same authentication information passwords and such to be able to be neighbors 
+
+other than they're pretty straightforward so we can verify with those neighbors are other way this first value is just an internal index number for that app for that particular neighbor 
+
+I have no other purpose other than to keep one neighbor separate from another the address of the neighbor the interface that I'm connecting to 
+
+
+which of my interfaces I'm leaving to get there 
+
+how long I'm going to leave there alive until I hear from them again 
+
+by the way they send their hellos back and forth to each other every 5 seconds so we wouldn't expect to ever see this never get to below 10 or over 15 just because we should see those updates all the time 
+
+how long I've been a neighbor that's good for trouble shooting that number is low and every other neighbor's been there for hours or days or weeks it makes me wonder what happened to that neighbor for just a little bit 
+
+I'm not going to get too much into the smooth round trip timer options or some of the other things just so that we again those in the advanced topics but what we're looking for is that we do have a neighbor that they are seen by us and that they're in the neighbor table 
+
+so we can begin being able to not only send  hello package to keep the neighbor alive but to also begin to exchange routes 
+
+
+all right we did the same command only this time for the headquarters 
+
+and again the goal is to see the neighbor 
+
+that it's on the headquarters 000 interface 
+
+oh we've been neighbors for a little bit so must have been some time between when they Randy's commands 
+
+and of course that we're seeing the hellos going back and forth 
+
+so that's all good right that we have verified the neighbors and it was just after you did the router eigrp autonomous system 100 and basically hit enter 
+
+then they began trying to discover each other and become neighbors 
+
+another one you can run is the eigrp interfaces 
+
+those are the interfaces because of the network command 
+
+that are not only advertising their networks but also trying to form peer relationships 
+
+remember we were advertising this interface going out to this cloud whatever it was on that gig interface 00 
+
+well look no peers 
+
+
+I didn't expect to see any 
+
+so that's pretty much what I had hoped it seens
+
+and and then of course the cereal 0001 I do have up here so I am seeing my neighbors 
+
+and so now I'm seeing which interfaces are you actively a part of the exchange of routes and are actively trying to create neighbors with somebody to exchange routes 
+
+when you look at the routes in a routing table 
+
+all of the D's are the eigrp's now this is what I see from if I look at my branch router 
+
+that it knows how to get to the 17216 network 
+
+
+the first number is the administrative distance 
+
+the second number is the metric 
+
+this is the one that had the best cost the best metric 
+
+my next stop is 1921681.2 which looks right 
+
+I've known about this route for over an hour and my outbound interface is 0000 
+
+so that looks appropriate as far as what I would expect to see on my routing table 
+
+remember that the topology table is all knowledge that I've learned 
+
+well we were just looking at the route to the 17216 network 
+
+and here we see that we have learned it 
+
+it has one successor that means one best route 
+
+they could have had two if they had the same cost 
+
+---3105
+
+
+the feasible distance that it takes for me to get there that's why I full distance says 
+
+this distance plus whatever that router needed to get there is this big number 156 6160 
+
+and it's going out again to that next top neighbor which was the right address 
+
+now this is my feasible distance that I just talked about 
+
+this is what was advertised 
+
+that was what was advertised to me by HQ router 
+
+and so again I had to take my distance to get to the HQ to add it to what HQ me about 
+
+and and then that's the only route really of interest because that was the only route 
+
+even though all of the direct connected inter 
+
+aces right there directly connected interfaces are in my apology channel as they should be right there directly connected so 
+
+I didn't have any of those other distances too at least to help you describe 
+
+
+
+
+
+
+what is it you're reading 
+---3150
+I've already talked about equal cost multipath 
+
+load balancing it for both routes in this case two routes the same destination the same metric we're going to round Rob meaning we'll take turns with all of the packets that I'm sending per flow is an important aspect 
+
+unequal is that analogy of me about the kids taking out the the groceries for me but here's the thing that you have to remember 
+
+
+now in order for this route here to be used in this unequal cost multipath or load balancing it has to first have been able to qualify as a feasible successor 
+
+it means it's advertised distance has to be better than the original metric I had to begin with it that  doesn't happen there's no unequal cost though balancing then 
+
+I put in a multiplier is five 
+
+what I'm saying is that I will balance between any route between a metric of 25
+
+through 5 times 25 or 125 well if that falls in the range and it counts 
+
+and I would use it remember first have to qualify as a feasible successor
+
+so we took a look at the basic implementation of EIGRP again a classless advantance Vector protocol mining it's the distance factor with some of greatest features of link states 
+
+we talked about the composite metric 
+
+formula and within delay by default  
+
+I'm using other features if you wanted to to look for the best route 
+
+that it's configured on the router to the router EIGRP command that
+
+again has to have autonomous system that all  of them all the routers in your network have to exchange routes and that we turnned on the interface  to advertise and it for neighbors of the network command 
+
+three tables the neighbor table who it is we heard with the hellos 
+
+it's topology table the list of all known routes 
+
+and out of those who found the best routes called the successors and that went into the routing table
+unequals as I have to routes that are giving me the same destination 
+
+one has a metric of 25 which is great that has got a metric of 100 which is not as good as 25 
+
+in order to do unequal low-cost balancing you first have to turn that feature on 
+
+and then after you turn it on you have to give me a multiplier what you would consider be too high be of another route that I can equal 
+
+
+

@@ -1,0 +1,542 @@
+[
+  {
+    "ru": "Акулы никогда не спокойны",
+    "en": "Sharks are never calm"
+  },
+  {
+    "ru": "Этот поезд уходит в девять острых",
+    "en": "This train leaves at nine sharp"
+  },
+  {
+    "ru": "Воротник его рубашки был грязным",
+    "en": "The collar of his shirt was dirty"
+  },
+  {
+    "ru": "Она мыть ее полотенце, потому что оно грязно",
+    "en": "She is washing her towel because it is dirty"
+  },
+  {
+    "ru": "Почему сиденья такие грязные",
+    "en": "Why are the seats so dirty"
+  },
+  {
+    "ru": "Он пытался бросить курить, поэтому он попытался пить чай вместо этого",
+    "en": "He was trying to stop smoking so he tried drinking tea instead"
+  },
+  {
+    "ru": "Почему ты не можешь просто работать усерднее",
+    "en": "Why ca n't you just work harder"
+  },
+  {
+    "ru": "Рядом на нашем доме широкая и неглубокая река",
+    "en": "There is wide and shallow river near our house"
+  },
+  {
+    "ru": "Киты не плавают в такой мелководной воде",
+    "en": "Whales do not swim in such shallow water"
+  },
+  {
+    "ru": "Я добрый, чем моя сестра",
+    "en": "i'm kinder than my sister"
+  },
+  {
+    "ru": "Нет риска для здоровья",
+    "en": "There is no risk to health"
+  },
+  {
+    "ru": "Если бы вы были щедрые, она выйдет замуж за тебя",
+    "en": "If you were generous she would marry you"
+  },
+  {
+    "ru": "Все будут любить такого щедрого человека",
+    "en": "Everybody would love such a generous man"
+  },
+  {
+    "ru": "Раньше он был застенчивым мальчиком",
+    "en": "He used to be a shy boy"
+  },
+  {
+    "ru": "Мой отец верит в ценность образования",
+    "en": "My father believes in the value of education"
+  },
+  {
+    "ru": "Какова ценность этого автомобиля",
+    "en": "What is the value of that car"
+  },
+  {
+    "ru": "Пол мокрый",
+    "en": "The floor is wet"
+  },
+  {
+    "ru": "Это серьезно",
+    "en": "Is this serious"
+  },
+  {
+    "ru": "Она пыталась бежать быстрее, но не могла",
+    "en": "She tried to run faster but could not"
+  },
+  {
+    "ru": "Они бедные",
+    "en": "They are poor"
+  },
+  {
+    "ru": "Это сложность",
+    "en": "That is a difficulty"
+  },
+  {
+    "ru": "Вы были правильными дорогими",
+    "en": "You were right dear"
+  },
+  {
+    "ru": "Я живу в квартире",
+    "en": "I live in a flat"
+  },
+  {
+    "ru": "Это чистая вода в мире",
+    "en": "It is purest water in the world"
+  },
+  {
+    "ru": "Ее кожа коричневая и гладкая",
+    "en": "Her skin is brown and smooth"
+  },
+  {
+    "ru": "Худшее о лете - это жара",
+    "en": "The worst thing about summer is the heat"
+  },
+  {
+    "ru": "Я верю в удачу",
+    "en": "I believe in luck"
+  },
+  {
+    "ru": "Улица узкая",
+    "en": "The street is narrow"
+  },
+  {
+    "ru": "Моя веревка толще вашей",
+    "en": "My rope is thicker than yours"
+  },
+  {
+    "ru": "Мы продам квартиру к тому, кто имеет достаточно денег",
+    "en": "We will sell the apartment to whoever has enough money"
+  },
+  {
+    "ru": "Она подозреваемый",
+    "en": "She is a suspect"
+  },
+  {
+    "ru": "Я подозреваемый сейчас",
+    "en": "Am I a suspect now"
+  },
+  {
+    "ru": "Владелец этого высокого дома гордится собой",
+    "en": "The owner of that tall house is proud of himself"
+  },
+  {
+    "ru": "Однако ваш отец тебе не разрешено идти сюда",
+    "en": "However your father is you are not allowed to go here"
+  },
+  {
+    "ru": "Это золотой замок",
+    "en": "It is a golden lock"
+  },
+  {
+    "ru": "Это твоя ловушка",
+    "en": "Is this your trap"
+  },
+  {
+    "ru": "Единственный свободный сыр в мышке",
+    "en": "The only free cheese in the mousetrap"
+  },
+  {
+    "ru": "Это серебряная дверная ручка",
+    "en": "That is the silver door handle"
+  },
+  {
+    "ru": "Он не хотел обидеть он",
+    "en": "He did not mean to hurt he"
+  },
+  {
+    "ru": "Это будет означать ждет еще дольше",
+    "en": "It would mean waiting even longer"
+  },
+  {
+    "ru": "Завтра ты забудешь поговорить со мной",
+    "en": "Tomorrow you will forget talking to me"
+  },
+  {
+    "ru": "Да, я помню, что что-то слушаешь",
+    "en": "Yes I remember hearing something"
+  },
+  {
+    "ru": "Она не значила их наказать",
+    "en": "she did not mean to punish them"
+  },
+  {
+    "ru": "Ей нужно наказать его как-то",
+    "en": "she needs to punish him somehow"
+  },
+  {
+    "ru": "Ваше лицо нуждается в стирке",
+    "en": "your face needs washing"
+  },
+  {
+    "ru": "Она признает, что действует несправедливо",
+    "en": "She admits acting unfairly"
+  },
+  {
+    "ru": "Он уже признался неправильным",
+    "en": "He has already admitted being wrong"
+  },
+  {
+    "ru": "Я никогда не отрицал, увидев ее",
+    "en": "I never denied seeing her"
+  },
+  {
+    "ru": "Он отрицает наказывать их",
+    "en": "He will deny punishing them"
+  },
+  {
+    "ru": "Визуализация оставлена ​​там без еды и воды",
+    "en": "Imaging being left there without food and water"
+  },
+  {
+    "ru": "Я помню, как он говорит о себе очень плохие вещи",
+    "en": "I recall him saying very bad things about me"
+  },
+  {
+    "ru": "Они никогда не признаются, что они используют нашу воду в своем саду",
+    "en": "They will never admit that they using our water in their garden"
+  },
+  {
+    "ru": "Из-за того, что некоторые пары даже отложили жениться",
+    "en": "Because of that some couples even delayed getting married"
+  },
+  {
+    "ru": "Я не вспоминаю, как это рисую",
+    "en": "I do not recall drawing it"
+  },
+  {
+    "ru": "Я воображал поливать такой большой газон",
+    "en": "I imagined watering such a large lawn"
+  },
+  {
+    "ru": "Она отрицает, что это его снова",
+    "en": "She denies being his freind"
+  },
+  {
+    "ru": "Она рискует терять его навсегда",
+    "en": "She risks losing him forever"
+  },
+  {
+    "ru": "Я не рекомендую вымыть их в горячей воде",
+    "en": "I do not recommend wash them in hot water"
+  },
+  {
+    "ru": "Я взял ваш зонт по ошибке",
+    "en": "I took your umbrella by mistake"
+  },
+  {
+    "ru": "Он только сделал одну попытку",
+    "en": "He only made one attempt"
+  },
+  {
+    "ru": "К сожалению, вы опоздали",
+    "en": "Unfortunately you are late"
+  },
+  {
+    "ru": "Когда это были горячие коровы, часто лежали в тени",
+    "en": "When it was hot cows often lay in it's shade"
+  },
+  {
+    "ru": "Теперь врачи не делают все операции вручную",
+    "en": "Now the doctors do not do all the surgeries manually"
+  },
+  {
+    "ru": "Я посмотрел, но он все еще стоял",
+    "en": "I had lain down but he was still standing"
+  },
+  {
+    "ru": "Я чувствую, что вижу город",
+    "en": "I feel like seeing the city"
+  },
+  {
+    "ru": "Эта деятельность против закона",
+    "en": "This activity is against the law"
+  },
+  {
+    "ru": "Он был бы рад услышать это",
+    "en": "He would be happy to hear this"
+  },
+  {
+    "ru": "Мы не слышим музыку",
+    "en": "We cannot hear the music"
+  },
+  {
+    "ru": "К счастью, он не мертв",
+    "en": "Fortunately he is not dead"
+  },
+  {
+    "ru": "Нам нужны действия не слова",
+    "en": "We need actions not words"
+  },
+  {
+    "ru": "Когда я пришел в кошку, лежал на полу",
+    "en": "When I came in the cat was lying on the floor"
+  },
+  {
+    "ru": "Это просто акт",
+    "en": "It is just an act"
+  },
+  {
+    "ru": "Я видел, как ты танцуешь",
+    "en": "I saw you dancing"
+  },
+  {
+    "ru": "У меня была вакцинация в год",
+    "en": "I had the vaccination a year last"
+  },
+  {
+    "ru": "Не делайте внезапных движений",
+    "en": "Do not make any sudden moves"
+  },
+  {
+    "ru": "Он мой возраст",
+    "en": "He is my age"
+  },
+  {
+    "ru": "У меня была авария на работе",
+    "en": "I had an accident on the job"
+  },
+  {
+    "ru": "Он достиг этого возраста, когда люди верят, что знают все",
+    "en": "He reached that age when people believe that they know everything"
+  },
+  {
+    "ru": "Нам нужно изменить",
+    "en": "We need to change"
+  },
+  {
+    "ru": "Я уверен, что он будет иметь дело с вами",
+    "en": "I'm sure he'll deal with you"
+  },
+  {
+    "ru": "Я не буду иметь дело с вами",
+    "en": "I wo n't dealing with you"
+  },
+  {
+    "ru": "Вход бесплатный каждый день",
+    "en": "The entrance is free every day"
+  },
+  {
+    "ru": "Я ем одно яйцо в день",
+    "en": "I eat one egg per day"
+  },
+  {
+    "ru": "Можете ли вы подождать меня у входа",
+    "en": "Can you wait for me at the entrance"
+  },
+  {
+    "ru": "Новость вскоре достигла ушей отца",
+    "en": "The news soon reached his father's ears"
+  },
+  {
+    "ru": "Они измеряли это вес",
+    "en": "Did they measure it's weight"
+  },
+  {
+    "ru": "Эти животные могут достичь высоты слона",
+    "en": "These animals could reach the height of an elephant"
+  },
+  {
+    "ru": "Но только я могу жить вечно",
+    "en": "But only I can live forever"
+  },
+  {
+    "ru": "Оставьте город навсегда",
+    "en": "Leave the city forever"
+  },
+  {
+    "ru": "Где находится вход",
+    "en": "Where is the entrance"
+  },
+  {
+    "ru": "Кто вы наказать их",
+    "en": "who are you to punish them"
+  },
+  {
+    "ru": "Вы всегда рисуете большие львы с когтями",
+    "en": "You always draw big lions with claws"
+  },
+  {
+    "ru": "Почему она была наказана",
+    "en": "Why was she punished"
+  },
+  {
+    "ru": "Голубь держал немного ягоды в клюве",
+    "en": "The dove held some berry in it's beak"
+  },
+  {
+    "ru": "Вы всегда можете увидеть много ворон в этом месте",
+    "en": "You can always see a lot of crows in this place"
+  },
+  {
+    "ru": "Где чайки",
+    "en": "Where are the gulls"
+  },
+  {
+    "ru": "Коричневый воробей имеет что-то в своем клюве",
+    "en": "The brown sparrow has something in it's beak"
+  },
+  {
+    "ru": "Иногда я вижу лебеди на озере",
+    "en": "Sometimes I see swans on the lake"
+  },
+  {
+    "ru": "Голубь принес хорошие новости",
+    "en": "The dove brought the good news"
+  },
+  {
+    "ru": "Есть много историй о воронах и войнах",
+    "en": "There are a lot of stories about ravens and wars"
+  },
+  {
+    "ru": "У моей сестры есть зеленый попугай",
+    "en": "My sister has a green parrot"
+  },
+  {
+    "ru": "Я не буду есть ни улитки, ни змеи",
+    "en": "I will eat neither snails nor snakes"
+  },
+  {
+    "ru": "В моей комнате есть лягушка",
+    "en": "There is a frog in my room"
+  },
+  {
+    "ru": "Ранние пташки получают червя",
+    "en": "The early birds gets the worm"
+  },
+  {
+    "ru": "Кашель может быть симптомом многих разных заболеваний",
+    "en": "The cough can be a symptom of many different diseases"
+  },
+  {
+    "ru": "Я думаю, что кашель тоже был одним из симптомов",
+    "en": "I think that cough was one of the symptoms too"
+  },
+  {
+    "ru": "В торговом центре есть новый магазин обуви",
+    "en": "there is a new shoe store in the mall"
+  },
+  {
+    "ru": "О, у нас много мебели",
+    "en": "oh we have a lot of furniture"
+  },
+  {
+    "ru": "Ваши большие коробки в спальне",
+    "en": "your big boxes are in the bedroom"
+  },
+  {
+    "ru": "Стол в спальне не новое",
+    "en": "The desk in the bedroom is not new"
+  },
+  {
+    "ru": "Ваша новая мебель такая крутая",
+    "en": "Your new furniture is so cool"
+  },
+  {
+    "ru": "Посмотри на наших грузчиках здесь",
+    "en": "Look our movers are here"
+  },
+  {
+    "ru": "Мне очень нравится мой диван",
+    "en": "I like my couch so much"
+  },
+  {
+    "ru": "Да у нас много планов",
+    "en": "Yes we have a lot of plans"
+  },
+  {
+    "ru": "Где мой большой коврик",
+    "en": "where is my big rug"
+  },
+  {
+    "ru": "Да у нас есть грузчики",
+    "en": "Yes we have movers"
+  },
+  {
+    "ru": "Положите эти растения на балконе",
+    "en": "Put these plants on the balcony"
+  },
+  {
+    "ru": "Вы хотите купить что-то особенное",
+    "en": "do You want to buy something special"
+  },
+  {
+    "ru": "Мне нужно что-то особенное для моей девушки",
+    "en": "I need something special for my girlfriend"
+  },
+  {
+    "ru": "Мне очень нравится мой диван",
+    "en": "I like my couch so much"
+  },
+  {
+    "ru": "Мы не продаем наших кошек, мы не можем бесплатно",
+    "en": "we do not sell our cats we ive them away fo free"
+  },
+  {
+    "ru": "Я бы так много хотел собаку",
+    "en": "i would like a dog so much"
+  },
+  {
+    "ru": "Наш бюджет был увеличен сейчас, мы можем потратить больше",
+    "en": "our budget has been increased now we can spend more"
+  },
+  {
+    "ru": "Моя птица сумасшедшая, она играет в шахматы",
+    "en": "my bird is crazy she plays chess"
+  },
+  {
+    "ru": "Я ничего не съел между обедом и ужином",
+    "en": "I ate nothing between lunch and dinner"
+  },
+  {
+    "ru": "Наслаждайтесь едой Света",
+    "en": "Enjoy your meal Sveta"
+  },
+  {
+    "ru": "Она не ожидала, что я приду",
+    "en": "She did n't expect that I would come"
+  },
+  {
+    "ru": "Да моя собака любит пасты",
+    "en": "Yes my dog likes pasta"
+  },
+  {
+    "ru": "Если бы я мог, я уменьшил цену для вас, но я не могу",
+    "en": "If I could I would decrease the price for you but I ca n't"
+  },
+  {
+    "ru": "Этот класс действительно интересен",
+    "en": "This class is really interesting"
+  },
+  {
+    "ru": "Пять маленьких уток вышел один день",
+    "en": "Five little ducks went out one day"
+  },
+  {
+    "ru": "Над холмом и далеко",
+    "en": "Over the hill and far away"
+  },
+  {
+    "ru": "Мать утка сказала",
+    "en": "Mother duck said"
+  },
+  {
+    "ru": "Quad Quack Quack",
+    "en": "Quack quack quack"
+  },
+  {
+    "ru": "Но только четыре маленьких утка вернулись",
+    "en": "But only four little ducks came back"
+  }
+]

@@ -1,0 +1,362 @@
+[
+  {
+    "ru": "Одна муха летает два муха",
+    "en": "One fly flies two flies fly"
+  },
+  {
+    "ru": "Я живу в России, но моя семья живет в Америке",
+    "en": "I live in Russia but my family lives in America"
+  },
+  {
+    "ru": "Почему она была наказана",
+    "en": "why was she punished"
+  },
+  {
+    "ru": "Адвокат настаивал",
+    "en": "the lawyer insisted"
+  },
+  {
+    "ru": "Я не буду иметь дело с вами",
+    "en": "I wo n't deal with you"
+  },
+  {
+    "ru": "несчастные случаи случаются, когда вы меньше всего этого ожидаете",
+    "en": "accidents happen when you least expect them"
+  },
+  {
+    "ru": "Нет, это не справедливо",
+    "en": "No it is not fair"
+  },
+  {
+    "ru": "Я живу в России, но моя семья живет в Америке",
+    "en": "I live in Russia but my family lives in America"
+  },
+  {
+    "ru": "Почему она была наказана",
+    "en": "why was she punished"
+  },
+  {
+    "ru": "Ранняя пташка получает червя",
+    "en": "The early bird gets the worm"
+  },
+  {
+    "ru": "Я не буду есть ни улитки, ни змеи",
+    "en": "I will eat neither snails nor snakes"
+  },
+  {
+    "ru": "Голубь принес хорошие новости",
+    "en": "The dove brought the good news"
+  },
+  {
+    "ru": "Это воробей",
+    "en": "It is a sparrow"
+  },
+  {
+    "ru": "Коричневый воробей имеет что-то в своем клюве",
+    "en": "The brown sparrow has something in it's beak"
+  },
+  {
+    "ru": "Есть много историй о воронах и войнах",
+    "en": "There are a lot of stories about ravens and wars"
+  },
+  {
+    "ru": "Где чайки",
+    "en": "Where are gulls"
+  },
+  {
+    "ru": "Лебеди больше попугаев",
+    "en": "Swans are larger than parrots"
+  },
+  {
+    "ru": "Вы не увидите бабочек ни утром, ни вечером",
+    "en": "you wo n't see butterflies neither in the morning or evening"
+  },
+  {
+    "ru": "В комнате слишком много комаров",
+    "en": "There are too many mosquitoes in the room"
+  },
+  {
+    "ru": "Пчелы вообще не опасны",
+    "en": "Bees are not dangerous at all"
+  },
+  {
+    "ru": "Муравей может быть маленьким, но ноги сильны",
+    "en": "Ant might be small but it's legs are strong"
+  },
+  {
+    "ru": "Что такое большое желтое бегущее насекомое",
+    "en": "What is this big yellow running insect"
+  },
+  {
+    "ru": "Похоже, у нее много друзей",
+    "en": "It appears she has many friends"
+  },
+  {
+    "ru": "Я уверен, что он будет иметь дело с вами",
+    "en": "I'm sure he'll deal with you"
+  },
+  {
+    "ru": "Не делайте внезапных движений",
+    "en": "Do not make any sudden moves"
+  },
+  {
+    "ru": "Он вдруг убежал",
+    "en": "He suddenly ran away"
+  },
+  {
+    "ru": "Пожалуйста, поговорите с ними, если они появляются",
+    "en": "Please talk to them if they appear"
+  },
+  {
+    "ru": "Близнецы могут родиться немного раньше",
+    "en": "Twins might be born a little earlier"
+  },
+  {
+    "ru": "Правое крыло ворона было сломано",
+    "en": "The crow's right wing was broken"
+  },
+  {
+    "ru": "Это красные муравья",
+    "en": "these are red ants"
+  },
+  {
+    "ru": "Одна муха летает две мухи",
+    "en": "one fly flies two fly flies"
+  },
+  {
+    "ru": "У Гарри была снежная сова",
+    "en": "Harry had a Snowy Owl"
+  },
+  {
+    "ru": "Мы ели куриные крылышки",
+    "en": "We are eating chicken wings"
+  },
+  {
+    "ru": "Это красное перо",
+    "en": "Is that a red feather"
+  },
+  {
+    "ru": "Клюк этой птицы очень большой",
+    "en": "The beak of this bird is very big"
+  },
+  {
+    "ru": "Это было единственное животное в стаде с белой гривой",
+    "en": "It was the only animal in the herd with a white mane"
+  },
+  {
+    "ru": "Когда он вернулся из США, он дал мне орел перо",
+    "en": "When he came back from the US he gave me an eagle feather"
+  },
+  {
+    "ru": "У Гарри была снежная сова",
+    "en": "Harry had a Snowy Owl"
+  },
+  {
+    "ru": "Мы ели куриные крылышки",
+    "en": "We are eating chicken wings"
+  },
+  {
+    "ru": "Это красное перо",
+    "en": "Is that a red feather"
+  },
+  {
+    "ru": "Клюк этой птицы очень большой",
+    "en": "The beak of this bird is very big"
+  },
+  {
+    "ru": "Это было единственное животное в стаде с белой гривой",
+    "en": "It was the only animal in the herd with a white mane"
+  },
+  {
+    "ru": "Волк был белым, но это хвост был черным",
+    "en": "The wolf was white but it's tail was black"
+  },
+  {
+    "ru": "Медведи опасные хищники",
+    "en": "Bears are dangerous predators"
+  },
+  {
+    "ru": "Я думаю, что кашель тоже был одним из симптомов",
+    "en": "I think that cough was one of the symptoms too"
+  },
+  {
+    "ru": "Кашель может быть симптомом многих разных заболеваний",
+    "en": "The cough can be a symptom of many different diseases"
+  },
+  {
+    "ru": "Мой врач сказал мне, что вакцинация очень важна",
+    "en": "My physician told me that a vaccination is very important"
+  },
+  {
+    "ru": "Это опасное заболевание",
+    "en": "Is it a dangerous disease"
+  },
+  {
+    "ru": "Я не люблю операции",
+    "en": "I do n't like surgeries"
+  },
+  {
+    "ru": "Он никогда не откажется от курения",
+    "en": "He will never give up smoking"
+  },
+  {
+    "ru": "Я был глухим много лет назад",
+    "en": "I used to be deaf many years ago"
+  },
+  {
+    "ru": "Мои ноги часто болеют, когда погода холодная",
+    "en": "My legs often ache when the weather is cold"
+  },
+  {
+    "ru": "Моя сестра сейчас на больничном отпуске",
+    "en": "My sister is on sick leave now"
+  },
+  {
+    "ru": "Как кровяное давление может быть очень опасно",
+    "en": "How blood pressure can be very dangerous"
+  },
+  {
+    "ru": "Каждый месяц мы записываем высоту детей",
+    "en": "Every month we write down the height of the children"
+  },
+  {
+    "ru": "Боль началась вчера",
+    "en": "The pain started yesterday"
+  },
+  {
+    "ru": "Вождение без страховки там не было запрещено",
+    "en": "Driving without insurance was not prohibited there"
+  },
+  {
+    "ru": "Моя сестра сейчас на больничном отпуске",
+    "en": "My sister is on sick leave  now"
+  },
+  {
+    "ru": "У него боль в ногах",
+    "en": "He has pain in his legs"
+  },
+  {
+    "ru": "Здесь около ста шестьдесят волков",
+    "en": "There are about one hundred sixty wolfs here"
+  },
+  {
+    "ru": "Мы подберем, чтобы получить ипотеку",
+    "en": "We were saving up to get a mortgage"
+  },
+  {
+    "ru": "В прошлом году мы продали четырнадцать домов до тринадцать покупателей",
+    "en": "In last year we sold fourteen houses to thirteen buyers"
+  },
+  {
+    "ru": "Продолжайте кормить грудью, пока не получит достаточно веса",
+    "en": "Keep breastfeeding them until they gain enough weight"
+  },
+  {
+    "ru": "У меня была вакцинация год назад",
+    "en": "I had a vaccination a year ago"
+  },
+  {
+    "ru": "Это лекарство для тошноты",
+    "en": "This medicine is for nausea"
+  },
+  {
+    "ru": "Глухие люди тоже могут работать здесь",
+    "en": "Deaf people can work here too"
+  },
+  {
+    "ru": "У него высокое кровяное давление",
+    "en": "He has high blood pressure"
+  },
+  {
+    "ru": "Вы чувствуете эффект",
+    "en": "do you feel the effect"
+  },
+  {
+    "ru": "Моя сестра в отпуске по болезни",
+    "en": "My sister is on sick leave"
+  },
+  {
+    "ru": "У него всегда есть тошнота, когда он на машине надолго",
+    "en": "He always has nausea when he is in a car for a long time"
+  },
+  {
+    "ru": "Я думаю, что его племянник глухой",
+    "en": "I think that his nephew is deaf"
+  },
+  {
+    "ru": "Мой врач сказал мне, что вакцинация очень важна",
+    "en": "My physician told me that that vaccination is very important"
+  },
+  {
+    "ru": "Моя сестра сейчас на больничном отпуске",
+    "en": "My sister is on sick leave now"
+  },
+  {
+    "ru": "Она играет со своими роталками",
+    "en": "She is playing with her rattlers"
+  },
+  {
+    "ru": "Смотри она ползает",
+    "en": "Look she is crawling"
+  },
+  {
+    "ru": "Сколько веса вы получили во время беременности",
+    "en": "How much weight did you gain during pregnancy"
+  },
+  {
+    "ru": "Она займет тридцать девять недель отпуска по беременности и родам",
+    "en": "She will take thirty nine weeks of maternity leave"
+  },
+  {
+    "ru": "Ее мягкий тихий голос быстро успокоил ребенка",
+    "en": "Her soft quiet voice quickly calmed the baby"
+  },
+  {
+    "ru": "Пераги ее и дай ей соску",
+    "en": "Swaddle her and give her a pacifier"
+  },
+  {
+    "ru": "Младенцы обычно получают один или два фунта в месяц",
+    "en": "Babies usually gain one or two pounds a month"
+  },
+  {
+    "ru": "Я дал ему лед, чтобы жевать, когда он прорезал прорезывание зубов",
+    "en": "I gave him ice to chew on when he was teething"
+  },
+  {
+    "ru": "Я видел, как ты танцуешь",
+    "en": "I saw you dancing"
+  },
+  {
+    "ru": "Я посмотрел, но он все еще стоял",
+    "en": "I had lain down but he was still standing"
+  },
+  {
+    "ru": "Когда это были горячие коровы, часто лежали в тени",
+    "en": "when it was hot cows often lay in it's shade"
+  },
+  {
+    "ru": "Его отец оставил его всего одну десятую его состояние",
+    "en": "His father left him only one tenth of his fortune"
+  },
+  {
+    "ru": "Я чувствую, что вижу город",
+    "en": "I feel like seeing the city"
+  },
+  {
+    "ru": "Увидел его вчера",
+    "en": "The saw him yesterday"
+  },
+  {
+    "ru": "Теперь врачи не делают все операции вручную",
+    "en": "Now the doctors do not do all the surgeries manually"
+  },
+  {
+    "ru": "Эта деятельность против закона",
+    "en": "This activity is against the law"
+  },
+  {
+    "ru": "Нам нужно принять меры",
+    "en": "We need to take action"
+  }
+]

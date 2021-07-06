@@ -1,0 +1,198 @@
+[
+  {
+    "ru": "Итак, давайте посмотрим сначала как реализовать EIGRP",
+    "en": "So let take a look first how to implement eigrp"
+  },
+  {
+    "ru": "Целью любых динамических протоколов маршрутизации предназначена для маршрутизаторов для обмена информацией между ними и узнать о пунктах назначения, которые не связаны напрямую эти маршрутизаторы",
+    "en": "the goal for any Dynamic routing protocol is for routers to be able exchange information between them and learn about destinations that are not directly connected those routers"
+  },
+  {
+    "ru": "Я так как бы сказал, речь идет о открытии каждая сетей",
+    "en": "I so as would say it's about the discovery every networks"
+  },
+  {
+    "ru": "Много раз люди называют этот маршрут по слухам",
+    "en": "many times people call this routing by rumor"
+  },
+  {
+    "ru": "Это подумает об этом один роутер, длинные пути, говоря, эй, я подключен к этой сети, позвольте мне рассказать вам о том, что роутер говорит, что, эй, я слышал о своем пути, чтобы добраться сюда, а затем я слышал о другом пути, но это Надеюсь, надежный слух, который мы получаем",
+    "en": "Is this think about it one router a long ways away says hey I'm connected to this network let me tell you about him that router says hey I heard about my way to get here and then I heard about another way to get here but it's hopefully a reliable rumor that we get"
+  },
+  {
+    "ru": "Теперь мы также должны иметь что-то, что поддерживает информацию о маршрутизации как актуальные другими словами места назначения, больше не доступны 5 маршрутизаторов",
+    "en": "Now we also you have to have something that maintains the routing information as up-to-date in other words of a destination is no longer available 5 routers away"
+  },
+  {
+    "ru": "Я ожидаю, что маршрутизатор говорит нам через сообщение с удалением, которое мы больше не можем добраться до этого пункта назначения, чтобы все знали, чтобы найти новый путь, если он станет доступным, чтобы добраться до того же назначения",
+    "en": "I expect that router to tell us through a removal message that we can no longer get to that destination so everyone knows to find A New Path if one becomes available to get to that same destination"
+  },
+  {
+    "ru": "Теперь то, как узнать, чтобы выбрать лучший путь, потому что в сегодняшнем дню распашны сети, которые вы можете иметь очень тесно, чем полный матч соединений между маршрутизаторами любого из них из любой точки моей сети",
+    "en": "Now is that how to know to choose the best path because in today is routed networks you may have very closely than a full match of connections between routers any of that from any one point of my network"
+  },
+  {
+    "ru": "Я говорю, чтобы иметь возможность два или три или пять путей к одному и тому же пункту назначения",
+    "en": "I mind be able two or three or five paths to the same destination"
+  },
+  {
+    "ru": "Какой из них является лучшим",
+    "en": "which of those is the best one"
+  },
+  {
+    "ru": "1:20",
+    "en": "1:20"
+  },
+  {
+    "ru": "Вид снова идея ездить по автостраде",
+    "en": "kind of again the idea of driving down a freeway"
+  },
+  {
+    "ru": "Я много путешествую и так без GPS я буду в беде",
+    "en": "I travel a lot and so without GPS I'd be in trouble"
+  },
+  {
+    "ru": "Но я, конечно, в старые времена мог посмотреть на карту и сказать хорошо",
+    "en": "but I certainly in the old days could look at a map and say okay"
+  },
+  {
+    "ru": "Я могу добраться отсюда в продуктовый магазин",
+    "en": "I can get from here to the grocery store"
+  },
+  {
+    "ru": "Я собираюсь взять на себя эту автостраду на 10 миль, чтобы выключить выход, я должен увидеть это по моему праву",
+    "en": "I'm going to take this freeway for 10 miles to turn off the exit I should see it on my right"
+  },
+  {
+    "ru": "И что происходит, когда эта автострада 70 закрыта для автокатастрофа или строительства",
+    "en": "and what happens when that freeway 70 is closed to a car crash or construction"
+  },
+  {
+    "ru": "Теперь я застрял",
+    "en": "now I'm stuck"
+  },
+  {
+    "ru": "Я не знаю никакого другого способа добраться туда",
+    "en": "I do n't know any other way to get there"
+  },
+  {
+    "ru": "Итак, это еще одна вещь, которую мы видим, будет синоним протоколов",
+    "en": "and so that's another thing that we see would be synonym of protocols"
+  },
+  {
+    "ru": "Когда они поддерживают всю эту информацию",
+    "en": "as they maintain all that information"
+  },
+  {
+    "ru": "так что они как местный человек, который говорит",
+    "en": "so they're like the local person that says"
+  },
+  {
+    "ru": "О, я только что получил пострадавших от строительства",
+    "en": "oh I just got hit by the construction"
+  },
+  {
+    "ru": "Я возьму этот другой выход, возьмите дерево на услугу, нет проблем",
+    "en": "I'll take this other exit take a service tree down there no problem"
+  },
+  {
+    "ru": "Поэтому им нужно знать, как найти лучший путь не только один путь",
+    "en": "so they need to know how to find the best path not just a single path"
+  },
+  {
+    "ru": "И быть в состоянии найти, это я просто сказал новый лучший путь, если текущий путь больше не доступен",
+    "en": "and to be able to find is I just said the new best path if the current path is no longer available"
+  },
+  {
+    "ru": "Итак, давайте посмотрим на динамические протоколы маршрутизации",
+    "en": "so let's take a look at dynamic routing protocols"
+  },
+  {
+    "ru": "и как они ведут себя по-разному",
+    "en": "and how they behave differently"
+  },
+  {
+    "ru": "Сначала мы собираемся начать с типа",
+    "en": "first we're going to start with the type"
+  },
+  {
+    "ru": "Независимо от того, независимо от того, предпробен IGP протокол против EGP или внешнего комплекта с протоколом",
+    "en": "whether it's an igp interrogate with protocol versus an EGP or an exterior kit with protocol"
+  },
+  {
+    "ru": "Мы ориентируемся только на IGPS в нашем курсе",
+    "en": "we're only focusing on igps in our course"
+  },
+  {
+    "ru": "Но позвольте мне сначала немного поговорить о EGP внешних протоколах",
+    "en": "but let me first talk a little bit about the EGP the exterior protocols"
+  },
+  {
+    "ru": "Из одного единственного, которую мы обычно используем, называется BGP протокол Grader Gateway версии 4",
+    "en": "of one the only one that we commonly use is called bgp the border gateway protocol version 4"
+  },
+  {
+    "ru": "Целью является, что если вы думаете о том, как Интернет собран вместе с различными поставщиками услуг, которые имеют их клиенты, связанные с их сетями",
+    "en": "the goal is if you think about how the internet is put together with different service providers that have their customers connected to their networks"
+  },
+  {
+    "ru": "Они хотят рекламировать маршруты своим клиентам, чтобы все остальные люди в мире знали, как добраться до своих клиентов в рамках услуги или оплата",
+    "en": "they want to advertise the routes to their customers so that all other people in the world will know how to get to their customers as part of the service or paying for"
+  },
+  {
+    "ru": "Но если вы думаете об этом",
+    "en": "but if you think about it"
+  },
+  {
+    "ru": "Вы не хотите, чтобы поставщик услуг «A» может сообщить поставщику услуг «B», как маршрутить",
+    "en": "you do n't want to let service provider 'A' be able to tell service provider 'B' how to route"
+  },
+  {
+    "ru": "Мы просто хотим рассказать вам о существовании маршрутов",
+    "en": "we just want to tell you about the existence of the routes"
+  },
+  {
+    "ru": "И вот что делает EGP в этом случае BGP",
+    "en": "and that's what the egps do in this case bgp"
+  },
+  {
+    "ru": "Это список маршрутов с предложениями о том, как ее маршрутизировать те, которые эти клиенты",
+    "en": "it's a list of routes with suggestions about how to route to those those customers"
+  },
+  {
+    "ru": "В IGP протокол внутренних шлюзов",
+    "en": "in the igp the interior gateway protocol"
+  },
+  {
+    "ru": "Это все о вашей управляемой группе маршрутизаторов",
+    "en": "it's all about your managed group of routers"
+  },
+  {
+    "ru": "Это означает, что это ваша компания ваше предприятие, которое вы поставщика услуг",
+    "en": "meaning it's your company your enterprise you're the service provider"
+  },
+  {
+    "ru": "Они все под общем руководством, и мы часто называем это автономной системой",
+    "en": "they're all under a common management and we often refer to that as an autonomous system"
+  },
+  {
+    "ru": "И что мы делаем, мы отслеживаем все маршруты, которые существуют внутри нашей сети",
+    "en": "and what we're doing is we're keeping track of all of the routes that exist inside of our network"
+  },
+  {
+    "ru": "не разделяя эти маршруты для людей снаружи",
+    "en": "without sharing those routes to the people on the outside"
+  },
+  {
+    "ru": "И вот где EIGRP и OSPF приходят в свои внутренние шлюз протоколы",
+    "en": "and that's where eigrp and ospf come in their interior gateway protocols"
+  },
+  {
+    "ru": "Теперь еще одно отличие - это то, что они рекламируют",
+    "en": "now another difference is what do they advertise"
+  },
+  {
+    "ru": "Один из IGPS, который я не упомянул, я надеялся, что мне не пришлось, называется RIP The Protocol Protocol",
+    "en": "one of the igps I did n't mention I was hoping I did n't have to it's called RIP the routing information protocol"
+  }
+]

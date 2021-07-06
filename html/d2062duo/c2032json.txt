@@ -1,0 +1,558 @@
+[
+  {
+    "ru": "У моего деда была хирургия сердца в прошлом месяце",
+    "en": "My grandfather had a heart surgery last month"
+  },
+  {
+    "ru": "Это опасное заболевание",
+    "en": "Is it a dangerous disease"
+  },
+  {
+    "ru": "Не ходите по траве",
+    "en": "Keep off the grass"
+  },
+  {
+    "ru": "Десять долларов за три унции сыра",
+    "en": "Ten dollars for three ounces of cheese"
+  },
+  {
+    "ru": "Эти специи не используются в русской кухне",
+    "en": "These spices are not used in Russian cuisine"
+  },
+  {
+    "ru": "Не ешь свою картофель фри",
+    "en": "do not eat my french fries"
+  },
+  {
+    "ru": "Нам все еще нужно купить клубник и арахис индейки",
+    "en": "we still need to buy a turkey cranberries and peanuts"
+  },
+  {
+    "ru": "Продаю тыквы",
+    "en": "I sell pumpkins"
+  },
+  {
+    "ru": "Давайте порежь пирог на четные части",
+    "en": "Let's cut the pie into even pieces"
+  },
+  {
+    "ru": "Огурец овощной",
+    "en": "Is cucumber a vegetable"
+  },
+  {
+    "ru": "Посмотри свою собаку ест ветчину",
+    "en": "Look your dog is eating ham"
+  },
+  {
+    "ru": "Дорогая не горький",
+    "en": "Honey is not bitter"
+  },
+  {
+    "ru": "Ее запястье сломана",
+    "en": "Her wrist is broken"
+  },
+  {
+    "ru": "Я не могу поверить, что вы нашли это серебряное кольцо",
+    "en": "I ca n't believe you found that silver ring"
+  },
+  {
+    "ru": "Ее запястье сломана",
+    "en": "Her wrist is broken"
+  },
+  {
+    "ru": "Никто не взял ваше золотое ожерелье",
+    "en": "Nobody took your gold necklace"
+  },
+  {
+    "ru": "Ее ногти красные",
+    "en": "Her nails are red"
+  },
+  {
+    "ru": "Тренер говорит мне, что мои мышцы ноги сейчас сильны",
+    "en": "The coach tells me that my leg muscles are strong now"
+  },
+  {
+    "ru": "Некоторые люди привыкли жить с одной почкой",
+    "en": "some people get used to living with one kidney"
+  },
+  {
+    "ru": "Является ли печень справа или слева",
+    "en": "Is the liver on the right or on the left side"
+  },
+  {
+    "ru": "Слышанная мышца",
+    "en": "The heard is a muscle"
+  },
+  {
+    "ru": "Это почки",
+    "en": "This is a kidney"
+  },
+  {
+    "ru": "Это жирные масла",
+    "en": "These are fatty oils"
+  },
+  {
+    "ru": "Мой бывший муж говорил, что у меня не было талии",
+    "en": "My ex-husband used to say that I had no waist"
+  },
+  {
+    "ru": "после того, как вы опечатаете",
+    "en": "after you kneeze"
+  },
+  {
+    "ru": "Есть много микробов",
+    "en": "there are many germs"
+  },
+  {
+    "ru": "Ты грязный",
+    "en": "you are dirty"
+  },
+  {
+    "ru": "Hikory Dickory Dock",
+    "en": "Hikory dickory dock"
+  },
+  {
+    "ru": "Нет, кость не сломана",
+    "en": "no the bone not broken"
+  },
+  {
+    "ru": "Раковина не работает",
+    "en": "the sink is not working"
+  },
+  {
+    "ru": "я планирую",
+    "en": "i'm planning"
+  },
+  {
+    "ru": "Я сделаю полки рядом с окном",
+    "en": "I will make shelves next to the window"
+  },
+  {
+    "ru": "Потолок должен быть белым и низким",
+    "en": "the ceiling has to be white and low"
+  },
+  {
+    "ru": "Нет, кость не сломана",
+    "en": "no the bone not broken"
+  },
+  {
+    "ru": "Раковина не работает",
+    "en": "the sink is not working"
+  },
+  {
+    "ru": "я планирую",
+    "en": "i'm planning"
+  },
+  {
+    "ru": "Я сделаю полки рядом с окном",
+    "en": "I will make shelves next to the window"
+  },
+  {
+    "ru": "Потолок должен быть белым и низким",
+    "en": "the ceiling has to be white and low"
+  },
+  {
+    "ru": "Она солгала это десять раз, так как мы приехали сюда",
+    "en": "She's sung it ten times since we got here"
+  },
+  {
+    "ru": "Она покавилась ни с кем из них",
+    "en": "Has she spoken to any of them yet"
+  },
+  {
+    "ru": "Темнеет",
+    "en": "It's getting dark"
+  },
+  {
+    "ru": "Обычно она оделась хорошо, но в этот день она одета плохо",
+    "en": "usually she dressed well but on this day she is dressed poorly"
+  },
+  {
+    "ru": "Я работал над моей новой идеей, когда получил свое послание",
+    "en": "I was working on my new idea when I got his message"
+  },
+  {
+    "ru": "Я люблю свежий белый снег",
+    "en": "I love fresh white snow"
+  },
+  {
+    "ru": "Вчера был дождь",
+    "en": "It rained yesterday"
+  },
+  {
+    "ru": "Обычно холодно зимой",
+    "en": "It is usually chilly in winter"
+  },
+  {
+    "ru": "Это будет облачно и ветрено завтра",
+    "en": "It will be cloudy and windy tomorrow"
+  },
+  {
+    "ru": "Это снег вчера",
+    "en": "Did it snow yesterday"
+  },
+  {
+    "ru": "Этот монги был очень туманным",
+    "en": "That moning was very foggy"
+  },
+  {
+    "ru": "В этом году у нас была дождливая осень и снежная зима",
+    "en": "That year we had a rainy fall and a snowy winter"
+  },
+  {
+    "ru": "Нет шансов, что он будет есть все это",
+    "en": "There is no chance that he will eat it all"
+  },
+  {
+    "ru": "Есть много способов сделать это",
+    "en": "There are many ways to do it"
+  },
+  {
+    "ru": "Нет причин помочь им",
+    "en": "There is no reason to help them"
+  },
+  {
+    "ru": "В доме было три из нас",
+    "en": "There were three of us in the house"
+  },
+  {
+    "ru": "В этой школе был только один учитель",
+    "en": "There was only one teacher in that school"
+  },
+  {
+    "ru": "В нашем новом доме будет пять номеров",
+    "en": "There will be five rooms in our new house"
+  },
+  {
+    "ru": "Там нет шансов, что она ответит вам",
+    "en": "There is not chance that she will answer you"
+  },
+  {
+    "ru": "Нет шансов, что он будет есть все это",
+    "en": "There is no chance that he will eat it all"
+  },
+  {
+    "ru": "Будет несколько вопросов от родителей, но не много",
+    "en": "There will be several questions from the parents but not many"
+  },
+  {
+    "ru": "Моя мама чувствует себя лучше сегодня",
+    "en": "my mother feels better today"
+  },
+  {
+    "ru": "Мне лучше",
+    "en": "I feel better"
+  },
+  {
+    "ru": "Как он ведет себя",
+    "en": "how did he behave"
+  },
+  {
+    "ru": "он чувствует себя хуже, чем раньше",
+    "en": "he feels worse than before"
+  },
+  {
+    "ru": "Как он ведет себя",
+    "en": "how did he behave"
+  },
+  {
+    "ru": "это выглядит как яйцо",
+    "en": "it looks like an egg"
+  },
+  {
+    "ru": "Почему они так ведут себя так",
+    "en": "why do they behave like that"
+  },
+  {
+    "ru": "Обычно она оделась хорошо, но в той днях она была плохо одета",
+    "en": "usually she dressed well but that days she was dressed badly"
+  },
+  {
+    "ru": "Девятнадцать шестьдесят восьми восьми он стал слишком слаб, чтобы пройти",
+    "en": "by nineteen sixty-eight he had become too weak to walk"
+  },
+  {
+    "ru": "Они развели к тому времени, и я снова мог видеть ее",
+    "en": "they had divorced by that time and i could see her again"
+  },
+  {
+    "ru": "Они проверили сотни ответов, прежде чем они проверили",
+    "en": "they had checked hundreds of answers before they checked yours"
+  },
+  {
+    "ru": "Эти важные сообщения отправляются с ними каждый день",
+    "en": "these important messages are sent by them every day"
+  },
+  {
+    "ru": "Она стала его женой задолжай до того, как он стал моим другом",
+    "en": "she had become his wife long before he became my friend"
+  },
+  {
+    "ru": "Вы собираетесь на поезде или вы арендуете машину",
+    "en": "are you going by train or are you renting a car"
+  },
+  {
+    "ru": "проверять",
+    "en": "checking for"
+  },
+  {
+    "ru": "кто платит свои ежемесячные счета",
+    "en": "who pays their monthly bills"
+  },
+  {
+    "ru": "Мой брат еще не заплатил за книги",
+    "en": "my brother has not paid for the books yet"
+  },
+  {
+    "ru": "Могу ли я поговорить с ней нет, она отправилась в Париж",
+    "en": "can i talk to her no she has gone to Paris"
+  },
+  {
+    "ru": "Она еще не ела",
+    "en": "has she not eaten yet"
+  },
+  {
+    "ru": "Они пели не так хорошо, как могли",
+    "en": "They sang not as well as they could"
+  },
+  {
+    "ru": "Нам нужен проект в ближайшее время, крайний срок вторник",
+    "en": "we need the project soon the deadline is tuesday"
+  },
+  {
+    "ru": "Посмотрите, у них есть ребенок тигр здесь",
+    "en": "look they have a baby tiger here"
+  },
+  {
+    "ru": "Горячих здесь, в июне, но это не влажно",
+    "en": "it's hot here in june but it's not humid"
+  },
+  {
+    "ru": "Каждый магазин в моем городе закрыт",
+    "en": "every store in my town are closed"
+  },
+  {
+    "ru": "Нет способа, чтобы игрок слишком коротким",
+    "en": "no way that player is too short"
+  },
+  {
+    "ru": "Мне не нравится, я люблю только талантливых музыкантов",
+    "en": "I do n't like him I only like talented musicians"
+  },
+  {
+    "ru": "Есть ли парковка в торговом центре",
+    "en": "is there parking at the mall"
+  },
+  {
+    "ru": "Нет причин помочь им",
+    "en": "there is no reason to help them"
+  },
+  {
+    "ru": "Это будет туманно сегодня вечером",
+    "en": "it will be foggy tonight"
+  },
+  {
+    "ru": "Мне не нравится, когда оно облачно и туманно",
+    "en": "i do n't like when it is cloudy and foggy"
+  },
+  {
+    "ru": "Она едва движется",
+    "en": "she barely moves"
+  },
+  {
+    "ru": "Он побрился изменился и пил кофе",
+    "en": "He shaved changed and drank coffee"
+  },
+  {
+    "ru": "Он бросил, когда она позвонила",
+    "en": "He was shaving when she called"
+  },
+  {
+    "ru": "Она проверяла новые сообщения, когда она получила мою",
+    "en": "She was checking for new messages when she got mine"
+  },
+  {
+    "ru": "Вы берете поезд или арендуете машину",
+    "en": "are you taking the train or renting a car"
+  },
+  {
+    "ru": "Некоторые из его ответов не были интересны",
+    "en": "some of his answers were n't interesting"
+  },
+  {
+    "ru": "кто платит свои счета",
+    "en": "who pays their bills"
+  },
+  {
+    "ru": "Разве она еще не ела",
+    "en": "has n't she eaten yet"
+  },
+  {
+    "ru": "Они не пели, а также могли петь",
+    "en": "they did n't sing as well as they could sing"
+  },
+  {
+    "ru": "Он говорил более или менее громко, но я не слышал его",
+    "en": "He spoke more or less loudly but I could n't hear him"
+  },
+  {
+    "ru": "Они были самыми оживленными женщинами в нашей семье",
+    "en": "They were the busiest women in our family"
+  },
+  {
+    "ru": "Это была недавняя книга",
+    "en": "it was a recent book"
+  },
+  {
+    "ru": "Они отдавали всех своих кошек",
+    "en": "They gave away all their cats"
+  },
+  {
+    "ru": "Мы читаем что-то об этом год назад",
+    "en": "we read something about this a year ago"
+  },
+  {
+    "ru": "Она не знала, что сказать",
+    "en": "she did n't know what to say"
+  },
+  {
+    "ru": "Есть ли парковка в торговом центре",
+    "en": "is there parking in the mall"
+  },
+  {
+    "ru": "Нам нужен проект в ближайшее время, крайний срок вторник",
+    "en": "we need a project soon the deadline is Tuesday"
+  },
+  {
+    "ru": "Это дорожное приключение, нам нужно закуски",
+    "en": "This is a road adventure we need snacks"
+  },
+  {
+    "ru": "Они не говорят нет",
+    "en": "they do n't say no"
+  },
+  {
+    "ru": "Она не сказала, что она голодна",
+    "en": "She did n't say she was hungry"
+  },
+  {
+    "ru": "Она едва движется",
+    "en": "She's barely moving"
+  },
+  {
+    "ru": "Мы редко читаем их книги",
+    "en": "we seldom read their books"
+  },
+  {
+    "ru": "по четвергам",
+    "en": "on thursdays"
+  },
+  {
+    "ru": "Она не дает мне мою книгу",
+    "en": "she is not giving me my book"
+  },
+  {
+    "ru": "пожалуйста, скажите мне",
+    "en": "please tell me"
+  },
+  {
+    "ru": "Я должен бежать",
+    "en": "I have to run"
+  },
+  {
+    "ru": "Я редко плаваю",
+    "en": "I rarely swim"
+  },
+  {
+    "ru": "Мы редко читаем их книги",
+    "en": "we rarely read their books"
+  },
+  {
+    "ru": "Они хорошие официантки",
+    "en": "are they good waitresses"
+  },
+  {
+    "ru": "Не волнуйтесь, ваши видеоигры находятся в спальне",
+    "en": "do n't worry your video games are in the bedroom"
+  },
+  {
+    "ru": "Ваш день рождения - первый в марте в моем календаре",
+    "en": "your birthday is the first of March in my calendar"
+  },
+  {
+    "ru": "Она выросла, так как я видел ее",
+    "en": "she's grown up since I've seen her"
+  },
+  {
+    "ru": "Ваша голова больна каждый день или только сегодня",
+    "en": "does your head hurt every day or just today"
+  },
+  {
+    "ru": "Мы увидим его снова",
+    "en": "we'll see him again"
+  },
+  {
+    "ru": "Эта комната чаще используется женщинами",
+    "en": "this room is more often used by women"
+  },
+  {
+    "ru": "Я тебя вижу",
+    "en": "I can see you"
+  },
+  {
+    "ru": "Она летает каждый день",
+    "en": "she flies every day"
+  },
+  {
+    "ru": "три раза два равных шести",
+    "en": "three times two equals six"
+  },
+  {
+    "ru": "Девятнадцать минус тринадцать равна шести",
+    "en": "nineteen minus thirteen equals six"
+  },
+  {
+    "ru": "Это будет вашим номером Эта комната большая 2ВА",
+    "en": "this will be your room this room is big 2wa"
+  },
+  {
+    "ru": "Зеленые платья",
+    "en": "Green dresses"
+  },
+  {
+    "ru": "Эти дети читают 10 книг в неделю",
+    "en": "These children read 10 books a week"
+  },
+  {
+    "ru": "Эти мыши осторожны",
+    "en": "These mice are careful"
+  },
+  {
+    "ru": "холодает",
+    "en": "it's getting cold"
+  },
+  {
+    "ru": "Две маленькие дети",
+    "en": "two small children"
+  },
+  {
+    "ru": "Адам Добро пожаловать в Канаду",
+    "en": "Adam welcome to Canada"
+  },
+  {
+    "ru": "Я был осторожен",
+    "en": "I was careful"
+  },
+  {
+    "ru": "Они хорошо знают нас",
+    "en": "they know us well"
+  },
+  {
+    "ru": "Этот человек верит моей сестре",
+    "en": "this man believes my sister"
+  },
+  {
+    "ru": "Этот молодой человек ничего не дает мне",
+    "en": "this young man does n't give me anything"
+  }
+]

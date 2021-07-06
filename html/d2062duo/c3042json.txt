@@ -1,0 +1,346 @@
+[
+  {
+    "ru": "приятного аппетита",
+    "en": "enjoy your meal"
+  },
+  {
+    "ru": "Вам нужно сделать объезд",
+    "en": "You need to take a detour"
+  },
+  {
+    "ru": "Это было зажигание",
+    "en": "was it an ignition"
+  },
+  {
+    "ru": "Это насос",
+    "en": "This is a pump"
+  },
+  {
+    "ru": "В этой улице всегда есть пробка на часе",
+    "en": "There's always a traffic jam at rush-hour in this street"
+  },
+  {
+    "ru": "Это закончилось плохо, но он может закончиться еще хуже",
+    "en": "It ended badly but it could end even worse"
+  },
+  {
+    "ru": "Он не уступает пешеходу",
+    "en": "He is not yielding to the pedestrian"
+  },
+  {
+    "ru": "В вашей машине тормоз находится слева",
+    "en": "In your car the brake is on the left"
+  },
+  {
+    "ru": "Они не хотят прикреплять свои сиденья ремни",
+    "en": "They do not want to fasten their seats belts"
+  },
+  {
+    "ru": "Нажмите педаль сцепления перед изменением шестерни",
+    "en": "Press the clutch pedal before changing gears"
+  },
+  {
+    "ru": "Оба шины были плоские",
+    "en": "Both tires were flat"
+  },
+  {
+    "ru": "Я взял такси в отель",
+    "en": "I took a cab to the hotel"
+  },
+  {
+    "ru": "Замена для колес дороги",
+    "en": "Replacement for wheels are expensive"
+  },
+  {
+    "ru": "Шахматы крутые",
+    "en": "Chess is cool"
+  },
+  {
+    "ru": "Мои водительские права в коробке",
+    "en": "My driving licence is in the box"
+  },
+  {
+    "ru": "Чей это грузовик это",
+    "en": "whose truck is this"
+  },
+  {
+    "ru": "пересечение полос",
+    "en": "intersection lanes"
+  },
+  {
+    "ru": "Что такое транспортное средство",
+    "en": "what is a vehicle"
+  },
+  {
+    "ru": "Я проигнорировал все напоминания",
+    "en": "I ignored all the reminders"
+  },
+  {
+    "ru": "Вы обвиняете только и судите",
+    "en": "You only accuse and judge"
+  },
+  {
+    "ru": "Угроза не была реальной",
+    "en": "The threat was not real"
+  },
+  {
+    "ru": "Наш мэр не невиновен, потому что он приносил взятки",
+    "en": "Our mayor is not innocent because he used to take bribes"
+  },
+  {
+    "ru": "Пожалуйста, позвоните в посольство",
+    "en": "Please call the embassy"
+  },
+  {
+    "ru": "У человека есть оружие",
+    "en": "The man has a weapon"
+  },
+  {
+    "ru": "У посольства есть большой удар",
+    "en": "There is a big strike near the embassy"
+  },
+  {
+    "ru": "Мы невинные",
+    "en": "We are innocent"
+  },
+  {
+    "ru": "Гражданское общество - это угроза для взятки",
+    "en": "A civil society is a threat to bribes"
+  },
+  {
+    "ru": "Он богат из-за инвестиций",
+    "en": "He is rich because of the investments"
+  },
+  {
+    "ru": "Угроза не была реальной",
+    "en": "The threat was not real"
+  },
+  {
+    "ru": "Толпа очень большая",
+    "en": "The crowd is very big"
+  },
+  {
+    "ru": "Когда появилось первое государство",
+    "en": "When did the first state appear"
+  },
+  {
+    "ru": "Как экономика",
+    "en": "How is economy"
+  },
+  {
+    "ru": "Конец бедности в мире - мечта",
+    "en": "The end of poverty in the world is a dream"
+  },
+  {
+    "ru": "Теперь мы должны встать и петь гимн",
+    "en": "Now we should stand up and sing the anthem"
+  },
+  {
+    "ru": "Половина населения живет в бедности",
+    "en": "Half of the population live in poverty"
+  },
+  {
+    "ru": "Она любит его за его богатство",
+    "en": "She loves him for his wealth"
+  },
+  {
+    "ru": "Я не сейчас наш гимн",
+    "en": "I do n't now our anthem"
+  },
+  {
+    "ru": "Он выигрывает выборы",
+    "en": "He wins the elections"
+  },
+  {
+    "ru": "Мэр уже имеет несколько идей на следующий год",
+    "en": "The mayor already has a few ideas for the next year"
+  },
+  {
+    "ru": "Население хочет больше",
+    "en": "The population wants more"
+  },
+  {
+    "ru": "Будет ли она голосовать",
+    "en": "Will she vote"
+  },
+  {
+    "ru": "Судья работает в суде",
+    "en": "The judge is working in a court"
+  },
+  {
+    "ru": "Ваше хобби круто",
+    "en": "your hobby is cool"
+  },
+  {
+    "ru": "ура мамы и папы",
+    "en": "cheers mom and dad"
+  },
+  {
+    "ru": "Чашка кофе и наш чек, пожалуйста",
+    "en": "a cup of coffee and our check please"
+  },
+  {
+    "ru": "Урок только начался",
+    "en": "The lesson has just begun"
+  },
+  {
+    "ru": "Очевидно, что они богаты",
+    "en": "It is obvious that they are rich"
+  },
+  {
+    "ru": "Да, она упомянула, что она родилась в Китае",
+    "en": "Yes she mentioned that she was born in China"
+  },
+  {
+    "ru": "Ее мечта сбудется",
+    "en": "her dream will come true"
+  },
+  {
+    "ru": "Они решили не упоминать его",
+    "en": "They decided not to mention him"
+  },
+  {
+    "ru": "Учение других не всегда легко",
+    "en": "Teaching others is not always easy"
+  },
+  {
+    "ru": "Я проигнорировал все напоминания",
+    "en": "I ignored all the reminders"
+  },
+  {
+    "ru": "Вы только вините и судите",
+    "en": "You only blame and judge"
+  },
+  {
+    "ru": "Она держит ее воспоминания в этой коробке",
+    "en": "She keeps her memories in this box"
+  },
+  {
+    "ru": "На мой взгляд, они действительно щедры",
+    "en": "In my opinion they are really generous"
+  },
+  {
+    "ru": "Не судите книгу по обложке",
+    "en": "Do n't judge a book by its cover"
+  },
+  {
+    "ru": "Исследования находятся на английском языке",
+    "en": "The studies are in English"
+  },
+  {
+    "ru": "Мы смотрели фейерверк прошлой ночью",
+    "en": "We watched the fireworks last night"
+  },
+  {
+    "ru": "Вы собираетесь отпраздновать свой день рождения",
+    "en": "Are you going to celebrate your birthday"
+  },
+  {
+    "ru": "Что они празднуют",
+    "en": "What are they celebrating"
+  },
+  {
+    "ru": "Когда следующий праздник",
+    "en": "When is the next holiday"
+  },
+  {
+    "ru": "Это желание вашей бабушки",
+    "en": "That is the wish of your grandmother"
+  },
+  {
+    "ru": "Он беспокоит что-то еще",
+    "en": "He is worried about something else"
+  },
+  {
+    "ru": "Я очень разочарован",
+    "en": "I'm very disappointed"
+  },
+  {
+    "ru": "Я сомневаюсь в этом",
+    "en": "I doubt it"
+  },
+  {
+    "ru": "Я боюсь пауков",
+    "en": "I'm afraid of spiders"
+  },
+  {
+    "ru": "Вы боитесь смерти",
+    "en": "Are you afraid of death"
+  },
+  {
+    "ru": "Я не хочу ее разочаровывать",
+    "en": "I do n't want to disappoint her"
+  },
+  {
+    "ru": "Он никогда не сомневается в меня",
+    "en": "He never doubts me"
+  },
+  {
+    "ru": "Вы должны извиниться перед ней",
+    "en": "You should apologize to her"
+  },
+  {
+    "ru": "Он дает мне надежду",
+    "en": "He is giving me hope"
+  },
+  {
+    "ru": "Я хочу ненавидеть тебя за это",
+    "en": "I want to hate you for this"
+  },
+  {
+    "ru": "Вы чувствуете что-нибудь",
+    "en": "Do you feel anything"
+  },
+  {
+    "ru": "Мой бывший парень все еще ненавидит меня",
+    "en": "My ex-boyfriend still hates me"
+  },
+  {
+    "ru": "Мои первые впечатления всегда правы",
+    "en": "My first impressions are always right"
+  },
+  {
+    "ru": "Ты заставил меня ненависть себя",
+    "en": "You made me hate myself"
+  },
+  {
+    "ru": "AW Sharik действительно милый",
+    "en": "Aw Sharik is really cute"
+  },
+  {
+    "ru": "Извините, я бы хотел поступить к кексу",
+    "en": "excuse me I would like a cupcake to go"
+  },
+  {
+    "ru": "приятного аппетита",
+    "en": "enjoy your meal"
+  },
+  {
+    "ru": "Этот ресторан хороший",
+    "en": "This restaurant is nice"
+  },
+  {
+    "ru": "Она поблагодарила его вчера",
+    "en": "She thanked him yesterday"
+  },
+  {
+    "ru": "Извините, где выход",
+    "en": "Excuse me where is the exit"
+  },
+  {
+    "ru": "Мне жаль слышать это",
+    "en": "I'm sorry to hear that"
+  },
+  {
+    "ru": "И он простил меня",
+    "en": "And he forgave me"
+  },
+  {
+    "ru": "Это была шутка",
+    "en": "It was a joke"
+  },
+  {
+    "ru": "У меня тоже есть кошка",
+    "en": "I also have a cat"
+  }
+]

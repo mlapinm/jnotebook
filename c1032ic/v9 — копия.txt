@@ -1,0 +1,524 @@
+We'll start with an overview of what open shortest path first is all about 
+
+now like I said ospf is a link state protocol 
+
+that means that it is better able to serve a large network 
+
+in many ways it's scalable to almost any size network especially if you use multiple areas 
+
+so we're going to talk about how we use the in state protocols the benefits of that especially with apology table 
+
+I'll talk briefly about the way in which the best path is found through the OSPF algorithm sometimes called dyches algorithm
+
+We are all stuck about the way in which the routers communicate to each other through the link state advertisements things that we call updates 
+
+and we'll talk about how well it is able to look at any changes in the topology 
+
+especially in your face goes down to be able to find the next best route
+
+
+
+2
+
+So as a link state routing protocol compared to the distance Vector one of the things we have to remember is that number one egrp 
+
+we have a neighbor's table 
+
+that means of router A is the neighbor with router B and C or D in this case 
+
+that it maintains the routing information that is taught to it from D and if either of those routers were to go down and can immediately remove the relative to learn through this neighbors table in other words router B goes down
+
+Remove all the routes I learned from rather be and then we'll update the routing table 
+
+now the topology table by the way is kind of area specific 
+
+even though we haven't talked about ospf areas we will 
+
+and what that means is that we learn routes from our neighbors within the same area 
+
+and we put all the routes we learned into a topology table sometimes called the link state database 
+
+fact most of the open standards rose beautiful call of the lsdb 
+
+because it is a database of the link States 
+
+I remember as the link state routing protocol basically 
+
+each router is going to tell us about the state of its interfaces it's links 
+
+which ones are up and which ones are down 
+
+if they're up what they connect to as far as the networks 
+
+from there we're going to go through that shortest path first algorithm 
+
+called again the dice dress algorithm based on the person who came up with this idea 
+
+and we actually form a tree believe it or not we have all these entries 
+
+and so if we said look I'm at router a and I learned routes from B and I learned routes from D b learned routes to C and learns routes to D all of these kind of little settings
+
+how do we look at it 
+
+we're going to build a tree 
+
+we're going to say What's the best way for a to get to b 
+
+and if we're at b was the best way to get to C and then we'll do the same thing with d how to get the d how does he get to see 
+
+anyway build this tree of a routes and that's what gets put in the routing table 
+
+why life in this too is if you could imagine that you're at a mall 
+
+and it doesn't matter which store you go into at the mall 
+
+but when you get there you have this kind of really cool diagram of the mall looks like where the little walkways are 
+
+where all the stores are and they all have one thing in common at each store that you go into those little spot 
+
+and at the little spot it says you are here 
+
+and so what's important is is that you're going to learn that all of the routers have the same link state database meaning that no matter what insurance do you go into at the mall they have the same map 
+
+all is different is what little dot is it says you are here 
+
+and then basically you're going to build your tree to figure out what's the fastest way to get to any of the stores you want to go to 
+
+and that's the same with every entrance is just going to be a different path based on the entrance you came in 
+
+go upstairs you know which way you go to get there 
+
+and that's what we're building with this topology table 
+
+and when we construct a tree we're just trying to figure the best path to each destination that see in the map that was going in the routing table
+
+the as usual it's always going to be the best path that you have 
+
+3
+400
+Ospf uses a single metric to be able to determine the best path 
+
+and that's based on bandwidth recall the cost that would cost is a calculation of what the interface bandwidth is 
+
+but if you consider that this protocol came out in the 1990s 
+
+when we didn't have really fast connections between routers we were talking about 10 megabits per second not a hundred gigabits per second like we do today 
+
+then it would make sense when we talk about the reference bandwidth 
+
+and here's how the cost is done 
+
+the reference bandwidth for ospf by default is 10 V8 or the second? 100 megabits per second 
+
+but it's the same thing 
+
+and so what we do is we would take that value $100 million 
+
+I think I got that right by the actual bandwidth of the interface  
+5
+Based on the bandwidth or the interfaces stand with speed 
+
+so back in the days when we had 10 megabits which is 10 million you do that Division and the cost was 10 
+
+but then of course we came up to fast internet 
+
+and we had a hundred million 
+
+now that cost will be equal the one 
+
+the problem was when 1 gigabits speed
+
+or get into the 1 billion bits per second 
+
+and you did that mathematics you say well Kim that is the evil 2.1 well we can't 
+
+that means that all of the interfaces that are a gigabit of fast ethernet whether it's 10 GB but it's 100 GB all have the same metric 
+
+and that kind of makes ospf a little bit like rip or suddenly all of the interfaces at the same cost of one 
+
+and so that you would basically be looking at the hop count how many routers to go through so we can actually change that there is a command in ospf 
+
+where you can change the reference bandwidth did you make it some other value so if you wanted to you could make this maybe a hundred billion 
+
+and then get a better reading for the actual speed s of the links 
+
+but if you do that you want to make sure you're consistent with all of the routers that you're configuring
+
+6
+
+but if you do that you want to make sure you're consistent with all the routers that you're configuring so they would all look at the cost to say 
+
+you can also manually go to each interface and change the cost 
+
+the problem is when you do that change of the cost you have to remember that it's for one direction that you'd have to change the cost on all of these interfaces 
+
+otherwise what would happen is my traffic might take one route from a to c 
+
+but because we didn't change the cost and all the other interfaces 
+
+the reply might come in a different interface which would cause asymmetric routing 
+
+which can also be a big problem when we were trying to create these connections from one host to another 
+640
+
+no cost isn't it actually as it says you're a cumulative effect 
+
+that means that when we look at the distance to get from a to c 
+
+we take the cost of each link and add it together to see what the total cost is get from one place to the other 
+
+and obviously just like eigrp we're always going to take the lowest cost path
+
+7
+I'll try to describe this ospf neighbor adjacency process a little bit better for you 
+
+but basically just like you at your eigrp we have to be able to have our routers talk to each other 
+
+and if you consider the fact that you turn on ospf 
+
+each router doesn't know who it's neighbors going to be unless you have to manually put that in there 
+
+and so they send out a multicast announcement that is on this address 224005 
+
+and that means it would connect to any router that's on that network 
+
+let's imagine if you would maybe a little more complex of a design 
+
+you might have let's say five routers that are all okay on the same ethernet subnet for segment here 
+
+now if I turn on ospf on any one router 
+
+the multicast is going to be sent to every router on that link 
+800
+and only those routers that are configured for ospf would hear it 
+
+that's why it's a multicast instead of a broadcast 
+
+and the goal is with the hello packets to be able to figure out who is my neighbor 
+
+and there are some things that we have to agree on in order for two routers to become a neighbor 
+
+those things you see here are highlighted by an asterisk 
+
+number one the timers unlike eigrp if you adjust any of the timers 
+
+and the timer is how often do I send a hello 
+
+how many hellos do I miss before I consider the neighbor dad 
+
+if those timers are different from router to router than they cannot be neighbors 
+
+the other thing we have to agree on us areas 
+
+even though we haven't talked about what an area is just yet 
+
+we just know that if I said this is an interfaces in area 0 
+
+and the other interface on the other neighbor has to also be in area 0 for us to be able to be neighbors 
+
+we also have to agree on the authentication information identication would be the use of a password to be able to exchange ospf 
+900
+and even though it doesn't necessarily say that 
+
+the you're in the list there is one of the thing we have to agree on those interfaces have to be in the same IP subnet to be able to be neighbors 
+
+in other words 
+
+whatever is something that bad interface is on this has to be the same 
+
+that means it what we're saying is OSPF is designed to have his neighbors with those routers that are correctly connected 
+
+and remember directly connected means had to get from one router to the next router 
+
+you cannot go to an additional router 
+
+you can go through a switch that's a layer two device 
+
+that you have to a equal to another router...
+
+let me give you what I call the 10,000 ft overview of ospf 
+
+10,000 ft means that you're going to see it kind of in a nutshell 
+
+and all the exact specifics 
+
+so I'm going to have router a and router b 
+
+and they want to become neighbors and let's talk about how this works 
+
+one of them are both of them at some point have to be configured for ospf 
+
+but we're going to assume that one of them you can figure before the other so it's going to initiate what we call a hello packet 
+
+so the first pack of being said is a hello 
+
+now again that hello it said at 224.0.0.5 
+
+why send me hello packet part of the hello packet besides all of the information I just talked about is going to include a list of neighbors that would rather be gets a hello packet 
+
+he looks at that list of neighbors and says oh I'm not in that list of neighbors 
+
+so this must be a new connection and so router b will send its reply which is also hello packet 
+
+
+hello from router a 
+
+so I'm going to update my neighbor table to be able to say router a is one of the neighbors I just heard from 
+
+and so when it sends us hello packet back 
+
+it's going to have router a in there router is going to see that it's in that neighbor table 
+
+and router is going to say oh this is a response to my hello packet and  so looks like put into init neighbor table 
+
+that it heard from router b other neighbors 
+
+it's just that easy for them to be able to discover each other over this multicast
+
+111
+
+now from there we're going to see a couple of other messages 
+
+but part of the next part of this is that we're going to start doing what we call an exchange 
+
+and you'll see that detailed here of the slide 
+
+and that exchanges the exchange of route between router A and router B and of course router B is going to send its routes to router a 
+
+so at some point our goal is that they have the same routes and their link state database 
+
+It mind have what best route
+
+it just depends on where the you are here button is 
+
+but they're going to look at the same database and be able to then and figure out what are the best routes based on what information has been exchanged 
+
+so there are a couple of message that go back and forth 
+
+first of all whoever has the highest router ID 
+12
+I haven't talked about the router ID 
+
+a router ID is how the routers name themselves when they use ospf 
+
+in Cisco the router ID is going to be either and I'll just put it over here on the side to you remember this 
+
+router ID is design to be the loop back interface ip address
+
+now if you have more than one loopback interface 
+
+then it's going to be whichever loop back interface has the highest numerically highest ip address if 
+
+you don't have a loopback interface 
+
+then it's going to look for the highest active or log on to call up interface 
+
+it's going to look for the one that has the highest IP address and that's going to become a router ID 
+
+we suggest you use a loopback interface for the router ID or manually configure that 
+
+so the router would never change its name just in case if you use the highest up interface and an interface suddenly went down then it would no longer be the router ID and I can cause some instability or recalculations of the route between the two so use the loop back interface 
+
+or manually can figure that 
+
+now whoever has the highest router idea is going to basically start with all the exchange start 
+
+and the exchange start is simply this 
+
+I want to send my routes again let's say from router a to router b 
+
+and I'm going to send you what I call a link basically a DBD a database discovery 
+
+think of that as a catalog 
+
+so imagine if you would I like doing woodworking so imagine somebody sent me a catalog 
+
+woodworking tools that I could buy on mind 
+
+it's just a picture of the routes 
+
+that are the DBD 
+
+there and available in router a 
+
+now what the check 
+
+what happens is that when I send you those DVDs 
+
+you're going to look router b so I send those first let's just say we go this way 
+
+router b and router b still going to look at those 
+
+and first of all acknowledge with an LSAT that it got that database description 
+
+then it's going to say okay 
+
+you're the routes that you have in your catalog 
+
+that I don't have 
+
+that deal here's a bunch of cool tools that I don't have already 
+
+and so I'm going to send you a link state update 
+
+actually not on Wednesday update 
+
+it's let's see we don't see it here 
+
+I'm going to send you an LSR 
+
+I'll link state request 
+1424
+basically I'm going to order those tools that are in the catalog that I don't have 
+
+you know that means I have credit card things like that in there but we don't do that to the routers we just send link state requests
+
+The link state requests to ask for more specifics about routes that were in the database packet 
+
+that router b doesn't have 
+
+Than when I get that router a is going to send its LSU link state updates 
+
+it's going to give you the full information about that route 
+
+and then of course we're going to get the ls app the acknowledgment that we received it 
+
+and we're going to do that in both directions between routers a and b 
+
+This is one of them starts with the DBDs they go through the updates and then the other router send this DBD 
+15
+and we go through that same exchange process 
+
+at some point if that's successful 
+
+we are going to be neighbors in a state called full 
+
+meaning that we fully exchanged all of our information between each other 
+
+I think I made this mention before but the back in the 1990s we came out with this protocol
+
+so what we know about routers in the 1990s 
+
+they didn't have his passive processor they didn't have as much memory they were certainly slower than they are today 
+
+well how does that affect us 
+
+if you could consider the size of your network again do you have multiple routers hundreds or thousands of routers that are going to do all those OSPF exchanges 
+
+that would mean that each router has to have the same link state database 
+
+you think about how many interfaces each router out of 1000 routers would have 
+
+even if it was just four interfaces per router 
+
+website 4,000 entries that would be in your link state database 
+
+and if any one of those things went up or down 
+
+we'd have to announce to everybody in that same area about the changes 
+16
+If I haven't already mentioned it 
+
+every router in the same area must have the same link state database 
+
+and every time there's a change I get another 1,000 routers 
+
+I would have to flood that to all 1,000 neighbors they would have to then recalculate the routing table 
+
+and then from the link state database and then repopulate throughout the table and back then 
+
+that was a lot of work on the processes to do in today's world it's very easy 
+
+so one of the solutions was to create multiple areas the area structure 
+
+the idea of the multiple areas was that I could put my routers it into smaller areas 
+
+so they didn't have to have the same size of link state database 
+
+the backbone area was considered areas zero 
+
+technically an area is written in the same format as an IP address 
+
+we don't have to write all four zeros for a zero you just write error 0 
+
+but that's what it was designed to do 
+
+and so than when I can do like to put routers in one area that would exchange routes between them so they have the same link state database 
+
+and again have another area with multiple routers 
+
+right after too many routers in my little picture here but just so you get the picture 
+
+
+And they would exchange the routes between them 
+
+so now I had fewer routes 
+
+the only thing they had to know was have I get from one area to the other 
+
+that transition always occurs through area 0 
+
+there's no other way to get from one area to the other without going to the backbone 
+
+and that meant that my routers didn't have to know about all the specific routes of every other area meaning a large link state database 
+
+they just had to know about a route to get to the backbone 
+
+and the backbone it only had to know about the summary of addresses that were in the other areas
+
+now order for this to really work 
+
+we had to actually have a good hierarchy of IP addresses 
+
+a lot of area numbers might have been the result of what we call a summary route meaning that maybe I might call this area 10100 meaning that all the routes in this particular area 10.1 would be those routes that start with 10.1 however much you subnetted 
+18
+and I can make another area turned off too 
+
+examples usually people use areas like area one area two area three 
+
+but these area numbers were actually were planned for use 
+
+that we could say look this area has all of the 10.3 routes 
+
+and that made it easier for area zero routers because they would say look if you're in 10.1 
+
+and you want to go to 10.3 send your packet into area 0 
+
+area 0 will say well I don't know where that specifically is but what I do know is anything that starts to attend three goes into that area and then we let those routers with the better routes the more specific finish routing their information or finished packing 
+
+so that results in having smaller routing tables smaller link state databases and if something broke in the middle of that area those links state advertisements that I haven't talked about yet
+
+advertisements about changes to routes would be contained within this area so only the routers in that area would have to recalculate the OSPF path 
+19
+we didn't have to worry about the other areas going through all the work 
+
+again that was a design back in the 1990s 
+
+today when you look at something like a large surface provider 
+
+and you look at their design you're going to see that they use a single area 
+
+but I'm going to try to describe why the only single area ospf 
+
+but I wanted you to know the history of why we have multiple areas 
+
+the goal of that as I said before was to be able to reduce the size of the routing tables and to restrict how far in the updates had to be flooded 
+
+now we also realize that some areas that might be connected to our network are outside of ospf 
+
+I was here we're seeing it as an example of an external autonomous system 
+
+that might be up maybe let's say you're a bank and you just merge with the new bank that you bought and maybe they're running eigrp 
+
+and you don't want to right now change it all the ospf 
+
+she might take those routes and want to put them into ospf 
+
+so that ospf knows how to reach those routes in the external area
+20
+
+She might take those routes and want to put them into ospf so that ospf knows how to reach those routes in the external area we'll talk about how and what an external route is an ospf here in a little bit but that is the structure so every area that is not areas zero must be connected to area 0 in order to get from one area to the other that you have to go through area 0 another example might be if again if you bought it to say that your bank and you bought another company maybe you have a router that's connected to another ospf. And maybe that's the area for you science fiction pants area 51 there you notice in this design that I'm not directly connected to the area 0 you must be able to be connected to 0 to get from one area to the other and one of the things you can research and look up little bit later as I would create what's called a virtual link in other words we make area 51 in this case pretend that's directly connected to the area 0 so that it can still make the rules and make the rules about and yes that's right if I have a router in area 51 that needs to go to area too we have to go up to area 0 and back in to be able to get the area to that virtual link so there's no exceptions to the rule I guess is what I'm trying to say about every area that is not the backbone being connected to the backbone and the backbone will always be area 0 any router that is contained in areas zero and is not directly connected to another area is called a backbone router it's also called an internal router I mean they have the same kind of a name and internal router was just a router that is inside of something that is not area 0 but it has no direct connection to a different area and so like I said a router in area 0 that is internal just because it's in areas zero we call it a backbone router we have to use routers to connect one area to the other for the traffic to be able to go from the say area of one to area zero we call those the area border routers for abrs and it's because it's a router that has one interface and one area and at least one on their face in a different area while technically one interfacing area 01 interface in a different area and that is our way of escaping from one area to the backbone it's an ABR remember I said that you might have a company merged with it's running a different routing protocol and so we're going to take those routes from one routing protocol and put them inside of the ospf called an external route well the router that does that translation of taking routes from either eigrp or rent or maybe even static routes and injects them we call it redistribution injection into ospf that router is considered an autonomous system border router and that's where you get the name aspr good again the term autonomous system doesn't necessarily equate to the same type of autonomous system we had an eigrp ospf doesn't care about autonomous systems but we call it that because we're just saying you know even if it's your company we're taking routes that are outside of ospf as external routes and so the router the desert translation is the asbr we call them lsa's or a link state advertisements there's a number of different types of advertisements that we see going between two different routers the first is called the LSA type 1 which is a router LS now the router basically is advertising that it exists in the ospf network and will advertise all of the links meaning all of the interfaces that it has connected to that router to each of its neighbors every router inside of an area must advertise itself to all the other routers that are in that area now in some cases we might have what's called a designated router or backup designated router and when they are these special functions that we see on ethernet then you would see a type 2 or a network LSA in many ways it's actually a repeat of what's already sent in the layer or the LSA type 1 now routes in one area can be advertised to the backbone or area 0 and that is called a summary for a type 3 LSA from there I mentioned that we could also have browser coming from an outside source like eigrp being redistributed into ospf call external routes now you might also hear them call this anonymous system lsa's that means that they're coming from a router that is designated as the aspr and then if you wondering what the type 4 was I missed the type 4 is an announcement of a router saying hey I am the aspr that generated these type fives and so it's a way of knowing how to get to the aspr that has the external routes for being advertised just to see that we have this idea of the different types of Ella says that we might see I'm just going to make a very simple three area network where we have again area 0 as our back and I will put a couple of routers in the back though make sure that everybody's connected I have a couple of routers that are inside the areas so I'll see you all again for those science fiction people make that area 51 will call us area one then we have area zero and we'll have another router maybe out here that's going to be connected to an eigrp network have better as well all right so within any one area we have the type one lsace that is the router announcing all of its links as I said in fact the LSA type 2s as I said work for this special function of the designated router designated router or the backup designated router those must be flooded within its area so that every router has the same link state and so we would say that the LSA wants an LSA 2 are limited within its area they will never be sent to any other area now let me just quickly touch on what's going on with the DRS and the ddrs that I was just talking about in this case let's imagine that I have five brothers again that are connected to the same ethernet segmentthe way with your SPF works is that if a change was sent to one router it would have to go and tell all of its neighbors about that change when those routers heard the change their goal is to also tell all the neighbors about the same change and you can probably imagine how messy this is going to get with all these advertisements you would be basically would call a flood of advertisements some of our advertisements here real quick instead of doing all of that work what one router to and for the purpose of having no single point of failure we have a backup designated router so now when that change does come into the router it only has to tell the designated router and the back of designated router about the change and those routers are responsible for telling everybody else on the segment about the change so we can eliminate all that flooding those answers that information about who is the Dr and the DVR and that segment they're connected to is what is that network type that is the LSA type 2 now inside of this area I may have thousands of routes if I did I hope that I came up with a IP address scheme that allowed me to be able to just maybe send one or two aggregated routes to basically announce all of us but even if I didn't if I wanted to send those routes into the core so everybody in the car area is zero that is the summary that I was talking about before type 3s are simply saying that these are the summary or the routes that exist that were collected from types one and two it's only sent by the avrd area for the router into the core network now the type 3s may or may not go to the other areas that's where we have to get into the discussion the more advanced part of SPF the different area types but by Def ault if they're just normal areas and you didn't specify a type the type threes will bury like I said if I were to take routes from bigrp and put them into ospf through the redistribution that was called red routes and those external routes also have to be associated with the router that did the advertisement and that's what the type 4 is for the router to say hey I am in as and here's what I know type 5 like type 3s can go to multiple areasit just again depends on the type of area so they're not scoped to just that area now just for fun if you were to do some research on OSP f you'd hear about what's called the opaque lsa's there's really just two that I'm going to talk about type nines are used for What's called the graceful restart so function on many routers that allow a letter to basically purchase routing table restarted surrounding process and asking the neighbors not to delete their routes that they learn and the type 10s are full of call the Ted trap engineering database type tens are restricted added to the area that they're in and the graceful restarts are basically restricted to the links never go past a neighbor if they are doing graceful restart the type 10s are what we see a lot of service providers do as they're creating different types of connections for their customers through the service provider network nothing you need to worry about I just wanted to bring it up so that you knew that there are other things besides the types one through five that we talked about and if you really want to get technical only the area 0 can have a type 5 any external route that might be learned inside of an area again eigrp is actually going to be called a type 7 that is the exact same type of information as a type 5 but the rules say that we can't have type 5 generated in anything but area zero so what do we do we made the same route we just called the type 7 and when it gets translated from the area border router into the rest of the network it comes out as a type of thought so that way we are kind of I guess we are bending the rules but we're not violating what we expect all right so we took a look at ospf there's a link state routing protocol talked about the different types of tables that it uses primarily that of course the neighbor table of the topology that we called the database and neighbor table of the topology that we called the database and that the best routes out of that topology being put in the routing table it uses it s own data structures for populating the information
+
+
+Best routes out of that topology being put in the routing table it uses its own type of odd data structures for populating the information that means that it uses its own types of advertisements for being able to create the topology table it has its own method of finding its neighbors to a multicast transmission from one router to the next it uses the cost as a metric cost meaning that it was by the reference bandwidth of 100 megabits per second divided by the bandwidth of the link I talked about changing that if you wanted to have a better cost or that you could actually set the cost per interface if you want to we also talked about this the process of the neighbor Discovery going into the exchange of the route through the different neighbors to get that full state since the information back and then of course I talked a little bit about the hierarchy of the different areas that you can create and how the areas interconnect and then types of advertisements that they send either within an area outside of the area
+

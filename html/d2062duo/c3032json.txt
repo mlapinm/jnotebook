@@ -1,0 +1,462 @@
+[
+  {
+    "ru": "Его дождь постоянно",
+    "en": "It is raining constantly"
+  },
+  {
+    "ru": "Я постоянно пию воду",
+    "en": "I am constantly drinking water"
+  },
+  {
+    "ru": "Врачи мужского пола сейчас работают",
+    "en": "Male doctors are working now"
+  },
+  {
+    "ru": "Какова цель вашей жизни",
+    "en": "What is the purpose of your life"
+  },
+  {
+    "ru": "Я сделал две попытки",
+    "en": "I made two attempts"
+  },
+  {
+    "ru": "Я не вспоминаю, как это рисую",
+    "en": "I do not recall drawing it"
+  },
+  {
+    "ru": "Они никогда не признаются, используя нашу воду в своем саду",
+    "en": "They will never admit using our water in their garden"
+  },
+  {
+    "ru": "Она признает, что действует несправедливо",
+    "en": "She admits acting unfairly"
+  },
+  {
+    "ru": "Не задерживайте покупающую дом",
+    "en": "Do not delay buying house"
+  },
+  {
+    "ru": "Она отрицает быть его другом",
+    "en": "She denies being his friend"
+  },
+  {
+    "ru": "Я воображал поливать такой большой газон",
+    "en": "I imagined watering such a large lawn"
+  },
+  {
+    "ru": "Из-за того, что некоторые пары даже отложили жениться",
+    "en": "Because of that some couples even delayed getting married"
+  },
+  {
+    "ru": "Выполагаю, чтение этой книги",
+    "en": "Yew I recall reading this book"
+  },
+  {
+    "ru": "Эта песня тоже отличная",
+    "en": "This song is also great"
+  },
+  {
+    "ru": "Она отрицает наказывать их",
+    "en": "She will deny punishing them"
+  },
+  {
+    "ru": "Он рисковал быть наказанным",
+    "en": "He risked being punished"
+  },
+  {
+    "ru": "Книга обсуждается с помощью телефонов в школе",
+    "en": "The book discusses using phones at school"
+  },
+  {
+    "ru": "Если она продолжает делать это, она будет наказана",
+    "en": "If she keeps doing that she will be punished"
+  },
+  {
+    "ru": "Завтра ты забудешь, ты когда-нибудь говоришь со мной",
+    "en": "Tomorrow you'll forget you ever talked to me"
+  },
+  {
+    "ru": "Это будет означать ждет еще дольше",
+    "en": "It would mean waiting even longer"
+  },
+  {
+    "ru": "Завтра ты забудешь, поговоришь со мной",
+    "en": "Tomorrow you'll forget you talking to me"
+  },
+  {
+    "ru": "Мне нужно было найти некоторую помощь",
+    "en": "I needed to find some help"
+  },
+  {
+    "ru": "Он не хотел обидеть ее",
+    "en": "He did not mean to hurt her"
+  },
+  {
+    "ru": "Какое блюдо тебе нравится",
+    "en": "Which dish do you like"
+  },
+  {
+    "ru": "Блюдо не в духовке",
+    "en": "The dish is not in the oven"
+  },
+  {
+    "ru": "Она дала мне серебряную цепь",
+    "en": "She gave me a silver chain"
+  },
+  {
+    "ru": "Там картина ее находится в новом журнале",
+    "en": "There a picture of her is in the new magazine"
+  },
+  {
+    "ru": "Звезда красная",
+    "en": "The star is red"
+  },
+  {
+    "ru": "Это серебряная дверная ручка",
+    "en": "This is a silver door handle"
+  },
+  {
+    "ru": "Он предлагает мне свое мыло",
+    "en": "He offers me his soap"
+  },
+  {
+    "ru": "Было бы лучше купить наш собственный замок",
+    "en": "It would be better to buy our own lock"
+  },
+  {
+    "ru": "Единственный свободный сыр в мышемопке",
+    "en": "The only free cheese is in the mousetrap"
+  },
+  {
+    "ru": "отрезать веревку",
+    "en": "cut the rope"
+  },
+  {
+    "ru": "Они были покрыты мыльными пузырями",
+    "en": "They were covered in soap bubbles"
+  },
+  {
+    "ru": "Король мертв, давно живет королем",
+    "en": "The king is dead long live the king"
+  },
+  {
+    "ru": "Первая дочь короля была одарена природой",
+    "en": "The king's first daughter was gifted by nature"
+  },
+  {
+    "ru": "Кто бы ни был твой отец, тебе не разрешено идти сюда",
+    "en": "Whoever your father is you are not allowed to go here"
+  },
+  {
+    "ru": "Выйди, кем бы вы ни были",
+    "en": "Come out whoever you are"
+  },
+  {
+    "ru": "Где другие пассажиры",
+    "en": "Where are the other passengers"
+  },
+  {
+    "ru": "Клиенты не могут дождаться вечно",
+    "en": "The customers ca n't wait forever"
+  },
+  {
+    "ru": "Если бы вы были щедрые, она бы замужем тебе",
+    "en": "If you were generous she would have married you"
+  },
+  {
+    "ru": "Все будут любить такого щедрого человека",
+    "en": "Everybody would love such a generous man"
+  },
+  {
+    "ru": "Какова ценность этого автомобиля",
+    "en": "what is the value of that car"
+  },
+  {
+    "ru": "Когда я увидел ее, я очень застенчиво",
+    "en": "when i saw her i got very shy"
+  },
+  {
+    "ru": "Это серьезный человек",
+    "en": "This is a serious person"
+  },
+  {
+    "ru": "Это серьезный вопрос",
+    "en": "it is serious question"
+  },
+  {
+    "ru": "Это очень просто",
+    "en": "It is very simple"
+  },
+  {
+    "ru": "Эта вода чистая",
+    "en": "This water is pure"
+  },
+  {
+    "ru": "Моя веревка толще вашей",
+    "en": "My rope is thicker than yours"
+  },
+  {
+    "ru": "У нее светлая кожа",
+    "en": "She has light skin"
+  },
+  {
+    "ru": "Моя жена всегда была худой",
+    "en": "My wife has always been thin"
+  },
+  {
+    "ru": "Лестница узкая",
+    "en": "The stairs are narrow"
+  },
+  {
+    "ru": "У меня была острая боль в среду",
+    "en": "I had a sharp pain on Wednesday"
+  },
+  {
+    "ru": "Худшее о лете - это жара",
+    "en": "The worst thing about summer is the heat"
+  },
+  {
+    "ru": "Можете ли вы ответить на телефоны некоторое время",
+    "en": "can you answer the phones for a while"
+  },
+  {
+    "ru": "Они очень лестные",
+    "en": "They are very flattering"
+  },
+  {
+    "ru": "Кто спросил вас в любом случае",
+    "en": "Who asked you anyway"
+  },
+  {
+    "ru": "Вы делаете сейчас",
+    "en": "you do now"
+  },
+  {
+    "ru": "Спасибо за предложение",
+    "en": "thanks for suggestion"
+  },
+  {
+    "ru": "Должен встретиться с другом на ужин",
+    "en": "gotta meet a friend for dinner"
+  },
+  {
+    "ru": "Я добрый, чем моя сестра",
+    "en": "I'm kinder than my sister"
+  },
+  {
+    "ru": "Эти таблетки трудно проглотить",
+    "en": "This pills are hard to swallow"
+  },
+  {
+    "ru": "Почему ты не можешь просто работать усерднее",
+    "en": "Why ca n't you just work harder"
+  },
+  {
+    "ru": "Он живет на востоке Парижа",
+    "en": "he lives in the east of Paris"
+  },
+  {
+    "ru": "Моя бабушка из Китая",
+    "en": "My grandmother is from China"
+  },
+  {
+    "ru": "Я живу на севере",
+    "en": "I live in the north"
+  },
+  {
+    "ru": "Сколько континентов на земле",
+    "en": "how many continents are there on earth"
+  },
+  {
+    "ru": "Она пошла с южным крылом",
+    "en": "She has gone with the south wing"
+  },
+  {
+    "ru": "Я просто маленький черный дождь",
+    "en": "I'm just a little black rain cloud"
+  },
+  {
+    "ru": "Мы видим солнце в августе",
+    "en": "we see the sun in August"
+  },
+  {
+    "ru": "Как голубое небо",
+    "en": "how blue the sky is"
+  },
+  {
+    "ru": "Остров всегда там",
+    "en": "The island is always there"
+  },
+  {
+    "ru": "Я плаваю в глубине моря",
+    "en": "I swim in the depth of the sea"
+  },
+  {
+    "ru": "Она живет в этой деревне",
+    "en": "she lives in that village"
+  },
+  {
+    "ru": "это оно",
+    "en": "that's it"
+  },
+  {
+    "ru": "Это худшее здание",
+    "en": "it is the worst building"
+  },
+  {
+    "ru": "Если бы вы были щедрые, она бы замужем тебе",
+    "en": "If you were generous she would have married you"
+  },
+  {
+    "ru": "Я на той дороге",
+    "en": "am I on the wrong road"
+  },
+  {
+    "ru": "Что такое длина этого моста",
+    "en": "what is the length of that bridge"
+  },
+  {
+    "ru": "Он всегда крадет мои идеи",
+    "en": "He always stealing my ideas"
+  },
+  {
+    "ru": "Я собираюсь отдохнуть в течение часа после ужина",
+    "en": "I'm going to rest for an hour after dinner"
+  },
+  {
+    "ru": "Я повторяю работу",
+    "en": "I eccept the job"
+  },
+  {
+    "ru": "Мы принимаем только наличные",
+    "en": "we accept only cash"
+  },
+  {
+    "ru": "Они отвергают мою идею",
+    "en": "They reject my idea"
+  },
+  {
+    "ru": "В этой стране есть вулкан",
+    "en": "there is a volcano in this country"
+  },
+  {
+    "ru": "В этой стране есть вулкан",
+    "en": "There is a volcano in this country"
+  },
+  {
+    "ru": "Улитки живут в болоте",
+    "en": "Do snails live in the swamp"
+  },
+  {
+    "ru": "Это город на холме",
+    "en": "It is a city on a hill"
+  },
+  {
+    "ru": "Поверхность апельсина",
+    "en": "The surface is orange"
+  },
+  {
+    "ru": "Есть ли болота возле вашего дома",
+    "en": "Are there swamps near your house"
+  },
+  {
+    "ru": "Я не позволю тебе украсть его от меня",
+    "en": "I wo n't let you steal him from me"
+  },
+  {
+    "ru": "Семьи нужны еда, чтобы поднять своих детей",
+    "en": "Families need food to raise their children"
+  },
+  {
+    "ru": "Он сжал мое плечо",
+    "en": "He squeezed my shoulder"
+  },
+  {
+    "ru": "Принять один шаг за раз",
+    "en": "Take one step at a time"
+  },
+  {
+    "ru": "Она поднялась на крышу, чтобы очистить ее",
+    "en": "She climbed on the roof to clean it"
+  },
+  {
+    "ru": "Собака продолжала облизывать руки",
+    "en": "The dog kept licking his hands"
+  },
+  {
+    "ru": "Сожмите половину лимона в стакан воды",
+    "en": "Squeeze half of a lemon into the glass of water"
+  },
+  {
+    "ru": "Он тянет дверь",
+    "en": "he pulls the door"
+  },
+  {
+    "ru": "Потяните дверь",
+    "en": "Pull the door"
+  },
+  {
+    "ru": "Он оттолкнул ее от него",
+    "en": "He pushed her away from him"
+  },
+  {
+    "ru": "Я хочу, чтобы она повторила ответ",
+    "en": "I want her to repeat the answer"
+  },
+  {
+    "ru": "После этих слов они пожали друг другу руки",
+    "en": "after those words they shook hands"
+  },
+  {
+    "ru": "Мы собираемся бросить вечеринку завтра",
+    "en": "We are going to throw a party tomorrow"
+  },
+  {
+    "ru": "Эти рога и копыты принадлежат быку",
+    "en": "These horns and hooves belong to a bull"
+  },
+  {
+    "ru": "Он относится к своим родителям, как дети",
+    "en": "He treats his parents like children"
+  },
+  {
+    "ru": "Он хорошо тебе относился",
+    "en": "He treated you well"
+  },
+  {
+    "ru": "Он притворяется доктором",
+    "en": "he pretends to be a doctor"
+  },
+  {
+    "ru": "Моя интуиция ничего не говорит мне",
+    "en": "My intuition tells me nothing"
+  },
+  {
+    "ru": "Ее мечта сбудется",
+    "en": "her dream will come true"
+  },
+  {
+    "ru": "У меня был кошмар с тысячей пауков",
+    "en": "I had a nightmare with a thousand spiders"
+  },
+  {
+    "ru": "Это идет против здравого смысла",
+    "en": "This goes against common sense"
+  },
+  {
+    "ru": "Лучше не сравнивать детей друг другу",
+    "en": "It is better not to compare kids to each other"
+  },
+  {
+    "ru": "Я передумал",
+    "en": "I've changed my mind"
+  },
+  {
+    "ru": "Это идет против здравого смысла",
+    "en": "this goes against common sense"
+  },
+  {
+    "ru": "Держите номер в виду",
+    "en": "keep the number in mind"
+  }
+]

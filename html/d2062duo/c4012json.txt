@@ -1,0 +1,214 @@
+[
+  {
+    "ru": "Верховный",
+    "en": "Supreme"
+  },
+  {
+    "ru": "О, казалось, навсегда остановился сегодня",
+    "en": "Oh it seemed forever stopped today"
+  },
+  {
+    "ru": "Все одинокие сердца в Лондоне",
+    "en": "All the lonely hearts in London"
+  },
+  {
+    "ru": "Поймал самолет и вылетел",
+    "en": "Caught a plane and flew away"
+  },
+  {
+    "ru": "И все лучшие женщины женаты",
+    "en": "And all the best women are married"
+  },
+  {
+    "ru": "Все красивые мужчины гей",
+    "en": "All the handsome men are gay"
+  },
+  {
+    "ru": "Вы чувствуете себя лишенным",
+    "en": "You feel deprived"
+  },
+  {
+    "ru": "Да, вы задаете сомнению свой размер",
+    "en": "Yeah are you questioning your size"
+  },
+  {
+    "ru": "Есть ли опухоль в вашем юморе",
+    "en": "Is there a tumour in your humour"
+  },
+  {
+    "ru": "Есть ли мешки под глазами",
+    "en": "Are there bags under your eyes"
+  },
+  {
+    "ru": "Вы оставляете вмятины, где вы сидите",
+    "en": "Do you leave dents where you sit"
+  },
+  {
+    "ru": "Вы находитесь немного",
+    "en": "Are you getting on a bit"
+  },
+  {
+    "ru": "Вы выживете",
+    "en": "Will you survive"
+  },
+  {
+    "ru": "Вы должны выжить",
+    "en": "You must survive"
+  },
+  {
+    "ru": "Когда в городе нет любви",
+    "en": "When there's no love in town"
+  },
+  {
+    "ru": "Этот новый век продолжает приносить тебя",
+    "en": "This new century keeps bringing you down"
+  },
+  {
+    "ru": "Все места, которые вы были",
+    "en": "All the places you have been"
+  },
+  {
+    "ru": "Пытаясь найти любовь высшее",
+    "en": "Trying to find a love supreme"
+  },
+  {
+    "ru": "Любовь высшая",
+    "en": "A love supreme"
+  },
+  {
+    "ru": "О, что вы действительно ищете",
+    "en": "Oh what are you really looking for"
+  },
+  {
+    "ru": "Другой партнер в вашей жизни",
+    "en": "Another partner in your life"
+  },
+  {
+    "ru": "Злоупотреблять и обожать",
+    "en": "To abuse and to adore"
+  },
+  {
+    "ru": "Это любит надовые вещи",
+    "en": "Is it lovey dovey stuff"
+  },
+  {
+    "ru": "Вам нужно немного грубые",
+    "en": "Do you need a bit of rough"
+  },
+  {
+    "ru": "Встать на колени",
+    "en": "Get on your knees"
+  },
+  {
+    "ru": "Да, поверните песни о любви, которые вы слышите",
+    "en": "Yeah turn down the love songs that you hear"
+  },
+  {
+    "ru": "Потому что вы не можете избежать чувства",
+    "en": "'Cause you ca n't avoid the sentiment"
+  },
+  {
+    "ru": "Это отголоски в вашем ухе",
+    "en": "That echoes in your ear"
+  },
+  {
+    "ru": "Сказать любовь, остановит боль",
+    "en": "Saying love will stop the pain"
+  },
+  {
+    "ru": "Говоря любовь убьет страх",
+    "en": "Saying love will kill the fear"
+  },
+  {
+    "ru": "Ты веришь",
+    "en": "Do you believe"
+  },
+  {
+    "ru": "Вы должны верить",
+    "en": "You must believe"
+  },
+  {
+    "ru": "Когда в городе нет любви",
+    "en": "When there's no love in town"
+  },
+  {
+    "ru": "Этот новый век продолжает приносить тебя",
+    "en": "This new century keeps bringing you down"
+  },
+  {
+    "ru": "Все места, которые вы были",
+    "en": "All the places you have been"
+  },
+  {
+    "ru": "Пытаясь найти любовь высшее",
+    "en": "Trying to find a love supreme"
+  },
+  {
+    "ru": "Любовь высшая",
+    "en": "A love supreme"
+  },
+  {
+    "ru": "Я шпион с моим маленьким глазом 1",
+    "en": "I spy with my little eye 1"
+  },
+  {
+    "ru": "Что-то начинающееся с (ах)",
+    "en": "Something beginning with (ah)"
+  },
+  {
+    "ru": "Получил мою резервную копию",
+    "en": "Got my back up"
+  },
+  {
+    "ru": "И теперь она кричала",
+    "en": "And now she's screaming"
+  },
+  {
+    "ru": "Так что я должен повернуть трек",
+    "en": "So I've got to turn the track up"
+  },
+  {
+    "ru": "Сядьте назад и смотрите роялти складываться вверх",
+    "en": "Sit back and watch the royalties stack up"
+  },
+  {
+    "ru": "Я знаю эту девушку, ей нравится переключать команды",
+    "en": "I know this girl she likes to switch teams"
+  },
+  {
+    "ru": "И я злодей, но я живу для любви высшей",
+    "en": "And I'm a fiend but I'm living for a love supreme"
+  },
+  {
+    "ru": "Когда в городе нет любви",
+    "en": "When there's no love in town"
+  },
+  {
+    "ru": "Этот новый век продолжает приносить тебя",
+    "en": "This new century keeps bringing you down"
+  },
+  {
+    "ru": "Все места, которые вы были",
+    "en": "All the places you have been"
+  },
+  {
+    "ru": "Пытаясь найти любовь высшее",
+    "en": "Trying to find a love supreme"
+  },
+  {
+    "ru": "Любовь высшая",
+    "en": "A love supreme"
+  },
+  {
+    "ru": "Приходите и живите любовь высшей",
+    "en": "Come and live a love supreme"
+  },
+  {
+    "ru": "Не позволяйте этому вас сбить",
+    "en": "Do n't let it get you down"
+  },
+  {
+    "ru": "Все живут для любви",
+    "en": "Everybody lives for love"
+  }
+]

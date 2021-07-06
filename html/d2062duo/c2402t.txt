@@ -1,0 +1,99 @@
+So let take a look first how to implement eigrp
+
+the goal for any Dynamic routing protocol is for routers to be able exchange information between them and learn about destinations that are not directly connected those routers
+
+I so as would say it's about the discovery every networks
+many times people call this routing by rumor 
+
+Is this think about it one router a long ways away says hey I'm connected to this network let me tell you about him that router says hey I heard about my way to get here and then I heard about another way to get here but it's hopefully a reliable rumor that we get
+
+Now we also you have to have something that maintains the routing information as up-to-date in other words of a destination is no longer available 5 routers away 
+
+I expect that router to tell us through a removal message that we can no longer get to that destination so everyone knows to find A New Path if one becomes available to get to that same destination 
+
+Now is that how to know to choose the best path because in today is routed networks you may have very closely than a full match of connections between routers any of that from any one point of my network 
+
+I mind be able two or three or five paths to the same destination 
+
+which of those is the best one
+
+1:20
+
+kind of again the idea of driving down a freeway 
+
+I travel a lot and so without GPS I'd be in trouble 
+
+but I certainly in the old days could look at a map and say okay 
+
+I can get from here to the grocery store 
+
+I'm going to take this freeway for 10 miles to turn off the exit I should see it on my right 
+
+and what happens when that freeway 70 is closed to a car crash or construction 
+
+now I'm stuck 
+
+I don't know any other way to get there 
+
+and so that's another thing that we see would be synonym of protocols 
+
+as they maintain all that information 
+
+so they're like the local person that says 
+
+oh I just got hit by the construction 
+
+I'll take this other exit take a service tree down there no problem 
+
+so they need to know how to find the best path not just a single path 
+
+and to be able to find is I just said the new best path if the current path is no longer available 
+
+so let's take a look at dynamic routing protocols 
+
+and how they behave differently 
+
+first we're going to start with the type 
+
+whether it's an igp interrogate with protocol versus an EGP or an exterior kit with protocol 
+
+we're only focusing on igps in our course 
+
+but let me first talk a little bit about the EGP the exterior protocols 
+
+of one the only one that we commonly use is called bgp the border gateway protocol version 4 
+
+the goal is if you think about how the internet is put together with different service providers that have their customers connected to their networks 
+
+they want to advertise the routes to their customers so that all other people in the world will know how to get to their customers as part of the service or paying for 
+
+
+but if you think about it 
+
+you don't want to let service provider 'A' be able to tell service provider 'B' how to route 
+
+we just want to tell you about the existence of the routes 
+
+and that's what the egps do in this case bgp
+
+it's a list of routes with suggestions about how to route to those those customers 
+
+in the igp the interior gateway protocol 
+
+it's all about your managed group of routers 
+
+meaning it's your company your enterprise you're the service provider 
+
+they're all under a common management and we often refer to that as an autonomous system 
+
+
+and what we're doing is we're keeping track of all of the routes that exist inside of our network
+
+without sharing those routes to the people on the outside 
+
+and that's where eigrp and ospf come in their interior gateway protocols 
+
+now another difference is what do they advertise 
+
+one of the igps I didn't mention I was hoping I didn't have to it's called RIP the routing information protocol 
+

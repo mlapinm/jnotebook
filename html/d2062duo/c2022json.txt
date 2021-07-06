@@ -1,0 +1,494 @@
+[
+  {
+    "ru": "несколько актеров и актрис",
+    "en": "several actors and actresses"
+  },
+  {
+    "ru": "Это дорожное приключение, нам нужно закуски",
+    "en": "this is a road adventure we need snacks"
+  },
+  {
+    "ru": "это шоссе слишком скользнее",
+    "en": "is the highway too slippery"
+  },
+  {
+    "ru": "У меня нет зонта, потому что здесь не дождь",
+    "en": "I do n't have an umbrella because it does n't rain here"
+  },
+  {
+    "ru": "Пойдем на озеро, сегодня красивая погода",
+    "en": "Let's go to the lake the weather is beautiful today"
+  },
+  {
+    "ru": "Какие музыканты вы слушаете",
+    "en": "what musicians do you listen to"
+  },
+  {
+    "ru": "Детская панда такая толстая и приятно",
+    "en": "Baby panda is so fat and nice"
+  },
+  {
+    "ru": "Посмотрите, у них есть ребенок тигр здесь",
+    "en": "look they have a baby tiger here"
+  },
+  {
+    "ru": "Я думаю, что медведи хорошие",
+    "en": "I think the bears are nice"
+  },
+  {
+    "ru": "Зоопарк открыт от 8 до 10",
+    "en": "The zoo is open from 8 to 10"
+  },
+  {
+    "ru": "Если вам нужна профессиональная помощь, мы здесь",
+    "en": "If you need professional help we are here"
+  },
+  {
+    "ru": "Все знают нас",
+    "en": "everyone knows us"
+  },
+  {
+    "ru": "Нам нужен проект в ближайшее время, крайний срок вторник",
+    "en": "we need the project soon the deadline is Tuesday"
+  },
+  {
+    "ru": "Если у вас есть крайний срок, я могу встретиться с вами завтра",
+    "en": "if you have a deadline I can meet you tomorrow"
+  },
+  {
+    "ru": "Познакомьтесь со мной в кафе, если вы не заняты",
+    "en": "meet me at the cafe if you're not busy"
+  },
+  {
+    "ru": "У меня нет времени сегодня позвоните мне завтра",
+    "en": "I do n't have time today call me tomorrow"
+  },
+  {
+    "ru": "Я могу отправить вам отчет в понедельник",
+    "en": "I can send you a report on Monday"
+  },
+  {
+    "ru": "Мне нужно проверить мою электронную почту, но я слишком устал",
+    "en": "I need to check my email but I'm too tired"
+  },
+  {
+    "ru": "Не волнуйтесь Анна очень богата",
+    "en": "do n't worry Anna is very rich"
+  },
+  {
+    "ru": "не может быть, этот игрок слишком низкий",
+    "en": "ca n't be that player is too low"
+  },
+  {
+    "ru": "Саша работает много и играет баскетбол каждый день",
+    "en": "sasha runs a lot and plays basketball every day"
+  },
+  {
+    "ru": "О, мне нравится наша местная команда",
+    "en": "oh I like our local team"
+  },
+  {
+    "ru": "Он сумасшедший поклонник, он так любит баскетбол",
+    "en": "he's a crazy fan he loves basketball so much"
+  },
+  {
+    "ru": "Вы можете найти что-то интересное здесь",
+    "en": "you can find something interesting here"
+  },
+  {
+    "ru": "где выход 2",
+    "en": "where is exit 2"
+  },
+  {
+    "ru": "Мне нужно проверить мою электронную почту, но я слишком устал",
+    "en": "I need to check my email but I am too tired"
+  },
+  {
+    "ru": "Анна выходит на пенсию и больше не играет в теннис",
+    "en": "anna is retired and does n't play tennis anymore"
+  },
+  {
+    "ru": "Нет способа, чтобы игрок слишком коротким",
+    "en": "no way that player is too short"
+  },
+  {
+    "ru": "Саша работает много и играет в баскетбол каждый день",
+    "en": "sasha runs a lot and plays in basketball every day"
+  },
+  {
+    "ru": "У нас есть десять человек в нашей команде",
+    "en": "we have ten people on our team"
+  },
+  {
+    "ru": "Я хочу купить что-то для моей квартиры",
+    "en": "I want to buy something for my apartment"
+  },
+  {
+    "ru": "Мои дети и отдыхаем в Мексику каждое лето",
+    "en": "my kids and I take a vacation to mexico every summer"
+  },
+  {
+    "ru": "Я люблю свой новый змей",
+    "en": "I love my new kite"
+  },
+  {
+    "ru": "Тем не менее, для меня важнее",
+    "en": "nevertheless it is more important to me"
+  },
+  {
+    "ru": "больше ничего не помогает",
+    "en": "nothing else helps"
+  },
+  {
+    "ru": "Некоторые подростки не уважают ни себя, ни других",
+    "en": "some teenagers respect neither themselves nor others"
+  },
+  {
+    "ru": "У каждой страны есть своя история",
+    "en": "every country has it's own history"
+  },
+  {
+    "ru": "Однако она важнее для меня",
+    "en": "however she is more important to me"
+  },
+  {
+    "ru": "Конечно, он не прав",
+    "en": "of course he is wrong"
+  },
+  {
+    "ru": "Мы почти как братья",
+    "en": "we almost like brothers"
+  },
+  {
+    "ru": "Однако это слишком дорого",
+    "en": "however it is too expensive"
+  },
+  {
+    "ru": "Вы водите эту машину, однако, что вы хотите",
+    "en": "you drive this car however much you want"
+  },
+  {
+    "ru": "Он приходит сюда почти каждый день",
+    "en": "he comes here almost every day"
+  },
+  {
+    "ru": "Я не совсем понял",
+    "en": "I do not quite understand"
+  },
+  {
+    "ru": "Он наконец позволил этому",
+    "en": "he finally allowed this"
+  },
+  {
+    "ru": "В этом нет ничего плохого",
+    "en": "there is nothing wrong with it"
+  },
+  {
+    "ru": "Я не привык к такому холоду",
+    "en": "i am not used to such cold"
+  },
+  {
+    "ru": "Она далеко не уверен",
+    "en": "she is far from sure"
+  },
+  {
+    "ru": "Мои друзья приглашают меня посетить мой родной город каждый месяц",
+    "en": "my friends invite me to visit my hometown every month"
+  },
+  {
+    "ru": "В моем родном городе есть отличные университеты",
+    "en": "there are excellent universities in my hometown"
+  },
+  {
+    "ru": "Пикник в четыре часа дня",
+    "en": "picnic at four o'clock this afternoon"
+  },
+  {
+    "ru": "Я хочу иметь пикник сегодня днем",
+    "en": "I want to have a picnic this afternoon"
+  },
+  {
+    "ru": "Ваша голова больна каждый день или только сегодня",
+    "en": "does your head hurt every day or just today"
+  },
+  {
+    "ru": "у тебя лихорадка",
+    "en": "you have a fever"
+  },
+  {
+    "ru": "сидеть",
+    "en": "sit"
+  },
+  {
+    "ru": "О, это очень солнечно и тепло сегодня",
+    "en": "oh it's very sunny and warm today"
+  },
+  {
+    "ru": "Это тепло на озере сегодня",
+    "en": "is it warm at the lake today"
+  },
+  {
+    "ru": "игра окончена",
+    "en": "game over"
+  },
+  {
+    "ru": "за холмом",
+    "en": "over the hill"
+  },
+  {
+    "ru": "болит горло",
+    "en": "my throat hurts"
+  },
+  {
+    "ru": "У вас есть рецепт",
+    "en": "do you have prescription"
+  },
+  {
+    "ru": "Мне нужно спать, мой живот болит",
+    "en": "i need to sleep my stomach hurts"
+  },
+  {
+    "ru": "Вы хотите работать сегодня или ты слишком болен",
+    "en": "do you want to work today or are you too sick"
+  },
+  {
+    "ru": "Мое медицинское страхование действительно дорого",
+    "en": "My health insurance is really expensive"
+  },
+  {
+    "ru": "Записаться на прием к врачу",
+    "en": "Make an appointment with your doctor"
+  },
+  {
+    "ru": "Ешьте куриный суп и пить горячий чай",
+    "en": "eat chicken soup and drink hot tea"
+  },
+  {
+    "ru": "У вас есть лихорадка",
+    "en": "do you have a fever"
+  },
+  {
+    "ru": "Поместите здесь журналы здесь",
+    "en": "Put the magazines here"
+  },
+  {
+    "ru": "Камень ножницы Бумага",
+    "en": "Rock paper scissors"
+  },
+  {
+    "ru": "Не волнуйся",
+    "en": "do n't worry"
+  },
+  {
+    "ru": "О, нет, двигатели заняты в пятницу",
+    "en": "oh no the movers are busy on Friday"
+  },
+  {
+    "ru": "В каждом номере есть большие окна",
+    "en": "each room has large windows"
+  },
+  {
+    "ru": "Это любимая кукла моей дочери",
+    "en": "this is my daughter's favorite doll"
+  },
+  {
+    "ru": "Мы летим, но наши дети собираются на машине",
+    "en": "we are flying but our kids are going by car"
+  },
+  {
+    "ru": "Да, он хорошо, он профессиональный певец",
+    "en": "yes he sings well he is a professional singer"
+  },
+  {
+    "ru": "Это пустыня, где мы покупаем газ",
+    "en": "this is a desert where are we buying gas"
+  },
+  {
+    "ru": "Они либо с нами, либо против нас",
+    "en": "They are either with us or against us"
+  },
+  {
+    "ru": "Согласно расписанию, поезд прибывает в катер к девяти",
+    "en": "According to the schedule the train arrives at a quoter to nine"
+  },
+  {
+    "ru": "Она знала все правила, включая наименее важные",
+    "en": "She knews all the rules including the least important"
+  },
+  {
+    "ru": "Я проголосовал по тому, что я верил в то время",
+    "en": "I voted according to what I believed at that time"
+  },
+  {
+    "ru": "Сумма эти письма я нашел один от моей сестры",
+    "en": "Amount these letters I found one from my sister"
+  },
+  {
+    "ru": "Я не могу отнести глаза от тебя",
+    "en": "I ca n't take my eyes off you"
+  },
+  {
+    "ru": "Они сказали нам снять нашу одежду",
+    "en": "They told us to take off our clothes"
+  },
+  {
+    "ru": "Они сказали нам взять нашу одежду",
+    "en": "They told us to take on our clothes"
+  },
+  {
+    "ru": "Еда особенно популярна в течение лета",
+    "en": "The food is especially popular during the summer"
+  },
+  {
+    "ru": "Я бегу в полтора часа после каждого приема пищи",
+    "en": "I run for half on hour after every meal"
+  },
+  {
+    "ru": "В конце концов, завтра будет новый день",
+    "en": "After all tomorrow is another day"
+  },
+  {
+    "ru": "Она сказала мне сегодня утром во время завтрака",
+    "en": "She told me this morning during breakfast"
+  },
+  {
+    "ru": "Он остался два дня без еды",
+    "en": "He stayed two days without food"
+  },
+  {
+    "ru": "Я никогда ничего не ем между приемами пищи",
+    "en": "I never eat anything between meals"
+  },
+  {
+    "ru": "Он стоял за его отцом и ничего не сказал",
+    "en": "He stood behind his father and did not say anything"
+  },
+  {
+    "ru": "Она стояла рядом со мной, но не помогла",
+    "en": "She stood near me but did not help"
+  },
+  {
+    "ru": "Собаки продолжали двигаться по улице",
+    "en": "The dogs kept moving across the street"
+  },
+  {
+    "ru": "Она отвернулась от него и побежала через улицу",
+    "en": "She turned away from him and ran across the street"
+  },
+  {
+    "ru": "Мы поплыли через эту реку несколько раз",
+    "en": "We swam across that river several times"
+  },
+  {
+    "ru": "Я встал",
+    "en": "I stood up"
+  },
+  {
+    "ru": "Я слышал некоторые голоса через дверь",
+    "en": "I heard some voices through the door"
+  },
+  {
+    "ru": "Она выглядела из окна, но не видел ничего интересного",
+    "en": "She looked out the window but saw nothing interesting"
+  },
+  {
+    "ru": "Я пнул дверь",
+    "en": "I kick the door"
+  },
+  {
+    "ru": "Я узнаю, кто это сделал",
+    "en": "I find out who did it"
+  },
+  {
+    "ru": "Он повернул голову ко мне",
+    "en": "He turned his head toward me"
+  },
+  {
+    "ru": "Ничто не могло сократить это",
+    "en": "Nothing could cut it through"
+  },
+  {
+    "ru": "Она искала меня",
+    "en": "She was looking for me"
+  },
+  {
+    "ru": "Мои друзья ищут мой",
+    "en": "My friends are looking for my"
+  },
+  {
+    "ru": "Они продолжали бегать вокруг меня",
+    "en": "They kept running around me"
+  },
+  {
+    "ru": "Его руки были за спиной",
+    "en": "His hands were behind his back"
+  },
+  {
+    "ru": "Он держал что-то маленькое под рукой",
+    "en": "He kept something small under his hand"
+  },
+  {
+    "ru": "Он держал что-то маленькое под рукой",
+    "en": "He kept something small under his hand"
+  },
+  {
+    "ru": "Я слышал что-то снаружи прямо под окнами",
+    "en": "I heard something outside right under the windows"
+  },
+  {
+    "ru": "Проверьте под этим поездом, возможно, они там",
+    "en": "Check under this train Maybe they are there"
+  },
+  {
+    "ru": "Кто стоит за вами",
+    "en": "Who is behind you"
+  },
+  {
+    "ru": "Я работаю до пяти сегодня",
+    "en": "I work until five today"
+  },
+  {
+    "ru": "Я не буду рассказывать ему об этом, пока не спросит",
+    "en": "I wo n't tell him about it until he asks"
+  },
+  {
+    "ru": "В прошлом месяце они продали двадцать процентов меньше книг",
+    "en": "Last month they sold twenty percent fewer books"
+  },
+  {
+    "ru": "На прошлой неделе он продал меньшее количество лошадей",
+    "en": "Last week he sold fewer horses than me"
+  },
+  {
+    "ru": "Но это означает, что мы тратим две трети нашего бюджета",
+    "en": "but it means that we are spend two-thirds of our budget"
+  },
+  {
+    "ru": "Мы останавливались только в Бразилии в течение нескольких дней",
+    "en": "we only stayed in Brazil for a few days"
+  },
+  {
+    "ru": "У нее слишком мало друзей, ей нужно больше найти",
+    "en": "She has too few friends she needs to find more"
+  },
+  {
+    "ru": "Половина из них даже не отвечала",
+    "en": "Half of them did not even answer"
+  },
+  {
+    "ru": "Вы можете купить бутылку свежего молока на три доллара",
+    "en": "You can buy the bottle of fresh milk  for three dollars"
+  },
+  {
+    "ru": "Я думаю, что овощи вкусные",
+    "en": "i think vegetables are delicious"
+  },
+  {
+    "ru": "Это томатный сок сладкий",
+    "en": "is this tomato juice sweet"
+  },
+  {
+    "ru": "Конечно, кексы сладкие",
+    "en": "of course the cupcakes are sweet"
+  }
+]

@@ -1,0 +1,287 @@
+Let's let's take a look at how to implement ospf in a multi-area environment 
+
+now the first time we saw ospf was a single area 
+
+and that's actually getting more and more popular because of those type 10 that talks about the traffic in here and database 
+
+but in the 1990s our routers just didn't have the capability of having large routing tables or being able to use the processes that can handle all those spfs 
+
+so we went to the multi-area design to just try to reduce the amount of lsa it flooded if it’s topology changes or to reduce the routing table or to do both 
+
+now in that case that's where the multi-area came in 
+
+I remember the multi area if you look at it is best suited by design for having very well structured way of handing out the IP addresses to the different neighbors or the different routers that you have 
+
+try to find a way to be able to send out summaries into the core hundreds of routes being flooded in the core 
+1
+lsa floating is usually confined within an area 
+
+with the exceptions is saids like type 3 which is summary routers in the area 0
+
+the goal of the multi-area was really to make the router more efficient 
+
+but in today's world you can probably get away with a single area is today's routers have enough memory to be to handle the lsa's or the size of the routing tables that you would see 
+
+probably the hardest part of configuring ospf is actually creating the design of where you want the areas to be 
+
+remember that a part of the design should take into account the IP addressing 
+
+that's one of the things that I think is crucial into being very efficient 
+
+but even if you don't you still have to understand where the area boundaries are going to be 
+
+where is area 0 and what is going to define the other area that you want to create 
+
+that means you want to look and make sure you understand the topology of your network 
+
+you also have to have routers that can connect the areas to the backbone remember those are called the area for the routers 
+206
+Now you may have multiple avrs so there's more than one of area 
+
+that probably would recommend that also 
+
+if you're going to do route redistribution 
+
+you're going to have to figure out where the asbr's as autonomist system
+
+are going to be located at the beginning once you create that diagram implementation plan and then look at how to configure ospf 
+
+but that's what we're going to focus on here is how did the configuration
+
+
+
+
+when it comes to configuring ospf it's actually quite easy like this is the hardest part is planning 
+
+like where do you want the avrs in this case route or two looks like it's going to be an APR it's going to be the router that's in between areas zero the backbone and area one 
+
+never going to focus first on the router one it looks like it only has one interface that is going to be a part of this network 
+
+and that's that gigabit 00 interface 
+
+so it's actually quite easy to set up 
+
+the first thing you have to do is well is going into 
+310
+a global configuration and type in the command router OSPF 
+
+so we know that you're running ospf 
+
+and then we create what's called a process ID 
+
+now this is not an autonomous system it is not a number that all the routers have to agree on 
+
+it internal to the router to let us know how many times you want to run ospi 
+
+in other words if you want to run ospf 10 different times that you would just create a different process ID for each of the osps 
+
+usually we're only going to see one 
+
+so we're going to call it ospf 1 
+
+the number is just completely up to you 
+
+from there we identify which interfaces are going to be advertising the their routes into ospf as well as which interfaces are going to form neighbors in ospf 
+
+we do that with the network command 
+
+the network command is followed here so wild card mask 
+4
+
+So if you could imagine it maybe I had a different interface it might be 10.64.1.0 and maybe another interface over here that's 10.64.2.0 make them look like difference subnets
+
+what they are 
+
+This wild card mask
+
+If we had made a change this 0 to a 255 with the basically be saying look 
+
+I remember in a wild card master 255 me in these have to be wild cards you need any number we don't care 
+
+the zeros mean it must be an exact match 
+
+if I rewrote it down here 
+
+it was kind of look like this 
+
+How been the inverse of what I'm a subnet mask might look like 
+
+so the wild card message saying hey the tens must match the 64 must match 
+
+and we don't care if the last two octets are that's 255 
+
+that command would actually have turned on all three interfaces for ospf because all three of them mach the first 16 bits the 10.64 
+5
+so that's what it does or you could be very specific 
+
+if you wanted to say you know just one interface in particular 
+
+it could have just typed it in this way with the wild card with all zeros 
+
+this is the most exact thing that is just the way we have to tell the router which area that interface 
+
+plus we tell the router which area interface is in 
+
+that's very important when we're forming neighbors cuz remember to be a neighbor of them have to be in the same area
+
+now that we've got that set up 
+
+the next part of what you see is the configuration of the interface 
+
+I can will soon that interface configure so here you can see that on the one gigabit 00 interface 
+
+we gave it his address we gave it a subnet mask and here we are manually setting the cost 
+
+so I can't remember the reference bandwidth 
+
+ the reference bandwidth have the cost of 1 gigabit
+
+So here we're saying the cost is 10 
+6
+we're doing that probably because we want to help influence the past in which traffic is going to go 
+
+at least here in this little diagram with just three routers that cost me as probably not all that important because it's still going to be one choice 
+
+but it's your way of one of your ways to be able to overcome a reference bandwidth 
+
+now we're looking at router number two 
+
+router number two is the AVR 
+
+and so it's going to have a little bit different configuration it's got two interfaces that are going to be involved in those ospf 
+
+the first command we saw here 00 to be again in the same subnet as its neighbor
+
+More importantly is the router ospf 
+
+I remember this is a process ID it does not have to society it does not have to match the same process ID as router 1 
+
+we don't it's internal as I said before you could have made this hours if you wanted to with your or just fine 
+
+again the network command was designed to be able to say specifically which interfaces are going to be advertised as well as which interfaces that we want to form neighbors
+
+The first interface we put in area 0 as appropriate cuz that has to match the area 0. Router for drop zero 
+
+so that would help these two become neighbors 
+
+the second one is an area one 
+
+now because we can figure two interfaces in different areas other tool automatically know that it's an AVR that's not a configuration is just that you have to specifically say OSPF
+
+two interfaces That are in two different areas makes it an area for the router 
+
+to verify that you have the connections working and remember the router two of the AVR 
+
+we use a command like show IP ospf neighbor 
+8
+IP for IP version 4 
+
+Now here in that neighbor relationship what we're seeing is that we see two different neighbors 
+
+we see that we are fully exchanged in routes 
+
+that's something that's very important that you see full 
+
+you might sometimes see a router destanate two-way state 
+
+if you remember my discussion about the designated router part of this setup for everybody's on the same ethernet segment 
+
+so they call the router 2 and it called designated router 
+
+router 2 has to be fully exchange for the designated router 
+
+those routers that are not designated routers are still neighbors 
+
+but they would be listed in the two way meaning that they see each other 
+
+they involves both directions to a exchange pillows but they don't exchange routes 
+
+we only exchange routes with the DRS 
+
+and that's on ethernet if this was an interface that was a different type like a serial letter face you want to see full to know that everything's working
+9
+From there of course we see the address of of the neighbor as well as you were seeing the routers ID 
+
+and which interface we're using to connect to them 
+
+so here we see two neighbors off of 2 interfaces and they're in the full state which is a good thing to see 
+
+now if you want to specifically look at the interfaces and how they're configure the show IP ospf interface does that for you 
+
+now in this particular case of course the interface we hope is often 
+up and it tells us the area of the interface is in 
+
+what process it is running in our ospf 
+
+and I was cath again you could have multiple ospf processes that would be very rare in the router that's sort of full Customers connected to 
+
+it that have to have their own routing tables otherwise for the enterprise is usually just one process 
+
+and so this is my way to verifying that I have two interfaces one in each area 
+
+and again that makes me verify that this router is also the area one of the router 
+
+one the best commands that said it before is show IP protocols 
+
+should I be protocols I will tell you exactly how you can figure each routing protocol whether it's OSPF or eigrp 
+
+in this case we're verifying that it's ospf process number one 
+
+it's showing me which networks I am advertising and those of course are linked to the interfaces but in figure
+
+It also telling me about sources of routing information which are coming from my neighbors so that in this case is showing me that I have two neighbors and those neighbors that shows me the IP addresses and how often I'm getting or lose the last update that I've seen
+
+those are very important again for the configuration or the verify the configuration of ospf 
+
+do you remember ospf has or can have multiple areas 
+
+area 0 is the backbone and the other areas in this case that are attached 
+
+when we look at specifically ospf route 
+
+we need me to the show IP route we had ospf so we only see the ospf routes 
+11
+the indication that it's always OSPF is the first letter of the o which here shows you that it's ospf 
+
+and then it will tell me other little things like intererea 
+
+which is this IA up here means that it might be a route 
+
+and this is router one that we're talking about right router one was over here or not in areas zero 
+
+it was connected to router 2 
+
+but what it means is that a route was learned but Type 3 was sent from area 1 area 0 and then it was sent to this router 
+
+from router two router one 
+
+so it's a route that's in a different area 
+
+that we see that specifically 
+
+when we take a look at the routing information 
+
+now remember the next number here is the administrative distance which by default for ospf is 110
+
+and the cost for the metric for that route as well as and of course who's the next top and what interface would I use to leave that router to get there 
+12
+
+so we look that so how to configure multiple areas with ospf on our routers whether they're an internal router or there are a core router or the area of order rout er 
+
+we talked about the process ID how you use network command 
+
+how you identify which interfaces which in which area 
+
+
+And then we looked at waste and verify that configuration is working either through the show IP ospf neighbor or maybe to the show IP route for ospf routes 
+
+one of the things we didn't look at was the show IP ospf database
+
+how we show us all the different type ones type 2 3 for being said 
+
+but our goal was to be able to verify does we have correctly and we have all routes how we were expecting
+
+
+
+
+
