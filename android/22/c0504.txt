@@ -1,1 +1,0 @@
-In part 3 of the BroadcastReceiver
