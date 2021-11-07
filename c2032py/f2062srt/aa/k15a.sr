@@ -1,0 +1,309 @@
+00:00
+welcome to this free CCNA packet tracer
+00:03
+practice lab you can download the lab
+00:05
+file from the link in the description in
+00:08
+this lab we will use the system
+00:11
+configuration dialog to do some basic
+00:13
+setup of a router r1 and a switch switch
+00:17
+one the system configuration dialog is a
+00:21
+basic setup wizard that allows you to
+00:23
+perform basic setup of things like the
+00:25
+hostname and interface IP addresses of a
+00:28
+device although you typically will be
+00:31
+doing these things with the commands
+00:33
+themselves you should familiarize
+00:34
+yourself with the system configuration
+00:36
+dialog as well try to complete the lab
+00:40
+yourself first then continue watching
+00:42
+this video if you have trouble or watch
+00:44
+it after to check your solution
+00:48
+our goal is to do some basic
+00:51
+configurations on these two devices with
+00:53
+the system configuration dialog let's go
+00:55
+on our one first if this is the first
+01:00
+time entering the CLI you will be asked
+01:02
+whether you want to enter the system
+01:03
+configuration dialog however I have
+01:07
+already previously answered no to this
+01:08
+that's no problem I'll type in able to
+01:12
+enter privileged exec mode then use the
+01:14
+command setup and then answer yes to
+01:18
+enter the configuration dialog next we
+01:21
+are asked if you want to enter basic
+01:23
+management setup which as stated here
+01:26
+only configures enough connectivity for
+01:28
+management of the system let's go
+01:31
+through the extended setup this time
+01:32
+although we will only be configuring one
+01:34
+interface so let's type no now we are
+01:40
+asked if you want to see the current
+01:41
+interface summary the answer in brackets
+01:44
+is the default answer so I could just
+01:46
+hit enter to continue or type in no to
+01:49
+skip it I could of course type in yes to
+01:52
+I just don't have to I'll hit enter to
+01:55
+view the summary as you can see there
+01:59
+are three Gigabit Ethernet interfaces as
+02:01
+well as a VLAN one interface on our one
+02:05
+now we are asked for the hostname
+02:07
+currently it is router and that is also
+02:10
+the default answer let's change the
+02:13
+hostname to r1 now we are asked for the
+02:19
+enable secret as you may remember and as
+02:22
+is written here the enable secret is
+02:24
+used to enter privileged exec mode and
+02:26
+is automatically encrypted according to
+02:30
+the instructions for this lab let's use
+02:32
+an enable secret of Cisco with a capital
+02:35
+C which is important because these
+02:37
+passwords are case sensitive
+02:39
+next the enable password CCNA in all
+02:45
+caps then the virtual terminal password
+02:48
+we look at accessing the router over a
+02:51
+network interface in another lab for now
+02:54
+let's just set a password of CCENT in
+02:56
+all caps then we are asked if we want to
+03:01
+configure
+03:02
+SNMP network management I'll hit enter
+03:04
+to accept the default of no SNMP will be
+03:07
+for later labs then again as I don't
+03:11
+want to configure the VLAN one interface
+03:13
+at this time
+03:15
+now the Gigabit Ethernet 0 0 interface
+03:18
+is the one used to connect to switch 1
+03:21
+so let's configure it type yes and hit
+03:24
+enter the IP address is 192.168.1.1 and
+03:31
+now we'll accept the default subnet mask
+03:33
+of 255.255.255.0 by hitting Enter
+03:37
+I don't want to configure that gig 0 1
+03:40
+interface or that gig 0 2 interface now
+03:46
+we're at the final option we can cancel
+03:49
+this config with 0 redo it with 1 or
+03:52
+save the config with 2 let's accept the
+03:56
+default answer of 2 by hitting Enter
+03:58
+that's it now let's use show startup
+04:01
+config to confirm here's our hostname of
+04:06
+our one our encrypted enable secret and
+04:10
+our unencrypted enabled password the IP
+04:15
+address of gig 0 and the password on the
+04:21
+vty line which is the virtual terminal
+04:23
+mentioned before our ones configuration
+04:26
+is complete
+04:30
+next let's go through the setup dialog
+04:33
+for switch 1 and Nabal setup yes to
+04:41
+enter the configuration dialog know as
+04:45
+we don't want to enter basic management
+04:47
+setup let's just hit enter to view the
+04:50
+interface summary as you can see there
+04:54
+are a lot of interfaces which is
+04:56
+expected switches require more
+04:58
+interfaces than routers as they're going
+05:00
+to be connecting lots of end hosts to
+05:02
+them let's change the hostname to switch
+05:06
+1 and now the same passwords as on our 1
+05:11
+Cisco with a capital C for the enable
+05:13
+secret CCNA in all caps for the enable
+05:18
+password and C sent in all caps for the
+05:22
+virtual terminal password enter to
+05:26
+accept the default of no as we don't
+05:28
+want to configure SNMP at this time now
+05:32
+type yes and hit enter to configure the
+05:35
+VLAN 1 interface we're going to give the
+05:39
+VLAN 1 interface an IP address
+05:41
+note that physical switch interfaces or
+05:44
+switch ports cannot be given an IP
+05:46
+address however you can give an IP
+05:50
+address to one VLAN interface which can
+05:52
+then be used to connect to the switch
+05:53
+for management purposes something we'll
+05:55
+do in a later lab we're going to
+05:58
+configure the VLAN 1 interface here as
+06:00
+we're going to need the IP address to
+06:02
+receive the response from our one when
+06:04
+we ping it in the next step the IP
+06:08
+address will be 192.168.1.2 hit enter to
+06:14
+accept the default subnet mask of
+06:16
+255.255.255.0
+06:19
+now keep hitting Enter to skip
+06:22
+configuration of these interfaces we
+06:24
+won't be configuring them for now
+06:29
+type know as we won't be configuring
+06:33
+this as a cluster command switch which
+06:35
+is beyond the scope of this lab now hit
+06:38
+enter one more time to save the
+06:40
+configuration let's type show startup
+06:43
+config again to check there's the
+06:46
+hostname of switch one hour enable
+06:49
+secret and password our IP address on
+06:56
+VLAN 1 and our password on the vty lines
+07:02
+by the way for those wondering vty
+07:04
+stands for virtual teletype ok now
+07:08
+finally let's ping from switch 1 to our
+07:10
+one ping 192.168.1.1 the ping succeeds
+07:18
+that's all for this lab
+07:24
+thank you for watching I hope this lab
+07:26
+and video have been helpful for you
+07:28
+please subscribe for future labs like
+07:31
+this which will be released weekly if
+07:34
+you have requests for any specific labs
+07:36
+let me know in the comment section if
+07:38
+you want to support my channel I accept
+07:41
+Bitcoin and etherion donations via the
+07:44
+addresses in the description I am also a
+07:47
+brave verified publisher and accept bat
+07:50
+or basic attention token donations in
+07:52
+the brave browser
+

@@ -1,0 +1,277 @@
+00:00
+welcome to this free CCNA packet tracer
+00:03
+practice lab you can download the lab
+00:05
+file from the link in the description in
+00:08
+this lab we will take another look at
+00:10
+the port security function of Cisco
+00:12
+switches specifically we will learn
+00:15
+about the sticky MAC address function
+00:17
+the sticky MAC address function of port
+00:20
+security saved secure MAC addresses into
+00:23
+the switch configuration when they are
+00:24
+dynamically learned on a switch port
+00:26
+with port security enabled try to
+00:29
+complete this lab yourself first then
+00:32
+continue watching this video if you have
+00:33
+trouble or watch it after to check your
+00:36
+solution there are a few more steps in
+00:39
+this lab than in my previous labs but
+00:41
+these are all pretty short steps step
+00:44
+one is to enable port security on the
+00:46
+switch ports connected to end hosts
+00:49
+let's go on switch one first enable
+00:54
+count T interface F 0 2 remember we have
+01:00
+to set the interface as an access port
+01:02
+first so switch port mode access switch
+01:07
+port port security that's all for switch
+01:10
+1 now let's do the same on switch to
+01:15
+enable con 40 interface F 0 to switch
+01:20
+port mode access switch port port
+01:23
+security now let's go straight into step
+01:27
+2 which is to ping from pc1 to pc2 to
+01:31
+generate traffic between them remember
+01:34
+that no traffic is passing between these
+01:36
+pcs by default so the switches won't
+01:39
+learn the MAC addresses of the PCs until
+01:42
+we send some traffic between them I'll
+01:44
+ping from PC one paying 192.168.1.2 elv
+01:52
+there we go step 3 is to view the secure
+01:58
+MAC addresses on switch 1 I'll go back
+02:01
+to switch 1 and now I'll use the command
+02:07
+show port security address as in the
+02:10
+previous lab
+02:12
+as you can see there is a dynamically
+02:14
+learned secure MAC address on the Fast
+02:17
+Ethernet 0 2 interface which must be PC
+02:20
+ones step four says to check the
+02:25
+configuration of switch ones Fast
+02:27
+Ethernet 0 to interface in the running
+02:29
+configuration show running config here
+02:35
+it is as you can see there are only the
+02:38
+two commands we entered before switch
+02:41
+port mode access and switch port port
+02:43
+security remember this as we will
+02:46
+contrast it with sticky mag address
+02:49
+configuration later step 5 is to save
+02:53
+the running config and reload the switch
+02:55
+I'll use write to save then reload ok
+03:02
+now the switch is reloading step 6 is to
+03:11
+view the secure MAC addresses on switch
+03:13
+1 again do you think PC ones MAC address
+03:17
+will still be saved as a secure MAC
+03:19
+address we saved the running
+03:22
+configuration but PC ones MAC address
+03:25
+wasn't anywhere in the running
+03:27
+configuration so let's check the port
+03:31
+security address table again enable show
+03:35
+port security address as you can see PC
+03:39
+ones MAC address is no longer present
+03:42
+dynamically learned secure MAC addresses
+03:44
+will not be retained when you restart
+03:46
+the switch even if you save the running
+03:49
+configuration because the address isn't
+03:51
+actually entered into the runner
+03:52
+configuration when it is dynamically
+03:54
+learned step 7 is to enable the sticky
+03:59
+secure MAC address feature on switch
+04:01
+ones
+04:02
+f02 interface con 40 interface f0 to now
+04:09
+this feature is enabled with this
+04:11
+command switch port port security MAC
+04:16
+address sticky that's it
+04:20
+now let's ping between the PCs again to
+04:22
+generate traffic
+04:24
+on PC one ping 192.168.1.1 that's all
+04:32
+for step 7 step 8 is to view the secure
+04:39
+MAC addresses of switch 1 then the
+04:41
+running config so on switch 1 show port
+04:47
+security address there is PC ones MAC
+04:50
+address again this time it is listed as
+04:53
+a secure sticky address what's the
+04:56
+difference well let's check the running
+04:58
+configuration show run as you can see in
+05:04
+addition to the three commands we
+05:06
+manually configured on the interface
+05:08
+there is a fourth one which we didn't
+05:10
+configure switch port port security MAC
+05:14
+address sticky followed by PC ones MAC
+05:17
+address this is because we enabled the
+05:20
+sticky feature when this feature is
+05:23
+enabled the switch saves dynamically
+05:25
+learned secure MAC addresses to the
+05:27
+running configuration of the switch step
+05:31
+nine is to save the running
+05:33
+configuration and reload again let's do
+05:36
+that right reload
+05:46
+step 10 is to view the secure MAC
+05:49
+addresses on switch one once again this
+05:52
+time do you expect to see PC ones MAC
+05:55
+address in the table PC ones MAC address
+05:59
+was saved to the running configuration
+06:00
+of switch 1 and we saved the running
+06:03
+configuration before reloading so it
+06:05
+should be in the table even after
+06:07
+restarting let's check enable show port
+06:14
+security address as expected PC ones MAC
+06:19
+address is still saved as a secure MAC
+06:21
+address on the f02 interface so to
+06:25
+review without the sticky feature
+06:27
+enabled dynamically learned secure MAC
+06:30
+addresses are not retained when the
+06:32
+switch is reloaded the sticky MAC
+06:34
+address learning feature however
+06:36
+automatically saves these addresses to
+06:38
+the running configuration and thus will
+06:41
+be retained upon reload if the runner
+06:43
+configuration is saved that's all for
+06:46
+this lab
+06:48
+thank you for watching I hope this lab
+06:51
+and video have been helpful for you
+06:53
+please subscribe for future labs like
+06:55
+this which will be released weekly if
+06:58
+you have requests for any specific labs
+07:00
+let me know in the comment section if
+07:03
+you want to support my channel I accept
+07:06
+Bitcoin and aetherium donations via the
+07:08
+addresses in the description I am also a
+07:11
+brave verified publisher and accept bat
+07:14
+or basic attention token donations in
+07:17
+the brave browser
+

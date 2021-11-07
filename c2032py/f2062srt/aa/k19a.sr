@@ -1,0 +1,359 @@
+00:00
+welcome to this free CCNA packet tracer
+00:03
+practice lab you can download the lab
+00:06
+file from the link in the description if
+00:08
+you like these labs please consider
+00:11
+supporting me via my patreon or the
+00:14
+cryptocurrency options in the
+00:15
+description in this lab we will take
+00:19
+another look at port security although
+00:23
+we will certainly revisit it again this
+00:25
+lab will be the final one in this
+00:27
+introductory series in the previous lab
+00:30
+we configured sticky MAC address
+00:32
+learning however this time we will
+00:35
+manually configure the MAC addresses of
+00:37
+pc1 & pc2 as secure MAC addresses on
+00:41
+switch 1 and switch 2 respectively step
+00:48
+one is to ping from pc1 to pc2 to
+00:51
+generate traffic let's go on pc one ping
+00:58
+192.168.1.2 elv there we go step two is
+01:04
+to view the MAC address table of switch
+01:06
+one switch one should have dynamically
+01:09
+learned the MAC address of PC one on f0
+01:12
+2 and the MAC addresses of switch 2 and
+01:15
+PC 2 on f0 one let's check on switch 1
+01:20
+enable show MAC address table as
+01:25
+expected there are two MAC addresses on
+01:27
+F 0 1 and 1 MAC address on F 0 2 we
+01:32
+don't know which of the two addresses on
+01:34
+F 0 1 is switch 2 and which is PC 2 but
+01:39
+that doesn't matter in this lab we just
+01:41
+want to know the MAC address of PC 1
+01:43
+which is this
+01:48
+step three is to enable port security on
+01:51
+switch ones
+01:52
+f02 interface and manually configure PC
+01:55
+ones MAC address as a secure MAC address
+01:58
+first let me copy the MAC address of PC
+02:02
+one there we go now let's configure the
+02:06
+f02 interface comte interface f0 to
+02:12
+remember we have to configure it as an
+02:15
+access port first so switch port mode
+02:17
+access switch port port security okay
+02:22
+we've done that before now to manually
+02:25
+configure a secure MAC address we use
+02:27
+this command switch port port security
+02:30
+MAC address followed by the MAC address
+02:33
+we want to configure which I will paste
+02:35
+right here there we go
+02:41
+next we must repeat the process on
+02:44
+switch 2 for PC 2 now the MAC address of
+02:48
+PC 2 should already be in the MAC
+02:51
+address table of switch to the default
+02:54
+aging time of a MAC address in the MAC
+02:56
+address table is 5 minutes meaning if
+02:59
+nothing is heard from that address on
+03:01
+the interface for 5 minutes it is
+03:03
+cleared from the table each time a
+03:06
+packet from that address is received the
+03:08
+timer resets to 5 minutes however let's
+03:12
+ping from PC to 2 PC one just in case
+03:16
+ping 192.168.1.1 there we go now under
+03:24
+switch to enable show MAC address table
+03:31
+again there are two addresses on the f01
+03:34
+interface those of switch one and pc 1
+03:37
+and 1 on the f02 interface that of pc 2
+03:41
+which is the one we're interested in now
+03:43
+so I'll copy that
+03:46
+ok now let's configure the interface
+03:50
+coffee interface f0 to switch port mode
+03:56
+access switch port port security switch
+04:01
+port port security MAC address and now
+04:03
+I'll paste in PC twos MAC address there
+04:07
+we go now let's do a quick ping from pc1
+04:11
+to pc2 to test which is step 5
+04:14
+if we configure the correct addresses
+04:17
+there should be no problems ping
+04:22
+192.168.1.2 elv it works
+04:27
+now on step 6 we're going to try to
+04:30
+trigger a port security violation let's
+04:33
+remove the cables first which we can do
+04:36
+with this tool in packet tracer there we
+04:41
+go now I'll connect PC one to switch to
+04:45
+by clicking on the cable down here there
+04:51
+we go and now I'll connect PC two to
+04:54
+switch one there we go
+05:01
+step seven is to pin from pc1 to pc2
+05:05
+what do you expect will be the result of
+05:08
+this ping we manually configured the MAC
+05:11
+address of PC 1 as a secure MAC address
+05:14
+on switch ones f02 interface and
+05:17
+manually configured the MAC address of
+05:19
+PC 2 as a secure MAC address on switch
+05:22
+twos f02 interface remember the default
+05:27
+number of secure MAC addresses on the
+05:29
+port security enabled interface is 1 so
+05:32
+if we attempt a ping from pc1 to pc2 now
+05:36
+a port security violation should be
+05:38
+triggered when the packet with a
+05:40
+different MAC address is received on the
+05:42
+port security enabled interface what
+05:46
+exactly will happen if you remember from
+05:49
+a previous lab the default action in the
+05:51
+event of a port security violation is
+05:53
+shut down meaning that the switch port
+05:55
+will enter an error disabled state
+05:57
+effectively shutting it down let's try
+06:01
+that ping on PC 1 ping 192.168.1 12 as
+06:08
+you can see the ping fails also if you
+06:12
+check the port lights on packet tracer
+06:14
+you'll notice that the port light on the
+06:17
+f02 interface of switch 2 has gone red
+06:20
+this means it is shut down however why
+06:24
+hasn't the f02 interface of switch 1
+06:26
+been shut down this is because the
+06:29
+packet was stopped right at the f02
+06:31
+interface of switch 2 so it never
+06:34
+reached PC 2 and thus PC to never sent a
+06:37
+reply to the ping which would have
+06:39
+triggered a port security violation on
+06:41
+switch 1 step 8 is to reconnect the
+06:48
+cables so I'll remove these cables first
+06:54
+there we go now let's connect them as
+06:57
+they were originally pc 1 2 switch 1
+07:03
+there we go and now pc 2 to switch 2
+07:09
+there we go
+07:11
+you
+07:14
+now let's ping from pc1 to pc2 do you
+07:19
+expect a pin to work PC one is once
+07:22
+again connected to switch ones
+07:24
+f02 interface and its MAC address is
+07:27
+configured on the interface as a secure
+07:29
+address so it should be fine
+07:32
+likewise for PC 2 it is now connected
+07:35
+again to switch twos f02 interface and
+07:38
+its MAC address is configured as a
+07:40
+secure address on switch twos
+07:42
+f02 interface let's try that ping on PC
+07:46
+one ping 192.168.1.2 12 it doesn't work
+07:55
+why is that even though we connected the
+07:57
+cables back the way they are supposed to
+07:59
+be well switch twos f02 interface is
+08:04
+still down it doesn't automatically
+08:07
+recover and become enabled again it can
+08:11
+be configured to automatically recover
+08:12
+from a port security error but that will
+08:15
+be a topic for another lab for now let's
+08:19
+do it manually I'll go on switch to and
+08:23
+first let's check the status of the
+08:26
+interface show interface f02
+08:30
+as you can see here the interface is
+08:34
+down and it's in an error disabled State
+08:39
+how do we manually fix this it's simple
+08:43
+shutdown no shutdown this will reset the
+08:50
+interface and it will no longer be in an
+08:52
+error disabled State that's how you
+08:56
+manually recover an error disabled
+08:57
+interface with the command shutdown
+08:59
+followed by no shutdown
+09:06
+finally let's do one last ping from pc1
+09:10
+to pc2 just to make sure that everything
+09:12
+is working right again after we did that
+09:14
+little experiment with port security
+09:16
+violations I'll go on PC one one more
+09:20
+time ping 192.168.1 twelve it works
+09:28
+that's all for this lab thank you for
+09:33
+watching I hope this lab and video have
+09:35
+been helpful for you please subscribe
+09:38
+for future labs like this which will be
+09:40
+released weekly if you have requests for
+09:43
+any specific labs let me know in the
+09:45
+comment section if you want to support
+09:48
+my channel please consider contributing
+09:50
+to my patreon patreon comm slash
+09:53
+Jeremy's IT lab I accept Bitcoin and
+09:57
+aetherium donations via the addresses in
+09:59
+the description I am also a brave
+10:03
+verified publisher and accept bat or
+10:05
+basic attention token donations in the
+10:08
+brave browser
+

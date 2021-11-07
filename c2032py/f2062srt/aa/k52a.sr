@@ -1,0 +1,213 @@
+00:00
+welcome to this free CCNA packet tracer
+00:03
+practice lab you can download the lab
+00:05
+file from the link in the description if
+00:08
+you like these labs please consider
+00:10
+supporting me via my patreon or the
+00:12
+cryptocurrency options in the
+00:14
+description also please subscribe to the
+00:17
+channel for more labs like this in this
+00:21
+lab we will take a look at two methods
+00:23
+of inter VLAN routing using two small
+00:25
+networks one is known as router on a
+00:29
+stick which we already covered in the
+00:31
+icnd1 labs but we will do a little
+00:33
+review here the other method is using
+00:37
+SBI's on a multi-layer switch which is a
+00:40
+switch with routing capabilities let's
+00:43
+get started first let's configure switch
+00:47
+1 for inter VLAN routing using s vis
+00:51
+switch 1 isn't connected to a router in
+00:54
+this small network and even if it were
+00:56
+it might be preferable for a switch 1 to
+00:58
+rub between VLANs itself without having
+01:01
+to send the traffic to a router now pc1
+01:04
+& pc2 shouldn't be able to ping each
+01:06
+other at the moment let's try from PC 1
+01:12
+ping 1002 10
+01:21
+doesn't work let's go on switch one and
+01:23
+make it work an able coffee tea ok the
+01:30
+first step is to enable IP routing on
+01:32
+the switch which is done with the
+01:34
+command IP routing this enables the
+01:38
+layer 3 capabilities of this multi-layer
+01:40
+switch next we just have to configure
+01:44
+the VLANs with IP addresses interface
+01:47
+VLAN 10 I configured each PC to use the
+01:51
+dot 1 address of their subnet as a
+01:53
+default gateway
+01:54
+so for VLAN 10 IP address 1001 one
+02:02
+255.255.255.0 also SV eyes are shut down
+02:07
+by default so remember no shutdown now
+02:11
+let's configure VLAN 20 interface VLAN
+02:16
+20 IP address 1002 one 255.255.255.0 no
+02:24
+shutdown that's all there is to it
+02:27
+keep in mind I already configured switch
+02:30
+ones interfaces connected to a PC one
+02:32
+and PC two to be in VLAN 10 and VLAN 20
+02:35
+do show VLAN brief there you go
+02:40
+now let's try our ping once more from PC
+02:43
+one ping 1000 two 1000 all there is to
+02:55
+inter VLAN routing using SBI's for a
+02:59
+quick review enable IP routing on the
+03:02
+multi-layer switch create the
+03:04
+appropriate SV eyes with the interface
+03:06
+VLAN command configure IP addresses on
+03:10
+the SV eyes and enable them with no
+03:12
+shutdown next let's configure inter VLAN
+03:17
+routing in our other small network using
+03:20
+the router on a stick method by using
+03:23
+sub interfaces r2 can act as a default
+03:26
+gateway for multiple subnets using a
+03:28
+single physical interface again I
+03:32
+already configured the switch to
+03:34
+interface
+03:34
+is connected to a PC 3 and PC for to be
+03:38
+in VLAN 30 and VLAN 40 so we just have
+03:40
+to configure the connection between
+03:41
+switch 2 and R 2 let's just show that PC
+03:46
+3 and PC for can't pin each other at the
+03:48
+moment
+03:49
+upping from PC 3 to PC for ping 1004 10
+04:03
+doesn't work
+04:05
+first let's go on switch to enable golf
+04:12
+tee all we have to do here is configure
+04:15
+g0 one as a trunk interface g0 1 switch
+04:20
+port mode trunk
+04:22
+that's all now let's go to our to enable
+04:29
+golf tee let's enable the g00 interface
+04:35
+interface G 0 0 no shutdown now let's
+04:41
+create a sub interface for VLAN 30
+04:43
+interface G 0 0 30 next specify this sub
+04:49
+interface as being before VLAN 30
+04:53
+encapsulation dot1q 30 next we just add
+04:59
+the IP address IP address 1003 1 255 255
+05:05
+255 0 that's all now let's make another
+05:09
+sub interface for VLAN 40 and do the
+05:12
+same interface G 0 0.40 encapsulation
+05:18
+dot1q 40 IP address 1004 1 255.255.255.0
+05:29
+that's all there is to router on a stick
+05:31
+let's try that ping again from pc 3 ping
+05:37
+1004 1
+05:46
+okay there we go
+05:48
+in this slob we looked at two methods of
+05:50
+inter VLAN routing SV eyes and router on
+05:54
+a stick that's all for this lab thank
+06:01
+you for watching I hope this lab and
+06:03
+video have been helpful for you please
+06:05
+subscribe for future labs like this
+06:07
+which will be released weekly if you
+06:10
+have requests for any specific labs let
+06:12
+me know in the comment section if you
+06:15
+want to support my channel I accept
+06:17
+Bitcoin and aetherium donations via the
+06:19
+addresses in the description I am also a
+06:23
+brave verified publisher and accept bat
+06:25
+or basic attention token donations in
+06:28
+the brave browser
+

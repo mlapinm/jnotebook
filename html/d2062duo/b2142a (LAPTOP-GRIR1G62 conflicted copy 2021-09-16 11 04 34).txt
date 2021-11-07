@@ -1,0 +1,171 @@
+
+0.0
+3.917524
+welcome to this Inkscape video tutorial series 
+6.180768
+in this video i want to go over the basics of Inkscape
+9.93152 
+and can I just show you the interface and explore some of the different tools and things we have prisons that were presented with
+16.820168
+when we first open up Inkscape
+18.635093 
+if you haven't yet already installed the Inkscape on your computer
+21.547493 
+you can download it free on windows linux and mac so check out my other videos for that
+25.3 
+it's a completely free and open software
+27.105849 
+it's not a free trial version 
+and it's very very powerful 
+it's very similar to Adobe Illustrator 
+33.961092
+and has all the same functionality and tools that you would find with that program 
+37.423077
+so the first thing I want to do when we open this app 
+40.760227
+I just want to show how to kind of pan around and change the way we're viewing this page 
+47.046522
+so to do that if we use our scroll wheel on our mouse 
+49.801545
+we can see we can scroll up and down and if we hold down the control wheel we can move this around 
+55.798179
+this is gonna be really important because sometimes you'll be
+you'll just be seeing whitespace here
+58.669271
+and you won't be sure where your object in your page is 
+64.189413
+and so we can hold the pan key and just by that we hope we can pan by holding down the control wheel
+70.703136
+and go around and do that 
+we can also hold down the control key on our keyboard 
+75.210467
+and scroll wheel in and out to zoom in more detail on this page 
+or zoom out 
+80.45299
+so we can find it 
+82.146394
+okay and then we can use these bars here to kind of pan around as well 
+87.818297
+and we can also while the control key is held 
+we can use the arrow keys on our keyboard is another way we can pan around
+94.93329 
+and that just kind of moves that document around 
+97.373723
+so we have our selection tool selected right now these are our tools on the left hand side 
+102.205609
+and by default we have a little light blue box or on our selection tool
+105.527739
+which means anything we click on 
+107.933798
+we can select it and change the properties for it 
+110.237384
+so right now we're not really selecting on anything because it's just our page 
+113.906428
+but if we want to draw an object we can come down here to the square 
+and we can draw a square 
+120.294893
+so I got a little green square because that's the color by default the last color I was using in Inkscape 
+124.812967
+so you might have a different color there 
+126.361163
+but the left-click and drag and then unclick and you'll create a nice square like this 
+130.850007
+and then we'll go back to our selector tool 
+133.475099
+and when we click on the selector tool
+it'll have a nice selection around it
+137.948772
+and we can see that because that's a dotted black line 
+140.127452
+and it also has some different arrows ways that we can change and adjust this shape 
+145.904719
+so if we click on one of them we can resize the shape of this square rectangle 
+151.804238
+we can also change just one axis so we can make it kind of shorter or taller 
+157.315553
+and also with every tool when you click on a different tool
+or when you have an object selected like this 
+163.014328
+they'll be options along the top that change 
+165.704757
+so here we have a W and an H option with a little with some numbers in a text box  we can change 
+172.409371
+and that's gonna change the width and height if you look at if you notice up here while I change this those numbers are changing
+177.549797
+and so if I want to change just the height 
+180.986943
+I can come up here and manually type in a number like 50 and hit enter 
+185.120948
+and I'll change the height to 50 millimeters which is the unit that it's has selected by default 
+191.427978
+I can change this to inches if I want 
+193.506721
+and now instead now it's in inches 
+195.499332
+so now if I want to change the width to maybe two inches I'm typing two and hit enter on the W side 
+202.605952
+and the height that I want it to be two inches 
+I hit two on the height and hit enter 
+206.332569
+and now we have a two inch by two inch square box 
+209.9876
+so if we were to print this out 
+212.939207
+it would be two inches by two inches on our piece of paper 
+216.688838
+we can left-click and drag this box around to any point we want
+221.186247 
+we can even drag it outside of the page border if we want to
+225.584649
+but then if we try to print this page it'll just print blank because it is
+outside of the page border
+230.092536 
+so we'll make sure we're always working within our our page guidelines or guides 
+235.61674
+what else can we do with this 
+okay 
+237.929665
+so while it's selected 
+if we click out here in white space 
+240.396139
+we just see there's nothing selected 
+242.842207
+we can't change these numbers anymore because because there's no selection 
+246.041103
+if we go to the bottom there's different colors 
+248.591762
+and we if we click on and nothing happens 
+250.149547
+because we can't change the color either 
+252.047812
+because nothing selected but if we left click on it and have the box around 
+256.037851
+and come down here to the purple color and left-click again
+258.343736
+we can change the color of this box to a purple or yellow or green any color we want 
+263.534023
+we can also change the size up here now because it's selected
+267.158179
+if we hit the escape key it becomes
+deselected 
+270.215897
+if we left-click it become selected again 
+272.498247
+if we click off into white space it becomes Deselected 
+276.8506
+if we left click it become selected again
+278.713309
+while it's selected if we left click
+again you'll notice these these arrows sort of change direction 
+285.913225
+so between left clicking if we keep left clicking slowly
+290.03946
+we'll see these arrows change 
+292.263479
+so the first selection we had we could change the size of it 
+295.122333
+but if we left click again we can change the skew
+299.320152 
+we can skew this square either along the x or y axis
+306.120361
+306.120361

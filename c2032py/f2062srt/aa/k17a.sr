@@ -1,0 +1,393 @@
+00:00
+welcome to this free CCNA packet tracer
+00:03
+practice lab you can download the lab
+00:06
+file from the link in the description in
+00:09
+this lab we will take a look at port
+00:12
+security port security is a security
+00:15
+function which can be configured on
+00:16
+switch interfaces and controls which MAC
+00:20
+addresses are allowed on which
+00:21
+interfaces MAC addresses are 48 bit
+00:25
+addresses which are tied to the physical
+00:28
+device such as a network interface card
+00:30
+on a computer port security allows us to
+00:35
+ensure that only the intended devices
+00:36
+are allowed to communicate over a given
+00:38
+switchboard we will do a few labs to
+00:42
+practice port security in this first lab
+00:45
+let's look at and configure some basic
+00:48
+functions of port security on two
+00:49
+switches switch 1 and switch 2 which
+00:54
+each have one pc connected to them try
+00:57
+to complete the lab yourself first then
+01:00
+continue watching this video if you have
+01:01
+trouble or watch it after to check your
+01:04
+solution
+01:08
+step1 tells us to find the MAC address
+01:10
+of switch to by using the CLI of switch
+01:13
+one and the reverse so let's go on
+01:16
+switch one first enable use the command
+01:21
+show MAC address - table to display the
+01:25
+list of known MAC addresses on the
+01:26
+switch switch one knows one
+01:29
+MAC address it's type is dynamic meaning
+01:33
+that we didn't manually configure this
+01:35
+MAC address it was learned by receiving
+01:37
+a packet on the port displayed here
+01:39
+fastethernet 0/1 that's the MAC address
+01:42
+of switch - now let's go on switch to
+01:47
+enable show MAC address table this here
+01:53
+is the MAC address of switch 1 learned
+01:55
+dynamically on the fastethernet 0/1 port
+01:59
+step 2 asks us why the MAC addresses of
+02:02
+pc1 & pc2 don't appear in the MAC
+02:05
+address table even though switch 1 and
+02:07
+switch to appear in each other's tables
+02:10
+if you have studied spanning tree
+02:12
+protocol already you know that switches
+02:14
+send each other BPD use bridge protocol
+02:17
+data units at regular intervals the
+02:21
+switches learned each other's MAC
+02:22
+addresses via these bpdu packets however
+02:26
+no traffic has passed from the PCs to
+02:29
+the switches yet so they are unaware of
+02:31
+the PCs MAC addresses at this point
+02:36
+step3 tells us to ping between the PCs
+02:40
+and then check the MAC address tables of
+02:42
+the switches if we ping between the PCs
+02:45
+switch one should have one dynamically
+02:48
+learned MAC address on his Fast Ethernet
+02:50
+0 to port that of PC 1 and to
+02:53
+dynamically learned MAC addresses on his
+02:55
+fastethernet 0/1 port those of switch 2
+02:58
+and PC 2 likewise switch 2 should have
+03:03
+one dynamically learned MAC address on
+03:05
+his Fast Ethernet 0 to port that of PC 2
+03:07
+and to dynamically learned MAC addresses
+03:10
+on its fastethernet 0/1 port those of
+03:13
+switch one and pc 1 so I'll go on PC 1
+03:16
+and ping PC to ping 192.168.1.2 elv
+03:26
+there we go now let's go on switch 1
+03:31
+show MAC address table here is the MAC
+03:36
+address of switch 2 we saw before this
+03:40
+other mac address on fastethernet 0/1
+03:42
+must be PC twos and the MAC address on
+03:45
+Fast Ethernet 0 2 must be PC ones let's
+03:50
+check on switch to also show MAC address
+03:56
+table here switch ones MAC address this
+04:00
+one is also on Fast Ethernet 0 1 so it
+04:03
+must be PC ones and this MAC address
+04:06
+went on Fast Ethernet 0 2 must be PC
+04:08
+twos
+04:11
+step four is to enable port security on
+04:14
+the switch interfaces connected to PCs
+04:16
+so fastethernet 0 2 of each switch in
+04:22
+this lab we will configure the switches
+04:23
+so that switch 1 only accepts traffic
+04:25
+from PC 1 on its Fast Ethernet 0 2
+04:28
+interface and switch 2 only accepts
+04:30
+traffic from PC 2 on its Fast Ethernet 0
+04:33
+2 interface first you must enable it at
+04:37
+the interface level let's go on switch 1
+04:40
+again count 50 interface f02 you can
+04:47
+enable port security with the command
+04:49
+switch port port security but command
+04:54
+rejected Fast Ethernet 0 2 is a dynamic
+04:57
+port what does this mean well one rule
+05:00
+of port security is that it can't be
+05:02
+enabled on a trunk port
+05:04
+it can only be enabled on an access port
+05:07
+although this switch port is currently
+05:10
+functioning as an access port it's
+05:12
+actually in dynamic mode meaning that if
+05:14
+it were to be connected to a switch port
+05:16
+configured as a trunk it would start
+05:18
+functioning as a trunk the switch board
+05:21
+has to be explicitly configured as an
+05:23
+access port if you want to enable port
+05:25
+security on it so switch port mode
+05:29
+access switch port port security that's
+05:33
+it let's go on switch to now compte
+05:40
+interface f02 switch port mode access
+05:45
+switch port port security that's all you
+05:49
+have to do to initially configure port
+05:51
+security
+05:53
+Step five first asks us how many MAC
+05:56
+addresses are allowed on a port security
+05:58
+interface by default
+06:00
+well let's use a show command to find
+06:03
+out since we're already on switch to
+06:06
+let's start here do show port security
+06:10
+look here next to fast ethernet zero to
+06:14
+the max secure address count is 1
+06:17
+remember that for the test that is the
+06:20
+default number of MAC addresses allowed
+06:22
+on the switchboard because this is the
+06:25
+default we don't technically have to
+06:27
+configure this however it's often a good
+06:30
+idea to configure important settings
+06:32
+like this just to be sure and for our
+06:34
+purposes it's good to go through the
+06:36
+motions to practice so use this command
+06:39
+switch port port security maximum one
+06:44
+now let's do it on switch 1 to switch
+06:49
+port port security maximum 1 that's all
+06:54
+for step 5
+06:57
+step six asks us another question what
+07:01
+is the default action in the event of a
+07:02
+port security violation of course when
+07:06
+we configure port security there has to
+07:08
+be some action that the switch takes in
+07:10
+the event that the rules we configured
+07:12
+are violated there are three
+07:14
+possibilities
+07:15
+the first is protect which drops traffic
+07:19
+from any MAC addresses which are not
+07:21
+allowed on the port that's it it doesn't
+07:25
+shut down the interface or display any
+07:27
+messages it doesn't even increase the
+07:29
+violation counter that the switch keeps
+07:32
+the second option is restrict which
+07:35
+again drops all traffic from MAC
+07:37
+addresses which aren't allowed it also
+07:40
+displays a message on the switch and
+07:41
+increases the violation counter on the
+07:43
+switch the third one is shut down which
+07:48
+puts the switchboard into an error
+07:49
+disabled state effectively shutting down
+07:52
+the interface as well as increasing the
+07:54
+violation counter make sure you know the
+07:57
+differences between these three for the
+07:59
+test now as for which one is the default
+08:02
+we can use the same command as before do
+08:06
+show port security here at the end under
+08:11
+security action it says shutdown so
+08:14
+there's our answer the default port
+08:16
+security violation action is shut down
+08:19
+another thing to remember for the test
+08:22
+again even though this is default let's
+08:25
+go through the command to configure it
+08:27
+switch port port security violation now
+08:31
+I'll use the question mark to show you
+08:33
+the options here are the three options I
+08:36
+mentioned earlier protect restrict
+08:38
+shutdown let's go with the default of
+08:41
+shutdown now on switch to switch port
+08:47
+port security violation shutdown
+08:53
+the steps are all complete but I want to
+08:56
+show one more thing let me ping from pc1
+08:59
+to pc2 again ping 192.168.1 12 now I'll
+09:06
+go on switch 1 and show port security
+09:11
+address as you can see this command
+09:15
+shows the MAC address of PC 1 which
+09:18
+switch one has dynamically added as a
+09:20
+secure MAC address on Fast Ethernet 0 -
+09:24
+that's all for this lab thank you for
+09:28
+watching I hope this lab and video have
+09:30
+been helpful for you please subscribe
+09:33
+for future labs like this which will be
+09:35
+released weekly if you have requests for
+09:38
+any specific labs let me know in the
+09:40
+comment section if you want to support
+09:43
+my channel I accept Bitcoin and etherion
+09:46
+donations via the addresses in the
+09:48
+description I am also a brave verified
+09:51
+publisher and accept bat or basic
+09:54
+attention token donations in the brave
+09:56
+browser
+

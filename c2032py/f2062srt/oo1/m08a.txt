@@ -1,0 +1,459 @@
+2.605491
+welcome back to another Inkscape tutorial
+5.783238
+in this video i want to go over the document settings and creating a new document and setting it up for your purposes
+13.248386
+whether that's to create user interface like a app design a webpage whether you want to print a poster
+20.526761
+or a birthday invitation or design a t-shirt or whatever you want to do i'm going to show you how to set up the document accordingly
+27.990557
+and then we're also going to be exporting
+30.922401
+so we'll i'll show you how to export out in different ways that we can export in different formats
+35.650923
+that will be great to achieve your goals
+39.130642
+so to start with let's click on file and go to document properties
+43.770695
+so by default
+45.112104
+we have this nice a4 page
+47.909718
+which is 210 millimeters by 2 and writing 7
+51.744573
+millimeters and then when you go to document properties the first thing it has your display units by default
+56.652558
+it's millimeters
+58.024371
+if you're designing something for print
+59.716375
+and you're in Europe you'll want to do millimeters
+63.017706
+if you're in USA you want to do inches
+65.354105
+that's if you're designing print if you're designing something that's just only going to exist on a computer monitor like in a video
+73.786902
+or if you're doing like an animation or a webpage
+77.306024
+you're gonna want to do px you're gonna wanna does it be designing in pixels
+80.698858
+so it just depends first
+82.650395
+let's do we'll just okay we'll do pixels first
+86.757832
+so let's say you want to do pixels
+88.439199
+so pixels you're never gonna want to do an a4 in pixels
+92.008020
+because a4 is a paper size so when pixels you're gonna want to do
+95.929190
+you come down here to custom size and you'll probably want to do something like 1920 by 1080 oh and what I forgot to do is
+106.726040
+so this is general settings this shows us that this will change our measurement here for pixels
+112.462064
+and it'll show all of our global measurements for pixels pixels
+115.440101
+but under this custom size we have a different way to control our units as well
+120.527907
+so we want to change this to pixels also
+122.128703
+so yeah well you'll want to make sure that these always match
+124.636823
+and so now we want our width to be 1920 by 1080
+133.267248
+so there we have it so this now our display region I hit the plus sign and zoom in
+138.284832
+this box is the size of a standard computer monitor or a standard HDTV
+145.470851
+it's 1080p 1920 pixels wide by 1080 pixels tall
+150.920330
+so if we're designing something for like an HDTV might have an animation
+155.108599
+or just a picture or a desktop background like a wallpaper for your desktop
+159.404557
+this is the a great design a great layout to have
+162.792512
+we can change the background so by default it's a white background if we check this
+168.187290
+we can have a checkered background
+169.536290
+and then we can see kind of give you a better idea
+172.636202
+especially if you're not printing on white paper
+174.936259
+it gives you an idea of how things will look
+176.952146
+because then you know I see so now you can draw a white object
+180.852178
+and it won't especially if there's no stroke like if we just make or if we make our stroke white
+186.300269
+and I guess that wasn't pure white but so now we can actually draw white objects without it getting lost in the background if this isn't checked
+194.835961
+then it becomes lost
+196.212161
+so you might sometimes want to want to have it be a transparent background like this
+199.920192
+let's see that's about it
+204.560291
+yeah we you can change yeah that's about all
+208.880458
+that we want to do and then if you hit this button here
+211.060250
+it just like shrinks the doc over here so it's still open
+215.247327
+and a lot of times I show that because sometimes while that shrunk
+219.368536
+if you want to get back into it I mean if you go to file and go back into document properties
+223.664873
+nothing happens it does it
+225.488518
+doesn't bring that window up
+226.888659
+and it's can be confusing that's because it's docked to the side over here
+231.380530
+so if ever you dock this it'll still appear here
+234.200964
+and any other options that we bring up can be docked as well
+237.188143
+if we hit the X it'll just close it
+239.928316
+and then we can bring it back up by going into our document properties
+243.387459
+okay let's try another one
+245.941530
+so if we go to file new it actually brings up a whole brand new window
+250.172004
+and it just has this in a for for some reason
+252.224780
+I've got Find and Replace up by default
+254.287113
+and my fill and stroke
+255.218142
+so I can dock both of these
+257.187527
+and now they're just appear over here
+258.931339
+I can bring up whichever one I want to
+260.235315
+but I want to change this from a four to something else so I go to file
+265.455646
+properties bring that up and this time I do want to print something in the USA
+271.459382
+so my display units I want to be in inches
+273.543277
+and my units for my well I'm not gonna set a custom size
+277.919528
+okay maybe I am a new custom size
+279.223408
+I lied so
+280.875294
+I'll go down to custom size and I'll do width
+282.962254
+all the 36 inches by 36 inches
+287.313750
+so what that's going to do is create
+289.731139
+kind of a poster 36 inches by 36 inches
+292.990760
+it's a completely square poster
+294.737487
+maybe my local printer has a nice foam board or something that I want to print to
+300.201075
+and that's the dimension of the of the board
+302.418682
+so I can design something on here
+305.090454
+maybe I'll have like a I want to say
+307.902447
+yard sale and I want to have like a design like a nice big banner for my yard sale
+314.686377
+and have like all kinds of stars
+317.378469
+and different fun things
+319.158603
+so I would design this and I would have it printed
+322.750244
+at my local printer this is 36 by 36
+325.894634
+something to can't do can we see dpi here I guess we can't
+330.775183
+so if you're if you're done thing with printing you know there's a setting called dpi
+334.554329
+which is like dots per inch or that sometimes it's called like PPI pixels per inch
+339.614226
+I think there's one I think that exists
+342.310221
+so we'll see that in a second in fact I guess we'll just do it now
+345.802219
+so let's say we want to actually print this
+347.815620
+if we click this checkered background we see okay
+351.262552
+so this is actually printing on whatever so whatever color that maybe it's a yellow poster board
+356.334321
+so it'll print on whatever color it is and no other color will be printed
+359.590554
+whereas if we did draw an actual square
+363.730453
+and color it white and then rip it and lower it to the bottom
+369.086361
+we see this is what it looks like so is actually sometimes printers can print a white color
+375.558395
+a good example would be maybe you're printing this on the back of a shirt I like a black shirt
+380.546117
+well if you print black ink on the back of a black shirt it's not going to show up so you might actually want to print a white color
+386.882307
+on the back of the shirt and then a red star and black text
+390.226230
+so sometimes you will want to actually draw white so just keep that in mind if you were if you're designing on a transparent background
+396.254153
+or if you're actually printing color in this case
+400.778671
+I'm assuming I'm gonna print a 36 by 36 on like a white foam board so I don't need to I don't need to draw a white color in let's
+410.690209
+let's export this as if we were going to send this to the printer
+414.394463
+so to do that we go to file
+416.622254
+if we go to save it'll save our document
+419.258628
+which is a good idea to do too it'll save it as a dot SVG file
+423.026122
+sometimes the printers professional printers will actually want to have the SVG file
+428.418180
+so sometimes it's a good idea to send both
+431.102329
+so I'm gonna do that I'm gonna click Save and we'll just go to the desktop and we'll call this yard
+438.565681
+SVG so yard and then saved as an Inkscape SVG
+442.279059
+we can also save it as a plain SVG maybe for worried about compatibility issues
+446.285493
+with the printer and then they could actually open this up in Illustrator or they can open it up in you can maybe even open these up in like and Photoshop
+459.287733
+I'm not sure but lots of programs there they're printing software can probably open vector art it can open dot SVG files
+465.158371
+so we could send this and then that way they when the printer opens it up they might be like oh you know what your star for whatever reason was off the border
+472.594441
+so I'll fix it for you so they like
+474.258216
+they can drag it over and move it
+476.550273
+without having to get crazy
+478.602242
+because the other way we export it is as a as like maybe a PNG image
+484.118192
+so we go to file and go export PNG image
+486.506459
+that'll bring up some more options towards the right tier
+489.830358
+so this will be called yard dot PNG is what it is by default it's on my desktop which is great if I want to put it somewhere else I can change the location by clicking this
+498.406340
+export as and then the export button is what I'll export it
+501.906311
+so if I just leave everything how
+504.193030
+it is now well okay so our export area by default it's drying
+509.489236
+so if I hit export let's just see what that looks like
+511.227825
+so we minimize close out of this one we do earlier
+516.271894
+so now we see it exported out
+519.035898
+it doesn't look too bad
+520.092075
+we have a white border on our star which I didn't realize we had
+524.327858
+and then we have artists black text
+525.824009
+so that's what it'll look like
+527.439932
+but it's important to know what this is doing so let's say we have our star selected
+533.423651
+and now when we go to export like automatically it changed this to selection
+538.768056
+so now if I if I hit export
+541.439773
+and we minimize now it only exported the star
+545.215929
+it only exported what was selected
+547.327011
+so now we have this thing that says
+548.746672
+yard so we have this thing that's just the star
+550.482551
+did you see what I did there if I just if I just click this text
+554.870909
+and I go to selection
+555.854864
+and export it'll just export whatever is selected
+559.270867
+and if I hit ctrl H if I if and click the start
+563.910804
+and select both of them
+565.082670
+I can export both of them
+566.882806
+but it's going to export so I have just the text there
+571.058704
+I can export just both of them together
+573.398760
+replace it sure we'll replace this one
+576.166803
+so now we have two different ones but
+580.386748
+they're different one of them is just the selection
+582.166927
+in fact both these actually these are the same because it's that did the drawing
+587.274774
+but what I really want to do
+588.718692
+let's I'll show you for an extreme example let's shrink
+591.122752
+this down to the middle
+592.498716
+if we export page that's almost always what you're gonna want to do if you're doing things properly
+596.654691
+when you export the page it exports the page these lines
+600.418681
+the page area
+601.742456
+so now if I hit export it'll export the entire page lines
+606.890838
+and anything inside them
+609.093502
+so now our poster looks like this
+610.985769
+even that's kind of hard to see let's open it up
+616.713893
+then we'll open it up in so we can kind of see exactly what it looks like it'll have a transparent background
+623.749703
+and just that text in that star
+627.281773
+so this is what our poster will look like when it's printed but it'll have white
+632.000376
+in the back
+633.069084
+instead am i making sense here for you
+637.988793
+so if we do just drawing I think just drawing is going to be basically the limits of just the drawing
+643.824853
+so we'll call this yard I'll call it yard one go to export
+648.700685
+and it's a good idea for you to do just what I'm doing now
+651.004598
+and playing around
+651.836790
+so yard one looks like this
+653.200829
+it's just the limits of the drawing
+656.358397
+so it exports every draw knocked every object I can find
+659.912516
+I'm going to close that
+661.328523
+every object it can find
+662.736602
+just gonna it's going to basically export with this dotted line around it
+667.584616
+if this star were over here
+668.951517
+it would it would export just this shape
+671.588486
+and it wouldn't do the page borders
+673.492289
+so pay close attention to that that can kind of throw a lot of people off
+677.128992
+because you know you might actually
+679.940389
+accidentally have just this selected and you export it
+683.128614
+and you forget to double check it
+685.544615
+and then you upload that file to the printer
+687.834873
+you upload this and say hey can you print this yardsale poster and they just print this
+692.414446
+and it's not 36 by 36 inches it's not the right size you wanted
+696.610646
+and it just won't turn out so well
+699.775584
+so play with all these play with page drawing selection custom you can actually change these numbers
+705.810488
+and export it you know choose your X&Y so you could actually export an object sitting clear over here outside of the page border
+713.050306
+but you could custom lis tell it to go to that point that X&Y point if you wanted to probably don't want to
+720.586639
+okay and then what does this say to is if you're printing always
+724.190501
+you'll want this to be your pixels at your DPI 96 is good for web
+731.978380
+but if you're printing something you want to be at least 150 and I like to do 300 actually
+737.642587
+so I change this to 300
+740.042532
+and what that does is makes a much larger file size so if I go to page
+744.890429
+and ice and then I change this to 300
+747.622582
+then I go to export this is going to be it takes a lot longer
+753.318529
+if you notice whoa it's taking forever because it's 36 inches by 36 inches is quite large
+759.094495
+it's a lot of information
+760.514618
+so this exports out which one what do I call that is it this one here
+764.602489
+I think it is so I was taking a little bit longer low because it's such a large file
+770.026229
+but it still looks the same
+771.498603
+but if we go to properties we see this files well
+775.122225
+it's not huge 628 kilobytes properties of this 196 so I guess
+781.998733
+it's not huge but I took a long time to render
+784.610473
+because we have it at 300 dpi
+787.714231
+so anytime you're printing something whether it's on a t-shirt business card poster even a printer page icon a regular printer at home
+795.514233
+you want this to be 300 dpi
+797.454271
+it just gives you better resolution that's for every inch that you're printing it has 300 dots
+803.618380
+instead of the default was 96 dots
+806.708619
+so it's gonna be three times as detailed
+809.206995
+basically if you're doing web it doesn't really matter
+812.954373
+because web 96 is is plenty fine for a computer monitor computer screen
+819.026443
+but just know that printers can print at a higher resolution
+822.322639
+usually then in hex export the width and the height to so this is gonna be uniform because we're 36 by 36
+830.698493
+what else
+832.458404
+that's about it with the export settings
+835.058428
+so this video is getting kind of long
+837.094520
+but hopefully that's
+837.871683
+you know shed some light on that
+839.263714
+on how to create different document sizes
+843.203340
+different settings and then exporting so that you get
+845.527669
+the result that you're wanting
+846.792215
+appreciate you watching
+848.283649
+I'll see you on the next video
+849.775567
+849.775567
+849.775567

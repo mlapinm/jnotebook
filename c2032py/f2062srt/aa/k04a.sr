@@ -1,0 +1,303 @@
+00:01
+welcome to this free CCNA packet tracer
+00:04
+practice lab you can download the lab
+00:07
+file from the link in the description in
+00:09
+this lab we will be working with two
+00:12
+routers r1 and r2 and two switches
+00:16
+switch 1 and switch 2 we will configure
+00:20
+and test a serial connection between the
+00:22
+two routers note that I have already
+00:24
+configured the host names of each of the
+00:26
+devices beforehand try to complete the
+00:30
+lab yourself first then continue
+00:32
+watching this video if you have trouble
+00:33
+or watch after to check your solution
+00:38
+step one asks us to use CVP to discover
+00:42
+which interfaces are used to connect the
+00:44
+routers and switches if you have the
+00:47
+option always show port labels and
+00:49
+logical workspace in the Preferences
+00:51
+menu of packet tracer enabled the labels
+00:54
+will appear next to the devices but I
+00:56
+have this option turned off we will use
+00:59
+CDP or Cisco discovery protocol to
+01:03
+identify the interfaces CDP is a very
+01:07
+useful tool and I will create a lab
+01:09
+dedicated to using CDP in the future but
+01:12
+for this lab all we need to know is one
+01:14
+command that is show CDP neighbors let's
+01:19
+give it a try on switch one first I'll
+01:22
+type in able to enter privileged exec
+01:24
+mode this is where we use the command
+01:28
+show CDP neighbors as you can see switch
+01:33
+1 is connected to r1 and the local
+01:35
+interface meaning the interface on this
+01:38
+device is fastethernet 0/1 let's go to
+01:42
+r1 enable show CDP neighbors our one is
+01:49
+connected to switch 1 on the Fast
+01:51
+Ethernet 0 interface but something's
+01:54
+missing where's our - well because I
+01:59
+have linked lights enabled on packet
+02:00
+tracer you might have noticed something
+02:02
+is wrong let's troubleshoot a little bit
+02:05
+think of potential causes first at layer
+02:08
+1 or the physical layer of the OSI model
+02:11
+is the cable plugged in
+02:14
+yes it is as you can see here in packet
+02:17
+tracer are the interfaces turned on
+02:19
+let's check I'll use the show IP
+02:24
+interface brief command to check well we
+02:28
+were going to use CDP to discover which
+02:30
+interface r1 is connected to are to
+02:32
+through but as we can see there is only
+02:35
+one serial interface serial zero and
+02:38
+it's administrative lead áown that means
+02:42
+if we do a show run command which I will
+02:45
+do now we should see the shutdown
+02:47
+command on the serial interface
+02:49
+I didn't configure this this is by
+02:52
+default let's fix that conf
+02:57
+no shutdown let's check on our to also
+03:02
+enable show IP interface brief again it
+03:07
+is shutdown conf T interface serial zero
+03:12
+no shutdown okay
+03:15
+now let's return to r1 this can take
+03:19
+some time but if I enter show CDP
+03:22
+neighbors again I should see our - there
+03:27
+it is
+03:27
+r1 is connected to our - through the
+03:30
+serial zero interface let's run the
+03:33
+command on our to type end to return to
+03:38
+privileged exec mode show CDP neighbors
+03:48
+- is also connected to r1 through the
+03:51
+serial zero interface and switch -
+03:53
+through the Fast Ethernet zero interface
+03:56
+finally let's move on to switch to
+04:02
+enable show CDP neighbors as you can see
+04:07
+switch 2 is connected to R 2 through the
+04:10
+Fast Ethernet 0-1 interface step 1 is
+04:14
+now complete
+04:19
+step2 asks us to identify which end of
+04:22
+the serial connection is DCE
+04:24
+and which end is DTE in serial
+04:28
+connections one side is DCE
+04:30
+or data communications equipment and one
+04:32
+side is DTE or data terminal equipment
+04:36
+the most important difference between
+04:38
+the two is that the DCE device supplies
+04:41
+the clock signal that paces the
+04:43
+communications which will adjust in the
+04:45
+next step to identify which is which
+04:48
+let's go to r1 first we'll use the
+04:52
+command show controllers serial zero if
+04:56
+we just type show controllers we would
+04:59
+be overwhelmed with information about
+05:00
+every interface on the router so make
+05:03
+sure to specify serial zero can you find
+05:07
+what we're looking for there it is and
+05:10
+this side is the DCE
+05:12
+you can also see the clock rate
+05:15
+mentioned earlier well now I know which
+05:18
+side is DC e that means R 2 should be
+05:22
+DTE but let's check anyway
+05:25
+let's hop onto our to show controllers
+05:29
+serial zero as expected R 2 is DTE step
+05:35
+two is now complete
+05:38
+for step three we have to set the clock
+05:41
+rate on the DCE end to 64 kilobits per
+05:44
+second so let's go back to our one we
+05:49
+have to configure the serial zero
+05:50
+interface so compte then interface
+05:55
+serial zero now we are in interface
+05:58
+configuration mode the clock rate is set
+06:02
+with the clock rate command let's use
+06:05
+the question mark to see what options we
+06:06
+have as you can see here these options
+06:10
+are listed in bits per second our task
+06:13
+is to set the speed to 64 kilobits per
+06:16
+second which is 64,000 bits per second
+06:20
+so let's do that that's all for step
+06:23
+three we don't have to do anything on
+06:25
+the DTE side step four tells us to set
+06:29
+the IP addresses of the serial
+06:31
+interfaces of r1 and r2 to 192.168.1 /
+06:38
+24 and 192.168 to
+06:45
+interface configuration mode on r1 so
+06:49
+let's configure r1 IP address
+06:52
+192.168.1.1 at him this is something you
+07:03
+should know if not don't worry about it
+07:06
+it's 255.255.255.0 there we go now let's
+07:12
+do the same on r2 conf t interface
+07:18
+serial zero IP address 192.168.0.0
+07:27
+that's all for step four
+07:31
+finally Step five asks us to test
+07:34
+connectivity between the routers since
+07:37
+we're already on our - let's do it from
+07:39
+here type end to return to privileged
+07:42
+exec mode the IP address of our one
+07:45
+serial zero interface is 192.168.0.1 so
+07:50
+ping 192.168.0.1 as you can see we have
+07:56
+connectivity between the routers that's
+07:58
+all for this lab thank you for watching
+08:04
+I hope this lab and video have been
+08:06
+helpful for you please subscribe for
+08:09
+future labs like this which will be
+08:11
+released weekly if you have requests for
+08:14
+any specific labs let me know in the
+08:16
+comment section if you want to support
+08:19
+my channel I accept Bitcoin donations
+08:21
+via the address in the description I am
+08:24
+also a brave verified publisher and
+08:26
+accept bat or basic attention token
+08:30
+donations in the brave browser
+

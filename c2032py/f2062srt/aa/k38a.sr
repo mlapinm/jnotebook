@@ -1,0 +1,275 @@
+00:00
+welcome to this free CCNA packet tracer
+00:03
+practice lab you can download the lab
+00:05
+file from the link in the description if
+00:08
+you like these labs please consider
+00:10
+supporting me via my patreon or the
+00:12
+cryptocurrency options in the
+00:14
+description this lab is the second of
+00:18
+our labs focusing on Matt network
+00:20
+address translation this time we will
+00:24
+configure dynamic NAT unlike static map
+00:27
+which creates a one-to-one translation
+00:29
+from an inside address to an outside
+00:31
+address dynamic NAT dynamically assigns
+00:35
+addresses as needed from a pool of
+00:37
+outside addresses that you configure
+00:39
+beforehand this is much more efficient
+00:42
+than static NAT in this lab we will use
+00:46
+dynamic map to translate private IP
+00:48
+addresses in the 192.168.1.0 / 24
+00:52
+network to public IP addresses in the
+00:55
+12.30 / 24 network this lab uses the
+01:01
+same topology as the previous lab and
+01:03
+once again
+01:03
+ripp has been pre-configured so that all
+01:06
+points in the network should be
+01:07
+reachable once again however I have
+01:10
+configured ACLs on the routers blocking
+01:12
+private addresses from being routed over
+01:14
+the serial connection between them which
+01:16
+simulates the Internet let's ping from
+01:20
+pc-12 server one just to confirm that PC
+01:22
+one cannot reach server one ping one dot
+01:27
+one dot one dot 100
+01:34
+as expected the pink fails
+01:39
+so let's configure dynamic NAT on our
+01:42
+one first I'll configure that inside and
+01:46
+outside interfaces enable Conti
+01:53
+interface g00 IP NAT inside interface s
+02:00
+0 3 0 IP NAT outside exit dynamic NAT
+02:06
+involves a few extra steps beyond static
+02:09
+NAT we have to create an ACL which we
+02:12
+use to identify the inside addresses
+02:14
+that we will translate we also have to
+02:16
+create an app pool which is the range of
+02:19
+outside addresses we will translate our
+02:21
+inside addresses to first let's create
+02:24
+the access list keep in mind this use of
+02:28
+an ACL is different than how we
+02:30
+previously used it before we used ACLs
+02:33
+to block or allow traffic from entering
+02:36
+or exiting an interface this time
+02:39
+however we will use an ACL to identify
+02:42
+which traffic we want to translate
+02:44
+traffic which is permitted by the ACL
+02:47
+will be translated traffic which is
+02:50
+denied by the ACL won't be blocked it
+02:53
+simply won't be translated so let's
+02:56
+create a standard ACL which permits the
+02:59
+192.168.1.0 / 24 network access list 1
+03:05
+permit 192.168.1.0
+03:09
+oh-oh-oh 255 that's it the implicit deny
+03:14
+any at the end of the ACL will prevent
+03:17
+traffic from outside of the 192.168.1.0
+03:21
+/ 24 network from being translated next
+03:25
+let's create the NAT pool to do so use
+03:29
+this command IP NAT pool followed by the
+03:33
+pool name I'll use pool 1 then we enter
+03:38
+the first address in the range of
+03:40
+addresses we want to include in this
+03:41
+pool which is 1 2 3 10 according to our
+03:46
+instructions
+03:47
+next we put the last address in the
+03:49
+range 1 to 320 X twe type netmask
+03:54
+followed by the subnet mask which is
+03:57
+255.255.255.0
+04:00
+so our command is IP nat pool pool 1 1 2
+04:05
+3 10 1 2 3 20 met mask 255.255.255.0 ok
+04:14
+our pool is now configured finally let's
+04:18
+configure NAT itself the command starts
+04:21
+the same as with static NAT IP NAT
+04:24
+inside source
+04:25
+now with static NAT we use IP NAT inside
+04:29
+source static however for dynamic NAT we
+04:33
+will use IP net inside source list
+04:35
+followed by the name or number of our
+04:38
+ACL which is 1 then pool followed by the
+04:41
+pool name which is pool 1 so our command
+04:44
+is IP net inside source list 1 pool pool
+04:49
+1 our dynamic map configuration is now
+04:54
+complete
+04:54
+I'll go on each PC and quickly ping
+04:57
+server 1 then go on r1 to check the
+05:00
+translations on PC 1 first ping 1.1.1
+05:07
+dot 100
+05:14
+okay next I'll go on PC to and ping
+05:17
+server one ping 1.1 1.1 hundred okay and
+05:28
+next I'll go on PC three ping 1.1 1.1
+05:33
+hundred okay now let's go on r1 to check
+05:40
+these translations exit to check the net
+05:46
+translations use this command show IP
+05:49
+nak translations notice at the top the
+05:54
+terms inside global inside local outside
+05:58
+local outside global we want to focus on
+06:02
+inside global and inside local inside
+06:06
+global is the Abbas's we translate it to
+06:08
+in the 12.30 / 24 subnet and inside
+06:14
+local is the original private IP address
+06:16
+range in the 192.168.1.0 / 24 subnet
+06:22
+note that the number after the colon in
+06:24
+these IP addresses indicates a port
+06:26
+number here is 192.168.1.1 pc 1 and
+06:33
+address it was translated to here is
+06:37
+192.168.1.2 elv pc 2 and the address it
+06:42
+was translated to and here is
+06:45
+192.168.1.3
+06:47
+pc 3 and the address it was translated
+06:49
+to if you want to clear all of these
+06:53
+dynamic translations use this command
+06:56
+clear IP neck translation followed by an
+07:00
+asterisk
+07:02
+okay now let's do that show command one
+07:04
+more time show IP NAT translations there
+07:09
+we go our translations are cleared
+07:11
+we have successfully configured dynamic
+07:14
+NAT that's all for this lab thank you
+07:20
+for watching I hope this lab and video
+07:23
+have been helpful for you please
+07:24
+subscribe for future labs like this
+07:26
+which will be released weekly if you
+07:30
+have requests for any specific labs let
+07:32
+me know in the comment section if you
+07:35
+want to support my channel I accept
+07:37
+Bitcoin and aetherium donations via the
+07:39
+addresses in the description I am also a
+07:42
+brave verified publisher and accept bat
+07:45
+or basic attention token donations in
+07:47
+the brave browser
+

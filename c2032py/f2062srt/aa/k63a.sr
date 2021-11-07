@@ -1,0 +1,321 @@
+00:00
+welcome to this free gns3 practice lab
+00:03
+for the CCNA that's right in this video
+00:06
+as well as the next one I will be using
+00:08
+gns3 not packet tracer as much as I love
+00:13
+packet tracer even today it doesn't
+00:16
+support everything that is on the CCNA
+00:18
+exam topics so for this video on
+00:21
+multi-link PPP and the next video on
+00:24
+pppoe I had to choose between skipping
+00:27
+the topics or using gns3 instead I will
+00:32
+still put the lab file in the
+00:33
+description which you can use to load up
+00:36
+the topology these routers are cisco c
+00:39
+7200 routers however I can't legally
+00:42
+include the iOS image files so you'll
+00:45
+have to get those yourself I'll put the
+00:48
+name of the iOS image I used in the
+00:50
+description if you want to know how to
+00:53
+get gns3 working do a quick search on
+00:55
+google there are plenty of people who
+00:57
+can teach you how to get gns3 up and
+00:59
+running now if you just can't get gns3
+01:03
+working make sure you watch the video
+01:05
+and learn the commands as these topics
+01:07
+are on the exam topics list let's get
+01:10
+started in this lab we will configure
+01:13
+multi-link PPP or ml PPP much like ether
+01:19
+channel which we configured a few labs
+01:21
+ago ml PPP groups multiple physical
+01:24
+interfaces together to operate as one
+01:27
+logical interface this provides multiple
+01:31
+benefits you get the redundancy of
+01:33
+having multiple links so if one link
+01:36
+fails the others can keep forwarding
+01:38
+traffic however you also get the
+01:41
+increased bandwidth of having multiple
+01:43
+links forwarding at the same time so in
+01:46
+this lab we will configure multi-link
+01:48
+PPP with PAP authentication between r1
+01:51
+and SPR 1 and chap authentication
+01:55
+between r2 and SPR - I'll go on r1 first
+02:01
+compte
+02:03
+now SP r1 is currently configured for ml
+02:07
+PPP with pap authentication and is
+02:10
+trying to authenticate with the username
+02:12
+packet and password tracer so let's
+02:16
+configure that user account on our one
+02:19
+username packet password tracer okay now
+02:25
+to configure ml PPP let's first create
+02:29
+the logical interface which is called
+02:31
+multi link interface
+02:34
+multi-link one okay there are a few
+02:39
+commands we need to put here the first
+02:41
+is PPP multi link that is followed by
+02:45
+PPP multi-link group one we will put
+02:50
+that command on the physical interfaces
+02:52
+two later to tell them to join this
+02:55
+multi link group keep in mind this multi
+02:59
+link group number and the multi link
+03:02
+interface number have to be the same as
+03:03
+on the neighboring router next let's
+03:07
+activate PAP authentication PPP
+03:11
+authentication tap the network diagram
+03:15
+says to send a username of Cisco and
+03:18
+password of CCNA PPP PAP sent username
+03:24
+cisco password CCNA finally we have to
+03:30
+configure the IP address here not on the
+03:33
+physical interfaces IP address 100 0 to
+03:40
+255 255 dot 255 dot 255 in interface
+03:52
+multi-link 1 the order is different but
+03:57
+there's everything I configured IP
+04:00
+address PAP authentication and PPP
+04:05
+multi-link configuration ok now let's
+04:09
+configure the two physical interfaces to
+04:12
+join this multi link group interface s1
+04:16
+zero there are just three commands I
+04:19
+need here we have to set the
+04:21
+encapsulation on the physical interfaces
+04:23
+to PPP so encapsulation PPP next tell it
+04:31
+had joined the multi link group we
+04:33
+created PPP multi-link group one finally
+04:40
+make sure the physical interfaces aren't
+04:42
+shutdown no shutdown okay now I'll do
+04:48
+the same on s1 one interface s1 1
+04:54
+encapsulation PPP PPP multi-link group 1
+05:00
+no shutdown end ok let's do some show
+05:05
+commands to verify first a general PPP
+05:09
+show command show PPP all notice our two
+05:16
+physical interfaces as well as the multi
+05:19
+link interface all with the same peer
+05:21
+address of 101 which is the address of
+05:25
+SPR 1 also the peer name of packet which
+05:29
+SPR 1 is using to authenticate next show
+05:34
+PPP multi-link there's the remote user
+05:40
+name of packet again and our local user
+05:43
+name of cisco dan here you can see our
+05:46
+two member links serial 1 0 and 1 1 ok
+05:52
+let's try a ping to see if it works
+05:54
+ping 100 0 1 there we go
+06:01
+ok let's move on to our to the
+06:05
+multi-link configuration will be the
+06:07
+same just with chap authentication
+06:09
+instead of PAP coffee tea first I'll
+06:15
+create the user account that SP r2 will
+06:17
+use to authenticate remember the
+06:20
+username should be the same as the
+06:21
+remote routers hostname so username SPR
+06:25
+2 and then the password should be the
+06:29
+same on both route
+06:30
+in this case password CCNA interface
+06:36
+multi-link 1 PPP multi-link PPP
+06:42
+multi-link group 1 PPP authentication
+06:47
+chap
+06:48
+and finally the IP address IP address
+06:53
+200 0 to 255 255 dot 255 dot 255 in
+07:11
+there's the IP address followed by chap
+07:14
+authentication and our multi-link
+07:17
+configuration looks good next we just
+07:21
+have to prepare the physical interfaces
+07:24
+interface s10 encapsulation PPP PPP
+07:31
+multi-link group 1 no shutdown interface
+07:37
+s1 1 encapsulation PPP PPP multi-link
+07:43
+group 1 no shutdown and ok let's confirm
+07:49
+show PPP all again our physical
+07:55
+interfaces as well as the multi link
+07:57
+interface all have the same peer address
+07:59
+200 0 0 1 and that peers name is spr to
+08:05
+show PPP multi-link the remote user name
+08:11
+of SPR 2 again our local user name of r2
+08:15
+and down here the two member links
+08:19
+serial 1 0 and 1 1 let's try to ping SPR
+08:25
+to ping 201 ok no problems here
+08:34
+now let's configure static default
+08:37
+routes on our routers so that they can
+08:39
+reach each other via the service
+08:41
+provider network here on r2 first compte
+08:46
+IP route
+08:51
+oh-oh-oh-oh-oh-oh-oh-oh-oh and the next
+08:54
+hop is 201 do show IP route
+09:03
+there's our default route 200 g o / o
+09:08
+next let's configure it on our one
+09:12
+coughed e IP route
+09:19
+oh-oh-oh-oh-oh-oh-oh-oh-oh the next hop
+09:21
+is 101 do show IP rent there's the
+09:28
+default route let's try a ping to r2
+09:31
+from r1 do ping 200 go to great looks
+09:39
+like our multi-link PPP configuration is
+09:41
+working that's all for this lab thank
+09:46
+you for watching I hope this lab and
+09:49
+video have been helpful for you please
+09:51
+subscribe for future labs like this
+09:53
+which will be released weekly if you
+09:57
+have requests for any specific labs let
+09:59
+me know in the comment section if you
+10:02
+want to support my channel I accept
+10:04
+Bitcoin and etherium donations via the
+10:06
+addresses in the description I am also a
+10:10
+brave verified publisher and accept bat
+10:13
+or basic attention token donations in
+10:15
+the brave browser
+

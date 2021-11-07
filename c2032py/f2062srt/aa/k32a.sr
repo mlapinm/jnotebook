@@ -1,0 +1,319 @@
+00:00
+welcome to this free CCNA packet tracer
+00:02
+practice lab you can download the lab
+00:05
+file from the link in the description if
+00:08
+you like these labs please consider
+00:10
+supporting me via my patreon or the
+00:12
+cryptocurrency options in the
+00:14
+description in this lab we will
+00:17
+configure the system clock including the
+00:19
+timezone as well as Network Time
+00:21
+Protocol or NTP on three routers this
+00:26
+lab will only cover the absolute basics
+00:27
+of NTP configuration and in the
+00:30
+following lab we will configure NTP
+00:32
+authentication NTP is used to
+00:36
+synchronize time across devices it's
+00:39
+very important to have synchronized time
+00:41
+for a variety of reasons for example to
+00:44
+help identify when a particular problem
+00:46
+occurred when looking through logs on a
+00:48
+device in this lab we will manually
+00:52
+configure the time on r1 and then use it
+00:55
+as an NTP server for r2 to sync it's
+00:58
+time - we will then configure r3 to sync
+01:01
+it's time to r2 and our network devices
+01:04
+will have synchronized time first let's
+01:08
+set the clock on r1 enable show clock
+01:14
+this command is used to display the time
+01:17
+of the device this is the default time
+01:20
+but where is it getting this time
+01:22
+here's another useful command show clock
+01:26
+detail now we can see the time source
+01:29
+which is the hardware calendar Cisco
+01:33
+devices have a hardware calendar built
+01:35
+into them and as you can see it is being
+01:37
+used by default let's change that first
+01:41
+let's set the time zone which is UTC by
+01:45
+default this is done from global
+01:48
+configuration mode compte clock time
+01:53
+zone now let's check the next option we
+01:57
+have to enter the name of the time zone
+01:59
+I'm in Japan
+02:01
+so I'll set it to jst now let's check
+02:05
+the next option hours offset from UTC in
+02:10
+my case jst is 9 hours ahead
+02:13
+of UTC so 9 the next option is minutes
+02:18
+offset from UTC which is zero in my case
+02:21
+so I'll just leave them in it's option
+02:23
+edit do show clock now as you can see
+02:28
+the time has changed and the time zone
+02:30
+has changed now let's set the time
+02:33
+itself
+02:34
+to do this we have to go back to
+02:36
+privileged exec mode exit we can set the
+02:40
+time with this command clock set now one
+02:46
+important thing to remember is this the
+02:49
+clock set command sets the time in UTC
+02:52
+the time zone command we set before only
+02:55
+affects how the time is displayed for
+02:58
+example in my case jst is nine hours
+03:01
+ahead of UTC so if I want to set the
+03:05
+time to 9:00 p.m. jst I have to set the
+03:09
+time as 12:00 p.m.
+03:10
+as 12:00 p.m. UTC is 9:00 p.m.
+03:14
+jst for this video I'll do that set the
+03:19
+clock to 9:00 p.m. jst I won't set the
+03:22
+clock to the current time of my computer
+03:24
+since I record the audio and video at
+03:26
+separate times after clock set we have
+03:30
+to enter the time in the format shown
+03:32
+here twelve o'clock is what I have to
+03:37
+enter to set it to 9:00 p.m. jst the
+03:41
+next option is the month and date and we
+03:44
+can enter them in either order
+03:46
+aughh 21 for August 21st the date I am
+03:50
+recording this video
+03:52
+next is the year 2019 and that's it
+03:59
+show clock detail as you can see I
+04:04
+configure 12:00 p.m.
+04:06
+it's showing 9:00 p.m. or 21 in the
+04:09
+24-hour format and the time source is
+04:12
+now user configuration next let's
+04:16
+configure our one as an NTP server which
+04:20
+our two will sync it's time to call 50
+04:24
+NTP
+04:26
+now let's check the options here's one
+04:29
+interesting quirk to set this router as
+04:32
+an NTP server you don't use the NTP
+04:35
+server command but rather the option
+04:38
+above that NTP master NTP server will be
+04:42
+used on r2 to identify our one as an NTP
+04:45
+server to sink it's time to ok so NTP
+04:50
+master and the next option is what's
+04:53
+called the stratum level indicating how
+04:56
+authoritative the time on this server is
+04:58
+the lower the number the more
+05:00
+authoritative we are instructed however
+05:03
+to use the default which will be 8 to
+05:07
+use the default just enter the command
+05:09
+as is without adding the stratum level
+05:11
+at the end next let's configure our to
+05:15
+to sink it's time to r1 using NTP enable
+05:22
+show clock as you can see our twos time
+05:26
+is the default and is set to UTC first
+05:30
+I'll set the time zone to my local time
+05:32
+zone jst again note that NTP does not
+05:37
+sync the time zone it will sync the time
+05:39
+in UTC and then it's up to you to
+05:41
+configure which time zone that time is
+05:43
+displayed in on your device compte clock
+05:48
+time zone is t9 ok now let's configure
+05:54
+NTP NTP server remember I said I'd use
+06:00
+this command on r2 to identify our one
+06:02
+as an NTP server to sync our twos time
+06:05
+to now we have to set the IP address of
+06:09
+the NTP server let's use our ones
+06:12
+address 192.168.1.1 exit now normally
+06:20
+I'd use show commands immediately to
+06:22
+check the configuration however NTP can
+06:25
+take a very long time to synchronize for
+06:28
+example show clock detail this still
+06:33
+shows the time source as Hardware
+06:34
+calendar because NTP hasn't finished
+06:37
+syncing yet
+06:38
+in fact I'm gonna cut this video here
+06:41
+and wait for NTP to sink welcome back
+06:46
+artoo has now synced its clock to our
+06:48
+one show clock detail as you can see the
+06:53
+time source is now ntp show ntp
+06:57
+associations 192.168 12.1 is the address
+07:03
+of r1 which we set as our ntp server the
+07:07
+reference clock of 1 to 7.1 to 7.1.1 is
+07:10
+our ones reference clock if you remember
+07:14
+when studying about IP addresses the 1
+07:16
+to 7 range is for loopback addresses so
+07:19
+this is a loopback address on r1 okay
+07:24
+now let's configure r3 to sink it's time
+07:27
+to are to enable coffee tea I'll set the
+07:34
+time zone again first clock time zone is
+07:39
+t9 now I'll configure r3 to sync to our
+07:44
+to NTP server 192.168 23.2 exit now once
+07:54
+again I'll cut the video here to give
+07:56
+NTP time to synchronize ok our 3 is now
+08:02
+synced to our to show ntp associations
+08:06
+here is the address of r2 and it's
+08:09
+reference clock is our ones address of
+08:11
+192.168.0.0 this lab and video have been
+08:25
+helpful for you please subscribe for
+08:28
+future labs like this which will be
+08:30
+released weekly if you have requests for
+08:33
+any specific labs let me know in the
+08:35
+comments section if you want to support
+08:38
+my channel please consider contributing
+08:39
+to my patreon patreon comm slots
+08:43
+Jeremy's IT lab I accept Bitcoin and
+08:47
+aetherium donations via the addresses in
+08:49
+the description
+08:50
+I am also a brave verified publisher and
+08:53
+accept bat or basic attention token
+08:56
+donations in the brave browser
+

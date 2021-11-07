@@ -1,0 +1,333 @@
+00:00
+welcome to this free CCNA packet tracer
+00:03
+practice lab you can download the lab
+00:05
+file from the link in the description in
+00:08
+this lab we will take a basic look at
+00:11
+CDP cisco discovery protocol CDP is a
+00:16
+cisco proprietary protocol it is used to
+00:19
+share information about other directly
+00:21
+connected cisco equipment such as the
+00:23
+operating system version and the
+00:25
+interfaces by which they are connected
+00:27
+there is also a vendor-neutral protocol
+00:30
+called lldp or link layer discovery
+00:34
+protocol which I will talk about in
+00:36
+another video try to complete the lab
+00:39
+yourself first then continue watching
+00:41
+this video if you have trouble or watch
+00:43
+it after to check your solution step 1
+00:49
+is to use CDP to identify which
+00:51
+interfaces are used to connect the
+00:52
+routers and switches CDP can only
+00:55
+display directly connected neighbors so
+00:58
+switch one should have one neighbor r1
+01:00
+r1 should have two neighbors switch 1
+01:03
+and r2 r2 should have two neighbors r1
+01:07
+and switch two and switch two should
+01:10
+have one neighbor r2 let's check on
+01:14
+switch 1 first enable now let's use the
+01:20
+command show CDP neighbors as you can
+01:25
+see switch 1 has one neighbor r1 it is
+01:29
+connected to the fastethernet 0/1
+01:31
+interface remember local interface means
+01:35
+the interface on this device switch 1
+01:38
+under capability there is an R and if
+01:42
+you check the capability codes list up
+01:44
+here you can see that that means router
+01:47
+also check the pork ID this is the
+01:51
+interface of the remote device in this
+01:54
+case r1 so now you know switch 1 is
+01:59
+connected to r1 by its fastethernet 0/1
+02:01
+interface and it's connected to our ones
+02:04
+fastethernet 0/0 interface let's hop on
+02:10
+r1 now
+02:13
+enable show CDP neighbors are one has
+02:20
+two neighbors switch 1 and r2
+02:23
+it's connected to switch 1 via the
+02:25
+fastethernet 0/0 interface which we
+02:27
+already learned from switch 1 it's
+02:30
+connected to r2 by its serial to zero
+02:33
+interface and it's connected to our
+02:35
+two's serial to zero interface as well
+02:38
+let's do the same on art to enable show
+02:46
+CDP neighbors as we already saw in our
+02:51
+one the two routers are connected by
+02:52
+their serial to zero interfaces also r2
+02:56
+is connected by its fastethernet 0/0
+02:58
+interface to switch twos fastethernet
+03:01
+0/1 interface finally let's go on switch
+03:05
+to enable show CDP neighbors as we
+03:13
+already saw switch to is connected via
+03:15
+its fastethernet 0/1 interface to our
+03:18
+two's fastethernet 0/0 interface that's
+03:21
+all for step one
+03:26
+step two is to determine which side of
+03:29
+the connection between r1 and r2 is DCE
+03:32
+and which is DTE I mentioned in a
+03:36
+previous lab that serial connections
+03:38
+have a DC e or data communications
+03:40
+equipment side and a DTE or data
+03:43
+terminal equipment side remember that
+03:46
+the important difference is that the DCE
+03:49
+side has to provide the clock rate of
+03:51
+the connection we don't use CDP for this
+03:54
+it's just a bit of review let's go on r1
+04:00
+show controllers s20 remember that the
+04:04
+routers are connected by their serial to
+04:06
+zero interfaces as you can see our one
+04:11
+is in fact the DCE side of the
+04:12
+connection now let's set the clock rate
+04:15
+to 64 kilobits per second compte
+04:20
+interface s20 clock rate 64,000 that's
+04:28
+it step 3 asks us what the default CDP
+04:32
+send and hold timers are and to confirm
+04:35
+it with a show command you may have
+04:38
+learned these timers in your studies but
+04:40
+let's check on a device to make sure
+04:42
+I'll type end to go back to privileged
+04:45
+exec mode here on r1 now let's use the
+04:48
+command show CDP interface this gives us
+04:53
+information about all interfaces their
+04:55
+status whether CDP is activated on them
+04:58
+or not and their send and hold times all
+05:02
+of these interfaces have the default
+05:04
+setting and as you can see that is a
+05:06
+sent time of 60 seconds and the whole
+05:09
+time of 180 seconds so CDP
+05:13
+advertisements will be sent out of each
+05:15
+interface that is up once every 60
+05:17
+seconds also if r1 doesn't receive an
+05:21
+advertisement on a particular interface
+05:23
+within 180 seconds it will assume that
+05:26
+whatever neighbor that was there no
+05:28
+longer is that's all for step 3
+05:33
+step four says to disable CDP globally
+05:37
+on r1 and attempt to view CDP neighbors
+05:40
+so let's go into global configuration
+05:42
+mode conf the command to enable CDP is
+05:47
+CDP run although it's enabled by default
+05:50
+we want to disable it and that is done
+05:53
+with no CDP run now let's check CDP
+05:58
+neighbors do show CDP neighbor we get a
+06:02
+message indicating that CDP is not
+06:04
+enabled our one won't send any
+06:07
+advertisements and will ignore any it
+06:10
+receives step 5 is to enable CDP
+06:14
+globally again on r1 and immediately
+06:17
+view the CDP neighbours CDP run do show
+06:24
+CDP neighbors we re enabled CDP but no
+06:28
+neighbors appear why is that well
+06:32
+because the CDP sent time is 60 seconds
+06:35
+by default it can take a bit for our
+06:38
+neighbors to appear again if we were to
+06:41
+wait a minute and enter the command
+06:42
+again they would appear
+06:47
+step six is to disable CDP on the switch
+06:50
+interfaces connected to pcs because CDP
+06:55
+sends information about the device for
+06:58
+security purposes it is a good idea to
+07:00
+disable it where it isn't needed 2 pcs
+07:03
+are connected to each switch so let's go
+07:06
+on switch one first compte now we don't
+07:14
+want to disable CDP globally so we won't
+07:17
+use no CDP run we want to only disable
+07:21
+it on Fast Ethernet 0 3 and 0 4 we have
+07:25
+to use interface configuration mode for
+07:27
+this since we'll be using the same
+07:30
+command on each interface let's
+07:32
+configure both at the same time you can
+07:35
+do this by configuring an interface
+07:37
+range you can enter interface range
+07:40
+configuration mode for Fast Ethernet 0 3
+07:42
+and 0 4 with this command interface
+07:46
+range f03 space - space for as you can
+07:53
+see we are now in interface range
+07:55
+configuration mode this is very
+07:57
+convenient when you are doing the same
+07:59
+configurations on multiple interfaces
+08:00
+now CDP and naval is used to enable CDP
+08:06
+on an interface but it is enabled by
+08:08
+default to disable you once again use no
+08:12
+in front of the command no CDP enable ok
+08:17
+that's it now let's go to switch to and
+08:20
+do the same thing comte interface range
+08:26
+of 0 3 to 4 no CDP enable that's all for
+08:34
+this lab
+08:37
+thank you for watching I hope this lab
+08:40
+and video have been helpful for you
+08:41
+please subscribe for future labs like
+08:44
+this which will be released weekly if
+08:47
+you have requests for any specific labs
+08:49
+let me know in the comment section if
+08:51
+you want to support my channel I accept
+08:54
+Bitcoin and etherion donations via the
+08:57
+addresses in the description I am also a
+09:00
+brave verified publisher and accept bat
+09:03
+or basic attention token donations in
+09:06
+the brave browser
+

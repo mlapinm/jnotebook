@@ -1,0 +1,215 @@
+00:00
+welcome to this free CCNA packet tracer
+00:02
+practice lab you can download the lab
+00:04
+file from the link in the description in
+00:07
+this lab we will be working with one
+00:10
+router r1 and one PC PC one we will use
+00:15
+PC one to connect to the console port of
+00:18
+r1 and perform configurations from there
+00:21
+we will also set up a password to
+00:24
+protect connections from the console
+00:25
+port of r1 try to complete the lab on
+00:29
+your own first and continue watching
+00:31
+this video if you have trouble or watch
+00:34
+it afterwards to check your solution
+00:38
+step one is to connect PC ones rs-232
+00:42
+port to our ones console port click on
+00:46
+connections in the bottom left corner of
+00:48
+the screen this is the console cable as
+00:51
+indicated at the bottom of the screen
+00:55
+connect it to the rs-232 port of PC one
+00:59
+and then to the console port of r1
+01:02
+that's step one
+01:07
+step two is to use the console
+01:10
+connection to configure the hostname of
+01:12
+r1 from pc1 to do so click on PC one
+01:16
+click on desktop select terminal and
+01:20
+then select ok to accept the default
+01:23
+configurations we're now connected to r1
+01:26
+via PC one and can perform
+01:28
+configurations as usual now we have to
+01:32
+change the hostname
+01:33
+of the router to r1 as we've done before
+01:36
+in previous labs unable to enter
+01:39
+privileged exec mode compte to enter
+01:42
+global configuration mode hostname r1
+01:46
+that's it for step two
+01:51
+step three is to set the enable secret
+01:54
+of r1 to Cisco if you remember the
+01:57
+enable secret is a password that
+01:59
+protects privileged exec mode and is
+02:01
+encrypted by default it's configured
+02:04
+from global configuration mode which we
+02:07
+are already in enable secret Cisco step
+02:11
+three is now complete
+02:15
+step four is to set the console password
+02:18
+of r1 to CCNA we also have to ensure
+02:22
+that it is required to connect to r1 via
+02:24
+the console port to do so we have to
+02:27
+enter line configuration mode for the
+02:30
+console port that is done with the
+02:32
+command line console 0 from global
+02:35
+configuration mode the zero refers to
+02:38
+the number of the port and since there
+02:40
+is only one console port there is only
+02:42
+line console 0 there is no line console
+02:46
+1 2 3 4 etc from here we set the
+02:50
+password to CCNA with a very simple
+02:53
+command password CCNA now let's try out
+02:57
+our password I'll use the end command to
+03:01
+return to privileged exec mode and then
+03:03
+exit to quit the connection but I'm not
+03:07
+asked for a password if I type enable I
+03:11
+have to use the password Cisco to access
+03:13
+privileged exec mode but why wasn't I
+03:16
+asked to use the password CCNA to
+03:19
+connect to the console port again this
+03:22
+is because we missed one other command
+03:24
+in line configuration mode let's return
+03:26
+there once more conf
+03:28
+line con zero now we have to use the
+03:33
+command login to tell the router that
+03:36
+the password must be used to connect to
+03:38
+the console let's try again and exit and
+03:43
+there we go now we are asked for the
+03:45
+console password of CCNA now finally
+03:49
+let's check the running configuration
+03:51
+for the password and see if it's
+03:52
+encrypted enable password cisco show run
+03:58
+the line section is at the bottom of the
+04:00
+running config so i'll tap the spacebar
+04:03
+a few times to scroll
+04:05
+there it is line con zero password CCNA
+04:09
+as you can see it is not encrypted
+04:12
+that's all for step four Step five is to
+04:18
+enable password encryption to protect
+04:20
+this console password compte to enter
+04:24
+global configuration mode then the same
+04:26
+command as before service password
+04:29
+encryption let's drop back to privileged
+04:32
+exec mode and then use show run to
+04:34
+confirm scroll down to the bottom and
+04:37
+you can see the password is now
+04:39
+encrypted finally let's save the
+04:42
+configuration let's use the copy
+04:45
+running-config startup config command
+04:47
+shorten to copy run start that's all for
+04:52
+this lab thank you for watching I hope
+04:56
+this lab and video have been helpful for
+04:58
+you please subscribe for future labs
+05:01
+like this which will be released weekly
+05:03
+if you have requests for any specific
+05:06
+labs let me know in the comment section
+05:08
+if you want to support my channel I
+05:11
+accept Bitcoin donations via the address
+05:13
+in the description I am also a brave
+05:16
+verified publisher and accept bat or
+05:19
+basic attention token donations in the
+05:22
+brave browser
+

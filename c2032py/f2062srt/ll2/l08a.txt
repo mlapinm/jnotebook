@@ -1,0 +1,332 @@
+our HTML.
+
+And there we go, we now have a fully functioning game up snake.
+
+Hey, welcome back.
+
+We are currently at game five out of seven of the JavaScript games course.
+
+In this tutorial,
+
+we're going to be learning how to build Space Invaders and other JavaScript,
+
+HTML and CSS Grid based game.
+
+By building Space Invaders,
+
+we're going to be concentrating on the switch ghosts.
+
+This is going to be massive throughout the whole game.
+
+So if you're interested in learning more about the switch goes,
+
+please watch this video.
+
+Space Invaders is really simple,
+
+you're going to be a user or shooter that moves along from one side of the grid to the other in a 15 by 15 grid square.
+
+Your goal is to shoot all the little invaders.
+
+So all the little ones coming down.
+
+They're going down like this before they get to you.
+
+So technically, it is a time game.
+
+There's not too much of a countdown,
+
+but obviously the invaders moving down is a countdown in itself.
+
+This means we're going to be using a lot of set interval and clear interval to as always minimal styling for you to take and make your own.
+
+So yeah, let's get going.
+
+So as always, let's make sure to link up your style CSS file with a link tag and app js file with a script tag in your HTML file.
+
+Let's start off by adding an h3 tag where we can display our score.
+
+Let's add a span with an ID of result here so we can display the score as well as play our game.
+
+Next, let's add a div with a class name of grid.
+
+In it, we will put 11 by 11.
+
+Actually, let's make it bigger.
+
+Let's make a 15 by 15 squares for our game.
+
+So a total of 225 days that we will start as squares in our style CSS.
+
+Let's flip over to that.
+
+Now.
+
+Let's apply some styling to our grid to make it look like an actual grid,
+
+as well as the grid divs inside of it.
+
+We are using a width and a height of 300 pixels here,
+
+meaning that the height and the width of our squares need to be 20 pixels in order to make sure 15 squares fit on a line before being wrapped over themselves.
+
+To make a second row.
+
+We might as well assign a color to future classes,
+
+we will use our shooter invader boom for when they shoot hits an invader and the laser.
+
+Let's open the HTML file path in our browser to check that looks fine.
+
+Okay, great.
+
+Now let's go to our app js file.
+
+We start off by adding a DOM event listener.
+
+All our JavaScript code will go inside this event listener from now on.
+
+Now let's pick out the classes and IDs we have defined using query selectors.
+
+As there's more than one element that is considered a div in inside the element with the class own grid,
+
+we need to make sure to use query selector all for the squares.
+
+Also note how we use the hash when we pick out our ID names,
+
+rather than the dot for class name.
+
+Now let's let our JavaScript know that we want the width of the grid to be 15 that we want the shooter to start at index 202 in our squares array,
+
+and our invaded start at index zero or collectively invaders.
+
+I'll explain that later.
+
+We are going to leave an empty array for the invaders we have shot down.
+
+Let's resolve zero for now.
+
+And let the direction we want to go in be a one.
+
+Again, I will explain that later.
+
+And finally, let's leave the invader ID as null for now.
+
+Now let's define our alien invaders as how we would want them to appear in our squares array.
+
+So by saying these are the indexes we want our alien invader to be in,
+
+we can easily see this on our grid by adding a color class name to them.
+
+So let's do this using for each like this.
+
+So in the array alien invaders,
+
+for each item in the array,
+
+we will choose to call invader I will pass this through our squares and any current index value there might be so in this case zero.
+
+And then I want to add a class list I'm invada to that square.
+
+We set this up purple as purple in our style sheet.
+
+So let's see if that works.
+
+Let's flip over to a browser puppet it works.
+
+Now the best part of this is that we can control all the positions of all the invaders in our alien array.
+
+Thanks to the current invader index,
+
+try this yourself by changing the value from zero to five in your file.
+
+Okay, let's do the same for shooter flip over to our browser to check and let's carry on.
+
+Now we need to make our shooter move across the grid but not go up or down.
+
+For this we're gonna look at key codes which are the codes given to the keys on your keyboard.
+
+Let's write a function called move shooter and pass through E for event.
+
+Let's start off by clearing the board of the shooter by removing the class name on the shooters current location index 202 as we sit above now using switch cases we will make a case for key code that is seven or the left arrow on your keyboard and that you nine to the right.
+
+So the case that is seven if the shooters current index is divisible by the width so 15 and leaves a remain leader remainder is allowed to move left.
+
+So for example if you're going to square with index 30,
+
+you will know you're on the very left side of the grid as that is divisible by 15 and it's not good give you any remainders.
+
+As you have no remainder you cannot move left anymore.
+
+That's what we've written.
+
+Now for case 39 if the shooters current index is in a Square index where the number is divisible by the width.
+
+So 15 and the number is less than 14,
+
+then you are allowed to move right.
+
+Then once it is done at a class of shooter to the new location of the shooter on the grid Finally,
+
+let's add an event listener for the key down action that triggers the move shooter function each time you put one of the keys we discussed down on your keyboard.
+
+Let's check out the browser to see if this is what.
+
+Okay, great.
+
+Now let's move on.
+
+Let's move the alien invaders from one side of the grid to the other moving down a row each time,
+
+we will now write a function called move invaders that we'll put,
+
+we'll put on a time loop.
+
+First, as above,
+
+let's define our left edge and our right edge using similar logic,
+
+but the elite for the alien invaders array.
+
+This is trickier as many as apply the logic to the first item in the array for checking if we on the left edge and apply the logic the last items the last alien and alien invader array to check if we were at the right edge.
+
+If we don't do this,
+
+aliens will just carry on going through and what we see as the right edge and look really weird.
+
+So make sure to do that.
+
+Okay, so if we are on the left edge and our direction is minus one,
+
+so I use minus one here because of the alien was to go back one index in a row,
+
+it will essentially appear to be going left.
+
+So if both these things are true,
+
+or we are at the right edge and the direction is currently plus one,
+
+we want to get the direction and value of 15.
+
+So it will move down to whole row on average.
+
+If the directions already 15 we carry on with the same logic as above.
+
+So if you're the left or change direction be positive.
+
+Else carry on going left we're keeping the direction as minus one.
+
+Now let's move over the alien invader array to move and the invaders.
+
+loop over again to add a new direction to all the items in the alien array.
+
+And loop over again to other class of invader to the new location of all the aliens in the array or items.
+
+Now let's write some logic that decides that the game is over.
+
+If the square and our current shooter is in has a class name that contains invader and shooter,
+
+the game is over.
+
+This is because the alien invader has got to the you know tutor and it's gone to the same square.
+
+we display the game over in our browser using text content and add a boom class just for fun.
+
+We also clear the time interval for the game like this.
+
+We also want to make sure that if any of the aliens Mr.
+
+shooter, but reached the end of the grid,
+
+the game is over to we do so by declaring that if any aliens are in the last 15 squares of the grid,
+
+the game is over.
+
+Now we need to invoke this function every 500 milliseconds like this.
+
+Let's see how that looks now.
+
+Okay, great.
+
+Finally we need to write a function that allows us to shoot at the alien to try when and gain points.
+
+We will do so by passing through an event or E through our function shoot.
+
+let's declare laser ideas no and add a new current index for the laser.
+
+The current index of the laser will always be the current location of the shooter to start with.
+
+If we write this is what's going to go to the shooter pool.
+
+These two declarations needs to be an only the scope of this function for this to work by the way,
+
+make sure that now we will write a function in here called the move laser.
+
+very similarly we will move the laser from its current starting position and square.
+
+This time removing the whole width for it to appear to be moving up awkward.
+
+So minus 50.
+
+MRI other laser close later.
+
+If the current square the laser is incandescent and VEDA we do three things.
+
+Remove the laser,
+
+move the invader and add a boom for fun We only want the moon to appear for a very short time,
+
+so we can use a timeout for this and make sure to remove the boom after 250 milliseconds.
+
+We then clear the time interval for this light set.
+
+Let's make an array of aliens we are taken down like this.
+
+By writing this we are pushing a new item to our alien invaders take down empty array we declared at the beginning of this video using push.
+
+We then add one to the result and display this in our browser using text content.
+
+Lastly, if the laser is in the very first 15 squares,
+
+we want to clear this interval and remove the laser class from the grid.
+
+We want all of this to happen when we press the spacebar.
+
+using logic we learn above we add an event listener on pass through an event or E for the keyCode 32 which is a spacebar on your keyboard.
+
+We then pass through the middle is a function on 100 millisecond interval like this.
+
+Now that we are counting how many aliens we have taken down,
+
+we need to add some code above.
+
+Using bang we are writing here that if the alien takes alien take down array does not include the space you can add an invader class this means that we will not be reacting invaders once they are shot.
+
+And finally, we need to write some logic to declare a win.
+
+This is simple if the length of our alien invaders taken down array is equal to the length of our alien invaders we went this is because we have shot all the images Okay,
+
+now let's flip over to play.
+
+Okay, I can see it doesn't like my event.
+
+Now.
+
+Let's change this to switch case because I know that works.
+
+Even though there's only one option in this which case I mean it's gonna work so I'm just going to use it as something else isn't working as the aliens aren't disappearing reappearing.
+
+Okay, we forgot to add a classless oops.
+
+And there we have it your very own space invader game.
+
+If you have any other questions about the game,
+
+please let me know below.
+
+And I'll try to get back to you.
+
+Thank you.
+
+Hi, everyone,
+

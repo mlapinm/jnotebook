@@ -1,0 +1,233 @@
+00:00
+welcome to this free CCNA packet tracer
+00:03
+practice lab you can download the lab
+00:05
+file from the link in the description if
+00:09
+you like these labs please consider
+00:10
+supporting me via my patreon or the
+00:12
+cryptocurrency options in the
+00:14
+description in this lab we will take a
+00:18
+look at the routing information protocol
+00:20
+known as rip rip is a dynamic routing
+00:24
+protocol as opposed to the static
+00:26
+routing we configured in the previous
+00:27
+few labs in dynamic routing protocols
+00:31
+routers share information with each
+00:33
+other to determine the best paths to
+00:35
+destinations in the network rip is a
+00:38
+very simple but limited routing protocol
+00:41
+you probably won't find it in use in a
+00:43
+real life networking scenario you'll
+00:46
+rather find a EIGRP or OSPF however rip
+00:51
+is nice and simple and good for learning
+00:53
+the basics of routing protocols and for
+00:55
+setting up quick labs you should also be
+00:59
+familiar with it for the test in this
+01:01
+lab we will do some basic rip
+01:03
+configurations on two routers r1 and r2
+01:07
+try to complete the lab yourself first
+01:09
+then continue watching this video if you
+01:11
+have trouble or watch it after to check
+01:14
+your solution
+01:17
+step one is to configure rip on r1 and
+01:20
+r2 without enabling version two so we'll
+01:23
+keep that rip version one I'll go on r1
+01:27
+first enable compte we configure rip
+01:34
+with this command router rip now our one
+01:38
+is only connected to one network
+01:40
+192.168.1.0 so let's activate rip on
+01:44
+that interface we can do that with the
+01:46
+network command network 192.168.1.0 now
+01:53
+let's go on our to enable compte router
+02:00
+rip network 192.168.1.0 now we can
+02:07
+activate rip on our two's two other
+02:09
+interfaces with just one command that is
+02:12
+network 10000 this will activate rip on
+02:17
+all interfaces with an IP address
+02:19
+falling within the 10000 / 8 class a
+02:23
+network the 10.10 network connected to F
+02:28
+0 0 and the 10.20 network connected to F
+02:32
+1 0 both fall within this larger class a
+02:36
+network and thus rip will be activated
+02:39
+on them note that when you use the
+02:42
+network command you are telling the
+02:43
+router which network to advertise your
+02:46
+tongue the router which interfaces to
+02:48
+activate rip on and then it will
+02:50
+advertise those networks to neighbors or
+02:53
+that would be the case however rip
+02:56
+version 1 is by its nature a classful
+02:59
+routing protocol let's see what that
+03:02
+means let's go back on our one do show
+03:08
+IP route as you can see our one has
+03:14
+learned not the 1001 0/24 and 10.20 / 24
+03:19
+networks but rather the 10000 / 8
+03:23
+network from r2 this is because rip
+03:27
+version 1 automatically summarizes
+03:29
+network
+03:30
+to their classful network if you don't
+03:34
+know about class-a EBC and such networks
+03:36
+I won't go into a full explanation here
+03:38
+but you will learn about them in your
+03:40
+studies that was step 2 now let's go to
+03:45
+step 3 and enable rip version 2 and
+03:48
+disable that Auto summarization since
+03:52
+we're on our one let's do it here first
+03:54
+version 2 that enables rip version 2 no
+03:59
+Auto summary that disables Auto summary
+04:03
+now let's go on our two version 2 no
+04:09
+Auto summary ok now our two will start
+04:14
+advertising it's 10:01 0/24 and 10.2
+04:19
+0/24 networks to our one instead of
+04:23
+summarizing them to the class a network
+04:24
+1000 - o / 8 summarization is often a
+04:29
+good thing in networks and actually in
+04:31
+this little network here it makes sense
+04:33
+however it can also cause a lot of
+04:35
+problems and if you're going to be
+04:37
+summarizing in networks you'll want to
+04:39
+do it manually that's a topic for
+04:42
+another time though let's go check on
+04:44
+our one do you show IP route well we
+04:51
+still see that 1000 dot o / 8 network
+04:55
+don't worry about that it will be
+04:57
+cleared out of the route table in time
+04:59
+since it has stopped receiving updates
+05:00
+for it
+05:01
+from our - but now we can also see the
+05:05
+1001 0/24 and 1002 0/24 networks so
+05:12
+there's the big difference between rip
+05:13
+version 1 and rip version 2 rip version
+05:17
+1 always automatically summarizes
+05:19
+networks whereas in version 2 you can
+05:22
+and should disable auto summarization
+05:25
+that's all for this lab thank you for
+05:30
+watching I hope this lab and video have
+05:32
+been helpful for you please subscribe
+05:34
+for future labs like this which will be
+05:37
+released weekly if you have requests for
+05:40
+any specific labs let me know in the
+05:42
+comment section
+05:43
+if you want to support my channel please
+05:46
+consider contributing to my patreon
+05:48
+patreon comm slash Jeremy's IT lab I
+05:52
+accept Bitcoin and aetherium donations
+05:55
+via the addresses in the description I
+05:58
+am also a brave verified publisher and
+06:01
+accept bat or basic attention token
+06:04
+donations in the brave browser
+

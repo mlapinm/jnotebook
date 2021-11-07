@@ -1,0 +1,246 @@
+ 1.789781 welcome back to another Inkscape
+tutorial  5.289864 in this video we're going to
+quickly be showing the bezzie a tool 8.426211  to
+trace a physical object 10.573729  an object in
+like an actual real picture 13.354055  and we'll
+trace that to create some vector art of
+that object 17.022179  so I'm going to do a more
+complex object I'm going to do this
+picture that I found on pixabay  22.249975 if we
+just go to pixabay.com I can show you
+how I found this 25.924526  pixabay is a great site
+for finding free photos 28.783826  that you can use
+for both sometimes commercial and
+obviously personal purposes  34.200575 we'll just
+type in person  35.552764 and we can scroll down
+here 37.776615  and I've chose this picture of this
+guy falling  40.357052 so this is shared with us by
+the user pixels 43.380704  and it's under Creative
+Commons 0 license free for commercial
+use no attribution required 48.288467  so we'll go
+ahead and download this 49.548638  I already have
+it downloaded go ahead and download the
+nineteen twenty by twelve sixty click
+download here  54.092564 and then it'll appear in
+your downloads folder  55.968509 so that's this
+picture here called action 58.456709  it's just a
+guy kind of following  60.683849 and what we're
+gonna do I want to bring this in so I'll
+go back to my downloads  65.159782 and I want to
+actually drag this into Inkscape so
+we'll left-click and drag it into
+Inkscape  70.196192 we'll leave all these settings
+the same this just says we're going to
+embed the image  so it's part of our
+project file  75.694815 rather than linking it
+externally 77.589576  if we link it and then we go
+back and delete that file out of our
+downloads  81.681830 then it won't show up here and
+in that you scape 83.673208  which is probably fine
+since we're just tracing it anyway  86.153021 but
+I'll just leave it here 87.549170  so one bed and
+then we'll leave everything   else the
+same  90.528417 so now we have this picture 92.376198  and
+actually there's a I think there might
+be a faster way to do what I'm about to
+show you 96.939219  I know there is actually 97.983322  but
+I'm just gonna show you for using the
+Bezier tool  102.014704 it's a really good practice
+for learning how that Tool Works 104.102653  so I
+wanted to scale this up but I forgot to
+do one thing 107.547729  right now
+it's it'll skew it if I scale it unless
+I'm really really accurate so I'll hit
+ctrl C 112.588705  or I could hold the ctrl key
+while I scale and then it stays uniform 116.576802 
+but what I'd like to do is click this
+lock at the top  120.064746 and what it does if you
+hover over it it says it makes it so
+height and width scale the same  126.957683 whether
+you're holding the ctrl key or not  128.457364 and
+just helps when you're working with
+photos and when you're working with text 132.049336 
+I always like to have that checked 133.793815 
+well you don't accidentally secure
+something without realizing it  136.630013 okay so
+we have this picture  138.706242 and then we're just
+gonna go to our desi a tool 141.214209  make sure if
+you are playing with this playing along
+with the last videos you might have this
+on the lips or something make sure your
+shape is to none  149.174373 and make sure your mode
+is set to regular  151.606237 and then we're going
+to hit the plus key  154.574244 I'll use my control
+wheel to kind of pan around 157.346220  hit the plus
+key and we're going to start right at
+the tip of this boot  160.606046 and what we're
+doing is I want to create an outline 163.154196  so
+we're gonna draw just the outline 166.114445  and
+I'm not gonna you could come down here
+and click and hold  169.377618 and then create like
+that nice rounded toe  171.470547 and maybe that'd
+be an OK thing  173.422069 and then this one comes
+here and we can round that in a little
+bit  176.098468 I'm not gonna do too much of that 177.530491 
+I'm just gonna be clicking and create
+kind of a little bit more jagged but
+we're so zoomed in it's not you're not
+really gonna notice  183.894133 and I'll pause the
+video here in a second and speed up so
+we don't have to watch this whole
+process  188.890125 but essentially I'm just left
+clicking creating some nodes every time
+that there's enough contour in this
+image  195.062191 and we're going to create a nice
+outline like a black shadow outline of
+this like a silhouette of a person
+falling  203.098138 and we could use it in like a
+logo 206.010428  or we could use this silhouette for
+I don't know some print art or different
+kinds of things that we want to do 212.747561  so
+I'll pause now too but just kind of
+follow along and do the same thing 216.886579  I'll
+pause the video and speed it up  218.458777 and I'll
+get back with you when I'm completed
+with this silhouette shape 222.418488 
+[Music]
+ 245.804103 
+okay I'm just about completing the last
+part of the heel of the shoe here  250.259362 and
+don't worry if you mess up I'm gonna
+mess up intentionally right here like if
+you accidentally click in there or like
+out here  256.999235 don't worry about it because we
+can fix that afterwards 259.663636  I'm just gonna
+complete my shape  261.127306 and click my very
+first point that I started with  263.763172 and then
+we have this nice outline  266.615250 and so your
+stroke might not be that large but if we
+zoom out here we can see 270.699341 it's a it's
+created an outline stroke of this whole
+person here 276.171154  so right now our fill is
+transparent and our stroke is completely
+black  280.478383 but if we hit black we can turn
+our fill to black  284.414080 and we can come down
+to our stroke we can hold down shift and
+hit none go to the transparent so now we
+have no stroke  292.086135 and we have just a black
+fill  293.506407 let's see that for it's kind of a
+cool 295.858360  we have a nice silhouette  297.946216 and then
+we can go in and fix any parts we messed
+up on by just going to the node edit
+tool  302.422305 zoom in and we can replace these
+nodes about where they should be we can
+hit the Delete key and delete a node 308.874065  if
+we think we have too many there  310.258192 we can
+grab some of these handles if there's a
+rounded part like we did here 314.246077  and we can
+adjust the way that this boot fits a
+little bit  318.041989 when I make it a little more
+big in the toe  320.258237 we can actually make it
+bigger than it really is if we want to 323.407017 
+we can we don't have to follow the
+outline exactly  326.158334 so we can check through 327.301809 
+and see but you know I went I went
+through pretty jagged  330.109562 this is like part
+of the shirt 331.473890  that I've brought in it's
+not really a mistake but we can bring it
+in if we want to  335.625715 if we don't like the
+way that looks we can kind of bring that
+in a little bit 338.841878  I don't like the way
+that looks at all anyway  343.153821 when we zoom
+out and so what we can do is we can grab
+this 346.285831  now and we can move it around  348.277667 so
+now we have this actual shape and then
+we can take left-click and we can then
+delete our original hit the Delete key 353.905750 
+and then we're left with just this
+silhouette 356.869654  and we can change the color
+of it any cover we want 360.449642  we can have it
+be we can give it a separate stroke if
+we hold down the shift key we can give
+it a like a blue stroke  366.405690 and have it be
+yellow 368.213823 
+I'll hit ctrl zieks I don't really like
+that blue stroke  370.417821 we can
+Espie blue  373.193634 and then we can yeah we can
+do anything that we could do with any
+other path so we can resize it 380.073719  we can
+click again we can rotate it if we want
+to have it be little bit different  383.694400 so
+it's just a really cool thing we can
+apply a gradient under the gradient tool
+here we can just draw in a gradient 389.169718 
+maybe we can let on to be kind of like
+that so it like goes fades into alpha 393.433587 
+and then we can put some text on here
+and we can grab like a you know a
+different color background or something
+and very quickly we can create a nice
+cool little effect  402.193741 and the best part is
+it's all vector image  405.221672 so I'll hit
+control Z ctrl Z ctrl Z  408.077749 when I have a
+source like this sometimes  I want to
+duplicate it  410.837686 so I'll hit ctrl D and I'll
+keep my original here  413.521858 and that way if I
+make any changes to this one and ever I
+want to get back I can just grab my
+original  419.017701 one change you you could make
+for example we can go to path and go to
+simplify 425.497164  now just reduce the amount of
+nodes we have and kind of smooth things
+out  428.873212 that doesn't look super great now
+see there's not as much detail in the
+head anymore 433.320188 
+it's Liston's it's still I think it
+looks more realistic 436.206489  so I'll delete this
+one  437.050613 so we can hit control D on our
+keyboard again and get another version
+here 441.459664  and actually it's a lot of times
+I'll do that so if we take this 445.062730  I'm
+getting kind of carried away now but if
+we go ctrl D  448.161227 and then make this one
+black 449.561250 and push the down arrow key a
+couple times  and the over arrow key  453.532915  now
+we have like an outline 454.909842  so that blue
+outline behind  456.649419 and then we can send this
+black one to the very back 458.709382  and then we
+kind of have a blue with a black outline
+is kind of cool  462.273327 or sometimes if I'll
+draw like a nice background like this 466.885494 
+and I'll select the black if I can I'll
+hit what's it alt 472.269508 
+alt click because I'm clicking back now
+because this gray was on top of it 476.533702  and
+we can turn that to white 479.397464  we can't see
+it ctrl Z ctrl Z let's take our shift
+let's take this and sync it all the way
+back to the back 487.229343  and then let's grab
+just this black one and let's make it
+white  490.525392 and then I'll go to object we'll
+go to or we go to path no good object
+yeah fill and Stroke properties 498.045544  and go
+make bring up the blur 500.925352  so we have like a
+blurred out version of it in the back 503.681514 
+it's like a full black 506.214015  turn the opacity
+all the way up to black 509.177582  so yeah then we
+have that's pretty cool right so we have
+a kind of a cool thing  512.005440 I'm trying to
+zoom in here 515.030304  yeah like this little bit
+darker or a darker blue 520.811265  so that's some
+pretty cool things that you can do with
+the with the Bezier tool you can trace
+any object take a picture of it bring it
+in here or find a picture online you can
+trace it  530.518030 and you can do some pretty cool
+stuff with it  533.237488 like this 534.448552  so I hope you
+enjoyed this video hopefully this kind
+of kind of spurred on some inspiration
+you can see maybe of some different
+things you can do with this  541.916418 we'll use
+this a little bit later on too in other
+videos 544.812651  but that's an example of using
+the Bezier tool to trace objects in a
+real image 550.136550  thanks for watching we'll
+catch you on the next one 552.364664  552.364664  552.364664 
+[Music]

@@ -1,0 +1,255 @@
+00:01
+welcome to this free CCNA packet tracer
+00:04
+practice lab you can download the lab
+00:06
+file from the link in the description in
+00:09
+this lab we will configure loopback
+00:12
+interfaces on two routers r1 and r2
+00:16
+loopback interfaces are logical
+00:19
+interfaces meaning that they are not
+00:22
+interfaces that physically exist on the
+00:24
+router they can be used for testing
+00:27
+purposes among others another important
+00:31
+characteristic is that a loopback
+00:32
+interface never goes down unlike a
+00:34
+physical interface which can fail
+00:37
+loopback interfaces are something we'll
+00:40
+be using a lot in future labs so I want
+00:42
+to use this simple lab to introduce them
+00:45
+try to complete the lab on your own
+00:47
+first then continue watching this video
+00:49
+if you have trouble or watch it after to
+00:52
+check your solution
+00:58
+step one is to set the IP addresses of
+01:01
+the interfaces connecting the two
+01:03
+routers and to enable them let's hop on
+01:07
+our one first enable compte both routers
+01:15
+are connected using their gig 0 0
+01:17
+interfaces so interface gig 0 0 now
+01:23
+let's set the IP address IP address
+01:26
+192.168.1.1 with the subnet mask of
+01:31
+255.255.255.0 ok now we have to enable
+01:37
+the interface no shutdown there we go
+01:40
+our one is done now let's go to our to
+01:46
+enable compte interface g00 IP address
+01:53
+192.168.1.1 55.2 55.0 no shut ok let's
+02:03
+ping to check do ping 192.168.1.1 the
+02:12
+ping works step 2 is to create a
+02:16
+loopback interface on each router 1.1.11
+02:20
+on our 1 & 2 - 2 - on our 2 they should
+02:26
+each use a / 32 subnet mask which is
+02:29
+equivalent to 255 dot 255 255 255 ok
+02:36
+let's go on our one to create a loopback
+02:39
+interface just enter interface
+02:42
+configuration mode for the loopback
+02:44
+interface interface loopback 0 note that
+02:49
+you can shorten it to interface l 0 so
+02:53
+we have now created the loopback
+02:54
+interface the loopback interface is up
+02:57
+by default and will never go down
+02:59
+however you can still issue the shutdown
+03:02
+command to administrative lead issei
+03:04
+belit now let's set the IP address IP
+03:08
+address 1.1 1.1
+03:11
+255 255 255 255 ok now let's go on our
+03:17
+to interface l0 IP address 2 2 2 2 255
+03:27
+255 255 255 we have successfully created
+03:32
+a loopback interface on each device
+03:37
+step three is to ping both the local
+03:40
+loopback interface and the loopback
+03:42
+interface of the remote device from each
+03:44
+router the router should be able to ping
+03:47
+its own loopback interface with no
+03:49
+issues by default however it has no way
+03:52
+of knowing about the loopback interface
+03:54
+of the remote router by default the
+03:58
+routers can pin each other's physical
+03:59
+interfaces because they are part of a
+04:01
+connected network which they share
+04:03
+however the loopback interfaces are on
+04:06
+separate networks because we haven't
+04:09
+done any labs for IP ropes yet I
+04:11
+pre-configured static routes on each
+04:13
+router beforehand this isn't a topic for
+04:17
+this lab but let me show you the IP
+04:19
+route table let me hop on r1 and show IP
+04:26
+route you see here the C indicating
+04:31
+connected of the 192.168.1.0 Network and
+04:35
+the l indicating local of the
+04:39
+192.168.1.1 address configured on the
+04:41
+gig 0/0 interface above that is an S
+04:45
+indicating static this is the route I
+04:48
+pre-configured to the loopback of r2
+04:52
+also at the top is the loopback here on
+04:54
+r1 now let's try the pings which both
+04:59
+should be successful first the local
+05:02
+loopback ping 1.1.11
+05:08
+it works now our twos ping - - - - it
+05:16
+works as well now let's do the same on
+05:18
+our two end
+05:22
+ping - two - - it works ping 1.1.11 it
+05:33
+works as well
+05:38
+step four is to remove the loopback
+05:41
+interfaces this is just to point out a
+05:44
+difference between physical interfaces
+05:46
+and loopback interfaces you can't delete
+05:49
+a physical interface using the command
+05:51
+line let's confirm that first on our two
+05:55
+conf T no interface G zero zero we get
+06:02
+the message
+06:02
+removal of physical interfaces is not
+06:05
+permitted now let's do the same thing ad
+06:08
+no in front of the interface command for
+06:10
+loopback zero first however let's use
+06:14
+the do show IP interface brief command
+06:18
+there is gig zero zero which we were
+06:20
+unable to delete before and loopback
+06:23
+zero now let's try to delete it no
+06:27
+interface l0 do show IP interface brief
+06:32
+as you can see we are able to delete
+06:36
+loopback interfaces and loop X zero is
+06:39
+no longer listed here let's do the same
+06:42
+on r1 show IP interface brief there's
+06:48
+loopback zero compte no interface l0 do
+06:55
+show IP interface brief we have
+06:58
+successfully removed the loopback
+07:00
+interface of each router that's all for
+07:02
+this lab
+07:05
+thank you for watching I hope this lab
+07:07
+and video have been helpful for you
+07:09
+please subscribe for future labs like
+07:11
+this which will be released weekly if
+07:15
+you have requests for any specific labs
+07:16
+let me know in the comment section if
+07:19
+you want to support my channel I accept
+07:22
+Bitcoin and etherion donations via the
+07:24
+addresses in the description I am also a
+07:28
+brave verified publisher and accept bat
+07:30
+or basic attention token donations in
+07:33
+the brave browser
+

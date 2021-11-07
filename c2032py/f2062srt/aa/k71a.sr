@@ -1,0 +1,305 @@
+00:00
+welcome to this free CCNA packet tracer
+00:03
+practice lab you can download the lab
+00:05
+file from the link in the description if
+00:08
+you like these labs please consider
+00:10
+supporting me via my patreon or the
+00:12
+cryptocurrency options in the
+00:13
+description also please subscribe to the
+00:17
+channel for more labs like this and
+00:18
+share these videos with anyone else
+00:20
+studying for the CCNA in this lab we
+00:24
+will configure ACLs named ACLs and
+00:27
+numbered ACLs standard ACLs and extended
+00:31
+ACLs as well as ipv4 ACLs and ipv6 ACLs
+00:35
+mixing them all together let's get
+00:37
+started
+00:39
+so we have to configure and apply a
+00:42
+total of four ACLs to filter traffic
+00:45
+according to these instructions the
+00:47
+details of how you configure and where
+00:49
+you apply the ACLs doesn't have to
+00:51
+exactly match what I do in this video as
+00:54
+long as the results are the same it's
+00:56
+okay the first ACL we must configure
+00:59
+should prevent pc4 from accessing the
+01:02
+10440 / 24 network the general rule is
+01:07
+to apply standard ACLs close to the
+01:09
+destination so I'll apply it to r2 SG 0
+01:13
+0 interface let's go on our to enable
+01:19
+golf tee let's create a deny statement
+01:24
+blocking PC for access list I'll make it
+01:29
+number 1 deny host and PC for is 10 2 to
+01:35
+12 okay that's all for that statement
+01:38
+now we are told to block other traffic
+01:41
+to 10 dot 4 dot 4 dot 0 / 24 so we
+01:44
+should let it through accessed list 1
+01:48
+permit any that's it now let's apply it
+01:52
+to the interface interface g0 0 IP
+01:57
+Access Group 1 out I used out because I
+02:02
+want to prevent PC force traffic from
+02:04
+exiting out this interface to the 10 dot
+02:07
+4 dot 4 dot 0 / 24 subnet let's test it
+02:12
+I'll try a ping from PC for two server
+02:15
+one ping 10.4 for 100 and we get the
+02:23
+destination host unreachable message
+02:25
+from 10 12 12 2 which is our to perfect
+02:30
+just to make sure let's try a ping from
+02:33
+PC 3 which should go through ping 4.4.1
+02:40
+hundred
+02:47
+great it works our first ACL is complete
+02:52
+okay let's do the second one configure
+02:56
+an ipv6 ACL to prevent pc5 from
+03:00
+accessing the 2001 DB 822 22 / 64
+03:05
+network so this will be an ipv6 ACL and
+03:09
+ipv6 only supports named ACLs although
+03:13
+ipv4 supports both numbered and named
+03:16
+ACLs I'll apply it to our ones g02
+03:20
+interface let's go on our one enable
+03:26
+compte since it's an ipv6 ACL start the
+03:32
+command with ipv6 access list then the
+03:35
+name I'll say g0 to underscore in to
+03:41
+give it a meaningful name now we're in
+03:44
+ipv6 ACL configuration mode and can
+03:47
+configure each statement so we want to
+03:50
+deny PC 5 and then permit other traffic
+03:55
+deny ipv6 host followed by PC 5s address
+04:00
+2001 DB 8 3 3 double colon 11 then the
+04:07
+destination subnet 2001 DB 8 22 22 / 64
+04:15
+okay that's our deny statement now let's
+04:18
+allow all other ipv6 traffic through
+04:21
+permit ipv6 any-any ok finally let's
+04:27
+apply it interface G 0 to ipv6 traffic
+04:34
+filter G 0 2 in now you might want to
+04:39
+apply this with ipv6 access group since
+04:43
+ipv4 uses IP access group but for ipv6
+04:46
+use ipv6 traffic filter okay let's test
+04:51
+I'll ping from PC 5 to server 2
+04:58
+ping 2001 db8 22 22 double : 101
+05:09
+reachable message from our one looks
+05:11
+good now just to be sure let's try on PC
+05:14
+6 which should work ping 2001 DB 8 22 22
+05:23
+double : 100 great it works as expected
+05:34
+next is to prevent pc3 from reaching PC
+05:38
+1 it should be an extended named ACL and
+05:43
+let's put it on our ones G 0 1 interface
+05:48
+exit IP access list extended this time
+05:54
+I'll name it G 0 1 underscore in let's
+05:59
+make the deny statement deny IP host
+06:04
+10.2 2.11 host 10.11 11 now let's permit
+06:12
+other traffic since we weren't told to
+06:14
+block anything else permit IP any-any
+06:19
+now let's apply it interface G 0 1 this
+06:26
+is an ipv4 ACL so IP access group 1
+06:31
+underscore in in okay let's try it out
+06:36
+I'll ping from pc 3 to pc 1 ping 10.11
+06:45
+11 and we get the destination host
+06:49
+unreachable message how about from PC
+06:53
+for King 10.1 111
+07:05
+okay it works as expected
+07:08
+finally we want to allow PC six to
+07:12
+telnet to r2 but to not allow others to
+07:15
+do so
+07:16
+so we could apply this in multiple areas
+07:19
+but how about applying it directly to
+07:21
+our two's vty lines let's go on our to
+07:27
+exit first I'll make the ACL ipv6 access
+07:34
+list telnet to give it an appropriate
+07:36
+name
+07:38
+so let's permit PC 6 to telnet permit
+07:43
+TCP because telnet uses TCP host 2000 1
+07:50
+DB 8 3 3 double colon 12 I'll set the
+07:56
+destination to any since I wanted to
+07:59
+apply to whichever of our tooth
+08:01
+interfaces they telnet to then finally
+08:04
+EQ telnet to specify the port number of
+08:08
+23 which telnet uses ok that's all we
+08:13
+have to configure because there is an
+08:15
+implicit deny any at the end of the ACL
+08:17
+so we don't need to configure another
+08:19
+statement let's apply it to the vty
+08:22
+lines line vty 0 15 to apply an ipv4 ACL
+08:30
+to an interface use access group for
+08:34
+ipv6 traffic filter now to apply either
+08:38
+to vty lines you use XS class so ipv6
+08:43
+access class telnet in ok let's test it
+08:48
+out I'll try to tell NIT - R - s G 0 0 0
+08:53
+interface from PC 6
+08:58
+telnet 2001 db8 12:12 double : - looks
+09:06
+good enter the password CCNA in lower
+09:09
+case and there we go
+09:12
+exit okay let's confirm that PC five
+09:16
+can't tell net to r2 telnet 2001 DB
+09:23
+eight twelve twelve double colon - great
+09:29
+looks like we successfully configured
+09:30
+and applied the ACL in this lab we
+09:35
+configured multiple types of ACLs ipv6
+09:38
+ACLs as well as standard and extended
+09:41
+ipv4 ACLs using numbered and named
+09:44
+methods this was mostly review from what
+09:47
+we did in the icnd1 labs but hopefully
+09:49
+it was good practice that's all for this
+09:51
+lab thank you for watching I hope this
+09:57
+lab and video have been helpful for you
+09:59
+please subscribe for future labs like
+10:01
+this which will be released weekly if
+10:04
+you have requests for any specific labs
+10:07
+let me know in the comments section if
+10:10
+you want to support my channel
+10:11
+I accept Bitcoin and etherium donations
+10:13
+via the addresses in the description I
+10:16
+am also a brave verified publisher and
+10:19
+accept bat or basic attention token
+10:22
+donations in the brave browser
+

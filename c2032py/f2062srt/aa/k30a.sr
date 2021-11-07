@@ -1,0 +1,235 @@
+00:00
+welcome to this free CCNA packet tracer
+00:03
+practice lab you can download the lab
+00:06
+file from the link in the description if
+00:09
+you like these labs please consider
+00:11
+supporting me via my patreon or the
+00:13
+cryptocurrency options in the
+00:14
+description in this lab the second of
+00:19
+our labs focusing on ACLs we will
+00:22
+configure extended ACLs unlike standard
+00:26
+ACLs which only filter traffic based on
+00:28
+the source IP address extended ACLs can
+00:32
+filter on things like protocol source IP
+00:35
+address and destination IP address our
+00:39
+task is to configure and apply a single
+00:41
+extended ACL to allow only pc-12 access
+00:45
+server one and only hosts on the 192.168
+00:49
+204 network to access server two first
+00:55
+where should I apply the ACL the general
+00:58
+rule is to apply extended ACLs as close
+01:01
+as possible to the source as opposed to
+01:04
+standard ACLs which should be applied as
+01:07
+close as possible to the destination I
+01:10
+want to achieve this in a single ACL so
+01:13
+I'll apply it to our ones s20 interface
+01:17
+so let's go on our one an able CAUTI to
+01:24
+create an extended ACL you begin with
+01:27
+the same command as for standard ACLs
+01:29
+access lists now I'll use
+01:32
+context-sensitive help I mentioned this
+01:35
+in the previous video but remember that
+01:37
+1 to 99 is the range for standard ACLs
+01:40
+and 100 to 199 is the range for extended
+01:44
+ACLs I'll go with 100 context-sensitive
+01:48
+help again I'll choose permit to allow
+01:52
+pc-12 access server 1 afterward I'll
+01:56
+create another statement to deny all
+01:58
+other traffic to server 1 let's do
+02:01
+contact sensitive help again now you can
+02:04
+see that this is different than for
+02:06
+standard ACLs here are a bunch of
+02:08
+protocols which you can use to filter
+02:10
+traffic
+02:11
+the general catch-all is IP so let's go
+02:15
+with that let's check the options again
+02:18
+now I'll choose host since we're
+02:21
+filtering from one host 192.168.1 11
+02:26
+next I'll enter host again and set the
+02:29
+destination 192.168 3 dot 100 contact
+02:34
+sensitive help again you can see there
+02:37
+are other options but we'll end the
+02:39
+command here ok so that's our first
+02:43
+entry in the ACL now let's create
+02:46
+another one to deny all other traffic to
+02:48
+server 1 access list 100 deny IP any
+02:53
+host 192.168.1 hundred this denies
+02:58
+traffic from any host to server 1 and
+03:01
+will apply to any traffic except PC 1
+03:04
+now let's satisfy the second requirement
+03:08
+we have to allow only hosts on the
+03:10
+192.168 2's flash 24 network to access
+03:14
+server 2 first let's create another
+03:18
+permit statement access list 100 permit
+03:22
+IP 192.168.20.10 168 3 dot 101 this
+03:34
+command permits any hosts in the
+03:36
+192.168.0 slash 24 network to access the
+03:40
+host 192.168.1 o one which is server 2
+03:44
+now lets deny all other traffic to
+03:47
+server to access list 100 deny IP any
+03:51
+host 192.168.0.1 o1 ok we have fulfilled
+03:57
+both requirements now let's create one
+04:01
+more statement to allow any other
+04:03
+traffic remember at the end of any ACL
+04:06
+there is an implicit deny any our
+04:10
+requirements didn't state to deny all
+04:12
+other traffic so let's override that
+04:13
+implicit deny any access list 100 permit
+04:17
+IP any any that's it finally let's apply
+04:24
+the ACL to r1
+04:25
+s20 interface interface s20 IP access
+04:31
+group 100 out
+04:32
+now this ACL will apply to all outbound
+04:35
+traffic on our ones s20 interface let's
+04:39
+test it out from each PC I'll ping each
+04:43
+server first PC one it should be able to
+04:46
+access server one but not server two
+04:50
+ping 192.168.1 hundred it works next
+05:02
+ping 192.168 3 dot 101 it doesn't work
+05:06
+ok functioning as intended so far now PC
+05:11
+2 it shouldn't be able to access server
+05:14
+1 or server to pay 192.168.1 hundred
+05:19
+doesn't work ping 192.168.1 o 1 doesn't
+05:24
+work again now let's go on PC 3 it
+05:28
+shouldn't be able to ping server 1 but
+05:30
+it should be able to ping the server to
+05:32
+pay 192.168.1 hundred doesn't work
+05:38
+paying 192.168.1 o 1
+05:47
+it works as expected finally PC four
+05:52
+which should be the same as PC three
+05:54
+came one ninety two dot one sixty eight
+05:56
+dot three dot one hundred doesn't work
+05:59
+ping 192.168.1 oh one it works
+06:06
+so our ACL is functioning as intended
+06:09
+that's all for this lab thank you for
+06:15
+watching I hope this lab and video have
+06:18
+been helpful for you please subscribe
+06:20
+for future labs like this which will be
+06:23
+released weekly if you have requests for
+06:26
+any specific labs let me know in the
+06:28
+comment section if you want to support
+06:31
+my channel please consider contributing
+06:32
+to my patreon patreon comm slash
+06:36
+Jeremy's IT lab I accept Bitcoin and
+06:40
+etherium donations via the addresses in
+06:42
+the description I am also a brave
+06:45
+verified publisher and accept bat or
+06:48
+basic attention token donations in the
+06:51
+brave browser
+

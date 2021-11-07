@@ -1,0 +1,6 @@
+<title>j022</title>
+<script src="j022items.js"></script>
+<audio controls="controls" class="audio">
+<source src="sharing sharing" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>

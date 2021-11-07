@@ -1,0 +1,305 @@
+00:00
+welcome to this free CCNA packet tracer
+00:03
+practice lab you can download the lab
+00:05
+file from the link in the description if
+00:07
+you like these labs please consider
+00:09
+supporting me via my patreon or the
+00:12
+cryptocurrency options in the
+00:13
+description also please subscribe to the
+00:16
+channel for more labs like this in this
+00:20
+lab we will expand upon what we did in
+00:22
+the previous lab I have added an
+00:24
+additional router change the IP
+00:26
+addresses and we will configure multi
+00:28
+area OSPF the middle area is area 0 also
+00:33
+known as the backbone all other areas
+00:37
+must be attached to the backbone area
+00:38
+and traffic from one area to another
+00:41
+must pass through the backbone 2 of our
+00:45
+routers our area border routers or ABR's
+00:48
+because they have interfaces in multiple
+00:51
+areas r2 has interfaces in area 0 and
+00:55
+area 1 and our 3 has interfaces in area
+00:59
+0 and area 2 let's get started I'll
+01:04
+configure these routers in order from 1
+01:06
+to 5 make sure you configure the
+01:09
+interfaces in the proper areas also we
+01:13
+should configure the loopback interfaces
+01:14
+as passive interfaces and configure the
+01:17
+reference bandwidth so that a 100
+01:19
+gigabit interface would have a cost of 1
+01:22
+let's go on our one an able coffee tea
+01:29
+router OSPF 1 remember the OSPF process
+01:34
+ID doesn't have to match between routers
+01:36
+in the last lab I purposefully
+01:39
+configured a different process ID on
+01:41
+each router in this lab however I'll do
+01:45
+the typical thing and just use a process
+01:46
+ID of one for each router ok now our
+01:50
+ones interfaces are all in a single area
+01:53
+so I'll use our shortcut from last time
+01:56
+Network oh-oh-oh-oh 255 255 dot 255 255
+02:02
+area 1 now OSPF is activated on all
+02:07
+interfaces with an IP address let's make
+02:10
+the loopback passive passive interface
+02:14
+l0 finally the reference bandwidth Auto
+02:19
+cost reference bandwidth now what should
+02:22
+the value B we should configure it to be
+02:25
+equivalent to 100 gigabits per second
+02:27
+that's 100,000 megabits per second so
+02:31
+configure the reference bandwidth as
+02:33
+100,000 okay that's all for r1 now I'll
+02:40
+go through the rest of these devices
+02:41
+fairly quickly again make sure to
+02:44
+configure the correct interfaces in the
+02:46
+correct areas for routers 2 & 3 the loop
+02:51
+backs could be in either area but the
+02:53
+instructions say to put them in area 0
+02:55
+let's go on our to an able Conti router
+03:02
+OSPF one network 10.12 oh oh oh oh oh
+03:09
+255 area one I configure the same slash
+03:13
+24 mask as on the interface but remember
+03:16
+that a slash 16 would work as well a
+03:19
+slash 8 would not work however because
+03:23
+10000 / 8 includes f2 0 also which has
+03:28
+to be in a different area okay let's
+03:30
+continue Network 10.23 oh-oh-oh-oh-oh
+03:36
+255 area 0 network 2 2 to 200 200 area 0
+03:45
+passive interface l0 auto cost reference
+03:50
+bandwidth 100000 okay next is r3 enable
+03:58
+compte router OSPF one network 10.23
+04:06
+oh-oh-oh-oh-oh 255 area 0 network 10.35
+04:11
+oo ooo 255 area to network three three
+04:18
+three three zero zero zero area zero
+04:23
+passive interface l0
+04:26
+auto cost reference bandwidth 100,000
+04:30
+okay next is our four enable conf T
+04:37
+Network oh oh oh oh 255.255.255.0 v
+04:43
+aerial 1 passive interface l 0 auto cost
+04:48
+reference bandwidth 100,000 okay last
+04:53
+router our 5 enable coughed T router
+04:59
+OSPF one our five is only part of area 2
+05:03
+so let's use this shortcut again network
+05:07
+oh-oh-oh-oh 255 dot 255 dot 255 dot 255
+05:11
+area 2 passive interface L 0 auto cost
+05:17
+reference bandwidth 100000 that's all
+05:21
+for step 1 now step 2 is to configure
+05:25
+route summarization on the ABR's
+05:28
+here on our 5 let me show you the route
+05:31
+table do show IP route we have all of
+05:36
+these routes 10.12 0 10.14 0 10.20 300
+05:43
+but our 5 only has one path to them so
+05:47
+our three could instead advertise a
+05:49
+single 10.0 / 8 route to our 5 and it
+05:54
+would help clean up our 5s routing table
+05:57
+this isn't a very large network but in
+06:00
+very large networks this is very
+06:02
+beneficial let's configure that on our 3
+06:07
+we want to summarize these routes are 3
+06:10
+is receiving an area 0 so we begin the
+06:13
+command with area 0 not with area 1 the
+06:17
+area to which we will advertise the
+06:18
+summary ok next to the keyword range
+06:23
+then the address 10000 followed by the
+06:28
+mask 255 0 keep in mind that this is not
+06:33
+a wildcard mask that's easy to mix up
+06:36
+since the network command uses a
+06:38
+wildcard mask
+06:40
+so if we go and check on r5 instead of
+06:44
+having learned routes to 10.23 0/24
+06:48
+10.12 0/24 and 10.14 0/24 it should have
+06:54
+a single 10000 / 8th route learned via
+06:59
+OSPF however the loop backs don't fit in
+07:03
+the summary so they will be unchanged
+07:05
+okay let's go check our 5s route table
+07:09
+do show IP route there we go our 5 has
+07:17
+learned a single route to all of the
+07:18
+routes that fit within the 10000 / 8
+07:21
+range of course it still has its
+07:24
+directly connected network of 10.35 0/24
+07:27
+here now let's configure the same thing
+07:32
+on r2 r1 and r4 don't need to learn
+07:37
+about that 10.23 0/24
+07:39
+and 10.35 0.0 /horizontalscale the
+08:06
+routing tables of r1 and r4 we shouldn't
+08:09
+see routes to 10.20 300 / 24 and 10.35
+08:14
+0/24 but rather a summary 10000 / 8
+08:19
+address keep in mind it can take a few
+08:22
+seconds for the network to converge and
+08:24
+this changed to show in the routing
+08:26
+table but let's check on our for do show
+08:32
+IP route there we go there's that 1000 /
+08:39
+8 summary in this lab we looked at multi
+08:44
+area
+08:45
+OSPF we could have more areas area 3
+08:48
+area for area 5 etc but remember that
+08:52
+all areas must
+08:53
+connect to the backbone area area zero
+08:56
+we also used summarization to reduce the
+08:59
+size of our routing table which is
+09:00
+highly recommended in large networks
+09:02
+that's all for this lab thank you for
+09:08
+watching I hope this lab and video have
+09:10
+been helpful for you please subscribe
+09:13
+for future labs like this which will be
+09:15
+released weekly if you have requests for
+09:18
+any specific labs let me know in the
+09:20
+comment section if you want to support
+09:23
+my channel I accept Bitcoin and
+09:25
+aetherium donations via the addresses in
+09:27
+the description I am also a brave
+09:31
+verified publisher and accept bat or
+09:33
+basic attention token donations in the
+09:35
+brave browser
+

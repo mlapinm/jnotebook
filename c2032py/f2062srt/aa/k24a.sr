@@ -1,0 +1,403 @@
+00:00
+welcome to this free CCNA packet tracer
+00:03
+practice lab you can download the lab
+00:05
+file from the link in the description if
+00:09
+you like these labs please consider
+00:10
+supporting me via my patreon or the
+00:13
+cryptocurrency options in the
+00:14
+description in this lab we are going to
+00:18
+configure static routing to allow pc1 &
+00:21
+pc2 to communicate with each other
+00:24
+static routing as opposed to dynamic
+00:27
+routing involves manually configuring
+00:29
+routes to networks that you want to
+00:31
+reach as a network grows it quickly
+00:34
+becomes unfeasible to manually configure
+00:36
+both primary and backup routes to each
+00:39
+destination network however for small
+00:42
+networks like this example here it is no
+00:44
+problem even in large networks you will
+00:47
+often want to use static routes in
+00:49
+combination with dynamic routing
+00:50
+protocols like ERG RP and OSPF which we
+00:55
+will practice in future labs try to
+00:58
+complete the lab yourself first then
+01:00
+continue watching if you have trouble or
+01:02
+watch the video after to check your
+01:04
+solution if you haven't learned the
+01:07
+required commands to complete this lab
+01:09
+yet in your studies feel free to watch
+01:11
+this video to learn them note that no
+01:14
+static routes have been pre-configured
+01:16
+in this lab I have only configured the
+01:18
+default gateways of pc1 & pc2 being the
+01:22
+g0 one interfaces of their respective
+01:24
+routers step one is to configure the G
+01:30
+zero zero and G zero one interfaces of
+01:32
+r1 and r2 according to the network
+01:35
+diagram and enable the interfaces there
+01:39
+are three subnets in this network
+01:41
+192.168.1.0 / 24 which includes pc 1
+01:46
+switch 1 and r ones g0 one interface
+01:49
+also 1000 / 24 which includes the G 0 0
+01:55
+interfaces of r1 and r2 also
+02:00
+192.168.20.10
+02:05
+Artoo's G 0 1 interface let's configure
+02:09
+r1 first
+02:13
+enable coffee tea interface g00 IP
+02:19
+address 1001 255.255.255.0 no shut down
+02:27
+okay so that's our ones g00 interface
+02:30
+which is connected to our two now let's
+02:33
+do the G zero one interface interface G
+02:36
+zero 1 IP address 192.168.1.1
+02:42
+255.255.255.0 no shutdown now let's
+02:47
+configure our twos interfaces enable con
+02:54
+40 interface G 0 0 IP address 1000 to
+03:01
+255.255.255.0 no shutdown interface G 0
+03:06
+1 IP address 192.168.1.1 5 5 0 no
+03:14
+shutdown that's all for step 1
+03:19
+step two is to ping from pc1 to our ones
+03:22
+g0 one interface then progressively ping
+03:26
+toward PC two and see which pings
+03:28
+succeed and which fail let's try that
+03:34
+first our ones g0 one interface ping
+03:40
+192.168.1.1 it works
+03:44
+next our ones G 0 0 interface ping 1001
+03:52
+it works too
+03:54
+now let's try our two SG 0 0 interface
+03:57
+ping 1000 2
+04:07
+this pink fails I won't bother pinging
+04:10
+beyond here those things will fail as
+04:12
+well why is that well for a pin to
+04:16
+succeed
+04:17
+you need to weigh connectivity PC one
+04:21
+needs to be able to reach the
+04:22
+destination and the destination needs to
+04:25
+know how to reach PC one to send the
+04:27
+reply to the ping the first two pings we
+04:30
+send to satisfy both requirements thus
+04:32
+they worked PC one and our ones G zero
+04:36
+one interface are part of the same
+04:37
+network thus they can reach each other
+04:40
+PC one isn't part of the same network as
+04:43
+our ones G zero zero interface but it
+04:46
+sends the packet to its default gateway
+04:48
+which I pre-configured as our ones G
+04:50
+zero one interface then our one of
+04:53
+course knows the destination because
+04:55
+it's one of its other interfaces it can
+04:58
+then send the ping back to PC one which
+05:01
+is again directly connected to the same
+05:02
+network as its G zero one interface
+05:04
+that's why the first two pings worked
+05:07
+now why did the third ping fail let's
+05:11
+think about the path the ping takes PC
+05:15
+one sends the ping to its default
+05:16
+gateway our ones G zero one interface
+05:19
+the destination is 1000 to which our one
+05:24
+knows the way to because it's part of
+05:25
+the same network as its G zero zero
+05:27
+interface the 1000 / 24 network so it
+05:33
+sends the ping out of its G zero zero
+05:35
+interface toward our two now the ping
+05:40
+reaches our two however our two doesn't
+05:43
+know how to send the reply back to PC
+05:45
+one hour two has no route back to the
+05:50
+192.168.1.0 / 24 network because we
+05:54
+haven't configured any reps yet and it's
+05:56
+not a directly connected network so
+05:59
+that's why the ping fails I'll go on are
+06:01
+too quickly to check exit show IP ripped
+06:08
+as you can see the 192.168.1.0 network
+06:14
+is not present
+06:19
+now let's move on to step three
+06:22
+basically we are going to do the same
+06:24
+thing but from PC to can you guess which
+06:28
+pings will work let's check on PC to
+06:32
+first ping 192.168.1 r2 is g0 one
+06:38
+interface it works next ping 1000 - R -
+06:45
+s G zero zero interface it works also
+06:49
+now
+06:50
+ping 1000 won are ones G zero zero
+06:55
+interface it fails this is for the same
+07:03
+reason as before PC - sends the ping to
+07:07
+r2 which then sends it to r1 but r1
+07:11
+doesn't have a route back to PC - subnet
+07:14
+in its routing table so the ping ends
+07:16
+there
+07:20
+step four is to configure static routes
+07:23
+on r1 and r2 to allow PC one to reach PC
+07:26
+two and vice versa
+07:29
+we should also make sure we configure
+07:31
+the route to the subnets meaning
+07:34
+192.168.1.0 / 24 and 192.168 2.0 to the
+07:42
+other PC meaning 192.168.1.1 / 32 and
+07:48
+192.168 - 12 / 32 in this very small
+07:53
+Network we only have to create one
+07:55
+static route on each router on r1 we
+07:59
+need a route to 192.168.20.10 / 24 okay
+08:12
+let's do that on r1 first exit now we
+08:18
+create a static route with the command
+08:20
+IP route now I'll use the question mark
+08:24
+to show what comes next
+08:25
+first is the destination prefix in this
+08:29
+case it's 192.168 200 micro gain
+08:34
+destination prefix mask it's slash 24 so
+08:39
+that equals 255 255 255 0 question mark
+08:44
+one more time now we have a list of
+08:47
+options but really there are just two
+08:49
+the option at the top of the list
+08:52
+forwarding routers address means the
+08:55
+next hop address in the route make sure
+08:58
+this is an address the router knows how
+09:00
+to get to if the router can't reach the
+09:02
+next hop address it obviously can't
+09:04
+reach the destination if we choose this
+09:07
+option the next hop address will be r2
+09:10
+SG 0 0 interface 1000 to the other
+09:16
+options are to specify an interface
+09:18
+meaning the exit interface we will send
+09:20
+the packets out of on the way to the
+09:22
+destination if we choose this option we
+09:25
+will use gigabit gigabit ethernet 0 0
+09:29
+let's go with the first option of the
+09:31
+next hop IP address
+09:33
+1000 - okay
+09:37
+that's it now let's check the routing
+09:40
+table do show IP route here with an S
+09:45
+indicating static we see our route to
+09:48
+the 192.168.0
+09:53
+to the next hop address since we're
+09:58
+looking at the table anyway
+09:59
+notice these other routes have C or L
+10:02
+next to them C refers to a connected
+10:06
+network in this case that 10000 / 24
+10:11
+network and 192.168.1.2 for network l
+10:17
+refers to a local address on the router
+10:19
+itself 1000 won and 192.168.1.1 the IP
+10:26
+addresses of the G 0 0 and G 0 1
+10:28
+interfaces ok now let's configure the
+10:33
+route on our two high ropes 192.168.1.0
+10:44
+255.255.255.0 and now let's configure
+10:47
+the exit interface instead of the next
+10:49
+hop address just to try it out G 0 0 ok
+10:55
+now we should be able to ping from pc1
+10:57
+to pc2 let's go on pc 1 and try it out
+11:04
+ping 192.168.20.10
+11:23
+there we go the ping worked that's all
+11:26
+for this lab thank you for watching I
+11:31
+hope this lab and video have been
+11:33
+helpful for you please subscribe for
+11:36
+future labs like this which will be
+11:37
+released weekly if you have requests for
+11:40
+any specific labs let me know in the
+11:42
+comment section if you want to support
+11:45
+my channel please consider contributing
+11:47
+to my patreon patreon comm / Jeremy's IT
+11:51
+lab I accept Bitcoin and aetherium
+11:55
+donations via the addresses in the
+11:57
+description I am also a brave verified
+12:01
+publisher and accept bat or basic
+12:04
+attention token donations in the brave
+12:06
+browser
+

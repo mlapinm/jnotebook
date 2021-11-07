@@ -1,0 +1,151 @@
+00:00
+welcome to this free CCNA packet tracer
+00:03
+practice lab you can download the lab
+00:05
+file from the link in the description in
+00:08
+this lab we will once again be
+00:10
+troubleshooting the network topology
+00:12
+from lab number seven in the previous
+00:14
+lab number eight there was a single miss
+00:17
+configuration on r1 in this lab however
+00:21
+there is one miss configuration per
+00:23
+networking device meaning one on r1 one
+00:27
+on switch one and one on switch to try
+00:31
+to find and fix these errors on your own
+00:33
+first
+00:33
+then continue watching this video if you
+00:36
+have trouble or watch it after to check
+00:38
+your solution in the last video I showed
+00:42
+an example of how I would go about
+00:43
+troubleshooting a problem in this video
+00:46
+however I will just directly show the
+00:48
+Miss configurations and fix them so once
+00:51
+again try to troubleshoot on your own
+00:52
+first
+00:56
+so PC one can't ping the other pcs in
+01:00
+the network let's just check quickly on
+01:02
+PC one ping PC two ping 1000 dot 130
+01:11
+doesn't work ping pc3 ping 1000 three
+01:19
+doesn't work ping PC for ping 1000 131
+01:27
+doesn't work okay so let's fix the
+01:31
+problem on our one first enable show IP
+01:37
+interface brief look at the IP address
+01:41
+of the dot thirteen sub-interface 1000
+01:45
+da 11 now let's check the default
+01:49
+gateway of the pcs in VLAN 13 pc1 & pc2
+01:56
+c1 is 1000 dot one and PC three 1000 one
+02:07
+so this is a miss configuration let's
+02:11
+fix it back to our one County interface
+02:17
+g0 0.13 IP address 1000 dot one
+02:25
+255.255.255.192
+02:35
+next let's check switch 1 enable show
+02:40
+VLAN brief can you see the problem here
+02:45
+fastethernet 0/1 is in VLAN 12 it's
+02:49
+supposed to be in VLAN 13 let's change
+02:52
+that conf
+02:56
+interface f01 switch port access VLAN 13
+03:03
+ok switch 1 is now fixed finally let's
+03:08
+go to switch to enable show interfaces
+03:14
+trunk nothing appears the link between
+03:18
+switch 1 and switch two should be a
+03:21
+trunk so that it can carry traffic from
+03:23
+multiple VLANs so we have to fix this
+03:26
+conf T interface g0 1 switch port mode
+03:32
+trunk ok that should fix the problem
+03:40
+so let's test out our solution the
+03:44
+scenario stated that there was one miss
+03:46
+configuration on each device and we
+03:48
+fixed each one so PC one should now be
+03:52
+able to reach the other pcs so let's go
+03:55
+to PC 1 and pin PC to ping 1000 130 the
+04:08
+pin works next let's ping PC 3 pin 1000
+04:13
+3 okay it works
+04:20
+finally PC for ping 1000 131 it works as
+04:32
+well we have successfully fixed the
+04:34
+network
+04:38
+thank you for watching I hope this lab
+04:41
+and video have been helpful for you
+04:42
+please subscribe for future labs like
+04:45
+this which will be released weekly if
+04:48
+you have requests for any specific labs
+04:50
+let me know in the comment section if
+04:54
+you want to support my channel I accept
+04:56
+Bitcoin donations via the address in the
+04:58
+description I am also a brave verified
+05:01
+publisher and accept bat or basic
+05:04
+attention token donations in the brave
+05:07
+browser
+

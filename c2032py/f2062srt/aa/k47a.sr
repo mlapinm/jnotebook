@@ -1,0 +1,229 @@
+00:00
+welcome to this free CCNA packet tracer
+00:03
+practice lab you can download the lab
+00:05
+file from the link in the description if
+00:07
+you like these labs please consider
+00:10
+supporting me via my patreon or the
+00:12
+cryptocurrency options in the
+00:13
+description also please subscribe to the
+00:17
+channel for more labs like this this lab
+00:21
+takes the same topology you configured
+00:23
+in the previous lab and asks you to
+00:25
+troubleshoot and fix some errors I have
+00:29
+made one miss configuration / switch
+00:30
+that is affecting connectivity in this
+00:32
+network find the errors and fix them to
+00:35
+restore connectivity in troubleshooting
+00:39
+it's important to always confirm the
+00:41
+problem and know the exact extent of
+00:43
+what's wrong so let's try to ping other
+00:46
+pcs within the same VLAN let's ping from
+00:50
+pc1 first I'll ping PC to ping 1000 -
+00:59
+okay it works that's good to know
+01:02
+now how about PC 5 ping 10005 doesn't
+01:12
+work ok now how about in VLAN 20 let's
+01:17
+ping from PC 8 10 PC 9 at 1000 9 doesn't
+01:29
+work now VLAN 30 let's ping from PC 6 to
+01:34
+PC 7 ping 1000 7 ok it doesn't work and
+01:44
+finally VLAN 40 I'll ping from PC e3 to
+01:48
+PC for ping 1000 4 it doesn't work
+01:57
+okay so pc1 & pc2 can ping each other
+02:00
+but otherwise there is no connectivity
+02:04
+let's focus on one problem at a time and
+02:07
+solve it and perhaps solving that
+02:09
+problem will fix the other problems as
+02:11
+well let's focus on the problem of
+02:14
+connectivity within VLAN 10 let's go on
+02:17
+switch 1 and investigate enable let's
+02:23
+see if there are problems with our VLANs
+02:25
+show VLAN brief looks like we have the
+02:29
+VLANs we want and the correct interfaces
+02:32
+are assigned to them however if you look
+02:35
+carefully you can spot something wrong
+02:37
+here gig 0 1 is shown under the default
+02:41
+VLAN VLAN 1 it's supposed to be a trunk
+02:45
+link show interfaces trunk indeed we
+02:50
+have no trunk configured show run gig 0
+02:57
+1 is configured in access mode let's fix
+03:00
+that
+03:00
+coffee tea interface G 0 1 switch port
+03:05
+mode trunk do show interfaces trunk ok
+03:10
+now our trunk is working can you ping
+03:13
+from pc1 to pc2
+03:17
+Bing 1000 5 no we still can't let's move
+03:26
+on to switch to enable let's check the
+03:32
+VLANs here show VLAN brief so we don't
+03:39
+see our gig 0 1 & gig 0 2 interfaces
+03:42
+which is good because there trunks but
+03:45
+there is a problem here this problem
+03:48
+actually isn't relevant to VLAN 10
+03:50
+connectivity but it will solve another
+03:51
+problem F 0 1 and F 0 2 are both
+03:55
+supposed to be in VLAN 40 but F 0 2 is
+03:58
+in VLAN 50 let's move f02 to the correct
+04:03
+VLAN and see if that solves the problem
+04:04
+of VLAN 40 connectivity call 50
+04:08
+interface f0 to
+04:11
+switch port access VLAN 40 exit also
+04:16
+let's delete VLAN 50 no VLAN 50 do show
+04:22
+VLAN brief there we go let's see if that
+04:28
+solved our VLAN 40 connectivity problem
+04:31
+I'll ping from PC 3 to pc 4 ping 1000
+04:38
+dot 4 ok it works now that's not the
+04:46
+problem we were focusing on but we
+04:47
+solved it let's go on to switch 3 now an
+04:53
+able show VLAN brief ok I think the
+04:58
+problem here is pretty clear
+05:00
+VLANs 10 20 and 30 don't exist show run
+05:07
+the interfaces are assigned to the
+05:10
+correct VLANs but the VLANs must have
+05:12
+been deleted afterward let's create the
+05:14
+VLANs again coffee tea VLAN 10 we can't
+05:20
+create VLANs because we are a VIP client
+05:23
+so that suggests the real problem is
+05:25
+with VTP let's check do show VTP status
+05:32
+there's a problem switch 3 is in VTP
+05:36
+domain ccnp it's supposed to be CCNA
+05:40
+let's change that VTP domain CCNA do
+05:47
+show VTP status ok now we're back in the
+05:51
+correct domain let's check if our VLANs
+05:54
+are back do show VLAN brief there they
+06:01
+are
+06:02
+ok so that probably solved the remaining
+06:05
+problems let's try to ping within the
+06:07
+same VLANs again I'll ping from pc1 to
+06:10
+pc2 1000 5
+06:19
+okay it works this time now let's try in
+06:22
+VLAN 20 I'll ping from PC 8 to PC 9 ping
+06:28
+1000 9 okay no problems there now
+06:35
+and finally VLAN 30 I'll pin from PC 6
+06:39
+to PC 7 pin 1000 7 ok now it works we
+06:51
+have fixed the errors and achieved
+06:52
+connectivity in the network that's all
+06:55
+for this lab thank you for watching I
+07:00
+hope this lab and video have been
+07:01
+helpful for you please subscribe for
+07:04
+future labs like this which will be
+07:06
+released weekly if you have requests for
+07:09
+any specific labs let me know in the
+07:11
+comment section if you want to support
+07:14
+my channel
+07:14
+I accept Bitcoin and etherium donations
+07:17
+via the addresses in the description I
+07:19
+am also a brave verified publisher and
+07:22
+accept bat or basic attention token
+07:25
+donations in the brave browser
+

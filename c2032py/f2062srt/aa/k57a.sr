@@ -1,0 +1,295 @@
+00:00
+welcome to this free CCNA packet tracer
+00:03
+practice lab you can download the lab
+00:06
+file from the link in the description if
+00:08
+you like these labs please consider
+00:11
+supporting me via my patreon or the
+00:13
+cryptocurrency options in the
+00:14
+description also please subscribe to the
+00:18
+channel for more labs like this in this
+00:22
+lab we will configure OSPF version 3
+00:25
+until now the OSPF we have been
+00:28
+configuring is OSPF version 2 OSPF
+00:33
+version 3 however is used with ipv6 the
+00:38
+configuration is largely similar with
+00:40
+one major difference that actually makes
+00:42
+OSPF v3 simpler to configure let's get
+00:46
+started the first step is to create
+00:50
+loopback interfaces on each router these
+00:53
+will become the router ID for OSPF
+00:56
+although OSPF v3 is used with ipv6 the
+01:01
+router ID still comes in the form of an
+01:03
+ipv4 address that is a 32-bit number in
+01:07
+dotted decimal format
+01:09
+same with OSPF v to the router ID can be
+01:14
+manually configured if it's not manually
+01:17
+configured the highest ipv4 address on
+01:20
+the loopback interface will be used if
+01:23
+there is no loopback interface the
+01:26
+highest ipv4 address on a regular
+01:28
+interface will be used let's quickly
+01:30
+make these loop backs on our one first
+01:35
+enable compte interface l0 IP address
+01:43
+1.1 1.1 255 255 255 255 exit next are to
+01:54
+enable compte interface l0 IP address 2
+02:00
+2 2 2 255 255 255 255 exit next r3
+02:11
+enable coffee/tea interface l0 IP
+02:16
+address 3 3 3 3 255 255 255 255 exit
+02:24
+ok next are 4 enable coffee tea
+02:30
+interface l0 IP address 4.4.4 for 255
+02:36
+255 255 255 exit ok finally r5 enable
+02:45
+compte interface l0 IP address v dot v
+02:52
+dot v dot v 255.255.255.0 all for step 1
+03:01
+now let's enable OSPF v3 on each router
+03:05
+let's go back to our one to enter OSPF
+03:10
+v3 configuration mode just type ipv6 in
+03:14
+front of the regular OSPF command ipv6
+03:19
+router OSPF one however in OSPF v3 we
+03:25
+don't activate OSPF on each interface
+03:28
+from OSPF configuration mode we
+03:31
+configure it on each interface in
+03:33
+interface configuration mode so by using
+03:37
+the ipv6 router or SOS PF one command we
+03:41
+simply created the OSPF v3 process
+03:44
+number one
+03:45
+now let's activate OSPF v3 on G 0 0 and
+03:50
+G 0 1 interface G 0 0 we activate it
+03:56
+with this command ipv6 OSPF followed by
+04:02
+the process ID 1 then area then the area
+04:06
+number 1 that's it
+04:09
+interface G 0 1 IP v6 OSPF one area 1 ok
+04:17
+now let's go to our for also an area 1
+04:25
+now on our one we use the command ipv6
+04:29
+router OSPF one but we didn't actually
+04:32
+do any commands from that configuration
+04:33
+mode if we go directly to the interface
+04:36
+and enable OSPF v3 on it let's see what
+04:39
+happens interface g00 ipv6 OSPF one area
+04:47
+one do show run ok there it is on the
+04:53
+interface and there you can see that the
+04:58
+router created the OSPF v3 process
+05:01
+number one for us ok next let's
+05:05
+configure OSPF v3 on the remaining
+05:07
+routers make sure to put each interface
+05:10
+in the correct area our two next
+05:16
+interface g00 ipv6 OSPF one area one
+05:23
+interface g0 1 IP v6 OSPF one area zero
+05:31
+ok next is our 3 interface g 0 0 ipv6
+05:41
+OSPF one area 0 interface g 0 1 IP v6
+05:48
+OSPF one area - ok finally let's go on
+05:53
+our 5 interface g 0 0 ipv6 OSPF one area
+06:02
+- ok we have configured OSPF v3 on each
+06:07
+router let's wait a few seconds and then
+06:10
+check if r5 has received all the routes
+06:12
+it should be receiving
+06:20
+okay now before we check that let's use
+06:23
+a couple of show commands here on r5
+06:26
+typically I'd use commands like show IP
+06:29
+protocols show IP ospf for show IP ospf
+06:32
+neighbor
+06:34
+however for OSPF v3 we have to change
+06:38
+the IP in those commands to ipv6 show
+06:42
+ipv6 protocols as you can see this gives
+06:46
+us minimal information but it does show
+06:49
+which interfaces are when are in which
+06:51
+areas which is useful show ipv6 OSPF
+06:58
+this command gives us more details
+07:00
+including things like timers you can see
+07:03
+the router idea of v dot v dot v dot v
+07:06
+which was inherited from loopback zeros
+07:08
+ipv4 address show ipv6 OSPF neighbor
+07:15
+here you can see our 5s OSPF v3 neighbor
+07:18
+ship with r3
+07:20
+ok now let's check those reps do show
+07:26
+ipv6 repped looks like we have the OSPF
+07:32
+routes we need and the o i indicates
+07:35
+OSPF inter area routes since these
+07:38
+networks are all outside of our 5s area
+07:41
+- ok now we have one more task our one
+07:46
+is connected to the internet so let's
+07:49
+make a default route on r1 and then
+07:51
+advertise it into OSPF first let's
+07:57
+create the default route so we start
+08:01
+with ipv6 route and then to make a
+08:05
+default route type a double colon
+08:07
+followed by a slash 0 mask then let's
+08:12
+give it a next hop of 2001 DB 8 0 1 0 1
+08:19
+double colon - ok do show ipv6 route
+08:26
+okay there's the route now to advertise
+08:30
+the route into OSPF v3
+08:32
+first enter OSPF v3 configuration mode
+08:36
+ipv6 router OSPF one now the command to
+08:43
+advertise a default route into OSPF v3
+08:46
+is the same as in OSPF v2 for ipv4
+08:50
+however I didn't include this command in
+08:52
+the previous lab so I wanted to show it
+08:54
+in this lab that command is default
+08:58
+information originate that's it okay so
+09:04
+now let's go to one of the other routers
+09:06
+and see if the default route appears
+09:08
+I'll go check out our to do show ipv6
+09:17
+route there it is right at the top in
+09:22
+this lab we looked at OSPF v3 which is
+09:26
+used for ipv6 there isn't much
+09:29
+difference between it and OSPF v2 just
+09:33
+remember to configure it at the
+09:34
+interface level that's all for this lab
+09:38
+thank you for watching I hope this lab
+09:41
+and video have been helpful for you
+09:43
+please subscribe for future labs like
+09:46
+this which will be released weekly if
+09:49
+you have requests for any specific labs
+09:51
+let me know in the comment section if
+09:54
+you want to support my channel I accept
+09:57
+Bitcoin and aetherium donations via the
+09:59
+addresses in the description I am also a
+10:02
+brave verified publisher and accept bat
+10:05
+or basic attention token donations in
+10:08
+the brave browser
+CCNA Routing & Switch

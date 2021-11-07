@@ -1,0 +1,154 @@
+welcome back to another Inkscape tutorial
+in this video I want to talk a little bit more deeply about exporting your artwork
+and some considerations for if you're creating artwork for print design or for web design
+and some of the different ways you'd go about exporting that
+I had a comment on the YouTube channel from Jim Carnegie
+and he was asking about how to create a nice smaller file size for uploading to web pages
+and so we're gonna talk a little about that to Jim
+and so first if we got a file and go to export PNG we know what brings up this dialog here
+and I also had another comment there was a lady asking about this
+and because if you go to if you dock it over here
+you click this little icon
+icon if I this dock
+and then if we go to file export PNG it doesn't show up
+so just be aware and that's not only with the export tool it's with any tool our fill and stroke are align and distribute when we dock if I something
+it just appears on this little dock here and it can be kind of confusing
+but that's how we get it to open if it's already open
+and again if it's not open we go to file export PNG image
+okay so the settings for how we export our image or over here
+we have our export area if we set up the page it works off of this black page outline
+which isn't shown in our final file
+but it's gonna export and this one happens to be like I think it's 1024 pixels by 1024 pixels
+and so the actual image that'll get exported is gonna be this 981 by 981 at 92 dpi
+so what's going to affect our file size is going to be the width and the height and then also this dpi dots per inch
+doesn't matter what units were working in in fact if we change this to millimeters change it to centimeters or pixels it doesn't really matter
+because this is always going to be in pixels our image size our dpi is always pixels and our width and height there's always in pixels
+if we click on drawing this is going to export whatever is drawn whether it's within or outside of the page
+I push the minus key to zoom out a little bit
+I can draw some stars over here
+and now when we go to export
+so if we export the drawing it's gonna take every that's drawn
+even if there's a teeny-tiny little star out here
+and if we go to export drawing we see our size now is massive
+it's four thousand pixels by four thousand pixels
+so this is gonna save to my desktop
+and it's gonna be called P PNG I'll hit export
+and now that appears over here
+and we see it's kind of large
+it's a little more that's like a then it's like a third of a megabyte it's three hundred and sixty-four kilobytes
+and we can open that up and see it's sure enough exports the penguin down here with all the stars
+and this last star here
+so it'll export whatever the limits of our drying are
+as opposed to page if week this click page and now we keep everything the same and hit export
+and replace
+well now this is what it looks like our final image is like this and it's about half the size
+it's a hundred and eighty one kilobytes
+because we export just the page
+even though look our star over here is selected
+we have our star selected
+but if we go to export
+it's going to still export
+just this picture of the penguin that's because it's exporting the page not the selection
+if we want to export that just this star we click on the selection
+and it'll export the star
+now if I just leave everything the same well looks like it changed our path
+so I might need to go in here and just make sure that
+I'm receiving over top of this
+and click replace
+now it's the star and that star is only twenty point six kilobytes
+even though it was roughly I think it's about roughly the same size as the penguin
+see it's a lot smaller because it just has a lot less detail
+and not as many gradients not as many nodes and different points there
+and so that's not to remember to your file size is gonna depend on how complex your thing is if we just select all three of these here
+and then we go to export selection
+we'll see how large this is
+so this is about twice the size to have all these in here but it's still not very large at all 44 kilobytes
+so anything under a megabyte is gonna be pretty good
+let me just tell you as a rule of thumb what I would recommend if I was exporting this I'm gonna delete these stars
+if I was going to export this penguin for a webpage
+I would select the whole thing
+I would choose selection for my export options
+I would set the pixels to this 92 dpi which is what it is
+and I would have the width and height to be no larger than 1920 in one direction
+so this would be 1920 by 1980 that's still very very large in fact what I'd probably do is go to 1080 in one direction
+and what that's gonna do if I just come over here
+and go to save export replace
+so now we have a nice large picture here
+and we see if we if we look at it full screen it looks perfect for our screen because my screen right here is 1920 pixels wide by 1080 pixels high
+if we zoom in it'll get a little bit grainy here but it's not too bad because no one's really gonna zoom in this far
+in a web page in fact look it can probably get away with being a lot smaller than this
+so rather than selecting it and trying to shrink it down like this
+I'll just leave it I don't care what size it is over here
+I'll change the size on the image size over here
+the export size if I wanted to do speed like 512 by 512 or roughly it's not completely square
+and I'll change this to 92 dpi again
+and now this will be a smaller file size and a spot a smaller image without ever having to resize it over here on my canvas
+so hit export replace and now it's half the size it's kind of hard to see here
+but now if we zoom in it gets a little bit more grainy more quickly
+does that make sense let's say I wanted to print this and this file size right now is 180 3.7 kilobytes
+so let's say I wanted to print this
+I can leave it the same size again select the whole thing
+I almost always do this selection export
+I don't usually do drawing drawings
+and very dangerous to do I don't usually do custom
+sometimes I'll do page
+but if I wanted to print this maybe on like a t-shirt or a business card or something
+or I want to import it into another program to print
+I would set my dpi well first I get the size that I want I change this to well as we put pixels down here I change it to inches I might change my
+my units two inches over here
+so maybe I would resize this here
+change the units to inches and maybe I want to print this on the side of a vehicle
+and I want it to be I would lock this and I would I want it to be a 24 inches high
+and then however wide that would make it
+and I can move it over here it doesn't matter if I'm outside of my page bounds
+doesn't matter if there's other objects drawn over here
+because with all of this selected
+then I will go to selection
+and now it's it's gonna be about 24 inches by 24 inches
+and I will change this to
+if you're putting it on your own unlike your printer at home you do like 300 dpi
+if you're having a professional company printed
+you do 600 so if I gotta do 600 dpi
+so this is gonna be quite large
+if we export this
+it was 183 kilobytes before look how long it's taken to export this is just massive
+so I was taking a huge long time
+which tells me I might have done something wrong when we pause the video and let this finish exporting
+so this file that got created it took about a minute to create and it's 9.1 megabytes
+that's actually not too bad of a file that's something that we could send to a printer and even though it's a little bit large
+they want it really large for their printer they want as much data as they can get
+so they can zoom in and of course with the vector graphics if we zoom in we never lose clarity while it's here in Inkscape
+but once it's exported we could zoom out
+and we and we could zoom in and it would start to get a little bit pixelated
+we can see if we can open this file here
+let me open it with a different program
+it's open it in darktable
+okay so this is open here in darktable
+and we can see we can actually come in here and click on it and look
+so we can see this is the actual PNG image
+and if we zoom in here it's very sharp
+this is not an SVG but it's just so incredibly sharp when we scale it gets pixelated
+but that's just because we're moving around
+that's related to a dark table
+so we can see here this is very large this is I think 100% this is this is how far we can zoom in before it starts to get pixel
+probably larger than you'd need a mess you're printing on like a billboard unless your printer asks for a huge huge huge file
+so let's just a little bit about how to keep your file sizes manageable if you're doing print design it's okay to have a large file
+it's just a little bit cumbersome to work with but you want that file to be quite large
+I recommend doing 600 dpi when you're printing
+unless you're printing at home on your printer in that case do 300 dpi
+and then I would recommend doing like I said 92 for web if you really want to get kind of like a very small file you can do 72 between 92 and 72 for that
+and then your sizing if it's gonna be a little icon a common size for icons is 256 by 256
+or you can do like 512 by 512 just you know keep it in mind that the screen size is 1920 by 1080
+so if you're designing something for us screen you know you rarely want to go above 1080i don't think
+or maybe 1920 but anyway
+that's a little bit of consideration
+and how to reduce that file size
+and I just recommend getting more comfortable that this confuses a lot of people what you're exporting
+and then the unit's you're exporting in again changing this here doesn't affect the unit's down here this is always going to be in pixels
+so you don't have to do a little bit of math on that in your head to figure things out
+that's what I wanted to show you in this video
+I realize a lot of that information is probably a repeat but just get comfortable with this
+and hopefully that clarifies a little bit about exporting your artwork
+and getting it into other programs and/or printing
+thanks for watching go ahead and leave your questions comments below if you have any
+and I'll catch you in the next video

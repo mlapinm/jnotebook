@@ -1,0 +1,558 @@
+444
+00:58:43,120 --> 00:59:16,570
+the game, please let me know below. And I'll
+try to get back to you. Thank you. Hi, everyone,
+
+445
+00:59:16,570 --> 00:59:23,270
+we are now at game six out of seven of our
+JavaScript games course. We only have one
+
+446
+00:59:23,270 --> 00:59:28,700
+more grid based game to make after this until
+you have at seven fully functioning JavaScript
+
+447
+00:59:28,700 --> 00:59:33,930
+games for your portfolio. In this tutorial,
+we're going to make Frogger in which we're
+
+448
+00:59:33,930 --> 00:59:39,450
+going to be looking at every single function
+that you have learnt before in the previous
+
+449
+00:59:39,450 --> 00:59:43,990
+five games. So yeah, if you haven't watched
+the previous videos definitely do that now
+
+450
+00:59:43,990 --> 00:59:48,270
+before watching this one. But we are going
+to be taking them that extra level so making
+
+451
+00:59:48,270 --> 00:59:55,920
+them do more complicated things. As always
+minimal styling, I've gone max five minutes
+
+452
+00:59:55,920 --> 01:00:02,330
+doing the styling on this. So Frogger is a
+simple Bass game in which you as the user
+
+453
+01:00:02,330 --> 01:00:09,110
+and frog style at the bottom of the grid and
+have two obstacles to pass to get your home,
+
+454
+01:00:09,110 --> 01:00:16,080
+which is at the top of the grid based game.
+The first obstacle is a road in which little
+
+455
+01:00:16,080 --> 01:00:20,550
+cars are going from one side of the other
+new race car to avoid them like this. Once
+
+456
+01:00:20,550 --> 01:00:26,200
+you avoid that, that is the second hurdle
+of the river. This is basically flipped on
+
+457
+01:00:26,200 --> 01:00:31,210
+its head. So instead of avoiding things in
+it, you have to jump on things in it. So you're
+
+458
+01:00:31,210 --> 01:00:36,220
+gonna have to jump on the logs in the river.
+In order to get to the home. What's cool about
+
+459
+01:00:36,220 --> 01:00:41,160
+this is actually one of the frog is on the
+log is gonna have to move with the log until
+
+460
+01:00:41,160 --> 01:00:45,380
+it can jump off. So that's gonna be really
+fun to build. I'm really excited to walk you
+
+461
+01:00:45,380 --> 01:00:57,160
+through this. So yeah, let's get going. So
+first, let's set up a project with the correct
+
+462
+01:00:57,160 --> 01:01:05,270
+files in our folder. We have the app j s for
+our JavaScript, index, HTML for our HTML code,
+
+463
+01:01:05,270 --> 01:01:13,920
+and style CSS for our CSS styling. Let's start
+with the HTML by adding some HTML boilerplate,
+
+464
+01:01:13,920 --> 01:01:19,200
+we will add a title of Fraga for our project
+that will not visually render in the browser,
+
+465
+01:01:19,200 --> 01:01:26,390
+but show up on the tab. We next need to link
+our stylesheet using a link tag like this
+
+466
+01:01:26,390 --> 01:01:32,890
+to the correct file using an href and link
+our JavaScript file again using source and
+
+467
+01:01:32,890 --> 01:01:41,220
+the correct file name of app j s where we
+saw our JavaScript code. Now we have that
+
+468
+01:01:41,220 --> 01:01:48,220
+let's do some basic visualization of the grid
+and add a start and pause button for the game.
+
+469
+01:01:48,220 --> 01:02:16,120
+And an h3 tag let us know how much time we
+have left or whether we have won or lost.
+
+470
+01:02:16,120 --> 01:02:22,830
+Let's add the Start button and h3 tags to
+give them unique IDs instead of class names.
+
+471
+01:02:22,830 --> 01:02:45,970
+I am also going to hard code the time left
+to display was 20. Okay, now let's flip over
+
+472
+01:02:45,970 --> 01:02:53,830
+to our CSS file. Add the following styling
+to make our list of divs and the HTML look
+
+473
+01:02:53,830 --> 01:03:00,700
+like an actual grid. What we are doing here
+is making the divs wrapper rechab using Flexbox.
+
+474
+01:03:00,700 --> 01:03:06,670
+Each div inside a div with a class name grid,
+we are assigning a height and width of 20
+
+475
+01:03:06,670 --> 01:03:17,411
+pixels because under an 80 divided by nine
+is 20. And we want a nine by nine grid. So
+
+476
+01:03:17,411 --> 01:03:22,480
+now right click your index HTML file to open
+it in the browser. And this is what we will
+
+477
+01:03:22,480 --> 01:03:39,430
+see. Now let's assign colors to our ending
+block, starting block and our frog flip back
+
+478
+01:03:39,430 --> 01:03:52,630
+to your HTML file and hard code these in to
+the fifth div down on the fifth from the bottom.
+
+479
+01:03:52,630 --> 01:04:00,290
+This is what it should now look like in your
+browser. Okay, now let's add some functionality
+
+480
+01:04:00,290 --> 01:04:08,010
+to the frog that we have hard coded, not hard
+coded, but we'll add to our HTML using JavaScript.
+
+481
+01:04:08,010 --> 01:04:15,840
+Flip over to your app js file and add an event
+listener like this. Okay, all our code will
+
+482
+01:04:15,840 --> 01:04:24,370
+be done in this event listener. Now let's
+pick our elements from my HTML file using
+
+483
+01:04:24,370 --> 01:04:31,230
+constants and query selectors like this. Know
+how we use query selector all for the divs
+
+484
+01:04:31,230 --> 01:04:35,950
+inside a div with the class name grid. This
+is because we want all the divs in there and
+
+485
+01:04:35,950 --> 01:05:35,309
+also see how we use dot for class names and
+hashes for picking out ideas. So now if I
+
+486
+01:05:35,309 --> 01:05:39,430
+want to show the frog my grid, I can simply
+add the class name of frog to a square and
+
+487
+01:05:39,430 --> 01:05:50,650
+the grid of index 76 using JavaScript like
+this. Now flip over to my browser, hit refresh,
+
+488
+01:05:50,650 --> 01:06:06,010
+and okay now add a timer ID and leave it as
+that for now. This is here for our countdown
+
+489
+01:06:06,010 --> 01:06:13,590
+that we will build later. The first we are
+going to do is make a frog move when you press
+
+490
+01:06:13,590 --> 01:06:19,380
+on your keyboard. For this, you need to know
+the key codes to your keyboard up down left
+
+491
+01:06:19,380 --> 01:06:24,340
+and right buttons, you can easily Google or
+the key codes to your entire keyboard. For
+
+492
+01:06:24,340 --> 01:06:28,760
+now, I'm just going to tell you the key codes
+for the ones we want. We are going to write
+
+493
+01:06:28,760 --> 01:06:38,930
+the function and pass it through an E or an
+event we're going to remove the frog from
+
+494
+01:06:38,930 --> 01:06:44,510
+whatever current squared is in and then using
+event and keycodes decide which way the frog
+
+495
+01:06:44,510 --> 01:06:54,540
+is going to go using switch cases. So in this
+case, if key 37 is pressed, so are left on
+
+496
+01:06:54,540 --> 01:07:00,050
+your keyboard. And if the current index is
+divisible by the width with a remainder, we're
+
+497
+01:07:00,050 --> 01:07:05,940
+the frog left one space. Do you see the key
+38 so the up arrow moving the frog a whole
+
+498
+01:07:05,940 --> 01:07:12,690
+width back visually displaying as if it was
+going up one square, then for keys 39 or our
+
+499
+01:07:12,690 --> 01:08:24,989
+right and key 40 are down. Then we draw the
+frog on each key press we also want to check
+
+500
+01:08:24,989 --> 01:08:33,190
+if the frog has done anything that would result
+in winning or losing let's put in these functions
+
+501
+01:08:33,190 --> 01:08:38,250
+that we will write in a bit. So if you try
+and move your probe now these functions will
+
+502
+01:08:38,250 --> 01:08:43,259
+not work as they did not observe some will
+break your code so just bear that in mind.
+
+503
+01:08:43,259 --> 01:08:50,190
+Okay, now let's get to rendering the first
+obstacle the frog needs to cross so that will
+
+504
+01:08:50,190 --> 01:08:55,769
+be the road with cause that needs to be avoided.
+Then the second obstacle which is a river
+
+505
+01:08:55,769 --> 01:09:00,900
+with some logs, frogs needs to jump on to
+cross you will see here and my finished game
+
+506
+01:09:00,900 --> 01:09:05,960
+that the cars moving left are actually just
+on a loop being rendered and three squares
+
+507
+01:09:05,960 --> 01:09:13,569
+123 and then repeat. Same for the card game
+right. And even the logs are on this loop
+
+508
+01:09:13,569 --> 01:09:19,889
+just a loop of five squares random instead
+goes through HTML and other following class
+
+509
+01:09:19,889 --> 01:09:25,769
+names your days making sure to start from
+the 19th down or for JavaScript sake index
+
+510
+01:09:25,769 --> 01:10:08,289
+18. And the same for the road. So diff 46,
+but index 45 And now flip over is your CSS
+
+511
+01:10:08,289 --> 01:10:30,659
+file and add some colors so we know what is
+road call river, or loc. Now Save and refresh
+
+512
+01:10:30,659 --> 01:10:40,849
+the browser. And there we go, we can see a
+road here river, some logs and some cars.
+
+513
+01:10:40,849 --> 01:10:46,719
+Now back in our JavaScript file, let's write
+a function that will make all the divs with
+
+514
+01:10:46,719 --> 01:10:54,830
+a class name of car left, go left, and the
+divs of class name car right, go right. First,
+
+515
+01:10:54,830 --> 01:11:02,889
+let's pick out these debts from HTML and add
+that to the top of our project. We might as
+
+516
+01:11:02,889 --> 01:11:26,380
+well add the others to 
+
+517
+01:11:26,380 --> 01:11:31,530
+now let's write a function called auto move
+cars in this function where we use arrow functions
+
+518
+01:11:31,530 --> 01:11:36,760
+that will allow us to give a name to individual
+devs from all our devs called cause left and
+
+519
+01:11:36,760 --> 01:11:44,250
+passing through a function, we will do this
+using for each so for each Doom that has a
+
+520
+01:11:44,250 --> 01:11:52,010
+class name, cause left pass through a function
+called move car left, that will make the day
+
+521
+01:11:52,010 --> 01:11:59,679
+go left and the same for cars right. Okay,
+now let's write that move car left function
+
+522
+01:11:59,679 --> 01:12:04,480
+that technically is just going to rerender
+three days every second, we use a switch for
+
+523
+01:12:04,480 --> 01:12:42,710
+this and pass through the car left we got
+from the function automotive costs. Now for
+
+524
+01:12:42,710 --> 01:13:15,630
+the common good, right on the same logic as
+above. Now let's do the exact same for the
+
+525
+01:13:15,630 --> 01:15:24,560
+logs. One loop three, rendering five devs
+every second Okay, now let's write all this
+
+526
+01:15:24,560 --> 01:15:32,739
+function. So if the time runs out, or is equal
+to zero, or two using these two parallel lines
+
+527
+01:15:32,739 --> 01:15:40,230
+means or, or the square the frog is currently
+and contains a C one class name to call, or
+
+528
+01:15:40,230 --> 01:15:45,869
+l five class name. So blue and engaging river,
+or l four class name, which again is a river
+
+529
+01:15:45,869 --> 01:15:54,470
+it loses. Again, we display the reducing message,
+remove the frog, clear the timer from the
+
+530
+01:15:54,470 --> 01:16:19,210
+countdown and stop the frog movie. Now the
+final functionality we need to give our game
+
+531
+01:16:19,210 --> 01:16:23,630
+is make sure that the frog is on the log.
+So when it's on the log and moves with the
+
+532
+01:16:23,630 --> 01:16:31,030
+log, so in the river, or the frog is in the
+squares index of bigger than or equal to 27,
+
+533
+01:16:31,030 --> 01:16:36,980
+and smaller to 35. Move the frog left, it
+doesn't matter that we actually including
+
+534
+01:16:36,980 --> 01:16:49,590
+the river does in here as well as the frog
+automatically loses if it goes in there. So
+
+535
+01:16:49,590 --> 01:17:13,320
+don't worry about that. That's fine. Okay.
+Do the same. The Right. Okay, now we need
+
+536
+01:17:13,320 --> 01:17:19,280
+to invoke all of our functions to happen every
+second, every second year, we need to move
+
+537
+01:17:19,280 --> 01:17:25,409
+a car or log, make sure to move the frog if
+it's on a log, and evoke lose if it's standing
+
+538
+01:17:25,409 --> 01:17:30,050
+in a square that a car is going into it let's
+call this function move piece. Note we need
+
+539
+01:17:30,050 --> 01:17:37,390
+to pass loose in there. And in our moving
+frog function. If we don't have it here, cause
+
+540
+01:17:37,390 --> 01:17:47,440
+we'll be able to pass through our frog willy
+nilly. You also use our logic to make our
+
+541
+01:17:47,440 --> 01:17:54,969
+current time go down by one every second and
+update the time left div in our HTML to show
+
+542
+01:17:54,969 --> 01:18:03,559
+this to our user. Finally, we need to pass
+through the movies function into a countdown
+
+543
+01:18:03,559 --> 01:18:10,449
+that goes down every second. We do this by
+adding an event listener to a start button.
+
+544
+01:18:10,449 --> 01:18:15,630
+We will also be making the button double up
+was a pause button which is quite cool. So
+
+545
+01:18:15,630 --> 01:18:23,119
+on click, we do an if else statement. By using
+set interval like this, we are making sure
+
+546
+01:18:23,119 --> 01:18:30,881
+the move pieces function is invoked every
+second until the timer ID equals zero. We
+
+547
+01:18:30,881 --> 01:18:35,550
+also want to make sure that the frog can only
+move when the game has started. So we add
+
+548
+01:18:35,550 --> 01:18:43,639
+in our event listener to start the move frog
+move frog function we were above here. As
+
+549
+01:18:43,639 --> 01:18:54,480
+you can see, something's not working. Let's
+have a look. That's because I need to use
+
+550
+01:18:54,480 --> 01:19:10,010
+document query selector all because we're
+selecting all the divs let's change that here
+
+551
+01:19:10,010 --> 01:19:16,320
+and here. Okay, we need to change this. And
+there you have it your very own Frogger game.
+
+552
+01:19:16,320 --> 01:19:21,630
+How'd you like my tutorial? Feel free to comment
+if you'd like some more information, or if
+
+553
+01:19:21,630 --> 01:19:26,679
+I haven't explained something very well. Please
+do subscribe for more videos are really into
+
+554
+01:19:26,679 --> 01:19:30,630
+making grid based games at the moment and
+pure JavaScript. So if you can think of any
+
+555
+01:19:30,630 --> 01:19:43,239
+cool ones, let me know and I'll try have a
+go at it. Thank you. Hi, everyone, and welcome

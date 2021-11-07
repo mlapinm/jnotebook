@@ -1,0 +1,251 @@
+00:00
+welcome to this free CCNA packet tracer
+00:03
+practice lab you can download the lab
+00:06
+file from the link in the description if
+00:09
+you like these labs please consider
+00:11
+supporting me via my patreon or the
+00:13
+cryptocurrency options in the
+00:14
+description also please subscribe to the
+00:18
+channel for more labs like this this lab
+00:22
+is really a review of material we have
+00:24
+practiced in the icnd1 labs VLANs trunks
+00:28
+and DTP however these topics are in the
+00:32
+icnd2 exam topics as well so let's
+00:36
+review them one more time the first step
+00:40
+is to disable negotiation of trunk ports
+00:43
+and manually configure the mode of each
+00:45
+switch port in use DTP can dynamically
+00:49
+determine whether a switch port should
+00:50
+be a trunk or an access port for example
+00:54
+if you connect a switch port to a port
+00:56
+on another switch that is a trunk the
+00:58
+switch port will become a trunk as well
+01:00
+let's check on switch 1 and switch 2 I
+01:03
+haven't done any configuration yet so
+01:05
+DTP is enabled on both and there should
+01:09
+be an access mode at the moment I'll go
+01:11
+on switch 1 enable show interface g0 to
+01:18
+switchboard see it's in dynamic auto
+01:23
+mode by default meaning if it's
+01:25
+connected to a trunk or a port in
+01:27
+dynamic desireable mode it will become a
+01:30
+trunk port as well however really these
+01:34
+configuration should all be done
+01:35
+manually
+01:36
+for security reasons also Saudi TP is
+01:39
+something you should always disable just
+01:41
+to show you the commands however compte
+01:45
+interface g0 to switch port mode dynamic
+01:50
+and let's check the options auto is as I
+01:55
+said before it will become a trunk port
+01:57
+if connected to a dynamic desirable port
+01:59
+and desirable mode actively tries to
+02:02
+form trunk ports with both auto and
+02:04
+other desirable mode ports let's do the
+02:09
+smart thing and disable DTP then
+02:11
+manually set the mode of each switch
+02:13
+port
+02:13
+so switchport no negotiate that disables
+02:18
+DTP switchport mode trunk
+02:21
+okay now let's configure switch ones
+02:23
+other ports g1 should be a trunk as it
+02:27
+leads to r1 for inter VLAN routing and F
+02:31
+0 1 and F 0 2 should be access ports
+02:34
+interface G 0 1 switch port mode trunk
+02:39
+switch port no negotiate interface range
+02:43
+F 0 1 2 - switch port mode access switch
+02:50
+port no negotiate ok let's go to switch
+02:54
+to now enable look at this message we
+02:58
+got on switch to blocking Gigabit
+03:01
+Ethernet 0 1 inconsistent port type
+03:05
+switch ones G 0 2 interface is a trunk
+03:09
+however because DTP is disabled it's not
+03:13
+sending packets to switch to so that
+03:15
+switch twos dynamic G user 1 interface
+03:17
+can become a trunk as well therefore
+03:20
+well switch ones G 0 2 interface is a
+03:23
+trunk switch to SG 0 1 interface remains
+03:26
+an access port so there is an
+03:28
+inconsistent port type let's make this a
+03:31
+trunk to compte interface G 0 1 switch
+03:37
+port mode trunk switch port no negotiate
+03:40
+okay next interface range F 0 1 - 2
+03:45
+switch port mode access switch port no
+03:49
+negotiate okay that's all for step 1
+03:54
+step 2 is to assign the pcs to the
+03:57
+correct VLANs pc1 & pc2 P&V line 13 and
+04:02
+PC 2 and PC for should be in VLAN 24 I'm
+04:07
+on switched to now so let's assign PC 3
+04:10
+and PC for to the correct VLANs
+04:12
+interface F 0 1 switch port access VLAN
+04:17
+13 interface F 0 to switch port access
+04:22
+VLAN 24 now let's go back to switch 1
+04:27
+interface f01 switch port access VLAN 13
+04:33
+interface f02 switch for access VLAN 24
+04:40
+okay we have assigned the PCs to the
+04:43
+correct VLANs r1 has already been
+04:46
+configured for inter VLAN routing let's
+04:48
+just check the configuration enable
+04:53
+shall run the gig 0/0 interface itself
+04:58
+has no IP address but I've configured
+05:00
+two sub interfaces one for each VLAN the
+05:04
+encapsulation dot1q command sets the
+05:07
+VLAN of the sub interface thirteen and
+05:10
+fourteen and then we set the IP address
+05:12
+for the sub interface make sure these
+05:15
+addresses are set as the default
+05:17
+gateways for the pcs I already configure
+05:20
+the pcs so everything should work fine
+05:22
+now let's try some pings from pc1 to
+05:25
+make sure we have connectivity let's
+05:29
+ping PC three first which is in the same
+05:31
+VLAN but connected to a different switch
+05:34
+pink 1300 13 it works okay and now let's
+05:45
+ping PC 2 which is in a different VLAN
+05:48
+but connected to the same switch ping
+05:53
+2400 12 it works so our inter VLAN
+06:02
+routing is working let's try to ping PC
+06:05
+4 as well in a different VLAN and
+06:08
+connected to a different switch ping
+06:11
+2400 14
+06:18
+it works too in this lab we took a brief
+06:23
+look at DTP disabled it and configured
+06:26
+VLANs and switch port mode that's all
+06:29
+for this lab thank you for watching I
+06:35
+hope this lab and video have been
+06:37
+helpful for you please subscribe for
+06:39
+future labs like this which will be
+06:41
+released weekly if you have requests for
+06:44
+any specific labs let me know in the
+06:46
+comments section if you want to support
+06:49
+my channel I accept Bitcoin and
+06:51
+aetherium donations via the addresses in
+06:53
+the description I am also a brave
+06:56
+verified publisher and accept bat or
+06:59
+basic attention token donations in the
+07:01
+brave browser
+

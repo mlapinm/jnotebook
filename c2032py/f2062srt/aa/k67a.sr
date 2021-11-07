@@ -1,0 +1,351 @@
+00:00
+welcome to this free CCNA packet racer
+00:03
+practice lab you can download the lab
+00:06
+file from the link in the description if
+00:08
+you like these labs please consider
+00:11
+supporting me via my patreon or the
+00:13
+cryptocurrency options in the
+00:15
+description also please subscribe to the
+00:18
+channel for more labs like this and
+00:20
+share these videos with anyone else
+00:22
+studying for the CCNA in this lab we
+00:26
+will configure BGP the border gateway
+00:29
+protocol
+00:30
+unlike rip AIG RP and OSPF which are
+00:35
+iGPS or interior gateway protocols BGP
+00:40
+is an eg P an exterior gateway protocol
+00:44
+while I GPS are used for routing within
+00:47
+an organization eg PS are used for
+00:50
+routing between organizations and these
+00:53
+days BGP is really the only EGP in use
+00:58
+the extent to which you have to know BGP
+01:01
+is fairly limited for the CCNA you can
+01:05
+go deeper into BGP by continuing to the
+01:07
+ccnp or by looking at the service
+01:10
+provider track of certifications for the
+01:13
+CCNA routing and switching you have to
+01:16
+be able to configure external bgp or
+01:18
+ebgp for single home to branch
+01:21
+connectivity single home means a single
+01:25
+connection to a single internet service
+01:27
+provider as is the case here in this
+01:30
+network our organization is using BGP
+01:34
+autonomous system number 65,000 and is
+01:38
+connected to an Internet service
+01:40
+provider in a s60 5001 we will create a
+01:45
+bgp peering between r1 and SPR 1 so r1
+01:51
+will learn various desired routes from
+01:53
+SP r1 and r1 will advertise our internal
+01:57
+networks out to the service provider in
+02:00
+this case we will test by pinging to an
+02:03
+external server at 1500 won let's get
+02:07
+started first I'll go on r2
+02:12
+enable show IP route as you can see r2
+02:19
+has already learned various routes from
+02:20
+OSPF which is used within the
+02:23
+organization and has learned a default
+02:25
+route to the internet from r1 which use
+02:28
+the default information originated
+02:30
+command in OSPF however a ping to the
+02:34
+external server
+02:35
+15:01 won't work let's try ping 1500 dot
+02:41
+1 as expected the ping fails this is
+02:50
+because we haven't advertised our
+02:52
+internal networks to the service
+02:53
+provider so the pings have no return
+02:55
+path so let's go on r1 and configure BGP
+03:03
+enable con 47 mode type router bgp
+03:11
+followed by the a s or autonomous system
+03:14
+number in this case 65,000 a s numbers
+03:20
+are very important for BGP so make sure
+03:22
+you type them correctly now unlike OSPF
+03:26
+and EIGRP which dynamically discover
+03:28
+neighbors by being activated on
+03:30
+interfaces and sending multicast
+03:32
+messages in BGP we must manually specify
+03:36
+each neighbor and a TCP connection is
+03:39
+then made to form the peering you can do
+03:43
+that with this command neighbor 101 that
+03:48
+being the IP address of SP r1 the
+03:51
+service provider router and that next
+03:54
+remote - a s followed by the a s number
+03:58
+of the neighbor 65,000 won in this case
+04:03
+again a s numbers are very important for
+04:06
+BGP so make sure you enter your own a s
+04:09
+number correctly when entering BGP mode
+04:11
+and make sure you type the neighbors a s
+04:14
+number correctly when using the neighbor
+04:15
+command next let's move on to
+04:18
+advertising networks to review the
+04:22
+Network statement used in a EIGRP and
+04:24
+OSPF
+04:25
+the network command doesn't actually
+04:27
+specify which networks to advertise it
+04:30
+specifies which interfaces to activate
+04:32
+the protocol on and then those
+04:34
+interfaces networks are advertised so
+04:37
+when using the network command you don't
+04:39
+have to enter the exact network prefix
+04:41
+and mask however BGP is different in BGP
+04:47
+you have to enter the exact network and
+04:49
+mask and a matching route must be in
+04:52
+your routing table for example our one
+04:55
+has a loopback of 1.1.1 1/32 if I enter
+05:01
+100 with a / 8 mask in the network
+05:04
+command it won't work I have to enter
+05:08
+the exact 1.1.11
+05:10
+/ 32 network to advertise it so let's
+05:14
+advertise the loop Beck's do show IP
+05:18
+route as you can see I have rights to
+05:22
+1.1.11 / 32 - 2 - 2 / 32 and 3.33 3/32
+05:30
+so I can advertise them in BGP the BGP
+05:35
+Network command goes like this
+05:37
+Network 1.1.11 mask 255.255.255.0 5 you
+05:47
+have to type mask in the command and
+05:49
+also it's not a wildcard mask like in
+05:51
+Eid RP and OSPF it's a standard Network
+05:54
+mask okay let's do the others Network -
+05:59
+- - - mask 255.255.255.0 5 Network 3 3 3
+06:08
+3 mask 255.255.255.0 5 ok the next step
+06:15
+is to advertise a summary of the Tendo
+06:18
+12/30 10.23 o / 30 and 10.30 know / 30
+06:25
+networks with a single Network command
+06:27
+using a slash 16 mask now this is a
+06:31
+problem I said before there has to be a
+06:33
+match in the route table to advertise
+06:35
+something in BGP
+06:37
+do show IP route there is no 1000 2/16
+06:44
+network in the routing table here I'll
+06:47
+do the network command network 10000
+06:51
+mask 255.255.255.0
+07:11
+it still doesn't work because r1 is in
+07:13
+advertising that 1000 / 16 Network yet
+07:17
+because it doesn't have the route in its
+07:19
+route table so let's go back to our 1
+07:22
+and make a route exit IP route 10000 255
+07:31
+255 0 0 now what should we enter next
+07:35
+the answer is null 0 the null 0
+07:40
+interface essentially discards anything
+07:42
+that is sent to it why would we want to
+07:45
+use that well we wanted to create the
+07:48
+route to advertise it in BGP do show IP
+07:52
+route there's the 10000 / 16 route and
+07:58
+here are our more specific routes any
+08:02
+traffic that comes for the Tendo 12/30
+08:05
+10.30 no / 30 or 10.23 o / 30 networks
+08:11
+will be sent out their appropriate
+08:13
+interfaces because these have a more
+08:15
+specific meaning a longer network mask /
+08:18
+30 vs / 16 however if something comes
+08:23
+for the 1001 o / 24 Network for example
+08:27
+it won't match any of those and will
+08:30
+instead be sent to the null 0 interface
+08:32
+and discarded this is good because the
+08:36
+10.10 / 24 network isn't present in our
+08:39
+internal network so there's no point in
+08:42
+sending a packet destined for that
+08:43
+network any further than our one the use
+08:47
+of that null 0 interface can be a little
+08:49
+difficult to understand feel free to ask
+08:51
+questions if you're not sure about it
+08:53
+this use of a null interface is often
+08:56
+called a discard route by the way anyway
+09:01
+now the 10000 / 60 network is present in
+09:05
+our Rev table so that means r1 will be
+09:08
+advertising it to the service provider
+09:10
+so if we send a ping to the remote
+09:13
+server from r2 the ping reply should be
+09:15
+able to find its way back now let's try
+09:18
+on r2 ping 1500 won
+09:28
+there we go the ping works this time so
+09:31
+in this lab we configured an external
+09:33
+bgp neighbor advertised our internal
+09:36
+networks and looked at the idea of a
+09:38
+discard route that's all for this lab
+09:44
+thank you for watching I hope this lab
+09:46
+and video have been helpful for you
+09:48
+please subscribe for future labs like
+09:51
+this which will be released weekly if
+09:53
+you have requests for any specific labs
+09:56
+let me know in the comment section if
+09:58
+you want to support my channel I accept
+10:01
+Bitcoin and aetherium donations via the
+10:04
+addresses in the description I am also a
+10:07
+brave verified publisher and accept bat
+10:10
+or basic attention token donations in
+10:13
+the brave browser
+

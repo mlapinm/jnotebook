@@ -1,0 +1,269 @@
+00:00
+welcome to this free CCNA packet tracer
+00:03
+practice lab you can download the lab
+00:05
+file from the link in the description if
+00:08
+you like these labs please consider
+00:09
+supporting me via my patreon or the
+00:11
+cryptocurrency options in the
+00:13
+description in this lab we are going to
+00:16
+continue with what we learned in the
+00:18
+previous lab in this lab however there
+00:20
+are now four routers and there are a lot
+00:22
+more static routes that need to be
+00:24
+configured try to complete the lab
+00:26
+yourself first then continue watching if
+00:28
+you have trouble or watch it after to
+00:30
+check your solution so in the previous
+00:34
+video I mentioned that as a network gets
+00:36
+larger it becomes unfeasible to
+00:38
+configure primary and backup routes to
+00:40
+each destination manually in this lab we
+00:43
+aren't even going to configure backup
+00:45
+routes and just by adding a few extra
+00:46
+routers the amount of static routes to
+00:48
+be configured has increased quite a bit
+00:51
+so exactly how many routes will we have
+00:54
+to configure well let's look at our one
+00:57
+it is directly connected to three
+01:00
+networks 10.10 slash 24 192.168 12.0
+01:05
+slash 24 and 192.168.0 slash 24 so we
+01:12
+don't have to configure routes to these
+01:13
+networks that means we will have to
+01:15
+configure routes to 192.168 24 0/24
+01:22
+192.168.0 slash 24 10020 slash 24 10.30
+01:28
+slash 24 and 10.40 slash 24 so we will
+01:34
+have to configure five static routes on
+01:36
+our one we will have to configure the
+01:39
+same number of routes on each other
+01:41
+router so that's a total of 20 static
+01:43
+routes on the scale of things that's not
+01:46
+a huge number of routes to configure
+01:48
+however compared to the two routes we
+01:51
+had to configure in the previous lab
+01:52
+it's quite a jump this is still a very
+01:54
+small and simple network to on the scale
+01:57
+of things this lab will be quite
+01:59
+repetitive but also good practice be
+02:02
+careful of misconfigurations when doing
+02:04
+repetitive work like this I'll of course
+02:07
+be careful too but if you spot any
+02:08
+mistakes I'll give you a shout out in
+02:10
+another video
+02:16
+anyway let's get started I'll hop on r1
+02:22
+enable conf T so let's create the static
+02:27
+routes we mentioned before IP route
+02:31
+192.168 2400 255.255.255.0 with the next
+02:37
+top of 192.168 12.2 which is our two IP
+02:44
+route 192.168.0.0 255.255.255.0 with the
+02:50
+next top of 192.168 3 which is our 3 IP
+02:57
+route 10030 255.255.255.0 192.168.1.3
+03:04
+again our 3 is the next hop IP route
+03:09
+10020 255.255.255.0 192.168.1.2 next top
+03:16
+of our two IP route 10.40 255.255.255.0
+03:24
+now this one we have a choice there are
+03:27
+two routes of equal distance we could go
+03:29
+R 2 to R 4 or via R 3 to R 4 let's go
+03:35
+with r 2 is the next hop
+03:36
+so 192.168.1.2 ok R 1 is now complete
+03:43
+now let's go on r2 and configure the
+03:46
+required routes those being 192.168.0
+03:50
+slash 24 192.168 dirty for 0/24 10.10
+03:56
+slash 24 10 debt owed 3.0 slash 24 and
+03:59
+10.40 slash 24 enable conf t IP route
+04:08
+192.168.0 255.255.255.0 192.168 12.1 r1
+04:16
+is the next hop IP route 192.168.0
+04:22
+255.255.255.0
+04:24
+192.168 24.4 r4 is the next hop IP route
+04:31
+10.10 255.255.255.0 192.168 12.1 r1 is
+04:39
+the next hop IP route 10030
+04:45
+255.255.255.0 again we can choose
+04:48
+between two equal distance routes R 1 2
+04:52
+R 3 or R 4 2 R 3 let's go with r1 so
+04:56
+192.168 12.1 IP route 10 0 for 0 to 5 5
+05:03
+to 5 5 to 5 5 0
+05:06
+192.168 24.4 our 4 is the next hop
+05:10
+that's all for r2
+05:14
+now let's configure the routes for r3 r3
+05:18
+requires routes to 192.168 12.0 / 24
+05:23
+192.168 24/24 10010 / 24 10020 / 24 and
+05:32
+10000 / 24 enable conf t IP route
+05:42
+192.168.0 255.255.255.0
+05:48
+192.168.1 r1 is the next hop IP route
+05:54
+192.168.0 255.255.255.0 192.168.1 x top
+06:02
+IP route 10.10 255.255.255.0 192.168.1
+06:11
+r1 is the next hop IP route 10.20
+06:18
+255.255.255.0 again we have a choice
+06:21
+here I'll set r1 as the next hop
+06:25
+192.168.1 I P wrote 1000 255 255 255 0
+06:34
+192.168.0 for our 4 is the next hop
+06:37
+that's all for r3
+06:42
+finally let's configure static routes on
+06:44
+our four-hour Forney's routes to 192.168
+06:48
+twelve 0/24 192.168.0 / 24 10.10 / 24
+06:57
+10.20 / 24 and 10030 / 24 enable call 48
+07:08
+192.168 12.0 255.255.255.0 192.168 24 -
+07:16
+our 2 is the next hop IP route -
+07:21
+192.168.0 255.255.255.0 192.168.0 re our
+07:28
+3 is the next hop IP route 10.10
+07:35
+255.255.255.0 we have a choice here
+07:38
+between two equal distance routes but
+07:40
+let's go with art - so 192.168 24.2 IP
+07:46
+routes 1000 255.255.255.0
+07:51
+192.168 24 - our 2 is the next hop and
+07:55
+last one IP route 1000 255.255.255.0
+08:02
+when i 2.16 8.30 4.3 our 3 is the next
+08:06
+hop that's all for our 4 ok I hope that
+08:13
+didn't put you to sleep but I also hope
+08:15
+it helped you practice configuring
+08:16
+static routes we will do one more lab
+08:19
+dedicated to static routing focusing on
+08:21
+the creation of backup routes that's all
+08:24
+for this lab thank you for watching I
+08:28
+hope this lab and video have been
+08:29
+helpful for you please subscribe for
+08:32
+future labs like this which will be
+08:34
+released weekly if you have requests for
+08:37
+any specific labs let me know in the
+08:39
+comment section if you want to support
+08:42
+my channel please consider contributing
+08:44
+to my patreon patreon comm / Jeremy's IT
+08:48
+lab I accept Bitcoin and aetherium
+08:52
+donations via addresses in the
+08:54
+description
+08:54
+I am also a brave verified publisher and
+08:58
+accept bat or basic attention token
+09:01
+donations in the brave browser
+

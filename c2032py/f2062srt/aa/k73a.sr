@@ -1,0 +1,245 @@
+00:00
+welcome to this free CCNA packet tracer
+00:03
+practice lab you can download the lab
+00:06
+file from the link in the description if
+00:09
+you like these labs please consider
+00:10
+supporting me via my patreon or the
+00:12
+cryptocurrency options in the
+00:14
+description also please subscribe to the
+00:17
+channel for more labs like this and
+00:18
+share these videos with anyone else
+00:20
+studying for the CCNA in this lab we
+00:24
+will configure span which stands for
+00:26
+switched port analyzer span copies the
+00:31
+traffic from a particular interface and
+00:33
+sends it to another interface which
+00:35
+typically leads to a monitoring server
+00:37
+to monitor and analyze the traffic
+00:39
+passing through the monitored interface
+00:42
+packet tracer doesn't include an actual
+00:45
+monitoring server but will use a cool
+00:48
+feature of packet tracer the simulation
+00:50
+mode to verify that our configurations
+00:53
+are working let's get started okay the
+00:57
+first step is to simply ping from PC 2
+00:59
+to PC 1 this is just to make sure PC 2
+01:03
+completes the ARP process you may have
+01:06
+noticed in these labs that the first
+01:08
+ping often fails that is because of the
+01:10
+art process not finishing before the
+01:12
+ping times out so let's do that ping
+01:17
+ping 1001 10
+01:26
+okay as you can see the first ping fails
+01:28
+but then after pc2 learns the MAC
+01:31
+address of its default gateway the
+01:33
+following pings succeed now let's switch
+01:37
+to simulation mode which is here in the
+01:39
+bottom right this useful feature lets us
+01:43
+trace the path of traffic and analyze it
+01:45
+at different points in its path okay now
+01:48
+let's ping again ping 1001 10 here you
+01:57
+can see the ICMP packet at PC 2 then I
+02:01
+click Next and it is sent to switch to
+02:04
+then R 2 R 1 switch 1 and arrives at PC
+02:10
+1 PC 1 then sends the reply back to
+02:14
+switch 1 R 1 R 2 switch 2 and then it
+02:18
+arrives at the destination PC 2 if I
+02:22
+keep clicking here you can see other
+02:24
+traffic being sent including spanning
+02:26
+tree B PDUs from the switches EA GRP
+02:30
+hello packets between the routers and
+02:32
+the other pings sent from PC to does PC
+02:35
+1 ok let's return to real-time mode so
+02:40
+we confirm that the pings traveled from
+02:42
+PC to in a straight path to PC 1 no ICMP
+02:46
+packets were sent to server 1 now let's
+02:50
+configure switch 1 to monitor the input
+02:52
+and output traffic on its G 0 1
+02:54
+interface and send it to a server 1 I'll
+02:58
+hop on switch 1 now enable conf T span
+03:05
+is configured right here at global
+03:07
+configuration mode with the monitor
+03:09
+command then type session and give it a
+03:14
+number I'll sell you one next we specify
+03:18
+the source or destination the order
+03:20
+doesn't matter let's do this source now
+03:24
+there are multiple types of span but for
+03:26
+the CCNA you just have to do local span
+03:29
+which means from one interface on the
+03:31
+switch to another so the source will be
+03:35
+interface g0 one
+03:37
+then finally I will specify both to
+03:40
+monitor both incoming and outgoing
+03:42
+traffic on the interface you could
+03:45
+instead specify Rx for ingress or
+03:48
+incoming traffic or TX for egress or
+03:51
+outgoing traffic okay next let's specify
+03:55
+the destination interface which will be
+03:58
+g0 - because it's connected to server 1
+04:02
+monitor session one destination
+04:06
+interface g0 - okay that's all there is
+04:10
+to configuring local span it's really
+04:12
+quite simple
+04:14
+now let's switch to simulation mode once
+04:17
+more and ping from PC - to PC one and
+04:20
+will confirm that copies of the traffic
+04:22
+are being sent to server one ping 1001
+04:30
+1000 goes to switch 2 R 2 R 1 switch 1
+04:38
+and now as you can see it's sent to both
+04:41
+PC 1 and server one because switch 1
+04:45
+copied the ICMP packet that came in
+04:47
+honest g0 on interface and sent it to
+04:50
+server 1 as well
+04:52
+notice the red X on server 1 that's
+04:56
+because server 1 discarded the packet in
+04:59
+a real situation where server 1 is an
+05:01
+actual monitoring server this would not
+05:04
+happen
+05:05
+ok next PC 1 sends the reply to switch 1
+05:09
+and then the reply is forwarded to r1
+05:12
+and once again it is also sent to server
+05:14
+one this time switch one copied the ICMP
+05:18
+packet being sent out of the g0 one
+05:20
+interface because we configured the both
+05:23
+statement when we configured span both
+05:26
+packets received on and transmitted from
+05:29
+the interface will be copied and sent to
+05:32
+server 1 in this lab we configured span
+05:36
+to monitor traffic on a switch interface
+05:39
+the configuration is quite simple so
+05:41
+please try it out and learn it for your
+05:43
+exam that's all for this lab
+05:48
+thank you for watching I hope this lab
+05:51
+and video have been helpful for you
+05:52
+please subscribe for future labs like
+05:55
+this which will be released weekly if
+05:57
+you have requests for any specific labs
+06:00
+let me know in the comment section if
+06:02
+you want to support my channel I accept
+06:05
+cryptocurrency donations via the
+06:07
+addresses in the description I am also a
+06:10
+brave verified publisher and accept bat
+06:13
+or basic attention token donations in
+06:15
+the brave browser
+

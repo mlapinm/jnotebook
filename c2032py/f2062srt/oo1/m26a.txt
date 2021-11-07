@@ -1,0 +1,469 @@
+1.729808
+welcome back to another Inkscape tutorial
+5.230174
+in this video we'll be using the board games counter sheet extension to create some cards
+12.575817
+and I'll show you just how to use this extension so we installed it in the last video
+16.621676
+and this is actually cards SVG it's an example file that comes with the with this extension
+25.363189
+and so we see we have three different cards here they're all grouped together
+28.431481
+and I'm just going to demonstrate how this works so if we zoom out we see here's our page
+31.823204
+and these cards are each just a template
+34.179040
+and so the way the extension works we click on extension
+37.202915
+extensions here go to board games and create countr sheet
+40.082759
+and it has all these different options
+41.775205
+so the name is really important right now but what is very important is where the data file is
+47.178412
+so we want to create a number of cards based off of the information found in this file this counter sheet dot CSV or whatever whatever it's called
+57.368119
+and so ours is actually going to be called cards dot CSV because it corresponds with the cards SVG
+65.966294
+and so the we can find this too it's an example so
+69.326616
+the way we the place we find it if we go to the game folder that we created in the last video
+73.845987
+and remember we moved over the examples
+76.218443
+which is these are the same examples that Kant got downloaded from github with this this extension that we installed
+84.494254
+so it has all these different ones and one of them is cards here so this is the cards SVG file that I have opened up here
+90.398506
+but the other one is this cards dot CSV which I also have opened up in liber office
+96.878474
+and what it has is three different columns telling about different cards the text of the card the title of the card and the type of card
+104.010355
+so the title would be this part here that says replace or title and then the text would be the text inside
+112.196285
+so we need to put the location of this
+116.650390
+the location which is my desktop
+118.710322
+we need to put the location of this cards dot CSV file here in Inkscape where it says data file
+126.771111
+and it has to be an absolute path
+129.562234
+so if we just say cards SVG SVG and go apply
+133.107251
+it's going to come up with an and say we don't you know unable to find that file where is it
+137.720917
+so we need to give the absolute file path so to find out where the path is
+141.585997
+and that's why I put it in them to close a couple of these that's why I put it directly on my desktop
+147.147113
+and just named it game
+148.691925
+so that it's not too hard to type out
+151.598899
+so to find it to find out the absolute directory of this we just go right click
+156.399146
+and go to properties
+157.895082
+and then the location is under see users for me it's called del Optus the name of my computer and then desktop game examples
+167.111239
+so I'm just gonna copy this whole thing left click and highlight it and go copy
+171.187272
+and that's just the that's just the examples directory that's just the location of basically this
+176.707390
+but inside here it's also going to be called cards
+180.011232
+so we'll come in here and we'll just right-click highlight all of this and the erase it and then right click and go paste
+186.603015
+so now we have an absolute file path see users del opt desktop game examples
+193.018919
+and I'll do one more backslash
+196.159011
+and we'll type in or set a forward slash
+199.503158
+and we'll type in cards dot c SB
+203.339125
+so now if we go apply it's going to run through we didn't change anything else the only thing we've changed so far is this data file CSV
+211.166958
+so it goes through works and it creates some nice custom cards for us over here that we can look at and see
+217.727817
+so this says image three two images both image image two and if we pull up our spreadsheet
+225.135189
+we're going to notice we're gonna see some of these same things
+227.475129
+we've got both images down here image three image two and then the same information that's being put in there
+235.341258
+it's calling a little PNG this.g four to seven four dot PNG is being called
+241.337176
+and so that's this little these little images here if like a little mouse rabbit and then we have these little images here
+249.161030
+so do you see what's happening it's kind of calling in this
+253.093440
+and so if we close out of this and now we have these different cards
+256.765046
+we can see we can change them there it's all grouped oh
+259.897076
+and what it actually did was like layered because it did there's a lot of information in this spreadsheet so it actually created every line here is a
+267.725274
+and so we can find these cards are just like layered on top of each other
+272.137022
+they just did them all
+273.609374
+and so we can go through and find all these different cards and line them up and so it arranged them in a nice printable sheet for us
+280.169034
+and now we have all these cards and their group if you want to change it we can go ctrl shift G
+284.422613
+and ungroup it was ctrl shift G
+287.605231
+and under and then we can ungroup and move around different elements of the card
+290.981279
+wow this is getting this is super messy
+293.697028
+it's kind of a hard extension to explain it's not super
+298.376868
+there's not as smooth as if it was just integrated into Inkscape directly
+302.305006
+because we have to use this external CSV file
+305.637679
+but the nice thing is it's very extensible so you can create your own templates too and not have to go off of these examples
+311.472196
+let's do another example though just to kind of drive this home so I'm going to close this
+315.665932
+close without saving
+317.293876
+I'll go back into here
+318.657861
+and I'm gonna go to examples and instead of cards this time
+321.961798
+there's one called dice fold
+324.181742
+so let's open up dice fold and see what this looks like
+327.205909
+we have our dice fold
+329.501735
+which looks like this so far so it just has like what you would cut out to fold into a paper die
+337.925815
+and then if we run our extension with it
+340.862074
+we go to extension board games create counter sheet
+344.538095
+and now it remembers which is super nice it remembers of location
+348.710105
+so we just go to the end here but it's looking for card CSV but the corresponding CSV file for this dice fold is actually going to be this dice full dot CSV
+360.317644
+so we'll open it up in in the liver office
+363.617576
+and it only has a couple different things
+365.869730
+it just has basically images one two three four five six images
+370.040561
+one for every face of the die
+373.445420
+and so what we'll do with this is just make sure we type in dice fold
+378.520766
+the IC e fol d dot csv has to be exactly spelled the same way as the as the data file
+387.065575
+so when we click apply it's going to look for that data file
+390.053843
+it's gonna look at every all the information with it and
+393.641498
+see if it can find corresponding images to put on the those the faces of this die so
+400.449658
+why it found all the images and mapped them
+404.506402
+to there so now we could print this out
+405.893735
+and fold and we have a we roll to see a character space
+409.890005
+but we can go in and change
+411.769804
+so all of those clothes so those images are all here
+416.565437
+we can see each one of these
+419.213821
+if we open it up this is an image and we can actually see these images and edit them
+424.029580
+and/or change them so if we wanted to die to actually be like a conventional like a number fancy looking five or something we can edit this
+431.725518
+or just add a new image and then change the name of the image here in the data file
+437.370320
+so that making sense should we do one more to kind of illustrate what's happening let's close this
+443.629590
+let's go back into the examples
+445.865650
+well okay a good one let's open up this templates
+448.697868
+so under template there's a really cool one prototype cards
+452.049541
+so we go here we open up so this is going to look at all these different types of cards we have here
+457.342738
+and then if this is the data the CSV file let's minimize this let's open up the prototype cards SVG file the Inkscape file
+468.710008
+and see what it looks like
+470.057584
+so we see our page is over here to the right
+473.641689
+and then we have all these different types of cards
+475.637479
+it we have a card with four images on
+479.933538
+it do we have a card with two images on it do we have a card with an image and some text below
+483.817514
+we have a title card with a bunch of different lines of information
+487.781444
+we have this another card or a line card we have a title card here that has just a bunch of information on it
+493.609569
+and so we have one with little pictures and stuff to the side so these are just different formats and we can move all these around
+500.457443
+so we could actually move this parts of this around now the image will be here on the template every one of these is a template
+508.840817
+and so they're kind of grouped together but if we ungroup them we can change we can create any kind of template we want for any kind of card we want
+515.436865
+so let's create the cards now we go to extension
+519.360858
+and we have to have the file open if we just go to new like if we open up a new Inkscape file and go to extensions
+526.581497
+and try to recreate what we did last time with the dice even though
+530.164928
+this is looking for the dice fold CSV if we try to apply it
+534.434504
+it's gonna fail because we're just opening a blank document
+539.971550
+and it doesn't know where that dice we have to actually open the dice SVG and then run the extension while that SVG is open
+548.908955
+so this one since this is open
+550.404874
+the card we're gonna look for is the the file we're going to look for is this one
+555.000773
+prototype under scorecards under Scott underscore all dot CSV
+560.748891
+so we go to extensions board game create counter sheet
+564.937067
+and then we just change the name of it
+567.352795
+so this is not the dice fold because it doesn't have the correct information for dice fold
+571.912930
+its the proto type underscore cards and that's where it comes in like to not have a super long name
+579.936957
+and then all dot sv dot CSV is what it was going to be
+584.892397
+so we hit apply
+586.076172
+oh it couldn't find it oh that's because it's not under examples
+589.768459
+this one is actually in a different fold that remember there's examples and templates
+593.696595
+this is actually in the templates directory
+595.680299
+so it would change this instead of this part being called examples
+598.524205
+it's gonna be called TEM PLA tes templates apply
+603.672325
+and this should work
+605.352369
+so something was wrong here
+608.428242
+oh because i ungroup this to show you
+612.305165
+so we need to regroup this
+613.956683
+control G you won't have to do that unless you ungrouped it to I I was showing you an example and I messed it up I think now will apply and it should work
+622.844992
+so everything has to be in a group -
+625.028873
+in order for it to render properly
+627.044347
+okay so I actually made some changes I was having trouble rendering so I actually modified the CSV file to just render just these two types of cards
+634.453011
+because there was something causing trouble I don't have time to go through and figure out what it was but now if we hit apply
+640.009122
+you'll just go through and just render those first two types of cards
+643.665056
+and so we see we have the cards here
+645.782969
+and and then we can move and see
+649.138950
+and so this is just a couple and one thing I wanted to show -
+652.595914
+if we change this we can change the like this out set distance to like 15
+658.048975
+oh and then we got to go control-z and undo this
+660.825183
+and then reapply
+662.301208
+and then that'll just change sort of this cut line
+665.573290
+that out set around so now this is a little bit fifteen you might not notice the difference
+670.209266
+you can also just go we can actually click this live preview button
+674.329315
+then it'll show it then if we make changes here
+677.417403
+like changes 15 to 150
+680.341422
+and then I'll have just a much larger outset just thinking about it
+684.429265
+and now it's like basically
+686.021199
+yeah a hundred and fifty pixels or millimeters
+689.373243
+for the outset of that
+691.741286
+one more thing I want to show you that I just thought of before I end this video if we go back into examples and go to this cards example again
+699.841314
+so this one if you remember correctly let's close this or if we go back into this cards
+705.681246
+we see that it has it had quite a few cards here right I had them
+709.737258
+I don't know how many different cards that are here
+711.765620
+but if we want to do this one we go to extensions board games
+715.673353
+we have to go back into examples and change this to cards
+719.837309
+and then we go apply so remember it was layered layering those cards on top of each other so I had all four of them had just four
+730.397373
+first of all we can change the size of the cards
+733.969306
+so if we just select this and
+735.837477
+we are left select all of them
+738.257304
+and we just scale them down like that small
+742.437208
+whoops and I guess what's delete all this now we go apply
+746.685528
+now the cards will all be that size
+748.861117
+oh I gotta undo it do a different way
+751.081151
+okay now it'll work
+753.169031
+so now we take this
+754.349152
+we scale them all down here
+756.015747
+now we hit apply
+757.526655
+it'll show these cards very small and it will just have all of them on one sheet
+760.897332
+so now we have all of our cards right here
+764.341379
+that on one single printed page
+766.221175
+so to change the size of the card you actually change the size of the template or at least that's one way to do it
+771.409153
+and if we make it really large
+773.733065
+again you have to control Z and undo that
+776.101326
+you can't apply twice so that was the problem
+778.773304
+so if we do make it really big and then go apply
+781.977136
+it'll just go based off of this size of the card
+785.141234
+and so now we're all gonna have like one card per sheet or something
+788.893399
+yeah because it calculates the size of our page and make sure that we don't put too many cards on
+794.053274
+so now that these are all stacked on top of each other
+796.145117
+well for printing
+798.361295
+let's get rid of all that
+799.973314
+lets me this bet kind of to the size it was maybe like this
+804.237375
+so if we're printing if we check this or if we put in a directory here
+808.721188
+copy and we go to PDF output
+811.717118
+we can actually put it into this just this game directory
+816.401192
+and now if we hit if we go look at that game directory real quick we just go back to game there's nothing in here
+822.181350
+but if we hit apply now it will actually create a PDF file for every printable page of this
+830.771116
+so we see it's working right now we've got two three PDFs for
+836.073027
+and so it's gonna actually create we've got four different sheets here and if we open them up we see each sheet contains different cards that we can print
+844.688579
+so that's a nice option to if if we're ready to print and you don't want to just like render the two Inkscape
+850.204126
+you can actually render a printable PDF page
+853.292119
+then you just send all of these pages to your game producer or the print shop that's printing your cards
+859.856256
+and they'll just print them off cut them box them up
+862.221073
+and yeah that is it so that's just a little quick introduction to using this counter sheet
+869.678995
+hopefully that's enough to kind of get you interested in it
+872.755190
+again it's open source software so just play around with it figure it out
+877.355174
+you can dive in and make some changes to the code if you have that you that ability
+881.039248
+but really really useful stuff oh
+884.527017
+okay I guess let's do one more thing this video is kind of long but if you're curious about how this works
+889.879709
+if we go take your template and then go ctrl shift G
+895.247343
+and so we'll actually right-click and go to object properties
+899.758126
+and so the object of this card like what it's called is actually the ID is DVD that's a bad example because that's not
+907.731159
+that's not one of the real ones
+909.143425
+let's take this one ctrl shift G
+911.616076
+and then click on the actual the largest
+914.468151
+or which one is it
+915.623987
+hold down alt and then click until you find the right one
+918.592213
+so this one's called our card
+921.075963
+and so if we go to our thing here we find our card
+925.356390
+this is the old one here we have card we have eye card so the other ones called eye card
+931.047322
+I guess maybe there's not an example using the our card
+933.503189
+but basically this card and this eye card is gonna correspond with the ID of these right tier
+941.679314
+so this one is the eye car so this I card here
+944.727432
+this is eye card and it corresponds with eye card here
+948.151521
+and so if we call this eye card five
+952.843272
+it won't be able to find it because it actually looks this first column is looking for the ID of the object here
+961.467267
+that make sense
+964.739410
+so you can create your own templates that way as long as you name your object
+969.375363
+something that is mapped to here maybe I'll make another video showing how to create custom templates
+975.307532
+and using some of this more custom stuff
+977.518832
+but for now I think I'll end this video so I hope you found that informative actually in the immediate video
+982.875448
+I think I'm gonna do there's another extension for creating a grid map by the same developer
+988.451487
+so if you want to create like a grid of squares for like an actual board game
+992.075539
+I'll show you how to do that
+993.431146
+and it's also going to be a board game extension so they'll be another option here to do that
+997.647256
+I'll show you how to install that and get using that as well
+1000.059204
+thanks for watching go ahead and like comment subscribe and I'll see you in next video
+1003.603377
+1003.603377
+1003.603377

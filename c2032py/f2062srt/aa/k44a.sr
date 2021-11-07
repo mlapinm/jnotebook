@@ -1,0 +1,323 @@
+00:00
+welcome to this free CCNA packet tracer
+00:03
+practice lab you can download the lab
+00:06
+file from the link in the description if
+00:08
+you like these labs please consider
+00:11
+supporting me via my patreon or the
+00:13
+cryptocurrency options in the
+00:14
+description also please subscribe to the
+00:18
+channel for more labs like this in this
+00:22
+lab the final lab of my icnd1 series we
+00:26
+will troubleshoot some miss
+00:27
+configurations in this topology this is
+00:30
+the same topology from the previous
+00:32
+configuration lab but I've purposefully
+00:34
+made some miss configurations I highly
+00:37
+recommend you go through this lab
+00:38
+yourself to find and fix the errors on
+00:41
+your own and just use this video to
+00:43
+check your solution let's get started
+00:47
+the first problem is that R 2 and R 3
+00:50
+aren't receiving a rip route to
+00:53
+192.168.1.0 / 24 from R 1 first let's
+00:58
+confirm the problem on our to enable
+01:04
+show IP rip database we have a route to
+01:10
+our threes inside Network 30000 / 24 but
+01:14
+not 2 192.168.1.1 T 4 let's check on our
+01:20
+3 to enable show IP rip database
+01:26
+there's our two's 192.168 - 0 / 24
+01:31
+network but not 192.168.1.0 / 24 ok so R
+01:38
+2 and R 3 are exchanging routes with
+01:40
+each other so there are probably no
+01:41
+issues with R 2 and R 3 let's take a
+01:44
+look at R 1 enable show IP rip database
+01:52
+this is interesting
+01:54
+R 1 is receiving routes from R 2 and R 3
+01:57
+but not advertising a route to
+02:00
+192.168.1.0 / 24 to them there is one
+02:04
+very likely cause show IP protocols this
+02:09
+command is useful for getting
+02:10
+information about routing protocols such
+02:12
+as rip
+02:13
+running on the router and here is our
+02:16
+issue passive interfaces Gigabit
+02:19
+Ethernet 0-1 a passive interface we'll
+02:23
+listen for advertisements but will not
+02:25
+advertise any reps let's fix that
+02:28
+comte router rip no passive interface G
+02:35
+0 1 2 make a passive interface you just
+02:39
+use the passive interface command under
+02:41
+router rip configuration mode and of
+02:44
+course to remove it just use no in front
+02:46
+of the command exit so as long as there
+02:50
+are no other problems here r2 and r3
+02:53
+should have a route to 192.168.1.0 slash
+02:57
+24 now I'll check on our to show IP rip
+03:04
+database there it is
+03:08
+and on r3 show IP rip database ok
+03:16
+problem one is solved the next issue is
+03:20
+that hosts in the 192.168.0 slash 24
+03:24
+network aren't receiving IP addresses
+03:27
+via DHCP let's confirm I'll go on PC for
+03:35
+IP config it has an IP address in the
+03:40
+169.254 range an automatic private IP
+03:44
+address let's try our release and renew
+03:47
+IP config slash release IP config slash
+03:52
+renew it doesn't work pc v & p c6
+03:59
+probably have addresses in the same
+04:01
+169.254 range
+04:03
+let's check pc v IP config yep as
+04:11
+expected and pc 6 IP config again an
+04:19
+automatic private IP address so what
+04:22
+could be the problem because the DHCP
+04:25
+server is not directly connected to
+04:28
+192.168.0 / 24 network there could be a
+04:31
+problem with the DHCP relay agent R -
+04:34
+let's check their show IP interface G 0
+04:41
+0 helper address is not set there's our
+04:48
+problem let's fix that call for t
+04:51
+interface G 0 0 IP helper address 1.2.3
+04:57
+one exit let's see if we can ping the
+05:01
+helper address do ping one two three one
+05:08
+okay we can reach it
+05:10
+so DHCP should work now let's try on PC
+05:14
+for IP config slash release ipconfig
+05:20
+slash renew okay it works let's go to
+05:26
+the next problem Pat doesn't work on r1
+05:32
+first let's check the problem I'll ping
+05:36
+from pc1 to server 1 and then check the
+05:39
+translations on r1 ping 3000 dot 100 ok
+05:52
+we reached server 1 now let's go on r1
+05:55
+and check the translations do show IP
+05:59
+nat translations nothing appears so
+06:04
+let's find the problem do show IP nat
+06:08
+statistics our inside and outside
+06:12
+interfaces are correct so that's not a
+06:14
+problem do show run pipe include net IP
+06:21
+nat inside source list 2 interface g0 1
+06:25
+overload let's check this access list to
+06:29
+do show access lists there's our problem
+06:35
+there is no access list to it's access
+06:38
+list 1
+06:40
+let's fix the net statement I'll copy it
+06:44
+and paste it here and use know to cancel
+06:50
+it out now I'll rewrite it to use X as
+06:53
+this one instead of X's list - IP NAT
+06:58
+inside source list one interface g0 one
+07:03
+overload okay now let's try again I'll
+07:08
+ping from pc1 ping 3000 100 and check
+07:18
+again on r1 do show IP NAT translations
+07:25
+there we go
+07:26
+r1 is now translating PC ones address
+07:31
+the next issue is that hosts in the
+07:34
+192.168.1.0 / 24 network aren't
+07:38
+receiving a DNS server via DHCP let's
+07:42
+check the issue on PC one ipconfig /all
+07:49
+indeed there is no DNS server here now
+07:53
+the most likely issue is with the DHCP
+07:55
+pool on r1 so let's check do show run
+08:05
+indeed there is no DNS server configured
+08:09
+in the DHCP pool I'll fix that IP dhcp
+08:14
+pool 1 pool
+08:18
+DNS server 3000 100 exit ok let's go to
+08:24
+pc 1 IP config slash release ipconfig
+08:31
+slash renew ok the DNS server appears
+08:36
+let's try to ping the hostname to server
+08:40
+1 ping server 1
+08:51
+there we go DNS is functioning properly
+08:56
+the final issue is that r1 cannot be
+08:59
+connected to via SSH I'll try again from
+09:03
+pc1 the username is Cisco and password
+09:07
+CCNA same as the previous lab SSH - el
+09:12
+cisco 192.168.1.1 indeed it doesn't work
+09:20
+let's investigate on r1 do show run pipe
+09:27
+begin line look at the vty line
+09:32
+configurations can you spot the misc
+09:34
+configuration transport input telnet is
+09:38
+set this restricts vty line access to
+09:41
+telnet so ssh doesn't work let's fix
+09:45
+that line vty 0 15 transport input ssh
+09:52
+ok let's try one more time from pc1 ssh
+09:59
+- el cisco 192.168.1.1 there we go
+10:06
+password of CCNA and we're in in this
+10:12
+lab we did some troubleshooting of
+10:14
+various problems involving technologies
+10:16
+we configured in previous labs this was
+10:19
+the final lab of my icnd1 series I hope
+10:22
+these labs have helped you practice your
+10:23
+skills and prepare for the exam I will
+10:26
+now be getting to work on the icnd2 labs
+10:29
+that's all for this lab thank you for
+10:35
+watching I hope this lab and video have
+10:37
+been helpful for you please subscribe
+10:40
+for future labs like this which will be
+10:42
+released weekly if you have requests for
+10:45
+any specific labs let me know in the
+10:47
+comments section if you want to support
+10:50
+my channel I accept a Bitcoin and
+10:52
+aetherium donations via the addresses in
+10:54
+the description I am also a brave
+10:58
+verified publisher and accept a bat or
+11:00
+basic attention token donations in the
+11:02
+brave browser
+

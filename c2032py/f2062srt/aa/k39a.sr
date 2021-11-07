@@ -1,0 +1,223 @@
+00:00
+welcome to this free CCNA packet tracer
+00:03
+practice lab you can download the lab
+00:06
+file from the link in the description if
+00:09
+you like these labs please consider
+00:11
+supporting me via my patreon or the
+00:13
+cryptocurrency options in the
+00:15
+description this is the third and last
+00:19
+of our labs focusing on nat network
+00:21
+address translation this lab will focus
+00:24
+on Pat port address translation static
+00:29
+NAT is sometimes referred to as
+00:30
+one-to-one and dynamic NAT is sometimes
+00:34
+referred to as many to many by that
+00:36
+logic
+00:37
+Pat is many to one many addresses are
+00:41
+translated to a single IP address but
+00:44
+the router keeps track of the layer for
+00:45
+port number used so it can identify each
+00:48
+of the inside hosts for example when we
+00:52
+configure Pat in this network we can
+00:54
+then ping from pc-1 pc2 and pc 3 to
+00:58
+server 1 at the same time all of them
+01:01
+will use the same address that of our
+01:03
+ones as 0 3 0 interface 1.2.3 1 however
+01:09
+each of them will use a different port
+01:11
+number so our one can forward the return
+01:13
+traffic from server 1 back to the
+01:15
+correct PC we are using the same
+01:19
+topology as in the previous net labs if
+01:22
+we try to ping server one from PC one it
+01:25
+should fail once again let's try ping
+01:31
+1.1.1 100
+01:38
+the pink fails once again this is
+01:41
+because PC one has an IP address in a
+01:43
+private IP range these addresses are not
+01:46
+routable on the Internet
+01:48
+to simulate the Internet I have
+01:50
+configured ACLs on r1 and r2 to prevent
+01:53
+private IP addresses from being routed
+01:55
+on the serial link between them so let's
+01:59
+configure Pat on r1 to translate the IP
+02:02
+addresses of pc-1 pc2 and pc 3 to the IP
+02:06
+address of our ones s0 3-0 interface
+02:11
+I'll go on r1 enable compte again I'll
+02:20
+set the inside and outside NAT
+02:22
+interfaces interface g00 IP NAT inside
+02:28
+interface s 0 3 0 IP NAT outside exit
+02:35
+now to configure a dynamic NAT we had to
+02:38
+configure an ACL and an app pool before
+02:41
+we configure the NAT statement itself
+02:43
+for Pat we just create an ACL to
+02:46
+identify the inside address range to
+02:48
+translate and then we create a NAT
+02:50
+statement to translate them to the
+02:52
+outside interface let's make the ACL
+02:56
+remember this ACL is used to identify
+02:58
+traffic not to allow or block traffic
+03:02
+traffic permitted by the ACL will be
+03:05
+translated traffic denied by the ACL
+03:08
+won't be translated but won't be blocked
+03:11
+let's make an ACL to permit traffic from
+03:14
+the 192.168.1.0 / 24 network access list
+03:20
+1 permit 192.168.1 oh oh oh oh 255
+03:28
+that's it
+03:29
+now we just have to make the NAT
+03:31
+statement the first half is identical to
+03:34
+dynamic NAT IP NAT inside source list 1
+03:41
+which identifies ACL 1 next however we
+03:45
+type interface followed by the outside
+03:48
+interface s 0 3 0 in this case
+03:52
+finally remember to add overload at the
+03:56
+end this is what allows the router to
+03:58
+translate multiple hosts to the same IP
+04:00
+address and keep track of the layer for
+04:03
+port number to identify each host so our
+04:06
+command is IP NAT inside source list one
+04:11
+interface s zero three zero overload our
+04:16
+PAP configuration is complete now let's
+04:19
+test and then check the translations on
+04:21
+our one out paying server one from each
+04:24
+of the PCs KC one first ping 1.1 1.1
+04:31
+hundred next PC to ping 1.1 1.1 hundred
+04:46
+finally pc 3 ping 1.1 1.1 hundred ok now
+04:56
+let's go on r1 and check the
+04:58
+translations exit show IP NAT
+05:04
+translations as you can see our inside
+05:08
+local addresses look the same as in the
+05:10
+previous lab but the inside global
+05:13
+addresses are all the same as I said
+05:16
+before however r1 keeps track of these
+05:20
+layer 4 port numbers so it knows which
+05:22
+PC to send the return traffic from
+05:24
+server 1 2 now do you remember the
+05:27
+command to use if you want to clear
+05:29
+these translations clear IP NAT
+05:33
+translation asterisk show IP NAT
+05:37
+translations the translation table is
+05:40
+empty
+05:40
+ok that's all for this lab
+05:43
+thank you for watching I hope this lab
+05:46
+and video have been helpful for you
+05:47
+please subscribe for future labs like
+05:50
+this which will be released weekly if
+05:52
+you have requests for any specific labs
+05:55
+let me know in the comment section if
+05:57
+you want to support my channel I accept
+06:00
+Bitcoin and aetherium donations via the
+06:02
+addresses in the description I am also a
+06:06
+brave verified publisher and accept bass
+06:08
+or basic attention token donations in
+06:11
+the brave browser
+

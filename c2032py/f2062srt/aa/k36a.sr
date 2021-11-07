@@ -1,0 +1,221 @@
+00:00
+welcome to this free CCNA packet tracer
+00:03
+practice lab you can download the lab
+00:06
+file from the link in the description in
+00:09
+this lab we will look at DNS the domain
+00:13
+name System DNS is used to translate
+00:16
+names such as Cisco comm or google.com
+00:19
+to their appropriate IP addresses for us
+00:23
+humans these names are easier to
+00:25
+remember than IP addresses and I'm sure
+00:28
+very few of us actually know the IP
+00:29
+address of google.com for example so DNS
+00:33
+is very useful in this lab I have set up
+00:36
+a DNS server DNS one with the host names
+00:40
+of all the servers and networking
+00:42
+devices and their corresponding IP
+00:43
+addresses configured we will use DHCP
+00:47
+again to give pc1 & pc2 their IP
+00:50
+addresses as well as tell them to use
+00:52
+DNS 1 as a DNS server let's get started
+00:57
+the first step is to set up a DHCP pool
+01:01
+on our one like we did in the previous
+01:02
+lab enable compte before I make the pool
+01:09
+I'll set up the excluded address range
+01:12
+which if you remember is configured
+01:14
+outside of DHCP configuration mode IP
+01:18
+dhcp excluded address 192.168.1.1
+01:26
+192.168.1.2 n ok now let's make the pool
+01:30
+IP dhcp pool one pool network
+01:36
+192.168.1.0 255.255.255.0 default router
+01:44
+192.168.1.1 we won't specify a DNS
+01:48
+server just yet now let's go on pc one
+01:52
+just to make sure i'll do our release
+01:55
+and renew IP config slash release IP
+01:59
+config slash renew
+02:02
+okay now pc one has an IP address and
+02:05
+default gateway however it has no dns
+02:08
+server yet let's try to ping server 1 by
+02:11
+IP address
+02:13
+ting 1000 101 the ping works it sends
+02:25
+the ping to its default gateway r1 which
+02:27
+then fords it to a server 1 now let's
+02:30
+try to ping by name ping server 1 ping
+02:35
+request could not find host server one
+02:38
+without a DNS server assigned PC one
+02:40
+can't translate the name server 1 to the
+02:43
+appropriate IP address let's fix that
+02:47
+let's go back on r1 and add the DNS 1
+02:51
+server as a DNS server to the DHCP pool
+02:56
+DNS server 2000 100 now I'll go back on
+03:03
+PC 1 and do another release and renew to
+03:06
+refresh the information and get the DNS
+03:07
+server IP config slash release IP config
+03:13
+slash renew ok now we've got the DNS
+03:17
+server information let's try to ping
+03:19
+server 1 and serve a2 by name ping
+03:22
+server 1 it can take some time to reach
+03:28
+the DNS server to resolve the name to
+03:31
+the IP address but in the end the ping
+03:33
+works
+03:35
+okay now let's ping server 2 by name as
+03:38
+well
+03:38
+ping server 2
+03:49
+again the ping works notice that
+03:52
+although we use the command ping server
+03:54
+to immediately under it says pinging
+03:57
+1000 dot 102 as the DNS server result
+04:01
+the name to the proper IP address next
+04:06
+is to try the same from switch 1 switch
+04:09
+1 has an IP address on its VLAN 1
+04:11
+interface so it can send and receive
+04:13
+pings however let's see if you can do so
+04:17
+without any further setup an able ping
+04:21
+1000 101 the ping fails
+04:31
+since the ping by IP address fails
+04:34
+there's no need to try to ping by name
+04:36
+if PC one camp in server 1 Y can't
+04:40
+switch 1 well r1 has distributed default
+04:44
+gateway and DNS information to PC 1 via
+04:47
+DHCP however it's not giving that
+04:50
+information to switch 1 so let's
+04:53
+manually configure r1 as switch ones
+04:56
+default gateway and DNS 1 as switch ones
+04:59
+DNS server compte to specify a default
+05:04
+gateway use this command IP default
+05:08
+gateway 192.168.1.1 ok now to specify a
+05:14
+DNS server use this command IP name
+05:18
+server 2000 100 exit ok let's try those
+05:24
+pings again ping 1000 dot 101
+05:34
+Dapeng works this time and now let's try
+05:37
+to ping by name and see if our dns
+05:39
+configuration works ping server one
+05:49
+it works again and actually you can see
+05:52
+the message here translating server 1
+05:55
+domain server 2000 100 and then down
+05:59
+here the IP address of server 1 1000 101
+06:04
+ok in this lab we took a bit of a look
+06:06
+at DNS the domain name system that's all
+06:10
+for this lab thank you for watching I
+06:14
+hope this lab and video have been
+06:16
+helpful for you please subscribe for
+06:19
+future labs like this which will be
+06:21
+released weekly if you have requests for
+06:24
+any specific labs let me know in the
+06:26
+comment section if you want to support
+06:28
+my channel I accept Bitcoin and
+06:31
+aetherium donations via the addresses in
+06:33
+the description I am also a brave
+06:36
+verified publisher and accept bat or
+06:39
+basic attention token donations in the
+06:42
+brave browser
+

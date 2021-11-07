@@ -1,0 +1,245 @@
+00:00
+welcome to this free CCNA packet tracer
+00:03
+practice lab you can download the lab
+00:06
+file from the link in the description if
+00:09
+you like these labs please consider
+00:11
+supporting me via my patreon or the
+00:13
+cryptocurrency options in the
+00:15
+description also please subscribe to the
+00:19
+channel for more labs like this and
+00:20
+share these videos with anyone else
+00:22
+studying for the CCNA in this lab we
+00:27
+will configure a GRE tunnel gr e stands
+00:32
+for a generic routing encapsulation r1
+00:36
+and r2 are not directly connected
+00:39
+however we can use GRE to create a
+00:42
+virtual tunnel between them which will
+00:45
+enable them to behave as if they are
+00:46
+directly connected and their tunnel
+00:49
+interfaces will have IP addresses from
+00:51
+the same network 192.168.1.0 / 30 we
+00:57
+will then configure a IG RP on these
+00:59
+interfaces so they can learn about each
+01:02
+other's internal networks the
+01:04
+configuration is quite simple so let's
+01:07
+get started I'll start on r1 first
+01:12
+enable conf t we have to make a tunnel
+01:18
+interface on the router this isn't a
+01:21
+physical interface on the device but a
+01:23
+logical interface to which we will
+01:25
+assign an IP address you can type
+01:28
+interface tunnel 0 or the fast and easy
+01:32
+way as interface t0 let's assign an IP
+01:37
+address to it IP address 192.168.1.1 255
+01:44
+dot 255 dot 255 dot 255 @ UNASUR s--
+01:52
+which interface do you think will be the
+01:54
+source in this case it's the s 0 0 0
+01:58
+interface because that's the interface
+02:00
+we will actually be using to reach r2
+02:03
+via the service provider network so
+02:06
+tunnel source s 0 0 0
+02:11
+next to the tunnel destination tunnel
+02:15
+destination now what IP address do you
+02:19
+think is correct here
+02:20
+it's the IP address on r2 s s0 0 0
+02:25
+interface the one facing the service
+02:27
+provider so 200 oh oh - that's all there
+02:33
+is to it now let's go on our to enable
+02:41
+compte interface tunnel 0 IP address
+02:47
+192.168.1.1 fifty five to fifty five to
+02:52
+five to the source and destination will
+02:56
+be the opposite of our ones
+02:58
+configuration the source will be R to s
+03:01
+s 0 0 0 interface and the destination R
+03:05
+1 s s 0 0 0 interface tunnel source s 0
+03:12
+0 0 tunnel destination 100 odo - ok
+03:20
+that's all there is to configuring the
+03:22
+tunnel
+03:23
+however I've missed one very important
+03:27
+thing do show IP route Artoo's tunnel
+03:33
+destination is 100 oh oh - but it has no
+03:37
+idea how to get there if I try to ping
+03:41
+our one side of the tunnel it will fail
+03:43
+do ping 192.168.1.1 no response let's
+03:56
+configure a static default route via SPR
+03:59
+to exit IP route
+04:06
+oh-oh-oh-oh-oh-oh-oh-oh-oh 201 now we
+04:12
+have to do the same on our one exit IP
+04:19
+route
+04:22
+oh-oh-oh-oh-oh-oh-oh-oh-oh
+04:25
+101 keep in mind it doesn't have to be a
+04:29
+default route the important thing is
+04:31
+that the routers can reach the IP
+04:33
+addresses configured as the tunnel
+04:35
+destination okay now r1 and r2 can reach
+04:40
+each other let's try to ping our two
+04:43
+side of the tunnel from here on r1 do
+04:47
+ping 192.168.1.2 okay it works this time
+04:57
+let's check the interface do show IP
+05:01
+interface brief our tunnel interface is
+05:05
+up and up do show interface tunnel zero
+05:12
+there's the tunnel source and
+05:14
+destination we configured and you can
+05:17
+see the tunnel protocol is gr e being
+05:20
+transported over IP
+05:23
+ok now let's configure AI GRP over the
+05:26
+tunnel router ERP and I'll use an a s
+05:32
+number of 100 so I want to advertise the
+05:36
+inside network so Network 1000 100 200
+05:42
+255 I used the exact wildcard mask but
+05:47
+remember it's not always needed for EIG
+05:49
+RP just network 10000 would have
+05:54
+activated AI GRP on the G 0 0 interface
+05:57
+as well
+05:58
+okay now let's activate di GRP on the
+06:02
+tunnel network 192.168.1.0 again I'll
+06:07
+use the exact wildcard mask
+06:09
+0:03 ok let's do the same on our two
+06:17
+rotary IG RP 100 Network 1002
+06:23
+oh-oh-oh-oh 255 network 192.168.1.0 oh
+06:30
+oh oh 3 immediately we get a message
+06:35
+saying we have a new AI GRP adjacency Oh
+06:37
+where the tunnel interface and the
+06:40
+neighbor address is our ones tunnel
+06:42
+address 192.168.1.1 do show IP route
+06:49
+look are two learned our ones 1001 0/24
+06:55
+network let's try a ping from PC to 2 PC
+07:00
+one ping 1001 100
+07:17
+okay it works our GRE tunnel is up and
+07:20
+working and we successfully configured a
+07:23
+IG RP over the tunnel to share the
+07:25
+inside networks that's all for this lab
+07:31
+thank you for watching I hope this lab
+07:34
+and video have been helpful for you
+07:35
+please subscribe for future labs like
+07:38
+this which will be released weekly if
+07:41
+you have requests for any specific labs
+07:43
+let me know in the comment section if
+07:46
+you want to support my channel I accept
+07:48
+Bitcoin and aetherium donations via the
+07:51
+addresses in the description I am also a
+07:54
+brave verified publisher and accept bat
+07:57
+or basic attention token donations in
+07:59
+the brave browser
+

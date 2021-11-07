@@ -1,0 +1,203 @@
+ 1.874898 welcome back to another Inkscape
+tutorial  5.369852 in this video we're going to be
+looking at the layers option in Inkscape 11.218565 
+and working with layers  12.507588 it's a great
+skill to learn if you've used a
+Photoshop or before you're probably
+familiar with working in layers other
+software has it too 23.058649  so we have a whole
+tab up here or a whole drop down menu
+dedicated to layers in Inkscape 29.418545  and to
+bring up the layers menu we just go all
+the way to the bottom of this or we can
+hit ctrl shift
+L 38.074106  and it brings up this layers dialog
+over here 40.634711  so by default everything we
+draw ending scape is just going to be on
+one layer 45.241994  and I'm gonna change my fill
+and Stroke settings so I'm like the
+object 49.958422 
+fill and Stroke  51.362806 because I had I had some
+things changed last time  53.330526 I think I had 54.370994 
+didn't I have a blur 55.786749 
+well we'll keep this change our color a
+little bit 60.038824  and i'ma try to have any blur
+or opacity going on  62.994782 and also when I
+brought up filling strokes and our
+layers went somewhere  69.578371 it's right down
+here we can click it and bring it back
+up  72.123035 so you can toggle between open
+windows that you have  74.587084 this way
+they'll just appear right down below 77.222987 
+sometimes if you dock them  78.678629 they'll
+appear here on the side  80.330858 so we can see we
+have layers here  82.030786 fill and Stroke here we
+just click on layers to bring it back 86.386747  ok
+so this is everything is drawn on layer
+1 we know that because if we look down
+here  at the bottom we see layer 1  92.526885 if we
+click that's our only layer 94.332962  so let's try
+let's do something let's do it may let's
+draw a little bit of a scene here  102.174354 so I'm
+going to take this rectangle  104.181535 and we'll
+put it up like this we'll make it green 108.041282 
+and then we'll duplicate it ctrl D 111.093284  and
+we'll bring it up here  113.469101 and we'll make
+this like a blue like a sky  116.853387 so now we
+have like a ground sort of and a sky  119.733312 and
+we want this to be our layer 1 okay  123.001225 so
+then we'll add a second layer we click
+this plus sign  127.117067 new layer name we'll call
+it layer 2 129.312797  sure we'll call it layer do
+now actually 131.016309  let's call it Sun because
+draw a Sun in the sky 135.308966  and it's going to
+be added above current layer awesome 138.253187 
+then we go back to our layer one  139.752539 we can
+double click we can rename it to
+background 143.980167  now we have two layers our
+background layer and our Sun layer  147.947387 and
+what everyone would click on  150.043299 we can look
+down here becomes the active layer 153.068192 
+so on the Sun layer I'll go ahead and
+just draw a Sun  157.132109 and what's happening
+here oh there's this it was the same
+color I thought it was behind it first 163.223510 
+so it looks like a star right now  but if
+we double click and go to corners 166.587686  we'll
+give it a whole bunch of corners  168.235306 and now
+it's the Sun now this green there's
+looking like and you noticed we can we
+were on here if we click on the Sun 177.516451  we
+go to the Sun layer if we click on the
+grass we go to the background layer  182.188436 I
+want to change the color of the grass 184.287533 
+but we can talk we don't have to go to
+that layer is what I want to show we
+don't have to click on Sun layer before
+we can select the Sun 191.027510  we can just click
+on whatever 192.927933  we want to but it's on that
+different layer  195.607113 and then if we go over
+here to the layers  197.335876 we can actually turn
+if we want to turn off the background
+layer  199.863449 and just not see it we click this
+little eye here and it becomes a
+something we can't see
+now 206.615393  still there we just can't see it
+same with the Sun we can turn the Sun on
+and off 211.515576  and then we can create a third
+let's create a third layer  214.123271 and call it
+person now we have a layer called person
+and we'll draw a little character here 220.535337 
+sort of we'll just draw like a very
+simple 227.263541  okay
+all right so now I may be a little
+character guy here 237.271780  and we can also
+choose to not view that layer 240.543552  it's a
+separate layer  242.303746 and if we want to like
+send this son way back below I don't
+think we can do that yeah see if we try
+to if we try to lower it down or hit
+page down  252.347365 it's already at the lowest
+level of this son layer 256.983278  and so we can't
+set it back behind the background  262.435573 also
+it's going to be if we move it it's
+gonna always be behind this person that
+we drew  267.731645 and we can't push page up to get
+it to go ahead we can't raise it a level 272.472505 
+because it's within the levels that it
+toggles between  276.392892 are all within its own
+layer  278.844732 we can't do that if we want to
+move it we can do this  282.968607 with while we're
+on the son level   287.025797  we can hit ctrl X and
+cut that object 292.276754  and then we can go to
+the person level  296.332899   and it's person down
+here we could change it down here to
+change background change a person 299.712879  and
+then we do ctrl V to paste and now the
+Sun is on the person level if we turn
+off this level  306.136465 we see that they're both
+on the same level  309.508704 I'm going to hit ctrl
+X  310.876614 will change back to the Sun level
+control V and paste it now it's in the
+Sun level again  315.501729 levels come in handy
+when you're exporting to other programs
+sometimes you can it keeps that data  324.776696 and
+so you can exit we can I think we can
+export this into Kim 327.942157  but we can keep
+this especially in animation if we want
+to animate this character sometimes it's
+nice to be able to have it a separate
+layer  336.398194 so that it can animate separately
+from everything else without getting too
+messy  339.777948 so that's a good reason it also
+just helps keep things clean if when you
+get lots of objects  345.218371 it can get kind of
+messy and sometimes you don't want to I
+don't want to accidentally miss click 349.542383 
+and try and move his leg 351.206112  and
+accidentally move the grass instead 353.470268  so
+something we can do about that we can
+actually walk a level  358.014153 so we can come
+here to the background 359.730520  and click this
+lock button and then that becomes locked
+so we can't click it in
+more 
+
+
+
+365.678267  that's pretty cool huh 367.505432  so if we can
+still click and move the Sun  369.177785 we can
+click and move any part of the sky
+around  371.772647 but if we miss click on an
+accident  we won't move anything 374.980605  and
+maybe we want the Sun just to stay there 376.985218 
+and not move we can lock the Sun  379.048009 level
+as well or a layer I mean and then that
+layer is locked  384.104194 so now all we can move
+is just this guy 387.268874  so I hope that's been
+an informative introduction to levels in
+Inkscape   there's not much more to it
+than that  394.948603 oh if we did want to so it's
+unlocked the Sun 397.879864  if we did want the Sun
+to be over top of this guy 400.856429  we can just
+change this by  403.191758 I don't we can drag I
+think we can drag the level 405.371683  and do that
+what  406.343521 I do oh oh ok so this is good -
+good -  412.745477 so I actually just made this a
+sub level 415.336752  I just added it into person 417.332432  so
+you can have you can have them nested I
+guess you'd call it  421.100698 so this is now in
+here but we want to be out 424.508851  how do we get
+out of there 425.613375 
+right click  427.404816 I'm not sure how to get out
+now  432.977107 you see what I did I dragged I did
+it a drag and drop and I put it as a sub
+layer of person  438.920762 so now if we turn off
+the person layer it turns off the Sun
+and the person because  443.896833 the Sun is a sub
+layer 445.464982  so a good thing for this would be
+under the person we have all their
+clothes  449.684828 and accessories and everything
+about them their facial features  452.932719 so we
+have facial features as a separate sub
+layer of this person layer 458.428739  but my
+problem is now I'm not sure how to get
+it out of there 461.624689  oh there we go so now
+it's out  463.460831 and now I look it's on topic
+it's because I did do that move down to
+where I wanted to but so we can change
+this by going by here  471.848887 we can lower the
+current layer and we can lower even
+behind the background so we don't see it
+at all or we can raise it back up again 479.980758 
+so that's a way that you can that's
+another good reason to use layers if you
+can kind of accomplish same thing with
+levels 486.073022  but if you have a lot of objects
+it's sometimes good to have separate
+layers 490.165890  and it helps you like the name
+implies layer objects on top of another
+as well  495.312807 I hope you found this video
+informative  497.445133 go ahead
+like and subscribe if you have  499.113010 and we
+will catch on the next video 501.686307 502.941092  502.941092  

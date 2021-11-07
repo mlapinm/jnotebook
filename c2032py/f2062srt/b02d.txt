@@ -1,0 +1,26 @@
+[
+  {
+    "time": [
+      0.0,
+      63.0
+    ],
+    "en": [
+      "welcome to this free Cisco CCNA packet"
+    ],
+    "ru": [
+      "добро пожаловать в этот бесплатный пакет Cisco CCNA"
+    ]
+  },
+  {
+    "time": [
+      63.0,
+      63.0
+    ],
+    "en": [
+      "tracer practice lab you can download the"
+    ],
+    "ru": [
+      "практическую лабораторию с трассировщиком вы можете скачать"
+    ]
+  }
+]

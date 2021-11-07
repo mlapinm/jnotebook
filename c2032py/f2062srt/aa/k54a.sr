@@ -1,0 +1,551 @@
+00:00
+welcome to this free CCNA packet tracer
+00:03
+practice lab you can download the lab
+00:05
+file from the link in the description if
+00:08
+you like these labs please consider
+00:10
+supporting me via my patreon or the
+00:12
+cryptocurrency options in the
+00:14
+description also please subscribe to the
+00:17
+channel for more labs like this in this
+00:21
+lab we will take a look at single area
+00:23
+OSPF we will configure it on these four
+00:26
+routers to achieve full connectivity
+00:30
+OSPF also supports a hierarchical multi
+00:33
+area design but that will be for the
+00:35
+next lab this time we will do a simple
+00:39
+OSPF configuration and then do some
+00:42
+tweaking to affect the path traffic
+00:44
+takes the first step is to configure a
+00:47
+loopback address on each router note
+00:50
+that this isn't a necessary step for
+00:52
+OSPF however we will do this first so
+00:56
+that the loopback address becomes the
+00:58
+OSPF router ID each router uses to
+01:01
+identify itself to neighbors having
+01:05
+router ids of 1.1.1 1 2 2 2 2 and so on
+01:09
+will simplify things as for how the
+01:14
+router ideas can is determined manual
+01:18
+configuration takes precedence however
+01:21
+if it's not manually configured the
+01:23
+highest loopback address becomes the red
+01:25
+or ID
+01:26
+if there is no loopback interface
+01:28
+address the highest address of another
+01:31
+interface becomes the router ID we
+01:35
+should create these loop backs before we
+01:36
+configure OSPF because if we do it after
+01:39
+the routers won't update the router IDs
+01:42
+unless we reset the OSPF process that's
+01:47
+no problem in a lab like this but in a
+01:49
+real network you can't just reset your
+01:51
+routing protocols at any time anyway
+01:54
+let's make those loopback interfaces on
+01:57
+our one an able call 40 interface l0 for
+02:05
+loop x0 IP address 1.1.11
+02:13
+five exit we don't have to use the no
+02:17
+shutdown command on a loopback interface
+02:19
+next are to enable coffee/tea interface
+02:27
+l0 IP address - - - - 255 255 255 255
+02:35
+exit next r3 enable coffee/tea interface
+02:44
+l0 IP address three three three three
+02:48
+255 255 255 dot 255 exit finally r4
+02:57
+enable coffee/tea interface l0 IP
+03:02
+address for 4.4.4 255 255 255 255 exit
+03:09
+okay that's it for our loopback
+03:11
+addresses next let's configure OSPF on
+03:15
+each router and advertise the routes
+03:18
+let's go back to our one router OSPF
+03:22
+then we have to enter a process ID in
+03:26
+almost all circumstances you will only
+03:28
+use a single OSPF process on a router
+03:32
+however you can create multiple
+03:34
+processes and each will keep a separate
+03:36
+database
+03:40
+also the process ID is locally
+03:42
+significant it can be different on each
+03:44
+router and they can still become
+03:45
+neighbors just to prove that I'll use a
+03:48
+different router ID or sorry a different
+03:51
+process ID on each router let's go with
+03:54
+one for our one now let's advertise our
+03:59
+networks let me explain a little how
+04:01
+OSPF network command works it looks for
+04:05
+interfaces within the range stated in
+04:07
+the network command and then advertises
+04:10
+the network prefix on those interfaces
+04:13
+it doesn't necessarily advertise the
+04:15
+exact network used in the network
+04:17
+command for example network 12000 then i
+04:25
+put in a wildcard mask which if you
+04:27
+remember is inverse of a regular mask
+04:29
+the 12000 network is configured as a
+04:33
+slash 24 but if I for example configure
+04:37
+a slash 8 with O 255 255 255 it will
+04:42
+still advertise the slash 24 network on
+04:44
+f10 not a slash 8 okay next enter area
+04:50
+followed by the area number this is
+04:54
+single area OSPF so let's just put 0 on
+04:56
+all of these next one the G 0 0
+05:01
+interface network 14000 I'll set it as a
+05:07
+slash 16 this time just the show
+05:09
+anything works as long as the interface
+05:11
+prefix falls within that range
+05:14
+ohh-ohh 255 dot 255 area 0 finally the
+05:21
+loopback address network 1.1.1 100 200
+05:28
+area 0 this time i configured the exact
+05:32
+/ 32 mask on the interface I'll state it
+05:36
+one more time because it's very
+05:38
+important to understand this G 0 0 and F
+05:42
+1 0 will advertise the network prefix
+05:45
+actually configured on the interface not
+05:48
+the slash 8 + / 16 prefixes I configured
+05:51
+here
+05:53
+okay now let's set up OSPF on the other
+05:55
+routers and I'll show you a useful
+05:58
+shortcut I'll go on are two routes is P
+06:04
+F and again I'll use a different process
+06:06
+ID to show that it can still become
+06:08
+neighbors with r1 and r3 so I'll use a
+06:11
+process ID of two now as for that
+06:15
+shortcut I mentioned it's a way to
+06:17
+activate OSPF on all interfaces with a
+06:20
+single command this is useful for labs
+06:23
+but perhaps you might not want to do it
+06:26
+on a real network where you want a more
+06:27
+precisely control which interfaces OSPF
+06:30
+is activated on network 0.0.0.0
+06:36
+followed by a slash zero mask which is
+06:39
+usually 0.0.0.0 but because we have to
+06:43
+use a wildcard mask it is inverse it is
+06:46
+255 dot 255 255 255 area 0 ok all
+06:53
+networks fall within the odo odo slash
+06:56
+zero range so OSPF will be activated on
+07:00
+all interfaces let's do the same quickly
+07:03
+on r3 and r4 r3 first router OSPF 3
+07:11
+network oh-oh-oh-oh 255.255.255.0 5 area
+07:18
+0 then our 4 router OSPF 4 network
+07:26
+oh-oh-oh-oh 255 dot 255 dot 255 dot 255
+07:30
+area 0 ok now let's go back to our 1 and
+07:35
+see what's up do show IP ospf neighbor
+07:42
+now we can see that r1 has become
+07:45
+neighbors with r2 and r4 also notice
+07:49
+that the loopback interfaces we
+07:51
+configured have indeed become the router
+07:52
+IDs of r2 and r4 also the router
+07:57
+successfully became neighbors even
+07:59
+though we use different process IDs on
+08:01
+each router proving that the process ID
+08:04
+is only locally significant
+08:06
+next let's check the routes we received
+08:09
+here on our one do show IP route here
+08:15
+are the loop backs of r2 r3 and r4 and
+08:18
+here are the 2300 and 3400 networks to
+08:24
+which our one isn't directly connected
+08:27
+note that they have an O beside them
+08:30
+meaning that they were learned via OSPF
+08:33
+also notice that r1 learned the network
+08:36
+prefix is configured on each of the
+08:38
+interfaces not the network prefix we
+08:41
+actually configured on r2 r3 and r4
+08:45
+actually we configured oh-oh-oh-oh-oh-oh
+08:48
+on them and there is no odor odor odor o
+08:52
+/o Network in the table here so that
+08:55
+demonstrates the point as well now the
+08:58
+next step is to suppress OSPF messages
+09:01
+on the loopback addresses or sorry
+09:03
+loopback interfaces of each router
+09:06
+because OSPF is activated on the
+09:09
+loopback interfaces each router is
+09:11
+sending OSPF advertisements on them
+09:14
+however the loopback interface doesn't
+09:17
+actually lead to anywhere beyond the
+09:18
+router itself so there's no point of
+09:20
+advertising anything on them to suppress
+09:24
+the advertisements we configure the loop
+09:26
+backs as passive interfaces with this
+09:28
+command passive interface l0 that's all
+09:34
+let's quickly do the same on the other
+09:36
+routers first are too passive interface
+09:42
+l0 then our three passive interface l0
+09:50
+finally our for passive interface l0 the
+09:58
+next step is to configure the OSPF
+10:00
+reference bandwidth of each router so
+10:03
+that a 10 Gigabit Ethernet interface
+10:05
+would have an OSPF cost of 1 what
+10:10
+exactly does that mean well from our
+10:13
+ones perspective it has two routes to
+10:16
+reach r3 it can go via r2
+10:19
+or via r4 how does it decide which path
+10:24
+to use let's go back to r1 and look at
+10:28
+their routing table notice beside these
+10:33
+OSPF routes there is a 110 which is the
+10:36
+administrative distance for OSPF I won't
+10:40
+talk about administrative distance now
+10:42
+hopefully you've studied it however next
+10:45
+to it is the metric notice that the
+10:48
+metric via r2 and the metric via r4 are
+10:52
+the same so both are in the routing
+10:54
+table however why are both the same when
+11:00
+the path via r4 includes a faster
+11:02
+gigabit ethernet interface well to
+11:05
+calculate metric OSPF divides a
+11:09
+reference bandwidth by the bandwidth on
+11:11
+the interface the reference bandwidth by
+11:15
+default is 100 megabits per second and a
+11:19
+fast ethernet interface is 100 megabits
+11:21
+per second so a fast ethernet interface
+11:24
+has a metric of 1 which is 100 divided
+11:27
+by 100 a Gigabit Ethernet interface has
+11:31
+a bandwidth of 1,000 megabits per second
+11:34
+100 divided by 1,000 is 0.1 however the
+11:40
+lowest possible metric in OSPF is 1 so
+11:44
+gigabit and fast ethernet interfaces
+11:46
+have the same metric by default 1 even a
+11:51
+10 gigabit or 100 gigabit interface
+11:53
+would have a metric of 1 to change this
+11:57
+default behavior we can change the
+11:59
+reference bandwidth with this command
+12:01
+auto cost reference bandwidth then the
+12:06
+bandwidth in terms of megabits per
+12:07
+second our instructions say to make it
+12:11
+so that a 100 gigabit interface oh sorry
+12:14
+a 10 gigabit interface would have a cost
+12:17
+of 1 so we should set the reference
+12:19
+equal to 10 gigabits per second so I'll
+12:24
+enter 10,000 as this message says here
+12:28
+make sure the reference is consistent
+12:30
+across all routers
+12:32
+let's go on our to auto cost reference
+12:39
+bandwidth ten thousand
+12:41
+okay next are three auto cost reference
+12:47
+bandwidth ten thousand finally are for
+12:52
+auto cost reference bandwidth ten
+12:56
+thousand okay let's check again on our
+12:59
+one do show IP route now we only have
+13:06
+one route two three three three three
+13:08
+via the gig zero zero interface because
+13:12
+OSPF now distinguishes between the cost
+13:14
+of a gig Ethernet and the cost of a Fast
+13:17
+Ethernet interface now our last step
+13:21
+isn't something you'd likely do in a
+13:23
+real network but I want to show you that
+13:25
+you can do it after adjusting the
+13:28
+reference bandwidth so that r1 will take
+13:30
+the path of via r4 to our freeze
+13:33
+loopback exclusively we are now going to
+13:35
+configure the opposite and make it use
+13:37
+the path to r2 exclusively we will do
+13:41
+this by configuring the OSPF cost of
+13:44
+some interfaces now there are multiple
+13:47
+ways to do this we can do it by lowering
+13:50
+the cost of some interfaces or by
+13:53
+raising the cost of others or a
+13:54
+combination just to make this quick for
+13:58
+the video I'll raise the cost of the g00
+14:01
+link between r1 and r4 to ten thousand
+14:05
+I'll start on our one interface g00 to
+14:13
+change the cost use this command IP ospf
+14:16
+cost ten thousand okay now let's do the
+14:20
+same on our for Zend interface g00 IP
+14:27
+ospf cost ten thousand now let's go back
+14:31
+on our one do show IP route okay now the
+14:38
+route two three three three three has
+14:41
+changed back to r2 exclusively because
+14:44
+we manually adjusted the cost of
+14:46
+Giggsy rose your interface despite the
+14:48
+fact that the path via r4 is actually
+14:51
+faster we covered a lot of different
+14:54
+things in this lab OSPF is very
+14:57
+important both for the exam and because
+15:00
+it's widely used in real networks make
+15:03
+sure you know the commands required I
+15:05
+will also be making a few more OSPF labs
+15:08
+so be sure to practice further with
+15:10
+those that's all for this lab thank you
+15:17
+for watching I hope this lab and video
+15:19
+have been helpful for you please
+15:21
+subscribe for future labs like this
+15:23
+which will be released weekly if you
+15:27
+have requests for any specific labs let
+15:29
+me know in the comments section if you
+15:32
+want to support my channel I accept
+15:34
+Bitcoin and aetherium donations via the
+15:36
+addresses in the description I am also a
+15:40
+brave verified publisher and accept bat
+15:43
+or basic attention token donations in
+15:45
+the brave browser
+

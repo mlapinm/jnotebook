@@ -1,0 +1,303 @@
+00:00
+welcome to this free CCNA packet tracer
+00:03
+practice lab you can download the lab
+00:05
+file from the link in the description if
+00:08
+you like these labs please consider
+00:10
+supporting me via my patreon or the
+00:12
+cryptocurrency options in the
+00:14
+description this lab uses the same
+00:18
+topology as the previous lab number 20
+00:21
+whereas lab 20 had you configured
+00:24
+various technologies this lab requires
+00:26
+you to troubleshoot several
+00:28
+configuration errors to restore
+00:29
+connectivity between pcs 1 2 3 & 4
+00:34
+troubleshooting is a valuable skill and
+00:36
+also good practice for the exam as you
+00:39
+will most likely encounter some sort of
+00:41
+troubleshooting lab in your exam in this
+00:44
+video I won't go through the exact
+00:46
+troubleshooting method I would use to
+00:47
+fix the topology there is somewhat of an
+00:50
+art to troubleshooting and you can go
+00:53
+about it in many ways instead I will
+00:56
+just show you the configuration errors
+00:57
+one by one however it is important to
+01:00
+have some sort of system to troubleshoot
+01:02
+try to complete the lab yourself first
+01:05
+then continue watching this video if you
+01:07
+can't find and fix all of the
+01:08
+configuration errors or watch it after
+01:11
+to check your solution first let's try
+01:16
+to ping from pc1 and see if it can reach
+01:18
+the other pcs paint no.1 dot 12 can't
+01:26
+reach PC 2 ping 1000 13 can't reach PC 3
+01:34
+and paint no.1 14 can't reach PC 4 so PC
+01:43
+1 can't reach any of the other pcs there
+01:47
+are multiple miss configurations in this
+01:48
+lab and they all contribute to that but
+01:51
+let's look at one of them I'll go on
+01:53
+switch one password out of CCNA enable
+01:59
+if you use the command shell port
+02:02
+security
+02:03
+notice that the security violation count
+02:06
+is not zero this is because our pings
+02:09
+have been triggering port security
+02:11
+violations
+02:12
+so run look here under f02 sticky MAC
+02:18
+address learning is supposed to be
+02:19
+configured but instead a secure MAC
+02:22
+address of áááá áááá áááá is configured
+02:27
+let's fix that con 14 interface f0 - no
+02:34
+switch port port security MAC address
+02:37
+eh-eh-eh-eh eh-eh-eh-eh eh-eh-eh-eh ok
+02:43
+that remove the configuration now lets
+02:46
+enable sticky mac learning switch port
+02:49
+port security MAC address sticky ok now
+02:55
+let's try to ping from pc1 again just a
+02:58
+PC to ping 1001 dot 12 it doesn't work
+03:08
+but let's go back to switch 1 again do
+03:14
+show port security notice that the
+03:17
+security violation counter hasn't
+03:19
+increased so PC one isn't triggering
+03:21
+anymore port security violations but
+03:24
+there are still problems elsewhere
+03:28
+next let's check our inter VLAN routing
+03:30
+since PC one can't pin PC to let's go on
+03:35
+our one password of CCNA enable show run
+03:42
+look at the two sub interfaces of G zero
+03:45
+zero there is one miss configuration on
+03:48
+each on the g0 0.13 sub-interface the IP
+03:52
+address is incorrect it should be 10.1
+03:56
+which is the default gateway set on the
+03:58
+pcs in VLAN 13 not 10.2 also the v/line
+04:04
+of the g0 0.24 sub interface is
+04:06
+incorrect it should be 24 not - lets fix
+04:11
+those errors con 40 interface G 0 0 13
+04:17
+IP address 1001 255.255.255.0 note that
+04:26
+you don't have to remove the previous IP
+04:28
+address first this overrides it next
+04:32
+interface G 0 0 24 encapsulation dot1q
+04:37
+24 ok that should fix it now PC one
+04:44
+should be able to paint PC 2 there are
+04:47
+still problems on switch 2 which will
+04:49
+prevent it from reaching PC 3 and PC for
+04:51
+however because pc1 & pc2 are connected
+04:55
+to the same switch and we fixed the
+04:57
+inter VLAN routing they should be able
+04:58
+to reach each other I'll go on PC one to
+05:01
+try paying 1000 1.12 there we go just to
+05:10
+confirm
+05:11
+let's try pc3 to ping 1000 13 doesn't
+05:21
+work
+05:23
+now let's go on switch to password of
+05:28
+CCNA enable let's check if the trunk
+05:32
+between switch 1 and switch 2 is working
+05:35
+show interfaces trunk nothing appears
+05:40
+that's a problem we could use show run
+05:43
+to check but let's try another command
+05:45
+just to get familiar with the various
+05:46
+show commands available show interfaces
+05:50
+f01 switch port take a look at all the
+05:54
+info here and familiarize yourself with
+05:56
+it for this lab what we want to look at
+05:59
+is here the administrative and
+06:02
+operational mode is static access
+06:04
+meaning it has be configured as an
+06:07
+access port not a trunk let's fix that
+06:10
+conf T interface f01 switch port mode
+06:17
+trunk okay that solves that however one
+06:21
+more problem remains on switch to do
+06:25
+show VLAN brief look here f03 is in VLAN
+06:31
+24 as it should be however the f02
+06:34
+interface is in VLAN 23 which is not
+06:38
+correct it should be in VLAN 13 let's
+06:41
+fix that interface f0 to switch port
+06:46
+access VLAN 13 okay that's all the
+06:52
+misconfigurations
+06:53
+that should restore full connectivity
+06:55
+between the four pcs it can take some
+06:59
+time for a spanning tree to reconverge
+07:01
+so things might not work immediately if
+07:04
+you haven't studied spanning 4 yet don't
+07:06
+worry about it yet but after changes the
+07:09
+configuration like we just did it can
+07:11
+take some time for the switches to
+07:12
+communicate the changes to each other
+07:14
+and for those changes to take effect
+07:16
+across the network hopefully enough time
+07:20
+has passed so let's go on pc-12 tests
+07:24
+I'll ping PC 2 first although we already
+07:27
+tested before and it worked
+07:29
+ping 1001 12
+07:34
+the ping works again next let's ping pc3
+07:38
+which didn't work previously because of
+07:40
+the misconfigurations on switch to ping
+07:44
+1000 13 now the ping works and finally
+07:53
+I'll ping PC for pin 1001 14 it works as
+08:05
+well this lab is now complete
+08:11
+thank you for watching I hope this lab
+08:13
+and video have been helpful for you
+08:15
+please subscribe for future labs like
+08:18
+this which will be released weekly if
+08:21
+you have requests for any specific labs
+08:23
+let me know in the comment section if
+08:25
+you want to support my channel please
+08:28
+consider contributing to my patreon
+08:30
+patreon comm / Jeremy's IT lab I accept
+08:36
+Bitcoin and aetherium donations via the
+08:38
+addresses in the description I am also a
+08:41
+brave verified publisher and accept bat
+08:44
+or basic attention token donations in
+08:47
+the brave browser
+

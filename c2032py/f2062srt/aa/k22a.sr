@@ -1,0 +1,275 @@
+00:00
+welcome to this free CCNA packet tracer
+00:03
+practice lab you can download the lab
+00:06
+file from the link in the description if
+00:09
+you like these labs please consider
+00:10
+supporting me via my patreon or the
+00:13
+cryptocurrency options in the
+00:14
+description this will be a short lab
+00:17
+focused on using telnet to connect to
+00:20
+Cisco devices in a previous lab we
+00:23
+configured the console port and use that
+00:25
+to connect to a router via PC in this
+00:29
+lab we will use telnet which allows us
+00:31
+to configure a Cisco device by
+00:33
+connecting via a regular Ethernet port
+00:36
+note that although telnet is something
+00:39
+you should be familiar with it is not
+00:41
+something you will likely end up using
+00:42
+due to a lack of security this is
+00:46
+because telnet sends all data in
+00:48
+plaintext if anyone intercepts that data
+00:51
+they can read it including usernames and
+00:53
+passwords and other sensitive data
+00:56
+instead of telnet you will want to use
+00:59
+SSH which we will cover in another lab
+01:02
+but with that said telnet is still
+01:04
+something you should know
+01:05
+so let's practice some of the basics in
+01:07
+this lab as always try to complete the
+01:11
+lab yourself first then continue
+01:13
+watching this video if you have trouble
+01:14
+or watch it after to check your solution
+01:17
+if you haven't learned the commands
+01:19
+required to do these tasks yet in your
+01:21
+studies feel free to just watch the
+01:23
+video to learn them
+01:27
+step one is to configure the IP
+01:29
+addresses on switch 1 and R 1 we will
+01:33
+then use these addresses to connect to
+01:34
+the devices later in the lab let's go on
+01:38
+switch 1 first enable compte we will
+01:45
+configure the IP address on the VLAN 1
+01:47
+interface because a regular switch
+01:50
+interface cannot be configured with an
+01:52
+IP address we have to configure that IP
+01:54
+address we use to manage the device on a
+01:56
+VLAN interface rather than on a physical
+01:59
+interface so interface VLAN 1 IP address
+02:04
+192.168.1.1 5 5 dot 255 dot 255 0 also
+02:12
+I'll use no shutdown to activate it now
+02:15
+let's configure r1 enable COFF T
+02:22
+interface G 0 0 IP address 192.168.1.1
+02:30
+255.255.255.0 remember router interfaces
+02:34
+are administratively down by default so
+02:36
+no shutdown okay that's all for step 1
+02:41
+step 2 is to configure a single user on
+02:44
+each device since we're on our one let's
+02:47
+do that first
+02:48
+exit username cisco password CCNA note
+02:54
+again that passwords are case sensitive
+02:56
+and in this case CCNA is in all capitals
+03:00
+now let's do the same on switch one exit
+03:05
+username cisco password CCNA
+03:13
+step three is to configure the vty lines
+03:16
+on switch 1 and R 1 vqi stands for
+03:21
+virtual teletype and when you create a
+03:23
+telnet connection to a Cisco device you
+03:26
+will be connecting to one of these vty
+03:28
+lines there are typically 16 numbered 0
+03:32
+through 15 although in the running
+03:34
+configuration they will typically be
+03:36
+displayed as 0 through 4 then 5 through
+03:40
+15 let's check on switch 1 do show run
+03:46
+scroll down to the bottom there we go
+03:50
+line vty 0 4 meaning line 0 through 4
+03:54
+then line vty 5 15 meaning alliance 5
+03:59
+through 15 although it is displayed like
+04:02
+this in the configuration we can simply
+04:05
+use the command line vty 0 15 to connect
+04:09
+to all lines from 0 through 15 there we
+04:12
+go now we have two things to configure
+04:15
+here according to the lab instructions
+04:17
+first require the use of the local user
+04:21
+database to connect to the vty lines
+04:24
+this is the same command we used when
+04:26
+configuring the console line in a
+04:27
+previous lab login local since we only
+04:33
+have one user in the local database we
+04:35
+will have to use the username cisco and
+04:37
+password CCNA when we try to tell that
+04:39
+to this device later the next
+04:43
+requirement is to allow only telnet
+04:45
+connections to the vty lines this is
+04:48
+done with this command transport input
+04:52
+now I'll use the question mark to see
+04:54
+what options there are all none SSH and
+05:00
+telnet
+05:01
+as I mentioned in the beginning of the
+05:04
+video typically you'll be using SSH but
+05:07
+let's set it to telnet for this lab ok
+05:11
+now let's do the same configuration on
+05:13
+our one line vty 0 15 login local
+05:21
+transport input telnet
+05:24
+okay now let's type do show run look at
+05:30
+the bottom here there it is our
+05:32
+configurations have been applied to all
+05:34
+vty lines step four is to attempt to
+05:40
+telnet to each device from pc1 on a
+05:43
+simulator like packet tracer you simply
+05:46
+click on the icons of each device to
+05:48
+configure them in real situations
+05:50
+however you have to connect to the
+05:52
+devices from a computer via the console
+05:54
+port as we did in a previous lab or by
+05:57
+telnet or SSH as we're going to try now
+06:00
+I'll go on PC one let's try switch one
+06:06
+telnet 192.168.1.2 we're asked for the
+06:12
+username which is Cisco and our password
+06:16
+CCNA in all caps there we go now we have
+06:21
+access to the command line of switch one
+06:23
+I'll type exit and now let's try our one
+06:27
+telnet 192.168.1.1 cisco CCNA there we
+06:36
+go now we have access to the command
+06:38
+line of r1 that's all for this lab
+06:45
+thank you for watching I hope this lab
+06:47
+and video have been helpful for you
+06:49
+please subscribe for future labs like
+06:51
+this which will be released weekly if
+06:54
+you have requests for any specific labs
+06:57
+let me know in the comment section if
+07:00
+you want to support my channel please
+07:02
+consider contributing to my patreon
+07:04
+patreon comm slash Jeremy's IT lab I
+07:08
+accept Bitcoin and aetherium donations
+07:11
+via the addresses in the description I
+07:13
+am also a brave verified publisher and
+07:17
+accept bat or basic attention token
+07:20
+donations in the brave browser
+

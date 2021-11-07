@@ -1,0 +1,516 @@
+cool ones, let me know and I'll try have a go at it.
+
+Thank you.
+
+Hi, everyone,
+
+and welcome to the last game of the JavaScript games course.
+
+This is actually my favorite game.
+
+So we're going to be building Tetris.
+
+It's my favorite.
+
+It's also the hardest,
+
+which is why I obviously left it to last and we're going to be using every single thing that we learnt before,
+
+as well as learning a few new things.
+
+So a few new things that we're going to be learning are get elements by class name,
+
+math floor, some splice concat,
+
+as well as adding background images,
+
+via JavaScript using that style background.
+
+For anyone joining us now,
+
+I would strongly recommend going all the way back to the beginning.
+
+And starting from the first game as we're going to be using functions that I'm not going to go into detail.
+
+And again, I feel like I've already explained them and it wouldn't be fair on everyone else who's watched from the beginning.
+
+So things like query selectors,
+
+event listeners are functions.
+
+We're not going to be going over that again.
+
+So yeah, definitely go back.
+
+Tetris is a 1984 video game invented by Soviet engineer Alexey pay it off.
+
+It is a grid based game that has seven shapes,
+
+or technically tetromino is that you need to navigate all the way down the grid in order to fill up at the bottom.
+
+When you fill up exactly a row,
+
+this will disappear,
+
+but also give you points.
+
+The cool part about this is that the shapes are going to rotate.
+
+So we're going to learn how to rotate these shapes in JavaScript,
+
+as well as move them down from left and right and so on.
+
+The other cool thing that we're going to do is a display the shape that's about to come down.
+
+So I don't know if you've seen Tetris.
+
+But usually there's a grid.
+
+But there's also like a little side thing that will display the shape that's literally about to come down.
+
+After you finish having your go.
+
+There is a reason why I saved this game to last is pretty hard.
+
+So if you're feeling brave,
+
+let's get going on this project,
+
+we are going to use a HTML file,
+
+CSS file and a JavaScript file.
+
+Make sure to set up your files accordingly.
+
+Next, we need to add the following script tag into the head of your HTML file.
+
+I'll point you to your JavaScript file and your app folder file through the source attribute.
+
+Next, add an event listener to your JavaScript file like so.
+
+First of all, to make the game we need to decide on our grid size.
+
+For this video, I have chosen 10 squares width by 20 squares height.
+
+So from now on, consider each square to be one div on your HTML file.
+
+This gives a total of 200 dibs on our HTML file.
+
+If you flip over to your HTML file,
+
+please add a total of 200 dose,
+
+please put these divs in the div itself and give it a class name of grid.
+
+For the purpose of teaching.
+
+I'm going to give each of these divs a color of yellow and my CSS file and a height and width.
+
+So you can see them as squares like so.
+
+As you can see, because divs are programmed to be in block.
+
+This is what happens in our browser.
+
+By setting a width to our grid,
+
+we can stack the digit from left to right and rows of 10.
+
+Obviously, the way that we did it 20 pixels and the width of the grid is 200 pixels.
+
+We will get tenders in a row.
+
+So feel free to mess around about as you want.
+
+I've numbered them for the sake of the tutorial like this.
+
+Let's have a look at our grid now.
+
+Next, we need to use the query selector to add the following into the top of our js file.
+
+js file now that is what we mean by grid.
+
+We're picking up the div with a class name of grid from what HTML page.
+
+Now that we have our grid set up,
+
+let's focus on the total Nino's themselves.
+
+In Tetris, there are five to caminos Tetris in general as a pretty cool story.
+
+So check it out, if you can write their official names are the L tetromino,
+
+Zed tetrominoes to tetromino,
+
+o tetromino, and ita terino.
+
+As you can see here,
+
+I've put them in four by four grid,
+
+so conduct for their rotational axes.
+
+There's so my drawer and we are now able to draw the tetromino as as constants with their four rotations.
+
+Using the concept of width a set above we have set the width is 10.
+
+So let's do the starting position is zero,
+
+and start drawing attention Muniz,
+
+out on the grid into the forward stations.
+
+So let's set this out of the top of your j s file.
+
+Now that we have our five touch windows with the four rotations,
+
+let's put them in an array and call them the tetromino O's.
+
+As you know, Tetris determiners are selected at random.
+
+We will now need to write something that will randomly select a tetromino from our tetrominoes Right,
+
+my floor was simply round down the integer that is returned in this case making sure that it was one below the tetrominoes array length.
+
+Once we have defined random,
+
+we need to define the current rotation of the randomly selected tetromino.
+
+Let's define this as current.
+
+So now we tackling have defined what one of the randomly selected determiners current rotation is.
+
+Let's move on to the next part,
+
+moving current down one div space with every second.
+
+This let's pick the top center of the board as a starting point for the current are to drop down from,
+
+let's call this current position.
+
+We are now going to visually move the tetromino down by drawing it and unrolling it in depth.
+
+This we are going to assign a class name to the details,
+
+we want to visually display a tetromino shape.
+
+And so let's put this at the top of our file.
+
+Again, using query selector all this time,
+
+now go to your CSS file.
+
+Now the following from now on all divs with a class name block will be blue.
+
+Now let's write the drawer function to give all the squares in your current dictionary know the class name block.
+
+I've also written some code to give you surgery now randomly select a color from an array.
+
+You can choose as you want,
+
+but we're not going to do it.
+
+Now because it's not really necessary,
+
+we have to work again head over to my GitHub if you want to check that out.
+
+Right, so now that we wrote the draw function,
+
+let's write the unroll function.
+
+So this will essentially get rid of the class name block from the dues and what we define this current.
+
+As you can see, we are using for each which meaning that each of the squares or dues and our current tetromino will have the class name of block removed from them.
+
+Like so.
+
+But now that we've done that,
+
+we need to write two more functions.
+
+Actually, let's get the move down function out the way fast.
+
+So just to speed up moving down.
+
+We will do this like so it simply adds the width to visually display the shape moving down.
+
+I added the freeze function here.
+
+I'm having it so that you know it's necessary to put this in at the move down function to stop the current tetromino when it reaches the end of the grid,
+
+we will write this function towards the end of the tutorial.
+
+If you want to invoke the move down function earlier than this,
+
+please take out the freeze function.
+
+Okay, now I'm going to write the move write function.
+
+A lot is going on here,
+
+I'm going to write a reminder that we need the current tetromino to move left if it's the right edge of the grid,
+
+we do not want the tetromino crossing over into the other side of our grid.
+
+We also don't want it to go through other frozen pieces.
+
+Okay, so function move right goes like this.
+
+First we unroll the space,
+
+then we define what is the right edge and what happens to the current tetromino when is it Next we write what happens when the shape is not in the right edge I freeze to move right but adding one to the current position.
+
+Now finally, if any of the squares and our current tetromino go into a div containing block two,
+
+we also want it to move left so appearing as if the shape hasn't moved at all.
+
+This block two is what I have defined as a frozen shape.
+
+Finally we redraw the tetromino now go to your CSS file and add a block to all offers and shapes will now appear as purple.
+
+Let's do the same moving on which means left using the same logic as above.
+
+You will notice I use modular here.
+
+This is saying that if our shape as a square and dib 10 to 2030 and so on,
+
+it will it is divisible by our set width and is a range of zero.
+
+Remember that we count the first item on a range zero to 10 is actually to 11 in our physically drawn divs in our age.
+
+Hello.
+
+Alright, so once we've written those,
+
+our final function is to rotate the tetromino.
+
+This is actually us just skipping to the next rotation in the current rotation array of each tetromino.
+
+So again, it's a visual trick making it look like it's rotated.
+
+We like this simply like so.
+
+Okay, so now we've written the functions for our group down,
+
+move left and move right.
+
+and rotate when you assign keys to them and add an event listener.
+
+Do this at the top of your js file.
+
+The E here means event and user pass it through the functions like so.
+
+Okay, so now we can move the tetromino around on the board or rotate it great.
+
+We now need to decide what happens if the tetromino class name block hits the bottom of the board or frozen tetromino of class name block too fast.
+
+Let's decide that the bottom of the board is defined as anything with div class name block through right so we're going to add another block class name.
+
+Go back to your CSS file unlike before,
+
+add the following.
+
+Now we're going to HTML file and hardcore block three as a class named into the last tenant dupes.
+
+You should see this show up in your balls It looks so great.
+
+Okay.
+
+Now as everyone knows,
+
+in Tetris, you can actually see the upcoming section winners in your game.
+
+Let's quickly create this feature we're writing a function called display shape,
+
+and adding some code to our HTML so you can see what's happening.
+
+I'm going to use a lot of logic we've used before to make the small grid a four by four grid to display our display squares,
+
+even creating a new small tetromino array.
+
+Okay, now we can see our display grid above our main grid in the browser.
+
+Again, we need our JavaScript to know what we mean when I said using the constant display squares,
+
+so we need to add this query selector here.
+
+Now using the same logic,
+
+let's write how we are going to see the previous shapes or terminos in our display squares.
+
+When you set a new width for the small grid,
+
+also a new index,
+
+let's call this display index.
+
+Now, just like before,
+
+we are going to write out our five to caminos.
+
+However, this time,
+
+we do not need all four rotations,
+
+we are simply displaying the tetromino.
+
+So for this we only need one iteration of each tetromino in an array.
+
+Let's call this constant small caminos Now let's write the function display shape.
+
+Again, you might be familiar with how I write this by now.
+
+We will also be selecting the small tech community at random.
+
+Let's put next random at zero up here.
+
+So what is happening is each time the display shaped function is invoked,
+
+we are removing any classes from devs fast.
+
+Selecting the next one knows what action you know,
+
+then drawing it out onto our grid.
+
+Let's see if it works by invoking function here.
+
+Oops, I made a mistake.
+
+This should be crew so it's all Yes,
+
+with a page refresh there is a small tetromino on our display display grid.
+
+Okay, now let's get rid of that and carry on.
+
+Now let's go back to the freeze function that I mentioned previously,
+
+in the move down function,
+
+a lot will be happening in the freeze function,
+
+we need to freeze the tetromino if any or some of its squares and with a square containing block three,
+
+so the bottom of our grid essentially,
+
+or if it is the if the squares enter a div with the class name block two,
+
+so frozen squares.
+
+If any of the two above happen,
+
+we need to turn all the squares in the community block two squares.
+
+After this happens,
+
+we need to make sure the next random tetromino from the disclosures becomes our next current.
+
+Finally, we need to draw the current tetromino by invoking the draw function,
+
+and then display the next tetromino.
+
+In the display grid.
+
+We're invoking the display shape function.
+
+Next, when it's for all these things together,
+
+and create a way for our user to start the game.
+
+Therefore invoking the draw function and making sure the game continues to move the tetromino is every one second as we do This by creating a start button in HTML and adding an event listener like so.
+
+For now, set timer ID at now,
+
+we will need this to restart the game.
+
+Again, here,
+
+we need to display a random tetromino from our small little mini tetromino.
+
+All right, like so,
+
+and invoke the display shape function we were earlier.
+
+So now go into your HTML and add a button.
+
+And now the following to do is,
+
+you will now see in your browser that upon pressing start the drawer function and the display function will be invoked,
+
+as well as the time.
+
+Oops, you can see the shapes are falling through the bottom floor.
+
+This is because there's no freeze function,
+
+and I'll move down function.
+
+I moved it as I mentioned earlier in the tutorial,
+
+it would have not let me move left right up down on the key codes if that was still in there because we didn't like the function.
+
+So if you got rid of the freeze function from our move down function,
+
+as I mentioned, please do put it back in now.
+
+If this is not here,
+
+then the shift will simply fall through the bottom of the grid.
+
+Okay, now that should work.
+
+Now get your HTML page so we can visually show a score and how many lines we have cleared in our browser.
+
+I'm going to do this with h1 tags.
+
+So as you can see,
+
+here, we're using class names for a js file so we can then use the query selector.
+
+To make our js file an HTML file.
+
+Let's add the following to the top of JavaScript file school.
+
+We are now set to write the game over function in our JavaScript file.
+
+I'm going to write it like so.
+
+Hopefully by now you're comfortable with how I am using block two and block three in my functions.
+
+It's just the same here.
+
+Make sure to clear the time where I do so that note attorneys carry on falling.
+
+Again, please add this function into office function.
+
+And finally we can write our add school function.
+
+This function will add 10 to our current score each time is executed Let's start by defining a constant row like this.
+
+Next we need to use every to make sure that if every square and I'll define row contains block at your frozen tetromino,
+
+we add a score of 10,
+
+unlined to one of our and now we want to disclose in our browser.
+
+We can do this using an HTML like sir.
+
+Finally, we need to get rid of the row just like in Tetris.
+
+Once we have added the score on the line,
+
+we will do so using remove.
+
+Now to move the river down one,
+
+we will use splice splice will cut out the current index up plus our defined width of 10.
+
+So in other words,
+
+the whole world now that's done we will need to use append child to add a new row to the top of our grid visually appearing as if nothing got removed or added in the first place.
+
+And there you have it.
+
+My game of Tetris,
+
+as mentioned, it's my first video.
+

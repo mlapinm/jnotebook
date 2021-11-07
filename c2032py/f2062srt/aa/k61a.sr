@@ -1,0 +1,323 @@
+00:00
+welcome to this free CCNA packet tracer
+00:03
+practice lab you can download the lab
+00:05
+file from the link in the description if
+00:08
+you like these labs please consider
+00:10
+supporting me via my patreon or the
+00:13
+cryptocurrency options in the
+00:14
+description also please subscribe to the
+00:17
+channel for more labs like this in this
+00:21
+lab we will take a look at the
+00:22
+point-to-point protocol PPP PPP
+00:27
+is a layer 2 protocol often used over
+00:30
+serial LAN or wide area network
+00:33
+connections on a Cisco router the
+00:37
+default layer 2 encapsulation on a
+00:39
+serial connection is Cisco hdl-c however
+00:44
+PPP provides superior security through
+00:47
+authentication functionality so in this
+00:51
+lab we will configure PPP with two
+00:53
+different authentication methods on the
+00:56
+connection between r1 and SPR one
+00:59
+meaning service provider router 1 we
+01:03
+will configure PPP with PAP the password
+01:06
+authentication protocol which uses a
+01:09
+static password to authenticate the
+01:10
+connection on the connection between r2
+01:14
+and SPR 2 we will configure PPP with
+01:18
+chap the challenge handshake
+01:20
+authentication protocol which uses a
+01:22
+dynamic randomly generated string
+01:25
+providing greater security than a static
+01:27
+never changing password let's get
+01:30
+started let's start with r1 enable first
+01:36
+let's check what the encapsulation on
+01:38
+s00 is show interfaces s0 0 there it is
+01:46
+encapsulation hdl-c
+01:49
+also notice that the interface is in the
+01:51
+up-down State this is because there is
+01:55
+an encapsulation mismatch I've already
+01:58
+configured the service provider routers
+02:00
+and SPR ones s00 interface is already
+02:04
+configured with PPP encapsulation
+02:07
+let's try to ping SPR 1 ping 100 0.1
+02:18
+doesn't work let's enable PPP on our one
+02:22
+coffee tea interface s 0 0 encapsulation
+02:28
+PPP do show IP interface brief now the
+02:34
+interface is still up down because we
+02:37
+haven't configured authentication yet on
+02:39
+our one but it's already configured on
+02:41
+SPR one I've already configured a
+02:45
+username of Cisco and a password of CCNA
+02:48
+on SP r1 so we have to configure our one
+02:51
+to send that username and password to SP
+02:54
+r1 to authenticate likewise SP r 1 is
+02:59
+currently trying to authenticate with
+03:00
+the username of packet and a password of
+03:03
+tracer so we have to configure that
+03:05
+username and password on r1 I'll do that
+03:09
+first exit username packet password
+03:15
+tracer now let's go back to the
+03:18
+interface interface s0 0 ok next let's
+03:23
+enable authentication PPP authentication
+03:27
+PAP now let's configure it to send the
+03:31
+username of Cisco and password of CCNA
+03:34
+to SPR 1 PPP PAP sent - username Cisco
+03:42
+password CCNA now it can take a little
+03:46
+time for the interface to come up so
+03:48
+I'll reset it to speed things up
+03:50
+shutdown no shutdown and I'll wait a few
+03:55
+seconds just in case okay let's check do
+04:01
+show IP interface brief great now the
+04:06
+interface is up up let's see if we can
+04:09
+ping SPR one do ping 100 0 1
+04:18
+okay now it works
+04:20
+so to summarize PPP with pap first you
+04:26
+must configure a username and password
+04:27
+on your router which the router on the
+04:30
+other end will use to authenticate then
+04:34
+you must configure the encapsulation of
+04:36
+PPP on the interface with the command
+04:39
+encapsulation PPP then you enable PAP
+04:43
+authentication with PPP authentication
+04:46
+PAP then you configure your router to
+04:50
+send a username and password to the
+04:52
+other router with a PPP PAP sent to
+04:55
+username password command of course the
+04:59
+road around the other end must have that
+05:01
+username and password configured on it
+05:02
+in this lab I pre-configured the
+05:05
+username of Cisco and password of CCNA
+05:08
+on SPR 1 next let's configure PPP with
+05:13
+chap authentication on our - once again
+05:18
+chap is more secure than PAP because it
+05:21
+uses dynamic randomly generated strings
+05:23
+for each authentication rather than a
+05:26
+static password however you still have
+05:29
+to configure a username and password on
+05:31
+the router which is then used to
+05:33
+generate the string so let's go on our
+05:36
+to enable show interfaces s0 0 just like
+05:45
+on r1 before the default encapsulation
+05:49
+is hdl-c and the interface is in an
+05:52
+up-down state because the SPR 2 router
+05:56
+has already been configured to use PPP
+05:58
+with chap let's see if we can ping SPR
+06:01
+to ping 200 oh you won
+06:07
+as expected it doesn't work
+06:11
+conf T now let's create the user name
+06:15
+and password required for a chap the
+06:18
+instructions say to use a password of
+06:20
+CCNA but what username should we use the
+06:25
+answer is that we must use the other
+06:27
+routers host name in this case that is
+06:30
+SPR two so username SPR two password
+06:37
+CCNA this password has to match between
+06:41
+the two routers so I've already
+06:43
+configured username our two passwords
+06:46
+CCNA on the service provider side for
+06:50
+the CCNA routing and switching you don't
+06:52
+have to worry about the service provider
+06:54
+end that's for the service provider
+06:56
+track of certifications now let's
+07:00
+configure the interface interface s0 0
+07:05
+let's set it down while we do the
+07:07
+configurations and then bring it back up
+07:09
+when we're done
+07:09
+shutdown set the encapsulation dat PPP
+07:14
+like on our 1 encapsulation PPP now we
+07:20
+only have one more command PPP
+07:23
+authentication chap that's it let's
+07:28
+enable the interface no shutdown ok and
+07:33
+now let's check the status of the
+07:34
+interface do show IP interface brief
+07:39
+the interface is up up now let's try to
+07:43
+ping the service provider do ping 200
+07:48
+0.1 okay it works now I've already
+07:55
+configured static default routes to the
+07:57
+service provider as you would often do
+08:00
+in a real enterprise network so let's
+08:01
+see if we can ping r1 on the other side
+08:05
+do ping 100 oh oh - and it works as well
+08:13
+so to review PPP with chap you must
+08:18
+configure a user on the router with a
+08:20
+username that is the other routers
+08:22
+hostname in this case SP r2 and the
+08:27
+password must be the same on both
+08:28
+routers then enable PPP on the interface
+08:33
+with the encapsulation PPP command and
+08:36
+enable chap authentication with PPP
+08:39
+authentication chap that's all for this
+08:43
+lab thank you for watching I hope this
+08:48
+lab and video have been helpful for you
+08:49
+please subscribe for future labs like
+08:53
+this which will be released weekly if
+08:56
+you have requests for any specific labs
+08:58
+let me know in the comment section if
+09:01
+you want to support my channel I accept
+09:03
+Bitcoin and aetherium donations via the
+09:06
+addresses in the description I am also a
+09:09
+brave verified publisher and accept bat
+09:11
+or basic attention token donations in
+09:14
+the brave browser
+

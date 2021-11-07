@@ -1,0 +1,375 @@
+00:00
+welcome to this free CCNA packet tracer
+00:03
+practice lab you can download the lab
+00:06
+file from the link in the description if
+00:09
+you like these labs please consider
+00:10
+supporting me via my patreon or the
+00:12
+cryptocurrency options in the
+00:14
+description also please subscribe to the
+00:17
+channel for more labs like this and
+00:18
+share these videos with anyone else
+00:20
+studying for the CCNA in this lab we
+00:24
+will configure H SRP the hot standby
+00:28
+router protocol H SRP is an example of
+00:32
+an F H R P a first hop redundancy
+00:36
+protocol H SRP is a cisco proprietary
+00:40
+protocol by the way so it operates only
+00:42
+on cisco equipment vrrp virtual router
+00:47
+redundancy protocol is a vendor neutral
+00:50
+standard similar to HSR P redundancy is
+00:55
+important in a network because failures
+00:57
+can occur and redundancy can prevent
+01:00
+service outages if a failure occurs
+01:02
+somewhere in the network in this network
+01:05
+for example we will configure pcs in
+01:08
+VLAN 10 to use R 1 as their default
+01:11
+gateway but in the event that our one
+01:13
+fails pcs will automatically transition
+01:16
+to using R 2 which is functioning as the
+01:19
+standby router as their default gateway
+01:23
+now this means that one router will be
+01:25
+inactive until the other fails which is
+01:28
+a waste of bandwidth however we can
+01:31
+achieve load balancing by assigning
+01:33
+different default gateways for different
+01:35
+VLANs in this network well as I said
+01:39
+before VLAN 10 will use R 1 as the
+01:41
+active router and R 2 as the standby we
+01:45
+will configure VLAN 20 to use R 2 as the
+01:47
+active router and R 1 as the standby
+01:50
+let's get started let's start with our
+01:54
+ones configuration enable
+01:59
+call T H SRP is configured at the
+02:03
+interface level let's start with G 0 1
+02:07
+interface G 0 1 H SRP is configured with
+02:12
+the command
+02:13
+standby followed by a group number I'll
+02:17
+use 10 since this will be the default
+02:19
+gateway for VLAN 10 then type IP
+02:23
+followed by the virtual IP address this
+02:28
+is an IP address which isn't necessarily
+02:30
+assigned to a physical interface on
+02:32
+either router but the PCs have been
+02:35
+configured to use it as their default
+02:36
+gateway so when the PCs send an ARP
+02:40
+request for the virtual IP whichever
+02:43
+router is the active router will reply
+02:46
+with its own MAC address so pcs will
+02:48
+send traffic to that router our our
+02:52
+instructions say to use 10.10 10.1 as
+02:55
+the default gateway for VLAN 10 so 10
+02:58
+dot N Da 10.1 now we want to ensure that
+03:02
+our 1 will be the active router so let's
+03:05
+increase the priority first what's the
+03:08
+default priority you can check with this
+03:11
+command do show standby so it's priority
+03:17
+100 which is the default let's increase
+03:20
+the priority for a standby group 10
+03:22
+standby 10 priority and let's increase
+03:26
+it to 110 another part of our
+03:31
+instructions is to use HS RP version 2
+03:33
+which offers some minor improvements
+03:35
+over a version 1 standby version 2 as
+03:40
+you may have noticed standby version 2
+03:43
+doesn't include the group number it
+03:45
+applies to all standby groups on the
+03:47
+interface ok finally let's enable
+03:50
+preemption well what is preemption if r1
+03:55
+fails
+03:56
+r2 will become the active router for
+03:58
+VLAN 10 if preemption is disabled even
+04:02
+if r1 recovers it won't become the
+04:05
+active router again if preemption is
+04:08
+enabled however hour 1 will become
+04:10
+active again when it recovers here's the
+04:14
+command standby 10 preempt ok that's all
+04:19
+for our ones G 0 1 interface instead of
+04:24
+finishing the configuration on r1 let
+04:27
+to Artoo's VLAN 10 configuration and
+04:29
+then test it enable Conti r2 will use
+04:37
+the GZ ur to interface so interface g0 -
+04:40
+all we have to do for r2 is standby
+04:44
+version 2 and standby 10 IP 10 10 10 1
+04:51
+that's it we don't need to configure
+04:54
+preemption here we only need to
+04:56
+configure it on the active router we
+04:59
+also don't need to change the priority
+05:01
+since we already made our ones higher
+05:04
+okay let's go on pc-12 test first I'll
+05:10
+see if I can ping the virtual IP of 10
+05:12
+10 10 1 ping 10 10 10 1 ok it works now
+05:25
+let's try to ping the external server at
+05:27
+1500 one ping 1500 1 ok it works too
+05:39
+now let's confirm the path being taken
+05:44
+traceroute 1500 1 as you can see
+05:52
+traceroute shows our ones IP address not
+05:55
+the virtual IP address so you can use it
+05:57
+to confirm the path let's go do a reload
+06:01
+on our one and see if r2 takes over and
+06:07
+reload
+06:12
+okay let's go on r2 and check if it took
+06:15
+over for r1 do show standby as you can
+06:23
+see our two is now active let's quickly
+06:27
+try that traceroute from pc1 again
+06:31
+traceroute 1500 1 now you can see it
+06:38
+goes via r2 at 10 10 10 3 now r1 is in
+06:44
+the process of booting up however when
+06:47
+it finishes it should take over again as
+06:49
+the active router since we configure
+06:51
+preemption I'll just wait for another 10
+06:55
+seconds or so and then go check
+07:05
+okay hopefully that's enough time let's
+07:07
+go on our one in check an able show
+07:14
+standby there are one is the active
+07:19
+router once again let's trace route one
+07:22
+last time from pc1 trace route 1500 1
+07:30
+now it's going via our one again not our
+07:33
+two
+07:41
+so the configuration for VLAN 10 is
+07:44
+complete now let's configure the
+07:46
+opposite set up for VLAN 20 r2 should be
+07:50
+the active router with our one as backup
+07:53
+or standby I'll configure the active r2
+07:57
+first interface g0 one
+08:03
+standby version to standby 20 I P 10 20
+08:09
+21
+08:11
+standby 20 preempt just to make things
+08:16
+different
+08:16
+I won't increase the priority on the
+08:18
+active let's decrease the priority on
+08:21
+the standby instead so that's all for
+08:24
+our two let's go to our one coffee tea
+08:30
+interface g0 to standby version to
+08:36
+standby 20 I P 10 20 21
+08:42
+standby 20 priority 90 okay that's all
+08:48
+give them some time to talk with each
+08:51
+other and figure things out but soon r2
+08:53
+should become the active and r1 the
+08:55
+stand by for VLAN 20 let's try a ping
+08:59
+from PC three first I'll try to ping the
+09:03
+virtual router to make sure ping 10 20
+09:09
+21 okay we can reach it now let's try to
+09:17
+ping out to the external server ping
+09:21
+1500 1
+09:28
+okay it's reachable so now let's check
+09:31
+the path it's taking traceroute 1501 as
+09:40
+you can see it's going via r2 at 10.20
+09:44
+22 let's test the failover again I'll
+09:49
+reload our to end reload okay let's give
+10:00
+our one a few seconds to take its role
+10:02
+as active for VLAN 20 ok let's try let's
+10:08
+hop back on PC 3 and traceroute again
+10:13
+traceroute 1500 1 great the failover
+10:21
+worked and the ping is now going via r1
+10:23
+at 10.20 23 this time let's wait another
+10:29
+10 seconds or so for r2 to come back
+10:31
+online and take over once again as the
+10:34
+active router
+10:45
+okay hopefully that's enough time let's
+10:48
+give that traceroute one more try here
+10:50
+on PC three traceroute 1500 one alright
+10:59
+now it's back to using R 2 as the
+11:02
+gateway in this lab we configured HS RP
+11:06
+and also showed how you can configure
+11:09
+load balancing by configuring different
+11:11
+active routers for different VLANs
+11:13
+that's all for this lab thank you for
+11:18
+watching I hope this lab and video have
+11:21
+been helpful for you please subscribe
+11:24
+for future labs like this which will be
+11:26
+released weekly if you have requests for
+11:29
+any specific labs let me know in the
+11:31
+comments section if you want to support
+11:35
+my channel I accept Bitcoin and
+11:36
+aetherium donations via the addresses in
+11:39
+the description I am also a brave
+11:42
+verified publisher and accept bat or
+11:45
+basic attention token donations in the
+11:47
+brave browser
+

@@ -1,0 +1,75 @@
+welcome to this free CCNA packet tracer
+practice lab you can download the lab
+file from the link in the description in
+this lab we will once again be
+troubleshooting the network topology
+from lab number seven in the previous
+lab number eight there was a single miss
+configuration on r1 in this lab however
+there is one miss configuration per
+networking device meaning one on r1 one
+on switch one and one on switch to try
+to find and fix these errors on your own
+first
+then continue watching this video if you
+have trouble or watch it after to check
+your solution in the last video I showed
+an example of how I would go about
+troubleshooting a problem in this video
+however I will just directly show the
+Miss configurations and fix them so once
+again try to troubleshoot on your own
+first
+so PC one can't ping the other pcs in
+the network let's just check quickly on
+PC one ping PC two ping 1000 dot 130
+doesn't work ping pc3 ping 1000 three
+doesn't work ping PC for ping 1000 131
+doesn't work okay so let's fix the
+problem on our one first enable show IP
+interface brief look at the IP address
+of the dot thirteen sub-interface 1000
+da 11 now let's check the default
+gateway of the pcs in VLAN 13 pc1 & pc2
+c1 is 1000 dot one and PC three 1000 one
+so this is a miss configuration let's
+fix it back to our one County interface
+g0 0.13 IP address 1000 dot one
+255.255.255.192
+next let's check switch 1 enable show
+VLAN brief can you see the problem here
+fastethernet 0/1 is in VLAN 12 it's
+supposed to be in VLAN 13 let's change
+that conf
+interface f01 switch port access VLAN 13
+ok switch 1 is now fixed finally let's
+go to switch to enable show interfaces
+trunk nothing appears the link between
+switch 1 and switch two should be a
+trunk so that it can carry traffic from
+multiple VLANs so we have to fix this
+conf T interface g0 1 switch port mode
+trunk ok that should fix the problem
+so let's test out our solution the
+scenario stated that there was one miss
+configuration on each device and we
+fixed each one so PC one should now be
+able to reach the other pcs so let's go
+to PC 1 and pin PC to ping 1000 130 the
+pin works next let's ping PC 3 pin 1000
+3 okay it works
+finally PC for ping 1000 131 it works as
+well we have successfully fixed the
+network
+thank you for watching I hope this lab
+and video have been helpful for you
+please subscribe for future labs like
+this which will be released weekly if
+you have requests for any specific labs
+let me know in the comment section if
+you want to support my channel I accept
+Bitcoin donations via the address in the
+description I am also a brave verified
+publisher and accept bat or basic
+attention token donations in the brave
+browser

@@ -1,0 +1,265 @@
+00:00
+welcome to this free CCNA packet tracer
+00:03
+practice lab you can download the lab
+00:06
+file from the link in the description if
+00:08
+you like these labs please consider
+00:11
+supporting me via my patreon or the
+00:13
+cryptocurrency options in the
+00:14
+description also please subscribe to the
+00:17
+channel for more labs like this in this
+00:21
+lab we will troubleshoot the AI GRP
+00:23
+network we configured in the previous
+00:25
+lab I have made one miss configuration
+00:28
+per router so let's find the issues and
+00:31
+get AI GRP working in the network I'll
+00:33
+get started on our one enable let's see
+00:39
+if our one has any EIGRP neighbors show
+00:43
+IP e IG RP neighbors nothing however
+00:48
+this message is a big hint showing a
+00:51
+EIGRP neighbors for process 10 this
+00:55
+process number is the autonomous system
+00:57
+number this network is supposed to be
+00:59
+using an a s number of 100 so run here
+01:06
+we have all the correct ew g RP
+01:08
+configurations
+01:09
+however because r1 is using an incorrect
+01:12
+a s number of 10 none of it works
+01:16
+coffee tea let's delete the current ew g
+01:20
+RP configuration no router EA g RP 10 do
+01:26
+show run as you can see that removed all
+01:31
+of the EIG RP configurations for a s 10
+01:34
+now let's reconfigure it with the
+01:36
+correct a s number router EA g RP 100
+01:42
+network 10000 network 1.1 1.1
+01:49
+oh-oh-oh-oh passive interface l 0 no
+01:54
+auto summary well as you can see one
+01:58
+neighbor has come up r4
+02:01
+let's see what routes were getting from
+02:03
+our 4 do show IP route looks like we're
+02:09
+getting quite a few routes already
+02:11
+however if you look carefully although
+02:13
+our neighbor ship with r4 is up and
+02:15
+we're receiving reds from it we're not
+02:18
+getting our fours 4.4.4 for loopback
+02:21
+address
+02:21
+let's see what's wrong on our 4 enable
+02:27
+show IP protocols look here routing for
+02:34
+networks 10000 and 40 4.4.4 4/32
+02:41
+show IP interface brief our 4 is
+02:46
+loopback interface has an IP address of
+02:48
+4 4 4 4 not 40 4.4.4 4 so there's our
+02:53
+problem
+02:54
+coffee tea router EAG RP 100 no network
+03:01
+44.4 dot 4 dot 400 200 network for dot
+03:08
+4.4.4 oh oh oh oh ok that should fix it
+03:13
+I'll just quickly check on r1 do show IP
+03:19
+route there it is so we fix the issues
+03:23
+on r1 and r4 now r1 formed a neighbor
+03:28
+relationship with our 4 but what about
+03:30
+our to do show IP e IG RP neighbor only
+03:37
+our four appears let's check out our to
+03:43
+enable show IP protocols can you spot
+03:49
+the issue r2 is fast ethernet 1 0
+03:53
+interface which is used to connect to r1
+03:56
+is configured as a passive interface
+03:59
+this means r2 will advertise that 1012
+04:02
+0/24 network on f10 to r3 but it won't
+04:07
+form a neighbor relationship with r1 on
+04:10
+that interface compte router aig RP 100
+04:16
+no passive interface f10 there we go
+04:21
+immediately we get a message
+04:23
+do show IPE a GRP neighbor there are two
+04:28
+is a neighbor with both r1 and r3
+04:32
+let's see what's wrong on r3 enable show
+04:39
+IP protocols everything looks good
+04:44
+advertising the 3.3 3.3 loopback and
+04:49
+1000 dot o interfaces the loopback is
+04:53
+passive show IP e IG RP neighbor okay so
+04:59
+it's neighbors with r2 and r4 but not r5
+05:05
+show run I don't see any problems with
+05:11
+our 3zi GRP configuration so let's check
+05:14
+on our v enable show IP protocols can
+05:23
+you identify the problem here under the
+05:26
+routing for networks section it lists
+05:29
+1000 / 32 however r5 doesn't have any
+05:34
+1000 / 32 interfaces do show run as you
+05:42
+can see the / 32 wildcard mask was added
+05:45
+so yeah GRP isn't activated on our 5s
+05:47
+g00 interface which has an address in
+05:50
+the 10.35 0/24 network coughed e router
+05:57
+ya g RP 100 no network 1000 odo odo now
+06:06
+there are a couple of ways we could
+06:07
+activate di g RP on the interface let's
+06:10
+do what is configured on the other
+06:11
+routers and just type network 1000 and
+06:15
+leave it at that
+06:17
+remember Vig our P's Network command
+06:20
+will default to the class full
+06:21
+boundaries in this case a / 8 network
+06:26
+10.30 500 falls within the 1000 / 8
+06:31
+network so yeah GRP is now activated on
+06:34
+our 5
+06:36
+do show IP route now we're receiving a
+06:41
+EIGRP reps
+06:43
+however our five is supposed to receive
+06:45
+a 1000 / 8 summary from our 3 rather
+06:50
+than these individual reps this problem
+06:53
+is likely on our three let's go back do
+06:58
+show run the IP summary address command
+07:03
+isn't configured on the gig 0/0
+07:06
+interface which connects to our five but
+07:08
+rather the f10 interface let's put it
+07:11
+back on the correct interface let me
+07:14
+copy the command first then I'll remove
+07:19
+it interface f10 now I'll paste it here
+07:24
+and then I'll cancel it with no ok and
+07:30
+now let's put it on g00 interface g00
+07:36
+now I'll paste it here and there we go
+07:41
+let's check if r5 is receiving the
+07:43
+summary do show IP route there it is
+07:50
+10000 / 8 okay we have solved all the
+07:54
+issues in this network that's all for
+07:56
+this lab thank you for watching I hope
+08:01
+this lab and video have been helpful for
+08:03
+you please subscribe for future labs
+08:06
+like this which will be released weekly
+08:07
+if you have requests for any specific
+08:10
+labs let me know in the comment section
+08:13
+if you want to support my channel I
+08:15
+accept Bitcoin and aetherium donations
+08:17
+via addresses in the description I am
+08:21
+also a brave verified publisher and
+08:23
+accept bat or basic attention token
+08:25
+donations in the brave browser
+

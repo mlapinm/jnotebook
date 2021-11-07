@@ -1,0 +1,213 @@
+00:00
+welcome to this free CCNA packet tracer
+00:03
+practice lab you can download the lab
+00:06
+file from the link in the description in
+00:09
+this lab we will look at lldp link layer
+00:13
+discovery protocol this protocol is very
+00:16
+similar to a CDP Cisco discovery
+00:19
+protocol which we covered in a couple
+00:21
+previous labs CDP however is a cisco
+00:25
+proprietary protocol meaning it only
+00:27
+works with cisco devices lldp is an open
+00:31
+standard protocol and can be used on
+00:33
+both cisco devices and devices from
+00:36
+other vendors the first step is to
+00:39
+disable CDP and enable lldp on each
+00:43
+networking device these four devices are
+00:46
+Cisco devices so CDP is enabled by
+00:49
+default for this lab let's disable CDP
+00:53
+and enable lldp on switch one first
+00:59
+enable coffee tea no CDP run lldp run
+01:07
+exit that's it pretty simple now our one
+01:13
+an able coffee tea no CDP run lldp run
+01:22
+exit next are to enable coffee tea no
+01:29
+CDP run lldp run exit finally switch to
+01:37
+enable coffee tea no CDP run lldp run
+01:46
+exit okay so we have disabled CDP and
+01:52
+enabled lldp on each networking device
+01:55
+let's go back to switch one the next
+02:00
+step is to use a show command to find
+02:02
+the default timer values for lldp we can
+02:06
+do that with this command show lldp the
+02:10
+status is active which is what we want
+02:13
+and below are the timers the
+02:16
+advertisement timer is 30 seconds old
+02:19
+timer is 120 seconds and interface
+02:22
+re-initialization delay is 2 seconds
+02:25
+these are the default timers you might
+02:28
+want to remember these for the test
+02:30
+especially the advertisement and hold
+02:32
+timers next is to use lldp to identify
+02:38
+which interfaces are used to connect the
+02:40
+networking devices let's use this
+02:43
+command on switch 1 first show lldp
+02:47
+neighbors switch 1 has one neighbor r1
+02:52
+the local interface meaning the
+02:55
+interface here on switch one is Gigabit
+02:58
+Ethernet 1 0 1 and the port ID meaning
+03:03
+the interface on our one is Gigabit
+03:06
+Ethernet 0 0 let's use the same command
+03:09
+on r1 show lldp neighbors are ones gig 0
+03:17
+0 interface is connected to switch ones
+03:20
+gig 1 0 1 interface which we saw before
+03:22
+are ones gig 0 1 interface is connected
+03:27
+to our twos gig 0 0 interface ok let's
+03:31
+go on our to now show lldp neighbors as
+03:39
+we saw on r1 r2 s gig 0 0 interface is
+03:43
+connected to our ones gig 0 1 interface
+03:46
+also r2 s gig 0 1 interface is connected
+03:50
+to switch to s gig 0 1 interface let's
+03:54
+hop on switch to to confirm show lldp
+03:59
+neighbors there we go
+04:02
+switch to s gig 0 on interface is
+04:04
+connected to our two's gig 0 1 interface
+04:09
+the next task is to use lldp to identify
+04:13
+the iOS version of each neighboring
+04:15
+device let's start here on switch to to
+04:19
+view this information about a
+04:20
+neighboring device use this command show
+04:23
+lldp neighbors
+04:27
+you can see the iOS information for r2
+04:30
+here see 2900 software running version
+04:35
+15 point 1 4 m4 now let's go on our to
+04:41
+show lldp neighbors detail first we can
+04:48
+see switch 2 is running see 3560
+04:52
+software version 12 point to
+04:55
+a c1 also the neighboring r1 is running
+05:01
+see 2900 software version 15 point 1 4
+05:04
+and 4
+05:07
+finally let's go on r1 to find the
+05:10
+version of switch 1 show lldp neighbors
+05:15
+detail switch 1 is running catalyst
+05:22
+layer 3 switch software version 16 point
+05:25
+3 point 2 the final step is to prevent
+05:30
+switch to sf0 one interface which is
+05:32
+connected to a pc one from sending or
+05:35
+receiving lldp updates let's go on
+05:39
+switch to compte interface f01 to
+05:47
+disable lldp reception use this command
+05:50
+no lldp receive ok now to turn off lldp
+05:57
+transmission no lldp transmitted whereas
+06:02
+CDP uses one command CDP enable for both
+06:06
+reception and transmission ll dps is two
+06:10
+separate commands lldp receive and lldp
+06:14
+transmit that's all for this lab thank
+06:19
+you for watching I hope this lab and
+06:21
+video have been helpful for you please
+06:24
+subscribe for future labs like this
+06:26
+which will be released weekly if you
+06:29
+have requests for any specific labs let
+06:32
+me know in the comment section if you
+06:35
+want to support my channel
+06:36
+I accept Bitcoin and aetherium donations
+06:38
+via the addresses
+06:40
+in the description I am also a brave
+06:43
+verified publisher and accept bat or
+06:45
+basic attention token donations in the
+06:48
+brave browser
+

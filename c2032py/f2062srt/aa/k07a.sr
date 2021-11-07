@@ -1,0 +1,317 @@
+00:00
+welcome to this free CCNA packet tracer
+00:03
+practice lab you can download the lab
+00:06
+file from the link in the description in
+00:09
+this lab we will be working with one
+00:12
+router r1 2 switches switch 1 and switch
+00:16
+2 and 4 pcs pc-1 pc2 pc 3 and PC 4 we
+00:24
+will configure these pcs to be in two
+00:25
+separate VLANs and then configure
+00:28
+routing between them through the method
+00:30
+known as router on a stick the host
+00:33
+names of the router and switches the IP
+00:36
+addresses of the pcs and their default
+00:38
+gateways have been pre-configured try to
+00:42
+complete the lab yourself first and then
+00:44
+continue watching if you have trouble or
+00:47
+watch it after to check your solution
+00:52
+step one is to ping between the PCs
+00:56
+things between PC one and PC through
+00:59
+should succeed because they are in the
+01:01
+same subnet likewise pings between PC 2
+01:05
+and pc 4 should succeed because they are
+01:08
+also in the same subnet other pings
+01:11
+should fail let's ping from pc1 first
+01:16
+let's ping PC to ping 1000 130 the ping
+01:25
+fails next let's ping PC 3 ping 1000 3
+01:33
+the ping works as expected
+01:36
+finally let's ping PC for ping 1000 131
+01:46
+the ping fails by the way I'm using the
+01:49
+up arrow to access previous commands and
+01:52
+just edit the last few numbers next
+01:55
+let's try to ping from PC to first PC 1
+02:01
+ping 1000 to the ping fails next PC 3
+02:09
+ping 1000 3
+02:14
+the pin fails finally pc4 ping 1000 dot
+02:20
+131 the ping works that's step one step
+02:30
+two is to assign pc1 & pc2 VLAN 13 & pc2
+02:34
+and pc 4 to VLAN 24 let's configure
+02:39
+switch 1 first enable compte interface
+02:46
+f01 switch port mode access switch port
+02:53
+access VLAN 13 that's for a pc 1 next
+03:00
+for pc 2 interface f0 to switch port
+03:06
+mode access switch port access VLAN 24
+03:13
+next let's configure switch to enable
+03:20
+compte interface f01 switch port mode
+03:25
+access switch port access VLAN 13 that's
+03:32
+pc 3 next let's configure the interface
+03:34
+connected to pc 4 interface f0 to switch
+03:42
+ports mode access switch port access
+03:46
+VLAN 20 for step two is now complete
+03:53
+step three is to create a trunk link
+03:55
+between switch 1 and switch to remember
+03:59
+we need to configure a trunk link to
+04:01
+allow the connection between switch 1
+04:03
+and switch two to carry traffic from
+04:05
+multiple VLANs in this case the
+04:09
+interfaces are assigned to the native
+04:10
+VLAN VLAN 1 however our pcs are assigned
+04:14
+to either VLAN 13 or VLAN 24 therefore
+04:18
+no traffic from these pcs will be able
+04:20
+to pass between the switches even in the
+04:23
+same VLAN I'll just do one ping to prove
+04:26
+this from pc1 to pc2 are in the same
+04:30
+VLAN ping 1000 3 as you can see the ping
+04:39
+which succeeded previously now fails
+04:42
+let's create a trunk now I'll configure
+04:46
+switch 1 first interface g0 to switch
+04:54
+port mode trunk that's it
+04:58
+on this switch model we don't have to
+05:00
+configure the encapsulation type next
+05:03
+let's configure switch to interface g0 1
+05:10
+switch port mode trunk that's step 3
+05:19
+step four is to configure inter VLAN
+05:22
+routing by creating sub interfaces on r1
+05:26
+currently because we created a trunk
+05:29
+between switch 1 and switch 2 pcs in the
+05:32
+same VLAN can ping each other again I'll
+05:35
+ping once more from pc1 to pc2 show this
+05:40
+ping 1000 3 as you can see there are
+05:47
+once again no problems
+05:49
+however pings to a different VLAN should
+05:52
+not work let's just ping from pc1 to pc2
+05:55
+check King 1000 131 as you can see the
+06:04
+ping fails now one way of configuring
+06:08
+inter VLAN routing the one we will be
+06:10
+using in this lab is called router on a
+06:13
+stick as you can see there is only one
+06:16
+connection between r1 and switch one
+06:20
+however we will configure two sub
+06:23
+interfaces using the single connection
+06:25
+and each sub interface will have a
+06:27
+separate IP address which serves as the
+06:30
+default gateway for the pcs in each VLAN
+06:33
+note that I have already configured the
+06:36
+pcs with their default gateways so let's
+06:40
+configure r1 enable comte first I will
+06:48
+turn on the Gigabit Ethernet 0 0
+06:50
+interface which is shut down by default
+06:53
+interface G 0 0 no shutdown next let's
+07:00
+configure the sub interface for VLAN 13
+07:03
+first type interface G 0 0 as normal
+07:07
+then dot 13 as you can see we are in sub
+07:13
+interface configuration mode I'll set
+07:16
+the IP address to 1001 so IP address
+07:22
+1001 with the subnet mask of
+07:25
+255.255.255.0
+07:29
+is equivalent to
+07:31
+25 but the command doesn't work we have
+07:36
+to configure this sub interface as part
+07:39
+of a VLAN first that is done with this
+07:42
+command encapsulation dot1q 13 now we
+07:49
+can configure the IP address IP address
+07:54
+1000 1 255.255.255.192 face for VLAN 24
+08:08
+interface g0 0.24 we will use an IP
+08:15
+address of 1000 1 2 9 and a subnet mask
+08:19
+of 255.255.255.0 - we have to configure
+08:25
+the encapsulation encapsulation dot1q 24
+08:33
+IP address 1000 dot 1 to 9 255 dot 255
+08:40
+dot 255 dot 1 to 8 the configuration of
+08:45
+r1 is now complete however there is one
+08:49
+more final step remember that switch
+08:52
+ones interfaces are access ports in the
+08:55
+native VLAN VLAN 1 by default that
+08:58
+includes Gigabit Ethernet 0 1 which is
+09:01
+connected to r1 so it can't send traffic
+09:04
+from VLAN 13 or VLAN 24 to r1 let's make
+09:09
+it a trunk interface g0 1 switch port
+09:15
+mode trunk ok
+09:18
+step 4 is complete
+09:23
+finally let's test this small Network
+09:25
+all pcs should be able to ping each
+09:28
+other even though they're in separate
+09:30
+VLANs
+09:31
+as in the beginning of the lab helping
+09:35
+each other PC from pc1 and from PC to to
+09:39
+check let's go to PC one first
+09:43
+first I'll paint PC to ping 1000 130 it
+09:52
+works
+09:53
+next I'll ping pc3 ping 1000 3 it works
+10:00
+as well and finally PC for ping 1000 won
+10:05
+3-1 it works ok next let's ping from PC
+10:12
+to first up in PC 1 ping 1000 2 and it
+10:19
+works next PC 3 ping 1000 3 it works as
+10:26
+well and finally PC for ping 1000 131 it
+10:32
+works too
+10:33
+we have successfully configured inter
+10:35
+VLAN routing
+10:40
+thank you for watching I hope this lab
+10:43
+and video have been helpful for you
+10:45
+please subscribe for future labs like
+10:48
+this which will be released weekly if
+10:50
+you have requests for any specific labs
+10:53
+let me know in the comment section if
+10:55
+you want to support my channel I accept
+10:58
+Bitcoin donations via the address in the
+11:00
+description I am also a brave verified
+11:04
+publisher and accept bat or basic
+11:07
+attention token donations in the brave
+11:09
+browser
+

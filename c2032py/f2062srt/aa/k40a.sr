@@ -1,0 +1,304 @@
+00:00
+welcome to this free CCNA packet tracer
+00:03
+practice lab you can download the lab
+00:05
+file from the link in the description if
+00:07
+you like these labs please consider
+00:10
+supporting me via my patreon or the
+00:12
+cryptocurrency options in the
+00:13
+description also please subscribe to the
+00:16
+channel for more labs like this in this
+00:20
+lab we will take a look at some aspects
+00:22
+of syslog you have surely seen syslog
+00:25
+messages as you configure routers and
+00:27
+switches some syslog messages inform you
+00:30
+of things like interfaces being enabled
+00:33
+and disabled others indicate major
+00:35
+problems with the device which can
+00:37
+render it unfunctional you can configure
+00:40
+these messages to be displayed in real
+00:42
+time on the CLI and also to be stored in
+00:45
+RAM or in a server for later reference
+00:48
+there are 8 levels of severity from
+00:51
+level 0
+00:51
+aka emergency to level 7 aka debug make
+00:57
+sure you learn all eight severity levels
+00:59
+for your exam okay let's get started
+01:03
+step 1 is to connect to our ones console
+01:06
+port using PC 2 to do so in packet
+01:10
+tracer click on PC 2 click desktop then
+01:15
+terminal and accept these defaults ok
+01:18
+now we are in the CLI for our one let's
+01:22
+shut down and then enable the g00
+01:24
+interface and then check the syslog
+01:26
+messages enable call 40 interface g00
+01:33
+shutdown yeah we got a couple messages
+01:36
+already
+01:37
+now let's enable it no shutdown so what
+01:42
+is the severity level of these messages
+01:44
+that is indicated by the number 5 here
+01:48
+level 5 is aka informational meaning
+01:52
+these aren't critical messages which
+01:53
+require urgent attention now we are
+01:57
+instructed to enable date and time
+01:58
+stamps for these messages without time
+02:01
+stamps these logging messages aren't
+02:03
+very helpful when you look back at them
+02:05
+at a later time exit to enable these
+02:09
+date and time stamps use this command
+02:11
+service timestamps log date time m/sec
+02:16
+four milliseconds
+02:18
+now let's shut down and enable the
+02:21
+interface again interface g00 shutdown
+02:26
+no shutdown we've got the same messages
+02:30
+but now there are date and time stamps
+02:32
+at the beginning the three zero one
+02:35
+indicates March first by the way as I
+02:38
+haven't configured the date on our one
+02:41
+okay step two is to configure an enable
+02:44
+secret of CCNA and then configure the
+02:47
+vty lines for telnet exit enable secret
+02:52
+CCNA now let's configure the vty lines
+02:57
+line vty 0 15 password CCENT login
+03:05
+transport input telnet next let's telnet
+03:10
+from pc1 to our ones g00 interface
+03:18
+telnet 192.168.1.1 the vty line password
+03:26
+is CCENT okay we're in r1 an able
+03:30
+password of CCNA compte now let's try to
+03:36
+generate some syslog messages here by
+03:38
+enabling an unused interface note that
+03:41
+since I'm connecting to r1 via the g00
+03:44
+interface if I shut down that interface
+03:46
+the tongue at connection would of course
+03:48
+cut off so let's use g0 one interface g0
+03:52
+one no shutdown and no message appears
+03:57
+if you go back to our console connection
+04:00
+on PC 2 however a syslog message
+04:02
+appeared that's because by default
+04:05
+syslog messages are not displayed over
+04:08
+the vty lines let's change that type end
+04:12
+to go back to a privileged exec mode
+04:15
+then use this command terminal monitor
+04:19
+that should enable syslog messages to
+04:22
+the vty lines
+04:24
+conf T interphase G 0 1 now let's shut
+04:29
+it down shut down there we go now the
+04:34
+message is displayed over telnet as well
+04:36
+as over the console connection exit the
+04:41
+next step is to configure synchronous
+04:43
+logging on the console and vty lines now
+04:46
+what exactly is synchronous logging well
+04:49
+it's a little difficult to recreate on
+04:51
+packet tracer but without it enabled if
+04:53
+you are typing something into the CLI
+04:56
+and a syslog message appears the syslog
+04:59
+message appears right in the middle of
+05:00
+what you're typing and it becomes very
+05:02
+difficult to read your commands if we
+05:06
+enable synchronous logging if a syslog
+05:08
+message appears in the middle of you
+05:10
+typing a command iOS will then rewrite
+05:13
+the command on a new line below the
+05:15
+syslog message so you can read it
+05:17
+clearly before finishing and entering
+05:19
+the command just make sure you know this
+05:22
+command for the test so to enable it
+05:25
+let's go first to the console line line
+05:28
+con 0 then we just use a single command
+05:32
+logging synchronous that's it now let's
+05:37
+do it on the vty lines also line vty 0
+05:41
+15 logging synchronous exit that's it
+05:48
+the next step is to enable logging to
+05:51
+the buffer this stores logging messages
+05:54
+in RAM for you to view later if I enter
+05:57
+do show logging you can see buffer
+06:01
+logging is disabled let's enable it with
+06:04
+this command logging buffered do show
+06:09
+logging now as you can see down here the
+06:12
+default size of this buffer is 4096
+06:15
+bytes let's double the size to 8000 192
+06:19
+bytes logging buffered 8 1 9 to do show
+06:26
+logging there we go
+06:31
+finally let's configure our one to send
+06:34
+syslog messages to our server server one
+06:36
+this is a really good idea as the
+06:39
+logging messages in the buffer disappear
+06:41
+if you shut down the device and you also
+06:43
+don't want to take up a bunch of RAM
+06:45
+space with logging messages so an
+06:47
+external syslog server is valuable to
+06:51
+configure this we can either enter
+06:53
+logging followed by the IP address of
+06:56
+the server or logging host followed by
+07:00
+the IP 192.168.1.1 hundred there we go
+07:05
+do show logging there it is logging to
+07:11
+192.168.1.1 hundred let's shut and no
+07:15
+shut an interface and then check on
+07:17
+server one interface g0 one shut no show
+07:24
+now to check messages on a syslog server
+07:27
+on packet tracer click the server click
+07:31
+services then click syslog here on the
+07:34
+left in this lab we took a look at some
+07:38
+aspects of syslog that's all for this
+07:40
+lab thank you for watching I hope this
+07:46
+lab and video have been helpful for you
+07:48
+please subscribe for future labs like
+07:50
+this which will be released weekly if
+07:52
+you have requests for any specific labs
+07:55
+let me know in the comment section if
+07:57
+you want to support my channel I accept
+08:00
+Bitcoin and aetherium donations via the
+08:02
+addresses in the description I am also a
+08:05
+brave verified publisher and accept bat
+08:08
+or basic attention token donations in
+08:11
+the brave browser

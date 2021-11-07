@@ -1,0 +1,839 @@
+555
+01:19:30,630 --> 01:19:43,239
+cool ones, let me know and I'll try have a
+go at it. Thank you. Hi, everyone, and welcome
+
+556
+01:19:43,239 --> 01:19:48,860
+to the last game of the JavaScript games course.
+This is actually my favorite game. So we're
+
+557
+01:19:48,860 --> 01:19:53,190
+going to be building Tetris. It's my favorite.
+It's also the hardest, which is why I obviously
+
+558
+01:19:53,190 --> 01:19:57,440
+left it to last and we're going to be using
+every single thing that we learnt before,
+
+559
+01:19:57,440 --> 01:20:03,010
+as well as learning a few new things. So a
+few new things that we're going to be learning
+
+560
+01:20:03,010 --> 01:20:11,900
+are get elements by class name, math floor,
+some splice concat, as well as adding background
+
+561
+01:20:11,900 --> 01:20:19,409
+images, via JavaScript using that style background.
+For anyone joining us now, I would strongly
+
+562
+01:20:19,409 --> 01:20:24,590
+recommend going all the way back to the beginning.
+And starting from the first game as we're
+
+563
+01:20:24,590 --> 01:20:28,350
+going to be using functions that I'm not going
+to go into detail. And again, I feel like
+
+564
+01:20:28,350 --> 01:20:31,660
+I've already explained them and it wouldn't
+be fair on everyone else who's watched from
+
+565
+01:20:31,660 --> 01:20:37,940
+the beginning. So things like query selectors,
+event listeners are functions. We're not going
+
+566
+01:20:37,940 --> 01:20:44,139
+to be going over that again. So yeah, definitely
+go back. Tetris is a 1984 video game invented
+
+567
+01:20:44,139 --> 01:20:50,389
+by Soviet engineer Alexey pay it off. It is
+a grid based game that has seven shapes, or
+
+568
+01:20:50,389 --> 01:20:55,100
+technically tetromino is that you need to
+navigate all the way down the grid in order
+
+569
+01:20:55,100 --> 01:21:01,469
+to fill up at the bottom. When you fill up
+exactly a row, this will disappear, but also
+
+570
+01:21:01,469 --> 01:21:07,010
+give you points. The cool part about this
+is that the shapes are going to rotate. So
+
+571
+01:21:07,010 --> 01:21:12,949
+we're going to learn how to rotate these shapes
+in JavaScript, as well as move them down from
+
+572
+01:21:12,949 --> 01:21:17,239
+left and right and so on. The other cool thing
+that we're going to do is a display the shape
+
+573
+01:21:17,239 --> 01:21:20,829
+that's about to come down. So I don't know
+if you've seen Tetris. But usually there's
+
+574
+01:21:20,829 --> 01:21:25,150
+a grid. But there's also like a little side
+thing that will display the shape that's literally
+
+575
+01:21:25,150 --> 01:21:31,269
+about to come down. After you finish having
+your go. There is a reason why I saved this
+
+576
+01:21:31,269 --> 01:21:42,820
+game to last is pretty hard. So if you're
+feeling brave, let's get going on this project,
+
+577
+01:21:42,820 --> 01:21:48,550
+we are going to use a HTML file, CSS file
+and a JavaScript file. Make sure to set up
+
+578
+01:21:48,550 --> 01:21:52,400
+your files accordingly. Next, we need to add
+the following script tag into the head of
+
+579
+01:21:52,400 --> 01:21:59,000
+your HTML file. I'll point you to your JavaScript
+file and your app folder file through the
+
+580
+01:21:59,000 --> 01:22:03,760
+source attribute. Next, add an event listener
+to your JavaScript file like so. First of
+
+581
+01:22:03,760 --> 01:22:08,710
+all, to make the game we need to decide on
+our grid size. For this video, I have chosen
+
+582
+01:22:08,710 --> 01:22:16,670
+10 squares width by 20 squares height. So
+from now on, consider each square to be one
+
+583
+01:22:16,670 --> 01:22:25,170
+div on your HTML file. This gives a total
+of 200 dibs on our HTML file. If you flip
+
+584
+01:22:25,170 --> 01:22:31,239
+over to your HTML file, please add a total
+of 200 dose, please put these divs in the
+
+585
+01:22:31,239 --> 01:22:37,320
+div itself and give it a class name of grid.
+For the purpose of teaching. I'm going to
+
+586
+01:22:37,320 --> 01:22:41,640
+give each of these divs a color of yellow
+and my CSS file and a height and width. So
+
+587
+01:22:41,640 --> 01:22:48,719
+you can see them as squares like so. As you
+can see, because divs are programmed to be
+
+588
+01:22:48,719 --> 01:22:54,130
+in block. This is what happens in our browser.
+By setting a width to our grid, we can stack
+
+589
+01:22:54,130 --> 01:22:59,280
+the digit from left to right and rows of 10.
+Obviously, the way that we did it 20 pixels
+
+590
+01:22:59,280 --> 01:23:05,190
+and the width of the grid is 200 pixels. We
+will get tenders in a row. So feel free to
+
+591
+01:23:05,190 --> 01:23:18,210
+mess around about as you want. I've numbered
+them for the sake of the tutorial like this.
+
+592
+01:23:18,210 --> 01:23:24,429
+Let's have a look at our grid now. Next, we
+need to use the query selector to add the
+
+593
+01:23:24,429 --> 01:23:31,789
+following into the top of our js file. js
+file now that is what we mean by grid. We're
+
+594
+01:23:31,789 --> 01:23:38,059
+picking up the div with a class name of grid
+from what HTML page. Now that we have our
+
+595
+01:23:38,059 --> 01:23:45,730
+grid set up, let's focus on the total Nino's
+themselves. In Tetris, there are five to caminos
+
+596
+01:23:45,730 --> 01:23:53,559
+Tetris in general as a pretty cool story.
+So check it out, if you can write their official
+
+597
+01:23:53,559 --> 01:24:03,420
+names are the L tetromino, Zed tetrominoes
+to tetromino, o tetromino, and ita terino.
+
+598
+01:24:03,420 --> 01:24:09,780
+As you can see here, I've put them in four
+by four grid, so conduct for their rotational
+
+599
+01:24:09,780 --> 01:24:14,530
+axes. There's so my drawer and we are now
+able to draw the tetromino as as constants
+
+600
+01:24:14,530 --> 01:24:19,949
+with their four rotations. Using the concept
+of width a set above we have set the width
+
+601
+01:24:19,949 --> 01:24:24,679
+is 10. So let's do the starting position is
+zero, and start drawing attention Muniz, out
+
+602
+01:24:24,679 --> 01:24:31,389
+on the grid into the forward stations. So
+let's set this out of the top of your j s
+
+603
+01:24:31,389 --> 01:24:40,249
+file. Now that we have our five touch windows
+with the four rotations, let's put them in
+
+604
+01:24:40,249 --> 01:24:52,699
+an array and call them the tetromino O's.
+As you know, Tetris determiners are selected
+
+605
+01:24:52,699 --> 01:24:58,070
+at random. We will now need to write something
+that will randomly select a tetromino from
+
+606
+01:24:58,070 --> 01:25:05,760
+our tetrominoes Right, my floor was simply
+round down the integer that is returned in
+
+607
+01:25:05,760 --> 01:25:10,239
+this case making sure that it was one below
+the tetrominoes array length. Once we have
+
+608
+01:25:10,239 --> 01:25:16,429
+defined random, we need to define the current
+rotation of the randomly selected tetromino.
+
+609
+01:25:16,429 --> 01:25:23,730
+Let's define this as current. So now we tackling
+have defined what one of the randomly selected
+
+610
+01:25:23,730 --> 01:25:29,300
+determiners current rotation is. Let's move
+on to the next part, moving current down one
+
+611
+01:25:29,300 --> 01:25:35,550
+div space with every second. This let's pick
+the top center of the board as a starting
+
+612
+01:25:35,550 --> 01:25:55,179
+point for the current are to drop down from,
+let's call this current position. We are now
+
+613
+01:25:55,179 --> 01:26:02,130
+going to visually move the tetromino down
+by drawing it and unrolling it in depth. This
+
+614
+01:26:02,130 --> 01:26:07,780
+we are going to assign a class name to the
+details, we want to visually display a tetromino
+
+615
+01:26:07,780 --> 01:26:15,940
+shape. And so let's put this at the top of
+our file. Again, using query selector all
+
+616
+01:26:15,940 --> 01:26:22,150
+this time, now go to your CSS file. Now the
+following from now on all divs with a class
+
+617
+01:26:22,150 --> 01:26:40,320
+name block will be blue. Now let's write the
+drawer function to give all the squares in
+
+618
+01:26:40,320 --> 01:26:46,840
+your current dictionary know the class name
+block. I've also written some code to give
+
+619
+01:26:46,840 --> 01:26:51,170
+you surgery now randomly select a color from
+an array. You can choose as you want, but
+
+620
+01:26:51,170 --> 01:26:55,219
+we're not going to do it. Now because it's
+not really necessary, we have to work again
+
+621
+01:26:55,219 --> 01:27:16,700
+head over to my GitHub if you want to check
+that out. Right, so now that we wrote the
+
+622
+01:27:16,700 --> 01:27:21,420
+draw function, let's write the unroll function.
+So this will essentially get rid of the class
+
+623
+01:27:21,420 --> 01:27:27,019
+name block from the dues and what we define
+this current. As you can see, we are using
+
+624
+01:27:27,019 --> 01:27:32,599
+for each which meaning that each of the squares
+or dues and our current tetromino will have
+
+625
+01:27:32,599 --> 01:27:43,570
+the class name of block removed from them.
+Like so. But now that we've done that, we
+
+626
+01:27:43,570 --> 01:27:49,019
+need to write two more functions. Actually,
+let's get the move down function out the way
+
+627
+01:27:49,019 --> 01:27:56,019
+fast. So just to speed up moving down. We
+will do this like so it simply adds the width
+
+628
+01:27:56,019 --> 01:28:03,300
+to visually display the shape moving down.
+I added the freeze function here. I'm having
+
+629
+01:28:03,300 --> 01:28:07,829
+it so that you know it's necessary to put
+this in at the move down function to stop
+
+630
+01:28:07,829 --> 01:28:12,460
+the current tetromino when it reaches the
+end of the grid, we will write this function
+
+631
+01:28:12,460 --> 01:28:17,510
+towards the end of the tutorial. If you want
+to invoke the move down function earlier than
+
+632
+01:28:17,510 --> 01:28:23,030
+this, please take out the freeze function.
+Okay, now I'm going to write the move write
+
+633
+01:28:23,030 --> 01:28:27,260
+function. A lot is going on here, I'm going
+to write a reminder that we need the current
+
+634
+01:28:27,260 --> 01:28:31,809
+tetromino to move left if it's the right edge
+of the grid, we do not want the tetromino
+
+635
+01:28:31,809 --> 01:28:38,260
+crossing over into the other side of our grid.
+We also don't want it to go through other
+
+636
+01:28:38,260 --> 01:28:45,380
+frozen pieces. Okay, so function move right
+goes like this. First we unroll the space,
+
+637
+01:28:45,380 --> 01:28:50,900
+then we define what is the right edge and
+what happens to the current tetromino when
+
+638
+01:28:50,900 --> 01:28:57,690
+is it Next we write what happens when the
+shape is not in the right edge I freeze to
+
+639
+01:28:57,690 --> 01:29:04,040
+move right but adding one to the current position.
+Now finally, if any of the squares and our
+
+640
+01:29:04,040 --> 01:29:09,300
+current tetromino go into a div containing
+block two, we also want it to move left so
+
+641
+01:29:09,300 --> 01:29:15,469
+appearing as if the shape hasn't moved at
+all. This block two is what I have defined
+
+642
+01:29:15,469 --> 01:29:24,360
+as a frozen shape. Finally we redraw the tetromino
+now go to your CSS file and add a block to
+
+643
+01:29:24,360 --> 01:29:35,929
+all offers and shapes will now appear as purple.
+Let's do the same moving on which means left
+
+644
+01:29:35,929 --> 01:29:41,619
+using the same logic as above. You will notice
+I use modular here. This is saying that if
+
+645
+01:29:41,619 --> 01:29:49,760
+our shape as a square and dib 10 to 2030 and
+so on, it will it is divisible by our set
+
+646
+01:29:49,760 --> 01:29:55,869
+width and is a range of zero. Remember that
+we count the first item on a range zero to
+
+647
+01:29:55,869 --> 01:30:50,349
+10 is actually to 11 in our physically drawn
+divs in our age. Hello. Alright, so once we've
+
+648
+01:30:50,349 --> 01:31:10,949
+written those, our final function is to rotate
+the tetromino. This is actually us just skipping
+
+649
+01:31:10,949 --> 01:31:16,190
+to the next rotation in the current rotation
+array of each tetromino. So again, it's a
+
+650
+01:31:16,190 --> 01:31:29,139
+visual trick making it look like it's rotated.
+We like this simply like so. Okay, so now
+
+651
+01:31:29,139 --> 01:31:33,590
+we've written the functions for our group
+down, move left and move right. and rotate
+
+652
+01:31:33,590 --> 01:31:41,840
+when you assign keys to them and add an event
+listener. Do this at the top of your js file.
+
+653
+01:31:41,840 --> 01:32:23,559
+The E here means event and user pass it through
+the functions like so. Okay, so now we can
+
+654
+01:32:23,559 --> 01:32:28,659
+move the tetromino around on the board or
+rotate it great. We now need to decide what
+
+655
+01:32:28,659 --> 01:32:33,619
+happens if the tetromino class name block
+hits the bottom of the board or frozen tetromino
+
+656
+01:32:33,619 --> 01:32:39,360
+of class name block too fast. Let's decide
+that the bottom of the board is defined as
+
+657
+01:32:39,360 --> 01:32:45,980
+anything with div class name block through
+right so we're going to add another block
+
+658
+01:32:45,980 --> 01:32:52,909
+class name. Go back to your CSS file unlike
+before, add the following. Now we're going
+
+659
+01:32:52,909 --> 01:32:58,900
+to HTML file and hardcore block three as a
+class named into the last tenant dupes. You
+
+660
+01:32:58,900 --> 01:33:06,960
+should see this show up in your balls It looks
+so great. Okay. Now as everyone knows, in
+
+661
+01:33:06,960 --> 01:33:11,199
+Tetris, you can actually see the upcoming
+section winners in your game. Let's quickly
+
+662
+01:33:11,199 --> 01:33:15,580
+create this feature we're writing a function
+called display shape, and adding some code
+
+663
+01:33:15,580 --> 01:33:20,039
+to our HTML so you can see what's happening.
+I'm going to use a lot of logic we've used
+
+664
+01:33:20,039 --> 01:33:29,019
+before to make the small grid a four by four
+grid to display our display squares, even
+
+665
+01:33:29,019 --> 01:33:44,909
+creating a new small tetromino array. Okay,
+now we can see our display grid above our
+
+666
+01:33:44,909 --> 01:33:55,409
+main grid in the browser. Again, we need our
+JavaScript to know what we mean when I said
+
+667
+01:33:55,409 --> 01:34:04,869
+using the constant display squares, so we
+need to add this query selector here. Now
+
+668
+01:34:04,869 --> 01:34:09,810
+using the same logic, let's write how we are
+going to see the previous shapes or terminos
+
+669
+01:34:09,810 --> 01:34:17,110
+in our display squares. When you set a new
+width for the small grid, also a new index,
+
+670
+01:34:17,110 --> 01:34:24,460
+let's call this display index. Now, just like
+before, we are going to write out our five
+
+671
+01:34:24,460 --> 01:34:30,389
+to caminos. However, this time, we do not
+need all four rotations, we are simply displaying
+
+672
+01:34:30,389 --> 01:34:36,630
+the tetromino. So for this we only need one
+iteration of each tetromino in an array. Let's
+
+673
+01:34:36,630 --> 01:35:31,159
+call this constant small caminos Now let's
+write the function display shape. Again, you
+
+674
+01:35:31,159 --> 01:36:32,510
+might be familiar with how I write this by
+now. We will also be selecting the small tech
+
+675
+01:36:32,510 --> 01:36:39,889
+community at random. Let's put next random
+at zero up here. So what is happening is each
+
+676
+01:36:39,889 --> 01:36:46,460
+time the display shaped function is invoked,
+we are removing any classes from devs fast.
+
+677
+01:36:46,460 --> 01:37:37,560
+Selecting the next one knows what action you
+know, then drawing it out onto our grid. Let's
+
+678
+01:37:37,560 --> 01:37:46,789
+see if it works by invoking function here.
+Oops, I made a mistake. This should be crew
+
+679
+01:37:46,789 --> 01:37:59,019
+so it's all Yes, with a page refresh there
+is a small tetromino on our display display
+
+680
+01:37:59,019 --> 01:38:24,999
+grid. Okay, now let's get rid of that and
+carry on. Now let's go back to the freeze
+
+681
+01:38:24,999 --> 01:38:30,059
+function that I mentioned previously, in the
+move down function, a lot will be happening
+
+682
+01:38:30,059 --> 01:38:37,130
+in the freeze function, we need to freeze
+the tetromino if any or some of its squares
+
+683
+01:38:37,130 --> 01:38:42,019
+and with a square containing block three,
+so the bottom of our grid essentially, or
+
+684
+01:38:42,019 --> 01:38:48,440
+if it is the if the squares enter a div with
+the class name block two, so frozen squares.
+
+685
+01:38:48,440 --> 01:39:01,269
+If any of the two above happen, we need to
+turn all the squares in the community block
+
+686
+01:39:01,269 --> 01:39:27,199
+two squares. After this happens, we need to
+make sure the next random tetromino from the
+
+687
+01:39:27,199 --> 01:39:38,909
+disclosures becomes our next current. Finally,
+we need to draw the current tetromino by invoking
+
+688
+01:39:38,909 --> 01:39:44,269
+the draw function, and then display the next
+tetromino. In the display grid. We're invoking
+
+689
+01:39:44,269 --> 01:39:51,229
+the display shape function. Next, when it's
+for all these things together, and create
+
+690
+01:39:51,229 --> 01:39:55,260
+a way for our user to start the game. Therefore
+invoking the draw function and making sure
+
+691
+01:39:55,260 --> 01:40:00,989
+the game continues to move the tetromino is
+every one second as we do This by creating
+
+692
+01:40:00,989 --> 01:40:08,060
+a start button in HTML and adding an event
+listener like so. For now, set timer ID at
+
+693
+01:40:08,060 --> 01:40:18,010
+now, we will need this to restart the game.
+Again, here, we need to display a random tetromino
+
+694
+01:40:18,010 --> 01:40:22,600
+from our small little mini tetromino. All
+right, like so, and invoke the display shape
+
+695
+01:40:22,600 --> 01:40:58,230
+function we were earlier. So now go into your
+HTML and add a button. And now the following
+
+696
+01:40:58,230 --> 01:41:09,469
+to do is, you will now see in your browser
+that upon pressing start the drawer function
+
+697
+01:41:09,469 --> 01:41:17,960
+and the display function will be invoked,
+as well as the time. Oops, you can see the
+
+698
+01:41:17,960 --> 01:41:21,599
+shapes are falling through the bottom floor.
+This is because there's no freeze function,
+
+699
+01:41:21,599 --> 01:41:24,489
+and I'll move down function. I moved it as
+I mentioned earlier in the tutorial, it would
+
+700
+01:41:24,489 --> 01:41:32,659
+have not let me move left right up down on
+the key codes if that was still in there because
+
+701
+01:41:32,659 --> 01:41:40,559
+we didn't like the function. So if you got
+rid of the freeze function from our move down
+
+702
+01:41:40,559 --> 01:41:45,809
+function, as I mentioned, please do put it
+back in now. If this is not here, then the
+
+703
+01:41:45,809 --> 01:41:53,830
+shift will simply fall through the bottom
+of the grid. Okay, now that should work. Now
+
+704
+01:41:53,830 --> 01:42:00,969
+get your HTML page so we can visually show
+a score and how many lines we have cleared
+
+705
+01:42:00,969 --> 01:42:12,059
+in our browser. I'm going to do this with
+h1 tags. So as you can see, here, we're using
+
+706
+01:42:12,059 --> 01:42:17,980
+class names for a js file so we can then use
+the query selector. To make our js file an
+
+707
+01:42:17,980 --> 01:43:15,760
+HTML file. Let's add the following to the
+top of JavaScript file school. We are now
+
+708
+01:43:15,760 --> 01:43:21,159
+set to write the game over function in our
+JavaScript file. I'm going to write it like
+
+709
+01:43:21,159 --> 01:43:28,950
+so. Hopefully by now you're comfortable with
+how I am using block two and block three in
+
+710
+01:43:28,950 --> 01:43:34,840
+my functions. It's just the same here. Make
+sure to clear the time where I do so that
+
+711
+01:43:34,840 --> 01:44:41,400
+note attorneys carry on falling. Again, please
+add this function into office function. And
+
+712
+01:44:41,400 --> 01:44:47,809
+finally we can write our add school function.
+This function will add 10 to our current score
+
+713
+01:44:47,809 --> 01:46:26,170
+each time is executed Let's start by defining
+a constant row like this. Next we need to
+
+714
+01:46:26,170 --> 01:46:30,690
+use every to make sure that if every square
+and I'll define row contains block at your
+
+715
+01:46:30,690 --> 01:47:08,159
+frozen tetromino, we add a score of 10, unlined
+to one of our and now we want to disclose
+
+716
+01:47:08,159 --> 01:47:24,539
+in our browser. We can do this using an HTML
+like sir. Finally, we need to get rid of the
+
+717
+01:47:24,539 --> 01:47:31,780
+row just like in Tetris. Once we have added
+the score on the line, we will do so using
+
+718
+01:47:31,780 --> 01:47:40,599
+remove. Now to move the river down one, we
+will use splice splice will cut out the current
+
+719
+01:47:40,599 --> 01:48:27,550
+index up plus our defined width of 10. So
+in other words, the whole world now that's
+
+720
+01:48:27,550 --> 01:48:37,039
+done we will need to use append child to add
+a new row to the top of our grid visually
+
+721
+01:48:37,039 --> 01:48:52,560
+appearing as if nothing got removed or added
+in the first place. And there you have it.
+
+722
+01:48:52,560 --> 01:49:09,510
+My game of Tetris, as mentioned, it's my first
+video.

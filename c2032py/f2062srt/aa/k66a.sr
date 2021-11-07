@@ -1,0 +1,189 @@
+00:00
+welcome to this free CCNA packet tracer
+00:03
+practice lab you can download the lab
+00:06
+file from the link in the description if
+00:09
+you like these labs please consider
+00:10
+supporting me via my patreon or the
+00:13
+cryptocurrency options in the
+00:14
+description also please subscribe to the
+00:18
+channel for more labs like this and
+00:19
+share these videos with anyone else
+00:21
+studying for the CCNA in this lab we
+00:25
+will troubleshoot the GRE tunnel
+00:27
+configuration from the previous lab the
+00:31
+GRE tunnel should be working with E I gr
+00:33
+P over it so pc1 & pc2 can reach each
+00:36
+other there are two misconfigurations on
+00:39
+each router let's get started I'll go on
+00:44
+r1 first enable show IP interface brief
+00:53
+the tunnel interface is up down so it's
+00:57
+not working notice the error message
+01:01
+we're getting temporarily disabled due
+01:05
+to recursive routing this is a common
+01:08
+problem in tunnel configuration show
+01:12
+interface tunnel 0 tunnel source of
+01:16
+serial zero zero zero is okay but look
+01:20
+at the destination the destination has
+01:23
+to be the address of the physical
+01:25
+interface which is at the other end of
+01:27
+the tunnel not the tunnels address
+01:29
+itself that's what's causing the
+01:32
+recursive routing error message call T
+01:38
+interface tunnel zero tunnel destination
+01:43
+200 oh oh - okay that should end the
+01:49
+error messages let's check the AIG RP
+01:53
+configuration here to do show IP
+01:57
+protocols routing for networks 1001 0/24
+02:05
+and 100 0 0 / 30 there's a problem
+02:11
+we want to activate a idrp on the G zero
+02:14
+zero interface which we are and the
+02:17
+tunnel interface 100 euro / 30 which is
+02:23
+the s zero zero zero interface isn't the
+02:26
+tunnel interface it's the tunnel source
+02:29
+let's change that router ew g RP 100 no
+02:36
+network 100 oh oh oh oh oh three network
+02:43
+192.168.1.0 oh oh oh three end ok we've
+02:52
+solved two problems here on our one
+02:54
+however there are still problems on our
+02:56
+two so our tunnel won't be working yet
+03:00
+let's go on our to enable I'll quickly
+03:08
+check the EIG RP configuration here on
+03:10
+our to show IP protocols
+03:15
+EW GFP is activated for 1002 0/24 which
+03:21
+is G 0 0 and 192.168.1.0 / 30 which is
+03:27
+the tunnel interface so the AI g RP
+03:30
+configuration looks good let's check the
+03:34
+tunnel show interface Tunnel zero the
+03:40
+tunnel destination is correct but the
+03:43
+source isn't the tunnel source is the
+03:46
+inside interface Gigabit Ethernet 0 0
+03:49
+but it should be the interface connected
+03:52
+to the service provider serial 0 0 0
+03:56
+Koff t interface tunnel 0 tunnel source
+04:02
+s 0 0 0 do show IP interface brief the
+04:10
+tunnel still isn't up let's check one
+04:14
+other important thing do show IP route
+04:21
+there is no route allowing us to reach
+04:24
+the tunnel destination of 100 oh oh -
+04:27
+remember the tunnel destination address
+04:30
+must be reachable let's configure a
+04:33
+static default route pointing to the
+04:35
+service provider exit IP route oh oh oh
+04:42
+oh oh oh oh oh 201 do show IP interface
+04:50
+brief okay looks like it's up now let's
+04:55
+try to ping the other end do ping
+05:00
+192.168.1.1 okay it's working now
+05:08
+now are we getting the EIG our peer out
+05:11
+to our ones internal network do show IP
+05:15
+route there it is 1001 Oh finally let's
+05:23
+try a ping from PC to 2 PC one ting 1001
+05:32
+dot 100
+05:43
+okay our ping worked we have solved the
+05:46
+issues and fixed the GRE tunnel that's
+05:49
+all for this lab thank you for watching
+05:55
+I hope this lab and video have been
+05:58
+helpful for you please subscribe for
+06:00
+future labs like this which will be
+06:02
+released weekly if you have requests for
+06:06
+any specific labs let me know in the
+06:08
+comment section if you want to support
+06:11
+my channel I accept Bitcoin and
+06:13
+aetherium donations via the addresses in
+06:15
+the description I am also a brave
+06:19
+verified publisher and accept bat or
+06:21
+basic attention token donations in the
+06:24
+brave browser
+

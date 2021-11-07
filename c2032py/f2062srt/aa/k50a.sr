@@ -1,0 +1,465 @@
+00:00
+welcome to this free CCNA packet tracer
+00:03
+practice lab you can download the lab
+00:05
+file from the link in the description if
+00:08
+you like these labs please consider
+00:10
+supporting me via my patreon or the
+00:12
+cryptocurrency options in the
+00:14
+description also please subscribe to the
+00:17
+channel for more labs like this in this
+00:21
+lab we will configure ether channel
+00:23
+ether channel is used to aggregates
+00:26
+which interfaces to operate as a single
+00:28
+logical interface what is the advantage
+00:31
+of that well in the previous couple labs
+00:35
+we looked at spanning tree protocol as
+00:37
+you can tell by the port lights in
+00:39
+packet tracer only one link is active
+00:42
+between each switch we have four fast
+00:46
+ethernet links connecting to switch 1
+00:48
+and switch 2 for example but only one
+00:51
+link is actually forwarding information
+00:54
+those other links still provide
+00:56
+redundancy in case the f01 interface
+00:58
+fails for example but it would be better
+01:01
+if we could make use of them let's get
+01:04
+started the first part is to analyze
+01:07
+this topology from a spanning tree
+01:09
+perspective now you can tell all of this
+01:12
+by looking at the port lights and packet
+01:14
+tracer but let's use some show commands
+01:16
+to confirm which switch is the root
+01:19
+bridge well all of switched ones port
+01:22
+lights are on so there's our answer
+01:24
+let's go on switch one to confirm enable
+01:29
+show spanning tree ok this bridge is the
+01:34
+root so all of the interfaces here are
+01:38
+designated they're forwarding now how do
+01:41
+these other switches choose their route
+01:43
+ports whichever path they select the
+01:46
+route cost is the same and the
+01:49
+neighboring switches bridge ID is the
+01:51
+same so the next career the next
+01:54
+criteria and this is very important is
+01:56
+the neighbors port ID the port ID
+02:00
+consists of a port priority which is 128
+02:03
+by default and the port number the
+02:07
+lowest port ID wins and is selected as
+02:09
+the root port keep in mind this is the
+02:12
+neighbors
+02:13
+I D not the local switches port ID that
+02:17
+is why in this topology between switch 1
+02:20
+and switch 2 and between switch three
+02:22
+and switch 4 I connected F 0 1 to F 0
+02:25
+for f 0 2 to F 0 3 etc instead of F 0 1
+02:29
+to F 0 1 F 0 2 to F 0 2 to demonstrate
+02:33
+this from switch tunes perspective
+02:36
+switch ones F 0 1 has the lowest port ID
+02:41
+so it chooses its interface connected to
+02:44
+switch ones F 0 1 interface which is its
+02:47
+own F 0 4 interface as the root port the
+02:51
+same goes for switch 4 which also
+02:54
+selected its F 0 4 interface switch 3
+02:58
+chose its G 0 1 interface which is
+03:01
+connected to switch to is G 0 1
+03:03
+interface also because switch to SG 0 1
+03:06
+interface has a lower port ID then
+03:08
+switch to SG 0 2 interface so the
+03:13
+interfaces across from the reports are
+03:14
+designated now on the remaining links
+03:17
+how did the switches choose which side
+03:20
+would block and which side would
+03:21
+designate their ports that is the route
+03:24
+cost switch 2 is closer to switch 1 than
+03:28
+switch 3 so it's side of the link is
+03:29
+designated and switch 3 side is non
+03:32
+designated blocking and switch 3 is
+03:35
+closer to switch 1 then switch 4 is so
+03:39
+switch 3 side is designated and switched
+03:41
+4 side is non designated or blocking ok
+03:46
+so that was just another review of
+03:47
+spanning tree selection process it also
+03:50
+shows the reason we use ether channel we
+03:53
+want to take advantage of these
+03:54
+redundant links and have them all
+03:55
+available for use rather than waiting
+03:58
+for the active link to fail
+04:00
+so our first task is to configure a
+04:03
+layer 2 ether channel between switch 1
+04:06
+and switch to using a Cisco proprietary
+04:08
+protocol that protocol is port
+04:12
+aggregation protocol pagp let's go on
+04:16
+switch 1 and configure it
+04:19
+coffee tea interface range F 0 1 2 4
+04:25
+before I enter the commands I should
+04:27
+mention some requirements of ether
+04:29
+channel regardless of whether using pagp
+04:31
+or another method in all ports involved
+04:34
+must have the same configuration that is
+04:37
+the same duplex full or half the same
+04:41
+speed the same native and allowed VLANs
+04:43
+in the same switch port mode access or
+04:46
+trunk both of these switches have the
+04:49
+same configuration by default so that
+04:51
+won't be a problem here but keep that in
+04:53
+mind for the next troubleshooting lab so
+04:56
+regardless of the ether channel protocol
+04:58
+the command begins the same channel -
+05:01
+group followed by the group number this
+05:05
+is necessary in case you have multiple
+05:07
+ether channels on the same switch note
+05:10
+that this number doesn't have to match
+05:12
+the switch on the other end of the ether
+05:14
+Cannell let's go with one then mode and
+05:18
+this is where we determine the protocol
+05:20
+used pagp has two options desirable or
+05:24
+Auto much like DTP dynamic trunking
+05:29
+protocol desirable will actively form an
+05:32
+ether channel if the switch on the other
+05:34
+end is using desirable or Auto mode Auto
+05:37
+however will only form an ether channel
+05:40
+if the other end is desirable let's go
+05:43
+with desirable okay that's it do show
+05:47
+ether channel summary there is po1 port
+05:51
+channel one our new logical interface
+05:54
+notice the SD next to it s indicates a
+05:59
+layer two ether Channel and D means it
+06:01
+is down that's because we haven't
+06:03
+configured switch to yet here are the
+06:06
+ports included in it F 0 1 2 F 0 4 and
+06:10
+let's configure it as a trunk as for the
+06:12
+instructions interface port channel 1
+06:16
+switch port mode trunk ok let's do the
+06:22
+same configuration on switch 2's end and
+06:24
+then check if the ether channel is
+06:26
+working enable conf T interface range F
+06:33
+0 1 - 4 I'm just going to shut down
+06:36
+these interfaces while I work on the
+06:38
+ether
+06:38
+shut down I'll use a different channel
+06:42
+group number to show it will work even
+06:44
+if it doesn't match with switch one
+06:46
+channel group 2 mode and this time let's
+06:50
+go with Auto
+06:51
+although desirable would work as well
+06:54
+now let's make it a trunk interface po2
+06:58
+is pork channel 2 note on this switch
+07:01
+model both is l and dot1q encapsulations
+07:05
+are supported so we have to configure
+07:06
+the encapsulation first before making a
+07:08
+trunk switch port trunk encapsulation
+07:12
+dot1q switch port mode trunk
+07:15
+ok let's activate the interfaces
+07:18
+interface range F 0 1 2 4 no chef now
+07:23
+let's check if the ether channel is up
+07:25
+do show ether channel summary it's
+07:29
+probably a good idea to get familiar
+07:30
+with the meanings of these flag codes in
+07:32
+the output of this command but that's
+07:35
+just thinking in terms of possible test
+07:37
+questions although in a real scenario
+07:39
+you can just see them right here in the
+07:40
+output there it is s meaning layer 2 and
+07:44
+you meaning in use our next task is to
+07:49
+configure a layer 3 ether channel
+07:51
+between switch 2 and switch 3 you will
+07:55
+use layer 2 ether channels more than
+07:57
+layer 3 but you should know how to make
+07:59
+one let's start here on switch to exit
+08:04
+first enable IP routing on the switch to
+08:07
+give it layer 3 capabilities IP routing
+08:11
+now let's make the ether channel
+08:14
+interface range G 0 1 2 to use the no
+08:20
+switch port command first before making
+08:23
+the ether channel this will make the
+08:24
+interface layer 3 then let's make a
+08:27
+static ether channel channel Group 1
+08:30
+mode on is the command for a static
+08:34
+ether Channel next let's assign an IP
+08:37
+address to the interface interface po1
+08:41
+IP address 2300 1 255.255.255.0 ok let's
+08:50
+configure a switch 3 side
+08:53
+enable coffee/tea IP routing interface
+08:59
+range G 0 1 2 2 no switch port channel
+09:04
+Group 1 mode on interface po1 IP address
+09:09
+23:02 255.255.255.0 do show ether
+09:16
+channel summary notice that a layer 3
+09:20
+ether channel is indicated by r and
+09:22
+again there is that you for in use let's
+09:27
+try to ping across the ether channel to
+09:28
+switch to do ping
+09:32
+23:01 and it works
+09:39
+now we have one more ether channel to
+09:41
+configure this time we use an I Triple E
+09:45
+standard protocol that is link
+09:47
+aggregation control protocol LACP let's
+09:52
+start here on switch 3 interface range F
+09:56
+0 1 2 4 channel group 2 mode and let's
+10:01
+check our options Elysee pees equivalent
+10:05
+of PA gps desirable is active and le
+10:09
+psyches equivalent of PA gps auto is
+10:12
+passive let's go with active interface
+10:16
+po2 again on this switch model we have
+10:21
+to configure the encapsulation switch
+10:23
+port trunk encapsulation dot1q switch
+10:27
+port mode trunk
+10:28
+ok now let's configure the other end on
+10:31
+switch for enable coffee tea interface
+10:38
+range F 0 1 2 4 let's set it down for
+10:41
+now while we work shut channel Group 1
+10:46
+mode active since switch 3 side is
+10:49
+active passive would work as well by the
+10:51
+way interface po1 switch port mode trunk
+11:00
+interface range F 0 1 2 4 no shutdown
+11:05
+okay let's check if all is good do show
+11:08
+ether channel summary we have a layer
+11:12
+two ether channel and it is in use so we
+11:15
+created three ether channels one layer
+11:18
+two ether channel using pagp one static
+11:22
+layer three ether channel and one layer
+11:24
+two ether channel using LACP that's all
+11:28
+for this lab
+11:31
+thank you for watching I hope this lab
+11:34
+and video have been helpful for you
+11:35
+please subscribe for future labs like
+11:38
+this which will be released weekly if
+11:40
+you have requests for any specific labs
+11:43
+let me know in the comments section if
+11:46
+you want to support my channel I accept
+11:48
+Bitcoin and aetherium donations via the
+11:50
+addresses in the description I am also a
+11:53
+brave verified publisher and accept bat
+11:56
+or basic attention token donations in
+11:58
+the brave browser
+

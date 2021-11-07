@@ -1,0 +1,363 @@
+00:00
+welcome to this free CCNA packet tracer
+00:02
+practice lab you can download the lab
+00:05
+file from the link in the description if
+00:08
+you like these labs please consider
+00:10
+supporting me via my patreon or the
+00:12
+cryptocurrency options in the
+00:14
+description this slab will be the first
+00:18
+in a series of labs about access control
+00:20
+lists or ACLs it's very important to be
+00:24
+familiar with ACLs for the exam so make
+00:27
+sure you're comfortable with them this
+00:30
+first lab will be fairly simple we will
+00:33
+configure numbered standard access lists
+00:36
+ACLs can be numbered or named and
+00:39
+standard or extended we will configure
+00:42
+other types in future labs but for now
+00:45
+let's focus on the simplest type the
+00:47
+numbered standard ACL a standard ACL can
+00:51
+be numbered from 1 to 99 make sure you
+00:54
+remember that little fact for the exam 1
+00:56
+to 99 is for standard ACLs a standard
+01:01
+ACL controls traffic based only on the
+01:03
+source address on the other hand an
+01:06
+extended ACL can control traffic based
+01:08
+on the source and destination address as
+01:11
+well as other things which we will look
+01:13
+at in future labs in this lab we have to
+01:17
+configure these standard ACLs to achieve
+01:19
+2 requirements only the 192.168.1.0 / 24
+01:24
+network should be able to access server
+01:26
+1 and PC 4 should not be able to
+01:29
+communicate with the 192.168.1.0 24
+01:32
+network to achieve the first requirement
+01:36
+let's go on our - now you may wonder why
+01:40
+configure r2 as opposed to r1
+01:44
+well standard ACLs should be configured
+01:46
+as close to the destination as possible
+01:49
+if we configure it closer to the source
+01:52
+for example on r1 we may inadvertently
+01:55
+block traffic that we don't want to
+01:57
+block since the standard ACL only looks
+02:00
+at the source address in this case the
+02:04
+destination is server 1 so we will
+02:06
+configure the ACL on our to enable
+02:11
+compte
+02:13
+to configure the numbered ACL use the
+02:16
+command access list now also the options
+02:20
+with the context-sensitive help as you
+02:23
+can see 1 to 99 is the range for a
+02:25
+standard ACL you can also see the range
+02:28
+for extended ACLs 100 to 199 I'll use
+02:32
+the number 1 now let's check the next
+02:35
+option we can deny permit or add a
+02:39
+remark remarks are useful when on a
+02:43
+large network you have large amounts of
+02:45
+ACLs so you can identify what each ACL
+02:48
+is for when looking at the configuration
+02:50
+later
+02:50
+I won't configure one now however we
+02:55
+want to allow only the 192.168.1.0 / 24
+02:59
+network to access the server I'll use a
+03:02
+permit statement first to allow the
+03:04
+192.168.1.0 / 24 Network now let's check
+03:10
+the options again I can input an IP
+03:13
+address I can tell it to permit any
+03:16
+source or I can specify a single host
+03:19
+let's put in an IP address 192.168.1.1 X
+03:26
+top ssin wildcard bits ACLs use a
+03:30
+wildcard mask as opposed to a standard
+03:33
+subnet mask I'm not going to explain
+03:36
+exactly how these work here but a
+03:37
+wildcard mask is an inverse subnet mask
+03:40
+so if a bit is 1 or 0 in a subnet mask
+03:44
+its equivalent bit in a wildcard mask
+03:46
+would be 0 or 1 respectively if you have
+03:50
+no idea what that means I recommend
+03:52
+reading up on wildcard masks to get
+03:53
+familiar with them anyway the subnet
+03:58
+mask for a / 24 Network is 255.255.255.0
+04:02
+so the wild-card mask is 0 0 255 ok
+04:09
+that's it we have created the ACL which
+04:12
+permits the 192.168.1.0 / 24 network now
+04:17
+do we have to create another statement
+04:20
+in this ACL to deny everything else
+04:22
+actually we don't at the end of every
+04:26
+ACL there is an employee
+04:27
+deny all statement meaning everything
+04:31
+that doesn't apply to a previous entry
+04:33
+in the ACL will be denied do show access
+04:37
+lists as you can see that deny all
+04:41
+doesn't actually appear in the ACL but
+04:44
+when we tried to ping later it will work
+04:46
+as intended so we have created the ACL
+04:51
+is that all we have to do no we have to
+04:55
+apply it to an interface following the
+04:58
+rule of applying a standard ACL as close
+05:00
+to the destination as possible let's
+05:03
+apply it to the f00 interface interface
+05:06
+f00 you can apply an ACL to an interface
+05:11
+with this command IP access group now
+05:15
+I'll type 1 the number of the ACL we
+05:18
+created now let's check the options in
+05:21
+or out which do you think is appropriate
+05:25
+the answer is out because we aren't
+05:28
+filtering traffic coming in from this
+05:30
+interface we are filtering traffic going
+05:32
+out from this interface towards server 1
+05:36
+ok we have made and applied our ACL
+05:39
+let's test this ACL first before moving
+05:42
+on I'll go on PC one PC one should be
+05:47
+able to reach the server ping 192.168
+05:50
+3.1 hundred
+05:57
+as expected the ping works now let's try
+06:02
+from the 192.168.0 pc 3 pc 3 should not
+06:09
+be able to reach the server again even
+06:13
+though we didn't configure the ACL
+06:14
+explicitly to deny any traffic it will
+06:17
+by default deny any traffic that doesn't
+06:19
+match the entry permitting the
+06:21
+192.168.1.0 / 24 network ping 192.168.1
+06:27
+hundred immediately we get a response
+06:30
+from r2 saying the host is unreachable
+06:37
+now let's satisfy the second requirement
+06:40
+PC 4 should not be able to communicate
+06:42
+with 192.168.1.0 / 24 network let's go
+06:48
+on r1 this time enable coffee/tea access
+06:54
+list 1 now this time let's create a
+06:58
+denies statement let's check the next
+07:02
+options since we are just denying one
+07:05
+host let's select that and type in the
+07:08
+address 192.168.1.1 at the end of an ACL
+07:21
+so this ACL will deny PC 4 and if the
+07:25
+traffic comes from anywhere else it will
+07:27
+deny it also that's not what we want
+07:30
+let's create a statement to permit
+07:32
+everything else access list 1 permit any
+07:37
+do show access lists so ACLs are read
+07:41
+from top to bottom if traffic comes from
+07:44
+192.168 2.14 it will be denied and this
+07:49
+permit any won't apply if traffic comes
+07:52
+from anywhere else however it won't be
+07:54
+denied and then our permit any statement
+07:56
+will allow it through the implicit deny
+08:00
+any still exists but nothing will get
+08:02
+that far because this permit any will
+08:04
+catch everything that the first
+08:06
+statement doesn't
+08:09
+now let's apply the ACL f00 is closest
+08:13
+to the destination so interface f00 IP
+08:17
+access group one out before we test this
+08:21
+what do you think would happen if we
+08:23
+applied the ACL inbound on f10 as
+08:26
+opposed to outbound on f00 it would
+08:30
+prevent pc 4 from reaching anywhere
+08:32
+outside of its own subnet here because
+08:35
+of any traffic sourced from pc 4 enters
+08:37
+our ones f10 interface it will be
+08:39
+dropped ok let's test i'll go on pc 3
+08:44
+again first and I'll ping pc 1 ping
+08:49
+192.168.1.1 ok it works as expected
+08:56
+now let's try from pc 4 which shouldn't
+08:58
+be able to reach pc 1 paying 192.168.1
+09:04
+11 again we get a message from r1 saying
+09:09
+that the host is unreachable
+09:10
+we have successfully used numbered
+09:12
+standard ACLs to achieve the
+09:14
+requirements that's all for this lab
+09:19
+thank you for watching I hope this lab
+09:22
+and video have been helpful for you
+09:24
+please subscribe for future labs like
+09:26
+this which will be released weekly if
+09:30
+you have requests for any specific labs
+09:32
+let me know in the comment section if
+09:35
+you want to support my channel please
+09:37
+consider contributing to my patreon
+09:39
+patreon comm slash Jeremy's IT lab I
+09:43
+accept Bitcoin and aetherium donations
+09:46
+via the addresses in the description I
+09:48
+am also a brave verified publisher and
+09:51
+accept bat or basic attention token
+09:55
+donations in the brave browser
+

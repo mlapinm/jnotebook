@@ -1,0 +1,423 @@
+00:00
+welcome to this free CCNA packet tracer
+00:03
+practice lab you can download the lab
+00:05
+file from the link in the description if
+00:08
+you like these labs please consider
+00:10
+supporting me via my patreon or the
+00:13
+cryptocurrency options in the
+00:14
+description this lab xx of these free
+00:18
+labs I've created for YouTube will serve
+00:21
+as a review of several of the topics
+00:23
+we've covered in the previous 19 I plan
+00:26
+to do these at various points in this
+00:28
+series although you could just go back
+00:31
+and redo previous labs to serve as
+00:33
+review my regular configuration labs
+00:35
+tend to focus on just one technology at
+00:38
+a time such as VLANs or port security I
+00:41
+think that labs like this one involving
+00:43
+multiple technologies are also
+00:45
+beneficial in this lab we will configure
+00:49
+host names the enable secret VLANs
+00:52
+trunks port security and inter VLAN
+00:56
+routing with router on a stick try to
+00:59
+complete the lab yourself first then
+01:01
+continue watching this video if you have
+01:03
+trouble or watch it after to check your
+01:05
+solution step one is to configure host
+01:10
+names for each of the networking devices
+01:11
+are one switch one and switch to this is
+01:16
+done with a single command host name
+01:19
+let's go on our one first an able compte
+01:25
+host named r1 next switch one enable
+01:32
+compte host name switch one finally
+01:36
+switch to enable coffee/tea host name
+01:42
+switch two that's it for step one
+01:48
+step two is to configure an enable
+01:51
+secret of CCNA for each networking
+01:53
+device this is another fairly simple
+01:56
+step
+01:57
+remember the enable secret is an
+01:59
+encrypted password that protects
+02:01
+privileged exec mode of the router
+02:03
+requiring a password to use the enable
+02:06
+command we could also configure an
+02:08
+enable password and then encrypt it with
+02:11
+the service password encryption command
+02:13
+however the encryption of the enable
+02:15
+secret is more secure so you'll always
+02:17
+want to use that instead
+02:19
+let's do switch to first since we're
+02:22
+here enable secret CCNA remember
+02:26
+passwords are case sensitive so make
+02:28
+sure CCNA is all capitals now let's use
+02:32
+the same command on switch 1 enable
+02:36
+secret CCNA and finally r1 enable secret
+02:43
+CCNA that's all for step 2
+02:48
+step three is to configure the switch
+02:51
+ports to which pcs are connected as
+02:53
+access ports in specific VLANs pc1 & pc2
+02:57
+VLAN 13 & pc2 and pc 4 in VLAN 24 let's
+03:03
+start on switch one PC one is connected
+03:08
+to f0 two so interface f0 to switch port
+03:13
+mode access now that we've explicitly
+03:16
+configured it as an access port let's
+03:18
+put it in VLAN 13 switch port access
+03:21
+VLAN 13 now let's configure f03
+03:25
+which pc 2 is connected to to be in VLAN
+03:28
+24 interface f03 switch port mode access
+03:33
+switch port access VLAN 24 that's it for
+03:38
+switch 1 next let's hop on switch to
+03:42
+interface f0 to switch port mode access
+03:46
+PC 3 is connected to this interface so
+03:49
+switch port access VLAN 13 now f03
+03:55
+which pc 4 is connected to interface f03
+03:59
+switch port mode access switch port
+04:03
+access VLAN 24 that's all for step 3
+04:10
+step four is to configure a trunk
+04:13
+between switch 1 and switch to remember
+04:16
+switch ports by default function as
+04:18
+access ports in VLAN 1 pcs 1 2 3 & 4 are
+04:23
+in VLAN 13 and 24 so even pcs in the
+04:28
+same VLAN won't be able to communicate
+04:29
+with each other across these two
+04:31
+switches currently the two switches will
+04:34
+only carry traffic in VLAN 1 between
+04:37
+them let's configure this trunk to
+04:40
+change that now which interfaces do they
+04:43
+use to connect to each other let's use
+04:46
+one CDP command to find out on switch to
+04:50
+first since we're already here do show
+04:54
+CDP neighbors as it shows here switch 2
+04:59
+is connected to switch 1 using the F 0 1
+05:01
+interface it also shows that switch 2 is
+05:05
+connected to switch ones F 0 1 interface
+05:08
+here so we don't need to use this
+05:10
+command on switch 1 let's configure the
+05:13
+trunk down interface F 0 1 switch port
+05:18
+mode trunk that's it on this switch
+05:21
+model we don't have to configure the
+05:23
+encapsulation type of dot1q if we did we
+05:29
+would use the command switch port trunk
+05:31
+encapsulation dot1q now let's go to
+05:35
+switch 1 to do the same interface F 0 1
+05:40
+switch part mode trunk let's use a show
+05:44
+command to confirm do show interface
+05:47
+trunk as you can see
+05:50
+f 0 1 is indeed trunking now pc 1 should
+05:56
+be able to pin PC 3 but not pc 2 and pc
+05:59
+4 likewise pc 2 should be able to pin pc
+06:03
+4 but not pc 1 in pc 3 let's try on pc 1
+06:08
+first ping 1001 12 the ping to pc -
+06:15
+doesn't work now - pc 3 ping 1000 13
+06:22
+it works let's confirm on PC to ping
+06:28
+1000 11 the ping to PC 1 doesn't work
+06:34
+now let's ping PC for which should work
+06:38
+ping 1001 14 it works our trunk has been
+06:46
+successfully configured
+06:50
+now Step five is to configure port
+06:53
+security on the switch ports connected
+06:55
+to PCs we need to enable sticky MAC
+06:58
+address learning and change the default
+07:00
+violation action of shutdown to restrict
+07:04
+let's go on switch one will be using the
+07:07
+same commands for each interface so
+07:10
+let's be more efficient by configuring
+07:11
+an interface range instead of doing each
+07:14
+one separately interface range f0 2 to 3
+07:20
+now we're in interface range
+07:22
+configuration mode both interfaces are
+07:26
+already explicitly configured as access
+07:28
+ports so we don't have to do that this
+07:30
+time switch port port security
+07:33
+now port security is enabled let's
+07:36
+configure sticky MAC address learning
+07:38
+switch port port security MAC address
+07:41
+sticky finally let's change the
+07:44
+violation action to restrict which
+07:46
+blocks offending traffic but does not
+07:48
+shut down the port that is done with
+07:51
+this command switch port port security
+07:54
+violation restrict now let's do the same
+07:58
+on switch to again I'll configure an
+08:02
+interface range interface range F 0 2 to
+08:07
+3 switch port port security switch port
+08:11
+port security MAC address sticky switch
+08:15
+port port security violation restrict
+08:18
+there we go step 5 is now complete
+08:24
+step six is to configure inter VLAN
+08:27
+routing with the router on a stick
+08:29
+method router on a stick
+08:32
+involves configuring sub interfaces on a
+08:34
+router one for each VLAN required we'll
+08:38
+do that on our ones g00 interface which
+08:41
+is connected to switch ones g0 one
+08:43
+interface we also must configure switch
+08:46
+ones g0 one interface as a trunk so
+08:49
+let's do that first interface g0 one
+08:55
+switch port mode trunk okay that's all
+08:59
+we need to do on switch one let's go to
+09:01
+r1 now interface G zero zero now router
+09:07
+interfaces are shutdown by default as
+09:10
+you may have noticed from the red port
+09:12
+lights on the link between r1 and switch
+09:14
+1 so first I'll type no shutdown to
+09:18
+enable it you could also do this at the
+09:21
+end of the configuration now let's
+09:24
+create the sub interface for VLAN
+09:26
+thirteen interface g0 0.13 note that the
+09:33
+sub interface name doesn't actually have
+09:34
+to match the v/line number but it's good
+09:37
+practice to do so to avoid confusion now
+09:40
+first we have to set the encapsulation
+09:42
+and VLAN encapsulation dot1q thirteen
+09:48
+okay now let's set the IP address
+09:51
+according to our instructions and the
+09:53
+default gateway addresses i've pre
+09:55
+configured on the pcs in this lab let's
+09:57
+set it to IP address 1001 255.255.255.0
+10:06
+okay that's it now let's configure the
+10:09
+sub interface for VLAN 24 interface g0
+10:14
+0.24 encapsulation dot1q 24 IP address
+10:21
+1001 one 255.255.255.0 our inter VLAN
+10:28
+routing is now complete
+10:35
+finally let's ping between pcs to make
+10:38
+sure everything works we should now have
+10:41
+full connectivity between all pcs to
+10:45
+check I'll ping from PC 1 and then from
+10:47
+PC 2 on PC 1 let's ping PC 2 first ping
+10:54
+1001 12 it works next PC 3 ping 1000 13
+11:07
+it works
+11:09
+finally PC for ping 1001 dot 14 it works
+11:18
+as well now let's do the same on PC to
+11:23
+first stop in PC 1 ping 1000 11 it works
+11:32
+PC 3-pin 1000 13 it works too
+11:42
+finally I'll ping PC for ping 1001 14 it
+11:50
+works as well
+11:51
+we have full connectivity between all
+11:53
+computers that's all for this lab
+11:58
+thank you for watching I hope this lab
+12:01
+and video have been helpful for you
+12:02
+please subscribe for future labs like
+12:05
+this which will be released weekly if
+12:08
+you have requests for any specific labs
+12:10
+let me know in the comment section if
+12:13
+you want to support my channel please
+12:15
+consider contributing to my patreon
+12:18
+patreon comm / Jeremy's IT lab I accept
+12:23
+Bitcoin and aetherium donations via the
+12:25
+addresses in the description I am also a
+12:29
+brave verified publisher and accept bat
+12:31
+or basic attention token donations in
+12:34
+the brave browser
+

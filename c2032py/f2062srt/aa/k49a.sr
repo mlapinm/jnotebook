@@ -1,0 +1,205 @@
+00:00
+welcome to this free CCNA packet tracer
+00:03
+practice lab you can download the lab
+00:05
+file from the link in the description if
+00:08
+you like these labs please consider
+00:10
+supporting me via my patreon or the
+00:12
+cryptocurrency options in the
+00:13
+description also please subscribe to the
+00:17
+channel for more labs like this this lab
+00:21
+will be a little different than other
+00:22
+labs there will be no configurations
+00:25
+although we will use show commands later
+00:27
+to confirm our answers using the
+00:30
+information on the lab topology here we
+00:33
+must answer these questions in this
+00:36
+topology of 4 switches we must identify
+00:38
+the root bridge and then which ports are
+00:41
+route ports designated ports and
+00:43
+alternate or blocked ports across all
+00:46
+these switches this should test your
+00:49
+knowledge of STP and how STP elections
+00:51
+actually work there could very well be
+00:54
+questions similar to this on the test as
+00:56
+well so make sure you can solve problems
+00:58
+like this let's get started which switch
+01:03
+is the root bridge the switch with the
+01:06
+lowest bridge ID will become the root
+01:08
+bridge remember the bridge ID consists
+01:11
+of the priority and the MAC address of
+01:14
+the switch so the switch with the lowest
+01:17
+priority will become the root or if
+01:19
+there is a tie the switch with the
+01:20
+lowest MAC address well all four
+01:24
+switches have the same priority of 3 to
+01:26
+769 so let's compare the MAC addresses
+01:30
+by looking at the first four characters
+01:32
+of each mac we can rule out - switch -
+01:35
+and switch 4 neither of them has the
+01:38
+lowest MAC address switch 1 and switch
+01:41
+two have the same first 4 characters but
+01:43
+if you look at the next 4 you can tell
+01:45
+that switch 1 has the lowest Mac so let
+01:48
+me type in the answer which switch is
+01:51
+the root bridge switch 1 now on the root
+01:55
+bridge all ports are designated ports so
+01:58
+I'll type those in as well
+02:00
+designated ports switch 1 F 0 1 F 2 0 2
+02:08
+okay now let's continue
+02:11
+each of the other three switches will
+02:13
+set their interface with the lowest cost
+02:14
+to the root as a report on switch to
+02:19
+that's obviously f02 and on switch three
+02:22
+that's F 0 1 let me write those down now
+02:28
+on switch for which port is it well F 0
+02:33
+1 is a fast ethernet interface so the
+02:36
+spanning tree cost will be 19 to switch
+02:38
+to plus 19 to switch 1 so 38 G 0 1 is a
+02:43
+Gigabit Ethernet interface so the cost
+02:45
+will be 4 to switch 3 plus 19 to switch
+02:49
+1 so 23 therefore G 0 1 will be the
+02:54
+route port on switch for now the
+02:57
+interface across from a root port has to
+02:59
+be designated so a switch 3 SG 0 on
+03:03
+interface will be designated also now
+03:06
+the question is which port is blocked
+03:09
+switch to sf0 one interface or switch 4
+03:13
+Zepp 0 one interface to determine this
+03:19
+we first compare the route cost the
+03:21
+total cost to the root bridge switch 2
+03:24
+has a lower cost to the root bridge so
+03:26
+it's f0 one interface will be designated
+03:28
+and switch 4 is f0 one interface will be
+03:31
+blocked
+03:36
+ok let's check our answers with some
+03:38
+show commands I'll go on switch one
+03:41
+first enable show spanning tree this
+03:48
+bridge is the root and F 0 1 and F 0 2
+03:51
+are indeed designated ports next let's
+03:54
+go on switch to enable show spanning
+04:00
+tree F 0 1 is designated and F 0 2 is
+04:05
+the root port great now let's check on
+04:07
+switch 3 enable show spanning tree F 0 1
+04:17
+is the report and G 0 1 is designated
+04:21
+finally let's check on switch for enable
+04:27
+show spanning tree F 0 1 is alternate
+04:31
+meaning it is blocked and G 0 1 is the
+04:34
+root port ok our answers are correct
+04:38
+this has been a fairly short lab but
+04:40
+hopefully you're able to improve your
+04:42
+understanding of spanning tree protocol
+04:44
+that's all for this lab thank you for
+04:50
+watching I hope this lab and video have
+04:52
+been helpful for you please subscribe
+04:54
+for future labs like this which will be
+04:56
+released weekly if you have requests for
+05:00
+any specific labs let me know in the
+05:02
+comment section if you want to support
+05:04
+my channel I accept Bitcoin and
+05:06
+aetherium donations via the addresses in
+05:09
+the description I am also a brave
+05:12
+verified publisher and accept bat or
+05:14
+basic attention token donations in the
+05:16
+brave browser
+

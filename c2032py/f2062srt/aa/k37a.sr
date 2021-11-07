@@ -1,0 +1,215 @@
+00:00
+welcome to this free CCNA packet tracer
+00:02
+practice lab you can download the lab
+00:05
+file from the link in the description if
+00:07
+you like these labs please consider
+00:09
+supporting me via my patreon or the
+00:12
+cryptocurrency options in the
+00:13
+description this lab will be the first
+00:17
+in a series of three labs on mat network
+00:19
+address translation this first lab will
+00:23
+cover static NAT static NAT creates a
+00:26
+one-to-one relationship between an
+00:28
+inside address typically an IP address
+00:30
+in a private address range such as
+00:33
+192.168.1.0
+00:34
+and an outside address typically a
+00:37
+public IP address on the Internet
+00:39
+I won't explain in detail how NAT works
+00:43
+hopefully you've already studied it this
+00:45
+lab will give you some basic practice in
+00:47
+configuring static NAT let's look at
+00:50
+step 1
+00:51
+ripp has been pre-configured so that any
+00:54
+device on this network should be able to
+00:56
+reach any other device let's try a ping
+00:59
+from pc-12 server one ping one dot one
+01:05
+dot one dot one hundred it doesn't work
+01:13
+why could this be I wrote a hint here
+01:16
+stating that the serial connection
+01:18
+between r1 and r2 is using ACLs to
+01:22
+simulate the Internet
+01:24
+what exactly does that mean well PC ones
+01:28
+address is 192.168.1.1 this is a private
+01:33
+IP address these private IP addresses
+01:36
+cannot be routed over the internet so
+01:38
+when PC one attempts to ping server one
+01:41
+the source IP is 192.168.1.1 and the
+01:46
+destination is one one one one hundred
+01:49
+one dot one dot one dot one hundred is a
+01:52
+public IP address so it can be routed
+01:54
+over the Internet however when server
+01:57
+one sends a reply the addresses are
+01:59
+swapped the source addresses 1.1.1 100
+02:04
+and the destination addresses 192.168.1
+02:08
+11 because 192.168.1.1 is in the
+02:13
+IP address range it cannot be routed
+02:15
+over the Internet and is dropped so our
+02:20
+goal is to configure static NAT on r1 to
+02:23
+translate the private IP addresses of
+02:25
+pc-1 pc2 and pc3 to public IP addresses
+02:30
+if we do that PC one will send a ping to
+02:33
+server one and once again the source
+02:36
+address will be 192.168.1 elleven and
+02:39
+the destination 1.1.1 100 however when
+02:43
+the packet reaches our one our one will
+02:46
+translate the source address to whatever
+02:48
+we specify 1 2 3 11 in this case when
+02:54
+server 1 sends its reply the source
+02:56
+address will be once again 1 1 1 100 and
+03:00
+the destination 1 2 3 11 when the reply
+03:05
+reaches r1 r1 will translate the
+03:09
+destination address from Wanda 2 3 11
+03:11
+back to PC ones address of 192.168.1 11
+03:16
+so let's get to the configuration on r1
+03:21
+enable coffee tea first we have to
+03:27
+specify our ones interfaces as inside or
+03:29
+outside nap interfaces the inside
+03:33
+interface faces our inside private
+03:35
+network so G 0 0 in this case interface
+03:39
+G 0 0 IP NAT inside the outside
+03:45
+interface will be s 0 3 0 our interface
+03:49
+facing the internet interface as a 0 3 0
+03:53
+IP NAT outside exit now let's configure
+03:59
+the translations themselves static NAT
+04:02
+is configured with the following command
+04:04
+IP NAT inside source
+04:08
+static followed by the inside private
+04:11
+address then the outside public address
+04:13
+so for PC 1 are inside addresses
+04:17
+192.168.1 11 and our outside addresses 1
+04:22
+2 3 11 okay that's it for a PC
+04:27
+now let's do the same command for PC -
+04:30
+just changing the addresses IP nat
+04:33
+inside source static 192.168.1 12 1 2 3
+04:40
+12 finally for pc 3 IP nat inside source
+04:46
+static 192.168.1.1 2.3 13 ok our nat
+04:56
+configuration is now complete let's go
+04:59
+on the PCs and try to ping server 1
+05:01
+again from pc1 first ping 1.1.1 100 the
+05:15
+ping works this time
+05:16
+so our NAT configuration has been
+05:18
+successful just to make sure I'll ping
+05:21
+from PC - and PC 3 as well PC 2 first
+05:26
+ping 1.1.1 100 again the ping works
+05:34
+finally let's ping from PC 3 ping 1.1.1
+05:40
+100 PC 3 works as well that's all for
+05:48
+this lab thank you for watching I hope
+05:52
+this lab and video have been helpful for
+05:54
+you please subscribe for future labs
+05:57
+like this which will be released weekly
+05:59
+if you have requests for any specific
+06:01
+labs let me know in the comment section
+06:03
+if you want to support my channel I
+06:06
+accept a Bitcoin and aetherium donations
+06:08
+via the addresses in the description I
+06:11
+am also a brave verified publisher and
+06:14
+accept bat or basic attention token
+06:17
+donations in the brave browser
+

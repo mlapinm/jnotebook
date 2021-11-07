@@ -1,0 +1,124 @@
+ 1.494618 welcome back to another Inkscape
+tutorial 4.993408  in this video I'm creating a 2d
+character that will be used in a 2d
+animation 10.054091  so first I'm just drawing all
+these circles they're just objects then
+I select everything  13.754118 and I go to path
+object to path I think ctrl shift C is
+also the shortcut to do that 20.614120  what that
+does is it converts all of these objects
+into a path that has different nodes so
+I can shape them like I'm doing here 26.643398 
+this video is sped up if you can't tell
+this is like six or eight hundred speed
+I think and so  33.199215 and this is really just
+one way to do it you could draw shapes
+you could draw squares you could draw
+anything really you could even be like a
+freehand drawing 39.714052  and then just
+manipulate each one of these nodes  42.743031 I'd
+draw an object first like a circle and
+get sort of my rough frame of my
+character  48.734053 and then and then go through
+and resize and reshape everything 53.747143  I made
+parts of it gray and parts of it black
+to show 56.759233  so I can see the overlapping how
+different body parts overlap with each
+other 61.976209  and so I'm going to be bringing
+this into open tombs  66.439108 and I'm going to be
+applying like a skeleton rig to it  68.734835 and
+so I want to be able to control
+different parts of these  71.867002 with a
+different connection points 74.534329  that's why
+we have like the neck here sort of like
+a paper doll 77.435008  type animation  78.663131 and even
+everything on the face is gonna be
+animated too 82.543034  so i'm gonna export all of
+these separately the eyes the eyeballs
+the mouth the eyelid eyelashes  89.447158 I think
+I'm gonna leave the hair I think I chose
+to leave the hair  92.923089 and the nose 94.087046  as as
+just part of the head and the neck to
+actually connected to the head  99.391113 but
+everything else got I export separately 102.219169 
+and I'll show you it at the end here for
+the hair I just drew I just drew in
+everything just by clicking on the nodes 107.914394 
+and then I went in and shaped it
+individually  110.575149 and I played a lot with
+color too so I like to throw on a
+background other than white 116.951191  I just kind
+of play around with the color I wasn't
+really sure where I was going with the
+colors and and I kind of played with it
+quite a bit  122.911165 oh this part here so I drew
+in a belt but I also used it to divide
+the upper and lower half of the body
+since it was all one 129.999017 
+color.all one path so I split that up  134.967218 to
+split up a path like this it's underpass
+division is what I used 139.155294  these hands gave
+me a real problem I spent a ton of time
+trying to get him to look good night at
+one point in time I was I thought about
+doing a mitten like this  148.807098 and I went away
+from that idea as well 150.619016  I guess I said
+before I'm not really I don't have any
+formal training in art and so I don't
+really 157.147114  I'm not super great at art
+creation but  158.743128 do the best I can
+I thought I'd throw a little star on the
+shirt here to give it some more
+character  163.090960 and I changed the color of the
+belt here changing color of the shoes 166.867062 
+that's one of the nice things about
+Inkscape is it's really easy to get in
+and change colors 171.434474  and and do things
+after the fact  173.235095 so I grouped all the skin
+together and then changed it all at at
+the same time 177.674401  same with the shirt it's
+all grouped a lot of these different
+things are grouped so I can change the
+color of the group instead of each
+individual item  184.976453 put a little belt buckle
+on here for some character  188.230951 yeah that's
+about it these characters coming
+together  192.411186 the next thing I need to do is
+separate out different items  197.163072 so what I
+do I make it copy so I have a duplicate
+copy of the whole character 201.064595  and I just
+separate out each individual part that I
+want to have so this is even though
+there's different parts here I group
+like the whole body section  207.964006 I just bring
+out everything separately that I want to
+to export out because in open toons 214.372804  or
+in other software too  215.973725 I'm gonna want to
+bring them in separately  218.160490 so I want to
+bring in just a blank face without the
+eyes and mouth and things on it because
+those are gonna be some times they'll be
+closed  227.180466 or sometimes they'll be in a
+different position  228.760742 so I want everything
+that's going to be a you know I can't
+you kind of to think through and think
+how what parts am I gonna want to
+animate and what parts are gonna stay
+the same all the time  237.167880 and so then I just
+go to file export and I just grab like
+the shoe the calf the thigh 243.452058  I just grab
+all these different parts name them and
+export them as a PNG image 247.619660  and yeah
+that's what I'm doing here that's really
+all there is to it and like I said every
+every individual thing I probably do
+need to draw I can either redraw the
+mouth here or I can redraw or modify
+different mouth positions in the
+animation software 263.807883  up
+I do that in the software itself  266.043717 but I
+could have redrawn them here too  268.355951 that's
+the whole process appreciate you
+watching 271.351838  and don't forget to Like
+comment subscribe and catch you in the
+next video 275.107857  275.107857  275.107857 

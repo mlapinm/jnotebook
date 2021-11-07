@@ -1,0 +1,215 @@
+00:00
+welcome to this free CCNA packet tracer
+00:03
+practice lab you can download the lab
+00:06
+file from the link in the description in
+00:09
+this lab we will be working with two
+00:12
+switches switch 1 and switch two and
+00:15
+three pcs pc-1 pc2 and pc 3 you may
+00:22
+notice that the icons of these switches
+00:23
+are different than in the previous lab
+00:26
+these are called multi-layer switches
+00:28
+because they can operate at both layer 2
+00:31
+and layer 3 of the OSI model but we
+00:34
+won't actually be using their
+00:35
+multi-layer capabilities in this lab I
+00:39
+selected this switch model for another
+00:41
+reason which will differentiate this lab
+00:43
+from the previous ones slightly in terms
+00:45
+of configuration however the basic tasks
+00:49
+of the lab are the same we will use
+00:51
+VLANs to separate these pcs at layer 2
+00:54
+even though they are in the same layer 3
+00:57
+subnet try to complete the lab on your
+01:00
+own first then continue watching this
+01:02
+video if you have trouble or watch it
+01:05
+after to check your solution
+01:09
+step one asks us to pin between the
+01:12
+computers to test connectivity these
+01:15
+pings should all succeed let's just ping
+01:18
+from pc1 first I'll ping PC to ping 1000
+01:26
+to the ping works next out paying pc3
+01:32
+ping 1000 three it works as well
+01:41
+step two is to assign PC to and PC three
+01:45
+to VLAN to again this is done by
+01:48
+configuring the switch interfaces
+01:50
+let's do switch one first enable conf t
+01:56
+pc 2 is connected to Fast Ethernet 0 3
+02:00
+so interface F 0 3 switch port mode
+02:05
+access switch port access VLAN - that's
+02:11
+it for PC - now let's do the same on
+02:13
+switch to enable comte interface F 0 to
+02:22
+switch port mode access switch port
+02:26
+access VLAN - ok
+02:29
+step 2 is complete
+02:34
+step three is to create a trunk
+02:36
+connection between switch 1 and switch
+02:38
+to remember that by default switch ports
+02:42
+are access ports in the native VLAN VLAN
+02:45
+1 in order for these switches to carry
+02:48
+traffic from VLAN 2 as well so that PC 2
+02:52
+and PC 3 can communicate with each other
+02:53
+we need to create a trunk let's do
+02:57
+switch 1 first interface f0 1 switch
+03:03
+port mode trunk but it doesn't work
+03:06
+command rejected an interface whose
+03:09
+trunk encapsulation is auto cannot be
+03:12
+configured to trunk mode this didn't
+03:15
+happen last lab and actually this is why
+03:17
+I chose this switch model when you make
+03:20
+a trunk link packets are encapsulated to
+03:23
+label them as part of a particular VLAN
+03:25
+on the switches in the previous lab only
+03:28
+one type of encapsulation is available
+03:30
+so there is no need to configure which
+03:33
+type of encapsulation to use however
+03:36
+some models support two types of
+03:38
+encapsulation one known as is L which is
+03:41
+Cisco proprietary and one known as 802.1
+03:45
+Q or dot1q
+03:47
+which is an industry standard dot1q is
+03:51
+by far the most common encapsulation
+03:53
+type and lets configure this interface
+03:56
+to use dot1q since we need to configure
+03:58
+the encapsulation type to create a trunk
+04:01
+we do that with this command switch port
+04:05
+trunk encapsulation dot1q now we can
+04:11
+make the trunk link switch port mode
+04:13
+trunk now let's do the same commands on
+04:17
+switch to interface f01 switch port
+04:23
+trunk encapsulation dot1q switch port
+04:28
+mode trunk that's all for step 3
+04:34
+step four is to once again ping to test
+04:37
+connectivity if everything is configured
+04:40
+correctly PC - and PC 3 should be able
+04:44
+to pin each other because they are both
+04:46
+in VLAN - and we have a trunk connection
+04:49
+between the two switches they should not
+04:51
+be able to ping PC one or vice versa
+04:53
+because PC one is still in the native
+04:56
+VLAN VLAN one I'll use PC one first ping
+05:04
+1000 - doesn't work
+05:08
+next ping 1000 3 doesn't work as
+05:15
+expected
+05:16
+now let's just try a ping between PC 2
+05:20
+and PC three I'll go on PC to ping 1000
+05:27
+3 the ping works as expected
+05:31
+that's all for this lab
+05:36
+thank you for watching I hope this lab
+05:39
+and video have been helpful for you
+05:41
+please subscribe for future labs like
+05:43
+this which will be released weekly if
+05:46
+you have requests for any specific labs
+05:48
+let me know in the comment section if
+05:52
+you want to support my channel I accept
+05:54
+Bitcoin donations via the address in the
+05:56
+description I am also a brave verified
+05:59
+publisher and accept bat or basic
+06:02
+attention token donations in the brave
+06:05
+browser
+

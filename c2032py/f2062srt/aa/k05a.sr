@@ -1,0 +1,277 @@
+00:00
+welcome to this free CCNA packet tracer
+00:03
+practice lab you can download the lab
+00:05
+file from the link in the description in
+00:08
+this lab we will be working with two
+00:11
+switches switch 1 and switch 2 and 4 pcs
+00:15
+pc-1 pc2 pc 3 and PC 4 we will assign
+00:21
+these computers to VLANs VLANs or
+00:25
+virtual lands are used to isolate
+00:27
+computers at layer 2 if you look at the
+00:30
+network diagram you will notice that
+00:33
+these 4 computers are in the same layer
+00:35
+3 network that 1000 / 24 network we will
+00:42
+use VLANs to separate them into two
+00:44
+groups of two try to complete the lab
+00:47
+yourself first and then continue
+00:49
+watching this video if you have trouble
+00:51
+or watch it afterwards to check your
+00:54
+solution step one is to ping between the
+00:58
+computers to check connectivity let's do
+01:01
+this on pc one I'll ping PC to first pin
+01:08
+1000 to the pin works next PC 3 ping
+01:15
+1000 3 the ping works again next PC for
+01:21
+ping 1000 for all of our pings worked as
+01:27
+expected that's all for step 1
+01:32
+step two is to assign pc1 & pc2 vlan1
+01:37
+and PC to and PC four to VLAN to this is
+01:43
+done by configuring the switch
+01:44
+interfaces they are connected to let's
+01:47
+do this on switch one first so we'll be
+01:50
+assigning pc-12 VLAN 1 and PC 2 to VLAN
+01:54
+to enable compte PC one is connected to
+02:02
+Fast Ethernet 0 2 so interface f0 to now
+02:09
+I will enter the command switch port
+02:11
+mode access switch ports connected to
+02:15
+end hosts like a PC should be configured
+02:17
+as access ports switch ports are in
+02:21
+access mode by default but I like to
+02:23
+explicitly configure this next we will
+02:27
+assign it to VLAN 1 switch port access
+02:31
+VLAN 1 next is PC 2 which is connected
+02:37
+to Fast Ethernet 0 3 interface f0 3
+02:42
+switch port mode access switch port
+02:46
+access VLAN 2 as you can see the switch
+02:49
+creates VLAN 2 for us because we hadn't
+02:52
+created it before let's check the
+02:55
+running config to confirm our
+02:57
+configuration do show run on both
+03:03
+interfaces you can see the switch port
+03:05
+mode access command and on Fast Ethernet
+03:09
+0 3 you can see it is assigned to VLAN
+03:11
+two but why don't we see our switch port
+03:14
+access via an one command on Fast
+03:17
+Ethernet 0 2 this is because of what's
+03:20
+called the native VLAN in normal VLANs
+03:24
+the switch tags the packet from that
+03:27
+VLAN to identify it as belonging to that
+03:29
+VLAN the native VLAN however doesn't
+03:33
+need to be tagged and any packets that
+03:36
+are untagged are assumed to belong to
+03:38
+that VLAN and VLAN 1 is the default
+03:42
+native VLAN on Cisco switches
+03:44
+because of this by default all
+03:47
+interfaces belong to VLAN one if you try
+03:51
+to explicitly configure an interface as
+03:53
+VLAN one it won't even show up in the
+03:56
+configuration as you can see here
+03:58
+note that the native VLAN can be changed
+04:01
+and for security purposes it often is
+04:04
+but for this lab we will keep it as is
+04:08
+next let's hop over to switch to enable
+04:14
+T interface
+04:16
+f02 let's do the exact same thing as
+04:19
+with pc1 & pc2 switch port mode access
+04:23
+switch port access VLAN one interface
+04:29
+f03
+04:30
+switch port mode access switch port
+04:33
+access VLAN two there we go
+04:37
+let's check the running config on switch
+04:39
+two as well do show run again we see the
+04:44
+same thing as on switch one step two is
+04:47
+now complete
+04:51
+step three is to attempt to ping between
+04:54
+PC one and PC and PC two and PC four so
+04:59
+we're going to attempt to ping between
+05:01
+computers in the same VLAN let's hop on
+05:04
+PC one first ping 1000 three the pings
+05:12
+are successful next let's hop on PC to
+05:18
+ping 1000 dot for our pings fail why is
+05:27
+that pc1 & pc2 same VLAN and their pings
+05:32
+worked PC 2 and PC 4 are in the same
+05:36
+VLAN as well so why can't we ping
+05:39
+between them remember what I said about
+05:41
+the native VLAN the fastethernet 0/1
+05:45
+interfaces of switch 1 and switch 2 are
+05:47
+assigned to the native VLAN which is
+05:50
+VLAN 1 by default so only traffic from
+05:53
+VLAN 1 can pass through them we'll fix
+05:56
+that in step 4
+06:02
+step four is to configure the interfaces
+06:04
+connecting switch 1 and switch two as
+06:06
+trunk interfaces in order to allow
+06:10
+traffic from multiple VLANs to pass
+06:12
+between the two switches
+06:13
+we must configure their fastethernet 0/1
+06:16
+interfaces as trunk interfaces let's do
+06:20
+that on switch one first interface f01
+06:27
+switch port mode trunk next switch to
+06:33
+interface f01 switch port mode trunk
+06:40
+that's it for step 4
+06:44
+Step five is to once again ping between
+06:47
+the computers if we correctly configured
+06:50
+everything we should be able to ping
+06:52
+between PC one and PC and between PC two
+06:56
+and PC four but the other pings should
+06:59
+fail let's start from PC one again
+07:03
+first let's ping PC two as expected the
+07:11
+pings failed next PC three which should
+07:15
+succeed as expected the ping succeeded
+07:23
+finally PC four again the pings failed
+07:30
+let's ping from PC too as well paying PC
+07:36
+one the pings failed PC three the pings
+07:47
+failed finally PC for the ping succeeded
+07:52
+as you can see we have successfully
+07:55
+isolated the computers between VLANs
+07:57
+even though they're on the same layer 3
+08:00
+Network that's all for this lab
+08:05
+thank you for watching I hope this lab
+08:08
+and video have been helpful for you
+08:10
+please subscribe for future labs like
+08:13
+this which will be released weekly if
+08:16
+you have requests for any specific labs
+08:18
+let me know in the comment section if
+08:20
+you want to support my channel I accept
+08:23
+Bitcoin donations via the address in the
+08:26
+description I am also a brave verified
+08:29
+publisher and accept bat or basic
+08:32
+attention token donations in the brave
+08:34
+browser
+

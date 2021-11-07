@@ -1,0 +1,201 @@
+00:00
+welcome to this free CCNA packet tracer
+00:03
+practice lab you can download the lab
+00:06
+file from the link in the description if
+00:08
+you like these labs please consider
+00:10
+supporting me via my patreon or the
+00:12
+cryptocurrency options in the
+00:14
+description also please subscribe to the
+00:17
+channel for more labs like this in this
+00:21
+lab we will troubleshoot inter VLAN
+00:23
+routing in these 2 small networks which
+00:25
+we just configured in the previous lab I
+00:27
+have made one miss configuration on each
+00:30
+networking device see if you can find
+00:33
+and fix the errors first let's test the
+00:38
+network of PC one switch 1 and PC 2 I'll
+00:43
+try a ping from PC 1 in VLAN 10 to PC 2
+00:47
+in VLAN 20 ping 1002 10
+00:57
+it fails let's investigate on switch one
+01:03
+enable show IP interface brief looks
+01:09
+like the VLAN 10 and VLAN 20 interfaces
+01:11
+have the correct IP addresses configured
+01:15
+show VLAN brief here's our problem
+01:20
+the fastethernet 0/1 interface to which
+01:23
+pc one is connected has been placed in
+01:25
+v-line 11 not VLAN 10
+01:28
+let's put f01 into the correct VLAN and
+01:32
+see if that solves our issue coffee/tea
+01:36
+interface f01 switch port access VLAN 10
+01:42
+I'll delete VLAN 11 also since we're not
+01:45
+using it exit no VLAN 11 do show VLAN
+01:52
+brief ok
+01:54
+our VLAN configuration looks good let's
+01:57
+try that ping from pc1 again ping 1002
+02:02
+10 this time the ping is successful so
+02:10
+we have fixed the issue on this network
+02:12
+now let's test the issue on the next
+02:15
+network I'll try to ping from PC 3 in
+02:19
+VLAN 30 to pc 4 in VLAN 40 ping 1004 10
+02:32
+the ping is not successful so let's find
+02:36
+the issues there should be one issue on
+02:38
+our two and one issue on switch to
+02:41
+according to the lab instructions I'll
+02:44
+investigate on our two first enable
+02:49
+there could be a few problems here like
+02:52
+incorrect IP addresses or encapsulation
+02:54
+dot1q configurations on the sub
+02:56
+interfaces I'll use show running config
+02:59
+this time so run our interface Gigabit
+03:06
+Ethernet 0 0 is not shutdown and 2 sub
+03:09
+interfaces are configured they are
+03:11
+assigned to the proper VLANs 30 and 40
+03:14
+however look at the IP address on the
+03:16
+dot 30 sub-interface the VLAN 30 subnet
+03:20
+is 10030 / 24 so we should fix that
+03:26
+Koff t interface g0 0.30 IP address 1003
+03:35
+1 255 255 255 0 do show IP interface
+03:42
+brief ok now it has the correct IP
+03:46
+address so we fixed the issue on r2
+03:50
+let's go to switch to next enable so the
+03:58
+correct configuration on switch 2 should
+04:00
+be f01 connected to pc 3 in VLAN 30 and
+04:04
+f0 to connected to pc 4 in VLAN 40 and
+04:08
+g0 one connected to r2 should be a trunk
+04:12
+let's check show VLAN brief fast
+04:19
+ethernet 0 1 & 0 2 are in the correct
+04:22
+VLANs show interfaces trunk however
+04:27
+nothing appears with the show interfaces
+04:29
+trunk command show run
+04:35
+there's our problem Gigabit Ethernet 0 1
+04:38
+is configured as an access port actually
+04:42
+in the previous show VLAN brief command
+04:45
+you could see it in VLAN 1 that means it
+04:49
+won't pass data from either VLAN 30 or
+04:51
+VLAN 40
+04:52
+let's properly configure it as a trunk
+04:56
+compte interface g0 1 switch port mode
+05:02
+trunk do show interfaces trunk ok now we
+05:09
+can see the gig 0 1 interface is a trunk
+05:11
+and let's check that VLAN configuration
+05:13
+once more do show VLAN brief it is also
+05:19
+no longer listed in VLAN 1 so our inter
+05:24
+VLAN routing in this network should be
+05:26
+properly configured let's try that ping
+05:29
+again once more from PC 3 to PC for ping
+05:36
+1004 10
+05:45
+okay this time the ping works
+05:48
+we have successfully fixed the problems
+05:50
+that's all for this lab thank you for
+05:57
+watching I hope this lab and video have
+05:59
+been helpful for you please subscribe
+06:01
+for future labs like this which will be
+06:04
+released weekly if you have requests for
+06:07
+any specific labs let me know in the
+06:09
+comments section if you want to support
+06:12
+my channel I accept the Bitcoin and
+06:14
+aetherium donations via the addresses in
+06:16
+the description I am also a great
+06:19
+verified publisher and accept bat or
+06:22
+basic attention token donations in the
+06:25
+brave browser
+

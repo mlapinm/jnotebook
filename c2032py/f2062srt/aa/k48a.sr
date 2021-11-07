@@ -1,0 +1,441 @@
+00:00
+welcome to this free CCNA packet tracer
+00:03
+practice lab you can download the lab
+00:05
+file from the link in the description if
+00:08
+you like these labs please consider
+00:10
+supporting me via my patreon or the
+00:12
+cryptocurrency options in the
+00:13
+description also please subscribe to the
+00:17
+channel for more labs like this in this
+00:20
+lab we will take a look at STP spanning
+00:23
+tree protocol and do some basic
+00:25
+configurations spanning tree is
+00:29
+necessary to prevent layer 2 loops which
+00:31
+would otherwise render your network
+00:33
+useless in this topology for example
+00:36
+without spanning tree a layer 2
+00:38
+broadcast would loop around the 3
+00:40
+switches endlessly
+00:41
+and with enough of that in your network
+00:43
+your networker is not going to be
+00:45
+operating well just to clarify that if
+00:48
+switch 1 sends a broadcast it goes to
+00:51
+switch 2 and switch 3 then both of them
+00:55
+flood the broadcast out every port
+00:56
+except the one they received it on then
+00:59
+the process repeats and it will go from
+01:01
+switch 1 2 switch 2 to switch 3 to
+01:04
+switch 1 2 switch 2 to switch 3 and also
+01:07
+the same thing in the other direction
+01:09
+that's why spanning tree is essential in
+01:11
+a case like this anyway let's get
+01:14
+started the first step just asks us some
+01:18
+questions about STP the first is which
+01:22
+version is currently running on the
+01:23
+switches there are multiple versions for
+01:27
+example common spanning tree the old
+01:29
+original version also per VLAN spanning
+01:32
+tree rapid spanning tree rapid per VLAN
+01:35
+spanning tree so which is running on
+01:37
+these switches by default these are all
+01:40
+the same models so let's just check on
+01:42
+switch one enable show spanning tree
+01:47
+summary right here the first line switch
+01:52
+is in P vs T mode so there's our answer
+01:55
+p vs t is per VLAN spanning tree that
+02:00
+means each VLAN has its own spanning
+02:02
+tree instance running which we can
+02:04
+configure individually you can see that
+02:08
+down here there is VLAN 1 the default di
+02:11
+on which all generally ignore
+02:13
+for this lab and then our three VLANs 10
+02:16
+20 and 30
+02:18
+the next question is what is the bridge
+02:21
+ID for each switch first what exactly is
+02:26
+a bridge ID it is a value used to
+02:29
+determine the root bridge in spanning
+02:31
+tree it consists of two parts the bridge
+02:34
+priority which is 3 2 7 6 8 by default
+02:39
+plus the MAC address which is used as a
+02:41
+tie breaker if the bridge priorities are
+02:43
+the same the switch with the lowest
+02:46
+bridge ID becomes the root bridge so
+02:49
+let's checks which ones bridge ID show
+02:53
+spanning tree
+02:55
+so for VLAN 1 the priority is 3 2 7 6 9
+03:00
+which is the default priority of 3 2 7 6
+03:03
+8 plus the VLAN number one then the MAC
+03:07
+address is here
+03:08
+beginning with zero zero six zero note
+03:12
+that the information up here is for the
+03:14
+root bridge and down here is for this
+03:17
+switch itself the information is
+03:20
+different so clearly switch 1 is not the
+03:22
+root bridge switch ones bridge ID will
+03:26
+be essentially the same for each VLAN
+03:27
+but the priority will differ because the
+03:29
+VLAN ID is added to the default priority
+03:32
+C 3 2 7 7 8 3 2 7 8 8 & 3 2 7 9 8 okay
+03:44
+now let's check the bridge ID on switch
+03:45
+to enable show spanning tree again the
+03:54
+priorities will be the same as on switch
+03:55
+1 3 2 7 6 9 4 VLAN 1 3 2 7 7 8 4 VLAN 10
+04:01
+etc and here is the MAC address
+04:04
+beginning with 0 0 0 1 note that the
+04:09
+info down here is the same as the info
+04:11
+in the route ID section and the route ID
+04:14
+section itself says this bridge is the
+04:16
+root so that answers the next question -
+04:19
+as to what is the root bridge for each
+04:21
+VLAN because we haven't done any
+04:24
+configurations yet the priorities are
+04:26
+all the same
+04:26
+so the switch with the lowest MAC
+04:28
+address will become the root for all
+04:30
+VLANs switch to in this case let's
+04:34
+quickly take a look at switch threes
+04:36
+bridge ID also enable show spanning tree
+04:43
+again the priorities are the same and
+04:46
+the MAC address begins with 0 0 0 4 so
+04:50
+indeed switch 2 has the lowest Mac
+04:52
+switch ones Mac began with 0 0 6 0 the
+04:56
+highest then switch 3 with 0 0 0 4 and
+05:00
+then switch to at 0 0 0 1 the lowest
+05:05
+okay the next question is what is the
+05:07
+STP cost of each interface
+05:11
+well the interface is connecting the
+05:13
+switches are Gigabit Ethernet interfaces
+05:15
+they have a default STP cost of 4 on the
+05:20
+other hand the interface is connected to
+05:21
+the PCs which are still actively sending
+05:24
+spanning TB PDUs or bridge protocol data
+05:27
+units even though a switch isn't
+05:28
+connected to them our Fast Ethernet
+05:31
+interfaces which have a default cost of
+05:33
+19 look at the show spanning tree
+05:38
+command here you can see Gigabit
+05:40
+Ethernet interfaces with the cost of 4
+05:42
+and Fast Ethernet interfaces with a cost
+05:46
+of 19 the next question is which
+05:51
+interface is blocked and why well you
+05:54
+can see on packet tracer which is
+05:56
+blocked due to the port lights let's
+05:59
+just check with the show command on
+06:00
+switch 1 let's look at the output of
+06:04
+show spanning tree again you can see
+06:09
+that gig 0 1 interface is blocking as
+06:11
+BLK indicates here why is that well
+06:16
+switch to is the root bridge so all of
+06:19
+its ports are designated ports switch
+06:22
+ones gig 0 2 interface and switch 3s gig
+06:25
+0 one interface have the lowest cost to
+06:27
+the root for them so they are route
+06:30
+ports and it will forward traffic now we
+06:34
+have to block one part between switch 1
+06:36
+and switch 3 to prevent loops so switch
+06:39
+1 and switch 3
+06:40
+compare their bridge IDs and because
+06:43
+switch ones is the highest it blocks the
+06:45
+gig zero one port okay
+06:49
+finally let's get to some configurations
+06:51
+step two says to change the spanning
+06:54
+tree mota RP VST rapid per VLAN spanning
+06:57
+tree if your switches support rapid P
+07:01
+VST you really should use it because it
+07:03
+allows the network to converge much
+07:05
+faster when there are changes all it
+07:08
+takes is one command on each switch ON
+07:10
+switch one first comp T spanning tree
+07:15
+mode rapid P vs T that's it now switch
+07:20
+to coffee t spanning tree mode rapid P
+07:27
+vs T and finally switch three golf t
+07:33
+spanning tree mode rapid P vs T okay
+07:37
+that's it now it's time to manipulate
+07:41
+the spanning trees a little bit we're
+07:43
+going to change the root bridge for each
+07:45
+VLAN and also configure a secondary
+07:47
+route to specify which switch we want to
+07:49
+be the route if the route fails let's go
+07:53
+and configure our primary routes on
+07:56
+switch one spanning tree VLAN 10 root
+08:03
+primary okay then switch to spanning
+08:09
+tree VLAN 20 root primary and then
+08:14
+switch three spanning tree VLAN 30 root
+08:19
+primary okay now let's set the secondary
+08:23
+VLANs switch three here should be the
+08:26
+secondary route for VLAN 20 so spanning
+08:30
+tree VLAN 20 route secondary then switch
+08:35
+one spanning tree VLAN 30 route
+08:40
+secondary and finally switched to
+08:44
+spanning tree VLAN 10 route secondary ok
+08:50
+now both of these commands adjust the
+08:52
+span to be priority of the switch down
+08:54
+let's check what the priorities are here
+08:56
+on switch to do show spanning-tree look
+09:03
+at VLAN 10 for which switch 2 is the
+09:05
+secondary route it brings the priority
+09:08
+down to two eight six seven two plus ten
+09:11
+for the VLAN ID now look at VLAN 24 rich
+09:16
+it is the route 2 4 5 7 6 plus 24 the
+09:23
+VLAN ID ok finally we are going to
+09:27
+enable port fast and bpdu guard on the
+09:30
+appropriate interfaces these should be
+09:33
+enabled on interfaces not connected to
+09:35
+another switch bpdu guide will put an
+09:39
+interface in the air disabled mode if a
+09:41
+bpdu is received on the port and port
+09:44
+fast allows interfaces to start
+09:45
+forwarding without having to wait for
+09:46
+the spanning tree to converge
+09:49
+now you can enable port fest here from
+09:52
+global configuration mode with spending
+09:54
+to the port fast default which will
+09:56
+enable it on all access ports
+09:58
+you can also configure it at the
+10:00
+interface level let's do that interface
+10:04
+range F 0 1 2 3 spanning-tree portfast
+10:11
+spanning tree bpdu guard enable ok let's
+10:17
+do it on switch 1 next interface range F
+10:22
+0 1 2 3 spanning-tree portfast spending
+10:27
+to the bpdu guard enable finally switch
+10:32
+3 interface range F 0 1 2 3
+10:39
+spanning-tree portfast spanning tree
+10:43
+bpdu guard enable okay so this slab was
+10:48
+a little longer than usual but there's a
+10:50
+lot to say about spanning tree and it's
+10:52
+a big exam topic make sure you're
+10:54
+familiar with everything on the exam
+10:55
+topics list before you write the exam
+10:57
+that's all for this lab
+11:03
+thank you for watching I hope this lab
+11:05
+and video have been helpful for you
+11:07
+please subscribe for future labs like
+11:10
+this which will be released weekly if
+11:12
+you have requests for any specific labs
+11:14
+let me know in the comment section if
+11:17
+you want to support my channel I accept
+11:19
+the Bitcoin and aetherium donations via
+11:22
+the addresses in the description I am
+11:25
+also a brave verified publisher and
+11:27
+accept bat or basic attention token
+11:29
+donations in the brave browser
+

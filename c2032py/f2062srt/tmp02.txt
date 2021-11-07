@@ -1,0 +1,49 @@
+lines = Lines('b02b.txt')
+items = []
+lines.readLines(lines.name, items)
+
+
+
+items.append('aaaaaaaaa')
+max = len(items)
+
+note = []
+notes = []
+for i in range(max):
+    e = items[i]
+
+    pattern = r'(\d+)\:(\d+)\:(\d+)\,(\d+)'
+    match = re.search(pattern, e)
+    
+    if match or i == max - 1:
+
+        kk = 3
+        if len(note) > kk:
+            notes.append(' '.join(note))
+            note = []
+        elif len(note) <= kk and len(note) > 0:
+            t = notes.pop()
+            t = notes.pop()
+            notes.append(t + ' ' + ' '.join(note))
+        pass
+
+
+    if match:
+        m = int(match[2])
+        s = float(match[3] + '.' + match[4])
+        time = m * 60 + s
+        notes.append(time)
+        continue
+
+    match = re.search(r'^\d+$', e)
+    if match:
+        continue
+
+    note += e.split(' ')
+    note = list(filter(lambda e: len(e)>0, note))
+
+
+print(notes)
+
+
+# print(max)

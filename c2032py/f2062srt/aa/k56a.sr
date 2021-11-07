@@ -1,0 +1,245 @@
+00:00
+welcome to this free CCNA packet tracer
+00:03
+practice lab you can download the lab
+00:05
+file from the link in the description if
+00:09
+you like these labs please consider
+00:10
+supporting me via my patreon or the
+00:12
+cryptocurrency options in the
+00:14
+description also please subscribe to the
+00:17
+channel for more labs like this in this
+00:21
+lab we will troubleshoot a multi area
+00:22
+OSPF network in which neighbor
+00:25
+relationships aren't properly forming
+00:27
+and roads that should be advertised are
+00:29
+not let's get started first let's go on
+00:33
+our one enable show IP ospf neighbor
+00:42
+our one has become OSPF neighbors with
+00:45
+our two but not our four show IP
+00:49
+protocols
+00:51
+looks like our ones interfaces are in
+00:54
+the proper areas as you can see they're
+00:56
+both in area one
+00:58
+however you may notice one problem here
+01:00
+on our one our one isn't advertising
+01:03
+it's loopback of 1.1.11 if I go on our -
+01:08
+it won't appear in the routing table
+01:12
+enable show IP route indeed it's
+01:17
+receiving the 10.14 0 but not 1.1 1.1
+01:22
+from our one let's fix that on our one
+01:29
+coffee tea router OSPF one network 1.1.1
+01:38
+100 200 area 1 also the loopback should
+01:44
+be a passive interface passive interface
+01:47
+l0 ok now let's check again on our to
+01:54
+show IP route
+01:59
+there it is so we fix our problem on our
+02:02
+one let's go on our four and see what's
+02:06
+the issue
+02:09
+enable show IP ospf neighbors indeed our
+02:15
+four has no OSPF neighbors show IP
+02:18
+protocols can you spot the problem our
+02:23
+4s g00 interface is a passive interface
+02:27
+this means it won't form neighbor
+02:30
+relationships on that interface it will
+02:33
+still advertise the network on that
+02:34
+interface although in this case it has
+02:36
+no neighbors to advertise it to let's
+02:39
+fix that conf T router OSPF one no
+02:47
+passive interface G zero zero now r1 and
+02:52
+r4 should be trying to form an OSPF
+02:55
+neighbor relationship I'll wait a few
+02:58
+seconds
+03:05
+okay now let's confirm with a show
+03:07
+command do show IP ospf neighbor
+03:12
+there it is r1 and r4 are OSPF neighbors
+03:18
+next let's check out our to show IP ospf
+03:24
+neighbors it's formed a relationship
+03:27
+with r1 but not r3 show IP protocols I
+03:35
+don't see any problems here 10.12 da da
+03:38
+o is in area 1 and 10.20 300 and the
+03:42
+loopback interface are in area 0 show IP
+03:46
+interface brief here's our issue it's
+03:51
+not an OSPF configuration issue the f20
+03:55
+interface itself is administratively
+03:56
+down show run there you can see it has
+04:03
+the shutdown command configured compte
+04:07
+interface f2 0 no shutdown ok now let's
+04:14
+see if it's forming a OSPF neighbor ship
+04:16
+with r3 do show IP ospf neighbor that's
+04:22
+odd
+04:23
+r2 still isn't forming an OSPF
+04:25
+relationship with r3
+04:27
+well we fix the issue here on r2 so
+04:31
+let's go on r3 enable show IP ospf
+04:38
+neighbor so r3 has 1 OSPF neighbor r5
+04:45
+show IP protocols can you spot the issue
+04:50
+on r3
+04:51
+it's 10.20 300 network should be in area
+04:55
+0 not area 2 coughed T router OSPF one
+05:01
+network 10.23 oh-oh-oh-oh-oh 255 area 0
+05:09
+ok now let's wait a few seconds
+05:20
+okay and now let's check and see if it's
+05:22
+forming a SPF neighbor ship with our to
+05:25
+do show IP ospf neighbor okay there it
+05:31
+is r2 and r3 are now OSPF neighbors
+05:35
+finally let's see what's wrong on r5 an
+05:41
+able show IP ospf neighbor so r5 has
+05:49
+successfully become OSPF neighbors with
+05:50
+r3 however in the lab instructions it
+05:54
+says that the ropes r5 is receiving
+05:56
+aren't being properly summarized show IP
+06:00
+route indeed r5 should be receiving a
+06:04
+10000 / 8 summary but it's receiving
+06:08
+individual network routes instead so
+06:11
+there's probably another issue on r3
+06:13
+let's go back let's see how or if r3 is
+06:19
+summarizing do show run area to range
+06:28
+10000 to 5500 there's the problem it's
+06:33
+an easy mistake to make because you want
+06:35
+to advertise the summary to area 2 you
+06:38
+might want to use the area to range
+06:40
+command however the correct answer is
+06:42
+area 0 range I'll copy this command and
+06:49
+then paste it here and cancel it with no
+06:53
+now let's put in the correct command
+06:56
+area 0 range
+06:59
+10000 255 0 0 0 remember the area range
+07:07
+command uses a regular mask not a
+07:09
+wildcard mask ok let's go back to our 5
+07:13
+and see if it's receiving the summary
+07:14
+read show IP route okay there it is we
+07:24
+have successfully fixed the problems
+07:25
+that's all for this lab
+07:30
+thank you for watching I hope this lab
+07:32
+and video have been helpful for you
+07:34
+please subscribe for future labs like
+07:36
+this which will be released weekly if
+07:38
+you have requests for any specific labs
+07:41
+let me know in the comment section if
+07:43
+you want to support my channel I accept
+07:46
+Bitcoin and etherium donations via the
+07:48
+addresses in the description I am also a
+07:52
+brave verified publisher and accept bat
+07:54
+or basic attention token donations in
+07:57
+the brave browser
+

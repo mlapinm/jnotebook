@@ -1,0 +1,263 @@
+00:00
+welcome to this free gns3 practice lab
+00:03
+for the CCNA once again for this video I
+00:07
+will be using gns3 not packet tracer
+00:11
+packet tracer is great but there are
+00:13
+many things which it doesn't support
+00:15
+such as multi-link PPP from the previous
+00:19
+lab and pppoe which we will configure in
+00:22
+this lab you can download the gns3 file
+00:26
+from the link in the description I will
+00:29
+also include the name of the iOS image
+00:31
+file I used however I cannot legally
+00:34
+give you the file itself if you need
+00:37
+help getting gns3 setup please look
+00:40
+around on google or youtube david bumble
+00:43
+for example has many videos on gns3
+00:45
+setup in this lab we will configure
+00:49
+pppoe which stands for point-to-point
+00:52
+protocol over Ethernet the original PPP
+00:56
+which we have been configuring so far
+00:59
+was used on serial interfaces pppoe
+01:03
+however allows us to encapsulate PPP
+01:06
+into Ethernet frames the service
+01:10
+provider routers have been
+01:11
+pre-configured so let's configure the to
+01:14
+client routers r1 and r2 to use pppoe
+01:18
+for their connections to the service
+01:20
+provider let's get started I'll
+01:24
+configure r1 first compte we are
+01:30
+instructed to configure pppoe with
+01:32
+two-way PAP authentication SP r1 is
+01:37
+already configured and is using a host
+01:39
+name of packet and a password of tracer
+01:42
+to authenticate so let's configure that
+01:45
+user account on r1 user name packet
+01:50
+password tracer okay now to configure
+01:54
+pppoe we need to configure a dialer
+01:57
+interface first interface dialer one
+02:02
+this is a logical interface which we
+02:05
+will later bind to the physical
+02:07
+interface g00 first we have to lower the
+02:12
+MTU
+02:13
+the maximum transmission unit from 1500
+02:17
+to 1492 this is because pppoe adds
+02:23
+another 8 byte header so MTU 1492
+02:30
+then set the encapsulation encapsulation
+02:35
+PPP next the IP address the client r1
+02:41
+will negotiate its IP address with SP r1
+02:44
+with this command IP address negotiated
+02:50
+next let's enable PAP authentication PPP
+02:55
+authentication PAP then send the
+02:59
+username and password as indicated in
+03:01
+the topology diagram PPP PAP sent
+03:06
+username Cisco password CCNA now the
+03:12
+last step is to assign this to dialer
+03:14
+pool 1 which we will use later to link
+03:18
+it to the physical interface dialer pool
+03:22
+1 is the command let's check do show run
+03:27
+interface dialer 1
+03:29
+there's the configuration MTU 1492 IP
+03:36
+address negotiated encapsulation PPP
+03:40
+dialer pool 1 and our PAP authentication
+03:45
+ok that's all for the dialer interface
+03:48
+now let's link it to G 0 0 interface G 0
+03:53
+0 there's just one command we need here
+03:57
+pppoe client dial pool number 1 ok let's
+04:04
+enable the interface no shutdown end
+04:10
+let's check the IP address the interface
+04:13
+received from the service provider show
+04:17
+IP interface brief it's 102 on the
+04:23
+dialer interface but what's this virtual
+04:26
+access 1 entered
+04:27
+well it was automatically created
+04:30
+basically the dialer interface provides
+04:33
+layer 3 information and the virtual
+04:36
+access interface provides layer 2
+04:38
+information don't worry too much about
+04:41
+the details about how it works as long
+04:44
+as you can configure it you should be
+04:45
+okay let's try to ping the service
+04:48
+provider ping 100 0.1 okay looks good
+04:56
+next let's configure our - the only
+05:00
+difference will be chap authentication
+05:03
+instead of path golf tee
+05:06
+I'll make the user account remember the
+05:10
+username must be the host name of the
+05:12
+other router SP r2 and the password must
+05:15
+be the same for both routers CCNA in
+05:18
+this case so user name SPR - password
+05:23
+CCNA next let's configure the dialer
+05:27
+interface interface dialer 1 MTU 1492
+05:36
+encapsulation PPP IP address negotiated
+05:42
+PPP authentication chap okay and finally
+05:47
+dialer pool 1
+05:50
+now let's link it to the physical
+05:53
+interface interface g00 pppoe client
+05:59
+dial pool number 1 no shutdown end ok so
+06:07
+let's see what IP address the dialer
+06:09
+interface got from SPR to show IP
+06:12
+interface brief 202 this time and again
+06:18
+notice the virtual access 1 interface
+06:21
+was created as well here's one more
+06:24
+thing show interface dialer one notice
+06:31
+here it says bound to and then indicates
+06:34
+the virtual access 1 interface ok let's
+06:37
+try a ping
+06:38
+ping 200 oh you won great it works now
+06:45
+like in the previous lab I'll make
+06:47
+static default routes pointing to the
+06:49
+service provider and then try to ping
+06:51
+from r1 to r2 call 40 IP route
+06:59
+oh-oh-oh-oh-oh-oh 200 200 oh oh one do
+07:05
+show IP route there it is next on r1
+07:12
+coughed e IP route
+07:17
+oh-oh-oh-oh-oh-oh-oh-oh-oh 101 do show
+07:23
+IP route there's the default route okay
+07:27
+let's try that ping to our to do ping
+07:33
+202 it works
+07:36
+our pppoe configuration was successful
+07:39
+that's all for this lab thank you for
+07:45
+watching I hope this lab and video have
+07:47
+been helpful for you please subscribe
+07:50
+for future labs like this which will be
+07:52
+released weekly if you have requests for
+07:55
+any specific labs let me know in the
+07:57
+comment section if you want to support
+08:00
+my channel I accept Bitcoin and etherium
+08:03
+donations via the addresses in the
+08:05
+description I am also a brave verified
+08:08
+publisher and accept bat or basic
+08:11
+attention token donations in the brave
+08:13
+browser
+

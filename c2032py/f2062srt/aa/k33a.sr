@@ -1,0 +1,198 @@
+00:00
+welcome to this free CCNA packet tracer
+00:02
+practice lab you can download the lab
+00:05
+file from the link in the description if
+00:07
+you like these labs please consider
+00:10
+supporting me via my patreon or the
+00:12
+cryptocurrency options in the
+00:13
+description in this lab we will once
+00:17
+again configure NTP Network Time
+00:20
+Protocol unlike last lab however we will
+00:24
+also configure authentication to ensure
+00:27
+that our routers r2 and r3 only sing to
+00:30
+a trusted time source r1
+00:33
+first we will once again configure the
+00:35
+time zone and time on r1 unable I'll set
+00:41
+the time to 9:00 p.m. jst again like the
+00:44
+previous lab remember the clock set
+00:47
+command we are going to use sets the
+00:49
+timing UTC my time zone is nine hours
+00:53
+ahead of UTC so I have to set the time
+00:55
+to nine hours behind what I actually
+00:57
+want the time to be clock set 12 o'clock
+01:04
+August 22nd 2019 now let's set the time
+01:10
+zone
+01:11
+comte clock time zone is t9 now let's
+01:18
+configure NTP first I'll configure it as
+01:22
+an NTP server with a default stratum
+01:24
+level which is 8 NTP master now let's
+01:30
+set up NTP authentication the first
+01:33
+command is NTP authenticate now we have
+01:38
+to set up two keys one for r2 and one
+01:41
+for r3 we could actually use a single
+01:44
+key for both routers but the
+01:46
+instructions say to use two to make a
+01:49
+key we use this command NTP
+01:53
+authentication key followed by the key
+01:57
+number one md5 then the key string Cisco
+02:02
+1 now let's create key number two as
+02:05
+well NTP authentication key to md5
+02:12
+go to we're not done yet however let's
+02:15
+configure these as trusted keys ntp
+02:19
+trusted key 1 ntp trusted key - ok we
+02:26
+have completed the configuration on r1
+02:30
+now let's set up our to enable compte
+02:37
+clock time zones AST 9 remember ntp
+02:43
+doesn't sync the time zone so we still
+02:46
+have to configure which time zone we
+02:47
+want to display the time in now let's
+02:51
+setup NTP authentication and then set r1
+02:53
+as the server NTP authenticate NTP
+03:00
+authentication key 1 md5 Cisco 1 NTP
+03:07
+trusted key 1 now to set R 1 as the
+03:12
+server we have to add something to the
+03:14
+command we used in the previous lab NTP
+03:18
+server 192.168 12.1 key 1 we add key
+03:25
+followed by the key number to the end of
+03:28
+the command as I mentioned in the
+03:32
+previous lab NTP can take some time to
+03:34
+synchronize I'm going to configure r3
+03:37
+first before we check on r2
+03:39
+then I'll cut the video and wait for
+03:42
+everything to synchronize enable compte
+03:48
+clock time zone jst 9 NTP authenticate
+03:55
+NTP authentication to md5 Cisco to NTP
+04:03
+trusted key to NTP server 192.168.1 key
+04:11
+to now that the configuration is
+04:15
+complete I'll cut the video and wait for
+04:18
+the time to synchronize
+04:22
+okay we're back let's check if
+04:25
+everything is good on our to show clock
+04:28
+detail time sources NTP looks good show
+04:34
+NTP associations we are synched to our
+04:38
+one 192.168.1.1 its reference clock is a
+04:43
+loopback address on our one one two 7.1
+04:45
+- 7.1.1 and it's stratum level is eight
+04:50
+note the asterisk and the tilled on the
+04:53
+Left the tilde indicates that this
+04:55
+association has been configured and the
+04:58
+asterisk essentially means that we're
+05:00
+synced to the pier now let's check on
+05:03
+our three show clock detail again time
+05:09
+sources NTP show NTP associations our
+05:15
+server is r1 at 192.168.1 and again
+05:20
+notice the asterisk and tilled on the
+05:22
+Left we have successfully synchronized
+05:25
+the time with NTP that's all for this
+05:28
+lab thank you for watching I hope this
+05:32
+lab and video have been helpful for you
+05:34
+please subscribe for future labs like
+05:36
+this which will be released weekly if
+05:39
+you have requests for any specific labs
+05:41
+let me know in the comment section if
+05:45
+you want to support my channel please
+05:47
+consider contributing to my patreon
+05:49
+patreon comm slash Jeremy's IT lab I
+05:53
+accept Bitcoin and aetherium donations
+05:56
+via the addresses in the description I
+05:58
+am also a brave verified publisher and
+06:01
+accept bat or basic attention token
+06:04
+donations in the brave browser

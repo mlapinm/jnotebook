@@ -1,0 +1,187 @@
+00:00
+welcome to this free CCNA packet tracer
+00:03
+practice lab you can download the lab
+00:06
+file from the link in the description if
+00:08
+you like these labs please consider
+00:10
+supporting me via my patreon or the
+00:12
+cryptocurrency options in the
+00:14
+description also please subscribe to the
+00:17
+channel for more labs like this and
+00:19
+share these videos with anyone else
+00:21
+studying for the CCNA in this lab we
+00:25
+will troubleshoot bgp using the same
+00:28
+network we configured in the previous
+00:29
+lab there are three misconfigurations
+00:32
+all on our one let's get started enable
+00:38
+our one is displaying lots of messages
+00:42
+regarding OSPF and BGP let's focus on
+00:46
+this BGP one first peer in wrong a s
+00:50
+let's investigate here show IP BGP
+00:54
+summary notice the bgp router ID of one
+00:59
+1.1.1 taken from the loopback interface
+01:02
+just like in Eid RP and OSPF look down
+01:07
+at our neighbor here 100 0:01 is spr one
+01:12
+however the AS IS 6500 which is why r1
+01:17
+is displaying the peer in wrong a s
+01:19
+message SP r 1 is actually in a s 65,000
+01:24
+one show IP BGP neighbor up here by the
+01:32
+top you can see BGP state equals idle
+01:35
+that's the initial BGP state and if a
+01:39
+wrong peer a s is configured BGP won't
+01:43
+proceed further than this state let's
+01:45
+fix it
+01:46
+coffee tea router bgp 65,000 neighbor
+01:54
+101 remote a s 65 thousand won
+02:00
+immediately we get a message saying the
+02:02
+neighbor is up do show IP BGP neighbour
+02:07
+now the state is established that's what
+02:10
+we want
+02:12
+however we keep getting these OSPF
+02:14
+messages something's up there the
+02:18
+message clearly tells us what's up
+02:19
+actually mismatch area ID do show IP
+02:24
+route we aren't getting any OSPF routes
+02:29
+because of the area ID mismatch do show
+02:33
+IP protocols there's the problem
+02:38
+oh SPF is activated on all interfaces in
+02:41
+area 1 it should be area 0 I'll remove
+02:45
+the current network statement and fix it
+02:48
+router OSPF 1 no network
+02:53
+oh-oh-oh-oh 255 255 dot 255 dot 255 area
+02:58
+1 Network
+03:01
+oh-oh-oh-oh 255 dot 255 dot 255 dot 255
+03:06
+area 0 ok that should fix our OSPF
+03:10
+problem although this was an OSPF
+03:14
+problem it's relevant to BGP because the
+03:17
+OSPF problem was causing routes not to
+03:19
+appear in our ones route table which
+03:21
+affects BGP there should still be one
+03:25
+more issue on our one but I'll head to
+03:27
+r2 and test if we can reach the external
+03:29
+server at 1501 enable pin 1500 1
+03:49
+nope the ping still fail so let's go
+03:52
+back to our one
+03:55
+our one should be advertising at 1000s
+03:59
+516 summary to the service provider
+04:01
+let's check if it's in the rev table on
+04:04
+our one do show IP route there it is
+04:11
+10000 slash 16 let's check the BGP table
+04:16
+show IP BGP however it doesn't show up
+04:22
+in the BGP table
+04:23
+let's check the running config do show
+04:27
+run there's the problem the 10000
+04:34
+network is configured with a slash 8
+04:36
+mask although it doesn't appear here
+04:38
+because it defaults to the class a
+04:40
+boundary but remember BGP requires an
+04:43
+exact match in the router table let's
+04:46
+fix that Network statement router bgp
+04:51
+65,000 no network 10000 Network 10000
+05:00
+mask 255.255.255.0 dot 1 ok the ping
+05:28
+works now we've successfully solved the
+05:31
+problems on the network that's all for
+05:33
+this lab thank you for watching I hope
+05:38
+this lab and video have been helpful for
+05:40
+you please subscribe for future labs
+05:43
+like this which will be released weekly
+05:45
+if you have requests for any specific
+05:48
+labs let me know in the comment section
+05:50
+if you want to support my channel I
+05:53
+accept Bitcoin and aetherium donations
+05:56
+via the addresses in the description I
+05:58
+am also a brave verified publisher and
+06:01
+accept bat or basic attention token
+06:04
+donations in the brave browser
+

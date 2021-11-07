@@ -1,0 +1,411 @@
+00:00
+welcome to this free Cisco CCNA packet
+00:03
+tracer practice lab you can download the
+00:06
+lab file from the link in the
+00:08
+description see if you can complete the
+00:11
+lab yourself first and then continue
+00:13
+watching this video if you have any
+00:15
+trouble or watch it afterwards to check
+00:18
+your solution in this lab we will be
+00:23
+working with two routers r1 and r2 we
+00:28
+will configure basic security on the
+00:30
+routers by using the enable password
+00:33
+which is used to enter privileged exec
+00:35
+mode also known as enable mode I will
+00:39
+only work with one of the routers in
+00:41
+this video for the sake of time but I
+00:44
+highly recommend that you perform the
+00:45
+configurations on both of the routers
+00:47
+for practice repetition is essential to
+00:51
+become familiar with the command-line
+00:52
+interface or CLI
+01:00
+step one is to connect the two routers
+01:02
+by their Gigabit Ethernet 0 0 interfaces
+01:06
+I will refer to these as the gig 0 0
+01:09
+interfaces click on connections in the
+01:13
+bottom left and select the cable
+01:17
+connected to the gig 0 0 interface on r1
+01:20
+and then r2 there we have it
+01:24
+step one is complete
+01:31
+step two is to set the host names
+01:34
+according to the network diagram that is
+01:36
+to r1 and r2 click on each router and
+01:40
+then select CLI to access the
+01:42
+command-line interface from which we
+01:44
+will configure each router the current
+01:48
+host name for each router is displayed
+01:50
+here as you can see each router is
+01:53
+currently named router to change the
+01:56
+host name of a router we must enter
+01:59
+global configuration mode however to get
+02:02
+there we must first enter privileged
+02:04
+exec mode this is achieved by using the
+02:08
+enable command to demonstrate a shortcut
+02:12
+I will use the exit command to return to
+02:15
+the previous exec mode notice that you
+02:18
+can enter privileged exec mode by simply
+02:20
+typing en you can also type en and then
+02:25
+use tab to autocomplete it to enable but
+02:28
+this isn't necessary
+02:29
+en alone is fine II however is too short
+02:35
+and we are told this is an ambiguous
+02:37
+command this is because there are other
+02:41
+potential commands that begin with E
+02:43
+which we can see by typing E and then a
+02:46
+question mark as you can see there are
+02:49
+two potential commands an able and exit
+02:52
+so if you just enter E the router
+02:56
+doesn't know which command you mean
+02:58
+however enable is the only command
+03:01
+beginning with en so en is all the
+03:05
+router needs to know which command you
+03:06
+mean now that we are in privileged exec
+03:10
+mode we can use the configure terminal
+03:12
+command to get to global configuration
+03:15
+mode if you want to use shortcuts again
+03:18
+as we did with enable and en the
+03:21
+shortest version of the configure
+03:23
+terminal command is coffee tea from here
+03:27
+we can set the hostname of the router
+03:29
+this is done with the hostname command I
+03:32
+will enter hostname r1 as you can see
+03:36
+the hostname has changed from router to
+03:39
+r1 change the hostname on r2 as well and
+03:43
+step two is complete
+03:49
+step three is to set the enable password
+03:52
+on each router to Cisco the enable
+03:56
+password is used to enter privileged
+03:58
+exec mode which as I mentioned before is
+04:01
+also called enable mode previously we
+04:05
+had no password set so we were able to
+04:07
+enter privileged exec mode without any
+04:09
+password now we are going to protect
+04:13
+privileged exec mode so that only
+04:15
+administrators can access it the command
+04:19
+is simple and it is done in global
+04:21
+configuration mode which we are already
+04:23
+in type an able password Cisco that's it
+04:29
+now let's test it out from here I will
+04:33
+use the exit command twice once to bring
+04:36
+you back to privileged exec mode and
+04:38
+then once again to bring you back to
+04:40
+exact mode now I will use the enable
+04:45
+command again however this time I am
+04:48
+asked for a password the characters do
+04:51
+not appear as I type however if I type
+04:54
+the password Cisco correctly and press
+04:56
+Enter
+04:56
+I am brought to privileged exec mode now
+05:00
+let's see what happens if I fail to
+05:02
+enter the correct password I entered the
+05:05
+wrong password once twice and then three
+05:08
+times before being rejected for having
+05:11
+bad secrets now I will try again with
+05:14
+the correct password and I'm in step 3
+05:18
+is now complete
+05:23
+step four is simply to view the password
+05:26
+in the running configuration the running
+05:29
+configuration is the current
+05:30
+configuration of the router whether or
+05:33
+not you have actually saved it if you
+05:35
+turn off the router without saving the
+05:37
+running configuration you will lose any
+05:39
+changes if you want to keep your changes
+05:42
+you will save them to what's called the
+05:45
+startup configuration that will be for
+05:48
+another lab to view the running
+05:50
+configuration use the show running
+05:53
+config command from privileged exec mode
+05:55
+which we are already in you can
+05:59
+abbreviate it to for example SH run
+06:03
+enter the command and you can see the
+06:06
+password right here with the exact
+06:08
+command we used before enable password
+06:11
+Cisco step 4 asks if the password is
+06:16
+encrypted
+06:16
+meaning translated into an unreadable
+06:19
+code to protect it from being discovered
+06:21
+by people who should not know the
+06:23
+password as you can see it is not
+06:26
+encrypted it is written in clear text
+06:28
+right here Cisco so the answer is no
+06:31
+step 4 is now complete step 5 is to
+06:38
+enable password encryption on the router
+06:41
+we can protect passwords by encrypting
+06:43
+them to render them unreadable this is
+06:47
+done from global configuration mode with
+06:49
+the command service password -
+06:51
+encryption I will enter the command and
+06:55
+now step 5 is complete
+07:02
+step six is to once again view the
+07:05
+running-config I will use the same
+07:07
+command as before and now let's check
+07:10
+the password however the command doesn't
+07:13
+work that is because we are currently in
+07:16
+global configuration mode and show
+07:17
+running config must be entered from
+07:20
+privileged exec mode now I could type
+07:22
+exit to drop back to privileged exec
+07:25
+mode and then enter the command but
+07:27
+there is one more way if I type do in
+07:31
+front of the command I can enter it from
+07:33
+global configuration mode do show
+07:36
+running config there we go let's look at
+07:39
+the password you can see here an able
+07:42
+password followed by a seven and then a
+07:44
+string of other numbers the password has
+07:47
+successfully been encrypted although we
+07:50
+didn't type this 7 when we entered the
+07:52
+command it refers to the type of
+07:54
+encryption used there are other types as
+07:57
+well but that's not something to worry
+07:59
+about now the string of numbers that
+08:02
+follow are the passwords Cisco encrypted
+08:06
+to be unreadable so that anyone looking
+08:08
+over our shoulder can't read the
+08:10
+password keep in mind that the
+08:12
+encryption used in the service password
+08:14
+encryption command isn't very secure and
+08:17
+can be cracked but this at least renders
+08:20
+the password safe from someone simply
+08:21
+glancing over your shoulder step 6 is
+08:24
+complete
+08:28
+step seven is to disable password
+08:31
+encryption we enabled password
+08:33
+encryption with the service password
+08:35
+encryption command now we will simply
+08:38
+type no followed by the same command no
+08:42
+service password encryption that's it
+08:45
+step seven is now complete step eight is
+08:51
+once again to view the password in the
+08:53
+running configuration this time I'll
+08:55
+exit down to privileged exec mode and
+08:57
+type show running config to view the
+09:00
+running configuration as you can see the
+09:03
+password is still encrypted why is that
+09:06
+even though we disabled password
+09:08
+encryption
+09:09
+well disabling password encryption will
+09:12
+prevent future passwords from being
+09:13
+encrypted however it does not
+09:15
+unencrypted passwords that are already
+09:17
+encrypted so the answer to step eight is
+09:21
+yes the password is encrypted step eight
+09:24
+in the lab are both now complete
+09:31
+thank you for watching I hope this lab
+09:34
+and video have been helpful please
+09:36
+subscribe for future labs like this
+09:38
+which will be released weekly if you
+09:41
+have requests for any specific labs let
+09:43
+me know in the comment section if you
+09:45
+want to support my channel I accept
+09:47
+Bitcoin donations via the address in the
+09:49
+description I am also a brave verified
+09:52
+publisher and accept bat or basic
+09:55
+attention token donations in the brave
+09:57
+browser thank you
+

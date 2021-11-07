@@ -1,0 +1,307 @@
+the game, please let me know below.
+
+And I'll try to get back to you.
+
+Thank you.
+
+Hi, everyone,
+
+we are now at game six out of seven of our JavaScript games course.
+
+We only have one more grid based game to make after this until you have at seven fully functioning JavaScript games for your portfolio.
+
+In this tutorial,
+
+we're going to make Frogger in which we're going to be looking at every single function that you have learnt before in the previous five games.
+
+So yeah, if you haven't watched the previous videos definitely do that now before watching this one.
+
+But we are going to be taking them that extra level so making them do more complicated things.
+
+As always minimal styling,
+
+I've gone max five minutes doing the styling on this.
+
+So Frogger is a simple Bass game in which you as the user and frog style at the bottom of the grid and have two obstacles to pass to get your home,
+
+which is at the top of the grid based game.
+
+The first obstacle is a road in which little cars are going from one side of the other new race car to avoid them like this.
+
+Once you avoid that,
+
+that is the second hurdle of the river.
+
+This is basically flipped on its head.
+
+So instead of avoiding things in it,
+
+you have to jump on things in it.
+
+So you're gonna have to jump on the logs in the river.
+
+In order to get to the home.
+
+What's cool about this is actually one of the frog is on the log is gonna have to move with the log until it can jump off.
+
+So that's gonna be really fun to build.
+
+I'm really excited to walk you through this.
+
+So yeah, let's get going.
+
+So first, let's set up a project with the correct files in our folder.
+
+We have the app j s for our JavaScript,
+
+index, HTML for our HTML code,
+
+and style CSS for our CSS styling.
+
+Let's start with the HTML by adding some HTML boilerplate,
+
+we will add a title of Fraga for our project that will not visually render in the browser,
+
+but show up on the tab.
+
+We next need to link our stylesheet using a link tag like this to the correct file using an href and link our JavaScript file again using source and the correct file name of app j s where we saw our JavaScript code.
+
+Now we have that let's do some basic visualization of the grid and add a start and pause button for the game.
+
+And an h3 tag let us know how much time we have left or whether we have won or lost.
+
+Let's add the Start button and h3 tags to give them unique IDs instead of class names.
+
+I am also going to hard code the time left to display was 20.
+
+Okay, now let's flip over to our CSS file.
+
+Add the following styling to make our list of divs and the HTML look like an actual grid.
+
+What we are doing here is making the divs wrapper rechab using Flexbox.
+
+Each div inside a div with a class name grid,
+
+we are assigning a height and width of 20 pixels because under an 80 divided by nine is 20.
+
+And we want a nine by nine grid.
+
+So now right click your index HTML file to open it in the browser.
+
+And this is what we will see.
+
+Now let's assign colors to our ending block,
+
+starting block and our frog flip back to your HTML file and hard code these in to the fifth div down on the fifth from the bottom.
+
+This is what it should now look like in your browser.
+
+Okay, now let's add some functionality to the frog that we have hard coded,
+
+not hard coded, but we'll add to our HTML using JavaScript.
+
+Flip over to your app js file and add an event listener like this.
+
+Okay, all our code will be done in this event listener.
+
+Now let's pick our elements from my HTML file using constants and query selectors like this.
+
+Know how we use query selector all for the divs inside a div with the class name grid.
+
+This is because we want all the divs in there and also see how we use dot for class names and hashes for picking out ideas.
+
+So now if I want to show the frog my grid,
+
+I can simply add the class name of frog to a square and the grid of index 76 using JavaScript like this.
+
+Now flip over to my browser,
+
+hit refresh, and okay now add a timer ID and leave it as that for now.
+
+This is here for our countdown that we will build later.
+
+The first we are going to do is make a frog move when you press on your keyboard.
+
+For this, you need to know the key codes to your keyboard up down left and right buttons,
+
+you can easily Google or the key codes to your entire keyboard.
+
+For now, I'm just going to tell you the key codes for the ones we want.
+
+We are going to write the function and pass it through an E or an event we're going to remove the frog from whatever current squared is in and then using event and keycodes decide which way the frog is going to go using switch cases.
+
+So in this case, if key 37 is pressed,
+
+so are left on your keyboard.
+
+And if the current index is divisible by the width with a remainder,
+
+we're the frog left one space.
+
+Do you see the key 38 so the up arrow moving the frog a whole width back visually displaying as if it was going up one square,
+
+then for keys 39 or our right and key 40 are down.
+
+Then we draw the frog on each key press we also want to check if the frog has done anything that would result in winning or losing let's put in these functions that we will write in a bit.
+
+So if you try and move your probe now these functions will not work as they did not observe some will break your code so just bear that in mind.
+
+Okay, now let's get to rendering the first obstacle the frog needs to cross so that will be the road with cause that needs to be avoided.
+
+Then the second obstacle which is a river with some logs,
+
+frogs needs to jump on to cross you will see here and my finished game that the cars moving left are actually just on a loop being rendered and three squares 123 and then repeat.
+
+Same for the card game right.
+
+And even the logs are on this loop just a loop of five squares random instead goes through HTML and other following class names your days making sure to start from the 19th down or for JavaScript sake index 18.
+
+And the same for the road.
+
+So diff 46, but index 45 And now flip over is your CSS file and add some colors so we know what is road call river,
+
+or loc.
+
+Now Save and refresh the browser.
+
+And there we go, we can see a road here river,
+
+some logs and some cars.
+
+Now back in our JavaScript file,
+
+let's write a function that will make all the divs with a class name of car left,
+
+go left, and the divs of class name car right,
+
+go right.
+
+First, let's pick out these debts from HTML and add that to the top of our project.
+
+We might as well add the others to now let's write a function called auto move cars in this function where we use arrow functions that will allow us to give a name to individual devs from all our devs called cause left and passing through a function,
+
+we will do this using for each so for each Doom that has a class name,
+
+cause left pass through a function called move car left,
+
+that will make the day go left and the same for cars right.
+
+Okay, now let's write that move car left function that technically is just going to rerender three days every second,
+
+we use a switch for this and pass through the car left we got from the function automotive costs.
+
+Now for the common good,
+
+right on the same logic as above.
+
+Now let's do the exact same for the logs.
+
+One loop three, rendering five devs every second Okay,
+
+now let's write all this function.
+
+So if the time runs out,
+
+or is equal to zero,
+
+or two using these two parallel lines means or,
+
+or the square the frog is currently and contains a C one class name to call,
+
+or l five class name.
+
+So blue and engaging river,
+
+or l four class name,
+
+which again is a river it loses.
+
+Again, we display the reducing message,
+
+remove the frog, clear the timer from the countdown and stop the frog movie.
+
+Now the final functionality we need to give our game is make sure that the frog is on the log.
+
+So when it's on the log and moves with the log,
+
+so in the river, or the frog is in the squares index of bigger than or equal to 27,
+
+and smaller to 35.
+
+Move the frog left,
+
+it doesn't matter that we actually including the river does in here as well as the frog automatically loses if it goes in there.
+
+So don't worry about that.
+
+That's fine.
+
+Okay.
+
+Do the same.
+
+The Right.
+
+Okay, now we need to invoke all of our functions to happen every second,
+
+every second year,
+
+we need to move a car or log,
+
+make sure to move the frog if it's on a log,
+
+and evoke lose if it's standing in a square that a car is going into it let's call this function move piece.
+
+Note we need to pass loose in there.
+
+And in our moving frog function.
+
+If we don't have it here,
+
+cause we'll be able to pass through our frog willy nilly.
+
+You also use our logic to make our current time go down by one every second and update the time left div in our HTML to show this to our user.
+
+Finally, we need to pass through the movies function into a countdown that goes down every second.
+
+We do this by adding an event listener to a start button.
+
+We will also be making the button double up was a pause button which is quite cool.
+
+So on click, we do an if else statement.
+
+By using set interval like this,
+
+we are making sure the move pieces function is invoked every second until the timer ID equals zero.
+
+We also want to make sure that the frog can only move when the game has started.
+
+So we add in our event listener to start the move frog move frog function we were above here.
+
+As you can see, something's not working.
+
+Let's have a look.
+
+That's because I need to use document query selector all because we're selecting all the divs let's change that here and here.
+
+Okay, we need to change this.
+
+And there you have it your very own Frogger game.
+
+How'd you like my tutorial?
+
+Feel free to comment if you'd like some more information,
+
+or if I haven't explained something very well.
+
+Please do subscribe for more videos are really into making grid based games at the moment and pure JavaScript.
+
+So if you can think of any cool ones,
+
+let me know and I'll try have a go at it.
+
+Thank you.
+
+Hi, everyone,
+
+and welcome

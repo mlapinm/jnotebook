@@ -1,0 +1,219 @@
+00:00
+welcome to this free CCNA packet tracer
+00:03
+practice lab you can download the lab
+00:05
+file from the link in the description if
+00:08
+you like these labs please consider
+00:10
+supporting me via my patreon where the
+00:12
+cryptocurrency options in the
+00:13
+description in this lab we will
+00:17
+configure rip version 2 on a network to
+00:20
+allow full connectivity this is similar
+00:23
+network to the static routing part to
+00:25
+lab in that lab we had to configure full
+00:29
+connectivity with static routes this lab
+00:32
+will demonstrate how much simpler it is
+00:33
+to do so with the routing protocol I
+00:36
+have increased the font size of the CLI
+00:38
+in the network diagram due to some
+00:40
+comments let me know if the size is good
+00:42
+or if it's still difficult to see in the
+00:44
+video so currently the devices have all
+00:48
+been pre-configured with IP addresses
+00:50
+but none of the PC should be able to pin
+00:53
+each other because no routing has been
+00:55
+configured let's configure rip version 2
+00:58
+on each of these routers on r1 first
+01:02
+enable compte router rip first I'll
+01:10
+enable a version 2 version 2 it's not
+01:14
+necessary for this lab but I'll also
+01:16
+disable auto summary which is a good
+01:18
+habit no auto our one is connected to 3
+01:23
+networks 1000 1200 and 1300 let's enable
+01:30
+rip on each of those interfaces net
+01:34
+10000 net
+01:37
+1200 net 1300 now we also have to
+01:44
+disable routing updates on interfaces
+01:46
+connected to switches g02 in this case
+01:50
+we will still advertise the network on
+01:53
+the g0 to interface 10000 to other
+01:56
+routers but because there is no router
+01:58
+in this direction it's not necessary to
+02:00
+send updates out of this interface and
+02:02
+for security purposes it can be a good
+02:05
+idea to stop these updates we can do
+02:08
+that with this command passive interface
+02:11
+g0 to
+02:12
+okay that's it let's go on to our to
+02:19
+enable compte router rip version 2 no
+02:27
+oto r2 is connected to three networks
+02:31
+2000 1200 and 2400 so let's configure
+02:39
+rip on each of those interfaces net
+02:43
+20000 net 12000 net 2400 now let's
+02:52
+disable routing updates on g0 to passive
+02:56
+interface g0 - that's all for our tea
+03:01
+now let's move on to our 3 enable compte
+03:10
+router rip version 2 no auto net 30000
+03:19
+net 1300 net 3400 dato passive interface
+03:29
+g0 - finally once more on our 4 enable
+03:37
+compte router rip version 2 no auto net
+03:48
+40000 net 2400 net 34000 passive
+03:58
+interface g0 - ok now let's wait a bit
+04:03
+for the routers to send all the routing
+04:05
+updates to each other and learn the
+04:06
+network this process is called
+04:08
+convergence while we're waiting let's
+04:11
+check out some stuff on our 4 and show
+04:16
+IP protocols this is a very handy show
+04:20
+command for checking information about
+04:22
+whatever routing protocol you are using
+04:25
+routing protocol is
+04:27
+rip as we configured here you can see
+04:30
+the default timers rip remember these
+04:33
+especially for the test update timer of
+04:36
+30 seconds invalid and hold-down timers
+04:39
+of 180 seconds and flush timer of 240
+04:43
+seconds
+04:45
+consult your study materials for
+04:47
+detailed explanations of each you can
+04:50
+also see information like which
+04:52
+interfaces updates are being sent out on
+04:55
+notice that the Gigabit Ethernet 0 2
+04:58
+interface isn't here although we can see
+05:01
+it is advertising the network down here
+05:03
+this is because we made it a passive
+05:06
+interface which is indicated here we can
+05:10
+also see which neighboring routers we
+05:12
+are getting updates from and when we got
+05:14
+the last update anyway let's go on PC
+05:18
+one now and see if we can ping each
+05:21
+other PC ping 2000 10 that's PC 2
+05:36
+it works next let's ping pc3 ping 3000
+05:41
+10 it works too finally PC for ping 4000
+05:55
+10
+06:04
+it works as well we have successfully
+06:06
+configured ripp to allow full
+06:08
+connectivity throughout the network
+06:10
+that's all for this lab thank you for
+06:15
+watching I hope this lab and video have
+06:18
+been helpful for you please subscribe
+06:20
+for future labs like this which will be
+06:23
+released weekly if you have requests for
+06:26
+any specific labs let me know in the
+06:28
+comment section if you want to support
+06:31
+my channel please consider contributing
+06:33
+to my patreon patreon comm / Jeremy's IT
+06:37
+lab I accept Bitcoin and aetherium
+06:40
+donations via the addresses in the
+06:42
+description I am also a brave verified
+06:46
+publisher and accept bat or basic
+06:49
+attention token donations in the brave
+06:51
+browser
+

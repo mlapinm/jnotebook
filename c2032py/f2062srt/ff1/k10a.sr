@@ -1,0 +1,207 @@
+00:00
+welcome to this free CCNA packet tracer
+00:03
+practice lab you can download the lab
+00:06
+file from the link in the description
+00:08
+in this short lab we will connect to r1
+00:12
+via the console port and configure
+00:14
+usernames and passwords particularly
+00:18
+it's important to know whether usernames
+00:20
+and passwords are case sensitive so
+00:21
+we'll experiment with that in this lab
+00:24
+try to complete the lab on your own
+00:27
+first then continue watching this video
+00:28
+if you have trouble or watch it after to
+00:31
+check your solution
+00:35
+step one is to use PC one to access r1
+00:39
+via the console port PC one is already
+00:43
+connected to our ones console port so
+00:45
+let's click on PC one then click desktop
+00:48
+and terminal accept the default
+00:51
+configurations here and now we're on our
+00:53
+one next is to create two users on our
+00:58
+one CCNA in lowercase letters with the
+01:02
+password Cisco in lowercase letters and
+01:05
+CCNP in lowercase with the password
+01:08
+Cisco in uppercase so let's go to global
+01:12
+config mode and able compte you can
+01:17
+create users with this command username
+01:20
+CCNA password Cisco that's it now let's
+01:25
+create the second user username CCNP
+01:29
+password Cisco with Cisco being an
+01:32
+uppercase this time now if we log out of
+01:36
+the router and then access it again we
+01:39
+still won't be asked to use a username
+01:40
+and password we have to tell the console
+01:43
+port to require a username and password
+01:45
+so let's do that
+01:47
+line console 0 if you remember when we
+01:52
+configured the line password on the
+01:53
+console we use the command login to make
+01:57
+it required to access the console port
+01:59
+this time however we want to instruct
+02:02
+the router to use the local user
+02:03
+database instead that is done with this
+02:07
+command login local so that's step 2 and
+02:11
+step 3
+02:14
+step four is to log out of the router
+02:16
+and log in again with each account we're
+02:20
+going to test whether or not the
+02:21
+usernames and passwords are case
+02:22
+sensitive so I'll type end to return to
+02:26
+privileged exec mode and then log out
+02:29
+let's try the CCNA a user with the
+02:32
+password cisco in lower case as we
+02:34
+configured it works let's log out again
+02:39
+now I'll try the username in all caps
+02:42
+with the password in lower case again as
+02:46
+you can see it lets us log in so the
+02:49
+username is not case-sensitive now let's
+02:53
+check the password I'll use the CCNA
+02:56
+username again doesn't matter if you
+02:58
+type in a lowercase or uppercase but
+03:01
+this time I'll type the password in all
+03:03
+caps although you can't see the
+03:05
+characters as I type it fails I'll try
+03:09
+again in case I hit a wrong key doesn't
+03:13
+work so the password is case-sensitive
+03:17
+let's quickly try again with the CCNP
+03:20
+username again to confirm I'll type the
+03:23
+username alternating upper and lower
+03:25
+case just to prove the point and I'll
+03:27
+type the correct password which is all
+03:29
+uppercase it works
+03:32
+log out again this time I'll type the
+03:35
+password in lowercase doesn't work
+03:38
+so to summarize usernames are not case
+03:41
+sensitive but passwords are case
+03:43
+sensitive
+03:48
+next I'll do one more demonstration even
+03:51
+though this isn't part of the lab let me
+03:53
+login again then enable show run look at
+03:58
+the usernames and passwords here we're
+04:01
+going to add a new user named CCNA with
+04:04
+all capitals if we are correct about
+04:06
+user names not being case sensitive it
+04:09
+should replace the current user rather
+04:11
+than actually creating a new user compte
+04:14
+user named CCNA password router do show
+04:20
+run as you can see it didn't actually
+04:24
+create a new user it still displays the
+04:26
+user name in the lower case even though
+04:28
+I typed in an upper case but the
+04:30
+password is now router instead of Cisco
+04:35
+thank you for watching I hope this lab
+04:38
+and video have been helpful for you
+04:40
+please subscribe for future labs like
+04:43
+this which will be released weekly if
+04:46
+you have requests for any specific labs
+04:48
+let me know in the comment section if
+04:50
+you want to support my channel I accept
+04:53
+Bitcoin donations via the address in the
+04:55
+description I am also a brave verified
+04:59
+publisher and accept bat or basic
+05:02
+attention token donations in the brave
+05:04
+browser
+

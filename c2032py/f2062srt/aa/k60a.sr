@@ -1,0 +1,303 @@
+00:00
+welcome to this free CCNA packet tracer
+00:03
+practice lab you can download the lab
+00:05
+file from the link in the description if
+00:07
+you like these labs please consider
+00:10
+supporting me via my patreon or the
+00:12
+cryptocurrency options in the
+00:13
+description also please subscribe to the
+00:16
+channel for more labs like this in this
+00:20
+lab we will once again configure a IG RP
+00:22
+this time in a network that uses ipv6
+00:27
+configuring a IG RP for ipv6 is very
+00:30
+similar to configuring OSPF v3 for ipv6
+00:34
+rather than using the network command in
+00:37
+Eid RP configuration mode you can figure
+00:40
+it directly on the interfaces aside from
+00:43
+that there isn't much different between
+00:44
+configuring a EIGRP for ipv6 and for
+00:48
+ipv4 let's get started the first step is
+00:53
+to configure loopback interfaces on each
+00:55
+router these will become the EIG RP
+00:58
+router IDs like OSPF v3 for ipv6 ERG RP
+01:04
+for ipv6 uses a 32-bit router ID in the
+01:07
+form of an ipv4 address although it
+01:11
+doesn't have to actually be an address
+01:12
+on the device you can manually configure
+01:15
+the ID however if you don't the highest
+01:19
+ipv4 address on a loopback interface
+01:20
+will become the router ID if there is no
+01:24
+loopback interface the highest ipv4
+01:27
+address on a regular interface will
+01:29
+become the router ID I think I've
+01:31
+configured enough loopback interfaces
+01:33
+for these videos by now so just for this
+01:35
+video I've already configured that
+01:37
+loopback interfaces on are two three
+01:39
+four and five let's just quickly do it
+01:42
+on our one enable compte interface l0 IP
+01:51
+address 1.1 1.1 255.255.255.0 5 ok
+01:58
+that's all next is to configure a IG RP
+02:03
+on this network let's start here on r1
+02:06
+to configure a IG RP for ipv6 just put
+02:10
+ipv6 in front of the usual command
+02:14
+ipv6 router EAG RP and once again we'll
+02:18
+use the a s number 100 now as I
+02:22
+mentioned before we don't actually
+02:23
+activate ERG RP on the interfaces from
+02:26
+here however one of the requirements for
+02:29
+the lab is to make our ones
+02:31
+g02 interface passive previously we use
+02:36
+this command to suppress advertisements
+02:37
+on loopback interfaces because there's
+02:40
+no point in sending advertisements on
+02:42
+interfaces leading to nowhere in this
+02:45
+case however we want to advertise the
+02:47
+network on the g02 interface into EIGRP
+02:50
+but want to suppress advertisements on
+02:52
+the interface because of possible
+02:54
+security risks of sending AI GRP
+02:57
+advertisements out towards the internet
+03:00
+the command is the same as with ipv4
+03:03
+passive interface g02
+03:06
+okay now let's activate a IG r p on the
+03:09
+interfaces interface g00 ipv6 zi g RP
+03:17
+followed by the a.s number 100 that's
+03:20
+all there is to it interface G 0 1 IP v6
+03:25
+z IG RP 100 interface G 0 to ipv6 AI g
+03:31
+RP 100 ok we've activated AI g RP on all
+03:36
+of our ones interfaces do show run
+03:42
+here's the EIG RP configuration but
+03:45
+what's this shut down yes ERG RP for
+03:50
+ipv6 has a shutdown feature I think that
+03:54
+whether the process is shut down by
+03:55
+defaults depends on either the OS
+03:57
+version or the router model in this case
+04:00
+it's shut down by default so let's go
+04:02
+back to a IG RP configuration mode and
+04:04
+activate it ipv6 router ew g RP 100 no
+04:10
+shutdown now I'll go through and do the
+04:14
+same thing on the other routers are to
+04:17
+next enable coffee tea
+04:22
+now we don't actually have to create the
+04:25
+EIG RP process here we can go directly
+04:28
+to the interface and if we activate AIG
+04:31
+our pas 100 on that interface the router
+04:34
+will create the eigrp process for us
+04:37
+interface g00 ipv6 AIG RP 100 interface
+04:45
+G 0 1 IP v6 AIG RP 100 ok so that
+04:51
+activates AI gr p on the interfaces and
+04:54
+creates the EIGRP process however we
+04:57
+haven't gotten any messages about an
+04:59
+adjacency with our one yet why is that
+05:02
+once again the shut down feature to be
+05:06
+honest from my CCNA and CCNP studies I
+05:09
+don't remember having to enable AIG RP
+05:12
+for ipv6 with no shutdown but it seems
+05:15
+some routers require that by default so
+05:18
+for the test and real world situations
+05:20
+just be aware that EA GRP for ipv6 has a
+05:24
+shutdown feature ipv6 router AIG RP 100
+05:29
+no shutdown next let's go to our 3
+05:35
+enable compte ipv6 router AIG RP 100 no
+05:43
+shutdown interface G 0 0 ipv6 AIG RP 100
+05:50
+interface G 0 1 IP v6 g IG RP 100
+05:56
+interface g 0 to ipv6 ERG RP 100 ok
+06:02
+let's go on our 4 enable compte ipv6
+06:10
+router AIG RP 100 no shutdown interface
+06:15
+g 0 0 ipv6 AIG RP 100 interface g 0 1 IP
+06:23
+v6 e IG RP 100 finally r 5 enable compte
+06:34
+ipv6 router AIG RP 100 interface g 0 0
+06:40
+ipv6 AIG RP 100 ok we've configured ew g
+06:46
+RP on all of the routers let's go back
+06:49
+on R 1 and see if we have all of the
+06:51
+roads do show ipv6 route looks like
+06:59
+we've got the 23 34 and 35 networks we
+07:03
+want next we have to advertise a default
+07:07
+route to the internet from R 1 now ew g
+07:11
+RP doesn't have the default information
+07:13
+originated command that OSPF has so how
+07:17
+can we go about this well we can
+07:20
+advertise the default route as a summary
+07:22
+route on the g 0 0 & g 0 1 interfaces
+07:26
+let's try on our one interface g 0 0 the
+07:33
+command is the same as for ipv4 just use
+07:36
+ipv6 at the beginning instead of IP ipv6
+07:41
+summary address ew g RP 100 and remember
+07:47
+the default route for ipv6 is colon
+07:50
+colon slash 0 now let's go on g 0 1 and
+07:55
+do the same interface g 0 1 IP v6
+07:58
+summary address key ID RP 100 colon
+08:03
+colon slash 0 let's go check on one of
+08:06
+the routers i'll check on our v because
+08:10
+if our v has the route r2 r3 and r4 a
+08:13
+must as well do show ipv6 red there it
+08:20
+is right at the top ok in this slab we
+08:24
+configured AI GRP for ipv6 the
+08:28
+configuration is similar to EIGRP for
+08:30
+ipv4 however remember you must configure
+08:33
+it at the interface level that's all for
+08:36
+this lab thank you for watching I hope
+08:41
+this lab and video have been helpful for
+08:43
+you
+08:44
+please subscribe for future labs like
+08:46
+this which will be released weekly if
+08:48
+you have requests for any specific labs
+08:51
+let me know in the comment section if
+08:53
+you want to support my channel I accept
+08:56
+Bitcoin and aetherium donations via the
+08:58
+addresses in the description I am also a
+09:02
+brave verified publisher and accept bat
+09:05
+or basic attention token donations in
+09:07
+the brave browser
+

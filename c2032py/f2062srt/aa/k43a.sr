@@ -1,0 +1,313 @@
+00:00
+welcome to this free CCNA packet tracer
+00:03
+practice lab you can download the lab
+00:05
+file from the link in the description if
+00:08
+you like these labs please consider
+00:10
+supporting me via my patreon or the
+00:12
+cryptocurrency options in the
+00:13
+description also please subscribe to the
+00:17
+channel for more labs like this
+00:20
+we're coming to the end of the icnd1
+00:22
+labs in this lab we will configure a
+00:25
+variety of things which we learned
+00:27
+before and then in the next lab will
+00:29
+troubleshoot some problems with the same
+00:31
+network topology we will configure rip
+00:35
+syslog NAT DHCP and SSH let's get
+00:41
+started the first step is to configure
+00:44
+rip on r1 r2 and r3 let's start on r1
+00:51
+enable compte router rip
+00:56
+we're instructed to use rip version 2
+00:58
+and disable auto summary so version 2 no
+01:02
+auto now lets advertise our ones
+01:05
+connected networks network 192.168.1.0
+01:11
+network 12.30 exit okay let's go to our
+01:17
+to enable coffee/tea router rip version
+01:24
+2 no Auto network 192.168.20.10 exit
+01:34
+finally let's go on r3 enable coffee/tea
+01:42
+router rip version 2 no Auto network
+01:48
+3000 Network 12.30
+01:52
+exit ok that's all for the rip
+01:56
+configuration it may take some time for
+01:58
+all routes to show up in the database
+02:00
+but you can confirm with do show IP rip
+02:03
+database step 2 is to configure r1 r2
+02:09
+and r3 to send syslog messages to server
+02:13
+1
+02:14
+all we need is one command on each
+02:16
+router to do this since I'm already on
+02:19
+r3 let's start here
+02:21
+logging 3000 dot 100 that's it logging
+02:27
+host 3000 100 would also have the same
+02:31
+effect next are two logging 3000 100
+02:40
+okay and finally r1 logging 3000 100
+02:47
+that's all for step two the next step is
+02:52
+to configure Pat port address
+02:54
+translation on r1 and r2 the network's
+03:00
+192.168.1.0 slash 24 and 192.168.0 slash
+03:05
+24 are private networks and they cannot
+03:08
+be routed over the Internet
+03:09
+like in our previous NAT labs i've
+03:12
+pre-configured ACLs on r1 r2 and r3 to
+03:15
+prevent them from being routed
+03:17
+so let's translate their addresses to
+03:19
+the address on r1 and r2 s gigabit 0 1
+03:24
+interfaces let's start here on r1 first
+03:29
+I'll configure the inside and outside
+03:31
+NAT interfaces interface G 0 0 IP NAT
+03:37
+inside interface G 0 1 IP NAT outside
+03:43
+next let's create the ACL to identify
+03:46
+which traffic to translate I'll make an
+03:49
+ACL permitting the one and two dot one
+03:51
+six eight dot one dot o slash 24 network
+03:54
+exit access list one permit 192.168.1.0
+04:03
+oh-o-oh dot 255 ok finally let's make
+04:08
+the NAT statement itself IP net inside
+04:12
+source list one interface g0 one
+04:16
+overload that's it now let's do the same
+04:19
+thing on r2 interface G 0 0 IP net
+04:26
+inside interface G 0 1 IP net outside
+04:31
+exit access list 1 permit 192.168 200
+04:39
+250 5 IP NAT inside source list one
+04:45
+interface G 0 1 overload that's all for
+04:50
+our pad configuration however our pcs
+04:55
+still don't have IP addresses so next is
+04:58
+connects tis to configure our one as a
+05:00
+DHCP server with two dhcp pools since
+05:05
+we're in global configuration mode i'll
+05:07
+configure the excluded address ranges
+05:09
+first remember excluded ranges aren't
+05:12
+configured in DHCP configuration mode
+05:14
+but rather in global configuration mode
+05:18
+IP dhcp excluded address 192.168.1.1
+05:26
+192.168.1 10 and for the second pool
+05:30
+IP dhcp excluded address 192.168.1.1 6 8
+05:38
+to 10 ok now let's create and configure
+05:42
+the first pool IP dhcp pool one pool
+05:49
+network 192.168.1.0 255.255.255.0
+05:56
+default router
+05:59
+192.168.1.1 dns server
+06:02
+3000 dot 100 exit ok and now let's
+06:07
+create the second pool IP dhcp pool to
+06:13
+pool network 192.168.20.10 default
+06:22
+router 192.168.1 dns server
+06:27
+3000 100 exit let's check if pc one can
+06:33
+get an IP address
+06:38
+IP config slash release IP config slash
+06:43
+renew there we go now how about PC for
+06:52
+IP config slash release IP config slash
+06:57
+renew it doesn't work now that's because
+07:05
+r1 isn't connected to the 192.168.0
+07:08
+slash 24 network so their DHCP discovery
+07:12
+messages don't reach our one
+07:14
+so let's configure r2 as a DHCP relay
+07:18
+agent so it will relay DHCP messages
+07:21
+between them interface g00 IP helper
+07:28
+address followed by our ones address one
+07:32
+two three one exit now let's try again
+07:36
+on PC for IP config slash renew there we
+07:45
+go
+07:45
+DHCP is now working next we must
+07:51
+configure SSH access on the vty lines of
+07:54
+router one really you should do this on
+07:58
+all of these routers and switches but
+07:59
+let's keep it to just r1 for this lab so
+08:02
+there are a few requirements to
+08:05
+configure SSH one is a hostname which is
+08:08
+already pre-configured r1 but if it
+08:11
+wasn't you could configure it with this
+08:13
+command hostname r1 next is a domain
+08:19
+name let's go with cisco comm IP domain
+08:23
+name cisco calm also we need a user
+08:28
+account on this device username cisco
+08:32
+password CCNA next you must generate an
+08:37
+RSA key with 1024 bit modulus crypto key
+08:42
+generate RSA then enter the modulus size
+08:47
+here of 1024
+08:50
+okay now let's configure the vty lines
+08:53
+line vty 0 15 first let's enable local
+08:59
+authentication login local next let's
+09:04
+enable ssh transport input ssh exit also
+09:12
+I forgot to configure ssh version 2 so
+09:15
+let's do that here from global
+09:17
+configuration mode IP ssh version 2
+09:22
+that's it now let's try to ssh to r1
+09:26
+from pc1 ssh - l cisco which is the
+09:35
+username 192.168.1.1 now enter the
+09:41
+password for our account cisco which is
+09:43
+CCNA there we go we're in exit so in
+09:51
+this lab we did some configurations of
+09:53
+various technologies we learned
+09:54
+throughout these labs now I will take
+09:57
+this completed lab break some of the
+10:00
+configurations and will troubleshoot it
+10:02
+in the next and final lab of the icnd1
+10:05
+series that's all for this lab thank you
+10:10
+for watching I hope this lab and video
+10:13
+have been helpful for you please
+10:14
+subscribe for future labs like this
+10:17
+which will be released weekly if you
+10:20
+have requests for any specific labs let
+10:22
+me know in the comment section if you
+10:25
+want to support my channel I accept a
+10:27
+Bitcoin and aetherium donations via the
+10:29
+addresses in the description I am also a
+10:33
+brave verified publisher and accept bat
+10:36
+or basic attention token donations in
+10:38
+the brave browser
+

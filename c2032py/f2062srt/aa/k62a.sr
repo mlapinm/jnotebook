@@ -1,0 +1,237 @@
+00:00
+welcome to this free CCNA packet tracer
+00:03
+practice lab you can download the lab
+00:05
+file from the link in the description if
+00:08
+you like these labs please consider
+00:11
+supporting me via my patreon or the
+00:13
+cryptocurrency options in the
+00:14
+description also please subscribe to the
+00:18
+channel for more labs like this in this
+00:21
+lab we will troubleshoot PPP the
+00:24
+point-to-point protocol
+00:25
+I took the topology from the last lab
+00:28
+and added two more pairs of routers so
+00:31
+r1 and r3 are authenticated using pap
+00:35
+and r2 and r4 are authenticating using
+00:39
+chap however there is one miss
+00:42
+configuration on each of them which is
+00:44
+preventing PPP from working let's go one
+00:48
+by one and find the issues let's start
+00:52
+on r1 enable show interfaces s0 0 so the
+01:01
+correct encapsulation PPP is used
+01:04
+however the interface is up-down now r1
+01:09
+should have a username packet and a
+01:11
+password tracer configured which SP r1
+01:14
+will use to authenticate
+01:16
+let's check show run there it is so no
+01:22
+problems there now is r1 sending the
+01:25
+correct username Cisco and password CCNA
+01:28
+- SPR one looks like it isn't the PPP
+01:35
+PAP sent username password command isn't
+01:38
+configured let's go fix that compte
+01:43
+interface s0 0
+01:45
+shutdown PPP PAP sent a username cisco
+01:51
+password CCNA no shutdown do show IP
+01:58
+interface brief ok the interface is up
+02:02
+up let's try to ping SP r1 do ping 100
+02:08
+Oh Oh 1
+02:13
+okay looks like it works now so we've
+02:16
+solved the problem on our one now let's
+02:20
+check out our three which is also
+02:22
+configured to use PPP with PAP enable
+02:27
+show interfaces s0 0 again
+02:31
+correct encapsulation but the interface
+02:33
+is up down our three should have a user
+02:37
+named CCNA and a password CCENT
+02:40
+configure which SP our three will use to
+02:42
+authenticate let's check for that show
+02:46
+run there it is
+02:49
+is it sending the username Cisco and
+02:52
+password CCNP to SP r3 to authenticate
+02:56
+yes it is so what's the issue it's the
+03:00
+line right above here PPP authentication
+03:04
+chap r3 is supposed to be using PAP not
+03:08
+chap authentication coffee tea interface
+03:13
+s0 0
+03:15
+shut down no PPP authentication chap PPP
+03:22
+authentication PAP no shutdown do show
+03:27
+IP interface brief ok the interface is
+03:32
+up up let's try a ping to SPR 3 do ping
+03:37
+1 3000 won great it works next let's go
+03:47
+to our to enable show interfaces s0 0
+03:54
+same situation correct encapsulation PPP
+03:58
+but the interface isn't up r2 is
+04:02
+configured to use chap authentication so
+04:05
+it should have a user account configure
+04:06
+with the username SP r2 which is the
+04:09
+host of the router sorry the host name
+04:12
+of the router at the other end and a
+04:14
+password of CCNA which must be identical
+04:17
+to the password configured on SPR to
+04:20
+show run
+04:24
+username r2 password CCNA there's the
+04:29
+problem it's configured with its own
+04:31
+host name but it should be SPR to s host
+04:34
+name coffee tea no user name are two
+04:40
+passwords CCNA username SPR two password
+04:46
+CCNA now I'll go reset the interface
+04:50
+interface s00
+04:53
+shutdown no shutdown do show IP
+04:59
+interface brief okay it's up up now
+05:05
+let's try a ping do ping 200 0.1 okay
+05:15
+looks like r2 is working now finally
+05:19
+let's go to r4 enable show interfaces s0
+05:26
+0
+05:28
+encapsulation PPP is correct but the
+05:31
+interface is down like r2 r4 ship using
+05:36
+chap authentication so it should have a
+05:39
+username s PR for password CCIE
+05:43
+configured s PR for being the host name
+05:46
+of the other router it's connected to
+05:48
+show run ok that looks correct
+05:53
+let's check the interface configuration
+05:58
+ok we're missing something here the PPP
+06:02
+authentication chap statement is missing
+06:05
+coffee tea interface s 0 0 shutdown PPP
+06:12
+authentication chap no shutdown do show
+06:18
+IP interface brief ok it's up up now do
+06:26
+ping 1 4000 dot 1
+06:32
+okay it's working
+06:34
+I've pre-configured default routes to
+06:37
+the service provider on each router so
+06:39
+if I try to ping r2 r3 or r1 from our 4
+06:44
+it should work now let's try first I'll
+06:48
+ping r1 do ping 100 oh oh - ok it works
+06:58
+how about r3 do ping 1 3000 - it works
+07:07
+as well and let's try our to do ping 200
+07:13
+go - it works as well that's all for
+07:19
+this lab thank you for watching I hope
+07:24
+this lab and video have been helpful for
+07:26
+you please subscribe for future labs
+07:29
+like this which will be released weekly
+07:31
+if you have requests for any specific
+07:34
+labs let me know in the comment section
+07:36
+if you want to support my channel I
+07:39
+accept Bitcoin and etherium donations
+07:42
+via the addresses in the description I
+07:44
+am also a brave verified publisher and
+07:47
+accept bat or basic attention token
+07:50
+donations in the brave browser
+

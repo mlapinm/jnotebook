@@ -1,0 +1,245 @@
+00:00
+welcome to this free CCNA packet tracer
+00:03
+practice lab you can download the lab
+00:05
+file from the link in the description if
+00:08
+you like these labs please consider
+00:10
+supporting me via my patreon or the
+00:12
+cryptocurrency options in the
+00:14
+description also please subscribe to the
+00:17
+channel for more labs like this in this
+00:22
+lab we are going to do some important
+00:23
+device management tasks including
+00:26
+password recovery configuration backup
+00:29
+and operating system upgrading first we
+00:33
+are locked out of our one someone else
+00:36
+configured an enable password and forgot
+00:37
+it so we can't enter privileged exec
+00:39
+mode and thus can't enter global
+00:42
+configuration mode to change the
+00:43
+password so how can we solve this we
+00:46
+have to use the rom monitor command line
+00:49
+AKA rahman to enter rahman reset the
+00:54
+router and then press control break
+00:56
+before it finishes booting to do that in
+01:00
+packet tracer click on r1 and under the
+01:04
+physical tab here flick the power switch
+01:07
+off and on then switch to the CLI and
+01:10
+press control break there we are we're
+01:15
+now in ROM on the next step in password
+01:18
+recovery is to change the configuration
+01:20
+register to make r1 startup and ignore
+01:23
+the startup configuration in NVRAM and
+01:25
+startup with a default configuration
+01:28
+then we will enter privileged exec mode
+01:31
+without needing a password copy the
+01:33
+startup config to the running config to
+01:35
+make it active and then change the
+01:37
+password and save the configuration
+01:39
+again so to change the configuration
+01:43
+register from rahman use this command
+01:46
+conf reg and to make it ignore the
+01:50
+contents of nvram type 0 x2 1 for 2 then
+01:55
+type reset to reset the router
+02:11
+there we go Arwen has now booted
+02:14
+ignoring this startup-config enable see
+02:19
+no password was needed now that we are
+02:22
+safely in privileged exec mode I will
+02:25
+copy the start config to the running
+02:27
+config copy start run as you can see the
+02:33
+host name has changed to r1 as the
+02:35
+startup config is now the running config
+02:38
+let's change the password to CCNA compte
+02:44
+enable secret CCNA I'll also enable the
+02:50
+g00 interface interface g00 no shut now
+02:56
+it's important to restore the
+02:58
+configuration register to its default so
+03:00
+it doesn't always ignore the startup
+03:02
+config when booting up exit from ramen
+03:07
+we used the contract command but from
+03:11
+the regular CLI use config register and
+03:14
+the default setting is 0 X - 1 0 - exit
+03:20
+now let's save the configuration right
+03:24
+step 2 is to backup our ones startup
+03:28
+configuration to our server TFTP 1 first
+03:32
+I'll ping it to make sure it's reachable
+03:35
+ping 192.168.1.1 hundred ok looks good
+03:47
+- copy the configuration to a TFTP
+03:50
+server use this command copy startup
+03:53
+config TFTP now it asks us the IP
+03:57
+address 192.168.1.1 hundred and the file
+04:02
+name let's accept the default there we
+04:06
+go
+04:06
+I'll go on TFTP one to check if it's
+04:09
+there click on the server and packet
+04:11
+tracer click services and then click
+04:15
+TFTP there it is our one config we have
+04:19
+successfully backed up our one startup
+04:21
+configuration
+04:24
+the final step is to upgrade our ones
+04:27
+iOS image to a newer version which is on
+04:29
+our T of TP server first let's check the
+04:33
+iOS version on our one show version here
+04:40
+it says the version C 2900 software
+04:43
+version fifteen point one four and four
+04:46
+and down here is the image file now
+04:51
+let's find the new image on TFTP one
+04:57
+here it is the C 2900 image and it's
+05:02
+version fifteen point five three indeed
+05:04
+a newer version I'll copy the name with
+05:07
+ctrl C now let's go back to our one I
+05:13
+want to copy the file from the TFTP
+05:16
+server to flash storage
+05:17
+so copy TFTP flash enter the IP address
+05:23
+192.168.1.1 hundred and then paste the
+05:28
+file name
+05:34
+great we've copied the image from TFTP
+05:37
+to flash let's check show flash now
+05:42
+there are two iOS images in flash let's
+05:45
+delete the old one I'll copy the file
+05:49
+name here then delete it with this
+05:53
+command delete flash : and then paste
+05:58
+the file name okay show flash now we
+06:03
+only have one iOS image on flash let's
+06:06
+reload the router so it uses the new iOS
+06:08
+version reload
+06:22
+okay r1 has booted up an Abel okay now
+06:29
+let's check to the iOS version show
+06:33
+version there we go we're using the new
+06:37
+iOS version and here's the new image
+06:40
+file okay in this lab we performed
+06:44
+password recovery configuration backup
+06:46
+and an iOS upgrade that's all for this
+06:49
+lab thank you for watching I hope this
+06:55
+lab and video have been helpful for you
+06:57
+please subscribe for future labs like
+07:00
+this which will be released weekly if
+07:03
+you have requests for any specific labs
+07:05
+let me know in the comment section if
+07:08
+you want to support my channel I accept
+07:11
+Bitcoin and aetherium donations via the
+07:13
+addresses in the description I am also a
+07:16
+brave verified publisher and accept bat
+07:19
+or basic attention token donations in
+07:22
+the brave browser
+

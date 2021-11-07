@@ -1,0 +1,206 @@
+ 1.715123 welcome back to another Inkscape
+tutorial 5.728059  in this tutorial we're going to
+be looking at the align and distribute
+tool to help keep our objects and text
+anything we that we draw lined up and
+square it up with the page with each
+other and looking awesome 16.703357 
+
+ so I'm going
+to come out here so we can see the whole
+page  19.641479 I'm gonna open up well first we'll
+just draw let's draw a star 24.169398  a nice black
+star we'll put right in  25.865620 the middle here 26.953446 
+and then we'll go to our object go all
+the way down to a line and distribute 31.090377  we
+can also open it by pressing control
+shift a 33.754365  that's what it tells us 35.406093  that
+brings up our panel over here on the
+right hand side  37.721915 for our line and
+distribute  38.974119 so there's a couple different
+so first of all this  44.305479 lets us align this
+align whatever object we have relative
+to a couple different sources 49.114121  by default
+is relative to selection area which
+means if I have another say I draw like
+a rectangle 57.701865  and make it red and I make
+it the size of the page or I make it not
+even the size of the page 63.911234  let's just
+make it like this and I lower it down to
+the lower level below the star  68.403413 and I
+want this star to be in the center of
+this red box  71.640506 I can just select the whole
+selection area  75.395550 and so based on this
+whole basically this dotted line 79.475648  this
+star I can Center it to this to the
+middle of that selection area 84.171410  I can
+Center it this way  86.395362 I can push it all the
+way to the left so it so the first part
+of the star touches the very left side
+of the selection box  94.346586 I can push it to
+the right 96.263427  push it at the top but I
+usually do this for centering things so
+I'll go Center  102.795530 on the what is this
+x-axis y-axis  106.891435 and then Center along here
+on the horizontal 109.659489  horizontal vertical
+guess which call it  111.428078 that another thing
+we can do if I click this red box and
+delete it we can Center this star if we
+change this relative to the page  118.539502 now we
+can Center the star relative to the page 121.147766 
+so now if I Center it it will center on
+the page  124.067579 vertically and we can Center on
+the page horizontally  as well 128.275386  so now we
+have this star centered on our printed
+page  131.112282 or on our page what
+whatever we're designing on 135.592128  what else
+can we do relative to 137.608186  so we can go
+relative to if I draw a circle here 140.867770  and
+I put it down to the bottom level 144.203929  we can
+Center or we can align based on the
+first object selected  152.279772 so based on the
+first selected so if I select the star
+first  155.316795 then I go shift and select this
+red circle 158.957029  and then we go to center 160.468471  it's
+going to Center this circle based on the
+center of the star  164.916993 so it'll find the
+center of the star and align the center
+of the circle to the star center 168.864735  so see
+the star stays in the same place but the
+circle goes there 172.548933  if we want to do it
+differently  173.697426 we can do if we select the
+star the circle first  177.725332 and then hold
+shift and select the star 180.085351  now it'll be
+whatever we whatever we apply will be
+based off of the circle  187.005968 kind of like it
+was the first time  188.801596 only it's not
+selection now  190.161417 it's first selected  191.409687 we can
+also do it by like smallest objects 193.853598  we
+can do it based off of our  196.277374 we won't use
+based off for drawing  198.917368 but I want to show
+you with multiple options with multiple
+items 201.557324  so maybe we want to do since we
+have a circle already let's create it
+like a light blue color 206.841399  and let's shrink
+it down  208.861513 let's just go duplicate this and
+duplicate this  212.733616 and we'll make a snowman 215.201824 
+so we have a snowman here 218.138230  actually we'll
+use something that we did in our last
+tutorial which is we'll select all three
+of these  222.326103 and we will go to object or
+we'll go to path Union 227.261688  and make them all
+one thing and that way when we go to our
+if I hold down shift and will give it a
+nice blue outline 233.005324  so now we have a
+nice-looking little snowman here  234.581379 and we
+want to create some buttons on the
+Snowman  237.405726 so we'll create a button 239.177604  and
+we'll make it we'll just make the whole
+thing black sure black with a blue
+outline 243.558525  so we have some buttons  here 245.322322  and
+I controlled D I can duplicate this
+button 247.978313  ctrl D and duplicate so now we
+have three  250.978326 let's do let's do three
+buttons if I want to align these so
+they're centered with the Snowman I can
+do it a couple ways relative to first
+selected I can select the Snowman  260.871321 then
+hold shift and select all three buttons 264.359175 
+then just go to the center  266.459113 now they're
+all sent
+on the snowman 268.795244  and I did I only want to
+center them along this axis not along
+the other axe not 275.435241  vertically if I Center
+and vertically they'll all be on top of
+each other  278.583274 so there's like three on top
+of each other 280.695227  now so what I want to do
+is actually well the reason I have three
+of these is because if ever we want we
+can select all three of them like this 289.151305 
+or I can hold down the shift and select
+all three  292.414909 and then we can distribute so
+we've got a line we also have distribute 297.035196 
+and distribute we can we can get make
+easy even spacing be between based on
+the center of these three objects  304.994235 we can
+have them be spaced evenly apart
+horizontally so to do that we do 309.682813  this
+one right here distribute centers 312.718799 
+equidistantly equidistantly and there
+you go 316.527418  so let's we could switch to the
+center of them with each other  318.639020 first and
+now we can make sure there's an equal
+distance between each one 322.662834  so if we drag
+this one down here and this one here we
+can give an equal distance by selecting
+them all 327.335087  and then doing this here 328.915253  since
+the circle all three of these are gonna
+do the same thing really  332.783241 it's just what
+point it's based off of if they were
+stars it might be a little bit different 336.619159 
+so this is based off at the top point
+the top edge this is based off at the
+bottom edge  341.086962 this one just makes the
+space in between them  344.646894 be equal so if one
+of them was a star  347.359049 if we select and
+delete  349.167593 we'd bring the star in here  350.707763 so
+this might be a little different we
+probably I would want to do centers  354.824006 as
+well so I Center them all together  356.083519 and
+then I distribute them based  360.816284 on the
+Centers of them does that make sense 364.107505 
+and it really comes in handy if we have
+if we were to control D on all of these
+and control D again  370.495642 so if we get a whole
+bunch of things going on here like this 372.979593 
+and we just drag them all over here 376.316656  so
+now we want to create a nice line if we
+want all these to be lined up first of
+all we just Center them all to each
+other basically 383.736031  to the first selected I
+guess is what it did  385.880307 and then if I want
+to make them relative to each other or
+distribute them relative to each other 
+we just do this  393.037036 now they're all
+distributed based on the center point
+the center point of each is equally is
+equal  399.103422 and if we wanted to do it slightly
+different we could
+they use the top edge of each object 404.264150  and
+use that as the align point 406.350035  so now these
+stars are down a little bit it looks
+like there might be a little off-center
+but it's because it's basically basing
+it off at the top edge of that 414.073775  so I
+would probably keep this one here  415.825719 to do
+that or  417.077519 this one which does equal
+spacing between the gaps 420.553621  so it uses the
+bottom and top edge and make sure the
+white space between each object is the
+same size 426.038402  yeah you can have as many
+object you know objects in a line as you
+wanted to to do that 431.646281  we can shrink these
+down  433.533790 and put them in here 434.745957 
+that's pretty cool anyway that's a line
+and distribute  438.910246 so just play with that
+there's some more things we can do with
+it but basically make sure you
+understand this relative to I like to do
+page if I'm working on if I'm working
+within the page like a printed page or
+something 450.817837  and then I'll also do
+selection area a lot of times too so
+Center it based on a selection area  456.581755   yeah
+play with that different options there 460.219160 
+but it's become super powerful 461.767890  when you
+want to do have things line up properly
+if you have lines especially or little
+objects like this  468.355504 it can become really
+nice tool  470.647718 to have in fact I should have
+lined these up before I union them
+together  473.739427 I should have lined these so
+they were all three in a straight line 476.979555 
+thanks for watching this video  478.835385 on a line
+undistribute play with this tool learn
+how to use a little bit better 481.855501  and I'll
+catch you in the next video 483.567668  483.567668  483.567668 

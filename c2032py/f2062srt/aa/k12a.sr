@@ -1,0 +1,147 @@
+00:00
+welcome to this free CCNA packet tracer
+00:03
+practice lab you can download the lab
+00:06
+file from the link in the description in
+00:08
+this lab we will review the creation of
+00:11
+a local user database on the router and
+00:13
+introduced the banner function this will
+00:17
+be a fairly short lab but try to
+00:18
+complete it on your own first and then
+00:20
+continue watching this video if you have
+00:22
+trouble or watch it after to check your
+00:24
+solution step one is to use PC one to
+00:30
+connect to r1 via the console port
+00:33
+they're already connected by a cable so
+00:35
+let's click on PC one desktop terminal
+00:40
+and press ok to accept the default
+00:44
+configurations step two is to create two
+00:48
+users on our one last time we created
+00:51
+user accounts with passwords this time
+00:54
+we will use secrets same as with the
+00:56
+enable password and an able secret
+00:59
+passwords are not encrypted but secrets
+01:02
+are encrypted by default an able conf t
+01:07
+username CCNA secret Cisco with a
+01:12
+capital C remember that user name isn't
+01:15
+case sensitive but the password or
+01:17
+secret is next user username CCNP secret
+01:23
+Cisco I'll quickly type do show run to
+01:28
+check that their encrypted as you can
+01:33
+see they are encrypted by default step 3
+01:37
+is to set the console port to use the
+01:39
+local database to authenticate users
+01:42
+line console 0 login local that's it
+01:52
+step four is to set a message of the day
+01:55
+banner of welcome to packet racer and a
+01:58
+login banner of authorized users only
+02:01
+banners are messages that display before
+02:04
+or after users log in in this case the
+02:07
+message of the day banner will be
+02:09
+displayed above the login banner and
+02:10
+both will be displayed before our user
+02:13
+logs in so exit to make the banner of
+02:18
+the day we use this command banner motd
+02:22
+then I'll use the question mark to show
+02:25
+the next option as you can see we need
+02:30
+to enter a delimited character to
+02:32
+indicate the start and end of the
+02:33
+message if you type the message directly
+02:37
+it will think that the first character
+02:39
+is the delimiting character and it will
+02:42
+be excluded from the message itself you
+02:45
+can use whatever you want but I'll use
+02:46
+an asterisk asterisk
+02:48
+welcome to packet tracer asterisk okay
+02:53
+now the same process for the log in
+02:55
+banner banner login asterisk authorized
+03:02
+users only asterisk now we've set up the
+03:07
+two banners finally let's log out and
+03:11
+see if our messages work and logout
+03:17
+there we go
+03:18
+before we log in you can see our message
+03:20
+of the day and then our log in banner
+03:26
+thank you for watching I hope this lab
+03:28
+and video have been helpful for you
+03:29
+please subscribe for future labs like
+03:32
+this which will be released weekly if
+03:35
+you have requests for any specific labs
+03:37
+let me know in the comment section if
+03:39
+you want to support my channel I accept
+03:42
+Bitcoin and aetherium donations via the
+03:45
+addresses in the description I am also a
+03:48
+brave verified publisher and accept bat
+03:51
+or basic attention token donations in
+03:54
+the brave browser
+

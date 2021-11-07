@@ -1,0 +1,281 @@
+00:00
+welcome to this free CCNA packet racer
+00:03
+practice lab you can download the lab
+00:05
+file from the link in the description if
+00:07
+you like these labs please consider
+00:09
+supporting me via my patreon or the
+00:12
+cryptocurrency options in the
+00:13
+description also please subscribe to the
+00:16
+channel for more labs like this in this
+00:20
+lab we will troubleshoot the topology we
+00:22
+configured in the previous lab several
+00:25
+miss configurations are preventing our
+00:26
+ether channels from operating as
+00:28
+intended
+00:28
+let's troubleshoot the errors and fix
+00:31
+them first let's take a look at switch 1
+00:37
+enable show ether channel summary so we
+00:42
+have port channel 1 configured and it's
+00:45
+layer 2 however it is down as this D
+00:48
+indicates the eye next to the interfaces
+00:51
+indicates standalone meaning they aren't
+00:53
+properly paired with interfaces on
+00:55
+switch 2 to make the ether channel
+00:57
+however you should be able to spot the
+01:00
+problem here the ether channel between
+01:03
+switch 1 and switch 2 is supposed to be
+01:05
+using pagp not LACP that could be why
+01:10
+switch 1 and switch 2 aren't
+01:11
+successfully forming either channel
+01:13
+let's change that conf t interface range
+01:18
+f 0 1 through 4 no channel group 1 also
+01:24
+just to be safe I'll delete the port
+01:26
+channel interface as well no interface
+01:29
+po1 okay let's reconfigure that
+01:33
+interface range F 0 1 through 4 channel
+01:37
+Group 1 mode desirable do show ether
+01:42
+channel summary ok our port channel is
+01:47
+working however F 0 1 is down let's see
+01:51
+what's up on switch to enable show ether
+01:57
+channel summary F 0 4 which is connected
+02:01
+to switch ones F 0 1 is down as well
+02:05
+remember in the previous video I said
+02:07
+port speed duplex etc had to match for
+02:11
+the ether channel to work
+02:12
+when one interface isn't properly
+02:15
+joining the port channel one of those
+02:17
+things could be the problem
+02:18
+show interface f0 for full duplex 10
+02:25
+megabits per second
+02:27
+let's check other interfaces show
+02:30
+interface f03 full duplex a hundred
+02:34
+megabits per second show interface f0 to
+02:38
+again 100 megabits per second show
+02:42
+interface F 0 1 100 megabits per second
+02:46
+let's also quickly check switch once F 0
+02:49
+1 interface do show interface F 0 1
+02:56
+again 100 megabits per second there's a
+03:00
+problem the other interfaces are all
+03:02
+using a speed of 100 megabits per second
+03:04
+let's adjust f0 for is speed to the same
+03:10
+compte interface f0 for speed 100 do
+03:17
+show ether channel summary there we go
+03:20
+all interfaces now have the PFLAG beside
+03:23
+them meaning import channel however
+03:27
+notice port channel 1 the ether channel
+03:30
+with switch 3 is down gig 0 1 and gig 0
+03:35
+2 don't show up here I'll add them
+03:37
+quickly interface range G 0 1 2 2
+03:42
+channel Group 1 mode on do show ether
+03:48
+channel summary looks like it's up now
+03:51
+let's check on switch 3 enable show
+03:57
+ether channel summary look at poor
+04:01
+channel 1 it has the flags s and u s
+04:05
+means layer 2 that's not correct it's
+04:08
+supposed to be layer 3 it's showing you
+04:11
+4 in use here but on switch to its at
+04:14
+layer 3 down show IP interface g0 1 show
+04:20
+IP interface g0 to notice both
+04:25
+interfaces state
+04:26
+internet protocol processing disabled
+04:29
+that means the interface is our layer to
+04:32
+not layer three and thus the port
+04:34
+channel is layer two as well
+04:36
+show run indeed the gig zero one and
+04:43
+gigs zero two interfaces do not have
+04:45
+that no switch port command configured
+04:46
+let's configure it
+04:49
+coffee tea interface range G zero one
+04:54
+two two
+04:55
+no switch port notice the command is
+04:58
+rejected switch three is already
+05:01
+configured for a layer two ether channel
+05:03
+let's undo that configuration and then
+05:05
+redo it no channel Group one no
+05:10
+interface po1 interface range G zero one
+05:15
+two two no switch port channel Group one
+05:20
+mode on all so let's give it an IP
+05:24
+address interface po1 IP address 2300 to
+05:33
+255.255.255.0 do show ether channel
+05:36
+summary looks good here it's layer three
+05:40
+now let's check once more on switch to
+05:45
+do show ether channel summary ok it
+05:49
+looks good here let's do one last check
+05:52
+do ping 2300 to okay it looks good we
+06:01
+can ping switch threes end of the ether
+06:03
+channel now let's go back to switch 3
+06:09
+notice the port channel with switch for
+06:11
+is down all of the interfaces have the
+06:14
+standalone flag let's take a look at the
+06:18
+configuration do show run channel group
+06:23
+2 mode passive ok now let's look at
+06:27
+switch for enable show ether channel
+06:33
+summary same thing here show run
+06:39
+okay here's our problem both switches
+06:42
+are in LACP passive mode passive mode
+06:46
+and passive mode won't form an ether
+06:48
+channel at least one side has to be
+06:50
+active
+06:51
+let's make switch for active and see if
+06:54
+that solves the problem compte interface
+06:58
+range F 0 1 through 4 channel Group 1
+07:03
+mode active do show ether channel
+07:08
+summary there we go the port channel is
+07:11
+up and all interfaces have the import
+07:14
+channel flag let's confirm on switch 3
+07:17
+as well do show ether channel summary
+07:22
+okay looks good we have fixed all of the
+07:26
+problems with our ether channels that's
+07:28
+all for this lab thank you for watching
+07:34
+I hope this lab and video have been
+07:36
+helpful for you please subscribe for
+07:38
+future labs like this which will be
+07:40
+released weekly if you have requests for
+07:43
+any specific labs let me know in the
+07:45
+comments section if you want to support
+07:48
+my channel I accept Bitcoin and etherium
+07:51
+donations via the addresses in the
+07:52
+description I am also a brave verified
+07:56
+publisher and accept bat or basic
+07:59
+attention token donations in the brave
+08:00
+browser
+

@@ -1,0 +1,259 @@
+00:00
+welcome to this free CCNA packet tracer
+00:03
+practice lab you can download the lab
+00:05
+file from the link in the description in
+00:08
+this lab we will be working with the
+00:11
+same network topology as in the previous
+00:13
+lab lab number seven in which we
+00:16
+configured inter VLAN routing with the
+00:18
+router on a stick method this time
+00:21
+however the configurations are all
+00:22
+completed the task this time is to
+00:25
+troubleshoot a configuration error and
+00:27
+fix it troubleshooting is an important
+00:30
+skill to have for your CCENT and CCNA
+00:32
+exams and also of course in real-world
+00:34
+situations because problems will
+00:36
+inevitably come up try to complete this
+00:39
+lab on your own first
+00:41
+then continue watching this video if you
+00:43
+have trouble or watch it after to check
+00:45
+your solution remember the exact method
+00:48
+you use to troubleshoot doesn't have to
+00:50
+match mine as long as the end result is
+00:53
+that you solve the problem so this is
+00:57
+our scenario we have 4 pcs with pc1 &
+01:00
+pc2 being in VLAN 13 and pc 2 and pc for
+01:05
+being in VLAN 24 someone has configured
+01:09
+inter VLAN routing to allow these pcs to
+01:11
+communicate with each other but
+01:13
+evidently there is some problem
+01:15
+preventing them from doing so
+01:20
+in a troubleshooting scenario like this
+01:22
+we should first confirm the problem if I
+01:26
+send pings from pc1 I shouldn't be able
+01:29
+to ping PC to in PC for the scenario
+01:32
+doesn't mention that computers in the
+01:34
+same VLAN can't communicate so pc1 & pc2
+01:37
+should be able to ping each other
+01:39
+likewise PC 2 shouldn't be able to ping
+01:42
+PC 1 or PC 3 but should be able to ping
+01:45
+pc 4 let's test I'll use PC 1 first
+01:51
+first ping PC to ping 1000 130 doesn't
+02:00
+work next ping pc3 ping 1000 3 the ping
+02:07
+works next PC for ping 1000 131 doesn't
+02:16
+work ok let's try from PC to as well
+02:20
+paying PC 1 first ping 1000 2 doesn't
+02:29
+work next PC 3 ping 1003 doesn't work
+02:36
+finally PC for paying 1000 131 it works
+02:43
+so we have confirmed the problem
+02:46
+computers in the same VLAN can
+02:48
+communicate but our inter VLAN routing
+02:50
+isn't working
+02:55
+because we are using r1 to route between
+02:58
+subnets providing our inter VLAN routing
+03:00
+it's probably a good idea to look around
+03:02
+the link between switch 1 and r1
+03:05
+first let's check on switch 1 enable
+03:10
+let's check if the gig 0 1 interface is
+03:13
+down show IP interface brief nope as you
+03:19
+can see it is up and up perhaps the gig
+03:23
+0 1 interface isn't configured as a
+03:25
+trunk now we could use show run to check
+03:30
+but for exam purposes as well as real
+03:32
+world purposes it's important to know
+03:35
+other commands to let's use the show
+03:38
+interfaces trunk command as you can see
+03:44
+both of our trunks are working and
+03:45
+allowing all the VLANs that we are using
+03:53
+let's head over to r1 and check things
+03:56
+out
+03:58
+enable show IP interface brief looks
+04:04
+like the interface is up and the IP
+04:06
+addresses are configured as 1000 dot one
+04:09
+for VLAN 13 and 1000 dot 1 to 9 for VLAN
+04:14
+24 these IP addresses should be
+04:17
+configured on the PCs as their default
+04:19
+gateway let's quickly check each PC to
+04:23
+make sure on PC one ipconfig /all looks
+04:31
+good
+04:32
+next on PC to ipconfig /all looks good
+04:40
+as well
+04:41
+PC 3 ipconfig /all looks good
+04:49
+finally on PC 4 ipconfig /all no
+04:57
+problems here now let's go back to our
+05:00
+one perhaps there is a different miss
+05:04
+configuration on the sub interfaces
+05:07
+remember we had to configure the VLAN
+05:09
+before the IP address on these sub
+05:11
+interfaces in the previous lab let's
+05:14
+check again show run is always an option
+05:17
+but let's do this show interface g0 0.13
+05:25
+VLAN ID 13 that's correct
+05:28
+next show interface g0 0.24 VLAN ID 14
+05:38
+looks like we found the problem there is
+05:41
+no VLAN 14 on the network this is
+05:43
+supposed to be VLAN 24 let's go fix that
+05:47
+comte interface g0 0.24 encapsulation
+05:55
+dot1q 24 ok that should solve the
+05:59
+problem a configuration error like this
+06:02
+could very well be a simple typo always
+06:06
+be sure to
+06:06
+your configurations carefully in your
+06:08
+exams and in real-world situations
+06:18
+have to check that our network actually
+06:19
+works with inter VLAN routing now
+06:22
+properly configured all four pcs should
+06:24
+be able to ping each other let's hop on
+06:27
+PC one again
+06:28
+first let's ping PC to ping 1000 130 the
+06:35
+ping works then pc 3 ping 1000 dot 3 it
+06:41
+works again next PC for paying 1000 131
+06:47
+the ping works
+06:49
+looks like our problem is solved just to
+06:52
+be sure I'll send some pings from PC to
+06:53
+as well paint 1000 dot - it works ping
+07:02
+1000 dot 3 it works
+07:05
+ping 1000 won 3-1 it works as well we
+07:12
+have successfully fixed the network
+07:16
+thank you for watching I hope this lab
+07:19
+and video have been helpful for you
+07:21
+please subscribe for future labs like
+07:24
+this which will be released weekly if
+07:26
+you have requests for any specific labs
+07:29
+let me know in the comment section if
+07:31
+you want to support my channel I accept
+07:34
+Bitcoin donations via the address in the
+07:36
+description I am also a brave verified
+07:40
+publisher and accept bat or basic
+07:43
+attention token donations in the brave
+07:45
+browser
+

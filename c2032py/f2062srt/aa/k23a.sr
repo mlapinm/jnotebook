@@ -1,0 +1,317 @@
+00:00
+welcome to this free CCNA packet tracer
+00:03
+practice lab you can download the lab
+00:05
+file from the link in the description if
+00:08
+you like these labs please consider
+00:10
+supporting me via my patreon or the
+00:12
+cryptocurrency options in the
+00:14
+description this lab will be similar to
+00:18
+the previous lab in which we use telnet
+00:20
+to connect to a switch and router in
+00:23
+this lab however we will use the more
+00:25
+secure option SSH which stands for
+00:29
+secure shell ssh is more secure because
+00:33
+it encrypts packets between the devices
+00:35
+so that even if the packets are
+00:37
+intercepted by an attacker they can't be
+00:40
+read there are a few extra steps
+00:44
+involved in configuring SSH but it's not
+00:46
+so complicated the four requirements are
+00:50
+first you must use the hostname command
+00:53
+to configure the hostname of the device
+00:55
+to reinforce this I haven't
+00:58
+pre-configured the host names of the
+00:59
+devices for this lab second you must
+01:03
+configure the DNS domain name using the
+01:06
+IP domain name command third you must
+01:10
+generate the SSH key to be used to
+01:12
+encrypt the packets and fourth SSH must
+01:16
+be enabled on the vqi lines we will go
+01:19
+through these steps and a couple others
+01:21
+in this lab try to complete the lab
+01:24
+yourself first then continue watching
+01:26
+this video if you have trouble or watch
+01:28
+it after to check your solution if you
+01:31
+haven't learned the commands necessary
+01:32
+to complete the tasks yet in your
+01:34
+studies feel free to watch this video to
+01:37
+learn them
+01:40
+step one is to configure the host names
+01:42
+of switch 1 and r1 this is a requirement
+01:46
+for SSH so let's do that now on switch 1
+01:50
+first enable comte hostname switch 1 now
+01:59
+on r1 enable compte hostname r1 there we
+02:07
+go step 2 is to configure that IP
+02:10
+addresses indicated this is the same as
+02:13
+in the previous lab I'll start on our 1
+02:16
+first since we're already here interface
+02:19
+g00 IP address 192.168.1.1 255.255.255.0
+02:27
+no shutdown because the interface is
+02:30
+disabled by default now let's configure
+02:33
+a switch ones VLAN 1 interface interface
+02:39
+VLAN 1 IP address 192.168.1.1 4 5.0 no
+02:48
+shutdown that's all for step 2 step 3 is
+02:56
+to configure a single user account on
+02:58
+each device which we will use to login
+03:00
+to the device when we SSH from pc1 on
+03:04
+switch 1 first exit username Cisco
+03:08
+password CCNA I've said it many times
+03:13
+before but remember passwords are case
+03:15
+sensitive now on our one exit username
+03:22
+cisco password CCNA that's all for step
+03:27
+3 step 4 is to configure a dns domain
+03:31
+name on each device this is an another
+03:35
+required step for configuring SSH and we
+03:39
+will use a domain name of cisco.com for
+03:42
+this lab this only requires one command
+03:46
+here on our 1 first IP domain name
+03:51
+cisco.com
+03:53
+that's it now on switch one IP domain
+03:59
+name Cisco calm that's all for step four
+04:06
+Step five is to generate the keys used
+04:09
+to encrypt the packets this is done with
+04:12
+this command crypto key generate RSA now
+04:19
+we are asked for the modulus size the
+04:21
+length of the keys used for the
+04:22
+encryption and decryption process
+04:25
+we're instructed to use 1024 there we go
+04:30
+now let's do the same on our one crypto
+04:35
+key generate RSA 1024 that's all for
+04:41
+step 5
+04:45
+step six is now to configure the vty
+04:48
+lines there are a few requirements and
+04:51
+let's configure them one by one on our
+04:54
+one first line vty 0 15 again meaning
+04:59
+line 0 through 15 login local that's the
+05:05
+same command used last time meaning we
+05:07
+will have to use the user account we
+05:08
+created previously to log into the vty
+05:10
+lines when we connect transport input
+05:14
+last time we use telnet now we'll enter
+05:17
+SSH
+05:18
+this will allow only SSH not telnet to
+05:22
+be used to connect to the vty lines the
+05:26
+third requirement for this lab is to
+05:27
+terminate connections after five minutes
+05:29
+of inactivity this is an important
+05:32
+security measure it is done with this
+05:35
+command exact timeout now I'll use the
+05:39
+question mark any time you have to input
+05:42
+some amount of time check the unit of
+05:45
+time used for the commands you don't
+05:48
+want to enter 5 for 5 minutes if it ends
+05:50
+up being 5 seconds in this case we can
+05:54
+see it is entered in minutes so I'll
+05:56
+just enter 5 always remember that for
+05:59
+commands involving time now I'll quickly
+06:03
+hop on switch 1 and enter the same
+06:06
+commands line vty 0 15 login local
+06:14
+transport input ssh exec timeout 5
+06:20
+that's all for step 6
+06:24
+step seven is to enable SSH version 2
+06:28
+version 2 improves on weaknesses of
+06:31
+version 1 if you want to learn more
+06:34
+about this sort of thing I recommend
+06:35
+pursuing Cisco's security certification
+06:38
+path where you will learn all about this
+06:40
+sort of thing for now just remember that
+06:43
+you should use SSH version 2 whenever
+06:45
+possible you can enable it with this
+06:48
+command exit IP SSH version 2 that's it
+06:55
+now we'll do it on our one exit IP SSH
+07:02
+version 2 that's it
+07:07
+finally let's see if we can connect to
+07:10
+the command line of each device from pc1
+07:12
+by using SSH first let's see if telnet
+07:18
+works
+07:19
+I'll try to tell net to switch one
+07:23
+telnet 192.168.1.2 as you can see it
+07:30
+doesn't work this is because of that
+07:31
+transport input SSH command we used
+07:34
+before now let's try SSH that is done
+07:39
+with this command SSH - L Cisco Cisco
+07:45
+being the username we are connecting
+07:47
+with which we configured on switch 1 and
+07:49
+R 1 followed by the IP address
+07:52
+192.168.1.1 tur the password of CCNA in
+07:58
+all caps and there we go we're on switch
+08:01
+1 now I'll type exit and try r1 SSH - L
+08:08
+Cisco 192.168.1.1 password of CCNA and
+08:15
+now we're on our one take note of the
+08:19
+difference between the command used to
+08:21
+tell net and the command used to SSH
+08:23
+onto the switches and routers these are
+08:26
+the standard commands used on windows
+08:29
+anyway that's all for this lab
+08:33
+thank you for watching I hope this lab
+08:36
+and video have been helpful for you
+08:38
+please subscribe for future labs like
+08:40
+this which will be released weekly if
+08:43
+you have requests for any specific labs
+08:46
+let me know in the comment section if
+08:48
+you want to support my channel please
+08:51
+consider contributing to my patreon
+08:53
+patreon comm / Jeremy's IT lab I accept
+08:58
+Bitcoin and aetherium donations via the
+09:00
+addresses in the description I am also a
+09:04
+brave verified publisher and accept bat
+09:07
+or basic attention token donations in
+09:09
+the brave browser
+

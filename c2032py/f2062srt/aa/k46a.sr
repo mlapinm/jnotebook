@@ -1,0 +1,333 @@
+00:00
+welcome to this free CCNA packet tracer
+00:03
+practice lab you can download the lab
+00:05
+file from the link in the description if
+00:07
+you like these labs please consider
+00:09
+supporting me via my patreon or the
+00:11
+cryptocurrency options in the
+00:13
+description also please subscribe to the
+00:16
+channel for more labs like this in this
+00:20
+lab more colorful than usual we will
+00:23
+configure VLANs and VTP the VLAN
+00:26
+trunking protocol VTP is used to
+00:30
+propagate VLAN configurations among
+00:32
+switches so you can configure the
+00:34
+required VLANs on a single switch and
+00:37
+have it share the configurations with
+00:39
+other switches instead of having to
+00:41
+configure the same VLANs on every
+00:43
+individual switch so the first step is
+00:48
+to configure the switch ports connecting
+00:50
+switches as trunk ports and disable DTP
+00:53
+that's simple enough let's go on switch
+00:56
+one enable compte interface g0 one
+01:04
+switch port mode trunk switch port no
+01:07
+negotiate exit now on switch to enable
+01:15
+Conti interface range g0 1 to 2 switch
+01:21
+port mode trunk switch port no negotiate
+01:25
+exit finally on switch 3 enable compte
+01:33
+interface g0 1 switch port mode trunk
+01:37
+switch port no negotiate exit okay
+01:42
+that's all for step 1 step 2 is to
+01:46
+configure switch 2 as VTP transparent
+01:49
+first let's review the different VTB
+01:52
+modes there are 3 VTB modes server
+01:56
+client and transparent in this lab
+02:01
+switch 1 will be a server and switch 3
+02:04
+will be a client switch 2 will be in
+02:07
+transparent mode VTP servers are able to
+02:11
+create and delete VLANs
+02:13
+and then share those configurations with
+02:15
+other switches VTP clients cannot create
+02:18
+or delete VLANs but will rather sink
+02:20
+their VLAN configuration with a VTP
+02:23
+server VTP transparent switches will not
+02:27
+sink their VLAN configurations to a
+02:29
+server they will however pass along VTP
+02:33
+messages from VTP servers so in this lab
+02:37
+switch 2 will be in transparent mode and
+02:39
+it's between switch 1 and switch 3 it
+02:44
+won't sink its VLANs to switch 1 but it
+02:46
+will pass which ones messages to switch
+02:49
+3 okay let's do the configuration first
+02:54
+VTP mode transparent configure switch to
+02:58
+in VTP transparent mode next the VTP
+03:02
+domain name as you can see here is CCNA
+03:05
+VTP domain CCNA also we are told to
+03:11
+configure VTP version 2 VTP version -
+03:17
+Cisco recommends to avoid using version
+03:20
+1 if possible next let's create VLAN 40
+03:24
+on switch to VLAN 40 named accounting
+03:30
+exit
+03:31
+let's check do show VLAN brief there we
+03:36
+go
+03:37
+VLAN 40 named accounting the next step
+03:43
+is to configure our VTP server switch
+03:46
+one VTP domain CCNA VTP version 2 VT P
+03:55
+mode server VT P server is actually the
+03:59
+default VTV mode by the way ok now let's
+04:03
+create VLANs 10 20 and 30 VLAN 10 name
+04:09
+HR VLAN 20 name sales VLAN 30 name
+04:18
+engineering exit
+04:23
+next let's configure switch 3 as a VTP
+04:27
+client and it should get all of this
+04:29
+configuration from switch 1 VT P mode
+04:35
+client do you show VT P status
+04:41
+notice how the VT P version 2 and VT v
+04:45
+domain name of CCNA are already set
+04:47
+without us having to configure them if a
+04:51
+VT P switch with the default domain name
+04:53
+null receives a message from a VT P
+04:55
+switch in another domain it will
+04:58
+automatically join that other switches
+04:59
+domain same thing for the VT P version
+05:02
+if a version once which receives a VT P
+05:06
+message from a VT b version to switch it
+05:09
+will change to the VT p version 2 if
+05:11
+it's supported on the switch the next
+05:15
+step is to assign all switch ports
+05:17
+connected to hosts to their proper VLANs
+05:19
+and disable VT P this is pretty
+05:23
+repetitive work but let's get into it
+05:26
+right here on switch 3 first interface
+05:30
+f01 switch port mode access switch port
+05:36
+access VLAN 10 switch port no negotiate
+05:43
+interface range F 0 2 to 3 switch port
+05:48
+mode access switch port access VLAN 30
+05:55
+switch port no negotiate interface F 0 4
+06:01
+switch port mode access switch port
+06:05
+access VLAN 20 switch port no negotiate
+06:11
+okay next is switch to interface range F
+06:17
+0 1 2 to switch port mode access switch
+06:24
+port access VLAN 40 switch port no
+06:29
+negotiate finally switch 1
+06:35
+interface range f 0 1 2 2 switch port
+06:41
+mode access switch port access VLAN 10
+06:47
+switch port no negotiate last one
+06:51
+interface F 0 3 switch port mode access
+06:56
+switch port access VLAN 20 switch port
+07:01
+no negotiate okay all done
+07:06
+finally we are to configure the Chuck
+07:08
+ports to allow only VLANs 1 10 and 20
+07:12
+let's do it here on switch 1 first
+07:15
+interface g0 1 switch port trunk allowed
+07:20
+VLAN now let's check our options
+07:23
+this word option allows us to specify a
+07:26
+list of allowed VLANs for example 1 2 3
+07:31
+4 do show interfaces trunk see VLANs 1 2
+07:38
+4 are allowed if I enter the same thing
+07:42
+again with different numbers that list
+07:44
+will be replaced switch port trunk
+07:47
+allowed VLAN 5 6 7 8 do show interfaces
+07:53
+trunk c-124 has been replaced by 5 - 8
+07:59
+the next option add adds to the current
+08:02
+list
+08:02
+let's try switch port trunk allowed VLAN
+08:06
+add 9 do show interfaces trunk now it's
+08:11
+5 to 9 remove does the opposite removing
+08:15
+from the current list for example switch
+08:19
+port trunk allowed VLAN remove 9 do show
+08:23
+interfaces trunk now it's five to eighty
+08:27
+game all allows all VLANs of course
+08:31
+let's try switch port trunk allowed VLAN
+08:34
+all do show interfaces trunk now it's
+08:39
+one two one thousand five we can also do
+08:42
+the opposite with none switch port trunk
+08:46
+allowed VLANs
+08:47
+not
+08:48
+do show interfaces trunk now nothing
+08:52
+appears finally there is the accept
+08:54
+option we can allow all VLANs except
+08:58
+certain ones switch port trunk allowed
+09:01
+VLAN except to do show interfaces trunk
+09:06
+now it's 1 & 3 to 1005 ok now let's get
+09:12
+back to the task at hand switch port
+09:15
+trunk allowed VLAN 1 10 20 do show
+09:20
+interfaces trunk there we go let's do
+09:25
+the same thing on the other switches and
+09:26
+then we're done so next is switch to
+09:31
+interface range G 0 1 2 2 switch port
+09:37
+trunk allowed VLAN 1 10 20 finally
+09:42
+switch 3 interface G 0 1 switch port
+09:48
+trunk allowed VLAN 1 10 20 in this lab
+09:54
+we configured VTP and we also looked at
+09:57
+how to add and remove allowed VLANs on
+09:59
+trunks that's all for this lab thank you
+10:04
+for watching I hope this lab and video
+10:06
+have been helpful for you please
+10:09
+subscribe for future labs like this
+10:10
+which will be released weekly if you
+10:13
+have requests for any specific labs let
+10:16
+me know in the comment section if you
+10:18
+want to support my channel I accept
+10:20
+Bitcoin and aetherium donations via the
+10:22
+addresses in the description I am also a
+10:26
+brave verified publisher and accept bat
+10:28
+or basic attention token donations in
+10:31
+the brave browser
+

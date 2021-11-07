@@ -1,0 +1,604 @@
+324
+00:42:53,950 --> 00:43:18,410
+our HTML. And there we go, we now have a fully
+functioning game up snake. Hey, welcome back.
+
+325
+00:43:18,410 --> 00:43:24,550
+We are currently at game five out of seven
+of the JavaScript games course. In this tutorial,
+
+326
+00:43:24,550 --> 00:43:30,700
+we're going to be learning how to build Space
+Invaders and other JavaScript, HTML and CSS
+
+327
+00:43:30,700 --> 00:43:35,670
+Grid based game. By building Space Invaders,
+we're going to be concentrating on the switch
+
+328
+00:43:35,670 --> 00:43:39,100
+ghosts. This is going to be massive throughout
+the whole game. So if you're interested in
+
+329
+00:43:39,100 --> 00:43:44,620
+learning more about the switch goes, please
+watch this video. Space Invaders is really
+
+330
+00:43:44,620 --> 00:43:49,551
+simple, you're going to be a user or shooter
+that moves along from one side of the grid
+
+331
+00:43:49,551 --> 00:43:56,450
+to the other in a 15 by 15 grid square. Your
+goal is to shoot all the little invaders.
+
+332
+00:43:56,450 --> 00:44:01,080
+So all the little ones coming down. They're
+going down like this before they get to you.
+
+333
+00:44:01,080 --> 00:44:04,710
+So technically, it is a time game. There's
+not too much of a countdown, but obviously
+
+334
+00:44:04,710 --> 00:44:09,160
+the invaders moving down is a countdown in
+itself. This means we're going to be using
+
+335
+00:44:09,160 --> 00:44:15,870
+a lot of set interval and clear interval to
+as always minimal styling for you to take
+
+336
+00:44:15,870 --> 00:44:28,650
+and make your own. So yeah, let's get going.
+So as always, let's make sure to link up your
+
+337
+00:44:28,650 --> 00:44:35,660
+style CSS file with a link tag and app js
+file with a script tag in your HTML file.
+
+338
+00:44:35,660 --> 00:44:42,760
+Let's start off by adding an h3 tag where
+we can display our score. Let's add a span
+
+339
+00:44:42,760 --> 00:44:49,390
+with an ID of result here so we can display
+the score as well as play our game. Next,
+
+340
+00:44:49,390 --> 00:44:57,510
+let's add a div with a class name of grid.
+In it, we will put 11 by 11. Actually, let's
+
+341
+00:44:57,510 --> 00:45:06,110
+make it bigger. Let's make a 15 by 15 squares
+for our game. So a total of 225 days that
+
+342
+00:45:06,110 --> 00:45:19,300
+we will start as squares in our style CSS.
+Let's flip over to that. Now. Let's apply
+
+343
+00:45:19,300 --> 00:45:26,090
+some styling to our grid to make it look like
+an actual grid, as well as the grid divs inside
+
+344
+00:45:26,090 --> 00:45:32,300
+of it. We are using a width and a height of
+300 pixels here, meaning that the height and
+
+345
+00:45:32,300 --> 00:45:38,100
+the width of our squares need to be 20 pixels
+in order to make sure 15 squares fit on a
+
+346
+00:45:38,100 --> 00:45:45,610
+line before being wrapped over themselves.
+To make a second row. We might as well assign
+
+347
+00:45:45,610 --> 00:45:52,180
+a color to future classes, we will use our
+shooter invader boom for when they shoot hits
+
+348
+00:45:52,180 --> 00:46:02,320
+an invader and the laser. Let's open the HTML
+file path in our browser to check that looks
+
+349
+00:46:02,320 --> 00:46:11,920
+fine. Okay, great. Now let's go to our app
+js file. We start off by adding a DOM event
+
+350
+00:46:11,920 --> 00:46:16,781
+listener. All our JavaScript code will go
+inside this event listener from now on. Now
+
+351
+00:46:16,781 --> 00:46:22,150
+let's pick out the classes and IDs we have
+defined using query selectors. As there's
+
+352
+00:46:22,150 --> 00:46:29,930
+more than one element that is considered a
+div in inside the element with the class own
+
+353
+00:46:29,930 --> 00:46:36,520
+grid, we need to make sure to use query selector
+all for the squares. Also note how we use
+
+354
+00:46:36,520 --> 00:46:44,350
+the hash when we pick out our ID names, rather
+than the dot for class name. Now let's let
+
+355
+00:46:44,350 --> 00:46:50,180
+our JavaScript know that we want the width
+of the grid to be 15 that we want the shooter
+
+356
+00:46:50,180 --> 00:46:59,180
+to start at index 202 in our squares array,
+and our invaded start at index zero or collectively
+
+357
+00:46:59,180 --> 00:47:05,230
+invaders. I'll explain that later. We are
+going to leave an empty array for the invaders
+
+358
+00:47:05,230 --> 00:47:11,411
+we have shot down. Let's resolve zero for
+now. And let the direction we want to go in
+
+359
+00:47:11,411 --> 00:47:18,751
+be a one. Again, I will explain that later.
+And finally, let's leave the invader ID as
+
+360
+00:47:18,751 --> 00:47:28,600
+null for now. Now let's define our alien invaders
+as how we would want them to appear in our
+
+361
+00:47:28,600 --> 00:47:37,550
+squares array. So by saying these are the
+indexes we want our alien invader to be in,
+
+362
+00:47:37,550 --> 00:47:42,950
+we can easily see this on our grid by adding
+a color class name to them. So let's do this
+
+363
+00:47:42,950 --> 00:47:55,960
+using for each like this. So in the array
+alien invaders, for each item in the array,
+
+364
+00:47:55,960 --> 00:48:02,950
+we will choose to call invader I will pass
+this through our squares and any current index
+
+365
+00:48:02,950 --> 00:48:11,560
+value there might be so in this case zero.
+And then I want to add a class list I'm invada
+
+366
+00:48:11,560 --> 00:48:21,100
+to that square. We set this up purple as purple
+in our style sheet. So let's see if that works.
+
+367
+00:48:21,100 --> 00:48:27,860
+Let's flip over to a browser puppet it works.
+Now the best part of this is that we can control
+
+368
+00:48:27,860 --> 00:48:34,040
+all the positions of all the invaders in our
+alien array. Thanks to the current invader
+
+369
+00:48:34,040 --> 00:48:41,040
+index, try this yourself by changing the value
+from zero to five in your file. Okay, let's
+
+370
+00:48:41,040 --> 00:48:53,480
+do the same for shooter flip over to our browser
+to check and let's carry on. Now we need to
+
+371
+00:48:53,480 --> 00:48:58,620
+make our shooter move across the grid but
+not go up or down. For this we're gonna look
+
+372
+00:48:58,620 --> 00:49:05,720
+at key codes which are the codes given to
+the keys on your keyboard. Let's write a function
+
+373
+00:49:05,720 --> 00:49:11,290
+called move shooter and pass through E for
+event. Let's start off by clearing the board
+
+374
+00:49:11,290 --> 00:49:16,110
+of the shooter by removing the class name
+on the shooters current location index 202
+
+375
+00:49:16,110 --> 00:49:24,180
+as we sit above now using switch cases we
+will make a case for key code that is seven
+
+376
+00:49:24,180 --> 00:49:30,550
+or the left arrow on your keyboard and that
+you nine to the right. So the case that is
+
+377
+00:49:30,550 --> 00:49:37,830
+seven if the shooters current index is divisible
+by the width so 15 and leaves a remain leader
+
+378
+00:49:37,830 --> 00:49:43,800
+remainder is allowed to move left. So for
+example if you're going to square with index
+
+379
+00:49:43,800 --> 00:49:48,830
+30, you will know you're on the very left
+side of the grid as that is divisible by 15
+
+380
+00:49:48,830 --> 00:49:54,370
+and it's not good give you any remainders.
+As you have no remainder you cannot move left
+
+381
+00:49:54,370 --> 00:49:59,850
+anymore. That's what we've written. Now for
+case 39 if the shooters current index is in
+
+382
+00:49:59,850 --> 00:50:05,070
+a Square index where the number is divisible
+by the width. So 15 and the number is less
+
+383
+00:50:05,070 --> 00:50:14,970
+than 14, then you are allowed to move right.
+Then once it is done at a class of shooter
+
+384
+00:50:14,970 --> 00:50:24,280
+to the new location of the shooter on the
+grid Finally, let's add an event listener
+
+385
+00:50:24,280 --> 00:50:28,710
+for the key down action that triggers the
+move shooter function each time you put one
+
+386
+00:50:28,710 --> 00:50:33,940
+of the keys we discussed down on your keyboard.
+Let's check out the browser to see if this
+
+387
+00:50:33,940 --> 00:50:41,400
+is what. Okay, great. Now let's move on. Let's
+move the alien invaders from one side of the
+
+388
+00:50:41,400 --> 00:50:48,270
+grid to the other moving down a row each time,
+we will now write a function called move invaders
+
+389
+00:50:48,270 --> 00:50:54,270
+that we'll put, we'll put on a time loop.
+First, as above, let's define our left edge
+
+390
+00:50:54,270 --> 00:50:59,920
+and our right edge using similar logic, but
+the elite for the alien invaders array. This
+
+391
+00:50:59,920 --> 00:51:04,440
+is trickier as many as apply the logic to
+the first item in the array for checking if
+
+392
+00:51:04,440 --> 00:51:10,021
+we on the left edge and apply the logic the
+last items the last alien and alien invader
+
+393
+00:51:10,021 --> 00:51:14,980
+array to check if we were at the right edge.
+If we don't do this, aliens will just carry
+
+394
+00:51:14,980 --> 00:51:22,250
+on going through and what we see as the right
+edge and look really weird. So make sure to
+
+395
+00:51:22,250 --> 00:51:28,085
+do that. Okay, so if we are on the left edge
+and our direction is minus one, so I use minus
+
+396
+00:51:28,085 --> 00:51:34,720
+one here because of the alien was to go back
+one index in a row, it will essentially appear
+
+397
+00:51:34,720 --> 00:51:41,170
+to be going left. So if both these things
+are true, or we are at the right edge and
+
+398
+00:51:41,170 --> 00:51:46,570
+the direction is currently plus one, we want
+to get the direction and value of 15. So it
+
+399
+00:51:46,570 --> 00:51:53,310
+will move down to whole row on average. If
+the directions already 15 we carry on with
+
+400
+00:51:53,310 --> 00:51:58,081
+the same logic as above. So if you're the
+left or change direction be positive. Else
+
+401
+00:51:58,081 --> 00:52:06,790
+carry on going left we're keeping the direction
+as minus one. Now let's move over the alien
+
+402
+00:52:06,790 --> 00:52:15,160
+invader array to move and the invaders. loop
+over again to add a new direction to all the
+
+403
+00:52:15,160 --> 00:52:22,080
+items in the alien array. And loop over again
+to other class of invader to the new location
+
+404
+00:52:22,080 --> 00:52:30,800
+of all the aliens in the array or items. Now
+let's write some logic that decides that the
+
+405
+00:52:30,800 --> 00:52:40,160
+game is over. If the square and our current
+shooter is in has a class name that contains
+
+406
+00:52:40,160 --> 00:52:47,750
+invader and shooter, the game is over. This
+is because the alien invader has got to the
+
+407
+00:52:47,750 --> 00:52:57,020
+you know tutor and it's gone to the same square.
+we display the game over in our browser using
+
+408
+00:52:57,020 --> 00:53:03,020
+text content and add a boom class just for
+fun. We also clear the time interval for the
+
+409
+00:53:03,020 --> 00:53:12,610
+game like this. We also want to make sure
+that if any of the aliens Mr. shooter, but
+
+410
+00:53:12,610 --> 00:53:18,180
+reached the end of the grid, the game is over
+to we do so by declaring that if any aliens
+
+411
+00:53:18,180 --> 00:53:37,580
+are in the last 15 squares of the grid, the
+game is over. Now we need to invoke this function
+
+412
+00:53:37,580 --> 00:53:45,940
+every 500 milliseconds like this. Let's see
+how that looks now. Okay, great. Finally we
+
+413
+00:53:45,940 --> 00:53:51,460
+need to write a function that allows us to
+shoot at the alien to try when and gain points.
+
+414
+00:53:51,460 --> 00:53:59,350
+We will do so by passing through an event
+or E through our function shoot. let's declare
+
+415
+00:53:59,350 --> 00:54:04,510
+laser ideas no and add a new current index
+for the laser. The current index of the laser
+
+416
+00:54:04,510 --> 00:54:11,430
+will always be the current location of the
+shooter to start with. If we write this is
+
+417
+00:54:11,430 --> 00:54:18,790
+what's going to go to the shooter pool. These
+two declarations needs to be an only the scope
+
+418
+00:54:18,790 --> 00:54:25,090
+of this function for this to work by the way,
+make sure that now we will write a function
+
+419
+00:54:25,090 --> 00:54:32,450
+in here called the move laser. very similarly
+we will move the laser from its current starting
+
+420
+00:54:32,450 --> 00:54:37,910
+position and square. This time removing the
+whole width for it to appear to be moving
+
+421
+00:54:37,910 --> 00:54:50,790
+up awkward. So minus 50. MRI other laser close
+later. If the current square the laser is
+
+422
+00:54:50,790 --> 00:54:57,590
+incandescent and VEDA we do three things.
+Remove the laser, move the invader and add
+
+423
+00:54:57,590 --> 00:55:04,820
+a boom for fun We only want the moon to appear
+for a very short time, so we can use a timeout
+
+424
+00:55:04,820 --> 00:55:14,520
+for this and make sure to remove the boom
+after 250 milliseconds. We then clear the
+
+425
+00:55:14,520 --> 00:55:22,930
+time interval for this light set. Let's make
+an array of aliens we are taken down like
+
+426
+00:55:22,930 --> 00:55:30,400
+this. By writing this we are pushing a new
+item to our alien invaders take down empty
+
+427
+00:55:30,400 --> 00:55:41,600
+array we declared at the beginning of this
+video using push. We then add one to the result
+
+428
+00:55:41,600 --> 00:55:51,030
+and display this in our browser using text
+content. Lastly, if the laser is in the very
+
+429
+00:55:51,030 --> 00:56:00,550
+first 15 squares, we want to clear this interval
+and remove the laser class from the grid.
+
+430
+00:56:00,550 --> 00:56:19,820
+We want all of this to happen when we press
+the spacebar. using logic we learn above we
+
+431
+00:56:19,820 --> 00:56:26,220
+add an event listener on pass through an event
+or E for the keyCode 32 which is a spacebar
+
+432
+00:56:26,220 --> 00:56:32,850
+on your keyboard. We then pass through the
+middle is a function on 100 millisecond interval
+
+433
+00:56:32,850 --> 00:56:51,790
+like this. Now that we are counting how many
+aliens we have taken down, we need to add
+
+434
+00:56:51,790 --> 00:56:59,380
+some code above. Using bang we are writing
+here that if the alien takes alien take down
+
+435
+00:56:59,380 --> 00:57:08,980
+array does not include the space you can add
+an invader class this means that we will not
+
+436
+00:57:08,980 --> 00:57:16,730
+be reacting invaders once they are shot. And
+finally, we need to write some logic to declare
+
+437
+00:57:16,730 --> 00:57:22,450
+a win. This is simple if the length of our
+alien invaders taken down array is equal to
+
+438
+00:57:22,450 --> 00:57:43,900
+the length of our alien invaders we went this
+is because we have shot all the images Okay,
+
+439
+00:57:43,900 --> 00:57:53,010
+now let's flip over to play. Okay, I can see
+it doesn't like my event. Now. Let's change
+
+440
+00:57:53,010 --> 00:57:57,640
+this to switch case because I know that works.
+Even though there's only one option in this
+
+441
+00:57:57,640 --> 00:58:20,810
+which case I mean it's gonna work so I'm just
+going to use it as something else isn't working
+
+442
+00:58:20,810 --> 00:58:35,830
+as the aliens aren't disappearing reappearing.
+Okay, we forgot to add a classless oops. And
+
+443
+00:58:35,830 --> 00:58:43,120
+there we have it your very own space invader
+game. If you have any other questions about
+
+444
+00:58:43,120 --> 00:59:16,570
+the game, please let me know below. And I'll
+try to get back to you. Thank you. Hi, everyone,

@@ -1,0 +1,453 @@
+00:00
+welcome to this free CCNA packet tracer
+00:03
+practice lab you can download the lab
+00:05
+file from the link in the description if
+00:08
+you like these labs please consider
+00:10
+supporting me via my patreon or the
+00:12
+cryptocurrency options in the
+00:13
+description also please subscribe to the
+00:17
+channel for more labs like this and
+00:19
+share these videos with anyone else
+00:21
+studying for the CCNA this configuration
+00:25
+lab and the next troubleshooting lab
+00:28
+would be the last labs in my series of
+00:30
+labs for the CCNA I was expecting to
+00:34
+finish them by the end of the year but
+00:36
+with the approaching changes to a Cisco
+00:38
+certifications coming in February next
+00:40
+year I wanted to finish these soon so
+00:43
+you have plenty of time to practice them
+00:44
+and get your CCNA before the changes so
+00:49
+I've managed to put out a video almost
+00:51
+every day for over a month and finally
+00:53
+we're at the end stay tuned for my next
+00:56
+project which I'm really excited about
+00:59
+anyway this isn't the last video the
+01:01
+next one is so let's get started first I
+01:05
+want to mention just one thing about the
+01:06
+lab normally private IP addresses can't
+01:10
+be routed over the Internet in my NAT
+01:13
+labs I configured ACLs to simulate that
+01:16
+however I haven't done so in this lab so
+01:19
+you won't have to use NAT to send
+01:21
+traffic over the Internet cloud which is
+01:22
+here in the middle
+01:23
+in this review lab we will configure BGP
+01:28
+OSPF EIGRP GRE and PPP there are two
+01:35
+enterprises enterprise a and Enterprise
+01:38
+B which are connecting to the same
+01:40
+Internet service provider Enterprise a
+01:44
+uses OSPF and wants to configure a GRE
+01:47
+tunnel between two branches Enterprise a
+01:51
+also uses static routing over fibre
+01:53
+Ethernet to connect to the internet
+01:54
+rather than BGP Enterprise B uses AI GRP
+02:00
+in its internal network connecting to
+02:03
+the ISP with BGP over a PPP serial
+02:06
+connection let's configure Enterprise a
+02:09
+first the first step is simple that is
+02:13
+to configure
+02:13
+static roads to the internet on r1 and
+02:16
+r2 often BGP isn't necessary and static
+02:21
+routes are sufficient for Internet
+02:23
+connectivity for enterprise B's
+02:26
+connection to a simple static Reb would
+02:28
+work but they want to use BGP anyway
+02:32
+let's configure the static route on r1
+02:34
+first for enterprise a enable compte IP
+02:42
+route oh-oh-oh-oh oh-oh-oh-oh
+02:47
+then i can specify the outgoing
+02:49
+interface or the next hop IP address it
+02:52
+doesn't really matter which i'll use the
+02:54
+interface g zero zero zero that's it
+02:58
+let's do the same on our to enable
+03:04
+compte IP route
+03:10
+oh-oh-oh-oh-oh-oh Dakota Oh G zero zero
+03:13
+zero that's it next let's configure a
+03:18
+GRE tunnel from r1 to r2 which is a
+03:22
+logical tunnel interface which will
+03:24
+allow them to behave as if they are
+03:26
+directly connected and share OSPF routes
+03:29
+even though traffic between them
+03:30
+actually passes through the service
+03:32
+provider network I'll start here on r2
+03:36
+let's make the interface interface
+03:39
+tunnel zero let's configure the source
+03:43
+and destination addresses these are the
+03:47
+actual physical interface addresses on
+03:49
+r2 and r1 tunnel source G zero zero zero
+03:56
+tunnel destination 203 o y1 and 3.2
+04:02
+which is the IP address of our ones G
+04:05
+zero zero zero interface now let's give
+04:09
+it an IP address from the 192.168 12/30
+04:13
+network as per the instructions IP
+04:17
+address 192.168.1.1 five five two five
+04:24
+two okay that's all
+04:27
+exit now let's configure our one side
+04:34
+interface tunnel zero tunnel source G
+04:39
+zero zero zero tunnel destination 203 o
+04:44
+y1 13.6 which is the IP address of our
+04:48
+two s G zero zero zero interface IP
+04:52
+address 192.168.1.1
+04:58
+255.255.255.0 it's it okay let's try to
+05:03
+ping from one end of the tunnel to the
+05:05
+other do ping 192.168 12.2
+05:19
+okay we can ping from one side of the
+05:21
+tunnel to the other finally let's
+05:25
+configure OSPF on r1 and r2 I'll start
+05:30
+here on our one router OSPF one remember
+05:35
+the OSPF process ID is locally
+05:37
+significant and doesn't have to match
+05:39
+between routers we should activate OSPF
+05:43
+on the g zero zero and tunnel zero
+05:46
+interfaces of r1 and r2 so here on our
+05:52
+one network 192.168.1.0 0.255 area zero
+06:00
+that's G zero zero and network
+06:04
+192.168.1.0 oh-oh-oh three area zero
+06:10
+that's tunnel zero now let's configure
+06:13
+r2 and see if they exchange OSPF routes
+06:18
+router OSPF one network 192.168.0 0.255
+06:27
+area zero network 192.168.1.0 three area
+06:36
+zero that's all that's necessary for a
+06:39
+simple OSPF configuration okay let's
+06:42
+wait for 10 seconds or so for them to
+06:44
+become neighbors and exchange routes
+06:46
+then I'll check the route table
+06:56
+okay let's check that routing table do
+06:59
+show IP route
+07:06
+there's the 192.168.1.0 slash 24 network
+07:10
+which are two learned from our one do
+07:14
+show IP ospf neighbor there's our one
+07:19
+and the neighbor state is full as
+07:21
+expected okay that's all for the
+07:25
+configuration of Enterprise a let's go
+07:28
+to enterprise be the first requirement
+07:31
+is to configure PPP with chap
+07:34
+authentication to connect to the ISP the
+07:38
+ISP side is already configured so let's
+07:41
+go on our three enable first let's just
+07:48
+confirm that we can't ping the ISP yet
+07:51
+ping two oh three oh one one three nine
+08:00
+okay it doesn't work coffee tea we're
+08:05
+going to use chap authentication so for
+08:07
+that we need to configure a user account
+08:09
+here on r3 which uses the hostname of
+08:12
+the remote host in this case ISP and a
+08:16
+password which is the same between the
+08:18
+two routers in this case CCNA so user
+08:24
+name is P password CCNA now let's
+08:30
+configure the interface interface s 0 0
+08:34
+0 I'm going to shut down the interface
+08:37
+as I configure it then enable it when
+08:40
+I'm done that can help the interface
+08:42
+come up quicker shutdown okay first set
+08:48
+the encapsulation encapsulation PPP then
+08:53
+set the authentication PPP
+08:56
+authentication chap that's all there is
+09:00
+to it no shutdown okay let's wait a few
+09:04
+seconds
+09:09
+okay and let's try a ping do ping 2 O 3
+09:14
+0 1 1 3 9
+09:22
+okay now the ping works next let's
+09:27
+configure a EIGRP on r3 and r4 I'll
+09:31
+start here on r3 router AIG RP 100
+09:36
+remember the EIG our pas number has to
+09:40
+be the same on routers for them to
+09:41
+become a EIGRP neighbors
+09:44
+now let's advertise these networks
+09:47
+network 203 o d11 38000 3 network
+09:56
+192.168.0 oh-oh-oh 255 network 192.168.0
+10:05
+oh-oh-oh 255 let's make our threes s 0 0
+10:11
+0 interface passive since no EIGRP
+10:15
+neighbors are connected to that
+10:16
+interface passive interface s0 0 0 now
+10:22
+let's configure our for enable call for
+10:28
+t router IG RP 100 network 192.168.0.0
+10:38
+255 network 192.168.0.0 255 ok let's
+10:48
+check if our 4 has learned ew g RP
+10:50
+routes from r3 do show IP route there we
+10:57
+go 192.168 300 our threes internal
+11:01
+network and 203 o 1 1 3 8 the internet
+11:06
+segment from r3 to ISP let's try a ping
+11:11
+from pc 4 to pc 3
+11:13
+now that our four knows the route to
+11:16
+192.168.0
+11:19
+ping 192.168.1 hundred okay the ping
+11:29
+works
+11:30
+finally let's configure ebgp on r3 to
+11:35
+connect to the internet rather than the
+11:38
+static road method we used on r1 and r2
+11:41
+note that Enterprise B uses BGP a s
+11:46
+65,000 and the ISP uses 65,000 won okay
+11:52
+let's get started
+11:55
+router bgp 65,000
+12:00
+now let's specify the neighbor neighbor
+12:04
+200-300 one one three nine remote a s
+12:09
+65,000 won also let's advertise our
+12:14
+internal networks network 192.168.0 mask
+12:20
+255.255.255.0
+12:24
+remember that bgp uses a standard
+12:26
+network mask not a wildcard mask network
+12:33
+192.168.0 mask 255.255.255.0 network
+12:41
+192.168.0 mask 255.255.255.0 okay that's
+12:48
+all for BGP now step four asks why PC
+12:54
+one can't ping PC for let's confirm and
+12:58
+try that ping from pc1 ping 192.168.1
+13:06
+hundred
+13:13
+indeed the ping fails we're given a hint
+13:16
+to look on our four so let's go on our
+13:19
+four what do you think would be the most
+13:22
+obvious issue how about no route to PC
+13:27
+one do show IP route as you can see our
+13:33
+four has no route to the 192.168.1.0
+13:37
+slash 24 network or any other network
+13:40
+beyond our three
+13:43
+usually I'd configure ibgp or route
+13:47
+redistribution into EIGRP but those are
+13:50
+more advanced topics let's use the
+13:53
+simplest solution a static route
+13:56
+pointing to our three exit IP route
+14:02
+oh-oh-oh-oh oh-oh-oh-oh 192.168.1 okay
+14:11
+that's it let's try that ping again from
+14:14
+pc1 ping 192.168.1 hundred
+14:29
+okay the pings work now in this lab we
+14:33
+configured BGP OSPF EIGRP
+14:38
+GRE and PPP some of the major topics of
+14:42
+the icnd2 exam that's all for this lab
+14:49
+thank you for watching I hope this lab
+14:52
+and video have been helpful for you
+14:54
+there is only one more lab left in my
+14:57
+CCNA series but please subscribe to
+15:00
+catch my next project if you want to
+15:03
+support my channel
+15:04
+I accept cryptocurrency donations via
+15:06
+the addresses in the description I am
+15:10
+also a brave verified publisher and
+15:12
+accept bat or basic attention token
+15:15
+donations in the brave browser
+

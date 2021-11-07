@@ -1,0 +1,209 @@
+00:00
+welcome to this free CCNA packet tracer
+00:03
+practice lab you can download the lab
+00:05
+file from the link in the description if
+00:07
+you like these labs please consider
+00:10
+supporting me via my patreon or the
+00:12
+cryptocurrency options in the
+00:14
+description this lab will be one last
+00:18
+lab focusing exclusively on ACLs this
+00:22
+time we will configure named standard
+00:24
+ACLs as opposed to the numbered ACLs we
+00:27
+configured in previous labs also
+00:30
+remember that standard ACLs filter based
+00:32
+only on source address as opposed to
+00:35
+extended ACLs which use other parameters
+00:37
+such as destination address as well our
+00:42
+first requirement is that hosts in the
+00:45
+192.168.1.0 / 24 and 192.168.0.0 a CL
+00:58
+zon are ones F 0 0 and F 1 0 interfaces
+01:02
+first let's create the ACL preventing
+01:05
+hosts in the 192.168 2's last 24 network
+01:09
+from communicating with the 192.168.1.0
+01:12
+/ 24 network on our one an able cough T
+01:20
+number ACLs are configured with the
+01:22
+command access list but named ACLs are
+01:26
+configured with this command IP access
+01:29
+list now let's check the options we'll
+01:33
+go with standard for this lab let's
+01:35
+check the game now notice you can also
+01:38
+create a numbered ACL with this command
+01:40
+however let's give it a name to two one
+01:45
+meaning from the 192.168.20.10 at work
+01:49
+to the 192.168.1.2 last 24 network now
+01:55
+let's check the options there are none
+01:58
+so clearly this is different from our
+02:00
+previous ACL configuration let's hit
+02:03
+enter to see what happens as you can see
+02:07
+we have created a sorry we have entered
+02:09
+a separate configuration mode from here
+02:12
+we will configure the contents of this
+02:13
+a CL let's check what options there are
+02:17
+let's create a deny statement first deny
+02:22
+192.168 200 200 255 now let's check the
+02:29
+options there are none because this is a
+02:32
+standard ACL so we only configure the
+02:35
+source IP that we are filtering now
+02:38
+let's create one more entry to allow all
+02:40
+other traffic because there is still
+02:42
+that implicit deny any at the end of the
+02:44
+ACL permit any exit okay that's it
+02:52
+before applying that ACL let's create
+02:55
+the second ACL to prevent traffic from
+02:57
+the 192.168.1.0 slash 24 network from
+03:01
+reaching the 1 & 2 - 1 6 8 - 0 / 24
+03:04
+network IP access list standard 1 - to
+03:11
+deny 192.168.1.0 oh oh oh 255 permit any
+03:20
+ok we have created both ACLs necessary
+03:24
+for the first requirement now let's
+03:25
+apply them exit first let's go on f00
+03:32
+interface f00 on this interface we will
+03:36
+block traffic from 192.168.0
+03:42
+the interface so IP access group 2 - 1
+03:45
+out now let's apply the other ACL to f10
+03:51
+interface f10 IP access group 1 - 2 out
+03:58
+now let's test this configuration I'll
+04:02
+try to ping from pc1 to pc2 192.168 2000
+04:13
+work we get a message saying destination
+04:15
+host unreachable and to pc for pig
+04:19
+192.168 to same thing just to make sure
+04:24
+I'll do some pings from PC
+04:26
+three as well ping 192.168.1 11 doesn't
+04:33
+work and ping 192.168.1.2 elv okay so
+04:39
+looks like our configuration worked now
+04:42
+let's go to the next requirement hosts
+04:45
+in the 192.168.20.10 160 8.3 o / 24
+04:54
+network remember the general rule that
+04:57
+standard ACLs should be applied as close
+05:00
+as possible to the destination in this
+05:03
+case the destination is 192.168.0 / 24
+05:08
+so let's configure the ACL on our to
+05:12
+enable conf t IP access list standard 2
+05:19
+to 3 deny 192.168 200 200 255 permit any
+05:29
+exit now let's apply it outbound on our
+05:34
+to s f00 interface interface f00 IP
+05:40
+access group 2 to 3 out finally let's
+05:45
+test I'll try to ping from PC 3 to
+05:48
+server 1 and server to ping 192.168.1
+05:54
+hundred destination host unreachable
+05:57
+ping 192.168.1 o1 destination host
+06:03
+unreachable
+06:04
+we have successfully completed this lab
+06:09
+thank you for watching I hope this lab
+06:12
+and video have been helpful for you
+06:13
+please subscribe for future labs like
+06:16
+this which we be released weekly if you
+06:20
+have requests for any specific labs let
+06:22
+me know in the comment section if you
+06:24
+want to support my channel please
+06:26
+consider contributing to my patreon
+06:28
+patreon comm / Jeremy's IT lab I accept
+06:34
+Bitcoin and aetherium donations via the
+06:37
+addresses in the description
+06:39
+I am also a brave verified publisher and
+06:42
+accept bat or basic attention token
+06:45
+donations in the brave browser
+

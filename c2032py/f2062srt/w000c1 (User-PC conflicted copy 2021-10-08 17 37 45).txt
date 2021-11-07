@@ -1,0 +1,90 @@
+welcome to this free CCNA packet tracer practice lab
+you can download the lab file from the link in the description
+if you like these labs please consider supporting me via my patreon or the cryptocurrency options in the description
+also please subscribe to the channel for more labs like this
+and share these videos with anyone else studying for the CCNA
+in this lab we will troubleshoot bgp
+using the same network we configured in the previous lab
+there are three misconfigurations all on our one
+let's get started
+enable our one is displaying lots of messages regarding OSPF and BGP
+let's focus on this BGP one first
+peer in wrong a s
+let's investigate here
+show IP BGP summary
+notice the bgp router ID of one 1.1.1
+taken from the loopback interface
+just like in Eid RP and OSPF
+look down at our neighbor here
+
+
+however the AS IS 6500
+which is why r1 is displaying the peer in wrong a s message
+SP r 1 is actually in a s 65,000 one
+show IP BGP neighbor
+up here by the top you can see BGP state equals idle
+that's the initial BGP state
+and if a wrong peer a s is configured
+BGP won't proceed further than this state
+let's fix it
+coffee tea
+router bgp 65,000
+neighbor 101 remote a s 65 thousand won
+immediately we get a message saying the neighbor is up
+do show IP BGP neighbour
+now the state is established
+that's what we want
+however we keep getting these OSPF messages
+something's up there
+the message clearly tells us what's up actually
+mismatch area ID
+do show IP route
+we aren't getting any OSPF routes
+because of the area ID mismatch
+do show IP protocols
+there's the problem
+oh SPF is activated on all interfaces in area 1
+it should be area 0
+I'll remove the current network statement and fix it
+router OSPF 1
+no network
+oh-oh-oh-oh 255 255 dot 255 dot 255 area 1
+Network oh-oh-oh-oh 255 dot 255 dot 255 dot 255 area 0
+ok that should fix our OSPF problem
+although this was an OSPF problem
+it's relevant to BGP
+because the OSPF problem was causing routes not to appear in our ones route table
+which affects BGP
+there should still be one more issue on our one
+but I'll head to r2 and test if we can reach the external server at 1501
+enable pin 1500 1
+nope the ping still fail
+so let's go back to our one
+our one should be advertising at 1000s 516 summary to the service provider
+let's check if it's in the rev table on our one
+do show IP route
+there it is
+
+
+let's check the BGP table
+show IP BGP
+however it doesn't show up in the BGP table
+let's check the running config
+do show run
+there's the problem
+the 10000 network is configured with a slash 8 mask
+although it doesn't appear here because it defaults to the class a boundary
+but remember BGP requires an exact match in the router table
+let's fix that Network statement
+router bgp 65,000
+no network 10000 Network 10000 mask 255.255.255.0 dot 1
+
+ok the ping works now
+we've successfully solved the problems on the network
+that's all for this lab
+thank you for watching
+I hope this lab and video have been helpful for you
+please subscribe for future labs like this which will be released weekly
+if you have requests for any specific labs let me know in the comment section
+if you want to support my channel I accept Bitcoin and aetherium donations via the addresses in the description
+I am also a brave verified publisher and accept bat or basic attention token donations in the brave browser

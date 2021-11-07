@@ -1,0 +1,213 @@
+00:00
+welcome to this free CCNA packet tracer
+00:03
+practice lab you can download the lab
+00:06
+file from the link in the description if
+00:09
+you like these labs please consider
+00:11
+supporting me via my patreon or the
+00:13
+cryptocurrency options in the
+00:14
+description also please subscribe to the
+00:18
+channel for more labs like this and
+00:19
+share these videos with anyone else
+00:21
+studying for the CCNA in this lab we
+00:26
+will troubleshoot HS RP the correct
+00:29
+configuration should be identical to the
+00:31
+previous lab however a couple of miss
+00:34
+configurations have been made I'll open
+00:37
+up r1 here and you can see it's
+00:41
+displaying the same error message over
+00:43
+and over again we are also told in the
+00:46
+instructions that are to doesn't retake
+00:48
+its role as the active router for VLAN
+00:51
+20 after recovering from a failure let's
+00:55
+take a look at this error message
+00:57
+duplicate address 10 10 10 1 that's the
+01:02
+virtual IP address used for VLAN 10 this
+01:07
+error message can often occur when there
+01:09
+are miss configurations between the two
+01:11
+routers that caused them not to
+01:13
+recognize each other as an active
+01:14
+standby pair so both routers claimed to
+01:17
+be the active router thus resulting in a
+01:20
+duplicate address in this case pcs in
+01:24
+VLAN 10 will still be able to use the
+01:26
+virtual IP address however whether they
+01:29
+go via r1 or r2 depends on which replies
+01:33
+to the ARP requests faster just to make
+01:37
+it easier to work I'll stop these
+01:38
+messages from being displayed enable
+01:42
+terminal no monitor if I didn't do that
+01:47
+the messages would keep appearing every
+01:49
+few seconds and make things difficult to
+01:51
+see
+01:52
+let's check the HSR P configuration show
+01:57
+standby and since the error message is
+02:00
+for VLAN 10 I'll just show G 0 1 the
+02:04
+interface for VLAN 10 hour 1 is claiming
+02:08
+to be the active which it should be in
+02:10
+our configuration
+02:12
+you can see the priority is 110 let's
+02:16
+check on our to enable terminal no
+02:23
+monitor show standby g 0 2 so R 2 is
+02:31
+also claiming to be the active router
+02:32
+what's causing this let's look at the
+02:36
+two side-by-side did you notice the
+02:43
+problem R 2 is using version 2 as a chit
+02:47
+however R 1 is not it's still using
+02:50
+version 1 let's fix that on our one
+02:55
+compte interface G 0 1 standby version 2
+03:02
+ok I'll wait here for 10 seconds or so
+03:05
+to let them work things out and then
+03:07
+let's check if r2 is the standby
+03:19
+okay hopefully that's enough time let's
+03:21
+check out our to show standby g02 there
+03:30
+we go
+03:30
+state is standby I'll try a traceroute
+03:33
+from pc1 to the external server just to
+03:37
+confirm it takes the path via r1 trace
+03:42
+route 1500 one perfect it's going via r1
+03:52
+at ten ten ten - so we solved the
+03:56
+problem here on r1 I'll enable the
+04:00
+syslog messages on r1 and r2 again since
+04:03
+those error messages should have stopped
+04:05
+on r1 first end terminal monitor okay
+04:14
+now let's do the same on r2 and terminal
+04:20
+monitor
+04:22
+okay now let's investigate what's up on
+04:24
+VLAN 20 show standby gig 0 1 so R 2 is
+04:33
+currently the active router for VLAN 20
+04:35
+but we're told in the lab instructions
+04:37
+that it doesn't retake its role as
+04:39
+active router when it recovers from a
+04:41
+failure actually I don't even need to
+04:45
+troubleshoot anything here if you come
+04:47
+across a problem like this the issue is
+04:50
+preemption actually it says right here
+04:53
+preemption disabled if preemption is
+04:57
+disabled the active router won't take
+05:00
+back its role as the active router if it
+05:02
+fails and then recovers it will become
+05:04
+the standby router the configuration
+05:07
+instructions say that preemption should
+05:09
+be enabled however so let's do that
+05:12
+coffee tea interface g0 1
+05:16
+standby 20 preempt do show standby G 0 1
+05:24
+there we go preemption enabled that's
+05:27
+all for this lab
+05:31
+thank you for watching I hope this lab
+05:34
+and video have been helpful for you
+05:36
+please subscribe for future labs like
+05:38
+this which will be released weekly if
+05:41
+you have requests for any specific labs
+05:43
+let me know in the comments section if
+05:46
+you want to support my channel I accept
+05:49
+Bitcoin and aetherium donations via the
+05:51
+addresses in the description I am also a
+05:54
+brave verified publisher and accept bat
+05:57
+or basic attention token donations in
+06:00
+the brave browser
+

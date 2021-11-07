@@ -1,0 +1,281 @@
+00:00
+welcome to this free CCNA packet tracer
+00:03
+practice lab you can download the lab
+00:05
+file from the link in the description if
+00:08
+you like these labs please consider
+00:10
+supporting me via my patreon or the
+00:12
+cryptocurrency options in the
+00:13
+description also please subscribe to the
+00:17
+channel for more labs like this in this
+00:21
+lab we will practice some basic ipv6
+00:23
+configurations including ipv6 address
+00:27
+configuration slack or stateless address
+00:30
+auto-configuration and ipv6 static
+00:33
+revving let's get right into it
+00:36
+the first step is to enable ipv6 on the
+00:39
+routers and configure some ipv6
+00:41
+addresses I'll go on r1 first enable
+00:47
+compte ipv6 is not enabled by default to
+00:53
+enable it use this command ipv6 unicast
+00:57
+routing now let's configure the
+01:00
+addresses according to the network
+01:01
+diagram interface g00 ipv6 address 2001
+01:09
+DB 8 1 2 3 1 2 3 double colon 1/64 also
+01:17
+let's enable the interface no chef
+01:20
+interface G 0 1 IP v6 address 2001 DB 8
+01:26
+1 1 double colon 1/64 no chef makes it
+01:33
+okay let's check do show ipv6 interface
+01:37
+brief there are the addresses we
+01:40
+configured but what are these other
+01:42
+addresses there link local addresses and
+01:46
+they are automatically generated on ipv6
+01:48
+interfaces these addresses are never
+01:52
+routed they only work on the local link
+01:54
+link local addresses are in the fe80
+01:58
+slash 10 range ok that's it for our one
+02:02
+next let's go on our to enable compte on
+02:10
+our 2 we will only configure the g0 one
+02:13
+in
+02:13
+face for now as in the next step we will
+02:15
+use slack to configure the address for
+02:17
+the g00 interface interface G 0 1 IP p6
+02:23
+address 2001 DB 8 2 2 double colon 1/64
+02:30
+no shutdown ok let's go on r3 and do the
+02:35
+same in abel compte interface g 0 1 IP
+02:44
+v6 address 2001 DB 8 3 3 double colon
+02:51
+1/64 no shutdown ok now in step 2 we
+02:57
+will use slack stateless address
+02:59
+auto-configuration to automatically
+03:02
+generate ipv6 addresses for r2 and r3 SG
+03:06
+0 0 interfaces how does slack work to
+03:10
+put it briefly ipv6 uses NDP or neighbor
+03:14
+discovery protocol and as part of NDP r1
+03:18
+is currently sending RA or router
+03:21
+advertisement messages on its G 0 0
+03:23
+interface when we configure slack r2 and
+03:28
+r3 will receive these messages and use
+03:31
+them to learn the network prefix which
+03:33
+is 2001 DB 8 1 2 3 1 2 3 / 64 in this
+03:38
+case they will take that prefix and use
+03:41
+a modified version of their own MAC
+03:43
+address to generate the rest of the IP
+03:44
+address hopefully you've learned this in
+03:47
+your studies if you're not familiar with
+03:49
+it now make sure you are for the test
+03:50
+anyway the configuration is simple we
+03:54
+are on our 3 already so let's do it here
+03:56
+first interface G 0 0 no shutdown
+04:02
+ipv6 address Auto config exit next I'll
+04:08
+go on r2 interface G 0 0 no shutdown
+04:14
+ipv6 address Auto config exit these
+04:20
+routers won't generate their addresses
+04:21
+immediately so I'll pause the video as
+04:23
+we wait for the router advertisements
+04:25
+from R 1 to reach them
+04:29
+okay I'm on r2 and as you can see from
+04:32
+the output of the show ipv6 interface
+04:35
+brief command r2 has generated an ipv6
+04:38
+address for its g0z interface and on r3
+04:44
+you can see the same next let's
+04:50
+configure some ipv6 static Reds on each
+04:53
+router will have to configure two static
+04:55
+routes one for each of the other routers
+04:58
+internal networks now to configure an
+05:03
+next hop address of r2 and r3 we will
+05:07
+have to use their slack addresses which
+05:09
+are not easy to remember so to do so
+05:12
+I'll be copy and pasting their addresses
+05:15
+first let me copy our twos g00 address
+05:23
+okay now I'll create the first route on
+05:26
+r1 to our two's internal network ipv6
+05:33
+route 2001 DB 8 2 2 double colon slash
+05:40
+64 now let me paste in our two's address
+05:45
+there we go now since I already have our
+05:48
+two SG 0 0 address copied I'm going to
+05:52
+configure the same route on our three
+05:56
+ipv6 route 2001 DB 8 2 2 double colon
+06:03
+slash 64 and paste our two's address in
+06:08
+there we go
+06:10
+now I'll copy our fries jeez user
+06:13
+interface address and make a route to
+06:15
+its internal network on r1 and r2 there
+06:19
+we go
+06:20
+now I'll go on our one IP v6 route 2001
+06:27
+DV 8 3 3 double colon slash 64 and paste
+06:34
+in the address
+06:36
+there we go next on our to high six
+06:42
+route 2001 DB 8 3 3 double colon slash
+06:47
+64 and once again paste in the address
+06:53
+okay
+06:54
+now let's configure routes to our ones
+06:56
+internal network on r2 and r3 since i'm
+07:00
+on r2 already let's start here
+07:03
+ipv6 route 2001 DB 8 1 1 double colon
+07:10
+slash 64 2001 DB 8 1 2 3 1 2 3 double
+07:16
+colon 1 ok now on our three ipv6 route
+07:23
+2001 deviate 1 1 double colon slash 64
+07:31
+2001 DB 8 1 2 3 1 2 3 double colon 1 ok
+07:40
+all of our routes are now configured for
+07:42
+this video I won't ping from each router
+07:44
+but let's just try out some things from
+07:46
+r3 to test first I'll ping PC ones
+07:51
+address exit ping 2001 DB 8 1 1 double
+07:58
+colon 64 ok the ping works and now I'll
+08:04
+ping PC to ping 2001 DB 8 2 2 double
+08:10
+colon 64 again the ping works in this
+08:17
+lab we configured manual ipv6 addresses
+08:20
+slack addressing and ipv6 static ribs
+08:23
+that's all for this lab thank you for
+08:29
+watching I hope this lab and video have
+08:31
+been helpful for you please subscribe
+08:33
+for future labs like this which will be
+08:35
+released weekly if you have requests for
+08:38
+any specific labs let me know in the
+08:40
+comments section if you want to support
+08:43
+my channel I accept a Bitcoin and
+08:45
+aetherium donations via the addresses in
+08:46
+the description I am also a brave
+08:50
+verified
+08:50
+publisher and accept bat or basic
+08:53
+attention token donations in the brave
+08:55
+browser
+

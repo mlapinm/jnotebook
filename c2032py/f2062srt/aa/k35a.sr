@@ -1,0 +1,257 @@
+00:00
+welcome to this free CCNA packet tracer
+00:03
+practice lab you can download the lab
+00:06
+file from the link in the description in
+00:08
+this lab we will configure DHCP dynamic
+00:13
+host configuration protocol DHCP
+00:17
+dynamically provides IP addresses as
+00:19
+well as information like default gateway
+00:22
+and DNS server addresses to hosts so
+00:26
+that each host doesn't have to be
+00:27
+manually configured in this lab we will
+00:31
+configure r1 as a DHCP server which will
+00:35
+provide this information to the other
+00:37
+devices on the network we will also
+00:40
+configure r2 as a DHCP client on one
+00:44
+interface and as a DHCP relay agent on
+00:48
+another interface let's get started
+00:53
+first I want to show that our pcs don't
+00:56
+have IP addresses let's go on PC one IP
+01:03
+config it has an address in the 169.254
+01:08
+range this is an automatic private IP
+01:11
+address or apipa pc one is configured to
+01:17
+get its address via DHCP but there is no
+01:20
+DHCP server configured yet so this
+01:23
+address was automatically generated
+01:25
+let's get in a real usable IP address
+01:29
+the first step is to configure our DHCP
+01:32
+server r1 an able compte let's create
+01:41
+the first DHCP pool IP dhcp pool 10 pool
+01:47
+now we've created the pool and entered
+01:50
+DHCP configuration mode now let's
+01:54
+specify the range of addresses we will
+01:56
+be handing out to hosts 10000 / 24 in
+02:00
+this case network 10000 255.255.255.0
+02:09
+next the default gateway default router
+02:15
+1000won next the DNS server DNS server
+02:22
+1000 one note that I haven't actually
+02:27
+configured a DNS server in this lab I
+02:29
+just wanted to show that command finally
+02:32
+a range of excluded addresses these are
+02:36
+Abbas's that our DHCP server won't
+02:38
+distribute to hosts addresses that we
+02:41
+want to keep reserved this is actually
+02:44
+not configured in DHCP mode its
+02:46
+configured in global configuration mode
+02:48
+so exit IP dhcp excluded address now we
+02:56
+enter the first address in the range
+02:58
+1000 won then the last address in the
+03:02
+range 1000 10 that will exclude all
+03:06
+addresses from 1000 1 to 1000 10 from
+03:11
+being distributed by the DHCP server now
+03:15
+let's configure the next DHCP pool IP
+03:19
+dhcp pool 20 pool network 20000
+03:27
+255.255.255.0 default router 2000 one
+03:33
+DNS server 2000 one exit now let's
+03:40
+configure an excluded address range
+03:41
+again IP dhcp excluded address 2000 1
+03:49
+2000 10 ok now one more DHCP pool to
+03:55
+configure IP dhcp pool 12 pool network
+04:01
+192.168.1.0 255.255.255.0 exit ok our
+04:10
+DHCP server is now configured now hosts
+04:15
+in the 10000 / 24 network should have an
+04:18
+IP address I'll go on PC one
+04:23
+IP config slash release ipconfig slash
+04:28
+renew this will make PC 1 refresh its IP
+04:33
+configuration as you can see PC 1 now
+04:38
+has an IP address and a default gateway
+04:41
+and DNS server as we configured on our
+04:44
+DHCP server r1 now let's go to step 2
+04:49
+art to SG 0 0 interface has no IP
+04:52
+address configured typically we would
+04:56
+manually configure an IP address but I
+04:58
+want to show you how to use DHCP to get
+05:01
+an IP address for r2 we configured a
+05:04
+pool on our one with the 192.168 12/24
+05:09
+range and r2 will get an address from
+05:11
+that network let's go on our to enable
+05:19
+coffee/tea interface g 0 0 to make it
+05:25
+use DHCP to get an IP address use this
+05:27
+command IP address DHCP that's it
+05:33
+now let's enable the interface no shut
+05:40
+there we go
+05:42
+we get a message stating that r2 was
+05:44
+assigned a DHCP address exit step 2 is
+05:49
+now complete step 3 is to configure our
+05:54
+to SG 0 1 interface as a DHCP relay
+05:57
+agent so that hosts on the 2000 0 / 24
+06:01
+network can get IP addresses
+06:04
+although r1 is configured to give
+06:07
+addresses to the 2000 / 24 Network
+06:10
+because the hosts aren't connected to
+06:12
+the same network as r1 we need to
+06:14
+configure a DHCP relay agent the rule is
+06:18
+to configure the relay agent on the
+06:20
+layer 3 interface closest to the hosts
+06:23
+in this case r2 sg0 one interface first
+06:28
+let's check that that pcs don't have
+06:29
+addresses in the 2000 0/24 range yet
+06:33
+I'll go on PC 3
+06:38
+IP config once again the IP addresses in
+06:43
+the 169.254 range an automatic private
+06:46
+IP address let's go configure the relay
+06:50
+agent on our two interface G 0 1 to
+06:58
+configure the relay agent we just have
+07:00
+to use one command IP helper address
+07:04
+followed by the address of the DHCP
+07:07
+server which is R 1 so 192.168.1 that's
+07:13
+it now let's go back to pc 3 IP config
+07:20
+slash release IP config slash renew and
+07:30
+there we go
+07:31
+pc 3 now has an IP address in the 2000
+07:36
+slash 24 range as well as a default
+07:39
+gateway and dns server since our DHCP
+07:42
+relay agent relayed the DHCP messages
+07:45
+between the PC and the DHCP server
+07:49
+that's all for this lab thank you for
+07:57
+watching
+07:57
+I hope this lab and video have been
+07:59
+helpful for you please subscribe for
+08:02
+future labs like this which will be
+08:04
+released weekly if you have requests for
+08:06
+any specific labs
+08:08
+let me know in the comment section if
+08:10
+you want to support my channel I accept
+08:13
+Bitcoin and a theorem donations via the
+08:16
+addresses in the description I am also a
+08:19
+brave verified publisher and accept bat
+08:22
+or basic attention token donations in
+08:24
+the brave browser
+

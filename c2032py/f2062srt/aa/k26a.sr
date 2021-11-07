@@ -1,0 +1,365 @@
+00:00
+welcome to this free CCNA packet tracer
+00:02
+practice lab you can download the lab
+00:05
+file from the link in the description if
+00:08
+you like these labs please consider
+00:10
+supporting me via my patreon or the
+00:12
+cryptocurrency options in the
+00:14
+description this lab will be the last of
+00:18
+our labs focused on static routing in
+00:21
+this lab we will configure a backup
+00:23
+static route known as a floating static
+00:25
+route on our one all routers are
+00:29
+pre-configured with the routing protocol
+00:30
+our IP pronounced trip we haven't done
+00:34
+any labs on routing protocols yet but
+00:37
+rip configuration will be coming soon we
+00:40
+will configure our one with a floating
+00:42
+static route so that in the event that
+00:44
+it's s30 interface fails it will use the
+00:47
+s20 interface instead to reach the 1000
+00:50
+slash 24 network try to complete the lab
+00:54
+yourself first then continue watching if
+00:56
+you have trouble or watch the video
+00:58
+after to check your solution so as it
+01:02
+says in the lab the routing protocol rip
+01:04
+is configured everywhere except between
+01:06
+r1 and r3 meaning it's not activated for
+01:10
+the s20 interfaces of r1 and r3 however
+01:15
+our goal is to configure what's called a
+01:17
+floating static route which will cause
+01:19
+r1 to send traffic destined to the 10000
+01:23
+slash 24 network using its s20 interface
+01:26
+when it's read via r3 goes down we
+01:30
+actually only need one command to
+01:32
+complete this lab but let me explain
+01:34
+some things first if you have already
+01:36
+learned these things in your studies
+01:37
+this can just be a review let me go on
+01:41
+r1
+01:43
+enable show IP route there are two
+01:48
+connected routes the 192.168 12 zero and
+01:52
+one and two dot one six eight dot 13.0
+01:55
+networks r1 has also learned two routes
+01:58
+from rip as indicated by the are here
+02:01
+one is the 192.168.1 III o network which
+02:06
+are two advertised look right next to
+02:09
+the address there are two numbers here
+02:11
+in square brackets 120
+02:14
+/ one what do these numbers mean first
+02:18
+the one this is known as the metric the
+02:21
+metric depends on the routing protocols
+02:24
+such as AI g RP OSPF or rip-rip uses hop
+02:29
+count to calculate the metric the metric
+02:32
+of one here indicates one hop as we can
+02:36
+rich reach it by a single router hop
+02:39
+over to r2 to which it is a directly
+02:42
+connected network now look at the entry
+02:45
+for the 10000 network its metric is 2
+02:49
+that is because there are 2 router hops
+02:51
+to reach it first to r2 then to r3 to
+02:55
+which it is a directly connected network
+02:58
+lower the metric the more desirable the
+03:01
+route but there is one factor of higher
+03:04
+priority than the metric that is the
+03:06
+administrative distance which is the
+03:08
+number to the left of the metric in both
+03:11
+cases it is 120 because that is the
+03:13
+default metric of a route learned from
+03:15
+rip because the administrative distance
+03:19
+is higher priority than the metric if a
+03:22
+router learns multiple possible routes
+03:23
+to a destination it first compares the
+03:26
+administrative distances and chooses the
+03:28
+lowest distance route to put in the
+03:30
+routing table only if the administrative
+03:34
+distances are the same does it compare
+03:36
+the metrics now I said rip has an
+03:40
+administrative distance of 120 how about
+03:44
+if we create a normal static route
+03:46
+let's try compte let's create a static
+03:51
+route to the 1000 network IP route 10000
+03:59
+255.255.255.0 192.168 - next table to r3
+04:06
+do show IP route
+04:10
+well now the route to 10000 learned via
+04:14
+rip isn't displayed in the routing table
+04:17
+it has been replaced with our static
+04:19
+route because it has a lower
+04:21
+administrative distance the default
+04:24
+administrative distance of a static
+04:26
+route is 1
+04:27
+as you can see here so have we completed
+04:32
+the lab no our instructions are to
+04:35
+configure what's called a floating
+04:36
+static rift that is a static route which
+04:39
+is only entered into the routing table
+04:41
+when the regular route is not available
+04:43
+such as when an interface goes down how
+04:47
+can we do that
+04:48
+well when configuring a static route we
+04:51
+can also specify the administrative
+04:52
+distance for that route if we specify an
+04:56
+administrative distance higher than that
+04:58
+of the RIP route the static route will
+05:00
+not appear in the routing table and thus
+05:02
+not be used unless we stop receiving the
+05:05
+RIP route from our to do to an interface
+05:07
+failure or something
+05:08
+so let's undo our static route by
+05:11
+putting no in front of the command now
+05:17
+let's use the command at gain and here
+05:20
+I'll use the context-sensitive help
+05:21
+question mark and you can see we can set
+05:24
+the distance of the route the
+05:27
+administrative distance of RIP is 120 so
+05:31
+let's just set it to one higher 121 okay
+05:35
+now let's check the routing table again
+05:37
+do show IP route this time the static
+05:42
+route is not displayed
+05:47
+let's use the traceroute command to
+05:49
+ensure that it is still taking the path
+05:51
+through r2 to r3 we haven't used the
+05:55
+traceroute command yet in these labs but
+05:57
+it's very useful it's like the ping
+05:59
+command but it sends a reply back from
+06:02
+each router on the way to its
+06:03
+destination so you can trace the path it
+06:05
+takes through the network
+06:07
+I'll trace to PC one do trace route 1000
+06:13
+11 as you can see it is indeed going to
+06:20
+r2 before going to r3 and then ending up
+06:23
+at PC one now let's simulate an
+06:26
+interphase error I'll turn off the s30
+06:29
+interface which is connected to our two
+06:32
+interface s30 shutdown okay now do show
+06:38
+IP route our rip routes are gone however
+06:43
+immediately the floating static route
+06:45
+which we configured takes the place of
+06:47
+the previous route to 10000 let's try a
+06:51
+trace route from router 1 to PC 1 again
+06:55
+do trace route 1000 11 this time it goes
+07:03
+straight to r3 and then ends up at PC 11
+07:06
+I'm sorry PC 1 our floating static route
+07:10
+is functioning exactly as intended now
+07:13
+let's turn on this interface again no
+07:15
+shutdown
+07:16
+what do you think will happen it can
+07:20
+take a bit of time but hopefully as I'm
+07:22
+talking the process will finish
+07:25
+currently art 2 is regularly sending rip
+07:27
+advertisements of its route to 1000 to
+07:31
+r1 now that our ones s30 interface is up
+07:35
+again when r1 receives one of those
+07:38
+advertisements on the interface it will
+07:40
+replace the floating static route in the
+07:42
+routing table with the route learned by
+07:44
+rip because the administrative distance
+07:46
+of RIP is 120 and the floating static
+07:49
+route we configured has an ad of 121
+07:54
+okay let's check do show IP route
+07:58
+as you can see the floating static route
+08:02
+is gone and now the RIP route is back in
+08:04
+the routing table
+08:05
+I hope this lab helped you understand a
+08:08
+little about administrative distance and
+08:10
+floating static routes soon we will do
+08:13
+more labs focusing on routing protocols
+08:15
+like ew grpe and OSPF and also rip which
+08:18
+we saw a little in this lab that's all
+08:20
+for the lab thank you for watching I
+08:24
+hope this lab and video have been
+08:26
+helpful for you please subscribe for
+08:29
+future labs like this which will be
+08:31
+released weekly if you have requests for
+08:34
+any specific labs let me know in the
+08:36
+comment section if you want to support
+08:39
+my channel please consider contributing
+08:41
+to my patreon patreon comm slash
+08:44
+Jeremy's IT lab I accept Bitcoin and
+08:48
+etherium donations via the addresses in
+08:50
+the description I am also a brave
+08:54
+verified publisher and accept bat or
+08:56
+basic attention token donations in the
+08:59
+brave browser
+
