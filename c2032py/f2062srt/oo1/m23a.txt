@@ -1,0 +1,53 @@
+1.857023
+hey guys welcome back to this Inkscape tutorial series
+7.359733
+I'm nearing the end of what I feel like I can teach you I think that in the future videos
+11.938826
+I'm just gonna do with some application-specific videos teaching you how to create a certain like a logo or a certain product
+18.984950
+but in this video I want to show some of the things that we've created in the past my wife and I using Inkscape
+24.000709
+so this is actually a book cover this is the front of the book
+27.038108
+and the back of a book that my wife created for a nonprofit organization that she's working on called humanity books
+33.657497
+and I'm just gonna show some video footage of some of the real world objects like these that she's created using Inkscape
+41.886881
+really cool stuff
+45.153700
+and so I just want to show that you can actually make some pretty awesome things using Inkscape
+48.540530
+and it's not just in theory it's not just for like web design you can create really professional-looking end results
+54.444686
+here's another shirt that she made this is the the source file for it
+60.465917
+so these fonts I actually don't have the correct fonts installed because these were designed on Linux
+65.165029
+and then I think she has some special fonts that she used anyway
+69.196405
+but this shirt turned out really well and this is just a screen printing shirt
+74.642936
+and then in my business I've actually used this is this sort the original file I used when trying to figure out the logo
+82.734339
+so these are some of the different design choices I went I kind of went through to try and arrive at my final design
+90.200664
+and you can kind of see how it came together
+93.564259
+and then I got like just some samples of putting our logo on t-shirts
+98.684201
+and bald cap so I using scape a lot in in branding of my own business
+103.388134
+and kind of seeing what it all what these different logos will look like you know on vehicles and different things like that
+109.436924
+but this is the source file and I've and I've embroidered this on jackets and shirts and business cards and done a lot of things like that
+118.562156
+so yeah that's all I wanted to show it show just a couple of the real-world things that we've created using Inkscape
+125.784770
+and hopefully this kind of piques your interest and inspires you for the ways that you can use Inkscape as well
+130.629908
+appreciate you watching this video go ahead and join me on other ones
+133.991428
+and I'll catch you in the next one
+135.531424
+135.531424
+135.531424

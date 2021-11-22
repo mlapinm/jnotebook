@@ -1,0 +1,339 @@
+1.496656
+welcome back to another Inkscape tutorial
+5.622409
+in this video we're going to be looking at the filters
+7.801869
+that Inkscape has to offer
+9.563237
+there are many filters and they're pretty powerful they can do some cool things
+13.556063
+but you have to know how to use them when to use them
+16.525439
+and so I'm just going to introduce them to you I would recommend that you draw something similar to what I've done here
+21.721561
+so I just drew a few rectangles from different shapes
+24.709656
+and text a little gradient on white
+26.916170
+I'm going to be left clicking and selecting all of this
+29.892267
+and then applying filters to it to kind of get an idea for what the filters do
+34.388247
+so I'd recommend you that you do the same thing go through every single one of these filters
+39.262573
+and learn what they do
+41.124430
+so first I'm going to show you a couple that I like and we're not gonna go through all of them by any means
+45.644144
+but this one here ridged border is pretty cool
+48.915791
+it gives a ridged border to whatever object we have
+53.276139
+and so we can see a nice little Ridge there it's kind of creates a 3d shadow so maybe I don't know this could be kind of cool for something
+61.844256
+ctrl Z ctrl Z ctrl Z ctrl Z I move that I forgot okay
+67.220093
+so now I'll go back to before I applied that
+69.552142
+and I'll show you some of these other ones
+70.876142
+so under blurs I actually don't use blurs because what I like to do with the way I like to accomplish a blur
+77.408194
+is I'll go to my fill and stroke
+79.288492
+and I'll just use this blur here I'd rather do this and apply like a filter blur
+85.214633
+so I like to do all my blurs that way rather than applying a filter
+88.568278
+when the filter is applied I'll show you in this next part
+91.504241
+it's actually the object still has its properties
+96.132948
+so if we go to bumps here
+98.460571
+and we go bubbly bumps
+100.868130
+it kind of just applies these bumps we can zoom in a little bit
+104.512616
+and see if I hit the plus key
+106.475881
+so we've got these bumps this texture in and these were it was a straight line it looks almost like it's clay or play-doh or wax merging into each other
+115.299401
+but we still have our separate box
+117.799820
+and we can kind of move it around if I you do control Z
+122.172826
+and if I double click very quickly we can still apply a rounded corner to this
+126.431694
+for example so you see it's not a path it's still an object like our circle
+131.739795
+we can still make it the pac-man
+134.411713
+even though it has this filter applied which i think is pretty cool
+137.343640
+and then if we want to change the settings of this
+142.230409
+so this son looks pretty cool look at that it's almost like a paint like a wet paint
+146.304321
+if we go to these filters and go down to filter editor
+151.299956
+we have these options come up here
+153.211710
+so we have all these options for this filter
+155.708116
+we can actually change so if we go up here we can change how it's applied so it's more wet there
+161.608073
+and kind of inky towards the outside
+164.075939
+we can go down and change different settings
+166.456042
+for how this appears
+168.130677
+so every time we apply a filter there's gonna be options
+171.331848
+if we want to get rid of this filter
+173.306850
+so we applied it to all these objects together
+175.607066
+if we want to take it off of just say the text
+178.926583
+we select the text
+180.452426
+go the filter
+181.336358
+and go to remove filter
+182.772022
+and then it's gone
+183.948583
+and if we want to I can go do ctrl shift Z to reapply that
+188.771198
+or wait how do you do redo
+190.215217
+edit we go to
+191.692076
+let's not let me redo it
+193.272092
+but I can go to filter and just reapply that again
+195.360057
+we go to bumps we go to bubbly bumps as I think so what we did
+199.388018
+and then I just want to show that we can actually edit this text here as well
+204.344002
+so just because the filters applied doesn't mean like in
+208.773659
+I guess I start bring that out because in Photoshop sometimes or when you apply a filter
+213.851528
+sometimes if you don't do it correctly
+215.711476
+you can't always go back and edit the object below that's being filtered
+221.363426
+alright so control Z a couple times we're gonna go back before a lot of this stuff was applied
+227.767477
+and let's hit the minus key to zoom out a little bit
+231.699517
+and I'll select all of these
+233.103626
+and show you some other filters I could let myself some notes
+236.455540
+so I'm gonna show you what I want to there's a paper bump under this one
+240.455572
+we can do paper bump
+241.889015
+so go to bumps a paper was pretty cool
+245.596900
+so that applies sort of like this looking texture
+251.228954
+I'll undo that what else do we have here
+254.724850
+thick paint and then distort chalk so we must do filter bump
+259.380320
+we've got a thick paint somewhere here
+262.068642
+yeah so it creates that kind of look all right
+269.147698
+and then these are all kind of by different size so it's the bevels first
+272.115952
+that's we created kind of like button looking things
+274.484068
+we can apply this button and create actual buttons like if you want to do an user interface
+278.584447
+I there's a better way to create buttons actually
+280.716060
+we'll do in a future tutorial
+282.265363
+cuddlers we're gonna skip let's go to distort though this chalk and sponge is cool
+286.982037
+so this one will want to change the settings on it I think we have to do it individually
+291.737066
+so we'll change this down change this base frequency but it's it's kind of creates the look of getting a sponge
+298.546258
+and then dipping it in like pressing it in chalk
+301.970340
+and changing things that way
+304.502238
+oh I crashed it I had too many too many things going at once
+308.338970
+so I'll just draw for you
+312.042310
+what I really what I really want to do is this that paper one that looks pretty cool
+315.786366
+so if we just do this like a white like that
+318.058390
+we'll just look at it look at the rest of these with just these two Oh
+323.083026
+delete we'll get some text in here also tj3
+329.106248
+okay zoom in here
+331.410373
+so now we'll take all these
+332.562359
+and let's apply some other filters
+335.514310
+here so we've got distort we didn't we did that one
+338.850370
+we're gonna skip a couple of our materials so we can create like a 3d wood
+343.850400
+so that our white especially is going to look like a kind of a 3d wood
+347.638135
+and you see it's a little bit graphics intensive
+351.790887
+and again you'll want to keep in mind what your what you're trying to do with these filters
+356.630142
+or what with what you create so if you're doing 3d wood for example and you want to create a vinyl to put over top of like glass on the back of your car
+364.250730
+you can't print 3d wood on a vinyl printer
+367.258442
+you have to keep more simple shapes
+368.902318
+so depending on where you're going to be displaying this artwork
+372.634319
+or how you're going to be producing it
+373.791614
+you may or may not want to apply extravagant filters like these material ones
+379.535584
+we've got like leopard skin
+382.195443
+or lizard skin
+383.479440
+it's kind of a cool one here
+384.947611
+I mean I really like this one
+386.067989
+look what the effect that it does to this star thing
+389.395655
+and it's really it's got this texture on it so if we zoom in it's got this really textured look which is pretty cool
+395.559545
+let's zoom out what else and the makes our text look pretty cool too
+400.503772
+that's what that's control-z
+402.719171
+select everything
+404.231690
+there's a few what I want to do overlays is pretty cool so overlays if we go do like cloud
+412.075743
+a cloud overlay get is sort of a cloudy look
+414.143612
+control-z there's another one that's kind of cloudy looking on the overlays
+419.883644
+there's called Scotland create some cloud looks too
+423.931634
+so if you want to create some clouds in the sky
+426.059653
+you can kind of do this
+427.631582
+and then again we can come back and individually change
+430.980623
+you know how thick the clouds are or how they appear on here
+437.180955
+I'll zoom out it control-z
+439.956679
+I think what I'm doing I'm trying to zoom out on my image why it keeps crashing
+446.016710
+but I have my effects selected
+448.996659
+and so what I'm actually hitting is the minus key
+451.556642
+and it's just putting a number in there that it just can't handle
+454.912537
+so I apologize about that
+457.021350
+let's grab a few these things keep setting this up
+461.105066
+I'll just show you one more I think you're getting the idea and keep crashing okay
+465.614719
+Frost was cool though so let's just take this will apply Frost to this one so we go to filters overlays
+472.546338
+Frost is awesome
+475.181867
+so if Frost just gives us a cool
+476.366187
+little frosty looking background
+478.506193
+really cool I think we probably wouldn't it we can take the border off of this
+482.382125
+so I'll do a shift no stroke and then we just have this frosty looking background
+489.202050
+it should be really cool for like a winter like a wedding announcement
+493.217953
+or have it just be the background of some announcement like 50% off sale or something like that
+498.838869
+I think this frost one looks pretty awesome
+500.827106
+alright one more and then we'll be done with this video
+507.079138
+let's look at so texture okay
+510.127056
+will do texture burst
+512.255073
+so we go to texture
+513.547775
+filtered all the way down to textures we go to burst
+516.531119
+so this one's cool
+518.219185
+especially if you have other objects next to it because then it's this is kind of more that paint plate oh look where it all mixes in
+524.735221
+and we can change the color on this to because it's an object
+528.152293
+go ahead and change the color
+529.935997
+we can even apply like a gradient into this
+533.579673
+and just make it look pretty neat
+536.968450
+I think there's a lot of things that you can do with this
+540.023786
+but again it is it's gonna be more intensive
+543.523875
+because it's doing a lot of processing it's not pixel art
+546.487817
+it's it's applying a filter to vector
+549.704052
+so it can be a little more intensive
+551.743835
+but it really just makes you think it makes me think anyway there's a lot of different ways
+557.371906
+there's more than one way that to accomplish anything in Inkscape
+561.124098
+so you can accomplish this look by in by plying out many different filters
+566.233138
+and there's just a lot of different ways to do things
+569.337350
+so get familiar with these filters
+571.329394
+and you can create some really really cool things
+574.205473
+appreciate you watching this video
+575.701292
+catching the next one
+577.151034
+go ahead and comment below and tell me how you like to use filters
+580.514869
+I'm super curious to learn
+582.181499
+you know different ways to apply these
+585.029324
+and I'll catch you the next video
+587.649237
+587.649237
+587.649237
