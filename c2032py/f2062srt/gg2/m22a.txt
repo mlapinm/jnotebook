@@ -1,0 +1,149 @@
+1.441462
+welcome back to another Inkscape tutorial
+5.446617
+in this video I want to show you how to import an illustrator file
+10.799128
+so maybe you've you have a file that's a dot ai file extension a file created in Adobe Illustrator
+16.914075
+but you want to work on it or change it or edit it in Inkscape
+20.431278
+not a problem because Inkscape can import illustrator files
+25.474312
+so as long as it's not too complex
+27.529353
+there's no usually not problem
+29.210683
+so I found this file here
+30.591469
+that's on pixabay.com it's a simple illustration of an ice cream cone
+34.163557
+and this is by user alma in progress
+36.658020
+they've released it under Creative Commons 0 so free for commercial users no attribution required we really appreciate them sharing this with us
+42.671224
+and we can actually download the original Illustrator file
+45.628810
+that they use to create this
+47.258027
+so I already downloaded it go head and click download under the illustrator file not under an image
+52.617360
+but make sure you get the vector graphic
+54.804563
+and I have that saved on my computer right here in my downloads folder
+58.794908
+and if I try and open it
+60.609510
+I don't have any I don't have illustrator installed on my computer
+63.465371
+so I can't open it in Illustrator
+65.354016
+but I can just drag and drop it in to Inkscape or
+69.823545
+I can also go file import
+71.808689
+and we see we have if we go to the file type we have all these different options
+75.837387
+for different files that are supported by Inkscape to import
+80.129362
+some of them are like
+81.425977
+we have some pretty cool ones actually here
+83.670390
+so all kinds of different file formats but
+86.182561
+we find the one here
+87.378049
+that is Adobe Illustrator so there's two we've got Adobe Illustrator SVG and Adobe Illustrator 8.0 and below
+95.141426
+I'm not sure what this is
+96.294478
+so I'm not going to import it this way
+98.140416
+I'm just going to drag and drop it in and it'll automatically detect what it is
+101.681049
+and it brings up this dialog
+102.985834
+we'll just keep all the settings the same and hit OK
+104.843538
+and now we have this ice cream cone here in Inkscape
+108.195133
+we can resize it
+112.204107
+and we can click the plus sign to zoom in on it
+114.522001
+if we want to change so we can see if it has different layers
+118.349555
+we go to layers and see so there's no layer information so it's probably all just on one layer
+123.047493
+we can ungroup here by hitting ctrl shift G
+126.973947
+and now we have this the ice cream the three scoops are separated from the cone
+132.709038
+and the cone is separated from itself
+134.725324
+so that's kind of cool
+136.900613
+and these we can probably ungroup to
+138.792890
+control shift G and now we see we have control shift G you do it again
+144.067856
+so now we have three separate ice cream scoops
+148.011030
+and we can change maybe we just want to be like you know what we love this vector graphic
+152.275830
+but we'd rather we had like a light blue ice cream
+155.170718
+and we'd rather this one was like more of a purpley color
+158.378046
+and we want the top one to be like a red
+161.180937
+so were like cool there no problem then we can regroup or we can be like yeah we wish the purple was like off to the side like this
+168.281825
+so it was sort of like created this look
+169.884543
+so we can change it however we want
+171.676550
+because we have this original source file
+173.753900
+which is awesome
+174.597908
+and maybe the comb we want to apply a different texture or
+177.438735
+we want to change the color of it to make it like a darker
+179.860779
+I don't know whatever we want to do
+182.619682
+but we can do it because we've got the source file and we can read Adobe Illustrator files in Inkscape
+187.975554
+yeah so I hope you found this video informative
+191.327965
+check it out actually
+192.601788
+ctrl G we can even add an additional scoop if we wanted to on here
+197.365532
+so we can be like yeah boom
+199.920222
+and then bring the glow up to the top level
+204.284456
+yeah yeah so that's it you get the idea and you can find lots of source files if you're curious on pixabay these are all I just searched I actually searched for Adobe Illustrator files but
+216.295417
+under vector graphics you can just search for whatever you want
+219.147730
+and it will it'll find all kinds of files that you can download
+223.574991
+and actually bring in to Inkscape and edit change colors or have a lot more control than you would often just a regular picture
+231.763806
+this would be a cool one to play with
+234.821437
+and again we can just see this is a vector graphic so it has a transparent background
+238.896301
+we can change the color of the paint to blue
+241.702317
+fairly easy in Inkscape
+243.547966
+using this method
+244.910480
+hopefully you've enjoyed this video go ahead and like and subscribe check out some of my other tutorials and I'll catch you in the next video
+252.375193
+252.375193
+252.375193

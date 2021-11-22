@@ -1,0 +1,132 @@
+ 1.592992 welcome back to another Inkscape
+tutorial  5.584823 in this video I want to show
+you how to import PDF files into
+Inkscape 11.409451  so it's actually a really
+really cool feature 13.609292  that Inkscape has
+built in 15.961005  so if you ever want to edit the
+PDF file  18.105073 this is an option you can do it 20.029319 
+but pulling elements out of PDF files it
+works great for 22.636860  I'll show you sort of
+some of the power of it and some of the
+shortcomings 26.284973  so I have a PDF file here 27.993732 
+and this is just this is actually from
+the magpie it's like a Raspberry Pi
+magazine  35.629231 that gets released about
+Raspberry Pi  38.757512 and microcontrollers anyway 40.597112 
+so these are some of the pages of this
+PDF 42.654859  and we can see it's just a PDF file
+ 45.150450 and it's a like a magazine 47.206538  so it's got
+pictures it's got text on it 49.446427  but what I
+want to do is just drag this in so if I
+left click and drag this into Inkscape 55.494286 
+it brings up this PDF import window and
+it I can only import one page at a time 61.414249 
+so I can do page 1 page 2 whatever
+whatever page I want to do 64.750009  and I'll show
+them what that page looks like 66.731837  and then
+give me some different options for
+importing it  68.699239 so I'm just going to do the
+first page this is like oh this is
+actually the cover of the magazine 73.947093  and
+then these import settings 76.616111  I'm gonna
+leave everything how it is  78.216475 but for
+example it says replace PDF fonts by the
+closest name to installed fonts 82.873569  so one
+thing is this PDF has fonts that it uses
+and I guess 88.441591  they weren't maybe they're
+embedded maybe they're not I'm not sure
+about that  92.197511 but if they're not embedded
+then my I have to have those fonts on my
+computer or it's gonna look weird and I
+don't have them so we'll see it'll look
+a little weird 100.614698  so I'm just hit OK right
+now  102.017534 and it's going to bring this in 104.877690  and
+so we can see right off if I hit the
+plus sign and zoom in a little bit 108.403729  it
+looks a little different than it does
+here  111.090731 so this is the original viewing it
+in the PDF  113.898839 and that's what it looks like
+over here so we see some of these fonts
+are a little different  118.778862 this actually
+doesn't look too bad maybe this is an
+image  121.308252 but looks the fonts up here for
+example  122.943916 where it says all-new raspberry
+pie getting started up here it's
+different  127.131929 it's like although it's
+running together because it's using a
+different text 130.184279 
+but that being said if I select the
+whole thing and I ungroup it  136.103812 so we go to
+have you ungroup from here object 138.899919  and
+ungroup or you can do ctrl shift G 141.547979  and
+now everything's a separate object I can
+grab and move around just this raspberry 147.188000 
+just this text we can grab just this
+text here 151.176237  and I can actually edit this
+text too  153.575965 so if I want to edit like this
+here and we want to call it something
+else  155.923807 we can do that 157.688154  but it's doing a
+little bit weird here  159.695920 but we can delete
+it we can take this board here  163.892642 and move
+it and see just what this picture looks
+like  166.623891 so it's actually pretty cool we can
+take the ISBN number  169.224473 and kind of move it
+around -  173.820040 pretty awesome huh so anyway 176.564176 
+this is a way that you can edit and it's
+not perfect as you saw there when I
+tried to edit if I try to edit this text 181.412160 
+here it was let's zoom in  185.544325 if I try to
+edit like these numbers they're gonna
+edit like one at a time if I hit the
+backspace it just erases the zero my
+cursor stays here 191.356762  so that's kind of one
+shortcoming you can kind of play around
+with that and see text is not gonna be
+perfect in this 197.552274  but these things are
+like this I'm not this is it if I could
+i can ungroup this thing probably so
+this is actually a vector image 204.745165  and we
+can get real down in here it's changed
+if I want to change the colors of these
+leaves  
+
+210.555967 I can select both of them change
+it to like blue  212.864215 or change it to change
+it up a little bit  216.515485 so it's really cool 218.443854 
+you can actually pull in objects from
+PDFs and edit them using Inkscape 222.115478  and
+that's really what i all I wanted to
+show with this 224.483205  and then if you want to
+have the fonts show correctly just make
+sure that you have that font installed
+on your computer 231.223092 
+hopefully found this informative go
+ahead and play around you're gonna find
+out the different PDFs  236.485882 import
+differently some it depends on how that
+PDF was made sometimes you're gonna be
+able to grab every little object 242.742029 
+sometimes you're not and it's all just
+going to be one picture sometimes the
+fonts will actually or the text will
+actually be a picture  250.155343 so you can't
+actually get an edit like this case here 253.135445 
+oh well this one this one is a picture 255.555290 
+but so we can't get in and edit this
+letter  257.915339 it's actually a path  260.287561 see that so
+it's not a font M it's actually a path 263.843501 
+so different different objects different
+paths are going to have different
+properties within every PDF but go ahead
+and download some PDFs and play with it
+dragging and dropping in there  273.051253 and yeah
+I get familiar with it I'm sure you'll
+find some uses I've used this a ton I've
+brought in like construction documents
+for example for like estimating I bring
+in like a floor plan of a house 285.240331  and I
+can like click and make notes do
+different things to that floor plan
+anyway  291.423249 thanks for watching and 293.743191  catch you
+on the next video 296.571263  296.571263  296.571263 
+
