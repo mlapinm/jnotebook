@@ -1,0 +1,149 @@
+ 1.932112 welcome back to another Inkscape
+tutorial 5.448652  in this video we're going to be
+using the spray tool 8.870396  to create multiple
+objects and copies of objects on the
+screen without having to draw each one
+individually 15.381687  so we're gonna be drawing a
+starry night scene 17.753860  yes I'll show how
+we'll do that first of all 21.929883  let's just
+play with this spray tool for a second
+and show you what it 25.190135  does if we just
+click on it first on a blank canvas it
+does nothing 27.762149  because what this actually
+does is copy an object so if we draw a
+circle 31.464273  we have a black circle like this 33.555752 
+and then while it's selected we select
+the spray tool 37.437320  now this is the object
+that we're going to be spraying  40.027620 and by
+default your settings might look a
+little more 44.867493  I've changed some of these
+settings a little bit but by default it
+kind of looks like this when you spray 51.360388 
+so what this did was actually drew a
+whole bunch of of copies of this  56.620197 and I
+have my scale turned on 59.216210  so they're all a
+little bit different sizes 60.944082  but you can
+make them spray the same copy  62.708487 let's grab
+a better example might be let's do like
+let's do something with a border so we
+have red with a blue border 71.718604  and if we
+spray this  73.434737 it look like this 74.679606  so we've
+sprayed oh I have my rotation on to
+which isn't on by default  78.254511 so these are
+all rotated to 79.391239  do so that's what the
+spray does it just sprays a bunch of
+copies  but every one of these is its own
+object that we can move and manipulate
+separately  89.005636 alright I mean it controls
+you a whole bunch of times you get rid
+of all of this  93.761388 and let's do us so what
+we can do is if we do a star for example 99.117728 
+we can actually make like a starry night
+scene 101.994645  so we'll draw a really cool
+looking star 104.374718  and then we'll just spray
+it to create a starry night scene  108.018605 but to
+do that we're gonna change some of the
+settings one of the settings we want to
+do is come up here 111.238543  and click on prevent
+overlapping objects  115.162556 if I hit control Z
+now the stars won't overlap with each
+other  119.206724 so that's kind of that's a lot
+better  122.433733 and then also we can change like
+the rotation 124.577068  if your rotation is set to
+zero  126.853263 then they'll just all they won't be
+rotated they'll all be like this 130.805157  and if
+your
+if your scale is set to zero 135.741211  then
+they'll all just be the same size  138.885263 which
+for certain things you might want to do
+that if you're doing like an American
+flag maybe you should want to do that
+too and then you can go in and like
+reposition these in fact we could use a
+line and distribute like we learned in
+the last video  151.257497 to light them up I
+control Z a couple times 156.094625  but we're going
+to be doing a starry night scene so
+we're gonna left click here we'll just
+cover a rectangle on our whole page  165.362512 and
+then we'll turn it black and I'll get
+rid of this stroke by just holding down
+the shift key and going to this little X
+in the corner to say no stroke  174.886601 all right
+then we'll take this star and we'll just
+use this one it's on a lower level so we
+have to push the page up  181.935022 key to get it
+to go up and let's turn it maybe we'll
+turn it 185.387556 
+let's do white we'll just do white star 191.930763 
+and then we'll also turn off the stroke
+for it so hold down the shift key and
+click here  196.996046 on the no what's this called
+none all right and then we will let's
+scale this a little bit 204.594558  so I'm gonna
+hold down the control key and scale it
+uniformly down to about that size
+perfect  210.731363 and now this while this is
+selected I'll click on my spray tool 215.346475  and
+let's take the rotation up -  218.549437 it doesn't
+really anywhere above 50% will be good
+for us  222.658557 and our scale this just shows the
+that how large it will be so if we do
+this a hundred percent we'll have some
+pretty large stars and some pretty tiny
+ones 231.514378  so we'll scale maybe two we want
+them roughly to be about that size so
+I'll Scout to about 51%  237.082116 let's just try
+this and see how it looks awesome 241.625455  this
+is maybe too many stars  244.042246 and what we can
+do then we can select like well we want
+sort of everything so we go select all
+of it  253.101856 then we hold down the shift key
+and deselect the background if we can
+there we go  257.055867 its let's deselect it now
+because you can see  259.423874 this it's not
+doesn't have a white dotted line around
+it if I hold down the shift key and
+select it now the background selected  265.503867 if
+I deselect it it's not 266.995814 
+and then we can apply changes to all
+these stars at once 270.191074 
+in fact let's group them ctrl G now
+they're all grouped and now we can
+change the color if we wanted to have
+all of them together  278.475868 we could maybe go
+in and what I was thinking about maybe
+doing was going in to fill and Stroke 285.292914  on
+this object fill and Stroke 289.003931  and then we
+could I don't know what we can do with
+them we can change we can try and do
+like see what it looks like if we blur
+them a little bit  296.579875 and then maybe we
+could apply  300.783151 I don't change your color
+just a little bit  a little bit just like
+the yellow 309.575745  yeah so anyway I then I
+didn't have a real direction for
+something to produce so by the end of
+this video  317.191933 but I wanted to demonstrate
+using the spray tool so that's one thing
+you can use the spray tool 321.047982  for and again
+you can also also you can draw its
+whatever selected 327.424083  so if we went and got
+grabbed our Bezier tool  329.976041 or even yeah if
+we grab our Bezier tool  and create a
+little something we can spray this now
+and  337.795935 so we can grab our spray tool with
+this selected 340.758557  if we turn our rotation
+down to zero our scale to zero so it
+won't rotate and scale when we're drying
+it  347.635908 and then we turn our oh and scatter
+down to 0-2 that'll keep it keep it
+always in the same place  358.731761 and then if we
+say let it overlap order I think I'll
+and then we'll just spray that 369.439783  so then
+we're getting like this we're spraying
+this object  374.067830 that we did or every time we
+click it a loss of your spray once yeah
+that's how the spray Tool Works in
+Inkscape  381.988084 appreciate you watching catch
+you on the next video 384.815840  384.815840  384.815840 

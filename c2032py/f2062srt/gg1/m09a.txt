@@ -1,0 +1,268 @@
+ 1.822660 welcome back to another Inkscape
+tutorial  5.776382 in this video we're going to be
+using the Bezier tool  8.870624 so we learned in
+the previous video about drawing with a
+freehand tool 12.246200  we learned about
+converting our objects into paths  18.809095 so we
+go object to path  20.533559 and then we knew we
+know we can change these individual
+nodes so if you're a little bit hazy on
+that or if you missed those videos 26.227977  you
+might want to watch those first before
+learning about the Bezier tool 29.688563  because
+what the Bezier tool does is it draws
+based on these different nodes  34.848651 and these
+handles that control the arc or the
+curve of a lion 40.717273  so I'm gonna zoom out
+here  43.498631 we'll just delete these things real
+quick and let's get started with our
+Bezier tool 46.850774 
+so the Bezier tool is here  48.951696 we'll click
+on it  49.857264 if you've never used it before
+you'll be in the default mode 53.013402  if you
+have played with a little bit make sure
+you're in the create regular Bezier path 56.694682 
+and then we'll just click  so we can
+click a point here  60.627906 and then come over
+click another point and hit enter 63.259930  and
+we've created a line  64.939989 we can give it a
+little thicker stroke by coming down
+here and right-clicking  69.812047 and going to
+will give it like 4 so it's sort of like
+a fat line  72.907806 and we can change the color
+of it by holding down the shift key 76.847866  and
+clicking on any color so we'll make this
+a purple line I guess  80.087748 and if we come
+here click on this tool so we can edit
+the different nodes of this path 84.739770  so what
+the Bezier tool is done is just drawn a
+path for us from point A to point B 90.570006  it's
+just drawing a line based on the rules
+that we've told it and all we told that
+to do was do a straight line 96.347647  but we
+could have it be a curved line and a
+curve there's a couple different ways 100.763869  we
+can come to the node if we left click
+and drag it'll move the node around 104.579764  but
+if we hold down the shift key and then
+drag it'll bring out this little handle 111.075950 
+and then this handle we can use too if
+we move the angle of it 115.611921  if we rotate it
+around it'll kind of change the
+curvature of this arc coming out of this
+node  121.969378 and if we change the distance of it
+the further away it is the stronger that
+art kind of goes  128.059893 so if we're not very
+subtle we have it below 130.383787  if you want to
+be like a check sign like a Nike sign or
+something we have it come
+here  135.283784 and then we do the same thing with
+this when we go to this node  137.435453 hold down
+the shift key  139.022556 and we can drag out this
+thing and we can make sort of like a
+wave where we want to make it a check we
+make it really long here but just keep
+it horizontal  147.010136 or we can rotate it down
+and make like a nice curved arc shape  152.290506 so
+that's kind of how we do that 154.402482  also if we
+don't want it once these handles are out
+we want to hold the shift key anymore we
+can just play with the handle  159.251383 also we
+can just click on the line at any point
+we want  163.315867 click and hold and we can move
+the line around that way at any point so
+if we click up here  168.827360 it'll kind of move
+just this point here  171.451150 if we click in the
+middle here  173.131689 it'll move that point and
+it'll move both of these handles
+accordingly 177.216990  so that's kind of a good way
+that I like to do is just by dragging
+clicking the line 181.039544  but it's again we only
+have two points one point here one point
+here  184.959457 we can add another point by just
+double clicking so if we double click
+right now  188.991485 we've added another point and
+now we have a third point here  192.235521 and it
+also has these different handles these
+things are tied together  196.987561 so we can
+create like a little loop here 199.775333  we can
+have it be straight we can create sort
+like a sine wave if you want to move
+this like right here  205.147423 we can have this
+one be up and then have this will be
+down  208.491440 and then kind of make that not so
+extreme  213.183556 so that's one thing that we can
+do just sort of playing around getting
+used to this  219.127339 I'm gonna go ahead and
+delete this  220.527667 we can also go back to our
+Bezier tool  223.407659 and we can just left-click
+and then for our second left click we
+can left-click and hold and move our
+mouse  230.503471 and we can create an arc that way 232.024500 
+so now we can create these arcs as we go 235.131231 
+now let's press the Enter key  237.703529 so now
+we've created these arcs just as we were
+drying without having to draw straight
+lines and then Bend them individually  243.835417 we
+can still go in and edit each of these
+we can move the nodes around 247.839409  we can play
+with these different handles and change
+the angles of these arcs  251.615214 or we can just
+click on any any one line  254.759366 and change the
+arc for it  257.575567 all right do do also if we
+just had a straight line  262.899746 let's go back
+to our Bezier tool again 264.705347  let's create
+another straight line and hit enter 266.625365  we
+can just go
+to our edit this tool to edit the notes 270.551466 
+and we can click and just create an arc
+that way without having to pull out
+those handles every time  275.579891 I'm gonna
+delete these  278.768011 so we click delete left
+click delete Oh 281.835650  actually we can delete
+them  283.352338 let me control Z as my show you can
+delete individual nodes too 286.651827  so while
+this is selected we double click we can
+get into the node edit or we can click
+on it here and then left click 292.715289  but we
+can delete a node if I want delete this
+last one  294.872450 I just click it hit the Delete
+key  297.219731 and that node goes away  298.443704 we can
+select multiple notes at the same time
+by left clicking and do creating a
+selection box  303.077687 let's click and drag  304.323796 now
+we have these two nodes selected 306.236216  we can
+move them together independent of the
+rest of the path  309.798154 and we can hit the
+Delete key 312.035775  and delete them 313.063698  also so I'm
+going to select all these nodes delete
+all of them 317.266501  what I guess I can't delete
+all of them  320.254385 yeah delete all but one but
+if you want to leave the whole thing 323.525473  we
+can just select it as like as yeah so
+it's all together into the Delete key 329.657576 
+and I'll delete that way  
+
+330.809357 let's go back
+to our let's go back to draw so if we
+want to draw a shape  335.380641 we don't have to
+just draw a line  we can actually draw a
+shape  we can complete  338.990675 so we can create a
+little arc here create some straight
+lines if we want to  342.738466 and then if we go
+back to our starting node  344.542750 it'll
+automatically complete our shape 347.354614  and
+it'll fill it in without to press ENTER
+to close it or anything it'll just
+complete automatically  351.406572 and now we can
+take this  354.306534 and we can edit the notes
+again just like we did before 357.204145  but we can
+come here select it and we can give it a
+fill color  361.084623 so we can fill it with a
+certain color 363.268288  and we can change the
+stroke color too  365.604712 so we can make we can
+give it a no fill color  367.484417 and if we hold
+the shift key we can make the stroke a
+different color  so that's a blue kind of
+hard to see we can make it a little
+thicker so we can see it 374.980767  so we have a
+nice blue outline there  377.677085 and if we one
+thing that you might actually
+accidentally do so if we go to our
+Bezier tool  385.541061 and we just click here and
+draw like sort of a line and hit enter
+and close it off 389.865343  if you want to change
+the color of this line naturally a lot
+of times you'll just come down here and
+want to select the color so if we left
+click red  397.941681 it's gonna actually do its
+best to
+to do what it thinks we're trying to
+tell it to do which is give it a fill
+color of red  406.052953 but we're trying to apply a
+fill color to a line and not a shape not
+a closed shape  411.836896 so it basically draws an
+imaginary line from the last point to
+the first point  416.492868 and then fills in
+anything it possibly can  419.176938 so usually you
+won't want to apply a fill color to a
+line you always want to change the
+stroke color  426.068972 so these paths that we draw
+by default  429.400455 it's a it is a stroke so to
+change the color we hold down shift 435.824415  and
+then we can make it red  438.344455 will change the
+thickness of it so we can just see it a
+little more dramatically 442.756461  so that's how
+you would do that 443.808736 
+another option under the Bezier tool 448.196294  if
+we just click them delete these I'll go
+to selection 450.844577 
+left click delete left click delete 452.884472  we
+can go back to our bezzie a and up under
+mode 457.345443  if we go to this one which is spiro
+create spyro path 460.716448  let's click now if we
+just click when I'm to click and drag we
+just click a couple points 465.444587  and it
+automatically creates this kind of cool
+little we don't do a spiral necessarily
+we can come out here  473.140454 so you can create
+some needs kind of floral designs hit
+enter  476.600474 and we've got this design here 478.577078 
+which is pretty cool  480.076510 and we can get we
+can go in and edit the different nodes
+of this so every point where I clicked 485.960448 
+we can edit these  487.640380 and I just creates a
+much more fluid based off of some sort
+of like fractal math or something 493.932505  and it
+creates these nice spirals  495.472595 that we can
+then edit  496.756558 and yeah change so this might
+be nice 502.012508 
+might be you might be able to think of
+something that you can use this for 506.212453  and
+it gets really nice when we start to
+change the shape so we can also go
+another setting under the busy a is this
+shape 513.028200  so I'll go back to the regular
+mode  514.719917 and under shape if we go like
+triangle in for example 518.603819  and if we just
+create a nice simple line here 521.772556  we can
+give it some character hit the enter key 524.407861 
+and then you see that I'll kind of
+create it fades off if we zoom in here
+the last part is just sort of faded out 530.240181 
+it's very thin and it's kind of more
+thick over here  533.903933 we actually changed the
+setting
+this  535.284072 this is actually not super pretty 537.248220 
+but if we go to path we go to path
+effects  539.932492 we can change this to maybe this
+one here 542.380023  will look too big but this
+gives it more of like a dramatic look  546.331936 we
+can also go back and doing this spyro
+spyro if we check the spyro and go to
+ellipse  553.912137 this creates kind of a nice
+flourish so we can just do a couple
+points here hit the enter key 559.187311  and then
+we see it starts nice and thin here  561.283731 and
+we can edit these nodes again however we
+want to 564.175812  but it starts nice and thin and
+then it goes and we can here we can
+change the width of this particular one
+with the ellipse  571.344408 so we can change and
+make it kind of really thick and so you
+can create some really nice flourishes
+that way sometimes people will download
+like clipart  579.011808 and they'll want to do you
+know they'll find a specific flourish
+but this way you can create your very
+own  583.895922 we can change the colors of it and
+you know make it pretty awesome  588.279880 that's a
+couple cool things that you can do using
+the Bezier tool 593.031683  go ahead and play with
+it to get familiar with how it works 596.963826 
+next video maybe we'll use the Bezier
+tool to do some tracing  600.303393 or at least in
+one of the future videos 601.455707  so stay tuned
+for that go ahead and comment below ask
+questions  605.955652 get involved in the discussion 607.203616 
+and we'll see you on the next video 608.891746  608.891746  608.891746 
